@@ -8,6 +8,7 @@ permissions:
 jobs:
   browser-and-build:
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.64.1-noble
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -17,7 +18,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck && npm run lint && npm run test:worker && npm run build
-      - run: npx playwright install --with-deps chromium webkit
       - run: npm test
         env:
           CI: true
