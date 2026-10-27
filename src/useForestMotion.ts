@@ -36,8 +36,8 @@ export function useForestMotion(root: RefObject<HTMLDivElement | null>, enabled:
       return () => media.revert()
     }) } catch {
       context.revert()
-      setFailed(true)
-      return
+      const recover = requestAnimationFrame(() => setFailed(true))
+      return () => cancelAnimationFrame(recover)
     }
     let active = true
     document.fonts.ready.then(() => { if (active) ScrollTrigger.refresh() })
