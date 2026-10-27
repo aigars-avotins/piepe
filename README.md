@@ -1,10 +1,20 @@
-# pie.pe — Into the forest
+# pie.pe 2.0 — The Living Forest
 
-A continuous, cinematic forest experience built with React, TypeScript, Vite and restrained GSAP motion. The real shelf fungus is the main interaction; no WebGL, generated replacement imagery, third-party embeds, analytics or backend.
+An intimate digital art encounter around the owner's original six-second forest film. React, TypeScript, Vite and GSAP; no WebGL, generated replacement media, analytics, database or external fonts.
+
+## The experience
+
+Four connected camera states: arrival, beneath the bark, fungus encounter, return to daylight. Native scrolling drives photographic framing, a foreground trunk, a traced fungus/moss fragment, cool shadow and warm return light. The returning wide frame is the original film's start poster. CSS transforms/opacity do the work; there is no video scrubbing or permanent JavaScript animation loop.
+
+The fungus opens a photographic field encounter: three keyboard/touch observations (Surface, Beneath, Beyond), an original micro-story and a real downloadable plain-text field note. The line map is explicitly an imagined map of attention, not a species identification. No placeholder projects or invented biography/links. A session mark records that the visitor collected the note; no data is transmitted.
+
+The original 6.041667s, 1920×1080 H.264 intro and its three public assets remain byte-for-byte unchanged. Automatic playback stays once per tab session. “Replay film” is explicit. Skip, end, autoplay rejection, missing media, no initial progress (4s), stall (2.4s), deadline (9.5s) and hidden-page exits converge on the matched still. Reduced-motion/save-data visitors bypass automatic video. Explicit replay remains available by user choice.
+
+The native dialog retains focus trapping and Escape. Closing restores focus to the actual opener. Arrow/Home/End keys navigate observations. Return-to-forest updates the anchor and focus. Safe-area mobile layouts are authored separately. Reduced motion and paused atmosphere provide distinct static scene compositions. Fonts and all content are self-hosted. No new media or frontend libraries were added for 2.0.
 
 ## Develop and verify
 
-Requires Node 22.12+ (Node 24 used for this implementation).
+Node 24 used; Node 22.12+ required by Vite.
 
 ```sh
 npm ci
@@ -13,38 +23,47 @@ npm run typecheck
 npm run lint
 npm run test:worker
 npm run build
-npx playwright install webkit
+npx playwright install chromium webkit
 npm test
 ```
 
-The test matrix uses installed Google Chrome and Playwright WebKit with an iPhone 13 viewport. `TEST_URL=https://pie.pe npm test` runs the same browser checks against production. Browser binaries require an environment that permits GUI/browser subprocesses. Linux CI can remove `channel: 'chrome'` and install Chromium instead.
+Local Chrome is the default desktop test target; `PLAYWRIGHT_HEADLESS_SHELL=1` uses bundled Chromium. CI uses Chromium + iPhone-size WebKit, runs the full suite and retains screenshots, traces and silent 15-second before/after scroll recordings. `TEST_URL=https://pie.pe npm test` targets production (the recording test is intended for pre-deployment CI).
 
-## Actual media and composition
+The local sandbox may deny browser subprocess startup; that is an environment failure, not a passing result. The in-app browser can still perform visual/interaction checks. See `docs/V2-QA.md` for actual outcomes and limitations, and `docs/V2-STORYBOARD.md` for audit/creative decisions.
 
-- `public/media/forest-reveal.mp4`: supplied optimized 1920×1080 H.264/yuv420p, muted, faststart, 1,723,128 bytes, approximately 6.05 seconds. Plays once per tab session.
-- `public/media/forest-final.jpg`: supplied matching end still, 126,965 bytes.
-- `public/media/forest-poster.jpg`: supplied starting poster, 156,196 bytes.
-- `source/forest-reveal-original.mp4`: original backup already in the repository; never copied to `dist`.
+A local-only fault injector serves the production build:
 
-The three public asset Git blob hashes match the supplied ZIP exactly. Keep their filenames and replace them together if replacing the film. The still and film share one 1920×1080 cover plane. Desktop focal point is 50%; mobile is 64%. The interactive fungus center is mapped from the actual frame at 66.5% / 57%, with a generous keyboard/touch target. Change these values in `src/App.tsx` only after inspecting replacement media.
+```sh
+node scripts/qa-server.mjs
+# http://127.0.0.1:4174/?qa=natural
+```
 
-`IntroFilm.tsx` owns the one-shot lifecycle. Text enters from actual playback time 4.5s. End, skip, rejected autoplay, media error, no initial progress (4s), a stall (2.4s), deadline (9.5s), or backgrounding all recover to the preloaded final still. The video then unmounts. A session flag prevents replay on reload and native scrolling never controls playback. Reduced motion, data saving and 2G preferences avoid creating the video element entirely. The interactive still and all content are available without video; a basic forest fallback is included for JavaScript-disabled visitors.
+Scenarios: natural, blocked, stall, pending, missing-video, missing-still, reduced, save-data. This script and source backup are excluded from deployed dist.
 
-Native `<dialog>` provides a focus trap and Escape support. Closing restores focus to the fungus. Native `<details>` provides expandable field notes. The atmosphere can be paused; reduced motion removes continuous effects and scroll animation. Fonts are self-hosted.
+## Media and art direction
 
-## Content
+- `public/media/forest-reveal.mp4`: supplied optimized 1,723,128-byte film; muted H.264/yuv420p faststart.
+- `public/media/forest-final.jpg`: supplied near-final still, 126,965 bytes.
+- `public/media/forest-poster.jpg`: supplied initial poster, 156,196 bytes.
+- `source/forest-reveal-original.mp4`: original backup in GitHub, never publicly deployed.
 
-Edit `src/content.ts` to replace the three clearly labelled early field notes with real work. These are honest placeholders, not fake project links. Tagline, discovery and outro copy follow GitHub Issue #1 v1.1. The owner's later build/deploy brief supersedes the issue's original review-only and Cloudflare Pages instructions.
+Film, still and hero hit target use the same 1920×1080 cover geometry, desktop focal point 50%, portrait 64%. Traced shelf outline/edge paths live in `src/content.ts`; the photographic layers are in `ForestScene.tsx`; camera choreography in `useForestMotion.ts`. Replace the three media assets together and revalidate trace coordinates if the film changes.
 
-## Existing Cloudflare Worker
+The narrative is in `src/content.ts`; its take-away is `public/field-note.txt`. Keep both consistent when editing. Do not add unapproved project links.
 
-Production is **https://pie.pe**, served by the pre-existing Worker **piepe** using Workers Static Assets. `wrangler.jsonc` deploys `dist`, preserves the existing `pie.pe` custom domain and keeps workers.dev and preview URLs disabled. Only `/media/*` runs the small Worker handler, which adds correct single-range 206/416 responses for progressive Safari/iOS video delivery. HTML, JS, CSS and fonts use Static Assets directly. No Pages project, DNS records or unrelated resources are created. The previous Worker had no bindings, routes, logging or placement configuration to migrate. Configuration was inspected through the authenticated Cloudflare API before deployment.
+## Existing production infrastructure
+
+**https://pie.pe** · existing Worker **piepe** · Workers Static Assets.
+
+`wrangler.jsonc` preserves the existing account, custom domain, compatibility date, disabled workers.dev/previews and route configuration. `dist` is the only public deployment directory. Only `/media/*` invokes the Worker; application files use Static Assets directly. No Pages project, DNS edits or extra resources.
+
+The range handler forwards native 206 responses when supported. Its fallback slices the response stream, retains only a source chunk and cancels as soon as the requested range ends. It does not read the full MP4 into an ArrayBuffer. Tests protect full/HEAD, bounded/open/suffix/clamped ranges, 416, If-Range, missing assets, native 206, unknown-size streams and upstream cancellation. Unknown-size responses legally ignore Range rather than buffer unbounded data.
 
 ```sh
 npx wrangler whoami
 npm run deploy
+npx wrangler deployments list
+npx wrangler rollback VERSION_ID
 ```
 
-Use an authenticated Wrangler login or a properly scoped `CLOUDFLARE_API_TOKEN`. Never put credentials in source. `_headers` sets security and cache policy for static assets; hashed application files are immutable, media revalidates daily. If changing media, deploy all matching files together. Unknown paths return 404 instead of HTML masquerading as missing media.
-
-For rollback, use `npx wrangler deployments list` then `npx wrangler rollback <VERSION_ID>`. Check the domain and media after any deploy or rollback. Avoid `wrangler pages deploy`: this is an existing Workers deployment.
+Keep credentials out of Git. `_headers` supplies security policy and caching. Existing 404 behavior is preserved. Before deployment, record the current production version for rollback; after deployment verify the custom domain, exact asset hashes, 206/416 responses and real-browser interactions.

@@ -3,7 +3,6 @@ import assert from 'node:assert/strict'
 import worker from '../src/worker.ts'
 const content = new TextEncoder().encode('0123456789')
 const env = { ASSETS: { async fetch(request: Request) {
-  assert.equal(request.headers.has('Range'), false)
   return new Response(request.method === 'HEAD' ? null : content, { headers: { 'Content-Type': 'video/mp4', 'Content-Length': '10', ETag: '"forest"' } })
 } } }
 async function get(range?: string, extra = {}) {
@@ -27,4 +26,25 @@ test('If-Range mismatch and unsupported multipart requests receive full media', 
 test('a matching If-Range receives partial content and missing assets remain 404', async () => {
   assert.equal((await get('bytes=0-1', { 'If-Range': '"forest"' })).status, 206)
   const missing = await worker.fetch(new Request('https://pie.pe/media/missing.mp4'), { ASSETS: { async fetch() { return new Response(null, { status: 404 }) } } }); assert.equal(missing.status, 404)
+})
+
+
+test('tiny ranges consume bounded chunks and cancel the upstream body', async () => {
+  let reads = 0, cancelled = false
+  const total = 1024 * 1024 * 10
+  const response = await worker.fetch(new Request('https://pie.pe/media/forest-reveal.mp4', { headers: { Range: 'bytes=0-1023' } }), { ASSETS: { async fetch() {
+    return new Response(new ReadableStream({ pull(controller) { reads++; controller.enqueue(new Uint8Array(65536).fill(7)) }, cancel() { cancelled = true } }), { headers: { 'Content-Length': String(total) } })
+  } } })
+  const bytes = new Uint8Array(await response.arrayBuffer())
+  assert.equal(bytes.byteLength, 1024); assert.equal(bytes[1023], 7); assert.ok(reads <= 2); assert.equal(cancelled, true)
+})
+test('native 206 responses pass through without re-reading or slicing', async () => {
+  const response = await worker.fetch(new Request('https://pie.pe/media/forest-reveal.mp4', { headers: { Range: 'bytes=0-1' } }), { ASSETS: { async fetch(request) {
+    assert.equal(request.headers.get('Range'), 'bytes=0-1')
+    return new Response('01', { status: 206, headers: { 'Content-Range': 'bytes 0-1/10', 'Content-Length': '2' } })
+  } } }); assert.equal(response.status, 206); assert.equal(await response.text(), '01')
+})
+test('unknown-size streams fall back to a legal full response', async () => {
+  const response = await worker.fetch(new Request('https://pie.pe/media/forest-reveal.mp4', { headers: { Range: 'bytes=-2' } }), { ASSETS: { async fetch() { return new Response('0123456789') } } })
+  assert.equal(response.status, 200); assert.equal(await response.text(), '0123456789')
 })
