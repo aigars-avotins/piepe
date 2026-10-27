@@ -26,17 +26,19 @@ function sliceStream(body: ReadableStream<Uint8Array>, start: number, end: numbe
 
 export default {
   async fetch(request: Request, env: Environment): Promise<Response> {
-    // Prefer the platform's native range response if/when supported by the binding.
-    const asset = await env.ASSETS.fetch(request)
+    const range = request.headers.get('Range')
+    const ifRange = request.headers.get('If-Range')
+    const requestHeaders = new Headers(request.headers)
+    requestHeaders.delete('Range'); requestHeaders.delete('If-Range')
+    const asset = await env.ASSETS.fetch(new Request(request, { headers: requestHeaders }))
     if (asset.status !== 200) return asset
     const headers = new Headers(asset.headers)
     headers.set('Accept-Ranges', 'bytes')
     const full = () => new Response(asset.body, { status: 200, headers })
-    const range = request.headers.get('Range')
+    if (range) { headers.set('X-Piepe-Asset-Length', String(asset.headers.get('Content-Length'))); headers.set('X-Piepe-Range', range) }
     if (!range || request.method !== 'GET' || !asset.body) return full()
     const match = /^bytes=(\d*)-(\d*)$/.exec(range)
     if (!match || (!match[1] && !match[2])) return full()
-    const ifRange = request.headers.get('If-Range')
     if (ifRange && ifRange !== asset.headers.get('ETag') && ifRange !== asset.headers.get('Last-Modified')) return full()
     const lengthHeader = asset.headers.get('Content-Length')
     const length = Number(lengthHeader)
