@@ -1,33 +1,67 @@
-# PIE.PE 2.0 verification
+# PIE.PE 2.0 — verified production release
 
-## Baseline and preserved behavior
+PIE.PE 2.0 is live at **https://pie.pe**. Verified on 2026-10-27 against the actual production domain and the built application, including natural video completion and a real field-note download in Chromium and macOS WebKit.
 
-Main baseline `89884ee032510c16cb9bad412715557040a720b1`, Cloudflare rollback version `60ff21da-3dd1-4bd1-86d1-8ed481859e05`. Source/media hashes checked against the complete remote repository tree. Original MP4 and both JPEGs remain unchanged. Existing Worker/domain/certificate/settings inspected through the authenticated Cloudflare API; no DNS/resource changes planned.
+- Existing Worker: `piepe`.
+- Production version: `70a6954d-f95c-4703-a142-985829809650`, serving 100% of traffic.
+- Verified implementation/test commit: `e6c6cbac55fe0fd69a338684e8177a7bc269f354`.
+- Existing custom-domain record, certificate, compatibility settings, bindings and disabled workers.dev/previews preserved and compared through Cloudflare's API.
+- V1 rollback version: `60ff21da-3dd1-4bd1-86d1-8ed481859e05`; availability checked with `wrangler versions view`.
 
-Before screenshots: desktop 1440×900, mobile 390×844 and 320×690, plus discovery and lower-page flow. The baseline was actually opened and tested; observations are not inferred solely from source.
+## Experience and preserved assets
 
-## Local checks
+Four connected photographic states replace the fixed-background text sequence: arrival, bark close-up with foreground depth, fungus encounter, and a wider return to morning light. Native scrolling drives the camera and lighting. No WebGL or new frontend libraries were added.
 
-- `npm ci`: passed.
-- TypeScript, ESLint, production build: passed on current implementation.
-- Worker tests: 8 passed, including bounded reads and upstream cancellation for a 1KB range from a simulated 10MB stream.
-- Local browser launcher: macOS sandbox prevents Chrome/WebKit processes registering their application/Mach services. The resulting launch failures are not app test failures or passes.
-- GitHub Actions runs Chromium in the version-matched Playwright container and WebKit on macOS. Both use a local server exercising the actual production media Worker. The workflow retains test results, traces, screenshots and genuine silent 15-second before/after scroll recordings.
+The actual fungus has a shaped hit target, traced shelf-edge feedback, a photographic discovery view, three original observations, an imagined line map and a downloadable field note. Collection persists for the tab session. Generic placeholder notes were removed. There are no invented projects, biography or destination links.
 
-## Real-browser review
+The optimized 1,723,128-byte H.264 film remains the original 6.041667s rendition, byte-identical to V1, with the same poster and end still. The accidental public source-master replacement introduced while work was in progress was restored to that optimized rendition. The master remains in Git under source/. All ten supplemental public media blobs uploaded during implementation were preserved and hash-checked. Concurrent staged brand SVGs under design/ were also preserved without publishing them into the 2.0 interface.
 
-The first real film still reaches `ended`. Four camera states, photographic field-note view, micro-story tabs and mobile hero/dialog have been visually reviewed. Supporting mobile labels were enlarged. No fake project rows remain. Hard cutout edges and a ghosted fungus transition identified in intermediate recordings were removed. The final camera moves through one continuous photograph; a separate foreground layer contains only bark. Supporting mobile labels are 12px or larger except decorative numbering.
+## Test results
 
-Actual in-app checks include natural 6.041667s completion, autoplay rejection, an actual paused/stalled film, keyboard observation selection, focus restoration, session collection, four scene framings and mobile/landscape. The natural run measured CLS 0.00436 and LCP 292ms locally; these are local lab observations, not field metrics. End-frame mean RGB difference against the preserved still was 4.67/255 (compression-level difference), with no visible flash.
+[Final green CI run](https://github.com/aigars-avotins/piepe/actions/runs/40566807529):
 
-Viewport glyph bounds and overflow checked at 320×690, 360×780, 390×844, 430×932 and 844×390. Tests now measure the fixed environment box and observe its actual resize; this avoids WebKit's discrepancy between its layout and visual viewport heights. Mobile discovery keeps its 44px close target fixed while the body scrolls.
+| Check | Result |
+| --- | --- |
+| Clean npm ci | Passed in Linux and macOS jobs |
+| TypeScript / ESLint / production build | Passed |
+| Media Worker tests | 10 passed |
+| Chromium regressions, including scroll recording | 18 passed |
+| macOS WebKit iPhone-size regressions | 17 passed; duplicate recording intentionally skipped |
+| Actual pie.pe production smoke tests | 2 passed, one per browser |
+| Combined browser checks | 37 passed |
+| Live public assets | All 28 match local SHA-256 hashes |
+| Live initial and suffix ranges | Exact 206 bodies and Content-Range |
+| Live invalid range | 416 |
+| Live If-Range mismatch / HEAD | Correct full response / length |
+| Unknown page, source, script and reserved-header URLs | 404 |
 
-Early CI found and fixed skip focus occurring before the enabled control committed; completion now uses a first-signal guard and focus follows the committed state. All ten media Worker tests pass. Vite preview lacked the production byte-range path, so browser tests now use the actual Worker. Linux WebKit still stalled on H.264 after ~0.2s; its bounded fallback worked. WebKit media verification moved to macOS, following Playwright's platform-codec guidance: https://playwright.dev/docs/browsers#webkit. This is not represented as a passing Linux playback test.
+Production smoke tests check the exact built application module, natural film ending, discovery, a real download, focus restoration, return navigation, refresh suppression and explicit replay. The preserved CSP blocks Cloudflare's platform-injected analytics module; the application fingerprint check is scoped to the actual app module. No security policy was weakened.
 
-Main advanced to `108829d84d0a9fccb9b7bdf9b9a0e3d371d54261` during implementation. The merge preserves every new document/media file, with all ten supplemental public media blobs hash-verified. The accidental 19MB public source-master replacement is restored to the original optimized V1 H.264 blob (1,723,128 bytes); the source master remains under source/. Supplemental 2.1 media is preserved without adding it to the 2.0 experience.
+Regressions additionally cover autoplay rejection, missing video/still, pending playback, an actual paused/stalled film, reduced motion with no automatic MP4 request, save-data, keyboard arrows/Home/End/Escape, collection persistence, camera changes, pause/resume, runtime motion preference changes and animation setup failure.
 
-Physical iPhone/iOS is not available: **not verified on hardware**. macOS Safari was opened, but the user continued working in that browser; a complete manual Safari smoke test is not claimed. Final native WebKit CI and production results follow below.
+The real in-app browser also verified production playback, keyboard discovery, collection, focus restoration, mobile scrolling, browser back navigation, refresh and explicit replay. No application page errors were observed.
 
-## Production media correction
+## Mobile and visual QA
 
-The first live 2.0 check caught a mismatch the initial mock did not reproduce: ASSETS omits Content-Length even though the outward HTTP response contains it. The unknown-size fallback legally returned 200, preventing ranges. The corrected handler strips Range from the asset subrequest and uses build-generated sizes from actual public files when the header is absent. It retains bounded stream slicing/cancellation. New tests exercise missing-header suffix/416 behavior with the real movie and verify every metadata size against disk. Temporary response diagnostics were removed.
+Before screenshots were captured at 1440×900, 390×844 and 320×690. Final screenshot/geometry checks cover 320×690, 360×780, 390×844, 430×932 and 844×390, including visible glyph bounds, overflow, 44px controls and a fixed close control while discovery scrolls.
+
+The final iPhone-size WebKit visible viewport is 390×664 when its browser controls consume part of the emulated 390×844 screen. This revealed a title/fungus overlap missed by the first desktop-viewport review. The final compact composition omits the decorative kicker and adjusts heading spacing/size; a regression now asserts the hero copy stays above the real fungus. A separate actual-production Chromium capture provides the full 390×844 CSS viewport.
+
+Intermediate hard cutout edges and overlapping fungus fades were removed after reviewing recordings. The final scroll uses one continuous photographic camera with a separate bark foreground. The downloadable final desktop recording contains a genuine 15-second native scroll, with a short opening hold; it is not a simulated image sequence.
+
+A local natural-playback run measured CLS 0.00436 and LCP 292ms. These are local lab observations, not field or handset performance claims. The preserved still's mean RGB difference from the decoded ending was 4.67/255, with no visible flash. Final JavaScript is approximately 121.79KB gzip; CSS approximately 6.33KB gzip.
+
+## Media delivery correction
+
+Live verification caught an important platform difference: ASSETS omits Content-Length internally even when the outward HTTP response includes it. The initial unknown-size fallback returned a full response instead of ranges. The final handler requests a full asset representation, uses build-generated sizes when the header is absent, slices the stream and cancels after the requested range. It does not buffer the full MP4.
+
+`scripts/media-sizes.mjs` regenerates `src/media-sizes.ts` on each build. Tests reproduce the missing-header case with the actual movie, validate suffix/416 behavior, check all generated sizes against disk, and verify a 1KB range consumes at most two 64KB chunks from a simulated 10MB source and cancels upstream. Temporary diagnostic headers were removed before the final deployment.
+
+## Artifacts and limits
+
+- [Final Chromium results, live desktop/mobile screenshots and recordings](https://github.com/aigars-avotins/piepe/actions/runs/40566807529/artifacts/12763815874).
+- [Final macOS WebKit results and live screenshots](https://github.com/aigars-avotins/piepe/actions/runs/40566807529/artifacts/12762504563).
+- [Canonical V1-to-V2 before/after recordings captured before rollout](https://github.com/aigars-avotins/piepe/actions/runs/40558976777/artifacts/12756819860). Later CI recordings naturally show the current production site as their starting reference.
+- Local JPEG/PNG screenshots, silent H.264 MP4s, JSON verification reports and a linked QA report are delivered in this Codex task's outputs/v2 directory. GitHub artifacts have 14-day retention; the delivered local files are retained separately.
+
+**Not verified on physical iPhone/iOS hardware.** macOS WebKit emulation and native media playback were tested. A full manual branded-Safari run was not completed because the user was working in that browser. Local automated browser subprocesses were blocked by the macOS sandbox; the successful automated results above ran in supported CI. Linux WebKit stalled on H.264 in its platform media stack; that failure was recorded, and Safari-relevant media verification ran on macOS as recommended by [Playwright's browser guidance](https://playwright.dev/docs/browsers#webkit).

@@ -21,7 +21,7 @@ Make PIE.PE a complete digital art encounter, rather than an empty portfolio. Th
 
 ## Discovery payoff
 
-A three-part original micro-story, “A small atlas of hidden growth”: Surface → Beneath → Beyond. Visitors move between three observations using accessible buttons/arrow keys. A photographic crop and a restrained, original branching-line diagram respond to the selected observation. The last note completes the encounter; a downloadable plain-text field note is a real take-away. Text is poetic observation, not a species identification or unsupported biological claim. Latvian “piepe — bracket fungus” remains a small complete bilingual touch.
+A three-part original micro-story, “A small atlas of attention”: Surface → Beneath → Beyond. Visitors move between three observations using accessible buttons/arrow keys. A photographic crop and a restrained, original branching-line diagram respond to the selected observation. The last note completes the encounter; a downloadable plain-text field note is a real take-away. Text is poetic observation, not a species identification or unsupported biological claim. Latvian “piepe — bracket fungus” remains a small complete bilingual touch.
 
 ## Motion and resilience
 

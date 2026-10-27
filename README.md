@@ -29,6 +29,8 @@ npm test
 
 Local Chrome is the default desktop test target; `PLAYWRIGHT_HEADLESS_SHELL=1` uses bundled Chromium. CI uses Chromium + iPhone-size WebKit, runs the full suite and retains screenshots, traces and silent 15-second before/after scroll recordings. `TEST_URL=https://pie.pe npm test` targets production (the recording test is intended for pre-deployment CI).
 
+Main CI also runs a separate smoke test against the actual pie.pe domain and captures CSS-sized production screenshots. To run it after building, use `PRODUCTION_SMOKE=1 TEST_URL=https://pie.pe npm test -- tests/production.spec.ts`.
+
 The local sandbox may deny browser subprocess startup; that is an environment failure, not a passing result. The in-app browser can still perform visual/interaction checks. See `docs/V2-QA.md` for actual outcomes and limitations, and `docs/V2-STORYBOARD.md` for audit/creative decisions.
 
 A local-only fault injector serves the production build:
