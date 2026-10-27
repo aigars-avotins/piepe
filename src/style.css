@@ -104,3 +104,6 @@ footer{display:flex;justify-content:space-between;align-items:center;width:100%;
 
 /* Supporting copy stays readable on narrow screens. */
 @media(max-width:699px){.hero-copy>.label,.warm-label,.encounter-status,.motion-toggle,.discovery-header>.label,.discovery-kicker,.observation-footnote,.observation-count,.chapter-label .label{font-size:12px}.hero-copy>.label{letter-spacing:.08em}.discovery-header>.label{letter-spacing:.06em;gap:10px}.discovery-kicker{letter-spacing:.09em}}
+
+/* Feather the real forest context around the specimen; never cut bark into polygon edges. */
+.specimen-context{mask-image:linear-gradient(90deg,transparent 24%,#000 49%,#000 91%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent 24%,#000 49%,#000 91%,transparent)}

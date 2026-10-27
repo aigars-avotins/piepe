@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { fungusOutline, shelfEdges } from './content'
+import { shelfEdges } from './content'
 
 export function EdgeLight({ className = '' }: { className?: string }) {
   return <svg className={`edge-light ${className}`} viewBox="0 0 1920 1080" fill="none" aria-hidden="true"><path d={shelfEdges} /></svg>
@@ -17,7 +17,7 @@ export const ForestScene = forwardRef<HTMLDivElement, { plane: CSSProperties; ch
       </div>
     </div>
     <div className="foreground-camera"><div className="media-plane" style={plane}><img src="/media/forest-final.jpg" alt="" width="1920" height="1080" /></div></div>
-    <div className="specimen-camera"><div className="media-plane" style={plane}><svg viewBox="0 0 1920 1080" aria-hidden="true"><defs><clipPath id="fungus-cutout"><path d="M980 0H1110L1100 360 1035 460 1000 590 1020 765 1020 1080H825L846 920 865 750 895 600 931 440 972 210Z"/><path d={fungusOutline} /></clipPath></defs><image href="/media/forest-final.jpg" width="1920" height="1080" clipPath="url(#fungus-cutout)" /></svg><EdgeLight /></div></div>
+    <div className="specimen-camera"><div className="media-plane" style={plane}><img className="specimen-context" src="/media/forest-final.jpg" alt="" width="1920" height="1080" /><EdgeLight /></div></div>
     <div className="forest-shade" /><div className="cool-veil" /><div className="dark-veil" /><div className="dawn-light" />
     <div className="light-shaft shaft-one" /><div className="light-shaft shaft-two" />
     <div className="forest-mist mist-one" /><div className="forest-mist mist-two" />

@@ -183,3 +183,48 @@ test('scroll changes photographic camera, foreground and return lighting rather 
   expect(new Set(states).size).toBeGreaterThanOrEqual(3)
   await expect(page.locator('.wide-environment')).toHaveCSS('opacity','1')
 })
+
+test('animation setup failure leaves a readable interactive static journey', async ({page}) => {
+  await page.addInitScript(() => {
+    sessionStorage.setItem('piepe-entered','1')
+    const native = matchMedia.bind(window)
+    window.matchMedia = query => { if (query.includes('max-width: 699px')) throw new Error('Animation unavailable'); return native(query) }
+  })
+  await page.goto('/')
+  await expect(page.locator('.world')).toHaveClass(/motion-off/)
+  await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
+  await expect(page.getByRole('dialog')).toBeVisible()
+  await page.getByRole('button',{name:'Close discovery'}).click()
+  await page.locator('#return').scrollIntoViewIfNeeded()
+  await expect(page.getByRole('button',{name:'Return to forest',exact:true})).toBeVisible()
+})
+
+test('mobile discovery keeps close available at the bottom and supports touch-sized controls', async ({page}) => {
+  await page.emulateMedia({reducedMotion:'reduce'})
+  for (const size of [{width:320,height:690},{width:390,height:844},{width:844,height:390}]) {
+    await page.setViewportSize(size); await page.goto('/')
+    await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
+    await page.getByRole('button',{name:'Look beneath',exact:true}).click()
+    await page.getByRole('button',{name:'Look beyond',exact:true}).click()
+    await page.getByRole('link',{name:'Keep the field note',exact:false}).scrollIntoViewIfNeeded()
+    const close=await page.getByRole('button',{name:'Close discovery'}).boundingBox()
+    expect(close!.y).toBeGreaterThanOrEqual(0)
+    expect(close!.y+close!.height).toBeLessThanOrEqual(size.height)
+    expect(close!.height).toBeGreaterThanOrEqual(44)
+    await page.getByRole('button',{name:'Close discovery'}).click()
+    await expect(page.getByRole('dialog')).not.toBeVisible()
+  }
+})
+
+test('pause and changing motion preference clean up the camera while retaining navigation',async({page})=>{
+  await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.goto('/')
+  await page.locator('#return').scrollIntoViewIfNeeded()
+  await page.getByRole('button',{name:'Pause atmosphere'}).click()
+  await expect(page.locator('.world')).toHaveClass(/motion-off/)
+  await page.getByRole('button',{name:'Resume atmosphere'}).click()
+  await expect(page.locator('.world')).not.toHaveClass(/motion-off/)
+  await page.emulateMedia({reducedMotion:'reduce'})
+  await expect(page.locator('.world')).toHaveClass(/motion-off/)
+  await page.getByRole('button',{name:'Return to forest',exact:true}).click()
+  await expect(page.locator('#forest')).toBeFocused()
+})
