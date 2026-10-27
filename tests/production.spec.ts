@@ -7,7 +7,7 @@ test('production release completes its film and discovery with the exact built a
   await page.goto('/')
   await expect(page.locator('.world')).toHaveAttribute('data-version','2.0')
   const local=await readFile('dist/index.html','utf8');const script=/src="([^"]+\.js)"/.exec(local)![1]
-  await expect(page.locator('script[type="module"]')).toHaveAttribute('src',script)
+  await expect(page.locator('head script[type="module"][src^="/assets/"]')).toHaveAttribute('src',script)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:13000})
   await expect(page.locator('video')).toHaveCount(0)
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)

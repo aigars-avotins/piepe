@@ -1,6 +1,6 @@
 # pie.pe 2.0 — The Living Forest
 
-An intimate digital art encounter around the owner's original six-second forest film. React, TypeScript, Vite and GSAP; no WebGL, generated replacement media, analytics, database or external fonts.
+An intimate digital art encounter around the owner's original six-second forest film. React, TypeScript, Vite and GSAP; no WebGL, generated replacement media, database or external fonts.
 
 ## The experience
 
