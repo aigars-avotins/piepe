@@ -11,6 +11,7 @@ npm ci
 npm run dev
 npm run typecheck
 npm run lint
+npm run test:worker
 npm run build
 npx playwright install webkit
 npm test
@@ -37,7 +38,7 @@ Edit `src/content.ts` to replace the three clearly labelled early field notes wi
 
 ## Existing Cloudflare Worker
 
-Production is **https://pie.pe**, served by the pre-existing Worker **piepe** using Workers Static Assets. `wrangler.jsonc` deploys `dist`, preserves the existing `pie.pe` custom domain and keeps workers.dev and preview URLs disabled. No Pages project, DNS records or unrelated resources are created. The previous Worker had no bindings, routes, logging or placement configuration to migrate. Configuration was inspected through the authenticated Cloudflare API before deployment.
+Production is **https://pie.pe**, served by the pre-existing Worker **piepe** using Workers Static Assets. `wrangler.jsonc` deploys `dist`, preserves the existing `pie.pe` custom domain and keeps workers.dev and preview URLs disabled. Only `/media/*` runs the small Worker handler, which adds correct single-range 206/416 responses for progressive Safari/iOS video delivery. HTML, JS, CSS and fonts use Static Assets directly. No Pages project, DNS records or unrelated resources are created. The previous Worker had no bindings, routes, logging or placement configuration to migrate. Configuration was inspected through the authenticated Cloudflare API before deployment.
 
 ```sh
 npx wrangler whoami

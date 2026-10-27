@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test'
 export default defineConfig({
-  testDir: './tests', timeout: 20000, fullyParallel: true, workers: 2,
+  testDir: './tests', testIgnore: '**/worker.test.ts', timeout: 20000, fullyParallel: true, workers: 2,
   reporter: [['list'], ['json', { outputFile: 'test-results/results.json' }]],
   use: { baseURL: process.env.TEST_URL || 'http://127.0.0.1:4173', trace: 'retain-on-failure', screenshot: 'only-on-failure' },
   projects: [

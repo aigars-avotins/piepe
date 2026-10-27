@@ -45,3 +45,7 @@ The committed 20-case Playwright matrix was **not executed successfully** in thi
 Actual Safari/iOS hardware and throttled mobile performance remain unverified. The supplied H.264 video and playsInline/muted attributes are compatible choices, but this report does not claim a native Safari test. The same Playwright suite is ready to run in an unrestricted local or CI environment.
 
 Project entries intentionally remain clearly labelled early field notes until the owner supplies real projects, as allowed by Issue #1.
+
+## Production media follow-up
+
+The first live HTTP range check returned the full video with status 200. A small Worker handler now explicitly serves single byte ranges on `/media/*`, including suffix/open-ended requests, If-Range validation and 416 bounds handling. Five Node tests exercise the actual handler against exact payload bytes. All non-media routes continue to use Workers Static Assets directly.
