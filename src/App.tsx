@@ -28,14 +28,19 @@ export default function App() {
   const dialog = useRef<HTMLDialogElement>(null)
   const hotspot = useRef<HTMLButtonElement>(null)
   const opener = useRef<HTMLElement | null>(null)
+  const finishLock = useRef(false)
   const unmountTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const finish = useCallback((reason: string) => {
+    if (finishLock.current) return
+    finishLock.current = true
     clearTimeout(unmountTimer.current)
     setIntro(false); setTypography(true); setExitReason(reason)
     writeSession('piepe-entered')
-    if (reason === 'skipped') requestAnimationFrame(() => hotspot.current?.focus({ preventScroll: true }))
     unmountTimer.current = setTimeout(() => setFilmMounted(false), 650)
   }, [])
+  useEffect(() => {
+    if (!intro && exitReason === 'skipped') hotspot.current?.focus({ preventScroll: true })
+  }, [intro, exitReason])
   const revealTypography = useCallback(() => setTypography(true), [])
   useEffect(() => () => clearTimeout(unmountTimer.current), [])
   useEffect(() => {
@@ -83,6 +88,7 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: reduced || paused ? 'instant' : 'smooth' })
   }
   const replay = () => {
+    finishLock.current = false
     clearTimeout(unmountTimer.current)
     history.replaceState(null, '', '#forest')
     window.scrollTo({ top: 0, behavior: 'instant' })

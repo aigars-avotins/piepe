@@ -1,8 +1,13 @@
 import { test, expect } from '@playwright/test'
+test.afterEach(async({page},testInfo)=>{ const events=await page.evaluate(()=>(window as unknown as {filmEvents?:unknown[]}).filmEvents).catch(()=>undefined); if(events) await testInfo.attach('film-events',{body:JSON.stringify(events),contentType:'application/json'}) })
 
 test('actual film plays once, reveals title, ends and becomes interactive', async ({ page }) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
+  await page.addInitScript(() => {
+    const events: unknown[]=[]; (window as unknown as {filmEvents:unknown[]}).filmEvents=events
+    for(const name of ['play','playing','pause','waiting','stalled','error','ended','timeupdate']) document.addEventListener(name,e=>{if(e.target instanceof HTMLVideoElement)events.push({event:name,time:e.target.currentTime,paused:e.target.paused,ready:e.target.readyState,error:e.target.error?.message,at:performance.now()})},true)
+  })
   await page.goto('/')
   await expect(page.getByRole('button', { name: 'Skip intro' })).toBeVisible()
   const film = page.locator('video')
@@ -94,7 +99,8 @@ test('an actual decoding stall recovers to the still', async ({ page }) => {
 test('missing still retains accessible text and controls', async ({ page }) => {
   await page.route('**/media/forest-final.jpg', route => route.abort())
   await page.goto('/')
-  await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'image-error')
+  await expect(page.locator('.world')).toHaveAttribute('data-intro-state', 'complete')
+  await expect(page.locator('.media-note')).toBeVisible()
   await expect(page.getByRole('heading', { name: 'pie.pe', exact: true })).toBeVisible()
   await page.getByRole('button', { name: 'Look closer at the fungus', exact: true }).click()
   await expect(page.getByRole('dialog')).toBeVisible()
@@ -113,7 +119,7 @@ test('cover geometry keeps hotspot aligned to the actual fungus across viewport 
   for (const size of [{ width: 390, height: 844 }, { width: 320, height: 690 }, { width: 844, height: 390 }, { width: 1440, height: 1000 }]) {
     await page.setViewportSize(size)
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }))
-    await expect.poll(async () => page.locator('.media-plane').evaluate(e => e.getBoundingClientRect().width >= innerWidth)).toBe(true)
+    await expect.poll(async () => page.locator('.base-camera .media-plane').evaluate(e => Math.abs(e.getBoundingClientRect().width - 1920 * Math.max(innerWidth / 1920, innerHeight / 1080)))).toBeLessThan(1)
     const geometry = await page.evaluate(() => {
       const image = document.querySelector('.media-plane')!.getBoundingClientRect()
       const hit = document.querySelector('.fungus-hit')!.getBoundingClientRect()

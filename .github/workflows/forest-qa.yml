@@ -26,6 +26,7 @@ jobs:
         with:
           name: forest-qa-and-scroll-recordings
           path: |
+            dist/
             test-results/
             playwright-report/
           retention-days: 14
