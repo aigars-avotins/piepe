@@ -1,13 +1,15 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import type { RefObject } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export function useForestMotion(root: RefObject<HTMLDivElement | null>, enabled: boolean, simple: boolean) {
+  const [failed, setFailed] = useState(false)
   useEffect(() => {
-    if (!enabled) return
-    const context = gsap.context(() => {
+    if (!enabled || failed) return
+    const context = gsap.context(() => {}, root)
+    try { context.add(() => {
       const media = gsap.matchMedia()
       media.add({ mobile: '(max-width: 699px)', desktop: '(min-width: 700px)' }, match => {
         const mobile = !!match.conditions?.mobile
@@ -32,9 +34,14 @@ export function useForestMotion(root: RefObject<HTMLDivElement | null>, enabled:
         return () => timeline.kill()
       })
       return () => media.revert()
-    }, root)
+    }) } catch {
+      context.revert()
+      setFailed(true)
+      return
+    }
     let active = true
     document.fonts.ready.then(() => { if (active) ScrollTrigger.refresh() })
     return () => { active = false; context.revert() }
-  }, [root, enabled, simple])
+  }, [root, enabled, simple, failed])
+  return failed
 }

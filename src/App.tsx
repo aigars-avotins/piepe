@@ -66,7 +66,7 @@ export default function App() {
     root.current?.querySelectorAll('section[data-scene]').forEach(section => observer.observe(section))
     return () => observer.disconnect()
   }, [])
-  useForestMotion(root, !intro && !reduced && !paused, dataSaving)
+  const motionFailed = useForestMotion(root, !intro && !reduced && !paused, dataSaving)
 
   const openDiscovery = (event: React.MouseEvent<HTMLButtonElement>) => {
     opener.current = event.currentTarget
@@ -93,7 +93,7 @@ export default function App() {
   const collect = () => { writeSession('piepe-note-found'); setCollected(true) }
   const inspectEvents = { onMouseEnter: () => setInspect(true), onMouseLeave: () => setInspect(false), onFocus: () => setInspect(true), onBlur: () => setInspect(false) }
 
-  return <div ref={root} className={`world ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || paused ? 'motion-off' : ''} ${hidden || paused || discovery ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${collected ? 'has-note' : ''}`} data-version="2.0" data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
+  return <div ref={root} className={`world ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || paused || motionFailed ? 'motion-off' : ''} ${hidden || paused || discovery ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${collected ? 'has-note' : ''}`} data-version="2.0" data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
     <a className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}>Skip to content</a>
     <ForestScene ref={environment} plane={plane} inspect={inspect}>
       <div className={`film-wrap ${intro ? '' : 'film-finished'}`}>{filmMounted && <IntroFilm key={filmKey} onFinish={finish} onTypography={revealTypography} skipRequested={skipRequested} />}</div>

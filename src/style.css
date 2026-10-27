@@ -98,3 +98,9 @@ footer{display:flex;justify-content:space-between;align-items:center;width:100%;
 @media(max-width:699px){.encounter-chapter{background:linear-gradient(0deg,rgba(5,17,11,.94) 10%,rgba(5,17,11,.65) 47%,transparent 75%)}}
 
 @media(max-width:699px){.hero-foot p{font-size:12px}.specimen-caption{font-size:12px}.observation-tabs button{font-size:12px}}
+/* Close remains reachable while the mobile field note scrolls. */
+.discovery-header{position:fixed}
+@media(max-width:699px){.discovery-header{background:linear-gradient(0deg,transparent,#08140f 18%);padding-bottom:10px}}
+
+/* Supporting copy stays readable on narrow screens. */
+@media(max-width:699px){.hero-copy>.label,.warm-label,.encounter-status,.motion-toggle,.discovery-header>.label,.discovery-kicker,.observation-footnote,.observation-count,.chapter-label .label{font-size:12px}.hero-copy>.label{letter-spacing:.08em}.discovery-header>.label{letter-spacing:.06em;gap:10px}.discovery-kicker{letter-spacing:.09em}}
