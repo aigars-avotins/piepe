@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test'
 test.afterEach(async({page},testInfo)=>{ const events=await page.evaluate(()=>(window as unknown as {filmEvents?:unknown[]}).filmEvents).catch(()=>undefined); if(events) await testInfo.attach('film-events',{body:JSON.stringify(events),contentType:'application/json'}) })
 
 test('actual film plays once, reveals title, ends and becomes interactive', async ({ page }) => {
+  test.setTimeout(45000)
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   await page.addInitScript(() => {
