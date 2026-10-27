@@ -21,6 +21,12 @@ jobs:
       - run: npm test -- --project=chrome-desktop
         env:
           CI: true
+      - if: github.ref_name == 'main'
+        run: npm test -- tests/production.spec.ts --project=chrome-desktop
+        env:
+          CI: true
+          PRODUCTION_SMOKE: true
+          TEST_URL: https://pie.pe
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -28,6 +34,7 @@ jobs:
           path: |
             dist/
             test-results/
+            production-results/
           retention-days: 14
   webkit:
     # WebKit media codecs depend on the host OS. macOS exercises Safari's native media stack.
@@ -45,9 +52,17 @@ jobs:
       - run: npm test -- --project=webkit-iphone
         env:
           CI: true
+      - if: github.ref_name == 'main'
+        run: npm test -- tests/production.spec.ts --project=webkit-iphone
+        env:
+          CI: true
+          PRODUCTION_SMOKE: true
+          TEST_URL: https://pie.pe
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: forest-qa-webkit-macos
-          path: test-results/
+          path: |
+            test-results/
+            production-results/
           retention-days: 14

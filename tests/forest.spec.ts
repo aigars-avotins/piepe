@@ -175,7 +175,7 @@ test('visible wordmark and discovery controls fit all specified portrait and lan
     expect(await page.evaluate(() => document.documentElement.scrollWidth<=innerWidth)).toBe(true)
     const target = await page.getByRole('button', {name:'Look closer at the fungus',exact:true}).boundingBox()
     expect(target!.height).toBeGreaterThanOrEqual(44)
-    await page.screenshot({path:testInfo.outputPath(`viewport-${size.width}x${size.height}.png`)})
+    await page.screenshot({path:testInfo.outputPath(`viewport-${size.width}x${size.height}.png`),scale:'css'})
   }
 })
 
