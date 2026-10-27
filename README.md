@@ -4,7 +4,7 @@ An intimate digital art encounter around the owner's original six-second forest 
 
 ## The experience
 
-Four connected camera states: arrival, beneath the bark, fungus encounter, return to daylight. Native scrolling drives photographic framing, a foreground trunk, a traced fungus/moss fragment, cool shadow and warm return light. The returning wide frame is the original film's start poster. CSS transforms/opacity do the work; there is no video scrubbing or permanent JavaScript animation loop.
+Four connected camera states: arrival, beneath the bark, fungus encounter, return to daylight. Native scrolling drives photographic framing, a foreground trunk, a continuous fungus close-up, cool shadow and warm return light. The returning wide frame is the original film's start poster. CSS transforms/opacity do the work; there is no video scrubbing or permanent JavaScript animation loop.
 
 The fungus opens a photographic field encounter: three keyboard/touch observations (Surface, Beneath, Beyond), an original micro-story and a real downloadable plain-text field note. The line map is explicitly an imagined map of attention, not a species identification. No placeholder projects or invented biography/links. A session mark records that the visitor collected the note; no data is transmitted.
 
@@ -47,7 +47,7 @@ Scenarios: natural, blocked, stall, pending, missing-video, missing-still, reduc
 - `public/media/forest-poster.jpg`: supplied initial poster, 156,196 bytes.
 - `source/forest-reveal-original.mp4`: original backup in GitHub, never publicly deployed.
 
-Film, still and hero hit target use the same 1920×1080 cover geometry, desktop focal point 50%, portrait 64%. Traced shelf outline/edge paths live in `src/content.ts`; the photographic layers are in `ForestScene.tsx`; camera choreography in `useForestMotion.ts`. Replace the three media assets together and revalidate trace coordinates if the film changes.
+Film, still and hero hit target use the same 1920×1080 cover geometry, desktop focal point 50%, portrait 64%. Traced shelf edge paths live in `src/content.ts`; the photographic layers are in `ForestScene.tsx`; camera choreography in `useForestMotion.ts`. Replace the three media assets together and revalidate trace coordinates if the film changes.
 
 The narrative is in `src/content.ts`; its take-away is `public/field-note.txt`. Keep both consistent when editing. Do not add unapproved project links.
 

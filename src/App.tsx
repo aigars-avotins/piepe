@@ -53,13 +53,15 @@ export default function App() {
   }, [finish])
   useLayoutEffect(() => {
     const resize = () => {
-      const width = window.innerWidth, height = window.innerHeight
+      const { width, height } = environment.current?.getBoundingClientRect() ?? { width: window.innerWidth, height: window.innerHeight }
       const scale = Math.max(width / 1920, height / 1080)
       const focal = width < 700 ? .64 : .5
       setPlane({ width: 1920 * scale, height: 1080 * scale, left: (width - 1920 * scale) * focal, top: (height - 1080 * scale) * .5 })
     }
+    const observer = new ResizeObserver(resize)
+    if (environment.current) observer.observe(environment.current)
     resize(); window.addEventListener('resize', resize)
-    return () => window.removeEventListener('resize', resize)
+    return () => { observer.disconnect(); window.removeEventListener('resize', resize) }
   }, [])
   useEffect(() => {
     const visibility = new Map<string, number>()

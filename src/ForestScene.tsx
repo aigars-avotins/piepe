@@ -17,7 +17,7 @@ export const ForestScene = forwardRef<HTMLDivElement, { plane: CSSProperties; ch
       </div>
     </div>
     <div className="foreground-camera"><div className="media-plane" style={plane}><img src="/media/forest-final.jpg" alt="" width="1920" height="1080" /></div></div>
-    <div className="specimen-camera"><div className="media-plane" style={plane}><img className="specimen-context" src="/media/forest-final.jpg" alt="" width="1920" height="1080" /><EdgeLight /></div></div>
+
     <div className="forest-shade" /><div className="cool-veil" /><div className="dark-veil" /><div className="dawn-light" />
     <div className="light-shaft shaft-one" /><div className="light-shaft shaft-two" />
     <div className="forest-mist mist-one" /><div className="forest-mist mist-two" />

@@ -119,7 +119,7 @@ test('cover geometry keeps hotspot aligned to the actual fungus across viewport 
   for (const size of [{ width: 390, height: 844 }, { width: 320, height: 690 }, { width: 844, height: 390 }, { width: 1440, height: 1000 }]) {
     await page.setViewportSize(size)
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }))
-    await expect.poll(async () => page.locator('.base-camera .media-plane').evaluate(e => Math.abs(e.getBoundingClientRect().width - 1920 * Math.max(innerWidth / 1920, innerHeight / 1080)))).toBeLessThan(1)
+    await expect.poll(async () => page.locator('.base-camera .media-plane').evaluate(e => Math.abs(e.getBoundingClientRect().width - 1920 * Math.max(document.querySelector('.environment')!.clientWidth / 1920, document.querySelector('.environment')!.clientHeight / 1080)))).toBeLessThan(1)
     const geometry = await page.evaluate(() => {
       const image = document.querySelector('.media-plane')!.getBoundingClientRect()
       const hit = document.querySelector('.fungus-hit')!.getBoundingClientRect()

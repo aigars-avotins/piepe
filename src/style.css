@@ -14,13 +14,13 @@ em,.italic-line{font-family:var(--serif);font-weight:400;font-style:italic;color
 .label{font-size:12px;line-height:1.6;letter-spacing:.16em;text-transform:uppercase}.tiny-dot{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--gold);vertical-align:middle}
 .world{position:relative;overflow:clip;isolation:isolate}.skip-content{position:fixed;z-index:100;left:24px;top:16px;transform:translateY(-200%);padding:14px;background:var(--paper);color:#08140f}.skip-content:focus{transform:none}
 .asset-monitor{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-.environment{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#08140f}
-.base-camera,.foreground-camera,.specimen-camera,.wide-environment{position:absolute;inset:0;transform-origin:57% 46%}
+.environment{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#08140f}
+.base-camera,.foreground-camera,.wide-environment{position:absolute;inset:0;transform-origin:57% 46%}
 .base-camera{z-index:1}.media-plane{position:absolute}.media-plane>img,.forest-film,.film-wrap,.media-plane>svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .forest-still{color:transparent}.film-wrap{z-index:2;opacity:1;transition:opacity .55s ease}.film-finished{opacity:0}
 .wide-environment{opacity:0;transform:scale(1.18)}.wide-environment img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
 .foreground-camera{z-index:3;opacity:0;transform-origin:70% 40%}.foreground-camera .media-plane{clip-path:polygon(24% 0,46% 0,44% 35%,39% 65%,35% 100%,12% 100%,16% 70%,22% 40%)}
-.specimen-camera{z-index:5;opacity:0;transform:scale(.9);transform-origin:66.5% 57%}
+
 .forest-shade{position:absolute;inset:0;z-index:6;background:linear-gradient(90deg,rgba(3,13,8,.38),transparent 60%),linear-gradient(0deg,rgba(3,13,8,.7),transparent 26%,transparent 78%,rgba(3,13,8,.24))}
 .cool-veil,.dark-veil,.dawn-light{position:absolute;inset:0;z-index:4;opacity:0;pointer-events:none}
 .cool-veil{background:rgba(6,31,27,.88);mix-blend-mode:multiply}.dark-veil{z-index:4;background:#06110c}
@@ -93,7 +93,7 @@ footer{display:flex;justify-content:space-between;align-items:center;width:100%;
 }
 @media(max-width:359px){:root{--gutter:20px}.hero-copy{padding-top:85px}.hero-copy>.label{font-size:9px;letter-spacing:.1em}.wordmark{font-size:34vw}.hero-deck{font-size:12px;max-width:255px;margin-top:7px}.hero-deck br{display:none}.hero-foot p{max-width:190px}.bark-copy h2{font-size:59px}.chapter-label .label{font-size:11px}.return-copy h2{font-size:52px}.discovery-stage{padding-left:22px;padding-right:22px}.discovery-kicker{font-size:10px}.observation-tabs button{font-size:11px;gap:5px}.observation-panel h2{font-size:42px}}
 @media(max-height:520px) and (min-width:700px){.hero{min-height:480px}.hero-copy{padding-top:110px;padding-bottom:70px}.wordmark{font-size:125px}.hero-copy>.label{font-size:10px}.hero-deck{font-size:25px;margin-top:6px}.hero-foot{bottom:17px}.hero-foot p{font-size:10px}.hero-foot p>span:first-child{font-size:19px}.edition{display:none}.fungus-annotation{top:69%;font-size:11px}.discovery-stage{padding-top:100px;padding-bottom:45px}.observation-panel{min-height:0}.observation-panel h2{font-size:42px}.attention-map{display:none}.observation-panel>p:not(.observation-footnote){font-size:12px}.observation-tabs{margin-bottom:20px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.edge-light path{stroke-dasharray:none}.spores,.forest-mist{display:none}.map-branches{stroke-dashoffset:0}.base-camera,.foreground-camera,.specimen-camera,.wide-environment{will-change:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.edge-light path{stroke-dasharray:none}.spores,.forest-mist{display:none}.map-branches{stroke-dashoffset:0}.base-camera,.foreground-camera,.wide-environment{will-change:auto}}
 
 @media(max-width:699px){.encounter-chapter{background:linear-gradient(0deg,rgba(5,17,11,.94) 10%,rgba(5,17,11,.65) 47%,transparent 75%)}}
 
@@ -105,5 +105,6 @@ footer{display:flex;justify-content:space-between;align-items:center;width:100%;
 /* Supporting copy stays readable on narrow screens. */
 @media(max-width:699px){.hero-copy>.label,.warm-label,.encounter-status,.motion-toggle,.discovery-header>.label,.discovery-kicker,.observation-footnote,.observation-count,.chapter-label .label{font-size:12px}.hero-copy>.label{letter-spacing:.08em}.discovery-header>.label{letter-spacing:.06em;gap:10px}.discovery-kicker{letter-spacing:.09em}}
 
-/* Feather the real forest context around the specimen; never cut bark into polygon edges. */
-.specimen-context{mask-image:linear-gradient(90deg,transparent 24%,#000 49%,#000 91%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent 24%,#000 49%,#000 91%,transparent)}
+
+
+main{position:relative;z-index:1}

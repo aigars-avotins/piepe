@@ -16,7 +16,7 @@ Make PIE.PE a complete digital art encounter, rather than an empty portfolio. Th
 
 1. **Arrival / Surface.** Preserve the unmodified 6.041667s film and matching still geometry. A spacious left wordmark, quiet caption and object-attached discovery label. Mobile puts lettering above the illuminated shelves.
 2. **Beneath the bark.** The camera moves laterally and closer into real bark detail; a photographic foreground trunk passes at a different speed, light narrows and the scene cools. A short original text turns attention from the visible object to hidden growth. No text-only fade sequence.
-3. **Encounter / What remains unseen.** The fungus returns as a large, precisely clipped photographic fragment. A travelling ivory edge light invites interaction. Activation becomes a close photographic encounter, not a generic information sheet.
+3. **Encounter / What remains unseen.** The fungus returns as a large photographic close-up with the surrounding bark intact. A travelling ivory edge light invites interaction. Activation becomes a close photographic encounter, not a generic information sheet.
 4. **Return / A different way of seeing.** The close layers separate, wider forest re-enters, morning light returns. A small completed field-note mark stays for the tab session. Optional replay is explicit, never triggered by scrolling.
 
 ## Discovery payoff
