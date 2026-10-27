@@ -22,6 +22,8 @@ test('actual film plays once, reveals title, ends and becomes interactive', asyn
   await expect(page.getByText('A little code. A different perspective.', { exact: false })).toBeVisible()
   await page.getByRole('button', { name: 'Return to forest' }).click()
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5)
+  await expect(page).toHaveURL(/#forest$/)
+  await expect(page.locator('#forest')).toBeFocused()
   await expect(film).toHaveCount(0)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'ended')
   expect(errors).toEqual([])

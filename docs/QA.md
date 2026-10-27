@@ -49,3 +49,5 @@ Project entries intentionally remain clearly labelled early field notes until th
 ## Production media follow-up
 
 The first live HTTP range check returned the full video with status 200. A small Worker handler now explicitly serves single byte ranges on `/media/*`, including suffix/open-ended requests, If-Range validation and 416 bounds handling. Five Node tests exercise the actual handler against exact payload bytes. All non-media routes continue to use Workers Static Assets directly.
+
+Live verification: all 17 public files returned HTTP 200 and matched local SHA-256 hashes. After the range fix, `bytes=0-1023` returned HTTP 206, exactly 1,024 bytes, and `Content-Range: bytes 0-1023/1723128`. Unknown media, source backup and the local QA harness all returned 404. The live browser completed the actual intro with no console errors. Return-to-forest also updates the URL anchor and transfers focus to the hero, so orientation changes do not pull the visitor back to the previous field-note anchor.

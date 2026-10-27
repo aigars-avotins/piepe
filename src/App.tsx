@@ -110,6 +110,8 @@ export default function App() {
     hotspot.current?.focus({ preventScroll: true })
   }
   const returnToForest = () => {
+    history.replaceState(null, '', '#forest')
+    document.getElementById('forest')?.focus({ preventScroll: true })
     window.scrollTo({ top: 0, behavior: reducedMotion || motionPaused ? 'instant' : 'smooth' })
   }
 
@@ -135,7 +137,7 @@ export default function App() {
     </header>
 
     <main>
-      <section id="forest" className="hero" aria-labelledby="hero-title">
+      <section id="forest" tabIndex={-1} className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow title-enter">A quiet kind of unexpected</p>
           <h1 id="hero-title" className="wordmark" aria-label="pie.pe"><span>pie</span><span className="wordmark-period">.</span><span>pe</span></h1>
