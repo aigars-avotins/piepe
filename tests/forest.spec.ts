@@ -165,7 +165,7 @@ test('returning visitors can explicitly replay the original introduction without
   await expect(page.locator('video')).toHaveCount(0)
 })
 
-test('visible wordmark and discovery controls fit all specified portrait and landscape sizes', async ({ page }) => {
+test('visible wordmark and discovery controls fit all specified portrait and landscape sizes', async ({ page }, testInfo) => {
   await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto('/')
   for (const size of [{width:320,height:690},{width:360,height:780},{width:390,height:844},{width:430,height:932},{width:844,height:390}]) {
     await page.setViewportSize(size); await page.evaluate(() => scrollTo({top:0,behavior:'instant'}))
@@ -175,6 +175,7 @@ test('visible wordmark and discovery controls fit all specified portrait and lan
     expect(await page.evaluate(() => document.documentElement.scrollWidth<=innerWidth)).toBe(true)
     const target = await page.getByRole('button', {name:'Look closer at the fungus',exact:true}).boundingBox()
     expect(target!.height).toBeGreaterThanOrEqual(44)
+    await page.screenshot({path:testInfo.outputPath(`viewport-${size.width}x${size.height}.png`)})
   }
 })
 
