@@ -179,7 +179,7 @@ export default function App() {
       </section>
     </main>
 
-    <dialog ref={dialog} className="discovery-dialog" onCancel={() => { setDiscovery(false) }} onClick={event => { if (event.target === event.currentTarget) closeDiscovery() }} aria-labelledby="discovery-title" aria-describedby="discovery-description">
+    <dialog ref={dialog} className="discovery-dialog" onCancel={event => { event.preventDefault(); closeDiscovery() }} onClick={event => { if (event.target === event.currentTarget) closeDiscovery() }} aria-labelledby="discovery-title" aria-describedby="discovery-description">
       <div className="discovery-sheet"><button autoFocus className="close-discovery text-button" onClick={closeDiscovery} aria-label="Close discovery">Close <span aria-hidden="true">×</span></button><SporeMark className="discovery-mark" /><p className="eyebrow">You looked a little closer.</p><h2 id="discovery-title">Something is<br /><em>growing here.</em></h2><p id="discovery-description">A home for ideas, experiments and<br className="desktop-break" /> things worth discovering.</p><a href="#field-notes" className="discovery-link" onClick={closeDiscovery}>See what is taking root <Arrow diagonal /></a><span className="discovery-footnote">piepe — Latvian for bracket fungus</span></div>
     </dialog>
   </div>

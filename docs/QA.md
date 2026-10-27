@@ -42,7 +42,7 @@ Production build: JavaScript 350.38 kB raw / 119.09 kB gzip; CSS 17.55 kB raw / 
 
 The committed 20-case Playwright matrix was **not executed successfully** in this host sandbox: Chrome, Chrome Headless Shell and WebKit processes abort before a page opens because macOS denies application/Mach service registration (`bootstrap_check_in … Permission denied`). This is a browser-launch/environment failure, not a passing test result. The interactive and fault-injection browser checks above were performed through the working in-app browser instead.
 
-Actual Safari/iOS hardware and throttled mobile performance remain unverified. The supplied H.264 video and playsInline/muted attributes are compatible choices, but this report does not claim a native Safari test. The same Playwright suite is ready to run in an unrestricted local or CI environment.
+Subsequent manual smoke testing in installed macOS Safari verified the production forest view, fungus dialog, and Escape close. Escape handling explicitly restores focus through the shared close function across browsers. Physical iPhone/iOS hardware and throttled mobile performance remain unverified. The supplied H.264 video and playsInline/muted attributes are compatible choices, but this report does not claim an automated WebKit matrix or an iOS hardware test. The same Playwright suite is ready to run in an unrestricted local or CI environment.
 
 Project entries intentionally remain clearly labelled early field notes until the owner supplies real projects, as allowed by Issue #1.
 
