@@ -1,3 +1,5 @@
+import { mediaSizes } from './media-sizes.ts'
+
 // Only /media/* runs this handler. Other files use Workers Static Assets directly.
 interface Environment { ASSETS: { fetch(request: Request): Promise<Response> } }
 
@@ -34,16 +36,16 @@ export default {
     if (asset.status !== 200) return asset
     const headers = new Headers(asset.headers)
     headers.set('Accept-Ranges', 'bytes')
+    const lengthHeader = asset.headers.get('Content-Length')
+    const length = lengthHeader ? Number(lengthHeader) : mediaSizes[new URL(request.url).pathname]
+    if (Number.isSafeInteger(length) && length >= 0) headers.set('Content-Length', String(length))
     const full = () => new Response(asset.body, { status: 200, headers })
-    if (range) { headers.set('X-Piepe-Asset-Length', String(asset.headers.get('Content-Length'))); headers.set('X-Piepe-Range', range) }
     if (!range || request.method !== 'GET' || !asset.body) return full()
     const match = /^bytes=(\d*)-(\d*)$/.exec(range)
     if (!match || (!match[1] && !match[2])) return full()
     if (ifRange && ifRange !== asset.headers.get('ETag') && ifRange !== asset.headers.get('Last-Modified')) return full()
-    const lengthHeader = asset.headers.get('Content-Length')
-    const length = Number(lengthHeader)
     // Unknown-size streams can legally ignore Range; never buffer the whole media to discover its length.
-    if (!lengthHeader || !Number.isSafeInteger(length) || length < 0) return full()
+    if (!Number.isSafeInteger(length) || length < 0) return full()
     const start = match[1] ? Number(match[1]) : Math.max(0, length - Number(match[2]))
     const end = match[1] ? (match[2] ? Math.min(Number(match[2]), length - 1) : length - 1) : length - 1
     if (!Number.isSafeInteger(start) || !Number.isSafeInteger(end) || start >= length || start > end || (!match[1] && Number(match[2]) === 0)) {

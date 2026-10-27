@@ -57,7 +57,7 @@ The narrative is in `src/content.ts`; its take-away is `public/field-note.txt`. 
 
 `wrangler.jsonc` preserves the existing account, custom domain, compatibility date, disabled workers.dev/previews and route configuration. `dist` is the only public deployment directory. Only `/media/*` invokes the Worker; application files use Static Assets directly. No Pages project, DNS edits or extra resources.
 
-The range handler forwards native 206 responses when supported. Its fallback slices the response stream, retains only a source chunk and cancels as soon as the requested range ends. It does not read the full MP4 into an ArrayBuffer. Tests protect full/HEAD, bounded/open/suffix/clamped ranges, 416, If-Range, missing assets, native 206, unknown-size streams and upstream cancellation. Unknown-size responses legally ignore Range rather than buffer unbounded data.
+The range handler requests a full representation from ASSETS, then slices its stream, retains only a source chunk and cancels when the requested range ends. The production binding omits Content-Length, so `scripts/media-sizes.mjs` generates `src/media-sizes.ts` from the actual public media on every build. Header length takes priority when supplied. This serves 206/416/If-Range without reading the full MP4 into an ArrayBuffer. Ten tests cover bounded/open/suffix/clamped ranges, HEAD, missing metadata, exact build sizes, missing assets and upstream cancellation. Unknown assets with no usable size legally receive the full response.
 
 ```sh
 npx wrangler whoami
