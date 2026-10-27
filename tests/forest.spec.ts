@@ -175,6 +175,11 @@ test('visible wordmark and discovery controls fit all specified portrait and lan
     expect(await page.evaluate(() => document.documentElement.scrollWidth<=innerWidth)).toBe(true)
     const target = await page.getByRole('button', {name:'Look closer at the fungus',exact:true}).boundingBox()
     expect(target!.height).toBeGreaterThanOrEqual(44)
+    if(size.width<700){
+      await expect.poll(()=>page.locator('.base-camera .media-plane').evaluate(e=>Math.abs(e.getBoundingClientRect().height-document.querySelector('.environment')!.clientHeight))).toBeLessThan(1)
+      const separation=await page.evaluate(()=>{const photo=document.querySelector('.base-camera .media-plane')!.getBoundingClientRect();return photo.top+photo.height*.358-document.querySelector('.hero-copy')!.getBoundingClientRect().bottom})
+      expect(separation).toBeGreaterThanOrEqual(0)
+    }
     await page.screenshot({path:testInfo.outputPath(`viewport-${size.width}x${size.height}.png`),scale:'css'})
   }
 })

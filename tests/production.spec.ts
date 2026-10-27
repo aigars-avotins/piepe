@@ -32,5 +32,11 @@ test('production release completes its film and discovery with the exact built a
   await expect(page.locator('video')).toHaveCount(1)
   await page.getByRole('button',{name:'Skip intro'}).click()
   await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
+  if(testInfo.project.name==='chrome-desktop'){
+    await page.setViewportSize({width:390,height:844})
+    await expect(page.locator('video')).toHaveCount(0)
+    await expect(page.locator('.wordmark span').first()).toHaveCSS('transform','none')
+    await page.screenshot({path:testInfo.outputPath('production-mobile-390x844.png'),scale:'css'})
+  }
   expect(errors).toEqual([])
 })
