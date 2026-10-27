@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 jobs:
-  browser-and-build:
+  chromium:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright:v1.64.1-noble
     timeout-minutes: 15
@@ -18,7 +18,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck && npm run lint && npm run test:worker && npm run build
-      - run: npm test
+      - run: npm test -- --project=chrome-desktop
         env:
           CI: true
       - uses: actions/upload-artifact@v4
@@ -28,5 +28,26 @@ jobs:
           path: |
             dist/
             test-results/
-            playwright-report/
+          retention-days: 14
+  webkit:
+    # WebKit media codecs depend on the host OS. macOS exercises Safari's native media stack.
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install webkit
+      - run: npm test -- --project=webkit-iphone
+        env:
+          CI: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: forest-qa-webkit-macos
+          path: test-results/
           retention-days: 14

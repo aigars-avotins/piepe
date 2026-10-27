@@ -22,7 +22,7 @@ export function useForestMotion(root: RefObject<HTMLDivElement | null>, enabled:
           .to('.base-camera', { scale: mobile ? .94 : 1.12, xPercent: mobile ? -6 : 7, yPercent: mobile ? -17 : 0, duration: 1.2, ease: 'power2.inOut' }, 1.45)
           .to('.foreground-camera', { xPercent: -75, opacity: 0, duration: .9 }, 1.45)
           .to('.cool-veil', { opacity: .22, duration: .8 }, 1.6)
-          .to('.dark-veil', { opacity: .56, duration: .8 }, 1.65)
+          .to('.dark-veil', { opacity: .32, duration: .8 }, 1.65)
           .to('.base-camera', { opacity: 0, scale: 1, xPercent: 0, yPercent: 0, duration: 1.1 }, 2.65)
           .to('.wide-environment', { opacity: 1, scale: 1, duration: 1.15, ease: 'power2.out' }, 2.65)
           .to('.dark-veil', { opacity: .16, duration: 1.1 }, 2.7)
