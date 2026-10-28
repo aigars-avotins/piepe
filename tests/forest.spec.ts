@@ -55,7 +55,7 @@ test('skip is immediate and fungus works with keyboard and Escape', async ({ pag
 test('reduced motion avoids downloading film, remains readable and has no overflow', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   const films: string[] = []
-  page.on('request', request => { if (request.url().endsWith('.mp4')) films.push(request.url()) })
+  page.on('request', request => { if (new URL(request.url()).pathname.endsWith('.mp4')) films.push(request.url()) })
   await page.goto('/en/')
   await expect(page.locator('video')).toHaveCount(0)
   await expect(page.getByRole('heading', { name: 'pie.pe', exact: true })).toBeVisible()
@@ -66,7 +66,7 @@ test('reduced motion avoids downloading film, remains readable and has no overfl
     await page.locator('#' + id).scrollIntoViewIfNeeded()
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
   }
-  await expect(page.getByRole('heading', { name: 'Same forest. Another way of seeing.' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'The forest stays. Your gaze changes.' })).toBeVisible()
   expect(films).toEqual([])
 })
 
@@ -78,7 +78,7 @@ test('blocked autoplay falls back immediately to the interactive still', async (
 })
 
 test('missing video recovers without trapping the visitor', async ({ page }) => {
-  await page.route('**/media/forest-reveal.mp4', route => route.abort())
+  await page.route('**/media/forest-reveal.mp4*', route => route.abort())
   await page.goto('/en/')
   await expect(page.locator('.world')).toHaveAttribute('data-intro-state', 'complete', { timeout: 6000 })
   await page.getByRole('button', { name: 'Look closer at the fungus', exact: true }).click()
@@ -86,7 +86,7 @@ test('missing video recovers without trapping the visitor', async ({ page }) => 
 })
 
 test('pending playback and a mid-film stall both have bounded recovery', async ({ page }) => {
-  await page.route('**/media/forest-reveal.mp4', () => {})
+  await page.route('**/media/forest-reveal.mp4*', () => {})
   await page.goto('/en/', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'load-timeout', { timeout: 6000 })
   await expect(page.getByRole('button', { name: 'Discover the shelf fungus' })).toBeEnabled()
@@ -100,7 +100,7 @@ test('an actual decoding stall recovers to the still', async ({ page }) => {
 })
 
 test('missing still retains accessible text and controls', async ({ page }) => {
-  await page.route('**/media/forest-final.jpg', route => route.abort())
+  await page.route('**/media/forest-final.jpg*', route => route.abort())
   await page.goto('/en/')
   await expect(page.locator('.world')).toHaveAttribute('data-intro-state', 'complete')
   await expect(page.locator('.media-note')).toBeVisible()

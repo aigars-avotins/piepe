@@ -27,7 +27,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <div className="cinema-content">
         <div className="chapter-label"><span className="label">{t.beneathLabel}</span><span className="chapter-line" /></div>
         <div className="bark-copy"><h2 id="bark-title">{t.beneathTitle}<br /><em>{t.beneathEm}</em></h2><p className="chapter-body">{t.beneathBody}</p><a className="line-link" href="#encounter">{t.continueJourney} <span aria-hidden="true"><Arrow direction="down" /></span></a>
-          <div className="cinema-controls">{cinemaErrors?.understory ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('understory')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause} aria-pressed={paused}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+          <div className="cinema-controls">{cinemaErrors?.understory ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('understory')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
         </div>
         <span className="depth-coordinate" aria-hidden="true">{t.depth}</span>
         </div>
@@ -40,13 +40,14 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
       <section id="fungus-facts" className="fungus-facts" aria-labelledby="facts-title">
         <div className="facts-intro"><p className="label">pie.pe</p><h2 id="facts-title">{t.factsTitle}</h2><p>{t.factsIntro}</p></div>
         <div className="fact-observations">{t.facts.map((fact, index) => <article key={index}><span className="label">0{index + 1}</span><h3>{fact.title}</h3><p>{fact.text}</p></article>)}</div>
+        <details className="fungus-vocabulary"><summary>{t.glossaryTitle}</summary><dl>{t.glossary.map(entry => <div key={entry.term}><dt>{entry.term}</dt><dd>{entry.definition}</dd></div>)}</dl></details>
         <p className="art-note">{t.artNote}</p>
         <div className="fact-sources"><span>{t.sources}</span><a href="https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/" target="_blank" rel="noopener noreferrer">Woodland Trust <Arrow /></a><a href="https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm" target="_blank" rel="noopener noreferrer">University of Edinburgh <Arrow /></a></div>
       </section>
       <section id="return" className="chapter return-chapter cinematic-chapter" data-scene="return" aria-labelledby="return-title">
         <div className="cinema-content">
-        <div className="return-copy"><p className="label">{t.returnLabel}</p><h2 id="return-title">{t.returnTitle}<br /><em>{t.returnEm}</em></h2><p className="return-thought">{t.returnThought}</p><button className="line-link" onClick={onReturn}>{t.returnForest} <span aria-hidden="true"><Arrow direction="up" /></span></button><a className="line-link" href="#wallpapers">{t.wallpapersSub}<span aria-hidden="true"><Arrow direction="down" /></span></a>
-          <div className="cinema-controls">{cinemaErrors?.breathing ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('breathing')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause} aria-pressed={paused}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+        <div className="return-copy"><p className="label">{t.returnLabel}</p><h2 id="return-title">{t.returnTitle}<br /><em>{t.returnEm}</em></h2><p className="return-thought">{t.returnThought}</p><button className="line-link" onClick={onReturn}>{t.returnForest} <span aria-hidden="true"><Arrow direction="up" /></span></button><a className="line-link" href="#wallpapers">{t.endingWallpapers}<span aria-hidden="true"><Arrow direction="down" /></span></a>
+          <div className="cinema-controls">{cinemaErrors?.breathing ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('breathing')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
         </div>
         </div>
       </section>

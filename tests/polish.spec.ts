@@ -28,7 +28,7 @@ test('macro is prepared behind the existing bark before its scroll envelope, and
   await page.addInitScript(() => sessionStorage.setItem('piepe-entered', '1'))
   let release!: () => void
   const gate = new Promise<void>(resolve => { release = resolve })
-  await page.route(/forest-understory(?:\.jpg|\.mp4|-final\.jpg)$/, async route => { await gate; await route.continue() })
+  await page.route(/forest-understory(?:\.jpg|\.mp4|-final\.jpg)(?:\?.*)?$/, async route => { await gate; await route.continue() })
   await page.goto('/en/', { waitUntil: 'domcontentloaded' })
   const clip = page.locator('[data-clip=understory]')
   await expect(clip).toHaveCount(1)

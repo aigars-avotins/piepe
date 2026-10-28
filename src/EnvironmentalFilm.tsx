@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { mediaUrl } from './mediaUrl'
 
 type Props = { name: 'understory' | 'breathing'; enabled: boolean; active?: boolean; onReady?: () => void; onFinish?: (reason: string) => void }
 
@@ -66,11 +67,11 @@ export default function EnvironmentalFilm({ name, enabled, active = true, onRead
       document.removeEventListener('visibilitychange', visibility); film.removeAttribute('src'); film.load()
     }
   }, [name, enabled, active])
-  const poster = `/media/forest-${name}${name === 'understory' ? '' : '-poster'}.jpg`
+  const poster = mediaUrl(`/media/forest-${name}${name === 'understory' ? '' : '-poster'}.jpg`)
   return <div className={`motion-clip clip-${name}`} data-clip={name} data-clip-state={!active || !enabled ? 'idle' : reason && reason !== 'ended' ? 'error' : ready ? 'playing' : 'preparing'} data-clip-ready={ready} data-still-ready={posterReady} data-clip-reason={reason} data-clip-cycles={cycles} data-loop-hold={held} aria-hidden="true">
-    <img className="clip-end" src={`/media/forest-${name}-final.jpg`} alt="" width={name === 'understory' ? 1996 : 1920} height={name === 'understory' ? 1036 : 1080} />
-    <img className="clip-poster" src={poster} alt="" width={name === 'understory' ? 1996 : 1920} height={name === 'understory' ? 1036 : 1080} onLoad={event => { void event.currentTarget.decode().then(() => setPosterReady(true)).catch(() => {}) }} onError={event => { if (!event.currentTarget.src.endsWith('/media/forest-final.jpg')) event.currentTarget.src = '/media/forest-final.jpg' }} />
-    {enabled && active && <video ref={video} src={`/media/forest-${name}.mp4`} muted playsInline preload="auto" tabIndex={-1} />}
+    <img className="clip-end" src={mediaUrl(`/media/forest-${name}-final.jpg`)} fetchPriority="low" alt="" width={name === 'understory' ? 1900 : 1920} height={name === 'understory' ? 988 : 1080} />
+    <img className="clip-poster" src={poster} alt="" width={name === 'understory' ? 1900 : 1920} height={name === 'understory' ? 988 : 1080} onLoad={event => { void event.currentTarget.decode().then(() => setPosterReady(true)).catch(() => {}) }} onError={event => { if (!new URL(event.currentTarget.src).pathname.endsWith('/media/forest-final.jpg')) event.currentTarget.src = mediaUrl('/media/forest-final.jpg') }} />
+    {enabled && active && <video ref={video} src={mediaUrl(`/media/forest-${name}.mp4`)} muted playsInline preload="auto" tabIndex={-1} />}
     <canvas ref={carrier} className="clip-held" />
   </div>
 }

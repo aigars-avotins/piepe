@@ -1,0 +1,31 @@
+# PIE.PE 2.3 — repeatable forest cinema
+
+2.3 is developed on `codex/piepe-v23`. Production remains the accepted 2.2 release until the owner approves the finished PR. No new runtime package, Worker, Pages project or AI footage is introduced.
+
+## Natural scrolling and scene ownership
+
+The 2.2 activation gate waited for the whole-page GSAP camera scrub to become idle. Ordinary continuous input could carry the visitor through the eligible interval before that happened. Environmental clips also shared Awakening's session history: starting a clip marked it played, and leaving it completed its lifecycle permanently. Those two mechanisms explain moving films only at a precise stop and still images on later visits. Initial direct anchors skip the intro and resolve their intended position after font/layout readiness, unless the visitor intervenes; reload/back navigation retain browser scroll restoration.
+
+`useForestMotion.ts` now uses one camera timeline with distances calculated from real section positions. Its gaps hold the camera pose throughout each cinema plateau. Native CSS `position: sticky` holds the scene's copy inside a 280svh section (300svh on phones). The visual stage covers the viewport. ScrollTrigger controls the existing reversible entrances/exits and a broad activation interval; it does not wait for a scrub to stop. There is no wheel/touch cancellation, scroll snapping, scripted scrolling or minimum viewing duration. Links, fast scrolling and intentional interruption can leave immediately.
+
+`EnvironmentalFilm.tsx` owns one decoder per onstage visit. It never reads or writes session playback history. A later visit mounts a new lifecycle. Leaving removes its source and releases the decoder; backgrounding pauses it. An actual error or bounded load/stall timeout keeps an image and offers a localized Retry. Pause and Escape stop motion without collapsing the section beneath the visitor. Reduced-motion/save-data use shorter static sections and request no films.
+
+The originals are forward-moving, six-second shots with different first/last camera poses; they are not seamless loop masters. At each ending a canvas copies the actual final video frame. The same decoder seeks to zero; an actual presented opening frame releases that carrier with a 320ms dissolve. This is an intentional forward replay, not a claim that the source camera path is cyclic. It introduces neither a second playing video nor reverse rain/mist. Staying continues to produce moving frames indefinitely.
+
+## The discovery settles once
+
+In 2.2 the discovery's native photo animation correctly reached its destination, but cleanup removed `.photo-moving` and restored the ordinary 1.4s CSS object-position transition while the temporary 50%/50% crop was still in effect. The photo then animated a second time toward its observation crop. `usePhotoHandoff.ts` commits that crop with transitions disabled through the next two paints before restoring normal observation transitions. The existing Dziļāk/Tālāk cameras and interrupted reverse handoff remain intact.
+
+The higher-fidelity Awakening also exposed a decoder-clock race: playing while hidden could advance the film before its first visible frame. The first presented frame is now prepared paused at time zero, with the frame callback registered before assigning the source. The held forest, matching opening and shared grading remain in the same plane. Playback starts after the opening has been committed to the page. A transient readiness drop retries on the next paint rather than waiting for a second paused-video frame that may never arrive.
+
+## Delivery and art direction
+
+All four films are H.264 High Level 4.1, yuv420p, native 24fps/145 frames, faststart MP4, encoded from verified supplied masters. Understory alone removes a baked-in rounded black edge with a pure `1900:988:48:24` crop. No stretching, upscaling, sharpening or synthetic grain is added. The 10-bit HEVC Reveal uses error-diffusion conversion to compatible 8-bit H.264. See [the media review](V23-MEDIA.md).
+
+Posters/end stills come from the corresponding original frames, with the same Understory crop and Rec.709 conversion. All changed `/media/` URLs carry `?v=2.3` so an existing 2.2 cache cannot mix old stills and new movies. Byte ranges use the URL pathname and regenerated actual sizes. Wallpaper and audio URLs remain on their existing editions because those assets did not change.
+
+Portrait hero focal position is 60% in both prerendered CSS and measured live geometry; the hotspot uses that same plane. Understory uses 40% to retain the main droplet cluster. Text sits below the visual subject. The ending has two next actions and localized quiet closure. A finite hotspot hint and native three-term glossary improve discovery without new modal or invented scientific imagery. See [the asset brief](V23-ASSET-BRIEF.md).
+
+## Release boundary
+
+Automatic CI remains typecheck/lint/Worker/build only. Full browsers are manual release validation; the timeout ceiling is 20 minutes to include the added every-visit tests, not an instruction to consume that time. Tests must actually pass before claiming validation. Branch validation uses `production_smoke: false` while production is 2.2. Merge/main push and production verification happen only after the owner's explicit final approval.

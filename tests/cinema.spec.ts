@@ -47,21 +47,21 @@ test('server-painted controls and cover geometry survive delayed hydration witho
 for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) inViewport(width,height,()=>test(`held frame and first decoded awakening stay in the same plane at ${width}x${height}`,async({page},testInfo)=>{
   await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   let release!:()=>void;const gate=new Promise<void>(resolve=>{release=resolve})
-  await page.route('**/media/forest-awakening.mp4',async route=>{await gate;await route.continue()})
+  await page.route('**/media/forest-awakening.mp4*',async route=>{await gate;await route.continue()})
   await page.goto('/en/')
   const plane=page.locator('.base-camera .media-plane'),shade=page.locator('.forest-shade')
   const before=await plane.boundingBox(),grading=await shade.evaluate(e=>getComputedStyle(e).backgroundImage)
   await page.evaluate(()=>{
     const root=document.querySelector('.world')!;(window as unknown as { originalPlane:Element }).originalPlane=document.querySelector('.base-camera .media-plane')!
     const samples:{at:number;phase:string|null;dialog:boolean;frame:{x:number;y:number;w:number;h:number};ready:number}[]=[];(window as unknown as {seamSamples:typeof samples}).seamSamples=samples
-    const collect=()=>{const e=document.querySelector('.base-camera .media-plane')!,r=e.getBoundingClientRect(),v=document.querySelector<HTMLVideoElement>('video[src$="awakening.mp4"]');samples.push({at:performance.now(),phase:root.getAttribute('data-awakening'),dialog:!!document.querySelector('dialog[open]'),frame:{x:r.x,y:r.y,w:r.width,h:r.height},ready:v?.readyState||0});if(root.getAttribute('data-awakening')!=='docking'&&samples.length<300)requestAnimationFrame(collect)};requestAnimationFrame(collect)
+    const collect=()=>{const e=document.querySelector('.base-camera .media-plane')!,r=e.getBoundingClientRect(),v=document.querySelector<HTMLVideoElement>('video[src*="/media/forest-awakening.mp4"]');samples.push({at:performance.now(),phase:root.getAttribute('data-awakening'),dialog:!!document.querySelector('dialog[open]'),frame:{x:r.x,y:r.y,w:r.width,h:r.height},ready:v?.readyState||0});if(root.getAttribute('data-awakening')!=='docking'&&samples.length<300)requestAnimationFrame(collect)};requestAnimationFrame(collect)
   })
   await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await expect(page.locator('.world')).toHaveAttribute('data-awakening','preparing')
   await expect(page.locator('dialog[open]')).toHaveCount(0)
   await expect(page.getByRole('button',{name:'Go straight to the field note'})).toBeVisible()
   await expect(page.locator('.hero-copy')).toHaveCSS('opacity','1')
-  await expect(page.locator('video[src$="awakening.mp4"]')).toHaveCSS('opacity','0')
+  await expect(page.locator('video[src*="/media/forest-awakening.mp4"]')).toHaveCSS('opacity','0')
   // Screenshot encoding must not consume the real four-second media recovery window.
   // Separate browser recordings provide the visual evidence; keep this readiness gate bounded.
   expect(await plane.boundingBox()).toEqual(before)
@@ -87,10 +87,12 @@ for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) inViewport(width
 test('the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error',async({page},testInfo)=>{
   await page.addInitScript(()=>{
     sessionStorage.setItem('piepe-entered','1')
-    new MutationObserver(()=>{const v=document.querySelector<HTMLVideoElement>('video[src$="awakening.mp4"]');if(!v||v.dataset.qaWatched)return;v.dataset.qaWatched='1';v.requestVideoFrameCallback(()=>{
-      const ref=new Image();ref.src='/media/forest-final.jpg'
+    new MutationObserver(()=>{const v=document.querySelector<HTMLVideoElement>('video[src*="/media/forest-awakening.mp4"]');if(!v||v.dataset.qaWatched)return;v.dataset.qaWatched='1';v.requestVideoFrameCallback((_,metadata)=>{
+      const captured=document.createElement('canvas');captured.width=1920;captured.height=1080;captured.getContext('2d')!.drawImage(v,0,0)
+      const firstTime=metadata.mediaTime
+      const ref=new Image();ref.src='/media/forest-final.jpg?v=2.3'
       const compare=()=>{
-        const a=document.createElement('canvas'),b=document.createElement('canvas');a.width=b.width=1920;a.height=b.height=1080;const ac=a.getContext('2d')!,bc=b.getContext('2d')!;ac.drawImage(v,0,0);bc.drawImage(ref,0,0)
+        const a=document.createElement('canvas'),b=document.createElement('canvas');a.width=b.width=1920;a.height=b.height=1080;const ac=a.getContext('2d')!,bc=b.getContext('2d')!;ac.drawImage(captured,0,0);bc.drawImage(ref,0,0)
         const anchors=[]
         for(const [x,y] of [[1050,390],[960,525],[1390,655]]){
           const w=120,h=70,ap=ac.getImageData(x,y,w,h).data,bp=bc.getImageData(x,y,w,h).data
@@ -99,9 +101,9 @@ test('the decoded first frame retains local fungus edge anchors, not just a low 
           for(let oy=-5;oy<=5;oy++)for(let ox=-5;ox<=5;ox++){let dot=0,aa=0,bb=0;for(let j=6;j<h-6;j++)for(let i=6;i<w-6;i++){const av=ae[j*w+i],bv=be[(j+oy)*w+i+ox];dot+=av*bv;aa+=av*av;bb+=bv*bv}const score=dot/Math.sqrt(aa*bb);if(score>best){best=score;dx=ox;dy=oy}}
           anchors.push({x,y,dx,dy,score:best})
         }
-        ;(window as unknown as {firstFrame:unknown}).firstFrame={time:v.currentTime,anchors}
+        ;(window as unknown as {firstFrame:unknown}).firstFrame={time:firstTime,anchors}
       };if(ref.complete)compare();else ref.onload=compare
-    })}).observe(document,{childList:true,subtree:true})
+    })}).observe(document,{childList:true,attributes:true,attributeFilter:['src'],subtree:true})
   })
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await expect.poll(()=>page.evaluate(()=>(window as unknown as {firstFrame:unknown}).firstFrame)).toBeTruthy()
@@ -143,11 +145,11 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   for(let i=1;i<frames.length;i++){const dt=frames[i].t-frames[i-1].t;if(dt<1)continue;expect(Math.abs(frames[i].w-frames[i-1].w)/dt).toBeLessThan(3);expect(Math.abs(frames[i].h-frames[i-1].h)/dt).toBeLessThan(3)}
   await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
-  expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg')
+  expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg?v=2.3')
 }))
 
 test('Escape while preparing cancels in place; repeat activation opens the accessible note',async({page})=>{
-  await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4',()=>{})
+  await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4*',()=>{})
   await page.goto('/en/');const open=page.getByRole('button',{name:'Look closer at the fungus',exact:true});await open.click();await page.keyboard.press('Escape')
   await expect(page.locator('.world')).toHaveAttribute('data-awakening','idle');await expect(open).toBeFocused();await expect(page.locator('video')).toHaveCount(0)
   await open.click()
@@ -156,25 +158,29 @@ test('Escape while preparing cancels in place; repeat activation opens the acces
 
 test('environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts',async({page})=>{
   await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.goto('/en/')
+  await page.evaluate(()=>document.fonts.ready)
   const samples=[]
   for(const p of [.95,.55,.15,.55,.95]){
     await page.evaluate(p=>scrollTo({top:document.getElementById('understory')!.offsetTop-innerHeight*p,behavior:'instant'}),p)
-    await expect.poll(()=>page.locator('.understory-cinema').evaluate(e=>Number(getComputedStyle(e).opacity))).toBeGreaterThanOrEqual(0)
-    await page.waitForTimeout(100);samples.push(await page.locator('.understory-cinema').evaluate(e=>Number(getComputedStyle(e).opacity)))
+    const expected=Math.max(0,Math.min(1,(.9-p)/.7))
+    await expect.poll(()=>page.locator('.understory-cinema').evaluate((e,target)=>Math.abs(Number(getComputedStyle(e).opacity)-target),expected)).toBeLessThan(.07)
+    samples.push(await page.locator('.understory-cinema').evaluate(e=>Number(getComputedStyle(e).opacity)))
   }
   expect(samples[0]).toBeLessThan(.1);expect(samples[1]).toBeGreaterThan(.3);expect(samples[1]).toBeLessThan(.8);expect(samples[2]).toBeGreaterThan(.95);expect(samples[3]).toBeGreaterThan(.3);expect(samples[4]).toBeLessThan(.1)
   await page.evaluate(()=>scrollTo({top:document.getElementById('understory')!.offsetTop,behavior:'instant'}))
   const exit=[]
   for(const p of [1,.6,.2,.6,1]){
     await page.evaluate(p=>scrollTo({top:document.getElementById('encounter')!.offsetTop-innerHeight*p,behavior:'instant'}),p)
-    await page.waitForTimeout(100);exit.push(await page.locator('.understory-cinema').evaluate(e=>Number(getComputedStyle(e).opacity)))
+    const expected=Math.max(0,Math.min(1,(p-.25)/.7))
+    await expect.poll(()=>page.locator('.understory-cinema').evaluate((e,target)=>Math.abs(Number(getComputedStyle(e).opacity)-target),expected)).toBeLessThan(.07)
+    exit.push(await page.locator('.understory-cinema').evaluate(e=>Number(getComputedStyle(e).opacity)))
   }
   expect(exit[0]).toBeGreaterThan(.95);expect(exit[1]).toBeGreaterThan(.3);expect(exit[1]).toBeLessThan(.8);expect(exit[2]).toBeLessThan(.1);expect(exit[3]).toBeGreaterThan(.3);expect(exit[3]).toBeLessThan(.8);expect(exit[4]).toBeGreaterThan(.95)
 })
 
 test('unavailable end-still uses the actual decoded frame for a continuous note handoff',async({page})=>{
   await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
-  await page.route('**/media/forest-awakening-final.jpg',route=>route.abort())
+  await page.route('**/media/forest-awakening-final.jpg*',route=>route.abort())
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:12000})
   const source=await page.locator('.forest-still').getAttribute('src');expect(source).toMatch(/^data:image\/jpeg/)
@@ -184,7 +190,7 @@ test('unavailable end-still uses the actual decoded frame for a continuous note 
 })
 
 test('locale change while decoding does not reopen a modal, move focus or restart playback',async({page})=>{
-  await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4',()=>{})
+  await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4*',()=>{})
   await page.goto('/');await page.getByRole('button',{name:'Aplūkot piepi tuvāk',exact:true}).click()
   const language=page.locator('.site-header .language-switch a[lang="en"]')
   // Safari pointer activation intentionally need not focus links. Exercise keyboard focus retention.
@@ -210,7 +216,7 @@ test('a transient readiness drop at the presented-frame callback retries behind 
     const native=HTMLVideoElement.prototype.requestVideoFrameCallback
     HTMLVideoElement.prototype.requestVideoFrameCallback=function(callback){
       return native.call(this,(now,metadata)=>{
-        if(this.src.endsWith('awakening.mp4')&&!this.dataset.droppedReadiness){
+        if(this.src.includes('forest-awakening.mp4')&&!this.dataset.droppedReadiness){
           this.dataset.droppedReadiness='true';Object.defineProperty(this,'readyState',{configurable:true,get:()=>1})
           callback(now,metadata);queueMicrotask(()=>{delete (this as unknown as {readyState?:number}).readyState})
         }else callback(now,metadata)

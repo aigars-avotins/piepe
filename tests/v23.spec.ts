@@ -23,18 +23,18 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
     const r = video.getBoundingClientRect(), scale = Math.max(r.width / video.videoWidth, r.height / video.videoHeight)
     const position = getComputedStyle(video).objectPosition.split(' ').map(parseFloat)
     const sw = r.width / scale, sh = r.height / scale, sx = (video.videoWidth - sw) * position[0] / 100, sy = (video.videoHeight - sh) * position[1] / 100
-    const canvas = document.createElement('canvas'); canvas.width = 64; canvas.height = 36
+    const canvas = document.createElement('canvas'); canvas.width = 128; canvas.height = 72
     const ctx = canvas.getContext('2d', { willReadFrequently: true })!
     const frames: { time: number; hash: number; presented: number }[] = []
     const started = performance.now()
     await new Promise<void>((resolve, reject) => {
       const timeout = setTimeout(() => reject(Error('No advancing presented video frames: '+JSON.stringify({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,connected:video.isConnected,reason:video.parentElement?.dataset.clipReason,cycles:video.parentElement?.dataset.clipCycles,totalFrames:video.getVideoPlaybackQuality().totalVideoFrames,sampled:frames.length}))), 2500)
       const frame: VideoFrameRequestCallback = (_, metadata) => {
-        ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 64, 36)
-        const pixels = ctx.getImageData(0, 0, 64, 36).data; let hash = 2166136261
-        for (let i = 0; i < pixels.length; i += 4) hash = Math.imul(hash ^ pixels[i], 16777619)
+        ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
+        const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
+        for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
         frames.push({ time: metadata.mediaTime, hash: hash >>> 0, presented: metadata.presentedFrames })
-        if (performance.now() - started < 750) video.requestVideoFrameCallback(frame)
+        if (performance.now() - started < 750 || frames.length < 6 || video.paused || video.ended) video.requestVideoFrameCallback(frame)
         else { clearTimeout(timeout); resolve() }
       }
       video.requestVideoFrameCallback(frame)
@@ -42,6 +42,60 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
     return { frames, duration: video.duration, opacity, ready: video.readyState, paused: video.paused, rect: { x: r.x, y: r.y, w: r.width, h: r.height }, viewport: { w: innerWidth, h: innerHeight }, held: video.parentElement!.dataset.loopHold }
   })
 }
+
+test('native keyboard advance interrupts the fresh intro, and direct anchors do not start a competing film', async ({ page }) => {
+  test.setTimeout(30000)
+  await page.goto('/en/')
+  await expect(page.locator('video.forest-film')).toHaveCount(1)
+  await page.keyboard.press('PageDown')
+  await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'scroll-forward')
+  await expect(page.locator('video.forest-film')).toHaveCount(0)
+  await page.goto('/en/#understory')
+  expect((await movingPicture(page, 'understory')).paused).toBe(false)
+  await page.evaluate(() => sessionStorage.clear())
+  await page.goto('/#return')
+  await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'anchor-navigation')
+  await expect(page.locator('video.forest-film')).toHaveCount(0)
+  expect((await movingPicture(page, 'breathing')).paused).toBe(false)
+  const beforeWheel = await page.evaluate(() => scrollY)
+  await page.mouse.wheel(0, 500)
+  await expect.poll(() => page.evaluate(y => scrollY - y, beforeWheel)).toBeGreaterThan(450)
+  const restored = await page.evaluate(() => scrollY)
+  await page.reload()
+  await page.evaluate(() => document.fonts.ready)
+  await expect.poll(() => page.evaluate(y => Math.abs(scrollY - y), restored)).toBeLessThan(5)
+  expect((await movingPicture(page, 'breathing')).paused).toBe(false)
+})
+
+test('expanded facts, locale changes, explicit pause and a failed environmental decode keep native navigation usable', async ({ page }) => {
+  test.setTimeout(40000)
+  await page.addInitScript(() => sessionStorage.setItem('piepe-entered', '1'))
+  await page.goto('/en/#fungus-facts')
+  await page.locator('.fungus-vocabulary summary').click()
+  await expect(page.locator('.fungus-vocabulary')).toHaveAttribute('open', '')
+  await page.getByRole('link', { name: 'LV', exact: true }).first().click()
+  await expect(page.locator('html')).toHaveAttribute('lang', 'lv')
+  await wheelTo(page, 'return', .65)
+  expect((await movingPicture(page, 'breathing')).opacity).toBeGreaterThan(.98)
+  const position = await page.evaluate(() => scrollY)
+  await page.locator('#return .cinema-pause').click()
+  await expect(page.locator('[data-clip=breathing] video')).toHaveCount(0)
+  expect(Math.abs(await page.evaluate(() => scrollY) - position)).toBeLessThan(5)
+  await page.locator('#return .cinema-pause').click()
+  expect((await movingPicture(page, 'breathing')).paused).toBe(false)
+  await page.keyboard.press('Escape')
+  await expect(page.locator('[data-clip=breathing] video')).toHaveCount(0)
+  await page.locator('#return .cinema-pause').click()
+  await wheelTo(page, 'wallpapers', 0)
+  await page.route('**/media/forest-understory.mp4*', route => route.abort())
+  await wheelTo(page, 'understory', .65)
+  await expect(page.locator('[data-clip=understory]')).toHaveAttribute('data-clip-state', 'error')
+  await page.unroute('**/media/forest-understory.mp4*')
+  await page.locator('#understory .cinema-pause').click()
+  expect((await movingPicture(page, 'understory')).paused).toBe(false)
+  await page.locator('#understory .line-link').click()
+  await expect.poll(() => page.evaluate(() => Math.abs(document.getElementById('encounter')!.getBoundingClientRect().top - parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop)))).toBeLessThan(5)
+})
 
 for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`${width}x${height} repeatable cinema`, () => {
   test.use({ viewport: { width, height }, deviceScaleFactor: width > 700 ? 2 : 3, isMobile: width < 700, hasTouch: width < 700 })
@@ -85,7 +139,7 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`${width}
     expect(await page.evaluate(() => (window as unknown as { cinemaQA: { maxPlaying: number } }).cinemaQA.maxPlaying)).toBeLessThanOrEqual(1)
   })
   for (const locale of ['lv', 'en'] as const) test(`${locale}: the photograph settles once and preserves observation/return transitions`, async ({ page }, testInfo) => {
-    test.setTimeout(35000)
+    test.setTimeout(50000)
     await page.addInitScript(() => sessionStorage.setItem('piepe-entered', '1'))
     await page.goto(locale === 'lv' ? '/' : '/en/'); const t = messages[locale]
     for (let visit = 0; visit < 2; visit++) {

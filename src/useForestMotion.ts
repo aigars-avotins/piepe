@@ -65,8 +65,12 @@ export function useForestMotion(root: RefObject<HTMLDivElement | null>, enabled:
       return () => cancelAnimationFrame(recover)
     }
     let active = true
+    let refreshFrame = 0
+    const refreshLayout = () => { cancelAnimationFrame(refreshFrame); refreshFrame = requestAnimationFrame(() => ScrollTrigger.refresh()) }
+    const node = root.current
+    node?.addEventListener('toggle', refreshLayout, true)
     document.fonts.ready.then(() => { if (active) ScrollTrigger.refresh() })
-    return () => { active = false; context.revert(); onCinema?.('understory', false); onCinema?.('breathing', false) }
+    return () => { active = false; cancelAnimationFrame(refreshFrame); node?.removeEventListener('toggle', refreshLayout, true); context.revert(); onCinema?.('understory', false); onCinema?.('breathing', false) }
   }, [root, enabled, simple, failed, onCinema, onPrepare])
   return failed
 }
