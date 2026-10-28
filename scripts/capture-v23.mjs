@@ -1,4 +1,4 @@
-/* global window, document, MutationObserver, scrollY, innerHeight, getComputedStyle, requestAnimationFrame */
+/* global window, document, MutationObserver, scrollY, innerHeight, getComputedStyle, requestAnimationFrame, location */
 import{chromium}from'playwright';import{mkdir,writeFile,rm}from'node:fs/promises';import{spawnSync}from'node:child_process';
 const target=process.env.TEST_URL||'http://127.0.0.1:4173',stage=process.env.STAGE||'after',root=process.env.PIEPE_REVIEW_DIR||'review-results/v23';const sizes=JSON.parse(process.env.SIZES||'[[1512,982],[390,664]]');
 for(const[width,height]of sizes)for(const mode of JSON.parse(process.env.MODES||'["scroll","photo"]')){
