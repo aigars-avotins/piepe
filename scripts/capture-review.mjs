@@ -8,7 +8,7 @@ const target = process.env.TEST_URL || 'http://127.0.0.1:4173'
 const out = resolve(process.env.PIEPE_REVIEW_DIR || 'review-results')
 const [width,height] = JSON.parse(process.env.JOURNEY_VIEWPORT || '[1440,900]')
 await mkdir(out, { recursive: true }); await mkdir(`${out}/frames`, { recursive: true })
-const browser = await chromium.launch(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } : {})
+const browser = await chromium.launch({ ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } : {}), ...(process.env.PIEPE_BROWSER_PROXY ? { proxy: { server: process.env.PIEPE_BROWSER_PROXY } } : {}), ...(process.env.PIEPE_BROWSER_ARGS ? { args: JSON.parse(process.env.PIEPE_BROWSER_ARGS) } : {}) })
 try {
   const page = await browser.newPage({ viewport: { width, height } })
   const errors = [], frames = []; let writes = Promise.resolve(), capturing = true
@@ -45,18 +45,21 @@ try {
   await scroll('understory');await page.waitForTimeout(1500);await shot('desktop-macro')
   await page.locator('[data-clip="understory"][data-clip-reason="ended"]').waitFor({timeout:11000})
   await scroll('encounter');await shot('desktop-encounter');await scroll('fungus-facts');await page.waitForTimeout(700);await shot('desktop-facts')
-  await scroll('return');await page.waitForTimeout(1800);await shot('desktop-breathing');await page.locator('[data-clip="breathing"][data-clip-reason="ended"]').waitFor({timeout:11000})
+  await scroll('return');await page.waitForTimeout(1800);await shot('desktop-breathing');await page.locator('[data-clip="breathing"][data-clip-state="complete"]').waitFor({timeout:11000})
   await scroll('wallpapers');await page.waitForTimeout(700);await shot('desktop-wallpapers')
   for(const id of ['return','encounter','understory','forest']){await scroll(id);await page.waitForTimeout(400);await shot('desktop-reverse-'+id)}
   capturing=false;await cdp.send('Page.stopScreencast');await writes
+  // CDP can finish encoding frames out of order. Reconstruct capture time, not delivery order.
+  frames.sort((a,b)=>a.time-b.time)
   const perf=await page.evaluate(()=>{const p=window.piepePerf;const sorted=p.frameIntervals.toSorted((a,b)=>a-b);return {...p,frameIntervals:undefined,frameIntervalP95:sorted[Math.floor(sorted.length*.95)],jsHeapUsed:performance.memory?.usedJSHeapSize,fingerprint:{version:document.querySelector('.world').dataset.version,module:new URL(document.querySelector('head script[type=module]').src).pathname},resources:performance.getEntriesByType('resource').filter(r=>/\.mp[34]$|wallpapers/.test(r.name)).map(r=>({url:r.name,bytes:r.transferSize}))}})
   await writeFile(`${out}/performance.json`,JSON.stringify({environment:`Linux Chromium ${width}x${height} emulation during screencast; lab observations`,errors,...perf},null,2))
   await writeFile(`${out}/frame-times.json`,JSON.stringify({frames,shots},null,2))
   await writeFile(`${out}/events.json`,JSON.stringify({errors,events:perf.events},null,2))
   if(errors.length)throw Error(JSON.stringify(errors))
-  const timeline=frames.map((f,i)=>`file '${f.file}'\nduration ${Math.max(.001,(frames[i+1]?.time||f.time+.08)-f.time).toFixed(6)}`).join('\n')+`\nfile '${frames.at(-1).file}'\n`
+  await page.close()
+  const timeline=frames.map((f,i)=>`file '${f.file}'\noption framerate 1000\nduration ${Math.max(.001,(frames[i+1]?.time||f.time+.08)-f.time).toFixed(6)}`).join('\n')+`\nfile '${frames.at(-1).file}'\noption framerate 1000\n`
   await writeFile(`${out}/frames.txt`,timeline)
-  const encode=spawnSync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',`${out}/frames.txt`,'-vf','fps=30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-movflags','+faststart',`${out}/complete-forest-journey.mp4`],{stdio:'inherit'})
+  const encode=spawnSync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',`${out}/frames.txt`,'-vf','fps=30','-c:v','libx264','-threads','2','-preset','fast','-crf','21','-pix_fmt','yuv420p','-movflags','+faststart',`${out}/complete-forest-journey.mp4`],{stdio:'inherit'})
   if(encode.status!==0)throw Error('Screen recording encoding failed')
   for(const [seam,event] of [['intro',perf.events.find(e=>e.type==='ended'&&e.src?.endsWith('reveal.mp4'))],['click',perf.events.find(e=>e.type==='click')],['awakening',perf.events.find(e=>e.type==='ended'&&e.src?.endsWith('awakening.mp4'))],['macro',perf.events.find(e=>e.type==='macro-entry')]]){
     if(!event)continue

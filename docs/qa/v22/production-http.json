@@ -1,0 +1,43 @@
+[
+  {
+    "path": "/",
+    "language": true,
+    "version": true,
+    "module": "/assets/index-CsRgw6CV.js",
+    "canonical": "https://pie.pe/",
+    "csp": true
+  },
+  {
+    "path": "/en/",
+    "language": true,
+    "version": true,
+    "module": "/assets/index-CsRgw6CV.js",
+    "canonical": "https://pie.pe/en/",
+    "csp": true
+  },
+  {
+    "path": "/media/forest-awakening-original.mp4",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/media/forest-breathing-original.mp4",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/no-such-page",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/favicon.ico",
+    "status": 200,
+    "expected": 200
+  },
+  {
+    "path": "/audio/forest-ambience.mp3",
+    "status": 200,
+    "expected": 200
+  }
+]

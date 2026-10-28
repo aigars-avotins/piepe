@@ -1,0 +1,94 @@
+{
+  "target": "https://pie.pe",
+  "recordingStart": 1793195147.49529,
+  "errors": [],
+  "events": [
+    {
+      "type": "decoded",
+      "at": 1875.699999999255,
+      "wall": 1793195147619,
+      "src": "https://pie.pe/media/forest-reveal.mp4",
+      "time": 0,
+      "ready": 1,
+      "dialog": false,
+      "phase": "idle"
+    },
+    {
+      "type": "loadeddata",
+      "at": 1886.2999999988824,
+      "wall": 1793195147630,
+      "src": "https://pie.pe/media/forest-reveal.mp4",
+      "time": 0.000424,
+      "ready": 4,
+      "dialog": false,
+      "phase": "idle"
+    },
+    {
+      "type": "playing",
+      "at": 1886.4000000003725,
+      "wall": 1793195147630,
+      "src": "https://pie.pe/media/forest-reveal.mp4",
+      "time": 0.000611,
+      "ready": 4,
+      "dialog": false,
+      "phase": "idle"
+    },
+    {
+      "type": "ended",
+      "at": 7928.4000000003725,
+      "wall": 1793195153672,
+      "src": "https://pie.pe/media/forest-reveal.mp4",
+      "time": 6.041667,
+      "ready": 4,
+      "dialog": false,
+      "phase": "idle"
+    },
+    {
+      "type": "click",
+      "at": 9798,
+      "wall": 1793195155542,
+      "dialog": false,
+      "phase": "idle"
+    },
+    {
+      "type": "decoded",
+      "at": 10135,
+      "wall": 1793195155879,
+      "src": "https://pie.pe/media/forest-awakening.mp4",
+      "time": 0,
+      "ready": 1,
+      "dialog": false,
+      "phase": "preparing"
+    },
+    {
+      "type": "loadeddata",
+      "at": 10212,
+      "wall": 1793195155956,
+      "src": "https://pie.pe/media/forest-awakening.mp4",
+      "time": 0.000317,
+      "ready": 4,
+      "dialog": false,
+      "phase": "preparing"
+    },
+    {
+      "type": "playing",
+      "at": 10212.400000000373,
+      "wall": 1793195155956,
+      "src": "https://pie.pe/media/forest-awakening.mp4",
+      "time": 0.000765,
+      "ready": 4,
+      "dialog": false,
+      "phase": "preparing"
+    },
+    {
+      "type": "ended",
+      "at": 16254.599999999627,
+      "wall": 1793195161998,
+      "src": "https://pie.pe/media/forest-awakening.mp4",
+      "time": 6.041667,
+      "ready": 4,
+      "dialog": false,
+      "phase": "playing"
+    }
+  ]
+}

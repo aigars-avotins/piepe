@@ -6,7 +6,7 @@
       "environment": {
         "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Mobile Safari/537.36",
         "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-        "benchmarkIndex": 1140,
+        "benchmarkIndex": 1408,
         "credits": {
           "axe-core": "4.14.0"
         }
@@ -72,10 +72,27 @@
     },
     "runs": [
       {
+        "fetched": "2026-10-28T13:46:44.463Z",
+        "benchmarkIndex": 1408,
+        "performance": 92.0,
+        "FCP_ms": 1272.2882,
+        "LCP_ms": 1272.2882,
+        "TBT_ms": 218,
+        "CLS": 0,
+        "categories": {
+          "performance": 92.0,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        }
+      },
+      {
+        "fetched": "2026-10-28T13:47:01.570Z",
+        "benchmarkIndex": 1140.5,
         "performance": 81.0,
-        "FCP_ms": 1120.5317,
-        "LCP_ms": 4542.797549999999,
-        "TBT_ms": 127.5,
+        "FCP_ms": 1124.0622000000003,
+        "LCP_ms": 4434.0933,
+        "TBT_ms": 132.96889999999962,
         "CLS": 0,
         "categories": {
           "performance": 81.0,
@@ -85,26 +102,15 @@
         }
       },
       {
-        "performance": 86.0,
-        "FCP_ms": 1064.5377,
-        "LCP_ms": 4104.806549999999,
-        "TBT_ms": 74,
+        "fetched": "2026-10-28T13:47:17.866Z",
+        "benchmarkIndex": 1561.5,
+        "performance": 81.0,
+        "FCP_ms": 1060.4136,
+        "LCP_ms": 4445.1204,
+        "TBT_ms": 139.99999999999977,
         "CLS": 0,
         "categories": {
-          "performance": 86.0,
-          "accessibility": 100,
-          "best-practices": 100,
-          "seo": 100
-        }
-      },
-      {
-        "performance": 82.0,
-        "FCP_ms": 1039.3306,
-        "LCP_ms": 4408.9959,
-        "TBT_ms": 104.00000000000023,
-        "CLS": 0,
-        "categories": {
-          "performance": 82.0,
+          "performance": 81.0,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 100
@@ -119,7 +125,7 @@
       "environment": {
         "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Mobile Safari/537.36",
         "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-        "benchmarkIndex": 1857,
+        "benchmarkIndex": 1353.5,
         "credits": {
           "axe-core": "4.14.0"
         }
@@ -185,39 +191,45 @@
     },
     "runs": [
       {
-        "performance": 95.0,
-        "FCP_ms": 992.77505,
-        "LCP_ms": 992.77505,
-        "TBT_ms": 175,
+        "fetched": "2026-10-28T13:41:26.686Z",
+        "benchmarkIndex": 1353.5,
+        "performance": 91.0,
+        "FCP_ms": 825.0549000000001,
+        "LCP_ms": 825.0549000000001,
+        "TBT_ms": 241,
         "CLS": 0,
         "categories": {
-          "performance": 95.0,
+          "performance": 91.0,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 100
         }
       },
       {
-        "performance": 98.0,
-        "FCP_ms": 889.9989,
-        "LCP_ms": 889.9989,
-        "TBT_ms": 149.5,
+        "fetched": "2026-10-28T13:41:43.351Z",
+        "benchmarkIndex": 899,
+        "performance": 87.0,
+        "FCP_ms": 988.6901,
+        "LCP_ms": 988.6901,
+        "TBT_ms": 425.5,
         "CLS": 0,
         "categories": {
-          "performance": 98.0,
+          "performance": 87.0,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 100
         }
       },
       {
-        "performance": 88.0,
-        "FCP_ms": 878.18645,
-        "LCP_ms": 878.18645,
-        "TBT_ms": 459.5000000000001,
+        "fetched": "2026-10-28T13:42:11.584Z",
+        "benchmarkIndex": 827,
+        "performance": 68.0,
+        "FCP_ms": 1792.9999,
+        "LCP_ms": 1792.9999,
+        "TBT_ms": 2143.5000500000006,
         "CLS": 0,
         "categories": {
-          "performance": 88.0,
+          "performance": 68.0,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 100

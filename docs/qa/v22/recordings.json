@@ -1,0 +1,168 @@
+[
+  {
+    "stage": "before-macbook",
+    "captureChronological": true,
+    "captureCount": 793,
+    "captureSpanSeconds": 58.53074598312378,
+    "encodedDurationSeconds": 58.7,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.1",
+      "module": "/assets/index-CDLhGDet.js"
+    }
+  },
+  {
+    "stage": "before-phone",
+    "captureChronological": true,
+    "captureCount": 1956,
+    "captureSpanSeconds": 50.447527170181274,
+    "encodedDurationSeconds": 50.6,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.1",
+      "module": "/assets/index-CDLhGDet.js"
+    }
+  },
+  {
+    "stage": "1440x900",
+    "captureChronological": true,
+    "captureCount": 504,
+    "captureSpanSeconds": 82.65413808822632,
+    "encodedDurationSeconds": 82.8,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.2",
+      "module": "/assets/index-CsRgw6CV.js"
+    }
+  },
+  {
+    "stage": "1512x982",
+    "captureChronological": true,
+    "captureCount": 663,
+    "captureSpanSeconds": 64.66518712043762,
+    "encodedDurationSeconds": 64.833333,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.2",
+      "module": "/assets/index-CsRgw6CV.js"
+    }
+  },
+  {
+    "stage": "2560x1080",
+    "captureChronological": true,
+    "captureCount": 389,
+    "captureSpanSeconds": 77.71120190620422,
+    "encodedDurationSeconds": 77.866667,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.2",
+      "module": "/assets/index-CsRgw6CV.js"
+    }
+  },
+  {
+    "stage": "390x664",
+    "captureChronological": true,
+    "captureCount": 1561,
+    "captureSpanSeconds": 56.80146789550781,
+    "encodedDurationSeconds": 56.966667,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.2",
+      "module": "/assets/index-CsRgw6CV.js"
+    }
+  },
+  {
+    "stage": "390x844",
+    "captureChronological": true,
+    "captureCount": 1548,
+    "captureSpanSeconds": 55.778889179229736,
+    "encodedDurationSeconds": 55.933333,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.2",
+      "module": "/assets/index-CsRgw6CV.js"
+    }
+  },
+  {
+    "stage": "production-macbook",
+    "captureChronological": true,
+    "captureCount": 644,
+    "captureSpanSeconds": 67.22721481323242,
+    "encodedDurationSeconds": 67.4,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4",
+      "forest-understory.mp4",
+      "forest-breathing.mp4"
+    ],
+    "maxPlaying": 1,
+    "fingerprint": {
+      "version": "2.2",
+      "module": "/assets/index-CsRgw6CV.js"
+    }
+  },
+  {
+    "stage": "production-phone",
+    "captureChronological": true,
+    "captureCount": 434,
+    "captureSpanSeconds": 16.326475858688354,
+    "encodedDurationSeconds": 16.5,
+    "errors": [],
+    "naturalEndings": [
+      "forest-reveal.mp4",
+      "forest-awakening.mp4"
+    ],
+    "maxPlaying": null,
+    "fingerprint": null
+  }
+]

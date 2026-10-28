@@ -1,0 +1,22 @@
+{
+  "release": "2.2",
+  "validatedCommit": "d61ad69bc94b4edd0a47449d9f9065334f1bf3cd",
+  "workflow": "https://github.com/aigars-avotins/piepe/actions/runs/40696511644",
+  "conclusion": "success",
+  "worker": "piepe",
+  "verifiedVersion": "6302a555-9244-4b58-bead-0597bcda7de3",
+  "rollbackVersion": "c16231d7-e628-43b7-86de-e772e94bf066",
+  "module": "/assets/index-CsRgw6CV.js",
+  "assets": {
+    "assets/index-CsRgw6CV.js": "bf743cf44bef874a07227bb437431bf645011e083b011e3724598d7dfec26a53",
+    "assets/index-C9cuO8KI.css": "33a7fb62fc1c36857bf23107cf8e5470f2fc27b81409a4b1fc886fd68f5533ca"
+  },
+  "tests": {
+    "worker": 11,
+    "chromium": 75,
+    "webkit": 74,
+    "webkitSkipped": 1,
+    "productionChromium": 2,
+    "productionWebkit": 2
+  }
+}

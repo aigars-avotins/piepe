@@ -1,261 +1,296 @@
 {
-  "recording_start_epoch": 1793172951.710162,
+  "recording_start_epoch": 1793194342.627452,
   "events": [
     {
       "type": "loadeddata",
-      "wall": 1793172951743,
-      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "wall": 1793194342675,
+      "src": "http://127.0.0.1:4179/media/forest-reveal.mp4",
       "ready": 4,
-      "time": 0.001683
+      "time": 0.007871
     },
     {
       "type": "playing",
-      "wall": 1793172951743,
-      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "wall": 1793194342675,
+      "src": "http://127.0.0.1:4179/media/forest-reveal.mp4",
       "ready": 4,
-      "time": 0.001803
+      "time": 0.008048
     },
     {
       "type": "decoded",
-      "wall": 1793172951771,
-      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "wall": 1793194342713,
+      "src": "http://127.0.0.1:4179/media/forest-reveal.mp4",
       "ready": 4,
-      "time": 0.029195
+      "time": 0.046247
+    },
+    {
+      "type": "playing",
+      "wall": 1793194346118,
+      "src": "http://127.0.0.1:4179/media/forest-reveal.mp4",
+      "ready": 4,
+      "time": 3.294769
+    },
+    {
+      "type": "playing",
+      "wall": 1793194348430,
+      "src": "http://127.0.0.1:4179/media/forest-reveal.mp4",
+      "ready": 4,
+      "time": 5.466854
     },
     {
       "type": "ended",
-      "wall": 1793172957784,
-      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "wall": 1793194349200,
+      "src": "http://127.0.0.1:4179/media/forest-reveal.mp4",
       "ready": 4,
       "time": 6.041667
     },
     {
       "type": "click",
-      "wall": 1793172958717
+      "wall": 1793194350559
     },
     {
       "type": "loadeddata",
-      "wall": 1793172958797,
-      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "wall": 1793194350885,
+      "src": "http://127.0.0.1:4179/media/forest-awakening.mp4",
       "ready": 4,
-      "time": 0.005113
+      "time": 0.000441
     },
     {
       "type": "playing",
-      "wall": 1793172958797,
-      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "wall": 1793194350886,
+      "src": "http://127.0.0.1:4179/media/forest-awakening.mp4",
       "ready": 4,
-      "time": 0.005292
+      "time": 0.001301
     },
     {
       "type": "decoded",
-      "wall": 1793172958816,
-      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "wall": 1793194350953,
+      "src": "http://127.0.0.1:4179/media/forest-awakening.mp4",
       "ready": 4,
-      "time": 0.024424
+      "time": 0.068483
     },
     {
       "type": "ended",
-      "wall": 1793172964834,
-      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "wall": 1793194356929,
+      "src": "http://127.0.0.1:4179/media/forest-awakening.mp4",
       "ready": 4,
       "time": 6.041667
     },
     {
       "type": "scroll-start",
       "id": "understory",
-      "wall": 1793172965993,
+      "wall": 1793194358140,
       "from": 0,
       "to": 697.2
     },
     {
       "type": "macro-entry",
-      "wall": 1793172967111
+      "wall": 1793194359262
     },
     {
       "type": "loadeddata",
-      "wall": 1793172967153,
-      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "wall": 1793194359536,
+      "src": "http://127.0.0.1:4179/media/forest-understory.mp4",
       "ready": 4,
-      "time": 0.000474
+      "time": 0.000603
     },
     {
       "type": "playing",
-      "wall": 1793172967153,
-      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "wall": 1793194359537,
+      "src": "http://127.0.0.1:4179/media/forest-understory.mp4",
       "ready": 4,
-      "time": 0.000627
+      "time": 0.000938
     },
     {
       "type": "decoded",
-      "wall": 1793172967177,
-      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "wall": 1793194359585,
+      "src": "http://127.0.0.1:4179/media/forest-understory.mp4",
       "ready": 4,
-      "time": 0.024113
+      "time": 0.048932
     },
     {
       "type": "scroll-end",
       "id": "understory",
-      "wall": 1793172968010,
+      "wall": 1793194360144,
       "from": 0,
       "to": 697.2
     },
     {
+      "type": "playing",
+      "wall": 1793194365168,
+      "src": "http://127.0.0.1:4179/media/forest-understory.mp4",
+      "ready": 4,
+      "time": 5.475097
+    },
+    {
       "type": "ended",
-      "wall": 1793172973195,
-      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "wall": 1793194365739,
+      "src": "http://127.0.0.1:4179/media/forest-understory.mp4",
       "ready": 4,
       "time": 6.041667
     },
     {
       "type": "scroll-start",
       "id": "encounter",
-      "wall": 1793172973479,
+      "wall": 1793194366018,
       "from": 697,
       "to": 1593.2
     },
     {
       "type": "macro-exit",
-      "wall": 1793172974694
+      "wall": 1793194367228
     },
     {
       "type": "scroll-end",
       "id": "encounter",
-      "wall": 1793172975493,
+      "wall": 1793194368030,
       "from": 697,
       "to": 1593.2
     },
     {
       "type": "scroll-start",
       "id": "fungus-facts",
-      "wall": 1793172975631,
+      "wall": 1793194368542,
       "from": 1593,
       "to": 2523.2
     },
     {
       "type": "scroll-end",
       "id": "fungus-facts",
-      "wall": 1793172977642,
+      "wall": 1793194370562,
       "from": 1593,
       "to": 2523.2
     },
     {
       "type": "scroll-start",
       "id": "return",
-      "wall": 1793172978398,
+      "wall": 1793194371403,
       "from": 2523,
       "to": 3728.2
     },
     {
       "type": "loadeddata",
-      "wall": 1793172979369,
-      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "wall": 1793194372859,
+      "src": "http://127.0.0.1:4179/media/forest-breathing.mp4",
       "ready": 4,
-      "time": 0.001015
+      "time": 0.004979
     },
     {
       "type": "playing",
-      "wall": 1793172979370,
-      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "wall": 1793194372859,
+      "src": "http://127.0.0.1:4179/media/forest-breathing.mp4",
       "ready": 4,
-      "time": 0.001145
+      "time": 0.005152
     },
     {
       "type": "decoded",
-      "wall": 1793172979409,
-      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "wall": 1793194373013,
+      "src": "http://127.0.0.1:4179/media/forest-breathing.mp4",
       "ready": 4,
-      "time": 0.040244
+      "time": 0.158986
     },
     {
       "type": "scroll-end",
       "id": "return",
-      "wall": 1793172980409,
+      "wall": 1793194373415,
       "from": 2523,
       "to": 3728.2
     },
     {
+      "type": "playing",
+      "wall": 1793194375505,
+      "src": "http://127.0.0.1:4179/media/forest-breathing.mp4",
+      "ready": 4,
+      "time": 2.594348
+    },
+    {
+      "type": "playing",
+      "wall": 1793194376135,
+      "src": "http://127.0.0.1:4179/media/forest-breathing.mp4",
+      "ready": 4,
+      "time": 3.114116
+    },
+    {
       "type": "ended",
-      "wall": 1793172985411,
-      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "wall": 1793194379064,
+      "src": "http://127.0.0.1:4179/media/forest-breathing.mp4",
       "ready": 4,
       "time": 6.041667
     },
     {
       "type": "scroll-start",
       "id": "wallpapers",
-      "wall": 1793172985667,
+      "wall": 1793194379565,
       "from": 3728,
       "to": 4459.2
     },
     {
       "type": "scroll-end",
       "id": "wallpapers",
-      "wall": 1793172987675,
+      "wall": 1793194381583,
       "from": 3728,
       "to": 4459.2
     },
     {
       "type": "scroll-start",
       "id": "return",
-      "wall": 1793172988432,
+      "wall": 1793194382404,
       "from": 4459,
       "to": 3728.2
     },
     {
       "type": "scroll-end",
       "id": "return",
-      "wall": 1793172990442,
+      "wall": 1793194384411,
       "from": 4459,
       "to": 3728.2
     },
     {
       "type": "scroll-start",
       "id": "encounter",
-      "wall": 1793172991005,
+      "wall": 1793194385151,
       "from": 3728,
       "to": 1593.2
     },
     {
       "type": "scroll-end",
       "id": "encounter",
-      "wall": 1793172993009,
+      "wall": 1793194387159,
       "from": 3728,
       "to": 1593.2
     },
     {
       "type": "scroll-start",
       "id": "understory",
-      "wall": 1793172993524,
+      "wall": 1793194387807,
       "from": 1593,
       "to": 697.2
     },
     {
       "type": "macro-entry",
-      "wall": 1793172994459
+      "wall": 1793194388745
     },
     {
       "type": "scroll-end",
       "id": "understory",
-      "wall": 1793172995542,
+      "wall": 1793194389810,
       "from": 1593,
       "to": 697.2
     },
     {
       "type": "scroll-start",
       "id": "forest",
-      "wall": 1793172996083,
+      "wall": 1793194390439,
       "from": 697,
       "to": 33.2
     },
     {
       "type": "macro-exit",
-      "wall": 1793172997133
+      "wall": 1793194391477
     },
     {
       "type": "scroll-end",
       "id": "forest",
-      "wall": 1793172998092,
+      "wall": 1793194392442,
       "from": 697,
       "to": 33.2
     }
