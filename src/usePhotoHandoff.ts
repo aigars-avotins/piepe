@@ -45,9 +45,10 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
       animations.forEach(a => a.cancel())
       node.classList.add('photo-moving'); setMoving(true)
       // Constant layout dimensions. Only the aperture, image transform and grading opacity animate.
-      Object.assign(photo.style, { position: 'fixed', inset: '0px', width: '100%', height: '100%', transform: 'none' })
-      Object.assign(image.style, { left: '0px', top: '0px', width: '1920px', height: '1080px', objectFit: 'fill', objectPosition: '50% 50%', transformOrigin: '0 0' })
-      Object.assign(shade.style, { left: '0px', top: '0px', width: '100%', height: '100%', transformOrigin: '0 0' })
+      Object.assign(photo.style, { position: 'fixed', inset: '0px', width: '100%', height: '100%', transform: 'translateZ(0)', willChange: 'clip-path' })
+      Object.assign(image.style, { left: '0px', top: '0px', width: '1920px', height: '1080px', objectFit: 'fill', objectPosition: '50% 50%', transformOrigin: '0 0', willChange: 'transform' })
+      Object.assign(shade.style, { left: '0px', top: '0px', width: '100%', height: '100%', transformOrigin: '0 0', willChange: 'transform, opacity' })
+      bridge.style.willChange = 'opacity'
       bridge.style.backgroundImage = origin.shade
       const world = back ? cinemaOrigin() || origin : origin
       animations = [
@@ -57,6 +58,16 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
         bridge.animate([{ opacity: back ? currentBridge : '1' }, { opacity: back ? '1' : '0' }], options),
       ]
       installed = true
+      if (!back) {
+        // Give the decoded, full-frame source a painted surface before starting the camera clock.
+        // High-density WebKit can otherwise spend the opening of the move rasterizing the dialog.
+        animations.forEach(animation => { animation.pause(); animation.currentTime = 0 })
+        void image.decode().catch(() => {}).then(() => {
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            if (!cancelled && turn === generation && installed) animations.forEach(animation => animation.play())
+          }))
+        })
+      }
       Promise.all(animations.map(a => a.finished)).then(() => {
         if (cancelled || turn !== generation) return
         if (back) { setMoving(false); node.classList.remove('photo-moving'); close.current(); return }

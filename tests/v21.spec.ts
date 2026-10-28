@@ -114,7 +114,7 @@ for (const scenario of ['blocked', 'missing', 'stall', 'pending'] as const) test
 })
 
 test('both locales fit the complete required viewport matrix', async ({ page }, testInfo) => {
-  test.setTimeout(45000)
+  test.setTimeout(120000) // Sixteen viewport/locale screenshots on the native macOS runner.
   await page.emulateMedia({ reducedMotion: 'reduce' })
   for (const locale of ['lv', 'en'] as Locale[]) {
     await page.goto(locale === 'lv' ? '/' : '/en/')
@@ -163,6 +163,7 @@ test('save-data bypasses all automatic films and never fetches full wallpapers o
 })
 
 test('scene video covers phones, MacBook and ultrawide without stretching or side borders', async ({ page }) => {
+  test.setTimeout(90000) // Eight real media/viewport checks, including native macOS WebKit.
   // Each viewport is a fresh playback visit. Preparation now reads history before scrolling.
   await page.addInitScript(() => { sessionStorage.setItem('piepe-entered','1'); sessionStorage.removeItem('piepe-understory') })
   const video = page.locator('video[src$="understory.mp4"]')

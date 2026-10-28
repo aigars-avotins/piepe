@@ -155,6 +155,8 @@ main{position:relative;z-index:1}
 @media(max-width:699px){.specimen-photo>img{transform:none;object-position:68% 52%}.skip-dock{left:20px;right:20px;bottom:calc(25px + env(safe-area-inset-bottom));justify-content:center}.photo-moving .discovery-header{background:none}}
 @media(prefers-reduced-motion:reduce){.world-awakening .motion-clip>video{transition:none}}
 .hero-copy,.hero-foot,.hero-hotspot-plane,.journey-index{transition:opacity .55s ease}.discovery-open .hero-copy,.discovery-open .hero-foot,.discovery-open .hero-hotspot-plane,.discovery-open .journey-index{opacity:0;pointer-events:none}
+/* The opaque top-layer photograph owns the view; retain world geometry without painting it twice. */
+.discovery-open .environment{visibility:hidden}
 .has-awakened .fungus-hit{left:40.74%;top:32.78%;width:59%;height:70.8%}
 .brand .brand-wordmark{width:64px;height:34px;object-fit:contain}.brand{gap:12px}
 @media(max-width:699px){.brand{gap:5px}.brand .brand-wordmark{width:51px;height:29px}}

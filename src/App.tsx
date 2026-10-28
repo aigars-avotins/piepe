@@ -21,6 +21,7 @@ import SoundControl from './SoundControl'
 const chapters = ['forest', 'understory', 'encounter', 'return']
 export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const [locale, setLocale] = useState<Locale>(() => initialLocale || localeFromPath(location.pathname))
+  const localeScroll = useRef<number | null>(null)
   const t = messages[locale]
   const audio = useForestAudio()
   const [awakening, setAwakening] = useState<'idle' | 'preparing' | 'playing' | 'docking'>('idle')
@@ -37,9 +38,16 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   }, [])
   const changeLocale = (value: Locale) => {
     if (value === locale) return
+    localeScroll.current = window.scrollY
     history.pushState(null, '', localePath(value) + location.hash)
     setLocale(value)
   }
+  // Translated paragraphs change height; keep the visitor's native scroll position.
+  useLayoutEffect(() => {
+    if (localeScroll.current === null) return
+    window.scrollTo({ top: localeScroll.current, behavior: 'instant' })
+    localeScroll.current = null
+  }, [locale])
   useEffect(() => { updateMetadata(locale) }, [locale])
   useEffect(() => {
     const pop = () => setLocale(localeFromPath(location.pathname))
@@ -150,11 +158,13 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   }
   const closeDiscovery = () => {
     restoreFocus.current = true
-    dialog.current?.close(); setDiscovery(false); setAwakening('idle')
+    setDiscovery(false); setAwakening('idle')
   }
   useLayoutEffect(() => {
     if (!restoreFocus.current || discovery || awakening !== 'idle') return
     restoreFocus.current = false
+    // Restore the painted world in this commit before removing the opaque top layer.
+    dialog.current?.close()
     opener.current?.focus({ preventScroll: true })
   }, [discovery, awakening])
   const cinemaRunning = awakening === 'preparing' || awakening === 'playing'

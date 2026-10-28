@@ -1,35 +1,48 @@
 {
-  "cloudflare_token_present": false,
-  "checks": [
-    {
-      "url": "https://pie.pe/",
-      "exit": 56,
-      "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
-      "error": "curl: (56) CONNECT tunnel failed, response 403\n"
-    },
-    {
-      "url": "https://pie.pe/en/",
-      "exit": 56,
-      "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
-      "error": "curl: (56) CONNECT tunnel failed, response 403\n"
-    },
-    {
-      "url": "https://api.cloudflare.com/client/v4/user/tokens/verify",
-      "exit": 56,
-      "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
-      "error": "curl: (56) CONNECT tunnel failed, response 403\n"
-    },
-    {
-      "url": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
-      "exit": 56,
-      "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
-      "error": "curl: (56) CONNECT tunnel failed, response 403\n"
-    },
-    {
-      "url": "https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm",
-      "exit": 56,
-      "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
-      "error": "curl: (56) CONNECT tunnel failed, response 403\n"
-    }
-  ]
+  "before_environment_recovery": {
+    "cloudflare_token_present": false,
+    "checks": [
+      {
+        "url": "https://pie.pe/",
+        "exit": 56,
+        "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
+        "error": "curl: (56) CONNECT tunnel failed, response 403\n"
+      },
+      {
+        "url": "https://pie.pe/en/",
+        "exit": 56,
+        "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
+        "error": "curl: (56) CONNECT tunnel failed, response 403\n"
+      },
+      {
+        "url": "https://api.cloudflare.com/client/v4/user/tokens/verify",
+        "exit": 56,
+        "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
+        "error": "curl: (56) CONNECT tunnel failed, response 403\n"
+      },
+      {
+        "url": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "exit": 56,
+        "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
+        "error": "curl: (56) CONNECT tunnel failed, response 403\n"
+      },
+      {
+        "url": "https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm",
+        "exit": 56,
+        "response": "HTTP/1.1 403 Forbidden\ncontent-length: 16\ncontent-type: text/plain\ndate: Wed, 28 Oct 2026 06:28:04 GMT\nserver: envoy\nconnection: close\n\n",
+        "error": "curl: (56) CONNECT tunnel failed, response 403\n"
+      }
+    ]
+  },
+  "after_environment_recovery": {
+    "date": "2026-10-28",
+    "piepe_root_http": 200,
+    "github_push_permission": true,
+    "cloudflare_deployments_read": true,
+    "existing_worker": "piepe",
+    "rollback_version": "c16231d7-e628-43b7-86de-e772e94bf066",
+    "woodland_trust_http": 403,
+    "edinburgh_http": 200,
+    "workers_builds_error": "The build token selected for this build has been deleted or rolled and cannot be used for this build."
+  }
 }

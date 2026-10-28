@@ -76,7 +76,7 @@ Measurements use Lighthouse mobile simulation against local `wrangler dev --loca
 
 [Full measurements and settings](qa/v22/performance.json); compressed Lighthouse and regression reports are adjacent.
 
-The late LCP candidate in the old waterfall was a newly client-created header control. Hydration keeps its initial paint; the full-screen background/video is not a reliable LCP candidate. A high score therefore does not measure film quality, imply instant completion of the intentional six-second film, or prove a phone GPU frame rate. TBT increased in the replacement series and varied considerably (final 150–460ms); the LCP improvement is reproducible, but further main-thread work and physical-device profiling remain useful. Full JPEG wallpapers and downstream videos are not requested on arrival. Final client JS is approximately 131.68kB gzip (2.1 approximately 127.44kB); no dependency was added.
+The late LCP candidate in the old waterfall was a newly client-created header control. Hydration keeps its initial paint; the full-screen background/video is not a reliable LCP candidate. A high score therefore does not measure film quality, imply instant completion of the intentional six-second film, or prove a phone GPU frame rate. TBT increased in the replacement series and varied considerably (final 150–460ms); the LCP improvement is reproducible, but further main-thread work and physical-device profiling remain useful. Full JPEG wallpapers and downstream videos are not requested on arrival. Final client JS is approximately 132kB gzip (2.1 approximately 127.44kB); no dependency was added.
 
 The final playback profile is measured separately from screen recording; see `qa/v22/playback-before-compositing.json` and `qa/v22/playback-after-compositing.json`. It describes this Linux headless environment, not a native Mac GPU or physical phone.
 
@@ -94,6 +94,16 @@ Read [the owner's curated review](V22_MOTION_SKILLS_REVIEW.md) and the selected 
 | Server content discarded and cover resized on boot | Matching App hydration and initial cover geometry | Remove the measured LCP delay and startup shift |
 
 Local motion review: **approve the visually reviewed Chromium handoffs**. Native macOS/physical-device and production release verification remain pending for the concrete access reasons below.
+
+## Native WebKit follow-up
+
+The first source commit `691a38c` passed all **52 Chromium CI tests**. Its native macOS job exposed ten failed cases: three were already present on the 2.1 baseline; seven were new cinematic checks. The downloaded reports and traces were inspected rather than treating the action's Node.js warning as the cause.
+
+A real compact-phone language switch moved the document by 51px when translated facts changed height. The selected scroll position is now restored in the locale commit, with an added LV→EN→LV→EN regression. The decoded full-frame photograph is painted before its camera clock starts, avoiding elapsed animation time during initial surface preparation. Photo animation layers receive temporary compositor hints, restored on completion, and the retained world stops painting while the opaque top-layer photograph owns the viewport. The world becomes visible in the same layout commit before the native dialog closes.
+
+Continuous trace screenshots at Retina/ultrawide dimensions took 12–21 seconds on the macOS runner and consumed the intentionally bounded four-second media loading window. Readiness tests now record geometry/timestamps without holding media hostage to screenshot encoding; DOM/network traces and failure screenshots remain, and the independent real before/after recordings are retained. Keyboard focus retention uses keyboard activation, respecting Safari's pointer-focus behavior. Multi-viewport cases retain every assertion with a timeout sized for all sixteen native screenshots/eight media visits. The natural photo frame-count, uniform-scale, speed and interruption assertions remain enabled. CI actions use their official Node 24-based v7 releases, and the Chromium host is pinned to Ubuntu 24.04 alongside its existing Noble browser container.
+
+The follow-up native CI result must be observed before describing this release as Safari-verified.
 
 ## Release status and remaining limits
 

@@ -1,5 +1,21 @@
 import {test,expect} from '@playwright/test'
 
+test('compact phone retains native scroll when translated facts change height',async({page})=>{
+  await page.setViewportSize({width:390,height:664})
+  await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
+  await page.goto('/')
+  await page.waitForFunction(()=>!document.querySelector('.world')!.classList.contains('prerendered'))
+  await page.evaluate(()=>document.fonts.ready)
+  await page.locator('#fungus-facts').scrollIntoViewIfNeeded()
+  for(const locale of ['en','lv','en']){
+    const before=await page.evaluate(()=>scrollY)
+    await page.evaluate(locale=>(document.querySelector(`.site-header .language-switch a[lang="${locale}"]`) as HTMLElement).click(),locale)
+    await expect(page.locator('html')).toHaveAttribute('lang',locale)
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))
+    expect(Math.abs(await page.evaluate(()=>scrollY)-before)).toBeLessThan(5)
+  }
+})
+
 test('server-painted controls and cover geometry survive delayed hydration without a layout jump',async({page})=>{
   await page.setViewportSize({width:390,height:844})
   let release!:()=>void;const gate=new Promise<void>(resolve=>{release=resolve})
@@ -39,7 +55,8 @@ for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) test(`held frame
   await expect(page.getByRole('button',{name:'Go straight to the field note'})).toBeVisible()
   await expect(page.locator('.hero-copy')).toHaveCSS('opacity','1')
   await expect(page.locator('video[src$="awakening.mp4"]')).toHaveCSS('opacity','0')
-  await page.screenshot({path:testInfo.outputPath('held-during-network-delay.png')})
+  // Screenshot encoding must not consume the real four-second media recovery window.
+  // Separate browser recordings provide the visual evidence; keep this readiness gate bounded.
   expect(await plane.boundingBox()).toEqual(before)
   expect(await shade.evaluate(e=>getComputedStyle(e).backgroundImage)).toBe(grading)
   release()
@@ -54,7 +71,6 @@ for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) test(`held frame
     return frames
   })
   for(const frame of timed){expect(frame.x).toBeCloseTo(before!.x,1);expect(frame.y).toBeCloseTo(before!.y,1);expect(frame.w).toBeCloseTo(before!.width,1);expect(frame.h).toBeCloseTo(before!.height,1);expect(frame.dialog).toBe(false)}
-  await page.screenshot({path:testInfo.outputPath('first-second-presented.png')})
   await testInfo.attach('ready-plane-timestamps',{body:JSON.stringify(timed),contentType:'application/json'})
   expect(await page.evaluate(()=>(window as unknown as {originalPlane:Element}).originalPlane===document.querySelector('.base-camera .media-plane'))).toBe(true)
   const samples=await page.evaluate(()=>(window as unknown as {seamSamples:unknown[]}).seamSamples)
@@ -107,11 +123,11 @@ for(const [width,height] of [[1512,982],[390,664]])test(`awakening final frame d
   expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg')
 })
 
-test('Escape while preparing cancels in place; skip on retry opens the accessible note immediately',async({page})=>{
+test('Escape while preparing cancels in place; repeat activation opens the accessible note',async({page})=>{
   await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4',()=>{})
   await page.goto('/en/');const open=page.getByRole('button',{name:'Look closer at the fungus',exact:true});await open.click();await page.keyboard.press('Escape')
   await expect(page.locator('.world')).toHaveAttribute('data-awakening','idle');await expect(open).toBeFocused();await expect(page.locator('video')).toHaveCount(0)
-  await open.click();const skip=page.getByRole('button',{name:'Go straight to the field note'});if(await skip.isVisible())await skip.click()
+  await open.click()
   await expect(page.getByRole('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
 })
 
@@ -147,9 +163,11 @@ test('unavailable end-still uses the actual decoded frame for a continuous note 
 test('locale change while decoding does not reopen a modal, move focus or restart playback',async({page})=>{
   await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4',()=>{})
   await page.goto('/');await page.getByRole('button',{name:'Aplūkot piepi tuvāk',exact:true}).click()
-  await page.getByRole('navigation',{name:'Valoda'}).getByRole('link',{name:'EN'}).click()
+  const language=page.locator('.site-header .language-switch a[lang="en"]')
+  // Safari pointer activation intentionally need not focus links. Exercise keyboard focus retention.
+  await language.press('Enter')
   await expect(page.locator('.world')).toHaveAttribute('data-awakening','preparing')
-  await expect(page.getByRole('link',{name:'EN',exact:true})).toBeFocused();await expect(page.locator('dialog[open]')).toHaveCount(0)
+  await expect(language).toBeFocused();await expect(page.locator('dialog[open]')).toHaveCount(0)
   await page.getByRole('button',{name:'Go straight to the field note'}).click();await expect(page.getByRole('dialog')).toBeVisible()
 })
 
