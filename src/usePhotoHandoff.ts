@@ -67,16 +67,22 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
       const frames = cameraFrames(full, back ? current : full, back ? full : target, back ? currentImage : worldPose(origin), back ? worldPose(world) : destination, back ? currentShade : 0, back ? currentBridge : 1, back)
       animations = [photo.animate(frames.aperture, options), image.animate(frames.image, options), shade.animate(frames.shade, options), bridge.animate(frames.worldShade, options)]
       installed = true
+      const playTogether = () => {
+        const start = document.timeline.currentTime
+        if (start === null) return
+        // Inverse transforms require one clock; WebKit may resolve sequential play() calls apart.
+        animations.forEach(animation => { animation.play(); animation.startTime = start })
+      }
       if (!back) {
         // Prepare the decoded surface before starting its camera clock on high-density displays.
         animations.forEach(animation => { animation.pause(); animation.currentTime = 0 })
         void image.decode().catch(() => {}).then(() => {
           if (cancelled || turn !== generation || !installed) return
           requestAnimationFrame(() => requestAnimationFrame(() => {
-            if (!cancelled && turn === generation && installed) animations.forEach(animation => animation.play())
+            if (!cancelled && turn === generation && installed) playTogether()
           }))
         })
-      }
+      } else playTogether()
       Promise.all(animations.map(a => a.finished)).then(() => {
         if (cancelled || turn !== generation) return
         if (back) { setMoving(false); node.classList.remove('photo-moving'); close.current(); return }

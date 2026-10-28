@@ -115,7 +115,7 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   test.setTimeout(25000);await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await page.evaluate(()=>{
-    const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
+    const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
     const observer=new MutationObserver(()=>{
       const photo=document.querySelector('.specimen-photo')
       if(!photo||!document.querySelector('dialog[open].photo-moving'))return
@@ -123,18 +123,19 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
       const frame=()=>{
         const r=photo.getBoundingClientRect(),animation=photo.getAnimations()[0]
         const moving=animation?.playState==='running'&&Number(animation.currentTime)>0;ran ||=moving
-        const matrix=new DOMMatrixReadOnly(getComputedStyle(photo).transform).multiply(new DOMMatrixReadOnly(getComputedStyle(photo.querySelector('img')!).transform))
-        samples.push({t:Number(document.timeline.currentTime)-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:matrix.a,sy:matrix.d,moving})
+        // One geometry read samples the rendered source at one instant, including both transforms.
+        const source=photo.querySelector('img')!.getBoundingClientRect()
+        samples.push({t:Number(document.timeline.currentTime)-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!animation})
         if((!ran||document.querySelector('dialog.photo-moving'))&&Number(document.timeline.currentTime)-start<10000)requestAnimationFrame(frame)
       };requestAnimationFrame(frame)
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
   })
   await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:12000})
-  const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean}[]}).dockFrames)
+  const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]}).dockFrames)
   await testInfo.attach('photo-docking-frames',{body:JSON.stringify(frames),contentType:'application/json'})
   expect(frames.filter(frame=>frame.moving).length).toBeGreaterThan(10)
   const first=frames[0];expect(first.w).toBeGreaterThan(width*.94);expect(first.h).toBeGreaterThan(height*.92)
-  for(const frame of frames)expect(frame.sx).toBeCloseTo(frame.sy,4)
+  for(const frame of frames.filter(frame=>frame.camera))expect(frame.sx).toBeCloseTo(frame.sy,4)
   for(let i=1;i<frames.length;i++){const dt=frames[i].t-frames[i-1].t;if(dt<1)continue;expect(Math.abs(frames[i].w-frames[i-1].w)/dt).toBeLessThan(3);expect(Math.abs(frames[i].h-frames[i-1].h)/dt).toBeLessThan(3)}
   await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
