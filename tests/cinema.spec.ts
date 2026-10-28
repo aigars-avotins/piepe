@@ -1,5 +1,10 @@
 import {test,expect} from '@playwright/test'
 
+test.afterEach(async({page},testInfo)=>{
+  if(testInfo.status===testInfo.expectedStatus||page.isClosed())return
+  await testInfo.attach('cinema-state-on-failure',{body:JSON.stringify(await page.evaluate(()=>({visibility:document.visibilityState,world:document.querySelector('.world')?.attributes?Object.fromEntries([...document.querySelector('.world')!.attributes].map(a=>[a.name,a.value])):null,clips:[...document.querySelectorAll<HTMLElement>('[data-clip]')].map(e=>({...e.dataset})),videos:[...document.querySelectorAll('video')].map(v=>({src:v.currentSrc,time:v.currentTime,paused:v.paused,ready:v.readyState,ended:v.ended})),photo:document.querySelector<HTMLElement>('.specimen-photo')?.dataset}))),contentType:'application/json'})
+})
+
 function inViewport(width:number,height:number,register:()=>void){
   test.describe(`${width}x${height} rendering`,()=>{
     test.use({viewport:{width,height},deviceScaleFactor:width>=2000?1:width>=700?2:3,isMobile:width<700,hasTouch:width<700,...(width>=700?{userAgent:undefined}:{})})
@@ -123,11 +128,11 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
       if(!photo||!document.querySelector('dialog[open].photo-moving'))return
       observer.disconnect();const start=Number(document.timeline.currentTime);let ran=false
       const frame=()=>{
-        const r=photo.getBoundingClientRect(),animation=photo.getAnimations()[0]
-        const moving=animation?.playState==='running'&&Number(animation.currentTime)>0;ran ||=moving
+        const r=photo.getBoundingClientRect(),camera=(photo as HTMLElement).dataset.cameraPhase
+        const moving=(camera==='moving'||camera==='returning')&&Number((photo as HTMLElement).dataset.cameraProgress)>0;ran ||=moving
         // One geometry read samples the rendered source at one instant, including both transforms.
         const source=photo.querySelector('img')!.getBoundingClientRect()
-        samples.push({t:Number(document.timeline.currentTime)-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!animation})
+        samples.push({t:Number(document.timeline.currentTime)-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
         if((!ran||document.querySelector('dialog.photo-moving'))&&Number(document.timeline.currentTime)-start<10000)requestAnimationFrame(frame)
       };requestAnimationFrame(frame)
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
@@ -203,9 +208,8 @@ test('locale change while decoding does not reopen a modal, move focus or restar
 inViewport(1512,982,()=>test('Escape during the photo move reverses the current camera instead of snapping to full frame',async({page})=>{
   await page.setViewportSize({width:1512,height:982});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
-  // Inspect the native clock without forcing synchronous compositor geometry
-  // during every poll; the rendered width is checked after the real Escape key.
-  await page.waitForFunction(()=>{const animation=document.querySelector('dialog[open].photo-moving .specimen-photo')?.getAnimations()[0];return animation?.playState==='running'&&Number(animation.currentTime)>200&&Number(animation.currentTime)<700},null,{timeout:12000})
+  // Wait for the common camera clock; rendered geometry is still asserted below.
+  await page.waitForFunction(()=>{const photo=document.querySelector<HTMLElement>('dialog[open].photo-moving .specimen-photo');return photo?.dataset.cameraPhase==='moving'&&Number(photo.dataset.cameraProgress)>.2&&Number(photo.dataset.cameraProgress)<.7},null,{timeout:12000})
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toBeVisible()
   const width=await page.locator('.specimen-photo').evaluate(e=>e.getBoundingClientRect().width)
   expect(width).toBeLessThan(1512*.97)
@@ -241,4 +245,15 @@ test('Escape before the photo clock starts cancels a pending decode without wait
   await page.goto('/en/');const opener=page.getByRole('button',{name:'Look closer at the fungus',exact:true});await opener.click()
   await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape')
   await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(opener).toBeFocused();expect(errors).toEqual([])
+})
+
+test('a playback-history change between activation and mounting recovers to the note',async({page})=>{
+  await page.addInitScript(()=>{
+    sessionStorage.setItem('piepe-entered','1')
+    const get=Storage.prototype.getItem;let reads=0
+    Storage.prototype.getItem=function(key){return key==='piepe-awakening'?(++reads>1?'1':null):get.call(this,key)}
+  })
+  await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
+  await expect(page.getByRole('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
+  await expect(page.locator('.awakening-controls')).toHaveCount(0);await expect(page.locator('video')).toHaveCount(0)
 })

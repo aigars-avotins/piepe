@@ -37,7 +37,9 @@ function AwakeningClip({ name, enabled, active = true, onReady, onFinish, rememb
     else complete()
   }, [])
   useEffect(() => {
-    if (done) return
+    // A concurrent/remounted activation can observe history written by the first
+    // instance. Complete that activation too, so its parent cannot stay preparing.
+    if (done) { if (!lock.current) finish('already-played'); return }
     if (!enabled) { finish('preference'); return }
     if (!active) { if (started.current) finish('offstage'); return }
     const video = videoRef.current
