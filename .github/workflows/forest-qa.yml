@@ -1,17 +1,82 @@
 name: Forest QA
 on:
   push:
-    branches: [main, codex/living-forest-v2]
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'public/**'
+      - '!public/**/*-original.*'
+      - 'index.html'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig*.json'
+      - 'vite.config.*'
+      - 'eslint.config.*'
+      - 'playwright.config.*'
+      - 'wrangler.*'
+      - '.npmrc'
+      - '.github/workflows/forest-qa.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'public/**'
+      - '!public/**/*-original.*'
+      - 'index.html'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig*.json'
+      - 'vite.config.*'
+      - 'eslint.config.*'
+      - 'playwright.config.*'
+      - 'wrangler.*'
+      - '.npmrc'
+      - '.github/workflows/forest-qa.yml'
   workflow_dispatch:
     inputs:
+      validation:
+        description: 'Release requires both browsers; single-browser modes are diagnostics only'
+        type: choice
+        options: [release, chromium, webkit]
+        default: release
       production_smoke:
-        description: Verify the deployed release against the built application (run after deployment)
+        description: 'Also verify the deployed release in both browsers (run after deployment)'
         type: boolean
         default: false
 permissions:
   contents: read
+# Automatic/diagnostic runs share a per-branch or PR group. Each release has its own group,
+# so even a newer push or another manual release cannot cancel an approved validation.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.production_smoke) && format('release-{0}', github.run_id) || format('checks-{0}', github.event.pull_request.number || github.ref) }}
+  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || (inputs.validation != 'release' && !inputs.production_smoke) }}
 jobs:
+  checks:
+    name: Lightweight checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: TypeScript
+        run: npm run typecheck
+      - name: ESLint
+        run: npm run lint
+      - name: Worker unit tests
+        run: npm run test:worker
+      - name: Production build
+        run: npm run build
   chromium:
+    if: github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.validation == 'chromium' || inputs.production_smoke)
+    needs: checks
     runs-on: ubuntu-24.04
     container: mcr.microsoft.com/playwright:v1.64.1-noble
     timeout-minutes: 15
@@ -22,11 +87,11 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run typecheck && npm run lint && npm run test:worker && npm run build
+      - run: npm run build
       - run: npm test -- --project=chrome-desktop
         env:
           CI: true
-      - if: github.event_name == 'workflow_dispatch' && inputs.production_smoke
+      - if: inputs.production_smoke
         run: npm test -- tests/production.spec.ts --project=chrome-desktop
         env:
           CI: true
@@ -42,7 +107,9 @@ jobs:
             production-results/
           retention-days: 14
   webkit:
-    # WebKit media codecs depend on the host OS. macOS exercises Safari's native media stack.
+    if: github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.validation == 'webkit' || inputs.production_smoke)
+    needs: checks
+    # Native macOS media codecs remain part of every release validation.
     runs-on: macos-15-intel
     timeout-minutes: 15
     steps:
@@ -57,7 +124,7 @@ jobs:
       - run: npm test -- --project=webkit-iphone
         env:
           CI: true
-      - if: github.event_name == 'workflow_dispatch' && inputs.production_smoke
+      - if: inputs.production_smoke
         run: npm test -- tests/production.spec.ts --project=webkit-iphone
         env:
           CI: true
