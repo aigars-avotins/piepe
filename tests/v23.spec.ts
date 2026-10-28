@@ -7,11 +7,13 @@ async function wheelTo(page: Page, id: string, fraction: number) {
   const h = page.viewportSize()!.height
   for (let i = 0; i < 120; i++) {
     const delta = destination - await page.evaluate(() => scrollY)
-    if (Math.abs(delta) < 35) return
+    // Native phone keyboard scrolling advances in coarse steps. Arrival is a broad
+    // cinematic region, not a pixel-perfect stop; coverage is verified separately.
+    if (Math.abs(delta) < (page.viewportSize()!.width < 700 ? h * .12 : 35)) return
     if (page.context().browser()?.browserType().name() === 'webkit' && page.viewportSize()!.width < 700) {
       // Playwright cannot send a wheel to mobile WebKit. Exercise its native
       // keyboard scrolling; separate Chromium recordings use actual touch input.
-      await page.keyboard.press(Math.abs(delta) > h * .75 ? delta > 0 ? 'PageDown' : 'PageUp' : delta > 0 ? 'ArrowDown' : 'ArrowUp')
+      await page.keyboard.press(Math.abs(delta) > h * .75 ? delta > 0 ? 'PageDown' : 'PageUp' : delta > 0 ? 'ArrowDown' : 'ArrowUp', { delay: 80 })
     } else await page.mouse.wheel(0, Math.max(-h * .4, Math.min(h * .4, delta)))
     await page.waitForTimeout(100)
   }
@@ -28,27 +30,38 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
     const position = getComputedStyle(video).objectPosition.split(' ').map(parseFloat)
     const sw = r.width / scale, sh = r.height / scale, sx = (video.videoWidth - sw) * position[0] / 100, sy = (video.videoHeight - sh) * position[1] / 100
     const canvas = document.createElement('canvas'); canvas.width = 128; canvas.height = 72
-    const ctx = canvas.getContext('2d', { willReadFrequently: true })!
-    const frames: { time: number; hash: number; presented: number }[] = []
+    const ctx = canvas.getContext('2d')!
+    const frames: { time: number; hash?: number; presented: number }[] = []
+    let sampledAt = -Infinity
     const started = performance.now()
     await new Promise<void>((resolve, reject) => {
       const timeout = setTimeout(() => reject(Error('No advancing presented video frames: '+JSON.stringify({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,connected:video.isConnected,reason:video.parentElement?.dataset.clipReason,cycles:video.parentElement?.dataset.clipCycles,totalFrames:video.getVideoPlaybackQuality().totalVideoFrames,sampled:frames.length}))), 2500)
       const frame: VideoFrameRequestCallback = (_, metadata) => {
-        ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
-        const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
-        for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
-        frames.push({ time: metadata.mediaTime, hash: hash >>> 0, presented: metadata.presentedFrames })
-        if (performance.now() - started < 750 || frames.length < 6 || video.paused || video.ended) video.requestVideoFrameCallback(frame)
+        // Read pixels at separated presented frames, rather than forcing a GPU→CPU
+        // conversion on every callback and stalling the renderer being measured.
+        let hash: number | undefined
+        if (performance.now() - sampledAt >= 250) {
+          sampledAt = performance.now(); ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
+          const pixels = ctx.getImageData(0, 0, 128, 72).data; hash = 2166136261
+          for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
+          hash >>>= 0
+        }
+        frames.push({ time: metadata.mediaTime, hash, presented: metadata.presentedFrames })
+        if (performance.now() - started < 750 || frames.length < 6 || frames.filter(frame => frame.hash !== undefined).length < 3 || video.paused || video.ended) video.requestVideoFrameCallback(frame)
         else { clearTimeout(timeout); resolve() }
       }
       video.requestVideoFrameCallback(frame)
     })
+    opacity = 1
+    for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)
     return { frames, duration: video.duration, opacity, ready: video.readyState, paused: video.paused, rect: { x: r.x, y: r.y, w: r.width, h: r.height }, viewport: { w: innerWidth, h: innerHeight }, held: video.parentElement!.dataset.loopHold }
   })
 }
 
+const distinctFrames = (frames: { hash?: number }[]) => new Set(frames.flatMap(frame => frame.hash === undefined ? [] : [frame.hash])).size
+
 test('native keyboard advance interrupts the fresh intro, and direct anchors do not start a competing film', async ({ page }) => {
-  test.setTimeout(30000)
+  test.setTimeout(45000)
   await page.goto('/en/')
   await expect(page.locator('video.forest-film')).toHaveCount(1)
   await page.keyboard.press('PageDown')
@@ -64,11 +77,13 @@ test('native keyboard advance interrupts the fresh intro, and direct anchors do 
   const beforeWheel = await page.evaluate(() => scrollY)
   await page.keyboard.press('PageDown')
   await expect.poll(() => page.evaluate(y => scrollY - y, beforeWheel)).toBeGreaterThan(450)
-  const restored = await page.evaluate(() => scrollY)
   await page.reload()
   await page.evaluate(() => document.fonts.ready)
-  await expect.poll(() => page.evaluate(y => Math.abs(scrollY - y), restored)).toBeLessThan(5)
-  expect((await movingPicture(page, 'breathing')).paused).toBe(false)
+  // Safari can reload a fragment at its start rather than the old offset within the
+  // sticky plateau. Preserve that native behavior and require the same visible scene.
+  const reloaded = await movingPicture(page, 'breathing'); expect(reloaded.paused).toBe(false); expect(reloaded.opacity).toBeGreaterThan(.98)
+  await page.goBack(); expect((await movingPicture(page, 'understory')).paused).toBe(false)
+  await page.goForward(); expect((await movingPicture(page, 'breathing')).paused).toBe(false)
 })
 
 test('expanded facts, locale changes, explicit pause and a failed environmental decode keep native navigation usable', async ({ page }) => {
@@ -122,21 +137,24 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`${width}
         const result = await movingPicture(page, name); evidence.push({ name, fraction, ...result })
         expect(result.paused).toBe(false); expect(result.ready).toBeGreaterThanOrEqual(2); expect(result.opacity).toBeGreaterThan(.98)
         expect(result.rect.w).toBeGreaterThanOrEqual(result.viewport.w - 2); expect(result.rect.h).toBeGreaterThanOrEqual(result.viewport.h - 2)
-        expect(result.frames.length).toBeGreaterThan(3); expect(new Set(result.frames.map(f => f.hash)).size).toBeGreaterThan(2)
+        expect(result.frames.length).toBeGreaterThan(3); expect(distinctFrames(result.frames)).toBeGreaterThan(2)
         expect(result.frames.slice(1).reduce((elapsed, frame, i) => elapsed + Math.max(0, frame.time - result.frames[i].time), 0)).toBeGreaterThan(.3)
         const box = await page.locator(`#${id} .cinema-content`).boundingBox(); expect(Math.abs(box!.y)).toBeLessThan(2)
       }
       const layer = page.locator(`[data-clip="${name}"]`)
       await expect.poll(() => layer.getAttribute('data-clip-cycles').then(Number), { timeout: 9000 }).toBeGreaterThanOrEqual(1)
       await expect(layer).toHaveAttribute('data-loop-hold', 'false')
-      const loop = await movingPicture(page, name); evidence.push({ name, loop: true, ...loop }); expect(loop.paused).toBe(false); expect(new Set(loop.frames.map(f => f.hash)).size).toBeGreaterThan(2)
+      const loop = await movingPicture(page, name); evidence.push({ name, loop: true, ...loop }); expect(loop.paused).toBe(false); expect(distinctFrames(loop.frames)).toBeGreaterThan(2)
       for (let visit = 1; visit <= 3; visit++) {
         await wheelTo(page, exit, .3); await expect(layer.locator('video')).toHaveCount(0)
         await wheelTo(page, id, .65)
-        const result = await movingPicture(page, name); evidence.push({ name, visit, ...result }); expect(result.paused).toBe(false); expect(result.opacity).toBeGreaterThan(.98); expect(new Set(result.frames.map(f => f.hash)).size).toBeGreaterThan(2)
+        const result = await movingPicture(page, name); evidence.push({ name, visit, ...result }); expect(result.paused).toBe(false); expect(result.opacity).toBeGreaterThan(.98); expect(distinctFrames(result.frames)).toBeGreaterThan(2)
       }
     }
     await page.reload(); await expect(page.locator('video.forest-film')).toHaveCount(0)
+    // A zero video count also holds in server HTML. Prove restored, hydrated playback
+    // before navigating again, rather than racing a reload's native restoration.
+    const reloaded = await movingPicture(page, 'breathing'); expect(reloaded.paused).toBe(false)
     await page.goto((locale === 'lv' ? '/' : '/en/') + '#understory')
     const restored = await movingPicture(page, 'understory'); expect(restored.paused).toBe(false)
     await testInfo.attach('visible-film-frames-and-revisits', { body: JSON.stringify(evidence), contentType: 'application/json' })

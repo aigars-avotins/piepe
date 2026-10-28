@@ -52,6 +52,12 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
     const options = { duration: 1000, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'both' as const }
     const run = (back: boolean) => {
       if (!origin) { node.classList.remove('photo-moving'); setMoving(false); if (back) close.current(); else { docked.current(); focus() } return }
+      if (back && installed && animations.every(animation => animation.playState === 'paused' && !animation.currentTime)) {
+        // Escape during preparation returns to the retained world immediately; it
+        // must not wait for the very image decode that the visitor is cancelling.
+        generation++; animations.forEach(animation => animation.cancel()); restore(); installed = false
+        node.classList.remove('photo-moving'); setMoving(false); close.current(); return
+      }
       const turn = ++generation, current = photo.getBoundingClientRect()
       const matrix = installed ? new DOMMatrixReadOnly(getComputedStyle(photo).transform).multiply(new DOMMatrixReadOnly(getComputedStyle(image).transform)) : undefined
       const currentImage = matrix ? { x: matrix.e, y: matrix.f, scale: (matrix.a + matrix.d) / 2 } : photoPose(image)
@@ -74,16 +80,15 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
         // play tasks: WebKit can otherwise commit the inverse layers on different ticks.
         animations.forEach(animation => { animation.startTime = start })
       }
-      if (!back) {
-        // Prepare the decoded surface before starting its camera clock on high-density displays.
-        animations.forEach(animation => { animation.pause(); animation.currentTime = 0 })
-        void Promise.all([image.decode().catch(() => {}), ...animations.map(animation => animation.ready)]).then(() => {
-          if (cancelled || turn !== generation || !installed) return
-          requestAnimationFrame(() => requestAnimationFrame(() => {
-            if (!cancelled && turn === generation && installed) playTogether()
-          }))
-        })
-      } else playTogether()
+      // Prepare both directions, including a reverse interrupted midway through entry.
+      // Assigning a clock to a still-pending WebKit play task can strand its finish promise.
+      animations.forEach(animation => { animation.pause(); animation.currentTime = 0 })
+      void Promise.all([back ? Promise.resolve() : image.decode().catch(() => {}), ...animations.map(animation => animation.ready)]).then(() => {
+        if (cancelled || turn !== generation || !installed) return
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          if (!cancelled && turn === generation && installed) playTogether()
+        }))
+      }).catch(() => { /* Cancelling a pending native pause rejects its ready promise. */ })
       Promise.all(animations.map(a => a.finished)).then(() => {
         if (cancelled || turn !== generation) return
         if (back) { setMoving(false); node.classList.remove('photo-moving'); close.current(); return }

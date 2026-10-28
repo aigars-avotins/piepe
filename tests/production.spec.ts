@@ -26,8 +26,27 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   await page.getByRole('button',{name:t.closeDiscovery}).click();await expect(page.getByRole('dialog')).not.toBeVisible()
   await expect(page.getByRole('button',{name:t.closer,exact:true})).toBeFocused()
   for(const [id,clip] of [['understory','understory'],['return','breathing']]){
-    await page.locator('#'+id).scrollIntoViewIfNeeded()
-    await expect(page.locator(`[data-clip="${clip}"]`)).toHaveAttribute('data-clip-reason','ended',{timeout:11000})
+    await page.locator('#'+id).evaluate(element=>element.scrollIntoView({block:'start'}))
+    const layer=page.locator(`[data-clip="${clip}"]`)
+    await expect(layer).toHaveAttribute('data-clip-ready','true',{timeout:11000})
+    const frames=await layer.locator('video').evaluate(async(video:HTMLVideoElement)=>{
+      const canvas=document.createElement('canvas');canvas.width=64;canvas.height=36;const ctx=canvas.getContext('2d')!
+      const samples:{time:number;hash:number}[]=[]
+      await new Promise<void>((resolve,reject)=>{
+        const timeout=setTimeout(()=>reject(Error('Production cinema did not present moving frames')),4000)
+        const frame:VideoFrameRequestCallback=(_,metadata)=>{
+          ctx.drawImage(video,0,0,64,36);const pixels=ctx.getImageData(0,0,64,36).data;let hash=2166136261
+          for(let i=0;i<pixels.length;i+=4)hash=Math.imul(hash^pixels[i],16777619)
+          samples.push({time:metadata.mediaTime,hash:hash>>>0})
+          if(samples.length===3){clearTimeout(timeout);resolve()}else setTimeout(()=>video.requestVideoFrameCallback(frame),250)
+        };video.requestVideoFrameCallback(frame)
+      })
+      let opacity=1;for(let element:Element|null=video;element;element=element.parentElement)opacity*=Number(getComputedStyle(element).opacity)
+      return{samples,paused:video.paused,opacity}
+    })
+    expect(frames.paused).toBe(false);expect(frames.opacity).toBeGreaterThan(.98);expect(new Set(frames.samples.map(frame=>frame.hash)).size).toBe(3)
+    expect(frames.samples.slice(1).reduce((sum,frame,i)=>sum+Math.max(0,frame.time-frames.samples[i].time),0)).toBeGreaterThan(.3)
+    await page.screenshot({path:testInfo.outputPath(`${locale}-production-${clip}.png`),scale:'css'})
   }
   const wallpaper=page.waitForEvent('download');await page.getByRole('link',{name:t.downloadPhone}).click()
   expect((await wallpaper).suggestedFilename()).toBe('piepe-forest-mobile-1440x3120.jpg')
@@ -41,8 +60,8 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   await page.getByRole('button',{name:now.replayLabel}).click();await expect(page.locator('video.forest-film')).toHaveCount(1)
   await page.getByRole('button',{name:now.skipIntro}).click();await expect(page.getByRole('button',{name:now.closer,exact:true})).toBeFocused()
   for(const clip of ['reveal','awakening','understory','breathing']){
-    const range=await request.get(`/media/forest-${clip}.mp4`,{headers:{Range:'bytes=0-63'}});expect(range.status()).toBe(206);expect((await range.body()).length).toBe(64)
-    expect((await request.get(`/media/forest-${clip}.mp4`,{headers:{Range:'bytes=999999999-'}})).status()).toBe(416)
+    const range=await request.get(`/media/forest-${clip}.mp4?v=2.3`,{headers:{Range:'bytes=0-63'}});expect(range.status()).toBe(206);expect((await range.body()).length).toBe(64)
+    expect((await request.get(`/media/forest-${clip}.mp4?v=2.3`,{headers:{Range:'bytes=999999999-'}})).status()).toBe(416)
   }
   expect((await request.get('/favicon.ico')).status()).toBe(200);expect((await request.get('/no-such-page')).status()).toBe(404)
   if(testInfo.project.name==='chrome-desktop'){await page.setViewportSize({width:390,height:664});await page.screenshot({path:testInfo.outputPath(`${locale}-production-mobile.png`),scale:'css'})}

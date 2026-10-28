@@ -228,3 +228,15 @@ test('a transient readiness drop at the presented-frame callback retries behind 
   await expect(page.locator('.world')).toHaveAttribute('data-awakening','playing')
   await expect(page.locator('dialog[open]')).toHaveCount(0)
 })
+
+test('Escape before the photo clock starts cancels a pending decode without waiting or an unhandled rejection',async({page})=>{
+  await page.addInitScript(()=>{
+    sessionStorage.setItem('piepe-entered','1');sessionStorage.setItem('piepe-awakening','1')
+    const decode=HTMLImageElement.prototype.decode
+    HTMLImageElement.prototype.decode=function(){return this.closest('.specimen-photo')?new Promise<void>(()=>{}):decode.call(this)}
+  })
+  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message))
+  await page.goto('/en/');const opener=page.getByRole('button',{name:'Look closer at the fungus',exact:true});await opener.click()
+  await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('Escape')
+  await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(opener).toBeFocused();expect(errors).toEqual([])
+})
