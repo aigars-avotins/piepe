@@ -141,7 +141,7 @@ main{position:relative;z-index:1}
 @media(max-width:699px){.clip-understory>img,.clip-understory>video{object-position:58% 50%}.motion-off[data-scene="understory"] .bark-chapter::before{background-position:58% 50%}}
 /* 2.2: the awakening stays inside the original, graded world/source plane. */
 .world-awakening{position:absolute;inset:0;z-index:2}.world-awakening .motion-clip{width:100%;height:100%}.clip-awakening .clip-end{opacity:0}.clip-awakening[data-clip-state=complete] .clip-end{opacity:1}
-.motion-clip>video{opacity:0}.motion-clip[data-clip-ready=true]>video{opacity:1}.world-awakening .motion-clip>video{transition:opacity .16s linear}
+.motion-clip>video{opacity:0}.motion-clip[data-clip-ready=true]>video,.clip-awakening[data-frame-staged=true]>video{opacity:1}.world-awakening .motion-clip>video{transition:opacity .16s linear}
 .has-awakening .hero-hotspot-plane{visibility:hidden}.has-awakening .hero-copy,.has-awakening .hero-foot,.has-awakening .journey-index{pointer-events:none;transition:opacity .55s ease}.cinema-presented .hero-copy,.cinema-presented .hero-foot,.cinema-presented .journey-index{opacity:0}
 .awakening-controls{position:fixed;inset:0;z-index:22;pointer-events:none}.awakening-controls>button{pointer-events:auto}.has-awakening .site-header .replay-intro{visibility:hidden}.has-awakening{touch-action:none}
 .understory-cinema{position:absolute;inset:0;z-index:5;opacity:0;transform-origin:58% 50%}.wide-environment>.motion-clip{z-index:1}.wide-environment>.dawn-light{z-index:0}.wide-environment>.motion-clip>img,.wide-environment>.motion-clip>video{object-position:55% 50%}

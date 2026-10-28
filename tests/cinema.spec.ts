@@ -128,15 +128,15 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
     const observer=new MutationObserver(()=>{
       const photo=document.querySelector('.specimen-photo')
       if(!photo||!document.querySelector('dialog[open].photo-moving'))return
-      observer.disconnect();const start=Number(document.timeline.currentTime);let ran=false
+      observer.disconnect();const start=performance.now();let ran=false
       const frame=()=>{
         const r=photo.getBoundingClientRect(),camera=(photo as HTMLElement).dataset.cameraPhase
         const moving=(camera==='moving'||camera==='returning')&&Number((photo as HTMLElement).dataset.cameraProgress)>0;ran ||=moving
         // One geometry read samples the rendered source at one instant, including both transforms.
         const source=photo.querySelector('img')!.getBoundingClientRect()
-        samples.push({t:Number(document.timeline.currentTime)-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
-        if((!ran||document.querySelector('dialog.photo-moving'))&&Number(document.timeline.currentTime)-start<10000)requestAnimationFrame(frame)
-      };requestAnimationFrame(frame)
+        samples.push({t:performance.now()-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
+        if((!ran||document.querySelector('dialog.photo-moving'))&&performance.now()-start<10000)requestAnimationFrame(()=>setTimeout(frame,0))
+      };requestAnimationFrame(()=>setTimeout(frame,0))
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
   })
   await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:12000})
@@ -259,4 +259,27 @@ test('a playback-history change between activation and mounting recovers to the 
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await expect(page.getByRole('dialog')).toBeVisible();await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
   await expect(page.locator('.awakening-controls')).toHaveCount(0);await expect(page.locator('video')).toHaveCount(0)
+})
+
+test('a compositor withholding transparent video frames still presents paused frame zero before playback',async({page})=>{
+  await page.addInitScript(()=>{
+    sessionStorage.setItem('piepe-entered','1')
+    const request=HTMLVideoElement.prototype.requestVideoFrameCallback
+    HTMLVideoElement.prototype.requestVideoFrameCallback=function(callback){
+      return request.call(this,(now,metadata)=>{
+        if(!this.src.includes('forest-awakening.mp4')){callback(now,metadata);return}
+        const present=()=>{
+          if(!this.isConnected)return
+          if(Number(getComputedStyle(this).opacity)<.99){requestAnimationFrame(present);return}
+          ;(window as unknown as {stagedOpening:unknown}).stagedOpening={time:metadata.mediaTime,paused:this.paused}
+          callback(now,metadata)
+        };present()
+      })
+    }
+  })
+  await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
+  await expect(page.locator('.world')).toHaveAttribute('data-awakening','playing')
+  const opening=await page.evaluate(()=>(window as unknown as {stagedOpening:{time:number;paused:boolean}}).stagedOpening)
+  expect(opening.time).toBeLessThan(.05);expect(opening.paused).toBe(true)
+  await expect(page.locator('[data-clip=awakening]')).toHaveAttribute('data-clip-ready','true')
 })
