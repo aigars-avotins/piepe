@@ -137,3 +137,5 @@ main{position:relative;z-index:1}
 @media(max-height:520px) and (min-width:700px){.return-copy{padding-top:65px}.return-copy h2{font-size:52px}}
 /* Initial server HTML remains fully readable without JavaScript. */
 .js .prerendered .hero-copy{visibility:hidden}.js:not(.preference-static) .prerendered .static-forest{background-image:url('/media/forest-poster.jpg')}
+.direction-arrow{display:inline-block;vertical-align:middle;flex-shrink:0}.fact-sources .direction-arrow{width:14px;height:14px;margin-left:5px}
+@media(max-width:699px){.clip-understory>img,.clip-understory>video{object-position:58% 50%}.motion-off[data-scene="understory"] .bark-chapter::before{background-position:58% 50%}}

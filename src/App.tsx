@@ -1,3 +1,4 @@
+import Arrow from './Arrow'
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { localeFromPath, localePath, messages } from './i18n'
 import type { Locale } from './i18n'
@@ -136,7 +137,7 @@ export default function App() {
     <header className="site-header">
       <a className="brand" href="#forest" onClick={returnToForest} aria-label={t.homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" />pie.pe</a>
       <span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} onChange={changeLocale} />
-      {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}>{t.skipIntro} <span aria-hidden="true">↗</span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}>{t.replay} <span aria-hidden="true">↺</span></button>}
+      {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}>{t.skipIntro} <span aria-hidden="true"><Arrow direction="diagonal" /></span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}>{t.replay} <span aria-hidden="true">↺</span></button>}
     </header>
     <nav className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span>0{index + 1}</span><i /><span>{t.chapters[index]}</span></a>)}</nav>
     <Story locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} collected={collected} paused={paused} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />

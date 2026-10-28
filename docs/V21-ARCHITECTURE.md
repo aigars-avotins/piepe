@@ -8,7 +8,7 @@ Activating the real shaped fungus target opens the same native dialog. On first 
 
 The supplied awakening first frame is close to, but not pixel-identical with, the original ending (preflight full-frame mean RGB difference approximately 4.989/255). The implementation makes an interaction-motivated shot change, with identical cover geometry and no two mismatched moving fungi blended together. Exact geometric identity cannot be honestly promised for different source artwork. Natural clip endings were tested by comparing the actual decoded ending to its final still; the test requires a mean channel error below 10/255.
 
-Macro and wide shots use their own full-viewport cover geometry, with a 55% horizontal focal point for the wide return. Paused/reduced-motion scenes use matching stills, not a separate animation stack. Natural scroll remains available; no wheel hijacking or video scrubbing is introduced.
+Macro and wide shots use their own full-viewport cover geometry, with a 55% horizontal focal point for the wide return and a 58% phone focal point for the macro subject. Paused/reduced-motion scenes use matching stills, not a separate animation stack. Natural scroll remains available; no wheel hijacking or video scrubbing is introduced.
 
 React Bits was reviewed as requested. The existing GSAP text entrance and restrained atmospheric layers already supply the useful reveal/fade principles. No copied React Bits implementation or new dependency was justified. Magnet would move an essential focus target; extra LightRays/particles would add continuous GPU work over supplied films, so they remain absent.
 

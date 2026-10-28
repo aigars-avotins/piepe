@@ -1,3 +1,4 @@
+import Arrow from './Arrow'
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties, RefObject } from 'react'
 import { messages } from './i18n'
@@ -23,7 +24,7 @@ export default function Discovery({ locale, onLocaleChange, awakening, onAwakeni
     {open && awakening && <div className="awakening-stage"><LanguageSwitch locale={locale} onChange={onLocaleChange} />
       <div className="awakening-plane" style={plane}><MotionClip name="awakening" enabled={enabled} onFinish={onAwakeningEnd} /></div>
       <p className="awakening-thought">{t.awakening}</p>
-      <button className="text-button skip-awakening" autoFocus onClick={onAwakeningEnd}>{t.skipAwakening} <span aria-hidden="true">→</span></button>
+      <button className="text-button skip-awakening" autoFocus onClick={onAwakeningEnd}>{t.skipAwakening} <span aria-hidden="true"><Arrow direction="right" /></span></button>
     </div>}
     <div className="discovery-stage" hidden={awakening}>
       <LanguageSwitch locale={locale} onChange={onLocaleChange} />
@@ -46,7 +47,7 @@ export default function Discovery({ locale, onLocaleChange, awakening, onAwakeni
           <div className="attention-map" aria-hidden="true"><svg viewBox="0 0 340 76" fill="none"><path className="map-ground" d="M0 56H340"/><g className="map-branches"><path d="M170 53c-12-10-23-10-43-14l-38-5-28-19M170 53c8-10 25-18 40-22l36-11 29-12M170 53c-3-23-3-29-10-45M129 39l-9-24M209 31l2-21M90 34l-39 7M248 20l34 16M170 53l-41 12M170 53l31 17"/></g><circle cx="170" cy="53" r="3"/><circle className="map-seed" cx="275" cy="8" r="2"/><circle className="map-seed" cx="61" cy="15" r="2"/></svg></div>
           <p className="observation-footnote">{note.footnote}</p>
         </article>
-        <div className="observation-actions">{page < 2 ? <button className="line-link" onClick={() => choose(page + 1)}>{page === 0 ? t.nextBeneath : t.nextBeyond} <span aria-hidden="true">→</span></button> : <a className="line-link" href={`/field-note-${locale}.txt`} download={`piepe-field-note-001-${locale}.txt`} onClick={onCollect}>{collected ? t.anotherCopy : t.keepNote} <span aria-hidden="true">↓</span></a>}<span className="observation-count">0{page + 1} / 03</span></div>
+        <div className="observation-actions">{page < 2 ? <button className="line-link" onClick={() => choose(page + 1)}>{page === 0 ? t.nextBeneath : t.nextBeyond} <span aria-hidden="true"><Arrow direction="right" /></span></button> : <a className="line-link" href={`/field-note-${locale}.txt`} download={`piepe-field-note-001-${locale}.txt`} onClick={onCollect}>{collected ? t.anotherCopy : t.keepNote} <span aria-hidden="true"><Arrow direction="down" /></span></a>}<span className="observation-count">0{page + 1} / 03</span></div>
         {collected && <p className="collected-message" role="status">{t.collected}</p>}
       </div>
     </div>
