@@ -47,7 +47,7 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
     const target = photo.getBoundingClientRect(), destination = photoPose(image)
     const styles = [photo, image, shade, bridge].map(element => [element, element.getAttribute('style')] as const)
     const restore = () => styles.forEach(([element, style]) => { if (style === null) element.removeAttribute('style'); else element.setAttribute('style', style) })
-    let animations: Animation[] = [], cancelled = false, closing = false, installed = false, generation = 0
+    let animations: Animation[] = [], cancelled = false, closing = false, installed = false, generation = 0, settleFrame = 0
     const focus = () => node.querySelector<HTMLButtonElement>('.close-discovery')?.focus({ preventScroll: true })
     const options = { duration: 1000, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'both' as const }
     const run = (back: boolean) => {
@@ -87,7 +87,16 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
         if (cancelled || turn !== generation) return
         if (back) { setMoving(false); node.classList.remove('photo-moving'); close.current(); return }
         animations.forEach(a => a.cancel()); restore(); installed = false
+        // The camera already arrives at the normal object-fit crop. Removing photo-moving
+        // must not start a second CSS object-position transition from the temporary 50% crop.
+        const transition = image.style.transition
+        image.style.transition = 'none'
         node.classList.remove('photo-moving'); setMoving(false); docked.current(); focus()
+        void getComputedStyle(image).objectPosition
+        settleFrame = requestAnimationFrame(() => { settleFrame = requestAnimationFrame(() => {
+          if (cancelled || turn !== generation) return
+          if (transition) image.style.transition = transition; else image.style.removeProperty('transition')
+        }) })
       }).catch(() => {})
     }
     reverse.current = () => { if (closing) return; closing = true; run(true) }
@@ -96,7 +105,7 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
     const preference = matchMedia('(prefers-reduced-motion: reduce)')
     const reduce = () => { if (preference.matches) resize() }
     window.addEventListener('resize', resize); preference.addEventListener('change', reduce)
-    return () => { cancelled = true; animations.forEach(a => a.cancel()); restore(); reverse.current = undefined; window.removeEventListener('resize', resize); preference.removeEventListener('change', reduce) }
+    return () => { cancelled = true; cancelAnimationFrame(settleFrame); animations.forEach(a => a.cancel()); restore(); reverse.current = undefined; window.removeEventListener('resize', resize); preference.removeEventListener('change', reduce) }
   }, [dialog, open, origin])
   return { moving, requestClose: useCallback(() => reverse.current?.(), []), settle: () => dialog.current?.getAnimations({ subtree: true }).forEach(a => a.finish()) }
 }

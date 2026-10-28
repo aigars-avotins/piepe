@@ -10,6 +10,7 @@ export const english = {
   imageError: 'The image could not load. The field note is still here.', openEncounter: 'Open the encounter',
   beneathLabel: '01 / Beneath the surface', beneathTitle: 'Even in stillness,', beneathEm: 'life goes on.',
   beneathBody: 'A change of scale. A drop of water. A world that never stopped.', stay: 'Stay a little longer', depth: 'Beyond the familiar',
+  continueJourney: 'Continue through the forest', pauseFilm: 'Pause film', resumeFilm: 'Resume film', retryFilm: 'Play film again',
   encounterLabel: '02 / The encounter', small: 'Small enough to overlook.', encounterTitle: 'What you see', encounterEm: 'is a beginning.',
   encounterBody: 'A shelf in the bark. Three observations. Another way of seeing.', openNote: 'Open the field note', enterEncounter: 'Enter the fungus encounter',
   waiting: 'Field note 001 · Waiting to be found', collectedShort: 'Field note 001 · Collected', visibleBeginning: 'The visible is only the beginning',
@@ -50,6 +51,7 @@ const latvian: Messages = {
   encounterBody: 'Piepe uz mizas. Trīs vērojumi. Citāds skatiens.', openNote: 'Atvērt meža piezīmi', enterEncounter: 'Iepazīt piepes pasauli',
   waiting: 'Meža piezīme 001 · Vēl neatklāta', collectedShort: 'Meža piezīme 001 · Saglabāta', visibleBeginning: 'Redzamais ir tikai sākums',
   returnLabel: '03 / Atkal gaismā', returnTitle: 'Tas pats mežs.', returnEm: 'Citāds skatiens.', returnThought: 'Tas, kas beidzas, dod vietu jaunam.',
+  continueJourney: 'Turpināt ceļu', pauseFilm: 'Apturēt filmu', resumeFilm: 'Turpināt filmu', retryFilm: 'Atskaņot filmu vēlreiz',
   returnForest: 'Atgriezties mežā', pause: 'Apturēt kustību', resume: 'Turpināt kustību', noteLabel: 'Meža piezīme 001', closeDiscovery: 'Aizvērt piepes stāstu',
   atlas: 'Mazs vērības atlants', observationsLabel: 'Meža piezīmes vērojumi',
   observations: [

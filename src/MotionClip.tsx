@@ -1,10 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { hasPlayedClip, rememberClip } from './clipHistory'
+import EnvironmentalFilm from './EnvironmentalFilm'
 export type ClipName = 'awakening' | 'understory' | 'breathing'
 const posterFor = (name: ClipName) => `/media/forest-${name}${name === 'understory' ? '' : '-poster'}.jpg`
 type Props = { name: ClipName; enabled: boolean; active?: boolean; onReady?: () => void; onFinish?: (reason: string) => void; remember?: boolean }
 /** Decode behind the held source frame; expose only an actually presented video frame. */
-export default function MotionClip({ name, enabled, active = true, onReady, onFinish, remember = true }: Props) {
+export default function MotionClip(props: Props) {
+  if (props.name !== 'awakening') return <EnvironmentalFilm key={`${props.name}-${props.enabled}-${props.active ?? true}`} {...props} name={props.name} />
+  return <AwakeningClip {...props} />
+}
+function AwakeningClip({ name, enabled, active = true, onReady, onFinish, remember = true }: Props) {
   const [done, setDone] = useState(() => remember && hasPlayedClip(name))
   const [ready, setReady] = useState(false)
   const [stillReady, setStillReady] = useState(false)

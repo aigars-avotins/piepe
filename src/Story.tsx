@@ -7,9 +7,10 @@ type Props = {
   locale: Locale; plane?: CSSProperties; hotspot?: RefObject<HTMLButtonElement | null>;
   inactive?: boolean; intro?: boolean; imageFailed?: boolean; collected?: boolean; paused?: boolean;
   onDiscovery?: (event: MouseEvent<HTMLButtonElement>) => void; onReturn?: () => void; onPause?: () => void;
+  cinemaErrors?: { understory: boolean; breathing: boolean }; onRetryCinema?: (name: 'understory' | 'breathing') => void;
   inspectEvents?: { onMouseEnter: () => void; onMouseLeave: () => void; onFocus: () => void; onBlur: () => void };
 }
-export default function Story({ locale, plane, hotspot, inactive = false, intro = false, imageFailed = false, collected = false, paused = false, onDiscovery, onReturn, onPause, inspectEvents }: Props) {
+export default function Story({ locale, plane, hotspot, inactive = false, intro = false, imageFailed = false, collected = false, paused = false, cinemaErrors, onRetryCinema, onDiscovery, onReturn, onPause, inspectEvents }: Props) {
   const t = messages[locale]
   const [downloadHint, setDownloadHint] = useState(false)
   return <>    <main inert={inactive}>
@@ -22,10 +23,14 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <div className="hero-foot title-enter"><p><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><a className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></a><span className="edition">{t.edition}</span></div>
         {imageFailed && <p className="media-note">{t.imageError} <button onClick={onDiscovery}>{t.openEncounter}</button>.</p>}
       </section>
-      <section id="understory" className="chapter bark-chapter" data-scene="understory" aria-labelledby="bark-title">
+      <section id="understory" className="chapter bark-chapter cinematic-chapter" data-scene="understory" aria-labelledby="bark-title">
+        <div className="cinema-content">
         <div className="chapter-label"><span className="label">{t.beneathLabel}</span><span className="chapter-line" /></div>
-        <div className="bark-copy"><h2 id="bark-title">{t.beneathTitle}<br /><em>{t.beneathEm}</em></h2><p className="chapter-body">{t.beneathBody}</p><a className="line-link" href="#encounter">{t.stay} <span aria-hidden="true"><Arrow direction="down" /></span></a></div>
+        <div className="bark-copy"><h2 id="bark-title">{t.beneathTitle}<br /><em>{t.beneathEm}</em></h2><p className="chapter-body">{t.beneathBody}</p><a className="line-link" href="#encounter">{t.continueJourney} <span aria-hidden="true"><Arrow direction="down" /></span></a>
+          <div className="cinema-controls">{cinemaErrors?.understory ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('understory')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause} aria-pressed={paused}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+        </div>
         <span className="depth-coordinate" aria-hidden="true">{t.depth}</span>
+        </div>
       </section>
       <section id="encounter" className="chapter encounter-chapter" data-scene="encounter" aria-labelledby="encounter-title">
         <div className="chapter-label"><span className="label">{t.encounterLabel}</span><span className="chapter-line" /></div>
@@ -38,9 +43,12 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <p className="art-note">{t.artNote}</p>
         <div className="fact-sources"><span>{t.sources}</span><a href="https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/" target="_blank" rel="noopener noreferrer">Woodland Trust <Arrow /></a><a href="https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm" target="_blank" rel="noopener noreferrer">University of Edinburgh <Arrow /></a></div>
       </section>
-      <section id="return" className="chapter return-chapter" data-scene="return" aria-labelledby="return-title">
-        <div className="return-copy"><p className="label">{t.returnLabel}</p><h2 id="return-title">{t.returnTitle}<br /><em>{t.returnEm}</em></h2><p className="return-thought">{t.returnThought}</p><button className="line-link" onClick={onReturn}>{t.returnForest} <span aria-hidden="true"><Arrow direction="up" /></span></button></div>
-
+      <section id="return" className="chapter return-chapter cinematic-chapter" data-scene="return" aria-labelledby="return-title">
+        <div className="cinema-content">
+        <div className="return-copy"><p className="label">{t.returnLabel}</p><h2 id="return-title">{t.returnTitle}<br /><em>{t.returnEm}</em></h2><p className="return-thought">{t.returnThought}</p><button className="line-link" onClick={onReturn}>{t.returnForest} <span aria-hidden="true"><Arrow direction="up" /></span></button><a className="line-link" href="#wallpapers">{t.wallpapersSub}<span aria-hidden="true"><Arrow direction="down" /></span></a>
+          <div className="cinema-controls">{cinemaErrors?.breathing ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('breathing')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause} aria-pressed={paused}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+        </div>
+        </div>
       </section>
       <section className="wallpapers" id="wallpapers" aria-labelledby="wallpapers-title">
         <p className="label">{t.wallpapersSub}</p><h2 id="wallpapers-title">{t.wallpapersTitle}</h2>
