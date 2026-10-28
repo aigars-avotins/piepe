@@ -98,7 +98,7 @@ test('expanded facts, locale changes, explicit pause and a failed environmental 
 })
 
 for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`${width}x${height} repeatable cinema`, () => {
-  test.use({ viewport: { width, height }, deviceScaleFactor: width > 700 ? 2 : 3, isMobile: width < 700, hasTouch: width < 700 })
+  test.use({ viewport: { width, height }, deviceScaleFactor: width > 700 ? 2 : 3, isMobile: width < 700, hasTouch: width < 700, ...(width >= 700 ? { userAgent: undefined } : {}) })
   for (const locale of ['lv', 'en'] as const) test(`${locale}: visible moving frames across broad plateaus, three revisits, loops and reload`, async ({ page }, testInfo) => {
     test.setTimeout(120000)
     await page.addInitScript(() => {
