@@ -1,3 +1,5 @@
+<!-- Updated 2026-10-28: motion skills added to Issue #4 and to this mirror. Read docs/V22_MOTION_SKILLS_REVIEW.md alongside this complete specification. -->
+
 <!-- Canonical editable snapshot of PIE.PE 2.2 Issue #4 for Codex environments without GitHub Issues API access.
 Source: https://github.com/aigars-avotins/piepe/issues/4
 If Issue #4 later changes, refresh this mirror after edits. -->
@@ -5,6 +7,21 @@ If Issue #4 later changes, refresh this mirror after edits. -->
 # [PIE.PE 2.2 / P0] Fix reveal→awakening jump, seamless cinematic handoffs & performance
 
 # PIE.PE 2.2 — Seamless Cinema, Continuity & Performance Polish
+
+## Motion craftsmanship reference — curated Emil Kowalski skills (added 2026-10-28)
+
+The owner suggested https://github.com/emilkowalski/skills. I reviewed the repository and selected only skills genuinely relevant to the 2.2 video seams.
+
+**Read [docs/V22_MOTION_SKILLS_REVIEW.md](https://github.com/aigars-avotins/piepe/blob/main/docs/V22_MOTION_SKILLS_REVIEW.md)** and, if accessible, the linked upstream skill instructions.
+
+- **P0 `review-animations`:** review the *actual first→second video and awakening→dialog seams*, plus final diff and real browser recording.
+- **P0 `animate`:** design/implement the right spatially continuous, interruption-safe handoff with existing GSAP / React.
+- **P0 `animation-performance`:** diagnose frame drops, media readiness/decoding and GPU/layout overhead, including mobile.
+- **P1 `mobile-native`:** verify Safari viewport, touch, safe-area, fixed control and dialog behavior.
+- **Optional `improve-animations`:** planning-only broader audit after fixing reported P0.
+
+**Important:** These are third-party design guidance files, **NOT a reason to install a new animation runtime**, not instructions to execute arbitrary installer scripts. Do not import every skill. Ordinary UI durations below ~300ms do not constrain the deliberately longer cinematic film sequence. Correct visual continuity and media readiness before considering opacity/blur camouflage.
+
 
 **Product:** https://pie.pe/ (LV default), https://pie.pe/en/ (English)  
 **Existing Cloudflare Worker:** `piepe` — deploy to existing Worker only, do not create Pages/new Worker.  
