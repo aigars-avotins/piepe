@@ -9,7 +9,9 @@ export default defineConfig({
   use: { baseURL: process.env.TEST_URL || 'http://127.0.0.1:4173', trace: { mode: 'retain-on-failure', screenshots: false, snapshots: false }, screenshot: 'only-on-failure' },
   projects: [
     { name: 'chrome-desktop', use: { ...devices['Desktop Chrome'], channel: process.env.CI || process.env.PLAYWRIGHT_HEADLESS_SHELL ? undefined : 'chrome', viewport: { width: 1440, height: 900 }, ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? { channel: undefined, launchOptions: { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } } : {}) } },
-    { name: 'webkit-iphone', use: { ...devices['iPhone 13'], browserName: 'webkit' } },
+    // Native macOS media probes run in a real foreground window. Linux remains
+    // headless for diagnostics; it cannot establish native Apple codec validation.
+    { name: 'webkit-iphone', use: { ...devices['iPhone 13'], browserName: 'webkit', headless: process.platform !== 'darwin' } },
   ],
   webServer: process.env.TEST_URL ? undefined : { command: 'node scripts/preview-worker.mjs', url: 'http://127.0.0.1:4173', reuseExistingServer: !process.env.CI },
 })

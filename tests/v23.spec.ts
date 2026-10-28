@@ -2,6 +2,8 @@ import { test, expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
 import { messages } from '../src/i18n'
 
+test.beforeEach(async({page})=>{await page.bringToFront()})
+
 async function wheelTo(page: Page, id: string, fraction: number) {
   const destination = await page.locator('#' + id).evaluate((e, f) => Math.min(document.documentElement.scrollHeight - innerHeight, e.getBoundingClientRect().top + scrollY + innerHeight * f), fraction)
   const h = page.viewportSize()!.height

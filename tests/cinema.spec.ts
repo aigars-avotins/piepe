@@ -1,5 +1,7 @@
 import {test,expect} from '@playwright/test'
 
+test.beforeEach(async({page})=>{await page.bringToFront()})
+
 test.afterEach(async({page},testInfo)=>{
   if(testInfo.status===testInfo.expectedStatus||page.isClosed())return
   await testInfo.attach('cinema-state-on-failure',{body:JSON.stringify(await page.evaluate(()=>({visibility:document.visibilityState,world:document.querySelector('.world')?.attributes?Object.fromEntries([...document.querySelector('.world')!.attributes].map(a=>[a.name,a.value])):null,clips:[...document.querySelectorAll<HTMLElement>('[data-clip]')].map(e=>({...e.dataset})),videos:[...document.querySelectorAll('video')].map(v=>({src:v.currentSrc,time:v.currentTime,paused:v.paused,ready:v.readyState,ended:v.ended})),photo:document.querySelector<HTMLElement>('.specimen-photo')?.dataset}))),contentType:'application/json'})
@@ -141,6 +143,7 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]}).dockFrames)
   await testInfo.attach('photo-docking-frames',{body:JSON.stringify(frames),contentType:'application/json'})
   expect(frames.filter(frame=>frame.moving).length).toBeGreaterThan(10)
+  expect(new Set(frames.filter(frame=>frame.moving).map(frame=>`${frame.w.toFixed(2)},${frame.h.toFixed(2)}`)).size).toBeGreaterThan(10)
   const first=frames[0];expect(first.w).toBeGreaterThan(width*.94);expect(first.h).toBeGreaterThan(height*.92)
   // WebKit can resolve nested compositor geometry at slightly different sub-frame instants.
   // Bound projected width error across the 1920px source to one rendered CSS pixel.
