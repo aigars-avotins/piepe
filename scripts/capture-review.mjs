@@ -11,7 +11,7 @@ await mkdir(out, { recursive: true }); await mkdir(`${out}/frames`, { recursive:
 const browser = await chromium.launch(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } : {})
 try {
   const page = await browser.newPage({ viewport: { width, height } })
-  const errors = [], frames = []; let writes = Promise.resolve()
+  const errors = [], frames = []; let writes = Promise.resolve(), capturing = true
   page.on('pageerror', error => errors.push(error.message))
   await page.addInitScript(() => {
     window.piepePerf = { cls: 0, lcp: 0, maxPlaying: 0, frameIntervals: [], events: [] }
@@ -24,9 +24,10 @@ try {
   await page.goto(target + '/', {waitUntil:'domcontentloaded'}); await page.locator('.world[data-intro-state]').waitFor()
   const cdp = await page.context().newCDPSession(page)
   cdp.on('Page.screencastFrame', event => {
+    if (!capturing) { void cdp.send('Page.screencastFrameAck',{sessionId:event.sessionId}).catch(()=>{}); return }
     const index=frames.length; frames.push({ file:`frames/${String(index).padStart(6,'0')}.jpg`, time:event.metadata.timestamp })
     writes=writes.then(()=>writeFile(`${out}/${frames[index].file}`,Buffer.from(event.data,'base64')))
-    void cdp.send('Page.screencastFrameAck',{sessionId:event.sessionId})
+    void cdp.send('Page.screencastFrameAck',{sessionId:event.sessionId}).catch(()=>{})
   })
   await cdp.send('Page.startScreencast',{format:'jpeg',quality:86,maxWidth:width,maxHeight:height,everyNthFrame:1})
   const shots=[]
@@ -47,7 +48,7 @@ try {
   await scroll('return');await page.waitForTimeout(1800);await shot('desktop-breathing');await page.locator('[data-clip="breathing"][data-clip-reason="ended"]').waitFor({timeout:11000})
   await scroll('wallpapers');await page.waitForTimeout(700);await shot('desktop-wallpapers')
   for(const id of ['return','encounter','understory','forest']){await scroll(id);await page.waitForTimeout(400);await shot('desktop-reverse-'+id)}
-  await cdp.send('Page.stopScreencast');await writes
+  capturing=false;await cdp.send('Page.stopScreencast');await writes
   const perf=await page.evaluate(()=>{const p=window.piepePerf;const sorted=p.frameIntervals.toSorted((a,b)=>a-b);return {...p,frameIntervals:undefined,frameIntervalP95:sorted[Math.floor(sorted.length*.95)],jsHeapUsed:performance.memory?.usedJSHeapSize,fingerprint:{version:document.querySelector('.world').dataset.version,module:new URL(document.querySelector('head script[type=module]').src).pathname},resources:performance.getEntriesByType('resource').filter(r=>/\.mp[34]$|wallpapers/.test(r.name)).map(r=>({url:r.name,bytes:r.transferSize}))}})
   await writeFile(`${out}/performance.json`,JSON.stringify({environment:`Linux Chromium ${width}x${height} emulation during screencast; lab observations`,errors,...perf},null,2))
   await writeFile(`${out}/frame-times.json`,JSON.stringify({frames,shots},null,2))
@@ -61,7 +62,7 @@ try {
     if(!event)continue
     for(const offset of [-200,0,100,250,500,1000]){const time=Math.max(0,event.wall/1000-frames[0].time+offset/1000);spawnSync('ffmpeg',['-v','error','-y','-ss',String(time),'-i',`${out}/complete-forest-journey.mp4`,'-frames:v','1',`${out}/exact-${seam}-${offset}.png`])}
   }
-  await rm(`${out}/frames`,{recursive:true});await rm(`${out}/frames.txt`)
+  await rm(`${out}/frames`,{recursive:true,maxRetries:5,retryDelay:100});await rm(`${out}/frames.txt`)
   for(const [name,width,height] of process.env.SKIP_STATIC_VIEWS ? [] : [['mobile',390,844],['compact',390,664],['small',320,690]]){
     const p=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'});await p.goto(target+'/');await p.evaluate(()=>document.fonts.ready)
     await p.screenshot({path:`${out}/${name}-lv-hero.png`,scale:'css'})

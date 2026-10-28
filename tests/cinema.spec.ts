@@ -1,5 +1,12 @@
 import {test,expect} from '@playwright/test'
 
+function inViewport(width:number,height:number,register:()=>void){
+  test.describe(`${width}x${height} rendering`,()=>{
+    test.use({viewport:{width,height},deviceScaleFactor:width>=2000?1:width>=700?2:3,isMobile:width<700,hasTouch:width<700,...(width>=700?{userAgent:undefined}:{})})
+    register()
+  })
+}
+
 test('compact phone retains native scroll when translated facts change height',async({page})=>{
   await page.setViewportSize({width:390,height:664})
   await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
@@ -37,7 +44,7 @@ test('server-painted controls and cover geometry survive delayed hydration witho
   expect(result.sameButton).toBe(true);expect(result.cls).toBeLessThan(.02);expect(errors).toEqual([])
 })
 
-for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) test(`held frame and first decoded awakening stay in the same plane at ${width}x${height}`,async({page},testInfo)=>{
+for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) inViewport(width,height,()=>test(`held frame and first decoded awakening stay in the same plane at ${width}x${height}`,async({page},testInfo)=>{
   await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   let release!:()=>void;const gate=new Promise<void>(resolve=>{release=resolve})
   await page.route('**/media/forest-awakening.mp4',async route=>{await gate;await route.continue()})
@@ -75,7 +82,7 @@ for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) test(`held frame
   expect(await page.evaluate(()=>(window as unknown as {originalPlane:Element}).originalPlane===document.querySelector('.base-camera .media-plane'))).toBe(true)
   const samples=await page.evaluate(()=>(window as unknown as {seamSamples:unknown[]}).seamSamples)
   await testInfo.attach('held-plane-timeline',{body:JSON.stringify(samples),contentType:'application/json'})
-})
+}))
 
 test('the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error',async({page},testInfo)=>{
   await page.addInitScript(()=>{
@@ -104,24 +111,35 @@ test('the decoded first frame retains local fungus edge anchors, not just a low 
   for(const anchor of result.anchors){expect(Math.hypot(anchor.dx,anchor.dy)).toBeLessThanOrEqual(2);expect(anchor.score).toBeGreaterThan(.8)}
 })
 
-for(const [width,height] of [[1512,982],[390,664]])test(`awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
+for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>test(`awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
   test.setTimeout(25000);await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await page.evaluate(()=>{
-    const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
-    document.addEventListener('ended',e=>{if(!(e.target instanceof HTMLVideoElement)||!e.target.src.endsWith('awakening.mp4'))return;const start=Number(document.timeline.currentTime);const frame=()=>{const photo=document.querySelector('.specimen-photo');if(photo&&document.querySelector('dialog[open]')){const r=photo.getBoundingClientRect(),aperture=getComputedStyle(photo).clipPath;const [top,right=top,bottom=top,left=right]=aperture==='none'?[0]:aperture.slice(6,-1).split(' ').map(parseFloat);const matrix=new DOMMatrixReadOnly(getComputedStyle(photo.querySelector('img')!).transform);samples.push({t:Number(document.timeline.currentTime)-start,x:r.x+left,y:r.y+top,w:r.width-left-right,h:r.height-top-bottom,sx:matrix.a,sy:matrix.d})}if(Number(document.timeline.currentTime)-start<1400)requestAnimationFrame(frame)};requestAnimationFrame(frame)},true)
+    const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
+    const observer=new MutationObserver(()=>{
+      const photo=document.querySelector('.specimen-photo')
+      if(!photo||!document.querySelector('dialog[open].photo-moving'))return
+      observer.disconnect();const start=Number(document.timeline.currentTime);let ran=false
+      const frame=()=>{
+        const r=photo.getBoundingClientRect(),animation=photo.getAnimations()[0]
+        const moving=animation?.playState==='running'&&Number(animation.currentTime)>0;ran ||=moving
+        const matrix=new DOMMatrixReadOnly(getComputedStyle(photo).transform).multiply(new DOMMatrixReadOnly(getComputedStyle(photo.querySelector('img')!).transform))
+        samples.push({t:Number(document.timeline.currentTime)-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:matrix.a,sy:matrix.d,moving})
+        if((!ran||document.querySelector('dialog.photo-moving'))&&Number(document.timeline.currentTime)-start<10000)requestAnimationFrame(frame)
+      };requestAnimationFrame(frame)
+    });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
   })
   await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:12000})
-  const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number}[]}).dockFrames)
+  const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean}[]}).dockFrames)
   await testInfo.attach('photo-docking-frames',{body:JSON.stringify(frames),contentType:'application/json'})
-  expect(frames.length).toBeGreaterThan(10)
+  expect(frames.filter(frame=>frame.moving).length).toBeGreaterThan(10)
   const first=frames[0];expect(first.w).toBeGreaterThan(width*.94);expect(first.h).toBeGreaterThan(height*.92)
   for(const frame of frames)expect(frame.sx).toBeCloseTo(frame.sy,4)
   for(let i=1;i<frames.length;i++){const dt=frames[i].t-frames[i-1].t;if(dt<1)continue;expect(Math.abs(frames[i].w-frames[i-1].w)/dt).toBeLessThan(3);expect(Math.abs(frames[i].h-frames[i-1].h)/dt).toBeLessThan(3)}
   await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
   expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg')
-})
+}))
 
 test('Escape while preparing cancels in place; repeat activation opens the accessible note',async({page})=>{
   await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4',()=>{})
@@ -171,15 +189,15 @@ test('locale change while decoding does not reopen a modal, move focus or restar
   await page.getByRole('button',{name:'Go straight to the field note'}).click();await expect(page.getByRole('dialog')).toBeVisible()
 })
 
-test('Escape during the photo move reverses the current camera instead of snapping to full frame',async({page})=>{
+inViewport(1512,982,()=>test('Escape during the photo move reverses the current camera instead of snapping to full frame',async({page})=>{
   await page.setViewportSize({width:1512,height:982});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
-  await page.waitForFunction(()=>document.querySelector('dialog[open]')&&parseFloat(getComputedStyle(document.querySelector('.specimen-photo')!).clipPath.slice(6,-1).split(' ')[1])>innerWidth*.1,null,{timeout:12000})
+  await page.waitForFunction(()=>document.querySelector('dialog[open].photo-moving')&&document.querySelector('.specimen-photo')!.getBoundingClientRect().width<innerWidth*.9,null,{timeout:12000})
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toBeVisible()
-  const width=await page.locator('.specimen-photo').evaluate(e=>{const insets=getComputedStyle(e).clipPath.slice(6,-1).split(' ').map(parseFloat);return e.getBoundingClientRect().width-insets[1]-insets[3]})
+  const width=await page.locator('.specimen-photo').evaluate(e=>e.getBoundingClientRect().width)
   expect(width).toBeLessThan(1512*.97)
   await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2500});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
-})
+}))
 
 test('a transient readiness drop at the presented-frame callback retries behind the held forest',async({page})=>{
   await page.addInitScript(()=>{

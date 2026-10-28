@@ -113,24 +113,37 @@ for (const scenario of ['blocked', 'missing', 'stall', 'pending'] as const) test
   await page.keyboard.press('Escape'); await expect(page.getByRole('button', { name: 'Look closer at the fungus', exact: true })).toBeFocused()
 })
 
-test('both locales fit the complete required viewport matrix', async ({ page }, testInfo) => {
-  test.setTimeout(120000) // Sixteen viewport/locale screenshots on the native macOS runner.
-  await page.emulateMedia({ reducedMotion: 'reduce' })
-  for (const locale of ['lv', 'en'] as Locale[]) {
-    await page.goto(locale === 'lv' ? '/' : '/en/')
-    for (const [width, height] of [[1440,900],[1512,982],[390,844],[390,664],[320,690],[430,932],[844,390],[2560,1080]]) {
-      await page.setViewportSize({ width, height }); await page.evaluate(() => { scrollTo({top:0,behavior:'instant'}); return document.fonts.ready })
-      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
-      const overlap = await page.evaluate(() => { const hero = document.querySelector('.hero-copy')!.getBoundingClientRect(); const plane = document.querySelector('.hero-hotspot-plane')!.getBoundingClientRect(); return hero.bottom <= plane.top + plane.height * .358 })
-      if (width < 700) expect(overlap).toBe(true)
-      await page.screenshot({ path: testInfo.outputPath(`${locale}-${width}x${height}.png`), scale: 'css' })
-      await page.getByRole('button', { name: messages[locale].closer, exact: true }).click()
+const requiredViewports = [[1440,900],[1512,982],[390,844],[390,664],[320,690],[430,932],[844,390],[2560,1080]] as const
+for (const [width,height] of requiredViewports) test.describe(`${width}x${height} device`,()=>{
+  const mobile=width<700||height<520
+  test.use({viewport:{width,height},deviceScaleFactor:mobile?3:width>=2000?1:2,isMobile:mobile,hasTouch:mobile})
+  test.describe('static responsive view',()=>{
+    test.use({reducedMotion:'reduce'})
+    for(const locale of ['lv','en'] as Locale[]) test(`both locales fit the required viewport matrix: ${locale}`,async({page},testInfo)=>{
+      await page.goto(locale==='lv'?'/':'/en/')
+      await page.waitForFunction(()=>!document.querySelector('.world')!.classList.contains('prerendered'))
+      await page.evaluate(()=>document.fonts.ready)
+      await page.waitForFunction(()=>{const plane=document.querySelector('.hero-hotspot-plane')!.getBoundingClientRect();return Math.abs(plane.height-Math.max(innerHeight,innerWidth*9/16))<1})
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
+      const overlap=await page.evaluate(()=>{const hero=document.querySelector('.hero-copy')!.getBoundingClientRect(),plane=document.querySelector('.hero-hotspot-plane')!.getBoundingClientRect();return hero.bottom<=plane.top+plane.height*.358})
+      if(width<700)expect(overlap).toBe(true)
+      await page.screenshot({path:testInfo.outputPath(`${locale}-${width}x${height}.png`),scale:'css'})
+      await page.getByRole('button',{name:messages[locale].closer,exact:true}).click()
       await expect(page.getByRole('dialog')).toBeVisible()
-      const close = await page.getByRole('button', { name: messages[locale].closeDiscovery }).boundingBox()
-      expect(close!.height).toBeGreaterThanOrEqual(44); expect(close!.y).toBeGreaterThanOrEqual(0)
-      await page.getByRole('button', { name: messages[locale].closeDiscovery }).click()
-    }
-  }
+      const close=await page.getByRole('button',{name:messages[locale].closeDiscovery}).boundingBox()
+      expect(close!.height).toBeGreaterThanOrEqual(44);expect(close!.y).toBeGreaterThanOrEqual(0)
+      await page.getByRole('button',{name:messages[locale].closeDiscovery}).click()
+      await expect(page.getByRole('dialog')).not.toBeVisible()
+    })
+  })
+  test('scene video covers phones, MacBook and ultrawide without stretching or side borders',async({page})=>{
+    await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
+    const video=page.locator('video[src$="understory.mp4"]')
+    await page.goto('/en/');await page.locator('#understory').scrollIntoViewIfNeeded()
+    await expect(video).toBeVisible();await expect(video).toHaveCSS('object-fit','cover')
+    const visible=await page.evaluate(()=>({width:innerWidth,height:innerHeight})),box=await video.boundingBox()
+    expect(box!.width).toBeGreaterThanOrEqual(visible.width);expect(box!.height).toBeGreaterThanOrEqual(visible.height)
+  })
 })
 
 test('assets, sitemap, CSP and dictionary parity', async ({ request }) => {
@@ -162,17 +175,6 @@ test('save-data bypasses all automatic films and never fetches full wallpapers o
   expect(requests.filter(r => r.endsWith('.mp4'))).toEqual([])
 })
 
-test('scene video covers phones, MacBook and ultrawide without stretching or side borders', async ({ page }) => {
-  test.setTimeout(90000) // Eight real media/viewport checks, including native macOS WebKit.
-  // Each viewport is a fresh playback visit. Preparation now reads history before scrolling.
-  await page.addInitScript(() => { sessionStorage.setItem('piepe-entered','1'); sessionStorage.removeItem('piepe-understory') })
-  const video = page.locator('video[src$="understory.mp4"]')
-  for (const [width,height] of [[1440,900],[1512,982],[390,844],[390,664],[320,690],[430,932],[844,390],[2560,1080]]) {
-    await page.setViewportSize({width,height}); await page.goto('/en/'); await page.locator('#understory').scrollIntoViewIfNeeded(); await expect(video).toBeVisible(); await expect(video).toHaveCSS('object-fit','cover')
-    const visible = await page.evaluate(() => ({ width: innerWidth, height: innerHeight }))
-    const box = await video.boundingBox(); expect(box!.width).toBeGreaterThanOrEqual(visible.width); expect(box!.height).toBeGreaterThanOrEqual(visible.height)
-  }
-})
 
 test('missing awakening still recovers to the preserved forest photo', async ({ page }) => {
   await page.emulateMedia({reducedMotion:'reduce'})

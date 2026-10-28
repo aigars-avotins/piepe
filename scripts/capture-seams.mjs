@@ -17,8 +17,8 @@ try{for(const [width,height] of sizes){
   document.addEventListener('pointerdown',e=>{event('click');const dot=document.createElement('i');dot.style=`position:fixed;left:${e.clientX-9}px;top:${e.clientY-9}px;width:18px;height:18px;border:2px solid #f2d7a2;border-radius:50%;z-index:999999;pointer-events:none`;document.body.append(dot);setTimeout(()=>dot.remove(),350)},true)
  })
  await page.goto(url+'/en/',{waitUntil:'domcontentloaded'});await page.locator('.world[data-intro-state]').waitFor()
- const cdp=await context.newCDPSession(page),frames=[];let writes=Promise.resolve()
- cdp.on('Page.screencastFrame',e=>{const n=frames.length;frames.push({file:`frames/${String(n).padStart(6,'0')}.jpg`,time:e.metadata.timestamp});writes=writes.then(()=>writeFile(out+'/'+frames[n].file,Buffer.from(e.data,'base64')));void cdp.send('Page.screencastFrameAck',{sessionId:e.sessionId})})
+ const cdp=await context.newCDPSession(page),frames=[];let writes=Promise.resolve(),capturing=true
+ cdp.on('Page.screencastFrame',e=>{if(!capturing){void cdp.send('Page.screencastFrameAck',{sessionId:e.sessionId}).catch(()=>{});return}const n=frames.length;frames.push({file:`frames/${String(n).padStart(6,'0')}.jpg`,time:e.metadata.timestamp});writes=writes.then(()=>writeFile(out+'/'+frames[n].file,Buffer.from(e.data,'base64')));void cdp.send('Page.screencastFrameAck',{sessionId:e.sessionId}).catch(()=>{})})
  await cdp.send('Page.startScreencast',{format:'jpeg',quality:90,maxWidth:width,maxHeight:height,everyNthFrame:1})
  const shot=async name=>{const at=await page.evaluate(()=>performance.now());await page.screenshot({path:out+'/'+name+'.png'});const geometry=await page.evaluate(()=>Object.fromEntries(['.base-camera','.base-camera .media-plane','.awakening-plane','video[src$="awakening.mp4"]','.specimen-photo','dialog[open]'].map(s=>{const e=document.querySelector(s),r=e?.getBoundingClientRect();return [s,r?{x:r.x,y:r.y,width:r.width,height:r.height,opacity:getComputedStyle(e).opacity,transform:getComputedStyle(e).transform}:null]})));await writeFile(out+'/'+name+'.json',JSON.stringify({at,geometry},null,2))}
  await page.waitForFunction(()=>{const v=document.querySelector('video.forest-film');return v&&v.currentTime>5.8},null,{timeout:16000});await shot('intro-minus200')
@@ -30,7 +30,7 @@ try{for(const [width,height] of sizes){
  await page.waitForFunction(()=>window.seamEvents.some(e=>e.type==='ended'&&e.src?.endsWith('awakening.mp4')))
  const ended=performance.now();for(const t of [0,100,250,500,1000,1600]){await page.waitForTimeout(Math.max(0,t-(performance.now()-ended)));await shot('awakening-plus'+t)}
  await page.getByRole('heading',{name:/A small shelf/}).waitFor({state:'visible',timeout:5000})
- await cdp.send('Page.stopScreencast');await writes
+ capturing=false;await cdp.send('Page.stopScreencast');await writes
  await writeFile(out+'/events.json',JSON.stringify({errors,events:await page.evaluate(()=>window.seamEvents)},null,2))
  await writeFile(out+'/frame-times.json',JSON.stringify({frames,origin:await page.evaluate(()=>performance.timeOrigin)},null,2))
  const timeline=frames.map((f,i)=>`file '${f.file}'\nduration ${Math.max(.001,(frames[i+1]?.time||f.time+.08)-f.time)}`).join('\n')+`\nfile '${frames.at(-1).file}'\n`;await writeFile(out+'/frames.txt',timeline)
@@ -43,5 +43,5 @@ try{for(const [width,height] of sizes){
     spawnSync('ffmpeg',['-v','error','-y','-ss',String(time),'-i',out+'/transition.mp4','-frames:v','1',out+`/exact-${seam}-${offset}.png`])
    }
  }
- await rm(out+'/frames',{recursive:true});await rm(out+'/frames.txt');await context.close();console.log(label,width,height,'recorded')
+ await rm(out+'/frames',{recursive:true,maxRetries:5,retryDelay:100});await rm(out+'/frames.txt');await context.close();console.log(label,width,height,'recorded')
 }}finally{await browser.close()}
