@@ -167,7 +167,8 @@ test('scene video covers phones, MacBook and ultrawide without stretching or sid
   const video = page.locator('video[src$="understory.mp4"]')
   for (const [width,height] of [[1440,900],[1512,982],[390,844],[390,664],[320,690],[430,932],[844,390],[2560,1080]]) {
     await page.setViewportSize({width,height}); await page.goto('/en/'); await page.evaluate(() => sessionStorage.removeItem('piepe-understory')); await page.locator('#understory').scrollIntoViewIfNeeded(); await expect(video).toBeVisible(); await expect(video).toHaveCSS('object-fit','cover')
-    const box = await video.boundingBox(); expect(box!.width).toBeGreaterThanOrEqual(width); expect(box!.height).toBeGreaterThanOrEqual(height)
+    const visible = await page.evaluate(() => ({ width: innerWidth, height: innerHeight }))
+    const box = await video.boundingBox(); expect(box!.width).toBeGreaterThanOrEqual(visible.width); expect(box!.height).toBeGreaterThanOrEqual(visible.height)
   }
 })
 
