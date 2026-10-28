@@ -1,0 +1,17 @@
+# PIE.PE 2.1 implementation notes
+
+The original `IntroFilm` is unchanged: once-per-session, explicit replay, reduced-motion/save-data bypass, skip, autoplay rejection, first-progress/stall/deadline watchdog and hidden-page exit. The original films/stills and bounded-stream Worker are preserved byte-for-byte. The native GSAP camera still drives all four forest states; its end is anchored to the return chapter so the added educational/gallery content cannot stretch the camera timeline incorrectly.
+
+`MotionClip` owns a single onstage video. Its lifecycle is poster → film → preloaded final still, with bounded load/stall/deadline recovery. Hidden tabs pause and resume; preference changes stop playback; unmount removes the source and releases media resources. A page-local history plus sessionStorage prevents repeated scene starts, including when storage is denied. Macro/outro mount only while their section is current. Opening discovery first releases the environmental film. No new frontend library, WebGL renderer, extra animation controller or permanent app RAF was added.
+
+Activating the real shaped fungus target opens the same native dialog. On first activation the awakening shot fills the same source plane as the hero; an immediate skip exposes the preserved three observations. Escape and focus restoration use the real opener. The language switch remains available during the shot and in the note. Tab arrows/Home/End, downloadable localized notes, collected status, reduced motion and private-storage fallback are retained.
+
+The supplied awakening first frame is close to, but not pixel-identical with, the original ending (preflight full-frame mean RGB difference approximately 4.989/255). The implementation makes an interaction-motivated shot change, with identical cover geometry and no two mismatched moving fungi blended together. Exact geometric identity cannot be honestly promised for different source artwork. Natural clip endings were tested by comparing the actual decoded ending to its final still; the test requires a mean channel error below 10/255.
+
+Macro and wide shots use their own full-viewport cover geometry, with a 55% horizontal focal point for the wide return. Paused/reduced-motion scenes use matching stills, not a separate animation stack. Natural scroll remains available; no wheel hijacking or video scrubbing is introduced.
+
+React Bits was reviewed as requested. The existing GSAP text entrance and restrained atmospheric layers already supply the useful reveal/fade principles. No copied React Bits implementation or new dependency was justified. Magnet would move an essential focus target; extra LightRays/particles would add continuous GPU work over supplied films, so they remain absent.
+
+The gallery, factual content and main narrative are shared with prerendering. Self-hosted Latin Extended font subsets support Latvian diacritics. Only critical fonts are preloaded; new scene stills and full wallpaper files stay outside the arrival critical path. The image pipeline is deterministic and optional; committed outputs deploy as ordinary Workers Static Assets.
+
+The CI workflow retains Chromium and native macOS WebKit jobs. Exact-build production smoke tests are a separate `workflow_dispatch` input (`production_smoke: true`) to run **after** deploying that build; running exact-fingerprint live checks before rollout would compare new source with old production by construction. Existing production assertions were extended to both locales and all four film ranges rather than weakened.

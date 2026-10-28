@@ -10,7 +10,7 @@ test('silent fifteen-second before and after scroll captures', async ({ browser,
     const page=await context.newPage(); await page.goto(url); await page.evaluate(()=>document.fonts.ready)
     await page.screenshot({path:testInfo.outputPath(`${name}-hero.png`)})
     await page.evaluate(async()=>{const distance=document.documentElement.scrollHeight-innerHeight;const start=performance.now();await new Promise<void>(resolve=>{function frame(now:number){const progress=Math.min(1,(now-start)/15000);scrollTo({top:distance*progress,behavior:'instant'});if(progress<1)requestAnimationFrame(frame);else resolve()}requestAnimationFrame(frame)})})
-    await expect(page.getByRole('button',{name:'Return to forest',exact:true})).toBeVisible()
+    await expect(page.getByRole('button',{name:/^(Return to forest|Atgriezties mežā)$/})).toBeVisible()
     await context.close()
   }
 })

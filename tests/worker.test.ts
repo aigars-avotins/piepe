@@ -64,3 +64,15 @@ test('Cloudflare-style missing Content-Length still supports suffix and invalid 
 test('build-time size metadata exactly matches the public media files', async () => {
   for (const [path,size] of Object.entries(mediaSizes)) assert.equal((await stat('public'+path)).size,size)
 })
+
+test('all four cinematic assets retain exact suffix and bounded range delivery without upstream length', async () => {
+  for (const name of ['reveal', 'awakening', 'understory', 'breathing']) {
+    const path = `/media/forest-${name}.mp4`, bytes = await readFile('public' + path)
+    const assets = { ASSETS: { async fetch() { return new Response(bytes, { headers: { 'Content-Type': 'video/mp4' } }) } } }
+    for (const [range, expected] of [['bytes=0-63', bytes.subarray(0,64)], ['bytes=-128', bytes.subarray(-128)]] as const) {
+      const response = await worker.fetch(new Request('https://pie.pe' + path, { headers: { Range: range } }), assets)
+      assert.equal(response.status,206);assert.deepEqual(Buffer.from(await response.arrayBuffer()),expected)
+    }
+    assert.equal((await worker.fetch(new Request('https://pie.pe' + path, { headers: { Range: `bytes=${bytes.length}-` } }), assets)).status,416)
+  }
+})

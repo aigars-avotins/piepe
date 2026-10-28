@@ -24,7 +24,7 @@ http.createServer(async (req, res) => {
   const scenario = url.searchParams.get('qa')
   if (scenario) res.setHeader('Set-Cookie', `piepe-qa=${scenario}; Path=/; SameSite=Lax`)
   const currentScenario = scenario || /piepe-qa=([^;]+)/.exec(req.headers.cookie || '')?.[1]
-  const target = resolve(root, '.' + decodeURIComponent(url.pathname === '/' ? '/index.html' : url.pathname))
+  const target = resolve(root, '.' + decodeURIComponent(url.pathname.endsWith('/') ? url.pathname + 'index.html' : url.pathname))
   if (!target.startsWith(root + '/')) { res.writeHead(403).end(); return }
   if (currentScenario === 'pending' && target.endsWith('.mp4')) return
   if ((currentScenario === 'missing-video' && target.endsWith('.mp4')) || (currentScenario === 'missing-still' && target.endsWith('forest-final.jpg'))) { res.writeHead(404).end(); return }

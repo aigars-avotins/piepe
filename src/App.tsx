@@ -1,12 +1,33 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { localeFromPath, localePath, messages } from './i18n'
+import type { Locale } from './i18n'
+import { updateMetadata } from './seo'
+import LanguageSwitch from './LanguageSwitch'
+import Story from './Story'
+import MotionClip from './MotionClip'
+import { hasPlayedClip } from './clipHistory'
 import IntroFilm from './IntroFilm'
 import { ForestScene } from './ForestScene'
 import Discovery from './Discovery'
 import { useForestMotion } from './useForestMotion'
 import { readSession, saveData, useReducedMotion, writeSession } from './usePreferences'
 
-const chapters = [{ id: 'forest', label: 'Surface' }, { id: 'understory', label: 'Beneath' }, { id: 'encounter', label: 'Encounter' }, { id: 'return', label: 'Return' }]
+const chapters = ['forest', 'understory', 'encounter', 'return']
 export default function App() {
+  const [locale, setLocale] = useState<Locale>(() => localeFromPath(location.pathname))
+  const t = messages[locale]
+  const [awakening, setAwakening] = useState(false)
+  const changeLocale = (value: Locale) => {
+    if (value === locale) return
+    history.pushState(null, '', localePath(value) + location.hash)
+    setLocale(value)
+  }
+  useEffect(() => { updateMetadata(locale) }, [locale])
+  useEffect(() => {
+    const pop = () => setLocale(localeFromPath(location.pathname))
+    window.addEventListener('popstate', pop)
+    return () => window.removeEventListener('popstate', pop)
+  }, [])
   const reduced = useReducedMotion()
   const [dataSaving] = useState(saveData)
   const [intro, setIntro] = useState(() => !matchMedia('(prefers-reduced-motion: reduce)').matches && !saveData() && !readSession('piepe-entered'))
@@ -77,11 +98,12 @@ export default function App() {
 
   const openDiscovery = (event: React.MouseEvent<HTMLButtonElement>) => {
     opener.current = event.currentTarget
+    setAwakening(!reduced && !dataSaving && !paused && !hasPlayedClip('awakening'))
     setDiscovery(true); setInspect(false)
     dialog.current?.showModal()
   }
   const closeDiscovery = () => {
-    dialog.current?.close(); setDiscovery(false)
+    dialog.current?.close(); setDiscovery(false); setAwakening(false)
     opener.current?.focus({ preventScroll: true })
   }
   const returnToForest = () => {
@@ -101,43 +123,23 @@ export default function App() {
   const collect = () => { writeSession('piepe-note-found'); setCollected(true) }
   const inspectEvents = { onMouseEnter: () => setInspect(true), onMouseLeave: () => setInspect(false), onFocus: () => setInspect(true), onBlur: () => setInspect(false) }
 
-  return <div ref={root} className={`world ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || paused || motionFailed ? 'motion-off' : ''} ${hidden || paused || discovery ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${collected ? 'has-note' : ''}`} data-version="2.0" data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
-    <a className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}>Skip to content</a>
+  return <div ref={root} className={`world ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || paused || motionFailed ? 'motion-off' : ''} ${hidden || paused || discovery ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${collected ? 'has-note' : ''}`} data-version="2.1" data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
+    <a className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}>{t.skipContent}</a>
     <ForestScene ref={environment} plane={plane} inspect={inspect}>
       <div className={`film-wrap ${intro ? '' : 'film-finished'}`}>{filmMounted && <IntroFilm key={filmKey} onFinish={finish} onTypography={revealTypography} skipRequested={skipRequested} />}</div>
     </ForestScene>
+    {!filmMounted && !discovery && (scene === 'understory' || scene === 'return') && <div className="scene-cinema" data-cinema-scene={scene}>
+      <MotionClip key={scene} name={scene === 'understory' ? 'understory' : 'breathing'} enabled={!reduced && !dataSaving && !paused} />
+      <div className="cinema-shade" />
+    </div>}
     <img className="asset-monitor" src="/media/forest-final.jpg" alt="" aria-hidden="true" onError={() => { setImageFailed(true); finish('image-error') }} />
     <header className="site-header">
-      <a className="brand" href="#forest" onClick={returnToForest} aria-label="pie.pe — return to forest">pie.pe<span className="tiny-dot" /></a>
-      <span className="header-caption">The living forest <span>—</span> An atlas of attention</span>
-      {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}>Skip intro <span aria-hidden="true">↗</span></button> : <button className="text-button replay-intro" onClick={replay} aria-label="Replay introduction">Replay film <span aria-hidden="true">↺</span></button>}
+      <a className="brand" href="#forest" onClick={returnToForest} aria-label={t.homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" />pie.pe</a>
+      <span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} onChange={changeLocale} />
+      {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}>{t.skipIntro} <span aria-hidden="true">↗</span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}>{t.replay} <span aria-hidden="true">↺</span></button>}
     </header>
-    <nav className="journey-index" aria-label="Forest chapters">{chapters.map((chapter, index) => <a key={chapter.id} href={`#${chapter.id}`} aria-current={scene === chapter.id ? 'location' : undefined}><span>0{index + 1}</span><i /><span>{chapter.label}</span></a>)}</nav>
-    <main>
-      <section id="forest" tabIndex={-1} className="hero" data-scene="surface" aria-labelledby="hero-title">
-        <div className="hero-copy"><p className="label title-enter">An invitation to look closer</p><h1 id="hero-title" className="wordmark" aria-label="pie.pe"><span>pie</span><span className="wordmark-period">.</span><span>pe</span></h1><p className="hero-deck title-enter">The forest keeps more<br />than it shows.</p></div>
-        <div className="hero-hotspot-plane" style={plane}>
-          <button className="fungus-hit" disabled={intro} onClick={openDiscovery} aria-label="Discover the shelf fungus" aria-haspopup="dialog" {...inspectEvents} />
-          <button ref={hotspot} className="fungus-annotation" disabled={intro} onClick={openDiscovery} aria-label="Look closer at the fungus" aria-haspopup="dialog" {...inspectEvents}><span className="annotation-cross" aria-hidden="true">+</span><span>Look closer <span aria-hidden="true">↗</span></span></button>
-        </div>
-        <div className="hero-foot title-enter"><p><span lang="lv">piepe</span><span className="foot-rule" />Latvian for bracket fungus</p><a className="scroll-cue" href="#understory">Follow what is hidden <span aria-hidden="true">↓</span></a><span className="edition">Forest encounter · 001</span></div>
-        {imageFailed && <p className="media-note">The image could not load. The field note is still here: <button onClick={openDiscovery}>open the encounter</button>.</p>}
-      </section>
-      <section id="understory" className="chapter bark-chapter" data-scene="bark" aria-labelledby="bark-title">
-        <div className="chapter-label"><span className="label">01 / Beneath the bark</span><span className="chapter-line" /></div>
-        <div className="bark-copy"><p className="margin-note">Let the obvious<br />fall out of view.</p><h2 id="bark-title">Nothing begins<br />at the <em>surface.</em></h2><p className="chapter-body">Follow the grain. Past the edge of the light.<br />What you can see is only a place to begin.</p><a className="line-link" href="#encounter">Stay a little longer <span aria-hidden="true">↓</span></a></div>
-        <span className="depth-coordinate" aria-hidden="true">Below the familiar</span>
-      </section>
-      <section id="encounter" className="chapter encounter-chapter" data-scene="encounter" aria-labelledby="encounter-title">
-        <div className="chapter-label"><span className="label">02 / The encounter</span><span className="chapter-line" /></div>
-        <div className="encounter-copy"><p className="label warm-label">Small enough to overlook.</p><h2 id="encounter-title">A doorway,<br /><em>disguised.</em></h2><p className="chapter-body">A shelf in the bark. A pale, patient edge.<br />Three observations. One different way of seeing.</p><button className="line-link" onClick={openDiscovery} {...inspectEvents}>Open the field note <span aria-hidden="true">↗</span></button><p className="encounter-status">{collected ? 'Field note 001 · Collected' : 'Field note 001 · Waiting to be found'}</p></div>
-        <button className="specimen-invitation" onClick={openDiscovery} {...inspectEvents} aria-label="Enter the fungus encounter"><span className="annotation-cross" aria-hidden="true">+</span><span>The visible is only the beginning</span></button>
-      </section>
-      <section id="return" className="chapter return-chapter" data-scene="return" aria-labelledby="return-title">
-        <div className="return-copy"><p className="label">03 / Back in the light</p><h2 id="return-title">Same forest.<br /><em>Another way of seeing.</em></h2><p className="return-thought">One ordinary thing. One moment of attention.<br />Take that with you.</p><button className="line-link" onClick={returnToForest}>Return to forest <span aria-hidden="true">↑</span></button></div>
-        <footer><a className="brand" href="#forest" onClick={returnToForest}>pie.pe<span className="tiny-dot" /></a><span className="footer-edition">The living forest — 2026</span><button className="text-button motion-toggle" aria-pressed={paused} onClick={() => setPaused(value => !value)}>{paused ? 'Resume atmosphere' : 'Pause atmosphere'} <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
-      </section>
-    </main>
-    <Discovery dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
+    <nav className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span>0{index + 1}</span><i /><span>{t.chapters[index]}</span></a>)}</nav>
+    <Story locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} collected={collected} paused={paused} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
+    <Discovery locale={locale} onLocaleChange={changeLocale} awakening={awakening} onAwakeningEnd={() => setAwakening(false)} plane={plane} enabled={!reduced && !dataSaving && !paused} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
   </div>
 }

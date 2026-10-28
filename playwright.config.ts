@@ -4,7 +4,7 @@ export default defineConfig({
   reporter: [['list'], ['json', { outputFile: process.env.PRODUCTION_SMOKE ? 'production-results/results.json' : 'test-results/results.json' }]],
   use: { baseURL: process.env.TEST_URL || 'http://127.0.0.1:4173', trace: 'retain-on-failure', screenshot: 'only-on-failure' },
   projects: [
-    { name: 'chrome-desktop', use: { ...devices['Desktop Chrome'], channel: process.env.CI || process.env.PLAYWRIGHT_HEADLESS_SHELL ? undefined : 'chrome', viewport: { width: 1440, height: 900 } } },
+    { name: 'chrome-desktop', use: { ...devices['Desktop Chrome'], channel: process.env.CI || process.env.PLAYWRIGHT_HEADLESS_SHELL ? undefined : 'chrome', viewport: { width: 1440, height: 900 }, ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? { channel: undefined, launchOptions: { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } } : {}) } },
     { name: 'webkit-iphone', use: { ...devices['iPhone 13'], browserName: 'webkit' } },
   ],
   webServer: process.env.TEST_URL ? undefined : { command: 'node scripts/preview-worker.mjs', url: 'http://127.0.0.1:4173', reuseExistingServer: !process.env.CI },

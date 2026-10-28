@@ -3,6 +3,11 @@ on:
   push:
     branches: [main, codex/living-forest-v2]
   workflow_dispatch:
+    inputs:
+      production_smoke:
+        description: Verify the deployed release against the built application (run after deployment)
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -21,7 +26,7 @@ jobs:
       - run: npm test -- --project=chrome-desktop
         env:
           CI: true
-      - if: github.ref_name == 'main'
+      - if: github.event_name == 'workflow_dispatch' && inputs.production_smoke
         run: npm test -- tests/production.spec.ts --project=chrome-desktop
         env:
           CI: true
@@ -52,7 +57,7 @@ jobs:
       - run: npm test -- --project=webkit-iphone
         env:
           CI: true
-      - if: github.ref_name == 'main'
+      - if: github.event_name == 'workflow_dispatch' && inputs.production_smoke
         run: npm test -- tests/production.spec.ts --project=webkit-iphone
         env:
           CI: true

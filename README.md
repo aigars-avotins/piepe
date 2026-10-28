@@ -1,71 +1,55 @@
-# pie.pe 2.0 — The Living Forest
+# PIE.PE 2.1 — The living forest / Dzīvais mežs
 
-An intimate digital art encounter around the owner's original six-second forest film. React, TypeScript, Vite and GSAP; no WebGL, generated replacement media, database or external fonts.
+An interactive forest encounter in Latvian at `/` and English at `/en/`. React, TypeScript, Vite and the original native-scroll GSAP camera; Cloudflare Workers Static Assets with bounded media streaming. The 2.0 production history is retained in `docs/V2-QA.md`; current implementation and remaining release checks are in `docs/V21-QA.md`.
 
-## The experience
+The original six-second introduction retains its once-per-tab, skip/replay and recovery behavior. The shaped fungus target opens a one-shot awakening followed by the preserved native dialog, three keyboard-navigable observations and a localized downloadable field note. The scroll journey moves into the moss macro film and returns to a quiet wide breathing shot. Reduced motion, save-data, pause, visibility changes, failed playback and disabled storage have explicit fallbacks. Only one film plays at a time; scenes do not scrub or loop on every scroll.
 
-Four connected camera states: arrival, beneath the bark, fungus encounter, return to daylight. Native scrolling drives photographic framing, a foreground trunk, a continuous fungus close-up, cool shadow and warm return light. The returning wide frame is the original film's start poster. CSS transforms/opacity do the work; there is no video scrubbing or permanent JavaScript animation loop.
-
-The fungus opens a photographic field encounter: three keyboard/touch observations (Surface, Beneath, Beyond), an original micro-story and a real downloadable plain-text field note. The line map is explicitly an imagined map of attention, not a species identification. No placeholder projects or invented biography/links. A session mark records that the visitor collected the note; no data is transmitted.
-
-The original 6.041667s, 1920×1080 H.264 intro and its three public assets remain byte-for-byte unchanged. Automatic playback stays once per tab session. “Replay film” is explicit. Skip, end, autoplay rejection, missing media, no initial progress (4s), stall (2.4s), deadline (9.5s) and hidden-page exits converge on the matched still. Reduced-motion/save-data visitors bypass automatic video. Explicit replay remains available by user choice.
-
-The native dialog retains focus trapping and Escape. Closing restores focus to the actual opener. Arrow/Home/End keys navigate observations. Return-to-forest updates the anchor and focus. Safe-area mobile layouts are authored separately. Reduced motion and paused atmosphere provide distinct static scene compositions. Fonts and all content are self-hosted. No new media or frontend libraries were added for 2.0.
+Short educational observations explain fruiting bodies, fungal threads, pores/spores in many brackets, and wood decay without identifying a species from the artistic AI-generated imagery. Both languages have visible initial-HTML content, metadata, reciprocal alternates and a sitemap. The approved bracket-fungus mark, real ICO/touch icons, palette and two lazy wallpaper previews complete the identity. Download art is carefully enlarged from the approved sources, not claimed to be native 5K.
 
 ## Develop and verify
 
-Node 24 used; Node 22.12+ required by Vite.
+Use Node.js 24. Keep the existing checkout; cloud tasks are already isolated.
 
 ```sh
 npm ci
 npm run dev
-npm run typecheck
 npm run lint
 npm run test:worker
 npm run build
 npx playwright install chromium webkit
-npm test
+PLAYWRIGHT_HEADLESS_SHELL=1 npm test
 ```
 
-Local Chrome is the default desktop test target; `PLAYWRIGHT_HEADLESS_SHELL=1` uses bundled Chromium. CI uses Chromium + iPhone-size WebKit, runs the full suite and retains screenshots, traces and silent 15-second before/after scroll recordings. `TEST_URL=https://pie.pe npm test` targets production (the recording test is intended for pre-deployment CI).
-
-Main CI also runs a separate smoke test against the actual pie.pe domain and captures CSS-sized production screenshots. To run it after building, use `PRODUCTION_SMOKE=1 TEST_URL=https://pie.pe npm test -- tests/production.spec.ts`.
-
-The local sandbox may deny browser subprocess startup; that is an environment failure, not a passing result. The in-app browser can still perform visual/interaction checks. See `docs/V2-QA.md` for actual outcomes and limitations, and `docs/V2-STORYBOARD.md` for audit/creative decisions.
-
-A local-only fault injector serves the production build:
+If the cloud image already has system Chromium, use it without changing source or installing another browser:
 
 ```sh
-node scripts/qa-server.mjs
-# http://127.0.0.1:4174/?qa=natural
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm test -- --project=chrome-desktop
 ```
 
-Scenarios: natural, blocked, stall, pending, missing-video, missing-still, reduced, save-data. This script and source backup are excluded from deployed dist.
+`npm run build` checks TypeScript, regenerates media sizes, builds the client and prerenders both locale pages from the shared dictionary/Story component. It also generates localized field notes and exact CSP hashes for the two JSON-LD payloads. The original media Worker is unchanged. Tests start `scripts/preview-worker.mjs` on port 4173; plain Vite preview does not reproduce media range behavior. `node scripts/qa-server.mjs` is an optional local-only fault injector on port 4174, excluded from deployment.
 
-## Media and art direction
+Run `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/capture-review.mjs` for actual Chromium screencast recording, desktop/mobile screenshots and lab metrics. It requires FFmpeg and writes ignored `review-results/`. Browser-emulated viewports do not establish physical handset/Safari testing. Do not run separate Playwright commands concurrently into the same output directory.
 
-- `public/media/forest-reveal.mp4`: supplied optimized 1,723,128-byte film; muted H.264/yuv420p faststart.
-- `public/media/forest-final.jpg`: supplied near-final still, 126,965 bytes.
-- `public/media/forest-poster.jpg`: supplied initial poster, 156,196 bytes.
-- `source/forest-reveal-original.mp4`: original backup in GitHub, never publicly deployed.
+## Assets and design
 
-Film, still and hero hit target use the same 1920×1080 cover geometry, desktop focal point 50%, portrait 64%. Traced shelf edge paths live in `src/content.ts`; the photographic layers are in `ForestScene.tsx`; camera choreography in `useForestMotion.ts`. Replace the three media assets together and revalidate trace coordinates if the film changes.
+The four supplied H.264 clips and their images stay in `public/media/`. The original master stays under `source/` and is never deployed. `src/media-sizes.ts` must match all actual public media; streaming handles 206/416/If-Range/HEAD without buffering full films. Unknown assets keep legal full-response behavior.
 
-The narrative is in `src/content.ts`; its take-away is `public/field-note.txt`. Keep both consistent when editing. Do not add unapproved project links.
+Typed LV/EN copy lives in `src/i18n.ts`. `Story.tsx` is shared between the interactive app and initial HTML. Language links keep current playback, scroll, dialog state and the selected note. Notes and facts are generated from the same content, avoiding a separate translation drift.
+
+See `docs/BRAND_IDENTITY.md` for the optional deterministic artwork pipeline and source-resolution/crop limits, `docs/V21-ARCHITECTURE.md` for scene lifecycles and integration decisions, and `docs/V21-SEO.md` for scientific-source review and Google Search Console owner steps. No new frontend framework, WebGL or React Bits runtime was added.
 
 ## Existing production infrastructure
 
-**https://pie.pe** · existing Worker **piepe** · Workers Static Assets.
+Existing Worker **piepe**, custom domain **https://pie.pe**, Workers Static Assets. `wrangler.jsonc` preserves account, custom domain, compatibility date, bindings, disabled workers.dev/previews and strict 404 handling. `dist` is the sole public deployment directory. Only `/media/*` invokes the Worker; localized pages and wallpapers are ordinary static assets. No Pages project or extra Worker is needed.
 
-`wrangler.jsonc` preserves the existing account, custom domain, compatibility date, disabled workers.dev/previews and route configuration. `dist` is the only public deployment directory. Only `/media/*` invokes the Worker; application files use Static Assets directly. No Pages project, DNS edits or extra resources.
-
-The range handler requests a full representation from ASSETS, then slices its stream, retains only a source chunk and cancels when the requested range ends. The production binding omits Content-Length, so `scripts/media-sizes.mjs` generates `src/media-sizes.ts` from the actual public media on every build. Header length takes priority when supplied. This serves 206/416/If-Range without reading the full MP4 into an ArrayBuffer. Ten tests cover bounded/open/suffix/clamped ranges, HEAD, missing metadata, exact build sizes, missing assets and upstream cancellation. Unknown assets with no usable size legally receive the full response.
+Before rollout, verify Cloudflare authentication, record the actual current version and inspect the rollback version. Run all relevant checks and visual review first:
 
 ```sh
-npx wrangler whoami
+npx wrangler deployments list
+npx wrangler versions view PREVIOUS_VERSION_ID
 npm run deploy
 npx wrangler deployments list
-npx wrangler rollback VERSION_ID
+PRODUCTION_SMOKE=1 TEST_URL=https://pie.pe PLAYWRIGHT_HEADLESS_SHELL=1 npm test -- tests/production.spec.ts
 ```
 
-Keep credentials out of Git. `_headers` supplies security policy and caching. Existing 404 behavior is preserved. Before deployment, record the current production version for rollback; after deployment verify the custom domain, exact asset hashes, 206/416 responses and real-browser interactions.
+The **Forest QA** workflow runs Chromium and macOS WebKit on source changes. After deploying that exact build, run it manually with `production_smoke: true` to validate real LV/EN production, application fingerprint, natural films, downloads, language/focus recovery, media ranges and strict 404 behavior. The production checks deliberately run after rollout, rather than comparing new source against old production before deployment. Keep credentials out of Git. `_headers` security policy is preserved and extended only with hashes of the generated non-executable structured data.

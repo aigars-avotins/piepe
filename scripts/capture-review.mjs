@@ -1,0 +1,58 @@
+/* global window, document, requestAnimationFrame, scrollY, innerHeight, scrollTo */
+// Actual Chromium screencast frames with their browser timestamps; no synthetic scene animation.
+import { chromium } from 'playwright'
+import { mkdir, writeFile, rm } from 'node:fs/promises'
+import { resolve } from 'node:path'
+import { spawnSync } from 'node:child_process'
+const target = process.env.TEST_URL || 'http://127.0.0.1:4173'
+const out = resolve(process.env.PIEPE_REVIEW_DIR || 'review-results')
+await mkdir(out, { recursive: true }); await mkdir(`${out}/frames`, { recursive: true })
+const browser = await chromium.launch(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } : {})
+try {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } })
+  const errors = [], frames = []; let writes = Promise.resolve()
+  page.on('pageerror', error => errors.push(error.message))
+  await page.addInitScript(() => {
+    window.piepePerf = { cls: 0, lcp: 0, maxPlaying: 0, frameIntervals: [] }
+    try { new PerformanceObserver(list => { for (const e of list.getEntries()) if (!e.hadRecentInput) window.piepePerf.cls += e.value }).observe({type:'layout-shift', buffered:true}); new PerformanceObserver(list => { window.piepePerf.lcp = list.getEntries().at(-1).startTime }).observe({type:'largest-contentful-paint', buffered:true}) } catch { /* Browser support varies. */ }
+    let previous = performance.now(); const frame = now => { const visibleFilm = [...document.querySelectorAll('video')].filter(v=>!v.paused&&!v.ended).length; window.piepePerf.maxPlaying=Math.max(window.piepePerf.maxPlaying,visibleFilm); if(visibleFilm)window.piepePerf.frameIntervals.push(now-previous);previous=now;requestAnimationFrame(frame) };requestAnimationFrame(frame)
+  })
+  await page.goto(target + '/', {waitUntil:'domcontentloaded'}); await page.locator('.world[data-intro-state]').waitFor()
+  const cdp = await page.context().newCDPSession(page)
+  cdp.on('Page.screencastFrame', event => {
+    const index=frames.length; frames.push({ file:`frames/${String(index).padStart(6,'0')}.jpg`, time:event.metadata.timestamp })
+    writes=writes.then(()=>writeFile(`${out}/${frames[index].file}`,Buffer.from(event.data,'base64')))
+    void cdp.send('Page.screencastFrameAck',{sessionId:event.sessionId})
+  })
+  await cdp.send('Page.startScreencast',{format:'jpeg',quality:86,maxWidth:1440,maxHeight:900,everyNthFrame:1})
+  const shot = name => page.screenshot({path:`${out}/${name}.png`,scale:'css'})
+  await page.waitForFunction(()=>document.querySelector('.world')?.getAttribute('data-exit-reason')==='ended',null,{timeout:15000});await page.waitForTimeout(700);await shot('desktop-lv-hero')
+  await page.getByRole('button',{name:'Aplūkot piepi tuvāk',exact:true}).click();await page.waitForTimeout(2500);await shot('desktop-awakening')
+  await page.getByRole('heading',{name:/Maza piepe/}).waitFor({state:'visible',timeout:10000});await shot('desktop-lv-discovery')
+  await page.getByRole('tab',{name:/Virsma/}).press('End');await page.waitForTimeout(600);await page.getByRole('button',{name:'Aizvērt piepes stāstu'}).click()
+  const scroll = async (id,duration=2000) => page.evaluate(async ({id,duration})=>{
+    const start=scrollY,end=document.getElementById(id).offsetTop+innerHeight*.05,t=performance.now()
+    await new Promise(resolve=>{function frame(now){const p=Math.min(1,(now-t)/duration),e=p*p*(3-2*p);scrollTo({top:start+(end-start)*e,behavior:'instant'});if(p<1)requestAnimationFrame(frame);else resolve()}requestAnimationFrame(frame)})
+  },{id,duration})
+  await scroll('understory');await page.waitForTimeout(1500);await shot('desktop-macro')
+  await page.locator('[data-clip="understory"][data-clip-reason="ended"]').waitFor({timeout:11000})
+  await scroll('encounter');await shot('desktop-encounter');await scroll('fungus-facts');await page.waitForTimeout(700);await shot('desktop-facts')
+  await scroll('return');await page.waitForTimeout(1800);await shot('desktop-breathing');await page.locator('[data-clip="breathing"][data-clip-reason="ended"]').waitFor({timeout:11000})
+  await scroll('wallpapers');await page.waitForTimeout(700);await shot('desktop-wallpapers')
+  await cdp.send('Page.stopScreencast');await writes
+  const perf=await page.evaluate(()=>{const p=window.piepePerf;const sorted=p.frameIntervals.toSorted((a,b)=>a-b);return {...p,frameIntervals:undefined,frameIntervalP95:sorted[Math.floor(sorted.length*.95)],jsHeapUsed:performance.memory?.usedJSHeapSize,resources:performance.getEntriesByType('resource').filter(r=>/\.mp4$|wallpapers/.test(r.name)).map(r=>({url:r.name,bytes:r.transferSize}))}})
+  await writeFile(`${out}/performance.json`,JSON.stringify({environment:'Linux Chromium desktop emulation during screencast; lab observations',errors,...perf},null,2))
+  if(errors.length)throw Error(JSON.stringify(errors))
+  const timeline=frames.map((f,i)=>`file '${f.file}'\nduration ${Math.max(.001,(frames[i+1]?.time||f.time+.08)-f.time).toFixed(6)}`).join('\n')+`\nfile '${frames.at(-1).file}'\n`
+  await writeFile(`${out}/frames.txt`,timeline)
+  const encode=spawnSync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',`${out}/frames.txt`,'-vf','fps=30','-c:v','libx264','-preset','fast','-crf','21','-pix_fmt','yuv420p','-movflags','+faststart',`${out}/complete-forest-journey.mp4`],{stdio:'inherit'})
+  if(encode.status!==0)throw Error('Screen recording encoding failed')
+  await rm(`${out}/frames`,{recursive:true});await rm(`${out}/frames.txt`)
+  for(const [name,width,height] of [['mobile',390,844],['compact',390,664],['small',320,690]]){
+    const p=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'});await p.goto(target+'/');await p.evaluate(()=>document.fonts.ready)
+    await p.screenshot({path:`${out}/${name}-lv-hero.png`,scale:'css'})
+    await p.getByRole('button',{name:'Aplūkot piepi tuvāk',exact:true}).click();await p.screenshot({path:`${out}/${name}-lv-discovery.png`,scale:'css'});await p.getByRole('button',{name:'Aizvērt piepes stāstu'}).click()
+    for(const id of ['understory','fungus-facts','return','wallpapers']){await p.locator('#'+id).scrollIntoViewIfNeeded();await p.waitForTimeout(500);await p.screenshot({path:`${out}/${name}-${id}.png`,scale:'css'})}await p.close()
+  }
+  console.log(`Saved complete real-browser recording, screenshots and lab observations to ${out}`)
+} finally {await browser.close()}

@@ -1,42 +1,50 @@
-import {test,expect} from '@playwright/test'
-import {readFile} from 'node:fs/promises'
+import { test, expect } from '@playwright/test'
+import { readFile } from 'node:fs/promises'
+import { messages } from '../src/i18n'
 
-test('production release completes its film and discovery with the exact built application',async({page},testInfo)=>{
-  test.setTimeout(45000)
+for (const locale of ['lv','en'] as const) test(`${locale}: released application, cinema, discovery, wallpapers and media delivery`, async ({page, request}, testInfo) => {
+  test.setTimeout(65000)
+  const t=messages[locale], path=locale==='lv'?'/':'/en/'
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
-  await page.goto('/')
-  await expect(page.locator('.world')).toHaveAttribute('data-version','2.0')
-  const local=await readFile('dist/index.html','utf8');const script=/src="([^"]+\.js)"/.exec(local)![1]
+  const raw=await request.get(path);expect(raw.status()).toBe(200);expect(await raw.text()).toContain(t.factsTitle)
+  await page.goto(path)
+  await expect(page.locator('.world')).toHaveAttribute('data-version','2.1')
+  const local=await readFile('dist/index.html','utf8');const script=/src="(\/assets\/[^"]+\.js)"/.exec(local)![1]
   await expect(page.locator('head script[type="module"][src^="/assets/"]')).toHaveAttribute('src',script)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:13000})
-  await expect(page.locator('video')).toHaveCount(0)
+  await expect(page.locator('video.forest-film')).toHaveCount(0)
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
-  await page.screenshot({path:testInfo.outputPath('production-hero.png'),scale:'css'})
-  await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
+  await page.screenshot({path:testInfo.outputPath(`${locale}-production-hero.png`),scale:'css'})
+  await page.getByRole('button',{name:t.closer,exact:true}).click()
   await expect(page.getByRole('dialog')).toBeVisible()
-  await page.locator('.specimen-photo').evaluate(e=>Promise.all(e.getAnimations().map(a=>a.finished)))
-  await page.screenshot({path:testInfo.outputPath('production-discovery.png'),scale:'css'})
-  await page.getByRole('tab',{name:/Surface/}).press('End')
-  await expect(page.getByRole('heading',{name:/Take a different/})).toBeVisible()
-  const download=page.waitForEvent('download')
-  await page.getByRole('link',{name:'Keep the field note',exact:false}).click()
-  expect((await download).suggestedFilename()).toBe('piepe-field-note-001.txt')
-  await expect(page.getByRole('status')).toContainText('Field note collected')
-  await page.getByRole('button',{name:'Close discovery'}).click()
-  await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
-  await page.locator('#return').scrollIntoViewIfNeeded()
-  await page.getByRole('button',{name:'Return to forest',exact:true}).click()
-  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(5)
-  await page.reload();await expect(page.locator('video')).toHaveCount(0)
-  await page.getByRole('button',{name:'Replay introduction'}).click()
-  await expect(page.locator('video')).toHaveCount(1)
-  await page.getByRole('button',{name:'Skip intro'}).click()
-  await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
-  if(testInfo.project.name==='chrome-desktop'){
-    await page.setViewportSize({width:390,height:844})
-    await expect(page.locator('video')).toHaveCount(0)
-    await expect(page.locator('.wordmark span').first()).toHaveCSS('transform','none')
-    await page.screenshot({path:testInfo.outputPath('production-mobile-390x844.png'),scale:'css'})
+  await expect(page.getByRole('heading',{name:t.observations[0].title.split('\n')[0],exact:false})).toBeVisible({timeout:11000})
+  await page.screenshot({path:testInfo.outputPath(`${locale}-production-discovery.png`),scale:'css'})
+  await page.getByRole('tab',{name:new RegExp(t.observations[0].label)}).press('End')
+  const download=page.waitForEvent('download');await page.getByRole('link',{name:t.keepNote,exact:false}).click()
+  expect((await download).suggestedFilename()).toBe(`piepe-field-note-001-${locale}.txt`)
+  await expect(page.getByRole('status')).toContainText(t.collected)
+  await page.getByRole('button',{name:t.closeDiscovery}).click()
+  await expect(page.getByRole('button',{name:t.closer,exact:true})).toBeFocused()
+  for(const [id,clip] of [['understory','understory'],['return','breathing']]){
+    await page.locator('#'+id).scrollIntoViewIfNeeded()
+    await expect(page.locator(`[data-clip="${clip}"]`)).toHaveAttribute('data-clip-reason','ended',{timeout:11000})
   }
+  const wallpaper=page.waitForEvent('download');await page.getByRole('link',{name:t.downloadPhone}).click()
+  expect((await wallpaper).suggestedFilename()).toBe('piepe-forest-mobile-1440x3120.jpg')
+  // In-app URL changes preserve experience; direct locale navigation above also checks the static route.
+  const other=locale==='lv'?'EN':'LV'
+  await page.evaluate(value=>(document.querySelector(`.site-header .language-switch a[lang="${value.toLowerCase()}"]`) as HTMLElement).click(),other)
+  await expect(page.locator('html')).toHaveAttribute('lang',other.toLowerCase());await expect(page.locator('video.forest-film')).toHaveCount(0)
+  const now=messages[other==='LV'?'lv':'en'];await page.getByRole('button',{name:now.returnForest,exact:true}).click()
+  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(5)
+  await page.reload();await expect(page.locator('video.forest-film')).toHaveCount(0)
+  await page.getByRole('button',{name:now.replayLabel}).click();await expect(page.locator('video.forest-film')).toHaveCount(1)
+  await page.getByRole('button',{name:now.skipIntro}).click();await expect(page.getByRole('button',{name:now.closer,exact:true})).toBeFocused()
+  for(const clip of ['reveal','awakening','understory','breathing']){
+    const range=await request.get(`/media/forest-${clip}.mp4`,{headers:{Range:'bytes=0-63'}});expect(range.status()).toBe(206);expect((await range.body()).length).toBe(64)
+    expect((await request.get(`/media/forest-${clip}.mp4`,{headers:{Range:'bytes=999999999-'}})).status()).toBe(416)
+  }
+  expect((await request.get('/favicon.ico')).status()).toBe(200);expect((await request.get('/no-such-page')).status()).toBe(404)
+  if(testInfo.project.name==='chrome-desktop'){await page.setViewportSize({width:390,height:664});await page.screenshot({path:testInfo.outputPath(`${locale}-production-mobile.png`),scale:'css'})}
   expect(errors).toEqual([])
 })

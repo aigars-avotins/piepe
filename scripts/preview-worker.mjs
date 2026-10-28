@@ -7,9 +7,9 @@ import {pipeline} from 'node:stream/promises'
 import {resolve,extname} from 'node:path'
 import worker from '../src/worker.ts'
 const root=resolve('dist')
-const types={'.html':'text/html','.js':'application/javascript','.css':'text/css','.jpg':'image/jpeg','.webp':'image/webp','.mp4':'video/mp4','.svg':'image/svg+xml','.woff2':'font/woff2','.woff':'font/woff','.txt':'text/plain'}
+const types={'.html':'text/html','.js':'application/javascript','.css':'text/css','.jpg':'image/jpeg','.webp':'image/webp','.mp4':'video/mp4','.svg':'image/svg+xml','.woff2':'font/woff2','.woff':'font/woff','.txt':'text/plain; charset=utf-8','.ico':'image/x-icon','.png':'image/png','.xml':'application/xml','.webmanifest':'application/manifest+json'}
 const assets={async fetch(request){
- const url=new URL(request.url);const path=resolve(root,'.'+decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname))
+ const url=new URL(request.url);const path=resolve(root,'.'+decodeURIComponent(url.pathname.endsWith('/')?url.pathname+'index.html':url.pathname))
  if(!path.startsWith(root+'/'))return new Response(null,{status:404})
  try{const info=await stat(path);if(!info.isFile())return new Response(null,{status:404});return new Response(request.method==='HEAD'?null:Readable.toWeb(createReadStream(path)),{headers:{'Content-Type':types[extname(path)]||'application/octet-stream','Content-Length':String(info.size),'Cache-Control':'no-store','ETag':`"${info.size}-${info.mtimeMs}"`}})}catch{return new Response(null,{status:404})}
 }}

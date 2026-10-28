@@ -13,7 +13,7 @@ export function useForestMotion(root: RefObject<HTMLDivElement | null>, enabled:
       const media = gsap.matchMedia()
       media.add({ mobile: '(max-width: 699px)', desktop: '(min-width: 700px)' }, match => {
         const mobile = !!match.conditions?.mobile
-        const timeline = gsap.timeline({ scrollTrigger: { trigger: '.world', start: 'top top', end: 'bottom bottom', scrub: simple ? .3 : .75, invalidateOnRefresh: true } })
+        const timeline = gsap.timeline({ scrollTrigger: { trigger: '.world', start: 'top top', endTrigger: '#return', end: 'bottom bottom', scrub: simple ? .3 : .75, invalidateOnRefresh: true } })
         timeline.to('.base-camera', { scale: mobile ? 1.55 : 1.95, xPercent: mobile ? 20 : 25, yPercent: 12, ease: 'power2.inOut', duration: 1.25 }, .25)
           .to('.foreground-camera', { opacity: simple ? .3 : 1, xPercent: -28, scale: 1.65, duration: 1.2, ease: 'power2.inOut' }, .3)
           .to('.cool-veil', { opacity: .64, duration: .8 }, .55)
