@@ -3,7 +3,7 @@ export const english = {
   title: 'PIE.PE — Bracket fungi & the living forest',
   description: 'Look closer at the living forest. A cinematic encounter with bracket fungi, their hidden life in wood, and free forest wallpapers.',
   forest: 'The living forest', language: 'Language', chapters: ['Surface', 'Beneath', 'Encounter', 'Return'],
-  skipContent: 'Skip to content', skipIntro: 'Skip intro', replay: 'Replay film', replayLabel: 'Replay introduction',
+  skipContent: 'Skip to content', skipIntro: 'Skip intro', replay: 'Replay introduction', replayLabel: 'Replay introduction',
   homeLabel: 'pie.pe — return to forest', heroLabel: 'An invitation to look closer', heroThought: 'The forest keeps more than it shows.',
   discover: 'Discover the shelf fungus', closer: 'Look closer at the fungus', lookCloser: 'Look closer',
   wordMeaning: 'Latvian for bracket fungus', follow: 'Follow what is hidden', edition: 'Forest encounter · 001',
@@ -24,6 +24,7 @@ export const english = {
   nextBeneath: 'Look beneath', nextBeyond: 'Look beyond', keepNote: 'Keep the field note', anotherCopy: 'Keep another copy',
   collected: 'Field note collected. Take your time on the way back.', skipAwakening: 'Go straight to the field note', awakening: 'What you see is only the beginning.',
   mediaUnavailable: 'The film is resting. You can still explore the forest.',
+  forestSound: 'Forest sound', muteSound: 'Mute forest sound', enableSound: 'Enable forest sound', soundPlaying: 'Quiet forest ambience is playing.', soundWaiting: 'Forest sound starts with your first interaction.', soundMuted: 'Forest sound is off.', soundUnavailable: 'Forest sound could not load. You can try again.',
   factsTitle: 'What is a bracket fungus?', factsIntro: 'A shelf on a tree. A life mostly out of sight.',
   facts: [
     { title: 'A fruiting body', text: 'The bracket is the visible fruiting body. Fine fungal threads, called hyphae, can grow through the wood: the shelf is only part of the organism.' },
@@ -34,16 +35,15 @@ export const english = {
   wallpapersTitle: 'Take a little forest with you.', wallpapersSub: 'Wallpapers for your screen.', desktop: 'Desktop', phone: 'Phone',
   wallpaperAltDesktop: 'Wide forest with layered bracket fungi on an old tree', wallpaperAltPhone: 'Portrait forest with amber bracket fungi on a mossy trunk',
   saveHint: 'If the image opens, use Save Image in your browser.', download5k: 'Download 5K', download4k: '4K version', downloadPhone: 'Download for phone',
-  wallpaperQuality: 'Carefully enlarged from the original artwork.',
 }
 export type Messages = typeof english
 const latvian: Messages = {
   title: 'PIE.PE — Piepes un dzīvais mežs',
   description: 'Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam.',
   forest: 'Dzīvais mežs', language: 'Valoda', chapters: ['Virsma', 'Dziļāk', 'Satikšanās', 'Atgriešanās'],
-  skipContent: 'Pāriet uz saturu', skipIntro: 'Izlaist ievadu', replay: 'Skatīties vēlreiz', replayLabel: 'Atkārtot ievadfilmu',
+  skipContent: 'Pāriet uz saturu', skipIntro: 'Izlaist ievadu', replay: 'Atkārtot ievadfilmu', replayLabel: 'Atkārtot ievadfilmu',
   homeLabel: 'pie.pe — atgriezties mežā', heroLabel: 'Aicinājums paskatīties tuvāk', heroThought: 'Mežs glabā vairāk, nekā atklāj.',
-  discover: 'Atklāt piepi uz koka', closer: 'Aplūkot piepi tuvāk', lookCloser: 'Paskaties tuvāk', wordMeaning: 'Maza forma. Plaša pasaule.',
+  discover: 'Atklāt piepi uz koka', closer: 'Aplūkot piepi tuvāk', lookCloser: 'Aplūkot piepi tuvāk', wordMeaning: 'Maza forma. Plaša pasaule.',
   follow: 'Ieskaties dziļāk', edition: 'Satikšanās mežā · 001', imageError: 'Attēlu neizdevās ielādēt. Meža piezīme joprojām ir šeit.', openEncounter: 'Atvērt satikšanos',
   beneathLabel: '01 / Zem virsmas', beneathTitle: 'Arī klusumā', beneathEm: 'viss turpinās.', beneathBody: 'Cits mērogs. Ūdens lāse. Pasaule, kas nav apstājusies.', stay: 'Uzkavējies vēl', depth: 'Aiz ierastā',
   encounterLabel: '02 / Satikšanās', small: 'Viegli paiet garām.', encounterTitle: 'Redzamais ir', encounterEm: 'tikai sākums.',
@@ -60,6 +60,7 @@ const latvian: Messages = {
   nextBeneath: 'Ieskatīties dziļāk', nextBeyond: 'Paskatīties tālāk', keepNote: 'Saglabāt meža piezīmi', anotherCopy: 'Saglabāt vēl vienu kopiju',
   collected: 'Meža piezīme saglabāta. Atceļā nesteidzies.', skipAwakening: 'Uzreiz atvērt meža piezīmi', awakening: 'Redzamais ir tikai sākums.',
   mediaUnavailable: 'Filma šobrīd atpūšas. Mežu joprojām vari iepazīt.',
+  forestSound: 'Meža skaņas', muteSound: 'Izslēgt meža skaņas', enableSound: 'Ieslēgt meža skaņas', soundPlaying: 'Skan klusas meža skaņas.', soundWaiting: 'Meža skaņas sāksies pēc pirmā pieskāriena.', soundMuted: 'Meža skaņas ir izslēgtas.', soundUnavailable: 'Meža skaņas neizdevās ielādēt. Vari mēģināt vēlreiz.',
   factsTitle: 'Kas ir piepe?', factsIntro: 'Redzama pie koka. Lielākoties — skatienam slēpta.',
   facts: [
     { title: 'Sēnes augļķermenis', text: 'Piepe ir sēnes redzamais augļķermenis. Smalki sēnes pavedieni jeb hifas var augt koksnē: piepe ir tikai daļa no visa organisma.' },
@@ -70,7 +71,6 @@ const latvian: Messages = {
   wallpapersTitle: 'Paņem gabaliņu meža līdzi.', wallpapersSub: 'Tapetes tavam ekrānam.', desktop: 'Datoram', phone: 'Telefonam',
   wallpaperAltDesktop: 'Plašs mežs ar slāņainām piepēm uz veca koka', wallpaperAltPhone: 'Vertikāls meža skats ar dzintarkrāsas piepēm uz sūnaina stumbra',
   saveHint: 'Ja attēls atveras pārlūkā, izvēlies saglabāt attēlu.', download5k: 'Lejupielādēt 5K', download4k: '4K versija', downloadPhone: 'Lejupielādēt telefonam',
-  wallpaperQuality: 'Rūpīgi palielinātas no oriģinālajiem attēliem.',
 }
 export const messages: Record<Locale, Messages> = { lv: latvian, en: english }
 export const localePath = (locale: Locale) => locale === 'en' ? '/en/' : '/'

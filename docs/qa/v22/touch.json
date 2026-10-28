@@ -1,0 +1,6 @@
+{
+  "viewport": "390x664, DPR2, Chromium touch emulation; not physical iPhone",
+  "sound": "native playback starts after real tap; mute works in dialog",
+  "plus": "tap opens existing note",
+  "errors": []
+}

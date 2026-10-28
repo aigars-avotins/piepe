@@ -1,18 +1,9 @@
-import { renderToStaticMarkup } from 'react-dom/server'
-import Story from './Story'
-import LanguageSwitch from './LanguageSwitch'
+import { renderToStaticMarkup, renderToString } from 'react-dom/server'
+import App from './App'
 import { localePath, messages } from './i18n'
 import type { Locale } from './i18n'
 import { structuredData } from './seo'
-export function renderPage(locale: Locale) {
-  const t = messages[locale]
-  return renderToStaticMarkup(<div className="world is-ready has-title prerendered" data-version="2.1">
-    <div className="environment" aria-hidden="true"><div className="static-forest" /></div>
-    <a className="skip-content" href="#understory">{t.skipContent}</a>
-    <header className="site-header"><a className="brand" href="#forest" aria-label={t.homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" />pie.pe</a><span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} /></header>
-    <Story locale={locale} />
-  </div>)
-}
+export function renderPage(locale: Locale) { return renderToString(<App initialLocale={locale} />) }
 export function renderHead(locale: Locale) {
   const t = messages[locale], url = 'https://pie.pe' + localePath(locale)
   return renderToStaticMarkup(<>

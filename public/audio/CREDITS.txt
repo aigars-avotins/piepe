@@ -1,0 +1,11 @@
+PIE.PE forest ambience
+
+Source: Birds, by kvgarlic (CC0 1.0), edited for seamless ambient playback by Porrumentzio in Blanket.
+Original recording: https://freesound.org/people/kvgarlic/sounds/156826/
+Source asset and licensing: https://github.com/rafaelmardojai/blanket/tree/775f2a767230a9681850d1b1e085be58656f1382
+File: data/resources/sounds/birds.ogg
+Licensing reference: SOUNDS_LICENSING.md in the pinned source above.
+CC0: https://creativecommons.org/publicdomain/zero/1.0/
+
+PIE.PE adaptation: 63-second excerpt, three-second tail/head crossfade, gentle frequency limiting and level preparation, stereo MP3. Playback is attenuated and fades in through the site's volume control. The approved visual artwork and videos are separate assets.
+Only the CC0 audio asset is reused; no Blanket application code is included.

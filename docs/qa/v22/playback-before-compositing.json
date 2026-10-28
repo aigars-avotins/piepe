@@ -1,0 +1,92 @@
+{
+  "comparison_stage": "initial PIE.PE 2.2 compositing draft (not the 2.1 baseline)",
+  "measurements": {
+    "environment": "Linux Chromium, DPR 1; no screen recording, no CPU throttling; viewport emulation, not hardware results",
+    "results": [
+      {
+        "width": 1512,
+        "height": 982,
+        "samples": 997,
+        "p95": 50,
+        "videos": [
+          {
+            "src": "forest-reveal.mp4",
+            "total": 145,
+            "dropped": 0
+          },
+          {
+            "src": "forest-awakening.mp4",
+            "total": 145,
+            "dropped": 5
+          },
+          {
+            "src": "forest-understory.mp4",
+            "total": 145,
+            "dropped": 48
+          },
+          {
+            "src": "forest-breathing.mp4",
+            "total": 145,
+            "dropped": 59
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 664,
+        "samples": 1451,
+        "p95": 16.700000000000728,
+        "videos": [
+          {
+            "src": "forest-reveal.mp4",
+            "total": 145,
+            "dropped": 0
+          },
+          {
+            "src": "forest-awakening.mp4",
+            "total": 145,
+            "dropped": 1
+          },
+          {
+            "src": "forest-understory.mp4",
+            "total": 145,
+            "dropped": 1
+          },
+          {
+            "src": "forest-breathing.mp4",
+            "total": 145,
+            "dropped": 1
+          }
+        ]
+      },
+      {
+        "width": 2560,
+        "height": 1080,
+        "samples": 717,
+        "p95": 83.39999999999782,
+        "videos": [
+          {
+            "src": "forest-reveal.mp4",
+            "total": 145,
+            "dropped": 2
+          },
+          {
+            "src": "forest-awakening.mp4",
+            "total": 145,
+            "dropped": 13
+          },
+          {
+            "src": "forest-understory.mp4",
+            "total": 145,
+            "dropped": 76
+          },
+          {
+            "src": "forest-breathing.mp4",
+            "total": 145,
+            "dropped": 86
+          }
+        ]
+      }
+    ]
+  }
+}

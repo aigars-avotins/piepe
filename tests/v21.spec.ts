@@ -157,16 +157,17 @@ test('save-data bypasses all automatic films and never fetches full wallpapers o
   const requests: string[] = []; page.on('request', r => requests.push(r.url()))
   await page.addInitScript(() => Object.defineProperty(navigator, 'connection', { value: { saveData: true }, configurable: true }))
   await page.goto('/')
-  expect(requests.filter(r => /\.mp4$|wallpapers\/piepe-.*\.jpg$/.test(r))).toEqual([])
+  expect(requests.filter(r => /\.mp4$|wallpapers\/piepe-.*\.jpg(?:\?|$)/.test(r))).toEqual([])
   for (const id of ['understory', 'return']) { await page.locator('#' + id).scrollIntoViewIfNeeded(); await expect(page.locator('video')).toHaveCount(0) }
   expect(requests.filter(r => r.endsWith('.mp4'))).toEqual([])
 })
 
 test('scene video covers phones, MacBook and ultrawide without stretching or side borders', async ({ page }) => {
-  await page.addInitScript(() => sessionStorage.setItem('piepe-entered','1'))
+  // Each viewport is a fresh playback visit. Preparation now reads history before scrolling.
+  await page.addInitScript(() => { sessionStorage.setItem('piepe-entered','1'); sessionStorage.removeItem('piepe-understory') })
   const video = page.locator('video[src$="understory.mp4"]')
   for (const [width,height] of [[1440,900],[1512,982],[390,844],[390,664],[320,690],[430,932],[844,390],[2560,1080]]) {
-    await page.setViewportSize({width,height}); await page.goto('/en/'); await page.evaluate(() => sessionStorage.removeItem('piepe-understory')); await page.locator('#understory').scrollIntoViewIfNeeded(); await expect(video).toBeVisible(); await expect(video).toHaveCSS('object-fit','cover')
+    await page.setViewportSize({width,height}); await page.goto('/en/'); await page.locator('#understory').scrollIntoViewIfNeeded(); await expect(video).toBeVisible(); await expect(video).toHaveCSS('object-fit','cover')
     const visible = await page.evaluate(() => ({ width: innerWidth, height: innerHeight }))
     const box = await video.boundingBox(); expect(box!.width).toBeGreaterThanOrEqual(visible.width); expect(box!.height).toBeGreaterThanOrEqual(visible.height)
   }

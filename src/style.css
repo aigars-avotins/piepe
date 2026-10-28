@@ -18,10 +18,10 @@ em,.italic-line{font-family:var(--serif);font-weight:400;font-style:italic;color
 .base-camera,.foreground-camera,.wide-environment{position:absolute;inset:0;transform-origin:57% 46%}
 .base-camera{z-index:1}.media-plane{position:absolute}.media-plane>img,.forest-film,.film-wrap,.media-plane>svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .forest-still{color:transparent}.film-wrap{z-index:2;opacity:1;transition:opacity .55s ease}.film-finished{opacity:0}
-.wide-environment{opacity:0;transform:scale(1.18)}.wide-environment img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
-.foreground-camera{z-index:3;opacity:0;transform-origin:70% 40%}.foreground-camera .media-plane{clip-path:polygon(24% 0,46% 0,44% 35%,39% 65%,35% 100%,12% 100%,16% 70%,22% 40%)}
+.wide-environment{z-index:5;opacity:0;transform:scale(1.18)}.wide-environment img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
+.foreground-camera{z-index:6;opacity:0;transform-origin:70% 40%}.foreground-camera .media-plane{clip-path:polygon(24% 0,46% 0,44% 35%,39% 65%,35% 100%,12% 100%,16% 70%,22% 40%)}
 
-.forest-shade{position:absolute;inset:0;z-index:6;background:linear-gradient(90deg,rgba(3,13,8,.38),transparent 60%),linear-gradient(0deg,rgba(3,13,8,.7),transparent 26%,transparent 78%,rgba(3,13,8,.24))}
+.forest-shade{position:absolute;inset:0;z-index:7;background:linear-gradient(90deg,rgba(3,13,8,.38),transparent 60%),linear-gradient(0deg,rgba(3,13,8,.7),transparent 26%,transparent 78%,rgba(3,13,8,.24))}
 .cool-veil,.dark-veil,.dawn-light{position:absolute;inset:0;z-index:4;opacity:0;pointer-events:none}
 .cool-veil{background:rgba(6,31,27,.88);mix-blend-mode:multiply}.dark-veil{z-index:4;background:#06110c}
 .dawn-light{z-index:7;inset:-20%;background:radial-gradient(ellipse at 22% 25%,rgba(225,204,152,.45),transparent 57%);mix-blend-mode:screen}
@@ -47,7 +47,7 @@ em,.italic-line{font-family:var(--serif);font-weight:400;font-style:italic;color
 .hero-hotspot-plane{position:absolute;z-index:4;pointer-events:none}.fungus-hit{position:absolute;pointer-events:auto;left:46.5%;top:35.8%;width:40%;height:48%;clip-path:polygon(14% 1%,62% 0,60% 10%,82% 13%,81% 22%,98% 30%,97% 44%,80% 49%,78% 64%,60% 74%,48% 95%,30% 95%,24% 76%,11% 66%,7% 48%,0 31%,7% 21%,20% 19%)}
 .fungus-hit:focus-visible{background:rgba(235,218,173,.06);outline:none}.fungus-annotation{pointer-events:auto;position:absolute;left:72%;top:72%;display:flex;align-items:center;gap:13px;min-height:46px;white-space:nowrap;opacity:0;transition:opacity .8s .4s;font-size:12px;letter-spacing:.025em}
 .fungus-annotation>span:last-child{display:flex;gap:15px;align-items:center}.annotation-cross{font-family:'Manrope',sans-serif;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(234,232,223,.55);border-radius:50%;font-size:23px;line-height:1;color:#e5d9bd;background:rgba(6,19,11,.22);transition:background .4s,transform .6s}
-.fungus-annotation:hover .annotation-cross,.specimen-invitation:hover .annotation-cross{background:rgba(173,137,81,.24);transform:rotate(90deg)}.is-ready .fungus-annotation{opacity:1}.is-intro .hero-hotspot-plane{visibility:hidden}
+@media(hover:hover) and (pointer:fine){.fungus-annotation:hover .annotation-cross,.specimen-invitation:hover .annotation-cross{background:rgba(173,137,81,.24);transform:rotate(90deg)}}.is-ready .fungus-annotation{opacity:1}.is-intro .hero-hotspot-plane{visibility:hidden}
 .hero-foot{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(33px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:12px;color:#c4caba;z-index:3}
 .hero-foot p{display:flex;align-items:center;gap:12px}.hero-foot p>span:first-child{font-family:var(--serif);font-size:22px;font-style:italic}.foot-rule{width:24px;height:1px;background:var(--gold);opacity:.6}.scroll-cue{display:flex;align-items:center;gap:22px;font-size:12px;min-height:44px}.scroll-cue>span{font-size:23px;color:var(--gold)}.edition{font-size:11px;color:#aeb9a3}
 .media-note{position:absolute;left:var(--gutter);bottom:120px;max-width:300px;font-size:13px;line-height:1.6;z-index:10}.media-note button{text-decoration:underline}
@@ -64,7 +64,7 @@ footer{display:flex;justify-content:space-between;align-items:center;width:100%;
 .discovery-dialog{position:fixed;inset:0;width:100%;max-width:none;height:100%;max-height:none;border:0;margin:0;padding:0;color:var(--paper);background:#08140f;overflow:auto}
 .discovery-dialog::backdrop{background:rgba(4,12,8,.65)}body:has(dialog[open]){overflow:hidden}.discovery-stage{min-height:100svh;position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;padding:110px 7vw 70px 63vw}
 .specimen-photo{position:absolute;z-index:-1;left:0;top:0;bottom:0;width:66%;overflow:hidden}.specimen-photo>img{width:100%;height:100%;object-fit:cover;object-position:68% 53%;transform:scale(1.04);transition:transform 1.4s cubic-bezier(.16,1,.3,1),object-position 1.4s}
-.specimen-photo-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,13,8,.08) 40%,rgba(8,20,15,.3) 75%,#08140f),linear-gradient(0deg,rgba(8,20,15,.8),transparent 25%,transparent 70%,rgba(8,20,15,.3))}
+.specimen-photo-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,13,8,.08) 40%,rgba(8,20,15,.3) 75%,var(--color-forest,#0b1712)),linear-gradient(0deg,rgba(8,20,15,.8),transparent 25%,transparent 70%,rgba(8,20,15,.3))}
 .discovery-dialog[open] .specimen-photo{animation:encounter-arrival 1.4s cubic-bezier(.16,1,.3,1)}.observation-beneath .specimen-photo>img{transform:scale(1.25);object-position:56% 45%}.observation-beyond .specimen-photo>img{transform:scale(1);object-position:70% 50%}
 .discovery-edge{position:absolute;left:0;top:0;width:66%;height:100%;overflow:hidden;pointer-events:none;display:none}
 .discovery-header{position:absolute;z-index:5;top:calc(26px + env(safe-area-inset-top));left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;align-items:center;gap:25px}.discovery-header>.label{display:flex;align-items:center;gap:17px;font-size:11px;color:#d4d8c7}.close-discovery{display:flex;align-items:center;gap:25px;min-height:44px;font-size:12px}.close-discovery>span:last-child{font-size:28px;color:var(--gold)}
@@ -139,3 +139,33 @@ main{position:relative;z-index:1}
 .js .prerendered .hero-copy{visibility:hidden}.js:not(.preference-static) .prerendered .static-forest{background-image:url('/media/forest-poster.jpg')}
 .direction-arrow{display:inline-block;vertical-align:middle;flex-shrink:0}.fact-sources .direction-arrow{width:14px;height:14px;margin-left:5px}
 @media(max-width:699px){.clip-understory>img,.clip-understory>video{object-position:58% 50%}.motion-off[data-scene="understory"] .bark-chapter::before{background-position:58% 50%}}
+/* 2.2: the awakening stays inside the original, graded world/source plane. */
+.world-awakening{position:absolute;inset:0;z-index:2}.world-awakening .motion-clip{width:100%;height:100%}.clip-awakening .clip-end{opacity:0}.clip-awakening[data-clip-state=complete] .clip-end{opacity:1}
+.motion-clip>video{opacity:0}.motion-clip[data-clip-ready=true]>video{opacity:1}.world-awakening .motion-clip>video{transition:opacity .16s linear}
+.has-awakening .hero-hotspot-plane{visibility:hidden}.has-awakening .hero-copy,.has-awakening .hero-foot,.has-awakening .journey-index{pointer-events:none;transition:opacity .55s ease}.cinema-presented .hero-copy,.cinema-presented .hero-foot,.cinema-presented .journey-index{opacity:0}
+.awakening-controls{position:fixed;inset:0;z-index:22;pointer-events:none}.awakening-controls>button{pointer-events:auto}.has-awakening .site-header .replay-intro{visibility:hidden}.has-awakening{touch-action:none}
+.understory-cinema{position:absolute;inset:0;z-index:5;opacity:0;transform-origin:58% 50%}.wide-environment>.motion-clip{z-index:1}.wide-environment>.dawn-light{z-index:0}.wide-environment>.motion-clip>img,.wide-environment>.motion-clip>video{object-position:55% 50%}
+.forest-mist,.light-shaft,.spores{z-index:2}
+.foreground-carrier{position:absolute;inset:0;z-index:6}
+.atmosphere-paused .edge-light path{animation-play-state:paused}
+.clip-understory,.clip-breathing{opacity:0;transition:opacity .24s linear}.clip-understory[data-still-ready=true],.clip-understory[data-clip-ready=true],.clip-breathing[data-still-ready=true],.clip-breathing[data-clip-ready=true]{opacity:1}
+/* One actual end frame docks into the note; no entrance scale/opacity animation replaces it. */
+.discovery-dialog[open] .specimen-photo{animation:none}.specimen-photo>img{position:absolute;inset:0;transform:none;object-position:68% 53%}.photo-world-shade{position:absolute;inset:0;pointer-events:none;opacity:0}.photo-moving .photo-world-shade{opacity:1}.photo-moving .discovery-copy,.photo-moving .specimen-caption,.photo-moving .discovery-kicker,.photo-moving .discovery-header>.label,.photo-moving .discovery-stage>.language-switch{visibility:hidden}.photo-moving .discovery-header{background:none}.photo-moving .specimen-photo>img{transition:none}
+.skip-dock{position:fixed;z-index:10;left:var(--gutter);bottom:30px;background:#0b1712dd;padding:8px 16px;border:1px solid var(--line)}.photo-moving .close-discovery{visibility:visible}
+@media(max-width:699px){.specimen-photo>img{transform:none;object-position:68% 52%}.skip-dock{left:20px;right:20px;bottom:calc(25px + env(safe-area-inset-bottom));justify-content:center}.photo-moving .discovery-header{background:none}}
+@media(prefers-reduced-motion:reduce){.world-awakening .motion-clip>video{transition:none}}
+.hero-copy,.hero-foot,.hero-hotspot-plane,.journey-index{transition:opacity .55s ease}.discovery-open .hero-copy,.discovery-open .hero-foot,.discovery-open .hero-hotspot-plane,.discovery-open .journey-index{opacity:0;pointer-events:none}
+.has-awakened .fungus-hit{left:40.74%;top:32.78%;width:59%;height:70.8%}
+.brand .brand-wordmark{width:64px;height:34px;object-fit:contain}.brand{gap:12px}
+@media(max-width:699px){.brand{gap:5px}.brand .brand-wordmark{width:51px;height:29px}}
+@media(max-width:359px){.brand .brand-wordmark{width:48px;height:26px}}
+/* Hydration keeps the prepared document rather than replacing the first painted controls. */
+.js:not(.preference-static) .prerendered .forest-still{content:url('/media/forest-poster.jpg')}
+html:not(.js) .prerendered .hero-copy{visibility:visible}html:not(.js) .prerendered .wordmark span{transform:none}html:not(.js) .prerendered .title-enter{opacity:1;transform:none}
+html:not(.js) .prerendered .skip-intro,.js.preference-static .prerendered .skip-intro{visibility:hidden}
+@media(max-width:699px){.world{--forest-focal:.64}}
+/* Functional text stays legible; the encounter invitation remains above its adjacent copy. */
+.specimen-invitation{z-index:3}.chapter-body{font-size:16px}.label,.encounter-status,.observation-footnote,.specimen-caption,.art-note,.fact-sources,.footer-edition,.resolution-link{font-size:13px}.header-caption,.discovery-header>.label,.discovery-kicker,.observation-count,.observation-number,.depth-coordinate,.journey-index a{font-size:12px}.hero-foot,.fungus-annotation,.specimen-invitation{font-size:13px}.chapter-body,.observation-footnote,.encounter-status{line-height:1.8}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.hero-copy>.label,.chapter-label .label,.download-hint{font-size:13px}
+.sound-control{position:fixed;z-index:24;left:20px;bottom:calc(20px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px;min-height:44px;padding:9px 13px;border:1px solid var(--line);border-radius:24px;background:var(--color-forest);color:var(--paper);font-size:12px;touch-action:manipulation}.sound-control[aria-pressed=false]{color:var(--muted)}.sound-control:active{background:#203327}.world[data-scene=forest]>.sound-control{bottom:calc(94px + env(safe-area-inset-bottom))}.discovery-dialog>.sound-control{left:auto;right:20px}.photo-moving>.sound-control{bottom:calc(82px + env(safe-area-inset-bottom))}.world>footer{padding-bottom:calc(85px + env(safe-area-inset-bottom))}.discovery-stage{padding-bottom:110px}

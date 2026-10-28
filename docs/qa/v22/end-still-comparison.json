@@ -1,0 +1,18 @@
+[
+  {
+    "clip": "reveal",
+    "last_still_MAE": 4.934062821502057
+  },
+  {
+    "clip": "awakening",
+    "last_still_MAE": 2.297479263117284
+  },
+  {
+    "clip": "understory",
+    "last_still_MAE": 1.8566665059156378
+  },
+  {
+    "clip": "breathing",
+    "last_still_MAE": 1.3919952417695474
+  }
+]

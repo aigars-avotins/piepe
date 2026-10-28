@@ -5,7 +5,7 @@ const subscribe = (callback: () => void) => {
   media.addEventListener('change', callback)
   return () => media.removeEventListener('change', callback)
 }
-export const useReducedMotion = () => useSyncExternalStore(subscribe, () => matchMedia(query).matches)
+export const useReducedMotion = () => useSyncExternalStore(subscribe, () => matchMedia(query).matches, () => false)
 export function saveData() {
   const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection
   return !!connection?.saveData || ['2g', 'slow-2g'].includes(connection?.effectiveType || '')

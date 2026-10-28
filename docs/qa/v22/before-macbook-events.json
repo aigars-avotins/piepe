@@ -1,0 +1,270 @@
+{
+  "recording_start_epoch": 1793172861.170406,
+  "events": [
+    {
+      "type": "loadeddata",
+      "wall": 1793172861135,
+      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "ready": 4,
+      "time": 0.000523
+    },
+    {
+      "type": "playing",
+      "wall": 1793172861135,
+      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "ready": 4,
+      "time": 0.000695
+    },
+    {
+      "type": "decoded",
+      "wall": 1793172861192,
+      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "ready": 4,
+      "time": 0.057752
+    },
+    {
+      "type": "ended",
+      "wall": 1793172867177,
+      "src": "http://127.0.0.1:4178/media/forest-reveal.mp4",
+      "ready": 4,
+      "time": 6.041667
+    },
+    {
+      "type": "click",
+      "wall": 1793172868516
+    },
+    {
+      "type": "loadeddata",
+      "wall": 1793172868608,
+      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "ready": 4,
+      "time": 0.001278
+    },
+    {
+      "type": "playing",
+      "wall": 1793172868609,
+      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "ready": 4,
+      "time": 0.001431
+    },
+    {
+      "type": "decoded",
+      "wall": 1793172868647,
+      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "ready": 4,
+      "time": 0.039482
+    },
+    {
+      "type": "ended",
+      "wall": 1793172874649,
+      "src": "http://127.0.0.1:4178/media/forest-awakening.mp4",
+      "ready": 4,
+      "time": 6.041667
+    },
+    {
+      "type": "scroll-start",
+      "id": "understory",
+      "wall": 1793172876084,
+      "from": 0,
+      "to": 1031.1
+    },
+    {
+      "type": "macro-entry",
+      "wall": 1793172877244
+    },
+    {
+      "type": "loadeddata",
+      "wall": 1793172877288,
+      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "ready": 4,
+      "time": 0.007059
+    },
+    {
+      "type": "playing",
+      "wall": 1793172877288,
+      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "ready": 4,
+      "time": 0.007207
+    },
+    {
+      "type": "decoded",
+      "wall": 1793172877358,
+      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "ready": 4,
+      "time": 0.077465
+    },
+    {
+      "type": "scroll-end",
+      "id": "understory",
+      "wall": 1793172878104,
+      "from": 0,
+      "to": 1031.1
+    },
+    {
+      "type": "ended",
+      "wall": 1793172883323,
+      "src": "http://127.0.0.1:4178/media/forest-understory.mp4",
+      "ready": 4,
+      "time": 6.041667
+    },
+    {
+      "type": "scroll-start",
+      "id": "encounter",
+      "wall": 1793172883646,
+      "from": 1031,
+      "to": 2357.1
+    },
+    {
+      "type": "macro-exit",
+      "wall": 1793172884821
+    },
+    {
+      "type": "scroll-end",
+      "id": "encounter",
+      "wall": 1793172885675,
+      "from": 1031,
+      "to": 2357.1
+    },
+    {
+      "type": "scroll-start",
+      "id": "fungus-facts",
+      "wall": 1793172886241,
+      "from": 2357,
+      "to": 3633.1
+    },
+    {
+      "type": "loadeddata",
+      "wall": 1793172888101,
+      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "ready": 4,
+      "time": 0.000356
+    },
+    {
+      "type": "playing",
+      "wall": 1793172888102,
+      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "ready": 4,
+      "time": 0.000503
+    },
+    {
+      "type": "scroll-end",
+      "id": "fungus-facts",
+      "wall": 1793172888250,
+      "from": 2357,
+      "to": 3633.1
+    },
+    {
+      "type": "playing",
+      "wall": 1793172888289,
+      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "ready": 4,
+      "time": 0.172839
+    },
+    {
+      "type": "decoded",
+      "wall": 1793172888297,
+      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "ready": 4,
+      "time": 0.180703
+    },
+    {
+      "type": "scroll-start",
+      "id": "return",
+      "wall": 1793172889213,
+      "from": 3633,
+      "to": 4517.1
+    },
+    {
+      "type": "scroll-end",
+      "id": "return",
+      "wall": 1793172891248,
+      "from": 3633,
+      "to": 4517.1
+    },
+    {
+      "type": "ended",
+      "wall": 1793172894159,
+      "src": "http://127.0.0.1:4178/media/forest-breathing.mp4",
+      "ready": 4,
+      "time": 6.041667
+    },
+    {
+      "type": "scroll-start",
+      "id": "wallpapers",
+      "wall": 1793172894562,
+      "from": 4517,
+      "to": 5597.1
+    },
+    {
+      "type": "scroll-end",
+      "id": "wallpapers",
+      "wall": 1793172896594,
+      "from": 4517,
+      "to": 5597.1
+    },
+    {
+      "type": "scroll-start",
+      "id": "return",
+      "wall": 1793172897510,
+      "from": 5597,
+      "to": 4517.1
+    },
+    {
+      "type": "scroll-end",
+      "id": "return",
+      "wall": 1793172899523,
+      "from": 5597,
+      "to": 4517.1
+    },
+    {
+      "type": "scroll-start",
+      "id": "encounter",
+      "wall": 1793172900856,
+      "from": 4517,
+      "to": 2357.1
+    },
+    {
+      "type": "scroll-end",
+      "id": "encounter",
+      "wall": 1793172902906,
+      "from": 4517,
+      "to": 2357.1
+    },
+    {
+      "type": "scroll-start",
+      "id": "understory",
+      "wall": 1793172904072,
+      "from": 2357,
+      "to": 1031.1
+    },
+    {
+      "type": "macro-entry",
+      "wall": 1793172905066
+    },
+    {
+      "type": "scroll-end",
+      "id": "understory",
+      "wall": 1793172906092,
+      "from": 2357,
+      "to": 1031.1
+    },
+    {
+      "type": "scroll-start",
+      "id": "forest",
+      "wall": 1793172907112,
+      "from": 1031,
+      "to": 49.1
+    },
+    {
+      "type": "macro-exit",
+      "wall": 1793172908156
+    },
+    {
+      "type": "scroll-end",
+      "id": "forest",
+      "wall": 1793172909146,
+      "from": 1031,
+      "to": 49.1
+    }
+  ]
+}

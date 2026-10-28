@@ -6,6 +6,11 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import subprocess
 import os
 import tempfile
+import argparse
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--wallpapers-only', action='store_true')
+options = parser.parse_args()
 
 root = Path(__file__).resolve().parent.parent
 os.chdir(root)
@@ -33,7 +38,7 @@ try {for(const [file,out] of [['piepe-mark.svg','mark'],['piepe-favicon.svg','ic
         else:
             ch = round(sw * h / w); y = (sh - ch) // 2; src = src.crop((0, y, sw, y + ch))
         im = src.resize((w, h), Image.Resampling.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.2, percent=45, threshold=4))
-        size = round(w * (.022 if kind == 'desktop' else .045)); fs = round(w * (.012 if kind == 'desktop' else .025)); gap = round(size * .12)
+        size = round(w * (.031 if kind == 'desktop' else .060)); fs = round(w * (.0165 if kind == 'desktop' else .033)); gap = round(size * .12)
         m = mark.resize((size, size), Image.Resampling.LANCZOS); f = ImageFont.truetype(font, fs)
         d = ImageDraw.Draw(im); textw = d.textlength('pie.pe', font=f)
         x = round(w * .95 - size - gap - textw) if kind == 'desktop' else round(w * .06)
@@ -42,6 +47,9 @@ try {for(const [file,out] of [['piepe-mark.svg','mark'],['piepe-favicon.svg','ic
         im.save(out / f'wallpapers/piepe-forest-{kind}-{w}x{h}.jpg', quality=94, subsampling=0, optimize=True)
         if w != 3840:
             im.thumbnail((800, 800)); im.save(out / f'wallpapers/previews/{kind}.webp', quality=85, method=6)
+    if options.wallpapers_only:
+        print('Generated three wallpapers and two previews with the more visible approved signature')
+        raise SystemExit(0)
     icon = Image.open(Path(tmp) / 'icon.png').convert('RGBA')
     icon.save(out / 'favicon.ico', sizes=[(16,16),(32,32),(48,48),(64,64),(128,128),(256,256)])
     for name, size in [('apple-touch-icon', 180), ('icon-192', 192), ('icon-512', 512)]:

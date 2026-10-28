@@ -7,13 +7,14 @@ try {
   const template = await readFile('dist/index.html', 'utf8')
   if (!template.includes('<!-- locale:start -->')) throw new Error('Run a fresh Vite build before prerendering')
   const assets = await readdir('dist/assets')
-  const hashes = []
+  const boot = await readFile('public/boot.js', 'utf8')
+  const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`]
   for (const locale of ['lv', 'en']) {
-    const criticalFonts = assets.filter(name => /^(cormorant-garamond-latin-400-normal|manrope-latin-400-normal)-.*\.woff2$/.test(name) || (locale === 'lv' && /^manrope-latin-ext-400-normal-.*\.woff2$/.test(name)))
+    const criticalFonts = assets.filter(name => /^manrope-latin-400-normal-.*\.woff2$/.test(name) || (locale === 'lv' && /^manrope-latin-ext-400-normal-.*\.woff2$/.test(name)))
     const head = renderHead(locale) + criticalFonts.map(name => `<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/${name}"/>`).join('')
     const data = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(head)[1]
     hashes.push(`'sha256-${createHash('sha256').update(data).digest('base64')}'`)
-    const html = template.replace(/<html lang="[^"]+"/, `<html lang="${locale}"`).replace(/<!-- locale:start -->[\s\S]*?<!-- locale:end -->/, head).replace('<div id="root"></div>', `<div id="root">${renderPage(locale)}</div>`)
+    const html = template.replace('<script src="/boot.js"></script>', `<script>${boot}</script>`).replace(/<html lang="[^"]+"/, `<html lang="${locale}"`).replace(/<!-- locale:start -->[\s\S]*?<!-- locale:end -->/, head).replace('<div id="root"></div>', `<div id="root">${renderPage(locale)}</div>`)
     if (!html.includes(locale === 'lv' ? 'Kas ir piepe?' : 'What is a bracket fungus?')) throw new Error('Missing rendered content')
     await writeFile(`dist/field-note-${locale}.txt`, renderNote(locale))
     await writeFile(`public/field-note-${locale}.txt`, renderNote(locale))
