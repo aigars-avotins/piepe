@@ -36,7 +36,7 @@ em,.italic-line{font-family:var(--serif);font-weight:400;font-style:italic;color
 .header-caption{font-size:11px;letter-spacing:.12em;color:#d1d5c5}.header-caption span{margin:0 18px;color:#8d9c88}
 .text-button{min-height:44px;display:inline-flex;align-items:center;gap:24px;font-size:12px}.text-button>span{font-size:20px;color:var(--gold)}
 .journey-index{position:fixed;right:25px;top:50%;transform:translateY(-50%);z-index:15;display:flex;flex-direction:column;gap:18px;mix-blend-mode:normal}
-.journey-index a{display:flex;align-items:center;justify-content:flex-end;gap:10px;min-height:24px;color:#b2bda7;font-size:10px;opacity:.4;transition:opacity .5s}
+.journey-index a{display:flex;align-items:center;justify-content:flex-end;gap:10px;min-height:24px;color:#b2bda7;font-size:10px;opacity:.75;transition:opacity .5s}
 .journey-index a>span:last-child{width:0;overflow:hidden;white-space:nowrap;transition:width .5s}.journey-index i{display:block;width:13px;height:1px;background:currentColor}.journey-index a[aria-current]{opacity:1;color:var(--gold)}.journey-index a:hover>span:last-child,.journey-index a:focus-visible>span:last-child{width:64px}.is-intro .journey-index{visibility:hidden}
 .hero{height:100svh;min-height:640px;position:relative;padding:0 var(--gutter);display:flex;align-items:center}
 .hero-copy{position:relative;z-index:2;padding-bottom:35px;pointer-events:none}.hero-copy>.label{color:#d9d3bf;margin-bottom:5px}

@@ -47,6 +47,10 @@ on:
         description: 'Also verify the deployed release in both browsers (run after deployment)'
         type: boolean
         default: false
+      diagnostic_grep:
+        description: 'Optional single-browser diagnostic filter; ignored for release and production smoke'
+        type: string
+        default: ''
 permissions:
   contents: read
 # Automatic/diagnostic runs share a per-branch or PR group. Each release has its own group,
@@ -88,9 +92,15 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: npm test -- --project=chrome-desktop
+      - run: |
+          if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then
+            npm test -- --project=chrome-desktop --grep "$PIEPE_DIAGNOSTIC_GREP"
+          else
+            npm test -- --project=chrome-desktop
+          fi
         env:
           CI: true
+          PIEPE_DIAGNOSTIC_GREP: ${{ inputs.validation != 'release' && !inputs.production_smoke && inputs.diagnostic_grep || '' }}
       - if: inputs.production_smoke
         run: npm test -- tests/production.spec.ts --project=chrome-desktop
         env:
@@ -121,9 +131,15 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npx playwright install webkit
-      - run: npm test -- --project=webkit-iphone
+      - run: |
+          if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then
+            npm test -- --project=webkit-iphone --grep "$PIEPE_DIAGNOSTIC_GREP"
+          else
+            npm test -- --project=webkit-iphone
+          fi
         env:
           CI: true
+          PIEPE_DIAGNOSTIC_GREP: ${{ inputs.validation != 'release' && !inputs.production_smoke && inputs.diagnostic_grep || '' }}
       - if: inputs.production_smoke
         run: npm test -- tests/production.spec.ts --project=webkit-iphone
         env:

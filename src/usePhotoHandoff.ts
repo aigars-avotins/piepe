@@ -70,13 +70,14 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
       const playTogether = () => {
         const start = document.timeline.currentTime
         if (start === null) return
-        // Inverse transforms require one clock; WebKit may resolve sequential play() calls apart.
-        animations.forEach(animation => { animation.play(); animation.startTime = start })
+        // Assigning startTime releases the hold time directly. Avoid separate pending
+        // play tasks: WebKit can otherwise commit the inverse layers on different ticks.
+        animations.forEach(animation => { animation.startTime = start })
       }
       if (!back) {
         // Prepare the decoded surface before starting its camera clock on high-density displays.
         animations.forEach(animation => { animation.pause(); animation.currentTime = 0 })
-        void image.decode().catch(() => {}).then(() => {
+        void Promise.all([image.decode().catch(() => {}), ...animations.map(animation => animation.ready)]).then(() => {
           if (cancelled || turn !== generation || !installed) return
           requestAnimationFrame(() => requestAnimationFrame(() => {
             if (!cancelled && turn === generation && installed) playTogether()

@@ -104,23 +104,50 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   // Keep the server-painted controls stable; start cinema after hydration's first paint.
   useEffect(() => { const frame = requestAnimationFrame(initialize); return () => cancelAnimationFrame(frame) }, [initialize])
   useEffect(() => {
-    if (!booted || exitReason !== 'anchor-navigation') return
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined
-    if (navigation && navigation.type !== 'navigate') return
-    const hash = location.hash
-    let cancelled = false, frame = 0
-    const interrupt = () => { cancelled = true }
-    // A native initial smooth anchor can be interrupted by font/ScrollTrigger layout
-    // measurement. Resolve that explicit navigation once, after layout; never pull
-    // back a visitor who has already started scrolling or using the keyboard.
+    if (!booted) return
+    let turn = 0, frame = 0
+    const loading: (() => void)[] = []
+    const interrupt = () => { turn++ }
+    const align = (initial: boolean) => {
+      const hash = location.hash, generation = ++turn
+      if (!hash || hash === '#forest') return
+      const ready = () => { void document.fonts.ready.then(() => {
+        if (generation !== turn) return
+        frame = requestAnimationFrame(() => { frame = requestAnimationFrame(() => {
+          if (generation !== turn || location.hash !== hash) return
+          const target = document.getElementById(hash.slice(1))
+          if (!target) return
+          if (initial) { target.scrollIntoView({ behavior: 'instant', block: 'start' }); return }
+          let previous = window.scrollY, settled = 0
+          const observe = () => {
+            if (generation !== turn || location.hash !== hash) return
+            const current = window.scrollY
+            settled = Math.abs(current - previous) < .5 ? settled + 1 : 0; previous = current
+            if (settled < 4) { frame = requestAnimationFrame(observe); return }
+            // Never restart an ongoing native smooth scroll. Only recover an explicit
+            // anchor left entirely offscreen by a late browser restoration/refresh.
+            const bounds = target.getBoundingClientRect()
+            if (bounds.top > window.innerHeight || bounds.bottom < 0) target.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth', block: 'start' })
+          }
+          frame = requestAnimationFrame(observe)
+        }) })
+      }) }
+      if (document.readyState === 'complete') ready()
+      else { loading.push(ready); window.addEventListener('load', ready, { once: true }) }
+    }
+    // Resolve explicit anchors after browser restoration, fonts and camera layout.
+    // Reload/back retain their saved position; wheel/touch/key input cancels a pending
+    // correction. A new hash remains explicit navigation even during a reload.
+    const hashChange = () => align(false)
+    window.addEventListener('hashchange', hashChange)
     window.addEventListener('wheel', interrupt, { passive: true })
     window.addEventListener('touchstart', interrupt, { passive: true })
+    window.addEventListener('pointerdown', interrupt, { passive: true })
     window.addEventListener('keydown', interrupt)
-    document.fonts.ready.then(() => { frame = requestAnimationFrame(() => {
-      if (!cancelled && location.hash === hash) document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'instant', block: 'start' })
-    }) })
-    return () => { cancelled = true; cancelAnimationFrame(frame); window.removeEventListener('wheel', interrupt); window.removeEventListener('touchstart', interrupt); window.removeEventListener('keydown', interrupt) }
-  }, [booted, exitReason])
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined
+    if (exitReason === 'anchor-navigation' && (!navigation || navigation.type === 'navigate' || new URL(navigation.name).hash !== location.hash)) align(true)
+    return () => { turn++; cancelAnimationFrame(frame); loading.forEach(ready => window.removeEventListener('load', ready)); window.removeEventListener('hashchange', hashChange); window.removeEventListener('wheel', interrupt); window.removeEventListener('touchstart', interrupt); window.removeEventListener('pointerdown', interrupt); window.removeEventListener('keydown', interrupt) }
+  }, [booted, exitReason, reduced])
   useEffect(() => {
     if (!intro && exitReason === 'skipped') hotspot.current?.focus({ preventScroll: true })
   }, [intro, exitReason])

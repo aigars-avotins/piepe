@@ -8,7 +8,11 @@ async function wheelTo(page: Page, id: string, fraction: number) {
   for (let i = 0; i < 120; i++) {
     const delta = destination - await page.evaluate(() => scrollY)
     if (Math.abs(delta) < 35) return
-    await page.mouse.wheel(0, Math.max(-h * .4, Math.min(h * .4, delta)))
+    if (page.context().browser()?.browserType().name() === 'webkit' && page.viewportSize()!.width < 700) {
+      // Playwright cannot send a wheel to mobile WebKit. Exercise its native
+      // keyboard scrolling; separate Chromium recordings use actual touch input.
+      await page.keyboard.press(Math.abs(delta) > h * .75 ? delta > 0 ? 'PageDown' : 'PageUp' : delta > 0 ? 'ArrowDown' : 'ArrowUp')
+    } else await page.mouse.wheel(0, Math.max(-h * .4, Math.min(h * .4, delta)))
     await page.waitForTimeout(100)
   }
   throw Error('Native wheel input did not reach the scene')
@@ -58,7 +62,7 @@ test('native keyboard advance interrupts the fresh intro, and direct anchors do 
   await expect(page.locator('video.forest-film')).toHaveCount(0)
   expect((await movingPicture(page, 'breathing')).paused).toBe(false)
   const beforeWheel = await page.evaluate(() => scrollY)
-  await page.mouse.wheel(0, 500)
+  await page.keyboard.press('PageDown')
   await expect.poll(() => page.evaluate(y => scrollY - y, beforeWheel)).toBeGreaterThan(450)
   const restored = await page.evaluate(() => scrollY)
   await page.reload()
