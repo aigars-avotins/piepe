@@ -122,7 +122,7 @@ test('the decoded first frame retains local fungus edge anchors, not just a low 
 
 for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>test(`awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
   test.setTimeout(25000);await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
-  await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
+  await page.goto('/en/')
   await page.evaluate(()=>{
     const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
     const observer=new MutationObserver(()=>{
@@ -139,6 +139,7 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
       };requestAnimationFrame(()=>setTimeout(frame,0))
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
   })
+  await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:12000})
   const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]}).dockFrames)
   await testInfo.attach('photo-docking-frames',{body:JSON.stringify(frames),contentType:'application/json'})
@@ -271,7 +272,8 @@ test('a compositor withholding transparent video frames still presents paused fr
         const present=()=>{
           if(!this.isConnected)return
           if(Number(getComputedStyle(this).opacity)<.99){requestAnimationFrame(present);return}
-          ;(window as unknown as {stagedOpening:unknown}).stagedOpening={time:metadata.mediaTime,paused:this.paused}
+          const state=window as unknown as {stagedOpening:unknown}
+          state.stagedOpening ||= {time:metadata.mediaTime,paused:this.paused}
           callback(now,metadata)
         };present()
       })
@@ -282,4 +284,18 @@ test('a compositor withholding transparent video frames still presents paused fr
   const opening=await page.evaluate(()=>(window as unknown as {stagedOpening:{time:number;paused:boolean}}).stagedOpening)
   expect(opening.time).toBeLessThan(.05);expect(opening.paused).toBe(true)
   await expect(page.locator('[data-clip=awakening]')).toHaveAttribute('data-clip-ready','true')
+})
+
+test('source assignment discarding old frame subscriptions still prepares a real opening frame',async({page})=>{
+  await page.addInitScript(()=>{
+    sessionStorage.setItem('piepe-entered','1')
+    const request=HTMLVideoElement.prototype.requestVideoFrameCallback,source=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,'src')!
+    const callbacks=new WeakMap<HTMLVideoElement,number[]>()
+    HTMLVideoElement.prototype.requestVideoFrameCallback=function(callback){const id=request.call(this,callback);callbacks.set(this,[...callbacks.get(this)||[],id]);return id}
+    Object.defineProperty(HTMLVideoElement.prototype,'src',{configurable:true,get(){return source.get!.call(this)},set(value){for(const id of callbacks.get(this)||[])this.cancelVideoFrameCallback(id);callbacks.delete(this);source.set!.call(this,value)}})
+  })
+  await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
+  await expect(page.locator('.world')).toHaveAttribute('data-awakening','playing')
+  await expect(page.locator('[data-clip=awakening]')).toHaveAttribute('data-clip-ready','true')
+  await expect(page.locator('dialog[open]')).toHaveCount(0)
 })

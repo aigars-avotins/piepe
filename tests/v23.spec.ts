@@ -3,6 +3,10 @@ import type { Page } from '@playwright/test'
 import { messages } from '../src/i18n'
 
 test.beforeEach(async({page})=>{await page.bringToFront()})
+test.afterEach(async({page},testInfo)=>{
+  if(testInfo.status===testInfo.expectedStatus||page.isClosed())return
+  await testInfo.attach('environmental-state-on-failure',{body:JSON.stringify(await page.evaluate(()=>({visibility:document.visibilityState,scroll:scrollY,clips:[...document.querySelectorAll<HTMLElement>('[data-clip]')].map(element=>({...element.dataset})),videos:[...document.querySelectorAll('video')].map(video=>({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,total:video.getVideoPlaybackQuality().totalVideoFrames}))}))),contentType:'application/json'})
+})
 
 async function wheelTo(page: Page, id: string, fraction: number) {
   const destination = await page.locator('#' + id).evaluate((e, f) => Math.min(document.documentElement.scrollHeight - innerHeight, e.getBoundingClientRect().top + scrollY + innerHeight * f), fraction)
@@ -25,6 +29,7 @@ async function wheelTo(page: Page, id: string, fraction: number) {
 async function movingPicture(page: Page, name: 'understory' | 'breathing') {
   const layer = page.locator(`[data-clip="${name}"]`)
   await expect(layer).toHaveAttribute('data-clip-ready', 'true', { timeout: 10000 })
+  await expect(layer).toHaveAttribute('data-loop-hold', 'false')
   // Decode readiness can precede the scroll entrance. Sample the actual visible
   // scene after its existing camera scrub settles, rather than reading back a
   // hidden/intermediate composited surface and measuring the readback stall.
@@ -40,27 +45,38 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
     const position = getComputedStyle(video).objectPosition.split(' ').map(parseFloat)
     const sw = r.width / scale, sh = r.height / scale, sx = (video.videoWidth - sw) * position[0] / 100, sy = (video.videoHeight - sh) * position[1] / 100
     const canvas = document.createElement('canvas'); canvas.width = 128; canvas.height = 72
-    const ctx = canvas.getContext('2d')!
+    const ctx = canvas.getContext('2d', { willReadFrequently: true })!
     const frames: { time: number; hash?: number; presented: number }[] = []
-    let sampledAt = -Infinity
+    let sampledAt = -Infinity, sampling = false, settled = false, request = 0
     const started = performance.now()
     await new Promise<void>((resolve, reject) => {
-      const timeout = setTimeout(() => reject(Error('No advancing presented video frames: '+JSON.stringify({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,connected:video.isConnected,reason:video.parentElement?.dataset.clipReason,cycles:video.parentElement?.dataset.clipCycles,totalFrames:video.getVideoPlaybackQuality().totalVideoFrames,sampled:frames.length}))), 2500)
-      const frame: VideoFrameRequestCallback = (_, metadata) => {
-        // Read pixels at separated presented frames, rather than forcing a GPU→CPU
-        // conversion on every callback and stalling the renderer being measured.
-        let hash: number | undefined
-        if (performance.now() - sampledAt >= 250) {
-          sampledAt = performance.now(); ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
-          const pixels = ctx.getImageData(0, 0, 128, 72).data; hash = 2166136261
-          for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
-          hash >>>= 0
-        }
-        frames.push({ time: metadata.mediaTime, hash, presented: metadata.presentedFrames })
-        if (performance.now() - started < 750 || frames.length < 6 || frames.filter(frame => frame.hash !== undefined).length < 3 || video.paused || video.ended) video.requestVideoFrameCallback(frame)
-        else { clearTimeout(timeout); resolve() }
+      const timeout = setTimeout(() => { settled = true; video.cancelVideoFrameCallback(request); reject(Error('No advancing presented video frames: '+JSON.stringify({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,connected:video.isConnected,reason:video.parentElement?.dataset.clipReason,cycles:video.parentElement?.dataset.clipCycles,held:video.parentElement?.dataset.loopHold,totalFrames:video.getVideoPlaybackQuality().totalVideoFrames,sampled:frames.length}))) }, 2500)
+      const complete = () => {
+        if (settled || performance.now() - started < 750 || frames.length < 6 || frames.filter(frame => frame.hash !== undefined).length < 3 || video.paused || video.ended) return
+        settled = true; clearTimeout(timeout); video.cancelVideoFrameCallback(request); resolve()
       }
-      video.requestVideoFrameCallback(frame)
+      const frame: VideoFrameRequestCallback = (_, metadata) => {
+        if (settled) return
+        request = video.requestVideoFrameCallback(frame)
+        const sample: typeof frames[number] = { time: metadata.mediaTime, presented: metadata.presentedFrames }; frames.push(sample)
+        if (!sampling && performance.now() - sampledAt >= 250) {
+          sampledAt = performance.now(); sampling = true
+          // Copy asynchronously before CPU pixel inspection, so a readback cannot
+          // block the live decoder and manufacture the stall being measured.
+          void (async () => {
+            let bitmap: ImageBitmap | undefined
+            try { bitmap = await createImageBitmap(video, sx, sy, sw, sh, { resizeWidth: 128, resizeHeight: 72 }); ctx.drawImage(bitmap, 0, 0) }
+            catch { ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72) }
+            finally { bitmap?.close() }
+            const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
+            for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
+            if (!settled) sample.hash = hash >>> 0
+            sampling = false; complete()
+          })().catch(error => { settled = true; clearTimeout(timeout); video.cancelVideoFrameCallback(request); reject(error) })
+        }
+        complete()
+      }
+      request = video.requestVideoFrameCallback(frame)
     })
     opacity = 1
     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)

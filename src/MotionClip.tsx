@@ -48,7 +48,7 @@ function AwakeningClip({ name, enabled, active = true, onReady, onFinish, rememb
     if (!video) return
     started.current = true
     if (remember) rememberClip(name)
-    let lastTime = 0, progressAt = performance.now(), activeTime = 0, previous = performance.now(), revealed = false, frame = 0, paint = 0
+    let lastTime = 0, progressAt = performance.now(), activeTime = 0, previous = performance.now(), revealed = false, frame = 0, loadedFrame = 0, paint = 0
     const play = () => { if (lock.current) return; progressAt = performance.now(); video.play()?.catch(() => { if (!lock.current) finish('autoplay-blocked') }) }
     const present = () => {
       if (revealed || lock.current || !alive.current) return
@@ -89,9 +89,12 @@ function AwakeningClip({ name, enabled, active = true, onReady, onFinish, rememb
     if (typeof video.requestVideoFrameCallback === 'function') decoded()
     else video.addEventListener('loadeddata', decoded, { once: true })
     video.src = mediaUrl(`/media/forest-${name}.mp4`)
+    // Loading a new resource may discard an earlier callback registration. Keep a
+    // same-task post-assignment subscription too; present() commits only once.
+    if (typeof video.requestVideoFrameCallback === 'function') loadedFrame = video.requestVideoFrameCallback(present)
     return () => {
       clearInterval(timer); video.pause(); video.removeEventListener('loadeddata', decoded); video.removeEventListener('loadeddata', stage); video.removeEventListener('canplay', stage); video.removeEventListener('timeupdate', progress); video.removeEventListener('ended', ended); video.removeEventListener('error', error); document.removeEventListener('visibilitychange', visibility)
-      if (video.cancelVideoFrameCallback) video.cancelVideoFrameCallback(frame); else cancelAnimationFrame(frame)
+      if (video.cancelVideoFrameCallback) { video.cancelVideoFrameCallback(frame); video.cancelVideoFrameCallback(loadedFrame) } else cancelAnimationFrame(frame)
       cancelAnimationFrame(paint)
       // Keep the paused final surface through the camera handoff. Reset a detached
       // decoder after the next paint, rather than synchronously during that move.
