@@ -23,6 +23,14 @@ async function wheelTo(page: Page, id: string, fraction: number) {
 async function movingPicture(page: Page, name: 'understory' | 'breathing') {
   const layer = page.locator(`[data-clip="${name}"]`)
   await expect(layer).toHaveAttribute('data-clip-ready', 'true', { timeout: 10000 })
+  // Decode readiness can precede the scroll entrance. Sample the actual visible
+  // scene after its existing camera scrub settles, rather than reading back a
+  // hidden/intermediate composited surface and measuring the readback stall.
+  await expect.poll(() => layer.locator('video').evaluate(video => {
+    let opacity = 1
+    for (let element: Element | null = video; element; element = element.parentElement) opacity *= Number(getComputedStyle(element).opacity)
+    return opacity
+  })).toBeGreaterThan(.98)
   return layer.locator('video').evaluate(async (video: HTMLVideoElement) => {
     let opacity = 1
     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)

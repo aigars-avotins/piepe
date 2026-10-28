@@ -203,7 +203,9 @@ test('locale change while decoding does not reopen a modal, move focus or restar
 inViewport(1512,982,()=>test('Escape during the photo move reverses the current camera instead of snapping to full frame',async({page})=>{
   await page.setViewportSize({width:1512,height:982});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   await page.goto('/en/');await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
-  await page.waitForFunction(()=>document.querySelector('dialog[open].photo-moving')&&document.querySelector('.specimen-photo')!.getBoundingClientRect().width<innerWidth*.9,null,{timeout:12000})
+  // Inspect the native clock without forcing synchronous compositor geometry
+  // during every poll; the rendered width is checked after the real Escape key.
+  await page.waitForFunction(()=>{const animation=document.querySelector('dialog[open].photo-moving .specimen-photo')?.getAnimations()[0];return animation?.playState==='running'&&Number(animation.currentTime)>200&&Number(animation.currentTime)<700},null,{timeout:12000})
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toBeVisible()
   const width=await page.locator('.specimen-photo').evaluate(e=>e.getBoundingClientRect().width)
   expect(width).toBeLessThan(1512*.97)

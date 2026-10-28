@@ -52,7 +52,7 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
     const options = { duration: 1000, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'both' as const }
     const run = (back: boolean) => {
       if (!origin) { node.classList.remove('photo-moving'); setMoving(false); if (back) close.current(); else { docked.current(); focus() } return }
-      if (back && installed && animations.every(animation => animation.playState === 'paused' && !animation.currentTime)) {
+      if (back && installed && animations.every(animation => animation.currentTime !== null && Number(animation.currentTime) <= 0)) {
         // Escape during preparation returns to the retained world immediately; it
         // must not wait for the very image decode that the visitor is cancelling.
         generation++; animations.forEach(animation => animation.cancel()); restore(); installed = false
@@ -73,9 +73,10 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
       const frames = cameraFrames(full, back ? current : full, back ? full : target, back ? currentImage : worldPose(origin), back ? worldPose(world) : destination, back ? currentShade : 0, back ? currentBridge : 1, back)
       animations = [photo.animate(frames.aperture, options), image.animate(frames.image, options), shade.animate(frames.shade, options), bridge.animate(frames.worldShade, options)]
       installed = true
-      const playTogether = () => {
-        const start = document.timeline.currentTime
-        if (start === null) return
+      const playTogether = (lead: number) => {
+        const clock = document.timeline.currentTime
+        if (clock === null) return
+        const start = Number(clock) + lead
         // Assigning startTime releases the hold time directly. Avoid separate pending
         // play tasks: WebKit can otherwise commit the inverse layers on different ticks.
         animations.forEach(animation => { animation.startTime = start })
@@ -85,8 +86,10 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
       animations.forEach(animation => { animation.pause(); animation.currentTime = 0 })
       void Promise.all([back ? Promise.resolve() : image.decode().catch(() => {}), ...animations.map(animation => animation.ready)]).then(() => {
         if (cancelled || turn !== generation || !installed) return
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-          if (!cancelled && turn === generation && installed) playTogether()
+        requestAnimationFrame(first => requestAnimationFrame(second => {
+          // Commit every compositor layer before the common clock becomes active.
+          // Starting on this very paint lets WebKit expose one layer a tick early.
+          if (!cancelled && turn === generation && installed) playTogether(Math.max(16, second - first) * 2)
         }))
       }).catch(() => { /* Cancelling a pending native pause rejects its ready promise. */ })
       Promise.all(animations.map(a => a.finished)).then(() => {

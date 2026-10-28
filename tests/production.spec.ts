@@ -2,6 +2,9 @@ import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { messages } from '../src/i18n'
 
+// Production smoke is manual-only; retain actual live playback evidence on success.
+test.use({ video: 'on' })
+
 for (const locale of ['lv','en'] as const) test(`${locale}: released application, cinema, discovery, wallpapers and media delivery`, async ({page, request}, testInfo) => {
   test.setTimeout(65000)
   const t=messages[locale], path=locale==='lv'?'/':'/en/'
