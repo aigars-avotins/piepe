@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
 import { messages } from '../src/i18n'
+import { nativeDiagnostics } from './nativeDiagnostics'
+nativeDiagnostics()
 
 test.beforeEach(async({page})=>{await page.bringToFront()})
 test.afterEach(async({page},testInfo)=>{

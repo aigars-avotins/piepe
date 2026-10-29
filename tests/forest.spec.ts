@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test'
+import { nativeDiagnostics } from './nativeDiagnostics'
+nativeDiagnostics()
 // Exercise the preserved discovery flow independently of the new first-activation film.
 test.beforeEach(async ({ page }) => { await page.addInitScript(() => sessionStorage.setItem('piepe-awakening', '1')) })
 test.afterEach(async({page},testInfo)=>{ const events=await page.evaluate(()=>(window as unknown as {filmEvents?:unknown[]}).filmEvents).catch(()=>undefined); if(events) await testInfo.attach('film-events',{body:JSON.stringify(events),contentType:'application/json'}) })
