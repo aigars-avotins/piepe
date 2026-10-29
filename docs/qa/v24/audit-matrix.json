@@ -1,0 +1,322 @@
+[
+  {
+    "locale": "lv",
+    "viewport": [
+      1512,
+      982
+    ],
+    "beforeReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 V\u0113l neatkl\u0101ta",
+    "afterReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 Atkl\u0101ta",
+    "beforeCaption": "block",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 1146.453125,
+      "y": 519.953125,
+      "width": 169,
+      "height": 48,
+      "top": 519.953125,
+      "right": 1315.453125,
+      "bottom": 567.953125,
+      "left": 1146.453125
+    },
+    "afterButton": {
+      "x": 1146.453125,
+      "y": 519.953125,
+      "width": 169,
+      "height": 48,
+      "top": 519.953125,
+      "right": 1315.453125,
+      "bottom": 567.953125,
+      "left": 1146.453125
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      390,
+      844
+    ],
+    "beforeReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 V\u0113l neatkl\u0101ta",
+    "afterReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 Atkl\u0101ta",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 244.609375,
+      "y": 190.734375,
+      "width": 44,
+      "height": 48,
+      "top": 190.734375,
+      "right": 288.609375,
+      "bottom": 238.734375,
+      "left": 244.609375
+    },
+    "afterButton": {
+      "x": 244.609375,
+      "y": 190.734375,
+      "width": 44,
+      "height": 48,
+      "top": 190.734375,
+      "right": 288.609375,
+      "bottom": 238.734375,
+      "left": 244.609375
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      390,
+      664
+    ],
+    "beforeReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 V\u0113l neatkl\u0101ta",
+    "afterReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 Atkl\u0101ta",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 244.609375,
+      "y": 150.046875,
+      "width": 44,
+      "height": 48,
+      "top": 150.046875,
+      "right": 288.609375,
+      "bottom": 198.046875,
+      "left": 244.609375
+    },
+    "afterButton": {
+      "x": 244.609375,
+      "y": 150.046875,
+      "width": 44,
+      "height": 48,
+      "top": 150.046875,
+      "right": 288.609375,
+      "bottom": 198.046875,
+      "left": 244.609375
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      320,
+      690
+    ],
+    "beforeReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 V\u0113l neatkl\u0101ta",
+    "afterReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 Atkl\u0101ta",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 192.8125,
+      "y": 155.4375,
+      "width": 44,
+      "height": 48,
+      "top": 155.4375,
+      "right": 236.8125,
+      "bottom": 203.4375,
+      "left": 192.8125
+    },
+    "afterButton": {
+      "x": 192.8125,
+      "y": 155.4375,
+      "width": 44,
+      "height": 48,
+      "top": 155.4375,
+      "right": 236.8125,
+      "bottom": 203.4375,
+      "left": 192.8125
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      844,
+      390
+    ],
+    "beforeReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 V\u0113l neatkl\u0101ta",
+    "afterReadStatus": "Me\u017ea piez\u012bme 001 \u00b7 Atkl\u0101ta",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 732.484375,
+      "y": 296.21875,
+      "width": 44,
+      "height": 48,
+      "top": 296.21875,
+      "right": 776.484375,
+      "bottom": 344.21875,
+      "left": 732.484375
+    },
+    "afterButton": {
+      "x": 607.484375,
+      "y": 296.21875,
+      "width": 169,
+      "height": 48,
+      "top": 296.21875,
+      "right": 776.484375,
+      "bottom": 344.21875,
+      "left": 607.484375
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      1512,
+      982
+    ],
+    "beforeReadStatus": "Field note 001 \u00b7 Waiting to be found",
+    "afterReadStatus": "Field note 001 \u00b7 Discovered",
+    "beforeCaption": "block",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 1146.453125,
+      "y": 519.953125,
+      "width": 169,
+      "height": 48,
+      "top": 519.953125,
+      "right": 1315.453125,
+      "bottom": 567.953125,
+      "left": 1146.453125
+    },
+    "afterButton": {
+      "x": 1146.453125,
+      "y": 519.953125,
+      "width": 169,
+      "height": 48,
+      "top": 519.953125,
+      "right": 1315.453125,
+      "bottom": 567.953125,
+      "left": 1146.453125
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      390,
+      844
+    ],
+    "beforeReadStatus": "Field note 001 \u00b7 Waiting to be found",
+    "afterReadStatus": "Field note 001 \u00b7 Discovered",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 244.609375,
+      "y": 190.734375,
+      "width": 44,
+      "height": 48,
+      "top": 190.734375,
+      "right": 288.609375,
+      "bottom": 238.734375,
+      "left": 244.609375
+    },
+    "afterButton": {
+      "x": 244.609375,
+      "y": 190.734375,
+      "width": 44,
+      "height": 48,
+      "top": 190.734375,
+      "right": 288.609375,
+      "bottom": 238.734375,
+      "left": 244.609375
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      390,
+      664
+    ],
+    "beforeReadStatus": "Field note 001 \u00b7 Waiting to be found",
+    "afterReadStatus": "Field note 001 \u00b7 Discovered",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 244.609375,
+      "y": 150.046875,
+      "width": 44,
+      "height": 48,
+      "top": 150.046875,
+      "right": 288.609375,
+      "bottom": 198.046875,
+      "left": 244.609375
+    },
+    "afterButton": {
+      "x": 244.609375,
+      "y": 150.046875,
+      "width": 44,
+      "height": 48,
+      "top": 150.046875,
+      "right": 288.609375,
+      "bottom": 198.046875,
+      "left": 244.609375
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      320,
+      690
+    ],
+    "beforeReadStatus": "Field note 001 \u00b7 Waiting to be found",
+    "afterReadStatus": "Field note 001 \u00b7 Discovered",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 192.8125,
+      "y": 155.4375,
+      "width": 44,
+      "height": 48,
+      "top": 155.4375,
+      "right": 236.8125,
+      "bottom": 203.4375,
+      "left": 192.8125
+    },
+    "afterButton": {
+      "x": 192.8125,
+      "y": 155.4375,
+      "width": 44,
+      "height": 48,
+      "top": 155.4375,
+      "right": 236.8125,
+      "bottom": 203.4375,
+      "left": 192.8125
+    },
+    "pageErrors": []
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      844,
+      390
+    ],
+    "beforeReadStatus": "Field note 001 \u00b7 Waiting to be found",
+    "afterReadStatus": "Field note 001 \u00b7 Discovered",
+    "beforeCaption": "none",
+    "afterCaption": "block",
+    "beforeButton": {
+      "x": 732.484375,
+      "y": 313.5,
+      "width": 44,
+      "height": 48,
+      "top": 313.5,
+      "right": 776.484375,
+      "bottom": 361.5,
+      "left": 732.484375
+    },
+    "afterButton": {
+      "x": 607.484375,
+      "y": 313.5,
+      "width": 169,
+      "height": 48,
+      "top": 313.5,
+      "right": 776.484375,
+      "bottom": 361.5,
+      "left": 607.484375
+    },
+    "pageErrors": []
+  }
+]
