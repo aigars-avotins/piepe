@@ -41,7 +41,7 @@ async function nativeEnd(page: Page, browserName: string, bottom: boolean) {
 
 for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`2.5.1 cold ${width}x${height}`, () => {
   test.use({ viewport: { width, height }, deviceScaleFactor: 1, isMobile: width < 700, hasTouch: width < 700 })
-  for (const locale of ['lv', 'en']) test(`${locale}: opening poster owns every paint through hydration, delayed decoding and Replay`, async ({ page }, info) => {
+  for (const locale of ['lv', 'en']) test(`${locale}: opening poster owns every paint through hydration, delayed decoding and Replay`, async ({ page, browserName }, info) => {
     test.setTimeout(45000)
     await page.addInitScript(() => {
       const audit: { time: number; source: string; videoTime?: number; ready?: number }[] = []
@@ -65,7 +65,10 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`2.5.1 co
     await page.goto(locale === 'lv' ? '/' : '/en/', { waitUntil: 'commit' })
     await page.locator('.forest-still').evaluate((image: HTMLImageElement) => image.decode())
     await expect(page.locator('.world')).toHaveClass(/prerendered/)
-    await info.attach('server-first-opening', { body: await page.screenshot(), contentType: 'image/png' })
+    // WebKit's screenshot waits for document.fonts.ready, which waits for the
+    // deliberately held module. Its first paint is retained in the browser video
+    // and per-paint audit; take the still screenshot after releasing the gates.
+    if (browserName !== 'webkit') await info.attach('server-first-opening', { body: await page.screenshot(), contentType: 'image/png' })
     hydrate()
     await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
     await expect(page.locator('.forest-film')).toHaveCount(1)
@@ -77,14 +80,15 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`2.5.1 co
     await info.attach('first-paint-to-hydration', { body: JSON.stringify(paints), contentType: 'application/json' })
     // Release before encoding another screenshot: encoding must not consume the
     // real load watchdog budget. The held interval above is audited every paint.
-    decode()
-    await info.attach('hydrated-opening-handoff', { body: await page.screenshot(), contentType: 'image/png' })
-    const presented = await page.locator('.forest-film').evaluate((video: HTMLVideoElement) => new Promise<{ time: number; count: number }>(resolve => {
+    const presentation = page.locator('.forest-film').evaluate((video: HTMLVideoElement) => new Promise<{ time: number; count: number }>(resolve => {
       let count = 0
       const frame: VideoFrameRequestCallback = (_, metadata) => { if (++count >= 3) resolve({ time: metadata.mediaTime, count }); else video.requestVideoFrameCallback(frame) }
       video.requestVideoFrameCallback(frame)
     }))
+    decode()
+    const presented = await presentation
     expect(presented.time).toBeGreaterThan(0)
+    await info.attach('hydrated-opening-handoff', { body: await page.screenshot(), contentType: 'image/png' })
     await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'ended', { timeout: 12000 })
     await expect(page.locator('.forest-still')).toHaveAttribute('src', /forest-final.jpg/)
     // Cached return skips the intro; Replay must nevertheless stage the opening.
