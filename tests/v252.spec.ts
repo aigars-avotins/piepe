@@ -22,7 +22,7 @@ async function geometry(page: Page) {
 }
 
 for (const [width, height] of [[1512, 982], [1440, 900], [390, 844], [390, 664], [320, 690]]) test.describe(`2.5.2 geometry ${width}x${height}`, () => {
-  test.use({ viewport: { width, height }, isMobile: width < 700, hasTouch: width < 700, deviceScaleFactor: 1 })
+  test.use({ viewport: { width, height }, isMobile: width < 700, hasTouch: width < 700, deviceScaleFactor: 1, ...(width >= 700 ? { userAgent: undefined, screen: { width, height } } : {}) })
   for (const locale of ['lv', 'en']) test(`${locale}: short Understory budget preserves full bleed, copy and static overrides`, async ({ page }, info) => {
     await page.addInitScript(() => sessionStorage.setItem('piepe-entered', '1'))
     await page.goto((locale === 'lv' ? '/' : '/en/') + '#understory')
@@ -109,7 +109,7 @@ async function settledAnchor(page: Page, id: string) {
 }
 
 for (const [width, height, locale] of [[1512, 982, 'lv'], [390, 664, 'en']] as const) test.describe(`2.5.2 native journey ${width}x${height}`, () => {
-  test.use({ viewport: { width, height }, isMobile: width < 700, hasTouch: width < 700, deviceScaleFactor: 1 })
+  test.use({ viewport: { width, height }, isMobile: width < 700, hasTouch: width < 700, deviceScaleFactor: 1, ...(width >= 700 ? { userAgent: undefined, screen: { width, height } } : {}) })
   test('wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work', async ({ page, browserName }, info) => {
     test.setTimeout(65000)
     await page.addInitScript(() => {

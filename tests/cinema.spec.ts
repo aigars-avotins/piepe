@@ -133,15 +133,18 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
     const observer=new MutationObserver(()=>{
       const photo=document.querySelector('.specimen-photo')
       if(!photo||!document.querySelector('dialog[open].photo-moving'))return
-      observer.disconnect();const start=performance.now();let ran=false
-      const frame=()=>{
+      observer.disconnect();let start:number|undefined,ran=false
+      const frame=(now:number)=>{
+        start ??=now
         const r=photo.getBoundingClientRect(),camera=(photo as HTMLElement).dataset.cameraPhase
         const moving=(camera==='moving'||camera==='returning')&&Number((photo as HTMLElement).dataset.cameraProgress)>0;ran ||=moving
         // One geometry read samples the rendered source at one instant, including both transforms.
         const source=photo.querySelector('img')!.getBoundingClientRect()
-        samples.push({t:performance.now()-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
-        if((!ran||document.querySelector('dialog.photo-moving'))&&performance.now()-start<10000)requestAnimationFrame(()=>setTimeout(frame,0))
-      };requestAnimationFrame(()=>setTimeout(frame,0))
+        // Sample geometry on the render clock itself. A queued timer can run
+        // late and then catch up a few ms later, inventing a velocity spike.
+        samples.push({t:now-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
+        if((!ran||document.querySelector('dialog.photo-moving'))&&now-start<10000)requestAnimationFrame(frame)
+      };requestAnimationFrame(frame)
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
   })
   await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
