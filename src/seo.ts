@@ -1,7 +1,9 @@
 import { localePath, messages } from './i18n'
 import type { Locale } from './i18n'
 export function structuredData(locale: Locale) {
-  return { '@context': 'https://schema.org', '@type': 'WebPage', name: messages[locale].title, description: messages[locale].description, url: `https://pie.pe${localePath(locale)}`, inLanguage: locale, isPartOf: { '@type': 'WebSite', name: 'PIE.PE', url: 'https://pie.pe/' } }
+  const url = `https://pie.pe${localePath(locale)}`
+  return { '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${url}#webpage`, name: messages[locale].title, description: messages[locale].description, url, inLanguage: locale,
+    isPartOf: { '@type': 'WebSite', '@id': 'https://pie.pe/#website', name: 'PIE.PE', url: 'https://pie.pe/', description: messages.lv.description, inLanguage: ['lv', 'en'] } }
 }
 export function updateMetadata(locale: Locale) {
   const t = messages[locale], url = `https://pie.pe${localePath(locale)}`
