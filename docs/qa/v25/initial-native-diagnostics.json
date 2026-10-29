@@ -1,0 +1,91 @@
+{
+  "sourceCommit": "2a59a6bce11dc5218a3d43692692b9e04f47dc25",
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/40860620636",
+  "stats": {
+    "startTime": "2026-10-29T10:52:11.480Z",
+    "duration": 770430.674,
+    "expected": 104,
+    "skipped": 1,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "failures": [
+    {
+      "file": "v23.spec.ts",
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "errors": [
+        "Error: expect(received).toBeGreaterThan(expected)\n\nExpected: > 2\nReceived:   2\n\n  173 |         expect(result.paused).toBe(false); expect(result.ready).toBeGreaterThanOrEqual(2); expect(result.opacity).toBeGreaterThan(.98)\n  174 |         expect(result.rect.w).toBeGreaterThanOrEqual(result.viewport.w - 2); expect(result.rect.h).toBeGreaterThanOrEqual(result.viewport.h - 2)\n> 175 |         expect(result.frames.length).toBeGreaterThan(3); expect(distinctFrames(result.frames)).toBeGreaterThan(2)\n      |                                                                                                ^\n  176 |         expect(result.frames.slice(1).reduce((elapsed, frame, i) => elapsed + Math.max(0, frame.time - result.frames[i].time), 0)).toBeGreaterThan(.3)\n  177 |         const box = await page.locator(`#${id} .cinema-content`).boundingBox(); expect(Math.abs(box!.y)).toBeLessThan(2)\n  178 |       }\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:175:96"
+      ],
+      "environment": [
+        {
+          "visibility": "visible",
+          "scroll": 1276,
+          "clips": [
+            {
+              "clip": "understory",
+              "clipState": "playing",
+              "clipReady": "true",
+              "stillReady": "true",
+              "clipReason": "",
+              "clipCycles": "0",
+              "loopHold": "false"
+            }
+          ],
+          "videos": [
+            {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 5.728696269000022,
+              "paused": false,
+              "ended": false,
+              "ready": 4,
+              "total": 145
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "errors": [
+        "Error: expect(received).toBeGreaterThan(expected)\n\nExpected: > 2\nReceived:   2\n\n  173 |         expect(result.paused).toBe(false); expect(result.ready).toBeGreaterThanOrEqual(2); expect(result.opacity).toBeGreaterThan(.98)\n  174 |         expect(result.rect.w).toBeGreaterThanOrEqual(result.viewport.w - 2); expect(result.rect.h).toBeGreaterThanOrEqual(result.viewport.h - 2)\n> 175 |         expect(result.frames.length).toBeGreaterThan(3); expect(distinctFrames(result.frames)).toBeGreaterThan(2)\n      |                                                                                                ^\n  176 |         expect(result.frames.slice(1).reduce((elapsed, frame, i) => elapsed + Math.max(0, frame.time - result.frames[i].time), 0)).toBeGreaterThan(.3)\n  177 |         const box = await page.locator(`#${id} .cinema-content`).boundingBox(); expect(Math.abs(box!.y)).toBeLessThan(2)\n  178 |       }\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:175:96"
+      ],
+      "environment": [
+        {
+          "visibility": "visible",
+          "scroll": 6333,
+          "clips": [
+            {
+              "clip": "breathing",
+              "clipState": "playing",
+              "clipReady": "true",
+              "stillReady": "true",
+              "clipReason": "ended",
+              "clipCycles": "1",
+              "loopHold": "false"
+            },
+            {
+              "clip": "understory",
+              "clipState": "idle",
+              "clipReady": "false",
+              "stillReady": "true",
+              "clipReason": "",
+              "clipCycles": "0",
+              "loopHold": "false"
+            }
+          ],
+          "videos": [
+            {
+              "src": "http://127.0.0.1:4173/media/forest-breathing.mp4?v=2.3",
+              "time": 4.071848598999958,
+              "paused": false,
+              "ended": false,
+              "ready": 4,
+              "total": 290
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
