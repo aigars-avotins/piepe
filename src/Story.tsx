@@ -3,14 +3,15 @@ import { useState } from 'react'
 import type { CSSProperties, MouseEvent, RefObject } from 'react'
 import { messages } from './i18n'
 import type { Locale } from './i18n'
+export type NoteState = 'unseen' | 'discovered' | 'collected'
 type Props = {
   locale: Locale; plane?: CSSProperties; hotspot?: RefObject<HTMLButtonElement | null>;
-  inactive?: boolean; intro?: boolean; imageFailed?: boolean; collected?: boolean; paused?: boolean;
+  inactive?: boolean; intro?: boolean; imageFailed?: boolean; noteState?: NoteState; paused?: boolean;
   onDiscovery?: (event: MouseEvent<HTMLButtonElement>) => void; onReturn?: () => void; onPause?: () => void;
   cinemaErrors?: { understory: boolean; breathing: boolean }; onRetryCinema?: (name: 'understory' | 'breathing') => void;
   inspectEvents?: { onMouseEnter: () => void; onMouseLeave: () => void; onFocus: () => void; onBlur: () => void };
 }
-export default function Story({ locale, plane, hotspot, inactive = false, intro = false, imageFailed = false, collected = false, paused = false, cinemaErrors, onRetryCinema, onDiscovery, onReturn, onPause, inspectEvents }: Props) {
+export default function Story({ locale, plane, hotspot, inactive = false, intro = false, imageFailed = false, noteState = 'unseen', paused = false, cinemaErrors, onRetryCinema, onDiscovery, onReturn, onPause, inspectEvents }: Props) {
   const t = messages[locale]
   const [downloadHint, setDownloadHint] = useState(false)
   return <>    <main inert={inactive}>
@@ -27,27 +28,27 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <div className="cinema-content">
         <div className="chapter-label"><span className="label">{t.beneathLabel}</span><span className="chapter-line" /></div>
         <div className="bark-copy"><h2 id="bark-title">{t.beneathTitle}<br /><em>{t.beneathEm}</em></h2><p className="chapter-body">{t.beneathBody}</p><a className="line-link" href="#encounter">{t.continueJourney} <span aria-hidden="true"><Arrow direction="down" /></span></a>
-          <div className="cinema-controls">{cinemaErrors?.understory ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('understory')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+          <div className="cinema-controls">{!paused && cinemaErrors?.understory ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('understory')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
         </div>
         <span className="depth-coordinate" aria-hidden="true">{t.depth}</span>
         </div>
       </section>
       <section id="encounter" className="chapter encounter-chapter" data-scene="encounter" aria-labelledby="encounter-title">
         <div className="chapter-label"><span className="label">{t.encounterLabel}</span><span className="chapter-line" /></div>
-        <div className="encounter-copy"><p className="label warm-label">{t.small}</p><h2 id="encounter-title">{t.encounterTitle}<br /><em>{t.encounterEm}</em></h2><p className="chapter-body">{t.encounterBody}</p><button className="line-link" onClick={onDiscovery} {...inspectEvents}>{t.openNote} <span aria-hidden="true"><Arrow direction="diagonal" /></span></button><p className="encounter-status">{collected ? t.collectedShort : t.waiting}</p></div>
-        <button className="specimen-invitation" onClick={onDiscovery} {...inspectEvents} aria-label={`${t.visibleBeginning} — ${t.enterEncounter}`} aria-haspopup="dialog"><span className="annotation-cross" aria-hidden="true">+</span><span>{t.visibleBeginning}</span></button>
+        <div className="encounter-copy"><p className="label warm-label">{t.small}</p><h2 id="encounter-title">{t.encounterTitle}<br /><em>{t.encounterEm}</em></h2><p className="chapter-body">{t.encounterBody}</p><button className="line-link" onClick={onDiscovery} {...inspectEvents}>{t.openNote} <span aria-hidden="true"><Arrow direction="diagonal" /></span></button><p className="encounter-status" aria-live="polite" aria-atomic="true" data-note-state={noteState}>{noteState === 'collected' ? t.collectedShort : noteState === 'discovered' ? t.discoveredShort : t.waiting}</p></div>
+        <button className="specimen-invitation" onClick={onDiscovery} {...inspectEvents} aria-label={`${t.openNote} — ${t.noteLabel}`} aria-haspopup="dialog"><span className="annotation-cross" aria-hidden="true">+</span><span>{t.openNote}</span></button>
       </section>
       <section id="fungus-facts" className="fungus-facts" aria-labelledby="facts-title">
         <div className="facts-intro"><p className="label">pie.pe</p><h2 id="facts-title">{t.factsTitle}</h2><p>{t.factsIntro}</p></div>
         <div className="fact-observations">{t.facts.map((fact, index) => <article key={index}><span className="label">0{index + 1}</span><h3>{fact.title}</h3><p>{fact.text}</p></article>)}</div>
-        <details className="fungus-vocabulary"><summary>{t.glossaryTitle}</summary><dl>{t.glossary.map(entry => <div key={entry.term}><dt>{entry.term}</dt><dd>{entry.definition}</dd></div>)}</dl></details>
+        <details className="fungus-vocabulary"><summary>{t.glossaryTitle}</summary><dl>{t.glossary.map(entry => <div key={entry.term}><dt>{entry.term}</dt><dd>{entry.definition}</dd></div>)}</dl><p className="vocabulary-note">{t.glossaryObservation}</p></details>
         <p className="art-note">{t.artNote}</p>
         <div className="fact-sources"><span>{t.sources}</span><a href="https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/" target="_blank" rel="noopener noreferrer">Woodland Trust <Arrow /></a><a href="https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm" target="_blank" rel="noopener noreferrer">University of Edinburgh <Arrow /></a></div>
       </section>
       <section id="return" className="chapter return-chapter cinematic-chapter" data-scene="return" aria-labelledby="return-title">
         <div className="cinema-content">
         <div className="return-copy"><p className="label">{t.returnLabel}</p><h2 id="return-title">{t.returnTitle}<br /><em>{t.returnEm}</em></h2><p className="return-thought">{t.returnThought}</p><button className="line-link" onClick={onReturn}>{t.returnForest} <span aria-hidden="true"><Arrow direction="up" /></span></button><a className="line-link" href="#wallpapers">{t.endingWallpapers}<span aria-hidden="true"><Arrow direction="down" /></span></a>
-          <div className="cinema-controls">{cinemaErrors?.breathing ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('breathing')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+          <div className="cinema-controls">{!paused && cinemaErrors?.breathing ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('breathing')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
         </div>
         </div>
       </section>
