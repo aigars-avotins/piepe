@@ -1,0 +1,185 @@
+[
+  {
+    "locale": "lv",
+    "viewport": [
+      1512,
+      982
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".facts-context > p:nth-child(1)"
+          ],
+          [
+            ".facts-context > p:nth-child(2)"
+          ],
+          [
+            "article:nth-child(2) > .label"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      390,
+      844
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".facts-intro > p:nth-child(3)"
+          ],
+          [
+            ".facts-context > p:nth-child(2)"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      390,
+      664
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".facts-intro > p:nth-child(3)"
+          ],
+          [
+            ".facts-context > p:nth-child(2)"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      320,
+      690
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".facts-intro > p:nth-child(3)"
+          ],
+          [
+            ".facts-context > p:nth-child(2)"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      1512,
+      982
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".facts-context > p:nth-child(1)"
+          ],
+          [
+            ".facts-context > p:nth-child(2)"
+          ],
+          [
+            "article:nth-child(2) > .label"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      390,
+      844
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "#facts-title"
+          ],
+          [
+            ".facts-intro > p:nth-child(3)"
+          ],
+          [
+            ".facts-context > p:nth-child(1)"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      390,
+      664
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            "#facts-title"
+          ],
+          [
+            ".facts-intro > p:nth-child(3)"
+          ],
+          [
+            ".facts-context > p:nth-child(1)"
+          ],
+          [
+            ".facts-context > p:nth-child(2)"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      320,
+      690
+    ],
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "targets": [
+          [
+            ".facts-context > p:nth-child(1)"
+          ],
+          [
+            ".facts-context > p:nth-child(2)"
+          ]
+        ]
+      }
+    ]
+  }
+]

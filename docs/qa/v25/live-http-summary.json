@@ -1,0 +1,61 @@
+{
+  "observedAt": "2026-10-29T10:29:45.127Z",
+  "releaseObserved": "2.4",
+  "candidateDeployed": false,
+  "requests": [
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "redirects": 0,
+      "effectiveURL": "https://pie.pe/sitemap.xml",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "xRobotsTag": null,
+      "bytes": 652,
+      "sha256": "50f2fc6bd30325a97a1430058904b3317a18d2ddb1835688b825edf26904d6f6",
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">\n  <url><loc>https://pie.pe/</loc><xhtml:link rel=\"alternate\" hreflang=\"lv\" href=\"https://pie.pe/\"/><xhtml:link rel=\"alternate\" hreflang=\"en\" href=\"https://pie.pe/en/\"/><xhtml:link rel=\"alternate\" hreflang=\"x-default\" href=\"https://pie.pe/\"/></url>\n  <url><loc>https://pie.pe/en/</loc><xhtml:link rel=\"alternate\" hreflang=\"lv\" href=\"https://pie.pe/\"/><xhtml:link rel=\"alternate\" hreflang=\"en\" href=\"https://pie.pe/en/\"/><xhtml:link rel=\"alternate\" hreflang=\"x-default\" href=\"https://pie.pe/\"/></url>\n</urlset>\n"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain",
+      "redirects": 0,
+      "effectiveURL": "https://pie.pe/robots.txt",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "xRobotsTag": null,
+      "bytes": 59,
+      "sha256": "a7dde0cab785c84d68bf5cec035971fe1dfc02362d6f9efe8b54e560d9f47801",
+      "body": "User-agent: *\nAllow: /\nSitemap: https://pie.pe/sitemap.xml\n"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html",
+      "redirects": 0,
+      "effectiveURL": "https://pie.pe/",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "xRobotsTag": null,
+      "bytes": 22544,
+      "sha256": "6c84ab337dcf35ae5c5f5cea580eb876210a5e26fc65965b0bf404c66234b087",
+      "htmlLang": "lv",
+      "canonical": "https://pie.pe/",
+      "jsonLdScripts": 1,
+      "robotsNoindex": false
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "contentType": "text/html",
+      "redirects": 0,
+      "effectiveURL": "https://pie.pe/en/",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "xRobotsTag": null,
+      "bytes": 22437,
+      "sha256": "1e376ea26bef9c50968dc9b2a9f4b9d774325024041d6f0b8662c3c6fd586e75",
+      "htmlLang": "en",
+      "canonical": "https://pie.pe/en/",
+      "jsonLdScripts": 1,
+      "robotsNoindex": false
+    }
+  ]
+}
