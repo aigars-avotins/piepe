@@ -20,5 +20,21 @@
     "result": "No deployment; existing environment asset-upload integration rejected authentication with 401.",
     "resolution": "Existing main-to-piepe Cloudflare Workers Builds integration deployed successfully."
   },
-  "postPublicationValidation": "https://github.com/aigars-avotins/piepe/actions/runs/40819145487"
+  "postPublicationValidation": "https://github.com/aigars-avotins/piepe/actions/runs/40819145487",
+  "finalValidation": {
+    "run": "https://github.com/aigars-avotins/piepe/actions/runs/40822259868",
+    "qaCandidateCommit": "9fbec9011b6775656dd252053090f8c45306876b",
+    "chromium": {
+      "regressionPassed": 89,
+      "productionPassed": 2
+    },
+    "nativeMacOSWebKit": {
+      "regressionPassed": 88,
+      "chromiumOnlyRecorderSkipped": 1,
+      "productionPassed": 2
+    },
+    "failures": 0,
+    "flaky": 0,
+    "runtimeAssetsUnchanged": true
+  }
 }
