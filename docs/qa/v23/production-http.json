@@ -1,0 +1,38 @@
+{
+  "lv": {
+    "version": "2.3",
+    "module": "/assets/index-w6vdbCip.js",
+    "csp": true,
+    "htmlSha256": "b635220a0ecfe43e50c4c42e7ef9a87bf886f1dcd564912feac888dc30766791"
+  },
+  "en": {
+    "version": "2.3",
+    "module": "/assets/index-w6vdbCip.js",
+    "csp": true,
+    "htmlSha256": "419b7f47fbb58db2889d03a11814292b434da3bbaf2e28234b826ca98c8fd796"
+  },
+  "reveal": {
+    "range": 206,
+    "bytes": 64,
+    "contentRange": "bytes 0-63/9212166"
+  },
+  "awakening": {
+    "range": 206,
+    "bytes": 64,
+    "contentRange": "bytes 0-63/8237084"
+  },
+  "understory": {
+    "range": 206,
+    "bytes": 64,
+    "contentRange": "bytes 0-63/5846195"
+  },
+  "breathing": {
+    "range": 206,
+    "bytes": 64,
+    "contentRange": "bytes 0-63/7025165"
+  },
+  "assets": {
+    "/assets/index-w6vdbCip.js": "42698bd685ed6971fe0e7e47792fd545623503874c14d3f6243bd4effb4ab579",
+    "/assets/index-xw5-JyRc.css": "02f850c1400869af83be4647b245f1f40a778b3211d59e4793c90f72398c1ace"
+  }
+}
