@@ -19,7 +19,7 @@ Base: `4ca999676e2b7e79761ff779c964043b5514dc06`, freshly fetched `main`. Develo
 ## Implementation
 
 - `App.tsx` restores monotonic `unseen` / `discovered` / `collected` progress using existing safe session conventions. The existing camera's `onDocked` callback marks a successfully readable note; cancelling film preparation does not. Explicit download alone collects it. Legacy `piepe-note-found` sessions still restore as collected. When storage is denied, progress survives within the mounted page, including LV/EN/history, but cannot survive a reload; no tracking/storage workaround was added.
-- `Story.tsx` announces localized progress politely. The specimen invitation says the same action as the existing note button, including its accessible name. On phones the small caption sits below the original 44px plus anchor; it does not move the photographic target or promise the separate 3.0 portal.
+- `Story.tsx` announces localized progress politely. The specimen invitation says the same action as the existing note button, including its accessible name. On portrait phones the small caption sits below the original 44px plus anchor; it does not move that photographic target or promise the separate 3.0 portal.
 - Two species-agnostic sentences inside the existing optional glossary explain hidden hyphae extent and identification features. The existing native disclosure and its keyboard semantics remain; poetic observations are unchanged.
 - Replay respects static preferences, supported connection preference changes suspend/restore environmental playback, and explicit pause takes precedence over error Retry. The existing reactive reduced-motion hook and all film/camera timelines remain intact.
 - Added one localized `twitter:image:alt`, including client-side locale updates. Existing OG/card/canonical/hreflang/schema/security behavior remains intact.
@@ -35,9 +35,9 @@ Chromium, local production build through the existing Worker-equivalent preview 
 | LV · 390×664 | ![LV phone before](qa/v24/before-lv-390x664.webp) | ![LV phone after](qa/v24/after-lv-390x664.webp) |
 | EN · 390×664 | ![EN phone before](qa/v24/before-en-390x664.webp) | ![EN phone after](qa/v24/after-en-390x664.webp) |
 
-Both languages were also rendered at **390×844, 320×690 and 844×390**. The invitation caption stays visible/in bounds, the original plus remains anchored, targets stay at least 44px, and the document has no horizontal overflow. Narrow landscape requires normal scrolling; content is not compressed into a fixed panel. [Ten-view audit geometry/state matrix](qa/v24/audit-matrix.json). Optional glossary: [LV phone](qa/v24/glossary-lv-390x664.webp), [EN phone](qa/v24/glossary-en-390x664.webp).
+Both languages were also rendered at **390×844, 320×690 and 844×390**. The invitation caption stays visible/in bounds, portrait phones retain the exact original plus position, targets stay at least 44px, and the document has no horizontal overflow. Narrow landscape requires normal scrolling; content is not compressed into a fixed panel. [Ten-view audit geometry/state matrix](qa/v24/audit-matrix.json). Optional glossary: [LV phone](qa/v24/glossary-lv-390x664.webp), [EN phone](qa/v24/glossary-en-390x664.webp).
 
-The visual trade-off is one quiet caption below the phone plus and a gold discovered caption, using the existing type/palette. The floating sound toggle retains its existing location and behavior. No additional controls, HUD, structural redesign or cinematic motion changes; therefore no redundant new before/after film encoding was added.
+The visual trade-off is one quiet caption below the portrait-phone plus and a gold discovered caption, using the existing type/palette. At 844×390 the existing inline invitation now includes its caption: the plus sits 125px farther left to make room, remaining on the fungus in the inspected composition ([LV landscape](qa/v24/landscape-lv-844x390.webp), [EN landscape](qa/v24/landscape-en-844x390.webp)). The floating sound toggle retains its existing location and behavior. No additional controls, HUD, structural redesign or cinematic motion changes; no additional capture suite or video encoding was committed. The existing CI scroll comparison does capture deployed 2.3 and local 2.4 at 1440×900 LV: [Chromium artifact](https://github.com/aigars-avotins/piepe/actions/runs/40832227488/artifacts/12879353215), `scroll-recording-*/{before,after}/*.webm`. Key frames at 3/6/10/14 seconds were visually inspected for full-bleed composition and preserved scenery; capture start times differ, so this is not a synchronized pixel comparison.
 
 ## Focused development checks
 
@@ -55,7 +55,19 @@ No dependencies, re-encoding, loading-quality reductions or CI/workflow changes.
 
 ## Final candidate validation and limitations
 
-The single complete manual release-validation run (unfiltered Chromium + native **macOS 15 Intel WebKit**, production smoke **off** because 2.4 is not deployed) will be linked here with its exact source commit/results. Documentation-only evidence updates do not alter the tested candidate.
+The single complete [manual release-validation run](https://github.com/aigars-avotins/piepe/actions/runs/40832227488) tested source `56fe6724d0d75ea5b29f03ae1fbf2ac236a64a9f`, unfiltered Chromium + native **macOS 15 Intel WebKit**, production smoke **off** because 2.4 is not deployed:
+
+| Browser | Initial result |
+| --- | --- |
+| Chromium | **100 passed**, 0 failed/skipped/flaky. |
+| Native macOS WebKit | **96 passed, 3 failed, 1 skipped** (the Chromium-only CI recorder). |
+
+Diagnosis before the one permitted necessary retry:
+
+- Both existing desktop `v23.spec.ts` frame probes failed: one callback-cadence timeout with advancing native video time, and one sample set with only two distinct pixel hashes. Phone frame/revisit tests, photo docking tests and other media tests passed. These failures are retained as evidence, not treated as a pass; the existing cinematic tests and their cadence/pixel/visibility requirements are unchanged.
+- The new live-preference test requested Understory playback after WebKit's native scroll anchoring had moved the viewport to the encounter during the intentionally shorter static layout. The failure screenshot shows the encounter; the clip correctly remained idle offscreen. The test now natively revisits Understory after restoring motion, then still requires media readiness and advancing playback. No forced application scrolling or camera changes were introduced.
+
+The necessary retry will run the complete native WebKit suite once, with unchanged application/media sources and the diagnosed test navigation correction. Chromium already validated the identical application; the changed preference test is also rechecked locally. No further full run is authorized by this task. Final retry results will be recorded before handoff.
 
 - Firefox was downloaded and attempted locally, but failed before opening any page: `browserType.launch … Could not find profile folder`. Moving its temporary profile from `/tmp` into the workspace produced the same launch failure. **No Firefox pass is claimed.**
 - Phone sizes and touch behavior are browser emulation, **not physical iPhone testing**. Native macOS WebKit is a separate CI result, not evidence of physical Safari/iOS hardware.

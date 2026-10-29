@@ -146,7 +146,13 @@ test('live reduced-motion and data-saving toggles suspend and restore scenes wit
       connection.saveData = value; connection.dispatchEvent(new Event('change'))
     }, saving)
     if (saving) { await expect(page.locator('video')).toHaveCount(0); await expect(page.locator('.world')).toHaveClass(/static-preference/) }
-    else { await expect(page.locator('.world')).not.toHaveClass(/static-preference/); await moving(page) }
+    else {
+      await expect(page.locator('.world')).not.toHaveClass(/static-preference/)
+      // Static scenes intentionally shorten the page. WebKit's native scroll
+      // anchoring can keep the following encounter in view after that reflow;
+      // revisit the film before requiring playback, rather than an offscreen clip.
+      await page.locator('#understory').scrollIntoViewIfNeeded(); await moving(page)
+    }
   }
   await expect(page.locator('video.forest-film')).toHaveCount(0)
   await expect(page.locator('.encounter-status')).toHaveText(messages.en.discoveredShort)
