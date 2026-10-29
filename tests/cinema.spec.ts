@@ -199,8 +199,12 @@ test('unavailable end-still uses the actual decoded frame for a continuous note 
 })
 
 test('locale change while decoding does not reopen a modal, move focus or restart playback',async({page})=>{
+  // Keep the intentionally pending load before its separately tested recovery
+  // deadline while checking keyboard focus; slow CI IPC must not race that timer.
+  await page.clock.install({time:new Date('2026-01-01T00:00:00Z')})
   await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.route('**/media/forest-awakening.mp4*',()=>{})
-  await page.goto('/');await page.getByRole('button',{name:'Aplūkot piepi tuvāk',exact:true}).click()
+  await page.goto('/');await page.clock.pauseAt(new Date('2026-01-01T00:01:00Z'))
+  await page.getByRole('button',{name:'Aplūkot piepi tuvāk',exact:true}).click()
   const language=page.locator('.site-header .language-switch a[lang="en"]')
   // Safari pointer activation intentionally need not focus links. Exercise keyboard focus retention.
   await language.press('Enter')
