@@ -4,7 +4,10 @@ test.beforeEach(async({page})=>{await page.bringToFront()})
 
 test.afterEach(async({page},testInfo)=>{
   if(testInfo.status===testInfo.expectedStatus||page.isClosed())return
-  await testInfo.attach('cinema-state-on-failure',{body:JSON.stringify(await page.evaluate(()=>({visibility:document.visibilityState,world:document.querySelector('.world')?.attributes?Object.fromEntries([...document.querySelector('.world')!.attributes].map(a=>[a.name,a.value])):null,clips:[...document.querySelectorAll<HTMLElement>('[data-clip]')].map(e=>({...e.dataset})),videos:[...document.querySelectorAll('video')].map(v=>({src:v.currentSrc,time:v.currentTime,paused:v.paused,ready:v.readyState,ended:v.ended})),photo:document.querySelector<HTMLElement>('.specimen-photo')?.dataset}))),contentType:'application/json'})
+  await testInfo.attach('cinema-state-on-failure',{body:JSON.stringify(await page.evaluate(()=>{
+    const photo=document.querySelector<HTMLElement>('.specimen-photo'),image=photo?.querySelector('img')
+    return {visibility:document.visibilityState,world:document.querySelector('.world')?.attributes?Object.fromEntries([...document.querySelector('.world')!.attributes].map(a=>[a.name,a.value])):null,clips:[...document.querySelectorAll<HTMLElement>('[data-clip]')].map(e=>({...e.dataset})),videos:[...document.querySelectorAll('video')].map(v=>({src:v.currentSrc,time:v.currentTime,paused:v.paused,ready:v.readyState,ended:v.ended})),photo:photo?{...photo.dataset}:null,dialog:document.querySelector('dialog')?.className,image:image?{src:image.currentSrc,complete:image.complete,width:image.naturalWidth,loading:image.loading}:null,dockFrames:(window as unknown as {dockFrames?:unknown[]}).dockFrames}
+  })),contentType:'application/json'})
 })
 
 function inViewport(width:number,height:number,register:()=>void){
@@ -140,7 +143,9 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
   })
   await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
-  await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:12000})
+  // The existing movie deadline is 10s, followed by up to 1.5s of end-still
+  // recovery and the 1s camera. Cover that bounded path without changing it.
+  await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:14000})
   const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]}).dockFrames)
   await testInfo.attach('photo-docking-frames',{body:JSON.stringify(frames),contentType:'application/json'})
   expect(frames.filter(frame=>frame.moving).length).toBeGreaterThan(10)
