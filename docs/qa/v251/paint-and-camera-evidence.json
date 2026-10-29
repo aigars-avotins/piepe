@@ -1,0 +1,448 @@
+[
+  {
+    "phase": "before",
+    "size": "desktop",
+    "cold": {
+      "paintSamples": 202,
+      "changedCompositorFrames": 78,
+      "wrongUnderlayWhileVideoNotDecoded": 92,
+      "riskIntervalMs": [
+        1234.7000000001863,
+        2979.100000000559
+      ],
+      "firstCompositorFrames": [
+        {
+          "file": "frame-00000.jpg",
+          "secondsFromInitialCapture": 0.0
+        },
+        {
+          "file": "frame-00001.jpg",
+          "secondsFromInitialCapture": 0.999
+        },
+        {
+          "file": "frame-00002.jpg",
+          "secondsFromInitialCapture": 1.087
+        },
+        {
+          "file": "frame-00003.jpg",
+          "secondsFromInitialCapture": 1.323
+        },
+        {
+          "file": "frame-00004.jpg",
+          "secondsFromInitialCapture": 1.97
+        },
+        {
+          "file": "frame-00005.jpg",
+          "secondsFromInitialCapture": 2.053
+        },
+        {
+          "file": "frame-00006.jpg",
+          "secondsFromInitialCapture": 2.935
+        },
+        {
+          "file": "frame-00007.jpg",
+          "secondsFromInitialCapture": 3.051
+        }
+      ]
+    },
+    "reverse": {
+      "returnTimeMs": 12851,
+      "oneSecondLater": {
+        "time": 13913.099999999627,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0.875",
+            "transform": "matrix(1.0225, 0, 0, 1.0225, 0, 0)"
+          }
+        }
+      },
+      "settledAfterMs": null,
+      "final": {
+        "time": 15299.900000000373,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0.875",
+            "transform": "matrix(1.0225, 0, 0, 1.0225, 0, 0)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "before",
+    "size": "phone",
+    "cold": {
+      "paintSamples": 410,
+      "changedCompositorFrames": 151,
+      "wrongUnderlayWhileVideoNotDecoded": 90,
+      "riskIntervalMs": [
+        1715.0999999996275,
+        3625
+      ],
+      "firstCompositorFrames": [
+        {
+          "file": "frame-00000.jpg",
+          "secondsFromInitialCapture": 0.0
+        },
+        {
+          "file": "frame-00001.jpg",
+          "secondsFromInitialCapture": 1.204
+        },
+        {
+          "file": "frame-00002.jpg",
+          "secondsFromInitialCapture": 1.256
+        },
+        {
+          "file": "frame-00003.jpg",
+          "secondsFromInitialCapture": 1.46
+        },
+        {
+          "file": "frame-00004.jpg",
+          "secondsFromInitialCapture": 1.869
+        },
+        {
+          "file": "frame-00005.jpg",
+          "secondsFromInitialCapture": 2.658
+        },
+        {
+          "file": "frame-00006.jpg",
+          "secondsFromInitialCapture": 3.413
+        },
+        {
+          "file": "frame-00007.jpg",
+          "secondsFromInitialCapture": 3.67
+        }
+      ]
+    },
+    "reverse": {
+      "returnTimeMs": 7221.39999999851,
+      "oneSecondLater": {
+        "time": 8224,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0.9485",
+            "transform": "matrix(1.0093, 0, 0, 1.0093, 0, 0)"
+          }
+        }
+      },
+      "settledAfterMs": null,
+      "final": {
+        "time": 8572.39999999851,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0.9485",
+            "transform": "matrix(1.0093, 0, 0, 1.0093, 0, 0)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "after",
+    "size": "desktop",
+    "cold": {
+      "paintSamples": 230,
+      "changedCompositorFrames": 98,
+      "wrongUnderlayWhileVideoNotDecoded": 0,
+      "riskIntervalMs": null,
+      "firstCompositorFrames": [
+        {
+          "file": "frame-00000.jpg",
+          "secondsFromInitialCapture": 0.0
+        },
+        {
+          "file": "frame-00001.jpg",
+          "secondsFromInitialCapture": 0.359
+        },
+        {
+          "file": "frame-00002.jpg",
+          "secondsFromInitialCapture": 0.469
+        },
+        {
+          "file": "frame-00003.jpg",
+          "secondsFromInitialCapture": 0.539
+        },
+        {
+          "file": "frame-00004.jpg",
+          "secondsFromInitialCapture": 1.104
+        },
+        {
+          "file": "frame-00005.jpg",
+          "secondsFromInitialCapture": 2.225
+        },
+        {
+          "file": "frame-00006.jpg",
+          "secondsFromInitialCapture": 2.304
+        },
+        {
+          "file": "frame-00007.jpg",
+          "secondsFromInitialCapture": 2.377
+        }
+      ]
+    },
+    "reverse": {
+      "returnTimeMs": 14458.60000000149,
+      "oneSecondLater": {
+        "time": 15515.200000001118,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0",
+            "transform": "matrix(1.18, 0, 0, 1.18, 0, 0)"
+          }
+        }
+      },
+      "settledAfterMs": 388.69999999925494,
+      "final": {
+        "time": 16802.300000000745,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0",
+            "transform": "matrix(1.18, 0, 0, 1.18, 0, 0)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "after",
+    "size": "phone",
+    "cold": {
+      "paintSamples": 404,
+      "changedCompositorFrames": 126,
+      "wrongUnderlayWhileVideoNotDecoded": 0,
+      "riskIntervalMs": null,
+      "firstCompositorFrames": [
+        {
+          "file": "frame-00000.jpg",
+          "secondsFromInitialCapture": 0.0
+        },
+        {
+          "file": "frame-00001.jpg",
+          "secondsFromInitialCapture": 0.342
+        },
+        {
+          "file": "frame-00002.jpg",
+          "secondsFromInitialCapture": 0.355
+        },
+        {
+          "file": "frame-00003.jpg",
+          "secondsFromInitialCapture": 0.423
+        },
+        {
+          "file": "frame-00004.jpg",
+          "secondsFromInitialCapture": 1.172
+        },
+        {
+          "file": "frame-00005.jpg",
+          "secondsFromInitialCapture": 2.861
+        },
+        {
+          "file": "frame-00006.jpg",
+          "secondsFromInitialCapture": 2.983
+        },
+        {
+          "file": "frame-00007.jpg",
+          "secondsFromInitialCapture": 3.0
+        }
+      ]
+    },
+    "reverse": {
+      "returnTimeMs": 10816.099999999627,
+      "oneSecondLater": {
+        "time": 11826.199999999255,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0",
+            "transform": "matrix(1.18, 0, 0, 1.18, 0, 0)"
+          }
+        }
+      },
+      "settledAfterMs": 481.09999999962747,
+      "final": {
+        "time": 12089.400000000373,
+        "scroll": 0,
+        "classes": "world  is-ready has-title         ",
+        "still": "/media/forest-final.jpg?v=2.3",
+        "content": "normal",
+        "natural": 1920,
+        "video": null,
+        "layers": {
+          "base-camera": {
+            "opacity": "1",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "foreground-carrier": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "foreground-camera": {
+            "opacity": "0",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          "understory-cinema": {
+            "opacity": "0",
+            "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+          },
+          "wide-environment": {
+            "opacity": "0",
+            "transform": "matrix(1.18, 0, 0, 1.18, 0, 0)"
+          }
+        }
+      }
+    }
+  }
+]

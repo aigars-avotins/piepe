@@ -1,0 +1,146 @@
+[
+  {
+    "visit": 0,
+    "direction": 1,
+    "scroll": 9407,
+    "max": 9407,
+    "layers": {
+      "base-camera": {
+        "opacity": "0",
+        "transform": "matrix(0.94, 0, 0, 0.94, -23.34, -143.48)"
+      },
+      "foreground-camera": {
+        "opacity": "0",
+        "transform": "matrix(1.65, 0, 0, 1.65, -291.75, 0)"
+      },
+      "wide-environment": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "understory-cinema": {
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    }
+  },
+  {
+    "visit": 0,
+    "direction": -1,
+    "scroll": 0,
+    "max": 9407,
+    "layers": {
+      "base-camera": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "foreground-camera": {
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "wide-environment": {
+        "opacity": "0",
+        "transform": "matrix(1.18, 0, 0, 1.18, 0, 0)"
+      },
+      "understory-cinema": {
+        "opacity": "0",
+        "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+      }
+    }
+  },
+  {
+    "visit": 1,
+    "direction": 1,
+    "scroll": 9407,
+    "max": 9407,
+    "layers": {
+      "base-camera": {
+        "opacity": "0",
+        "transform": "matrix(0.94, 0, 0, 0.94, -23.34, -143.48)"
+      },
+      "foreground-camera": {
+        "opacity": "0",
+        "transform": "matrix(1.65, 0, 0, 1.65, -291.75, 0)"
+      },
+      "wide-environment": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "understory-cinema": {
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    }
+  },
+  {
+    "visit": 1,
+    "direction": -1,
+    "scroll": 0,
+    "max": 9407,
+    "layers": {
+      "base-camera": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "foreground-camera": {
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "wide-environment": {
+        "opacity": "0",
+        "transform": "matrix(1.18, 0, 0, 1.18, 0, 0)"
+      },
+      "understory-cinema": {
+        "opacity": "0",
+        "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+      }
+    }
+  },
+  {
+    "visit": 2,
+    "direction": 1,
+    "scroll": 9407,
+    "max": 9407,
+    "layers": {
+      "base-camera": {
+        "opacity": "0",
+        "transform": "matrix(0.94, 0, 0, 0.94, -23.34, -143.48)"
+      },
+      "foreground-camera": {
+        "opacity": "0",
+        "transform": "matrix(1.65, 0, 0, 1.65, -291.75, 0)"
+      },
+      "wide-environment": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "understory-cinema": {
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      }
+    }
+  },
+  {
+    "visit": 2,
+    "direction": -1,
+    "scroll": 0,
+    "max": 9407,
+    "layers": {
+      "base-camera": {
+        "opacity": "1",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "foreground-camera": {
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "wide-environment": {
+        "opacity": "0",
+        "transform": "matrix(1.18, 0, 0, 1.18, 0, 0)"
+      },
+      "understory-cinema": {
+        "opacity": "0",
+        "transform": "matrix(1.08, 0, 0, 1.08, 0, 0)"
+      }
+    }
+  }
+]
