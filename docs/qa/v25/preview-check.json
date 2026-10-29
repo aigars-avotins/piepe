@@ -1,0 +1,10 @@
+{
+  "check": "Workers Builds: piepe",
+  "conclusion": "failure",
+  "detailsURL": "https://dash.cloudflare.com/dc4a96b5aaea5e1ab456b2c1c33c06a3/workers/services/view/piepe/production/builds/de1a9e78-0ca1-4cb9-95f0-86394a66b951",
+  "errors": [
+    "\u2718 [ERROR] The name in your wrangler.jsonc file (piepe) must match the name of your Worker. Please update the name field in your wrangler.jsonc file."
+  ],
+  "configurationChanged": false,
+  "candidateDeployed": false
+}

@@ -19,5 +19,5 @@ export function renderHead(locale: Locale) {
 }
 export function renderNote(locale: Locale) {
   const t = messages[locale]
-  return `PIE.PE — ${t.forest.toUpperCase()}\n${t.noteLabel} — ${t.atlas}\n\n` + t.observations.map(note => `${note.label.toUpperCase()}\n${note.text}\n${note.footnote}`).join('\n\n') + `\n\n${t.factsTitle.toUpperCase()}\n` + t.facts.map(fact => `${fact.title}\n${fact.text}`).join('\n\n') + `\n\n${t.artNote}\n\n${t.sources}:\nhttps://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/\nhttps://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm\n\nhttps://pie.pe${localePath(locale)}\n`
+  return `PIE.PE — ${t.forest.toUpperCase()}\n${t.noteLabel} — ${t.atlas}\n\n` + t.observations.map(note => `${note.label.toUpperCase()}\n${note.text}\n${note.footnote}`).join('\n\n') + `\n\n${t.factsTitle.toUpperCase()}\n${t.factsDefinition}\n\n${t.factsContext}\n\n` + t.facts.map(fact => `${fact.title}\n${fact.text}`).join('\n\n') + `\n\n${t.artNote}\n\n${t.sources}:\nhttps://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/\nhttps://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm\n\nhttps://pie.pe${localePath(locale)}\n`
 }

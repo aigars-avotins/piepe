@@ -200,4 +200,5 @@ html:not(.js) .cinematic-chapter{min-height:100svh}html:not(.js) .cinema-content
 .static-preference .replay-intro,.static-preference .motion-toggle{display:none}
 .js.preference-static .prerendered .motion-toggle,.js.preference-static .prerendered .cinema-controls{display:none}
 .vocabulary-note{max-width:650px;margin:0;padding:0 0 24px;font-size:16px;line-height:1.75;color:var(--muted)}
+.facts-context{max-width:72ch;margin-top:32px;font-size:16px;line-height:1.8;color:var(--muted)}.facts-context p{margin:0}.facts-context p+p{margin-top:18px}
 @media(max-width:699px){.specimen-invitation{width:44px}.specimen-invitation>span:last-child{display:block;position:absolute;top:100%;left:50%;transform:translateX(-50%);width:140px;max-width:140px;margin-top:8px;text-align:center}}

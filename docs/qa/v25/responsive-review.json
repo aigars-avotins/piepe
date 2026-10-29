@@ -1,0 +1,90 @@
+[
+  {
+    "locale": "lv",
+    "viewport": [
+      1512,
+      982
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 904,
+    "afterSectionHeight": 1184
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      390,
+      844
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 1304,
+    "afterSectionHeight": 1757
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      390,
+      664
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 1304,
+    "afterSectionHeight": 1757
+  },
+  {
+    "locale": "lv",
+    "viewport": [
+      320,
+      690
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 1443,
+    "afterSectionHeight": 1956
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      1512,
+      982
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 1042,
+    "afterSectionHeight": 1322
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      390,
+      844
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 1405,
+    "afterSectionHeight": 1858
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      390,
+      664
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 1405,
+    "afterSectionHeight": 1858
+  },
+  {
+    "locale": "en",
+    "viewport": [
+      320,
+      690
+    ],
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "beforeSectionHeight": 1519,
+    "afterSectionHeight": 2058
+  }
+]

@@ -27,6 +27,8 @@ export const english = {
   mediaUnavailable: 'The film is resting. You can still explore the forest.',
   forestSound: 'Forest sound', muteSound: 'Mute forest sound', enableSound: 'Enable forest sound', soundPlaying: 'Quiet forest ambience is playing.', soundWaiting: 'Forest sound starts with your first interaction.', soundMuted: 'Forest sound is off.', soundUnavailable: 'Forest sound could not load. You can try again.',
   factsTitle: 'What is a bracket fungus?', factsIntro: 'A shelf on a tree. A life mostly out of sight.',
+  factsDefinition: 'In a forest, a bracket fungus may form a shelf on a trunk or fallen branch. This fruiting body is only part of the fungus: a network of fine threads, called mycelium, can spread through the wood.',
+  factsContext: 'A careful look can start with simple questions: is the bracket firm or soft, solitary or clustered, on standing wood or a fallen branch? Such details help describe an encounter, but they are not enough to name a species. Field note 001 offers three ways to practise that attention: looking at the surface, considering what lies beneath, and carrying a different gaze back into daily life.',
   glossaryTitle: 'Three words for looking closer',
   glossaryObservation: 'A fruiting body’s size does not reveal how far its hyphae extend through the wood. Pore shape and size are only some of the features specialists use to identify a fungus.',
   glossary: [
@@ -35,7 +37,7 @@ export const english = {
     { term: 'Mycelium', definition: 'A network of microscopic fungal threads called hyphae. In wood-decaying fungi, these threads grow through the wood.' },
   ],
   facts: [
-    { title: 'A fruiting body', text: 'The bracket is the visible fruiting body. Fine fungal threads, called hyphae, can grow through the wood: the shelf is only part of the organism.' },
+    { title: 'A fruiting body', text: 'The same fungus can form more than one bracket. Some fruiting bodies last a season; others persist and add growth over several years.' },
     { title: 'A hidden underside', text: 'Many bracket fungi have tiny pores underneath. Spores form on the surfaces of tubes opening into these pores and are released into the air. Not every bracket has pores.' },
     { title: 'Wood becomes a beginning', text: 'Many wood-decaying fungi help recycle nutrients by breaking down wood. Some also grow in living trees and can weaken their wood. A bracket alone does not tell the whole story.' },
   ],
@@ -71,6 +73,8 @@ const latvian: Messages = {
   mediaUnavailable: 'Filma šobrīd atpūšas. Mežu joprojām vari iepazīt.',
   forestSound: 'Meža skaņas', muteSound: 'Izslēgt meža skaņas', enableSound: 'Ieslēgt meža skaņas', soundPlaying: 'Skan klusas meža skaņas.', soundWaiting: 'Meža skaņas sāksies pēc pirmā pieskāriena.', soundMuted: 'Meža skaņas ir izslēgtas.', soundUnavailable: 'Meža skaņas neizdevās ielādēt. Vari mēģināt vēlreiz.',
   factsTitle: 'Kas ir piepe?', factsIntro: 'Redzama pie koka. Lielākoties — skatienam slēpta.',
+  factsDefinition: 'Piepe ir redzamais sēnes augļķermenis, ko mežā bieži pamana uz koka stumbra vai kritalas. Tikmēr smalku pavedienu tīkls — sēņotne — var augt dziļāk koksnē un turpināties ārpus mūsu skatiena.',
+  factsContext: 'Vērojot īstu piepi, pamani arī tās apkārtni: vai tā aug uz stāvoša koka vai kritalas, viena pati vai vairākas blakus? Augļķermeņa forma un krāsa ir tikai daļa no pazīmēm, ko vērtē sēņu pazinēji; ar vienu detaļu sugas noteikšanai nepietiek. Meža piezīme 001 aicina trenēt šo vērību — vispirms aplūkot virsmu, tad domāt par neredzamo un paņemt citādu skatienu līdzi.',
   glossaryTitle: 'Trīs vārdi tuvākam skatienam',
   glossaryObservation: 'Augļķermeņa izmērs neatklāj, cik plaši hifas izplatījušās koksnē. Poru forma un izmērs ir tikai daļa no pazīmēm, ko speciālisti vērtē, nosakot sēnes sugu.',
   glossary: [
@@ -79,7 +83,7 @@ const latvian: Messages = {
     { term: 'Sēņotne', definition: 'Mikroskopisku sēnes pavedienu jeb hifu tīkls. Koksni noārdošām sēnēm šie pavedieni aug cauri koksnei.' },
   ],
   facts: [
-    { title: 'Sēnes augļķermenis', text: 'Piepe ir sēnes redzamais augļķermenis. Smalki sēnes pavedieni jeb hifas var augt koksnē: piepe ir tikai daļa no visa organisma.' },
+    { title: 'Sēnes augļķermenis', text: 'Vienai sēnei var būt vairāki augļķermeņi. Daži saglabājas vienu sezonu, citi dzīvo vairākus gadus un pakāpeniski pieaug.' },
     { title: 'Mazā pasaule apakšpusē', text: 'Daudzām piepēm apakšpusē ir sīkas poras. Sporas veidojas uz to stobriņu virsmām, kas atveras porās, un nonāk gaisā. Tomēr ne visām piepēm ir poras.' },
     { title: 'Koksne dod vietu jaunam', text: 'Daudzas koksni noārdošās sēnes palīdz barības vielām atgriezties apritē. Dažas aug arī dzīvos kokos un var vājināt to koksni. Viena piepe vēl neatklāj visu stāstu.' },
   ],

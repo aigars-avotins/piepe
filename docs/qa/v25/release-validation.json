@@ -1,0 +1,54 @@
+{
+  "candidateDeployed": false,
+  "fullReleaseValidated": false,
+  "fullRunsRequested": 1,
+  "focusedRetriesRequested": 1,
+  "applicationCommit": "f93f5a957df1cbfe9e1629512af3dce7c5e6bbdf",
+  "runs": [
+    {
+      "browser": "chromium",
+      "run": "https://github.com/aigars-avotins/piepe/actions/runs/40860620636",
+      "sourceCommit": "2a59a6bce11dc5218a3d43692692b9e04f47dc25",
+      "stats": {
+        "startTime": "2026-10-29T10:51:56.968Z",
+        "duration": 558467.0299999999,
+        "expected": 107,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "topLevelErrors": []
+    },
+    {
+      "browser": "native-macos-webkit",
+      "run": "https://github.com/aigars-avotins/piepe/actions/runs/40860620636",
+      "sourceCommit": "2a59a6bce11dc5218a3d43692692b9e04f47dc25",
+      "stats": {
+        "startTime": "2026-10-29T10:52:11.480Z",
+        "duration": 770430.674,
+        "expected": 104,
+        "skipped": 1,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "topLevelErrors": []
+    }
+  ],
+  "focusedRetry": {
+    "url": "https://github.com/aigars-avotins/piepe/actions/runs/40862975200",
+    "sourceCommit": "2a59a6bce11dc5218a3d43692692b9e04f47dc25",
+    "browser": "native-macos-webkit",
+    "requestedCases": [
+      "1512x982 LV visible moving frames",
+      "390x664 EN visible moving frames"
+    ],
+    "testsExecuted": 0,
+    "status": "blocked before any job steps",
+    "annotations": [
+      {
+        "annotation_level": "failure",
+        "message": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings"
+      }
+    ]
+  }
+}

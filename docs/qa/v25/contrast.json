@@ -1,0 +1,22 @@
+[
+  {
+    "locale": "lv",
+    "color": "rgb(186, 198, 180)",
+    "background": "rgb(11, 23, 18)",
+    "fontSize": "16px",
+    "lineHeight": "28.8px",
+    "opacity": 1,
+    "contrast": 10.32,
+    "scope": "New text on the explicit opaque facts-section background; not whole-site certification"
+  },
+  {
+    "locale": "en",
+    "color": "rgb(186, 198, 180)",
+    "background": "rgb(11, 23, 18)",
+    "fontSize": "16px",
+    "lineHeight": "28.8px",
+    "opacity": 1,
+    "contrast": 10.32,
+    "scope": "New text on the explicit opaque facts-section background; not whole-site certification"
+  }
+]
