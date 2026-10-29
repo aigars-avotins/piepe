@@ -162,7 +162,9 @@ main{position:relative;z-index:1}
 @media(max-width:699px){.brand{gap:5px}.brand .brand-wordmark{width:51px;height:29px}}
 @media(max-width:359px){.brand .brand-wordmark{width:48px;height:26px}}
 /* Hydration keeps the prepared document rather than replacing the first painted controls. */
-.js:not(.preference-static) .prerendered .forest-still{content:url('/media/forest-poster.jpg?v=2.3')}
+/* The opening image is the real source throughout the intro, including hydration
+   and Replay. Only no-JS/static visits substitute the interactive final pose. */
+html:not(.js) .prerendered .forest-still,.js.preference-static .prerendered .forest-still{content:url('/media/forest-final.jpg?v=2.3')}
 html:not(.js) .prerendered .hero-copy,.js.preference-static .prerendered .hero-copy{visibility:visible}html:not(.js) .prerendered .wordmark span,.js.preference-static .prerendered .wordmark span{transform:none}html:not(.js) .prerendered .title-enter,.js.preference-static .prerendered .title-enter{opacity:1;transform:none}
 html:not(.js) .prerendered .skip-intro,.js.preference-static .prerendered .skip-intro{visibility:hidden}
 @media(max-width:699px){.world{--forest-focal:.64}}

@@ -1,0 +1,10 @@
+{
+  "check": "Workers Builds: piepe",
+  "build": "e070758a-995f-42e1-b742-bc765ea2a7ad",
+  "conclusion": "failure",
+  "errors": [
+    "\u2718 [ERROR] The name in your wrangler.jsonc file (piepe) must match the name of your Worker. Please update the name field in your wrangler.jsonc file."
+  ],
+  "configurationChanged": false,
+  "hotfixDeployed": false
+}

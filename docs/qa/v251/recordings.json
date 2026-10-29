@@ -1,0 +1,101 @@
+[
+  {
+    "file": "before-cold-desktop.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 1430804,
+    "durationSeconds": 11.92,
+    "video": {
+      "width": 1512,
+      "height": 982,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "after-cold-desktop.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 1399078,
+    "durationSeconds": 10.0,
+    "video": {
+      "width": 1512,
+      "height": 982,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "before-cold-phone.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 404732,
+    "durationSeconds": 11.08,
+    "video": {
+      "width": 390,
+      "height": 664,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "after-cold-phone.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 381696,
+    "durationSeconds": 10.2,
+    "video": {
+      "width": 390,
+      "height": 664,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "before-ghost-desktop.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 1322372,
+    "durationSeconds": 16.44,
+    "video": {
+      "width": 1512,
+      "height": 982,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "after-ghost-desktop.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 1289121,
+    "durationSeconds": 17.56,
+    "video": {
+      "width": 1512,
+      "height": 982,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "before-ghost-phone.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 433161,
+    "durationSeconds": 9.72,
+    "video": {
+      "width": 390,
+      "height": 664,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "after-ghost-phone.mp4",
+    "source": "Actual Playwright browser video",
+    "bytes": 469395,
+    "durationSeconds": 13.28,
+    "video": {
+      "width": 390,
+      "height": 664,
+      "r_frame_rate": "25/1"
+    }
+  },
+  {
+    "file": "touch-returns-phone.mp4",
+    "source": "Actual Chromium emulated touch input and inertia, three full returns",
+    "bytes": 5884166,
+    "durationSeconds": 63.04,
+    "video": {
+      "width": 390,
+      "height": 844,
+      "r_frame_rate": "25/1"
+    }
+  }
+]

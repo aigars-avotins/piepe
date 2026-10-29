@@ -1,0 +1,34 @@
+[
+  {
+    "shot": "reveal",
+    "bytes": 9212166,
+    "sha256": "6f3e32573ccff903740ebe58455e8fe579f280946041609c028b08ac50db64f5",
+    "matchesV23": true,
+    "matchesV24": true,
+    "matchesV25": true
+  },
+  {
+    "shot": "awakening",
+    "bytes": 8237084,
+    "sha256": "dffdfd61d2dc31f4dfe5dfa490ee57db1a3055f35bc2bc1387e54d8820b68cf2",
+    "matchesV23": true,
+    "matchesV24": true,
+    "matchesV25": true
+  },
+  {
+    "shot": "understory",
+    "bytes": 5846195,
+    "sha256": "d4a83a5cff4eff09e9fb14d1b8d7df8d0985a280a1a79e6123f3a2fdb360453f",
+    "matchesV23": true,
+    "matchesV24": true,
+    "matchesV25": true
+  },
+  {
+    "shot": "breathing",
+    "bytes": 7025165,
+    "sha256": "a3bc82771398b754d22273fbdd8d1023f04de0778ecef5b8b90ff8bdb64316ef",
+    "matchesV23": true,
+    "matchesV24": true,
+    "matchesV25": true
+  }
+]

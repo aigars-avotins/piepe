@@ -1,0 +1,61 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/40888622015",
+  "source": "cc2d8c7b6e2af1522fee239e30c9f1cc8fda437f",
+  "conclusion": "cancelled",
+  "jobTimeoutMinutes": 20,
+  "completedResults": {
+    "passed": 104,
+    "failed": 5,
+    "skipped": 1
+  },
+  "interrupted": 1,
+  "notRun": 8,
+  "reporterJsonProduced": false,
+  "annotations": [
+    {
+      "annotation_level": "failure",
+      "message": "The job has exceeded the maximum execution time of 20m0s"
+    },
+    {
+      "annotation_level": "failure",
+      "message": "The operation was canceled."
+    }
+  ],
+  "failures": [
+    {
+      "test": "v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone",
+      "errors": [
+        "Error: locator.evaluate: Error: No advancing presented video frames: {\"phase\":\"cadence\",\"src\":\"http://127.0.0.1:4173/media/forest-breathing.mp4?v=2.3\",\"time\":4.7015925070000035,\"paused\":false,\"ended\":false,\"ready\":4,\"connected\":true,\"reason\":\"\",\"cycles\":\"0\",\"held\":\"false\",\"totalFrames\":0,\"frames\":[{\"time\":2.25,\"presented\":2,\"phase\":\"cadence\"},{\"time\":2.375,\"presented\":4,\"phase\":\"cadence\"},{\"time\":2.5416666666666665,\"presented\":5,\"phase\":\"cadence\"},{\"time\":4,\"presented\":6,\"phase\":\"cadence\"}]}"
+      ],
+      "fontWaitBehindHeldModule": false
+    },
+    {
+      "test": "v251-2-5-1-cold-1512x982-l-2c14a-delayed-decoding-and-Replay-webkit-iphone",
+      "errors": [
+        "Test timeout of 45000ms exceeded."
+      ],
+      "fontWaitBehindHeldModule": true
+    },
+    {
+      "test": "v251-2-5-1-cold-1512x982-e-bf819-delayed-decoding-and-Replay-webkit-iphone",
+      "errors": [
+        "Test timeout of 45000ms exceeded."
+      ],
+      "fontWaitBehindHeldModule": true
+    },
+    {
+      "test": "v251-2-5-1-cold-390x664-lv-975de-delayed-decoding-and-Replay-webkit-iphone",
+      "errors": [
+        "Test timeout of 45000ms exceeded."
+      ],
+      "fontWaitBehindHeldModule": true
+    },
+    {
+      "test": "cinema-1512x982-rendering--9b351-ns-continuously-at-1512x982-webkit-iphone",
+      "errors": [
+        "Error: expect(received).toBeLessThan(expected)\n\nExpected: < 3\nReceived:   5.99639892578125"
+      ],
+      "fontWaitBehindHeldModule": false
+    }
+  ]
+}

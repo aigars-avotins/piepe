@@ -1,0 +1,99 @@
+{
+  "initial": {
+    "source": "Read-only Cloudflare APIs and curl with TLS validation, before any task publication",
+    "checked_at": "2026-10-29T13:50:22.451288+00:00",
+    "worker": "piepe",
+    "version": "e082f280-277f-44c9-ab43-4a9ee616cc31",
+    "latest_successful_build": "766917e4-99c4-4803-959f-895537e02c10",
+    "build_commit": "e9b1f5d46e35e12d7c190335a88ac887321e29de",
+    "git_main_at_start": "e9b1f5d46e35e12d7c190335a88ac887321e29de",
+    "pr11_head": "09144a84822c1283f5dc3272606496afaa432a93",
+    "live_fingerprints": {
+      "live.html": "6c84ab337dcf35ae5c5f5cea580eb876210a5e26fc65965b0bf404c66234b087",
+      "live-en.html": "1e376ea26bef9c50968dc9b2a9f4b9d774325024041d6f0b8662c3c6fd586e75",
+      "live.js": "f01c9f140cb24e11a4eba687e4a2ceb6292fff148189017d396b9623fed3ef15",
+      "live.css": "560d3d969a931bc85ae6bf6d695684df457cf78c3d83e9cf5018d721f501bcbd",
+      "live-cache-bust.html": "6c84ab337dcf35ae5c5f5cea580eb876210a5e26fc65965b0bf404c66234b087"
+    }
+  },
+  "separately_authorized_25_publication": {
+    "checked_at": "2026-10-29T14:06:22.130580+00:00",
+    "merge_sha": "526bd4609c4804afa32fdc31f8daae808d7b759b",
+    "deployment": {
+      "id": "601cf65c-4d94-4c6e-b803-f48d049d6683",
+      "versions": [
+        {
+          "version_id": "ded86149-a582-45c0-bc97-1f55cbb6bbb7",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-10-29T14:05:26.477951Z"
+    },
+    "http": [
+      {
+        "path": "/",
+        "status": 200,
+        "redirects": 0,
+        "sha256": "9012243c12874f56c63608b7ef084c410bf36e73079cd37b756907e7b8c5ac36",
+        "type": "text/html",
+        "version": [
+          "2.5"
+        ],
+        "local_25_html_match": true,
+        "assets": [
+          "/assets/index-D4MmI1KD.js",
+          "/assets/index-3p7Y7lNN.css"
+        ],
+        "security": {
+          "Content-Security-Policy": true,
+          "X-Frame-Options": true,
+          "Permissions-Policy": true
+        }
+      },
+      {
+        "path": "/en/",
+        "status": 200,
+        "redirects": 0,
+        "sha256": "b787d582a7f7f4ca5638f8cd83196e4f7e2c6370eb3d8460cff712f6b1d57ab2",
+        "type": "text/html",
+        "version": [
+          "2.5"
+        ],
+        "local_25_html_match": true,
+        "assets": [
+          "/assets/index-D4MmI1KD.js",
+          "/assets/index-3p7Y7lNN.css"
+        ],
+        "security": {
+          "Content-Security-Policy": true,
+          "X-Frame-Options": true,
+          "Permissions-Policy": true
+        }
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200,
+        "redirects": 0,
+        "sha256": "50f2fc6bd30325a97a1430058904b3317a18d2ddb1835688b825edf26904d6f6",
+        "type": "application/xml"
+      },
+      {
+        "path": "/robots.txt",
+        "status": 200,
+        "redirects": 0,
+        "sha256": "a7dde0cab785c84d68bf5cec035971fe1dfc02362d6f9efe8b54e560d9f47801",
+        "type": "text/plain"
+      },
+      {
+        "path": "/assets/index-D4MmI1KD.js",
+        "sha256": "f56dfa44880465ace1d23434c9ff467e14ed7fada573cb49701ee5a78225b955",
+        "local_25_match": true
+      },
+      {
+        "path": "/assets/index-3p7Y7lNN.css",
+        "sha256": "a845f44b5a4c0f0ca7ccc335b4e89482a6ccf30c1ccdfef944f2538e34a248a5",
+        "local_25_match": true
+      }
+    ]
+  }
+}

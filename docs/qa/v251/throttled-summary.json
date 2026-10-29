@@ -1,0 +1,42 @@
+{
+  "conditions": {
+    "latencyMs": 100,
+    "downloadBytesPerSecond": 750000,
+    "cache": "disabled",
+    "context": "new per locale"
+  },
+  "results": [
+    {
+      "locale": "lv",
+      "paintSamples": 332,
+      "wrongOpeningSources": 0,
+      "exit": "",
+      "first": {
+        "time": 594.9000000003725,
+        "src": "http://127.0.0.1:4173/media/forest-poster.jpg?v=2.3"
+      },
+      "last": {
+        "time": 6541.800000000745,
+        "src": "http://127.0.0.1:4173/media/forest-poster.jpg?v=2.3",
+        "ready": 2,
+        "videoTime": 0.899984
+      }
+    },
+    {
+      "locale": "en",
+      "paintSamples": 318,
+      "wrongOpeningSources": 0,
+      "exit": "",
+      "first": {
+        "time": 590,
+        "src": "http://127.0.0.1:4173/media/forest-poster.jpg?v=2.3"
+      },
+      "last": {
+        "time": 6029,
+        "src": "http://127.0.0.1:4173/media/forest-poster.jpg?v=2.3",
+        "ready": 3,
+        "videoTime": 0.675855
+      }
+    }
+  ]
+}
