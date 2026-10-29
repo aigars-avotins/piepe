@@ -1,0 +1,306 @@
+[
+  {
+    "locale": "en",
+    "viewport": "1512x982",
+    "mode": "photo",
+    "presentedCallbacks": 199,
+    "pageErrors": []
+  },
+  {
+    "locale": "en",
+    "viewport": "1512x982",
+    "mode": "repeat",
+    "presentedCallbacks": 482,
+    "pageErrors": [],
+    "visits": [
+      {
+        "type": "visit-proof",
+        "wall": 1793249043201,
+        "name": "understory",
+        "visit": 0,
+        "before": 1.454728,
+        "time": 6.041667,
+        "paused": false,
+        "frames": 87,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249049844,
+        "name": "understory",
+        "visit": 1,
+        "before": 0.871917,
+        "time": 2.687617,
+        "paused": false,
+        "frames": 69,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249054666,
+        "name": "understory",
+        "visit": 2,
+        "before": 1.087301,
+        "time": 2.909429,
+        "paused": false,
+        "frames": 73,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249062360,
+        "name": "understory",
+        "visit": 3,
+        "before": 0.810681,
+        "time": 2.923148,
+        "paused": false,
+        "frames": 72,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249074422,
+        "name": "breathing",
+        "visit": 0,
+        "before": 1.322323,
+        "time": 3.15913,
+        "paused": false,
+        "frames": 79,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249078914,
+        "name": "breathing",
+        "visit": 1,
+        "before": 1.076824,
+        "time": 2.893351,
+        "paused": false,
+        "frames": 73,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249082856,
+        "name": "breathing",
+        "visit": 2,
+        "before": 0.891758,
+        "time": 2.728229,
+        "paused": false,
+        "frames": 68,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249086682,
+        "name": "breathing",
+        "visit": 3,
+        "before": 0.866598,
+        "time": 2.701125,
+        "paused": false,
+        "frames": 68,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      }
+    ]
+  },
+  {
+    "locale": "lv",
+    "viewport": "390x664",
+    "mode": "photo",
+    "presentedCallbacks": 283,
+    "pageErrors": []
+  },
+  {
+    "locale": "lv",
+    "viewport": "390x664",
+    "mode": "repeat",
+    "presentedCallbacks": 2114,
+    "pageErrors": [],
+    "visits": [
+      {
+        "type": "visit-proof",
+        "wall": 1793249146290,
+        "name": "understory",
+        "visit": 0,
+        "before": 3.948362,
+        "time": 5.768739,
+        "paused": false,
+        "frames": 143,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249160884,
+        "name": "understory",
+        "visit": 1,
+        "before": 5.241488,
+        "time": 0.941571,
+        "paused": false,
+        "frames": 172,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249187855,
+        "name": "understory",
+        "visit": 2,
+        "before": 5.277519,
+        "time": 0.942519,
+        "paused": false,
+        "frames": 172,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249213438,
+        "name": "understory",
+        "visit": 3,
+        "before": 5.105124,
+        "time": 0.772732,
+        "paused": false,
+        "frames": 168,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249231026,
+        "name": "breathing",
+        "visit": 0,
+        "before": 4.766634,
+        "time": 0.446016,
+        "paused": false,
+        "frames": 160,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249245199,
+        "name": "breathing",
+        "visit": 1,
+        "before": 5.33801,
+        "time": 1.01934,
+        "paused": false,
+        "frames": 173,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249258913,
+        "name": "breathing",
+        "visit": 2,
+        "before": 5.470295,
+        "time": 1.153224,
+        "paused": false,
+        "frames": 177,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "type": "visit-proof",
+        "wall": 1793249272510,
+        "name": "breathing",
+        "visit": 3,
+        "before": 5.449336,
+        "time": 1.140805,
+        "paused": false,
+        "frames": 177,
+        "composedOpacity": 1,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      }
+    ]
+  }
+]

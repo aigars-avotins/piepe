@@ -46,37 +46,46 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
     const sw = r.width / scale, sh = r.height / scale, sx = (video.videoWidth - sw) * position[0] / 100, sy = (video.videoHeight - sh) * position[1] / 100
     const canvas = document.createElement('canvas'); canvas.width = 128; canvas.height = 72
     const ctx = canvas.getContext('2d', { willReadFrequently: true })!
-    const frames: { time: number; hash?: number; presented: number }[] = []
-    let sampledAt = -Infinity, sampling = false, settled = false, request = 0
-    const started = performance.now()
+    const frames: { time: number; hash?: number; presented?: number; phase: 'cadence' | 'pixels'; copyMs?: number; copyMethod?: string }[] = []
+    const diagnostic = (phase: string) => JSON.stringify({ phase, src: video.currentSrc, time: video.currentTime, paused: video.paused, ended: video.ended, ready: video.readyState, connected: video.isConnected, reason: video.parentElement?.dataset.clipReason, cycles: video.parentElement?.dataset.clipCycles, held: video.parentElement?.dataset.loopHold, totalFrames: video.getVideoPlaybackQuality().totalVideoFrames, frames })
+    // Measure presentation without GPU readback first. Even createImageBitmap(video)
+    // can force a synchronous native video-surface copy in WebKit; interleaving it
+    // with callbacks measures our observer's cost instead of playback cadence.
     await new Promise<void>((resolve, reject) => {
-      const timeout = setTimeout(() => { settled = true; video.cancelVideoFrameCallback(request); reject(Error('No advancing presented video frames: '+JSON.stringify({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,connected:video.isConnected,reason:video.parentElement?.dataset.clipReason,cycles:video.parentElement?.dataset.clipCycles,held:video.parentElement?.dataset.loopHold,totalFrames:video.getVideoPlaybackQuality().totalVideoFrames,sampled:frames.length}))) }, 2500)
-      const complete = () => {
-        if (settled || performance.now() - started < 750 || frames.length < 6 || frames.filter(frame => frame.hash !== undefined).length < 3 || video.paused || video.ended) return
-        settled = true; clearTimeout(timeout); video.cancelVideoFrameCallback(request); resolve()
-      }
+      let request = 0, settled = false
+      const started = performance.now()
+      const timeout = setTimeout(() => { settled = true; video.cancelVideoFrameCallback(request); reject(Error('No advancing presented video frames: ' + diagnostic('cadence'))) }, 2500)
       const frame: VideoFrameRequestCallback = (_, metadata) => {
         if (settled) return
-        request = video.requestVideoFrameCallback(frame)
-        const sample: typeof frames[number] = { time: metadata.mediaTime, presented: metadata.presentedFrames }; frames.push(sample)
-        if (!sampling && performance.now() - sampledAt >= 250) {
-          sampledAt = performance.now(); sampling = true
-          // Copy asynchronously before CPU pixel inspection, so a readback cannot
-          // block the live decoder and manufacture the stall being measured.
-          void (async () => {
-            let bitmap: ImageBitmap | undefined
-            try { bitmap = await createImageBitmap(video, sx, sy, sw, sh, { resizeWidth: 128, resizeHeight: 72 }); ctx.drawImage(bitmap, 0, 0) }
-            catch { ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72) }
-            finally { bitmap?.close() }
-            const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
-            for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
-            if (!settled) sample.hash = hash >>> 0
-            sampling = false; complete()
-          })().catch(error => { settled = true; clearTimeout(timeout); video.cancelVideoFrameCallback(request); reject(error) })
-        }
-        complete()
+        frames.push({ time: metadata.mediaTime, presented: metadata.presentedFrames, phase: 'cadence' })
+        if (performance.now() - started >= 750 && frames.length >= 6 && !video.paused && !video.ended) {
+          settled = true; clearTimeout(timeout); resolve()
+        } else request = video.requestVideoFrameCallback(frame)
       }
       request = video.requestVideoFrameCallback(frame)
+    })
+    // Pixel inspection has its own clock: CPU readback can suppress subsequent
+    // native WebKit frame callbacks. Cadence above remains completely readback-free.
+    // These snapshots still copy actual decoded pixels, never a poster or test clock.
+    await new Promise<void>((resolve, reject) => {
+      let next = 0, settled = false, pixelsRead = 0
+      const timeout = setTimeout(() => { settled = true; clearTimeout(next); reject(Error('No distinct video pixel samples: ' + diagnostic('pixels'))) }, 2500)
+      const sample = () => {
+        if (settled) return
+        if (video.readyState < 2 || video.paused || video.ended || video.parentElement?.dataset.loopHold === 'true') { next = window.setTimeout(sample, 50); return }
+        try {
+          const snapshot: typeof frames[number] = { time: video.currentTime, phase: 'pixels', copyMethod: 'scaled-video-canvas' }
+          const started = performance.now()
+          ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
+          const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
+          for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
+          snapshot.hash = hash >>> 0; snapshot.copyMs = performance.now() - started
+          frames.push(snapshot); pixelsRead++
+          if (pixelsRead >= 3) { settled = true; clearTimeout(timeout); resolve() }
+          else next = window.setTimeout(sample, 250)
+        } catch (error) { settled = true; clearTimeout(timeout); clearTimeout(next); reject(error) }
+      }
+      sample()
     })
     opacity = 1
     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)

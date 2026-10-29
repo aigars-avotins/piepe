@@ -1,0 +1,40 @@
+{
+  "releaseCommit": "8bc02c58aa77bfc91adb3ff8de8740c46864e14d",
+  "runtimeCommit": "3afd7528eb5bc94f28fe8cc17498666a64926b77",
+  "pullRequest": "https://github.com/aigars-avotins/piepe/pull/7",
+  "worker": "piepe",
+  "initialPublishedVersion": "c44d8331-4f99-46c1-9666-4ce1a9c8920b",
+  "publishedAtUTC": "2026-10-29T04:40:38.423617Z",
+  "successfulBuild": "24fd62d4-85c2-4150-85ce-79389c3524db",
+  "rollbackVersion": "34c2dc25-664d-4e28-9351-98d6f8a184c1",
+  "ownerAuthorization": "Immediate production publication explicitly requested before remaining GitHub validation on 2026-10-29.",
+  "buildChange": {
+    "productionBuildCommand": {
+      "before": "npm run deploy",
+      "after": "npm run build"
+    },
+    "deployCommand": "npx wrangler deploy",
+    "otherSettingsPreserved": true
+  },
+  "directDeployAttempt": {
+    "result": "No deployment; existing environment asset-upload integration rejected authentication with 401.",
+    "resolution": "Existing main-to-piepe Cloudflare Workers Builds integration deployed successfully."
+  },
+  "postPublicationValidation": "https://github.com/aigars-avotins/piepe/actions/runs/40819145487",
+  "finalValidation": {
+    "run": "https://github.com/aigars-avotins/piepe/actions/runs/40822259868",
+    "qaCandidateCommit": "9fbec9011b6775656dd252053090f8c45306876b",
+    "chromium": {
+      "regressionPassed": 89,
+      "productionPassed": 2
+    },
+    "nativeMacOSWebKit": {
+      "regressionPassed": 88,
+      "chromiumOnlyRecorderSkipped": 1,
+      "productionPassed": 2
+    },
+    "failures": 0,
+    "flaky": 0,
+    "runtimeAssetsUnchanged": true
+  }
+}

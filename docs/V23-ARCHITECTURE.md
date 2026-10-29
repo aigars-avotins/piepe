@@ -1,6 +1,6 @@
 # PIE.PE 2.3 — repeatable forest cinema
 
-2.3 is developed on `codex/piepe-v23`. The owner has authorized merging and publishing after the completed implementation passes visual review and both full browser suites. No new runtime package, Worker, Pages project or AI footage is introduced.
+2.3 was developed on `codex/piepe-v23` and merged through PR #7. The owner subsequently requested immediate production publication after local/visual checks, followed by the remaining full GitHub validation. No new runtime package, Worker, Pages project or AI footage is introduced.
 
 ## Natural scrolling and scene ownership
 
@@ -32,4 +32,4 @@ Portrait hero focal position is 60% in both prerendered CSS and measured live ge
 
 ## Release boundary
 
-Automatic CI remains typecheck/lint/Worker/build only. Full browsers are manual release validation; the timeout ceiling is 20 minutes to include the added every-visit tests, not an instruction to consume that time. Tests must actually pass before claiming validation. Branch validation uses `production_smoke: false` while production is 2.2. The owner's subsequent instruction explicitly authorizes merging/main publication after successful validation without another approval request. The existing `piepe` Worker is the only deployment target.
+Automatic CI remains typecheck/lint/Worker/build only. Full browsers are manual release validation; the timeout ceiling is 20 minutes to include the added every-visit tests, not an instruction to consume that time. Tests must actually pass before claiming validation. Production is now 2.3. The owner explicitly requested publication before the remaining native suite; `validation: release` with `production_smoke: true` then verifies both full browser suites and both actual live locales. The final results are recorded in V23-QA. The existing `piepe` Worker is the only deployment target.
