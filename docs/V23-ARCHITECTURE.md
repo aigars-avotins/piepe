@@ -1,6 +1,6 @@
 # PIE.PE 2.3 — repeatable forest cinema
 
-2.3 is developed on `codex/piepe-v23`. Production remains the accepted 2.2 release until the owner approves the finished PR. No new runtime package, Worker, Pages project or AI footage is introduced.
+2.3 is developed on `codex/piepe-v23`. The owner has authorized merging and publishing after the completed implementation passes visual review and both full browser suites. No new runtime package, Worker, Pages project or AI footage is introduced.
 
 ## Natural scrolling and scene ownership
 
@@ -16,7 +16,11 @@ The originals are forward-moving, six-second shots with different first/last cam
 
 In 2.2 the discovery's native photo animation correctly reached its destination, but cleanup removed `.photo-moving` and restored the ordinary 1.4s CSS object-position transition while the temporary 50%/50% crop was still in effect. The photo then animated a second time toward its observation crop. `usePhotoHandoff.ts` commits that crop with transitions disabled through the next two paints before restoring normal observation transitions. The existing Dziļāk/Tālāk cameras and interrupted reverse handoff remain intact.
 
-The higher-fidelity Awakening also exposed a decoder-clock race: playing while hidden could advance the film before its first visible frame. The first presented frame is now prepared paused at time zero, with the frame callback registered before assigning the source. The held forest, matching opening and shared grading remain in the same plane. Playback starts after the opening has been committed to the page. A transient readiness drop retries on the next paint rather than waiting for a second paused-video frame that may never arrive.
+Both directions now use **one existing GSAP clock**. Each paint applies the aperture, exact inverse image transform, grading opacity and world-shade inverse together. Independent WebKit native transform clocks occasionally produced inconsistent geometry or never resolved their completion promises after reversal. The single clock removes that failure mode and the dense native keyframe approximations; only transforms/opacity change, with the same one-second spatial camera path and an eased arrival. It waits for destination image decoding before entry, and Escape during preparation cancels immediately. Skip, resize, reduced motion and reversal finish through the same bounded lifecycle. Rendered-frame tests retain their original frame count, subpixel geometry and focus checks, and additionally require more than ten different actual aperture poses.
+
+Later links and browser Back/Forward retain native scrolling; only an initial explicit anchor is aligned after fonts/layout, with user input canceling that pending alignment.
+
+The higher-fidelity Awakening also exposed a decoder-clock race: playing while hidden could advance the film before its first visible frame. The first presented frame is now prepared paused at time zero. Frame callbacks are registered both before and immediately after assigning the source, because loading a new resource may discard a previous registration; readiness commits once. The held forest, matching opening and shared grading remain in the same plane. A history change between activation and mounting also completes into the note instead of leaving the parent in a permanent preparing state. A decoded but fully transparent paused video can be culled by the compositor. Its matching decoded frame zero is staged paused in the retained forest plane; the actual presented-frame callback still gates readiness and playback. Playback starts after the opening has been committed to the page. The paused final decoder stays through the discovery handoff; detached decoder reset follows a paint of the arrived scene. A transient readiness drop retries on the next paint rather than waiting for a second paused-video frame that may never arrive. The destination image switches from lazy to eager loading when the note opens so that camera preparation actually requests it before awaiting decoding.
 
 ## Delivery and art direction
 
@@ -28,4 +32,4 @@ Portrait hero focal position is 60% in both prerendered CSS and measured live ge
 
 ## Release boundary
 
-Automatic CI remains typecheck/lint/Worker/build only. Full browsers are manual release validation; the timeout ceiling is 20 minutes to include the added every-visit tests, not an instruction to consume that time. Tests must actually pass before claiming validation. Branch validation uses `production_smoke: false` while production is 2.2. Merge/main push and production verification happen only after the owner's explicit final approval.
+Automatic CI remains typecheck/lint/Worker/build only. Full browsers are manual release validation; the timeout ceiling is 20 minutes to include the added every-visit tests, not an instruction to consume that time. Tests must actually pass before claiming validation. Branch validation uses `production_smoke: false` while production is 2.2. The owner's subsequent instruction explicitly authorizes merging/main publication after successful validation without another approval request. The existing `piepe` Worker is the only deployment target.
