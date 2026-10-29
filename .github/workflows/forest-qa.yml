@@ -132,18 +132,20 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npx playwright install webkit
+      - name: Keep native render validation awake
+        run: defaults write NSGlobalDomain NSAppSleepDisabled -bool YES
       - if: inputs.validation != 'production'
         run: |
           if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then
-            npm test -- --project=webkit-iphone --grep "$PIEPE_DIAGNOSTIC_GREP"
+            caffeinate -dimsu npm test -- --project=webkit-iphone --grep "$PIEPE_DIAGNOSTIC_GREP"
           else
-            npm test -- --project=webkit-iphone
+            caffeinate -dimsu npm test -- --project=webkit-iphone
           fi
         env:
           CI: true
           PIEPE_DIAGNOSTIC_GREP: ${{ inputs.validation != 'release' && !inputs.production_smoke && inputs.diagnostic_grep || '' }}
       - if: inputs.production_smoke || inputs.validation == 'production'
-        run: npm test -- tests/production.spec.ts --project=webkit-iphone
+        run: caffeinate -dimsu npm test -- tests/production.spec.ts --project=webkit-iphone
         env:
           CI: true
           PRODUCTION_SMOKE: true

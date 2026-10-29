@@ -1,10 +1,25 @@
 import { test } from '@playwright/test'
+import { execFileSync } from 'node:child_process'
+
+const activateBrowser = `ObjC.import('AppKit');
+const apps = $.NSWorkspace.sharedWorkspace.runningApplications.js;
+const requested = [];
+for (const app of apps) {
+  const name = app.localizedName.js;
+  if (/^(Playwright|MiniBrowser)$/.test(name)) requested.push({ name, activated: !!app.activateWithOptions(3) });
+}
+JSON.stringify({ requested, frontmost: $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js });`
 
 /** Native-only evidence for compositor/input failures; no product instrumentation. */
 export function nativeDiagnostics() {
   if (process.platform !== 'darwin') return
   test.use({ video: 'on' })
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page }, info) => {
+    // DOM focus alone does not activate an AppKit application on a CI desktop.
+    // Use the native workspace API, without System Events/Accessibility control.
+    const activation = execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', activateBrowser], { encoding: 'utf8' })
+    await info.attach('native-window-activation', { body: activation, contentType: 'application/json' })
+    await page.bringToFront()
     await page.addInitScript(() => {
       const events: unknown[] = [], state = { events, maxFrameGap: 0, frames: 0 }
       ;(window as unknown as { nativeEvidence: typeof state }).nativeEvidence = state
