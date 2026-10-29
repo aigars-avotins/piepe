@@ -20,14 +20,14 @@ try{for(const [width,height] of sizes){
  const cdp=await context.newCDPSession(page),frames=[];let writes=Promise.resolve(),capturing=true
  cdp.on('Page.screencastFrame',e=>{if(!capturing){void cdp.send('Page.screencastFrameAck',{sessionId:e.sessionId}).catch(()=>{});return}const n=frames.length;frames.push({file:`frames/${String(n).padStart(6,'0')}.jpg`,time:e.metadata.timestamp});writes=writes.then(()=>writeFile(out+'/'+frames[n].file,Buffer.from(e.data,'base64')));void cdp.send('Page.screencastFrameAck',{sessionId:e.sessionId}).catch(()=>{})})
  await cdp.send('Page.startScreencast',{format:'jpeg',quality:90,maxWidth:width,maxHeight:height,everyNthFrame:1})
- const shot=async name=>{const at=await page.evaluate(()=>performance.now());await page.screenshot({path:out+'/'+name+'.png'});const geometry=await page.evaluate(()=>Object.fromEntries(['.base-camera','.base-camera .media-plane','.awakening-plane','video[src$="awakening.mp4"]','.specimen-photo','dialog[open]'].map(s=>{const e=document.querySelector(s),r=e?.getBoundingClientRect();return [s,r?{x:r.x,y:r.y,width:r.width,height:r.height,opacity:getComputedStyle(e).opacity,transform:getComputedStyle(e).transform}:null]})));await writeFile(out+'/'+name+'.json',JSON.stringify({at,geometry},null,2))}
+ const shot=async name=>{const at=await page.evaluate(()=>performance.now());await page.screenshot({path:out+'/'+name+'.png'});const geometry=await page.evaluate(()=>Object.fromEntries(['.base-camera','.base-camera .media-plane','.awakening-plane','video[src*="/media/forest-awakening.mp4"]','.specimen-photo','dialog[open]'].map(s=>{const e=document.querySelector(s),r=e?.getBoundingClientRect();return [s,r?{x:r.x,y:r.y,width:r.width,height:r.height,opacity:getComputedStyle(e).opacity,transform:getComputedStyle(e).transform}:null]})));await writeFile(out+'/'+name+'.json',JSON.stringify({at,geometry},null,2))}
  await page.waitForFunction(()=>{const v=document.querySelector('video.forest-film');return v&&v.currentTime>5.8},null,{timeout:16000});await shot('intro-minus200')
  await page.waitForFunction(()=>document.querySelector('.world').getAttribute('data-exit-reason')==='ended');await shot('intro-end');await page.waitForTimeout(750)
  await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).hover();await shot('click-minus200');await page.waitForTimeout(200)
  const clicked=performance.now();await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
  for(const t of [0,100,250,500,1000]){await page.waitForTimeout(Math.max(0,t-(performance.now()-clicked)));await shot('click-plus'+t)}
- await page.waitForFunction(()=>{const v=document.querySelector('video[src$="awakening.mp4"]');return v&&v.currentTime>5.8},null,{timeout:14000});await shot('awakening-minus200')
- await page.waitForFunction(()=>window.seamEvents.some(e=>e.type==='ended'&&e.src?.endsWith('awakening.mp4')))
+ await page.waitForFunction(()=>{const v=document.querySelector('video[src*="/media/forest-awakening.mp4"]');return v&&v.currentTime>5.8},null,{timeout:14000});await shot('awakening-minus200')
+ await page.waitForFunction(()=>window.seamEvents.some(e=>e.type==='ended'&&e.src?.includes('forest-awakening.mp4')))
  const ended=performance.now();for(const t of [0,100,250,500,1000,1600]){await page.waitForTimeout(Math.max(0,t-(performance.now()-ended)));await shot('awakening-plus'+t)}
  await page.getByRole('heading',{name:/A small shelf/}).waitFor({state:'visible',timeout:5000})
  capturing=false;await cdp.send('Page.stopScreencast');await writes
@@ -38,7 +38,7 @@ try{for(const [width,height] of sizes){
  await page.close()
  const timeline=frames.map((f,i)=>`file '${f.file}'\noption framerate 1000\nduration ${Math.max(.001,(frames[i+1]?.time||f.time+.08)-f.time)}`).join('\n')+`\nfile '${frames.at(-1).file}'\noption framerate 1000\n`;await writeFile(out+'/frames.txt',timeline)
  const encoded=spawnSync('ffmpeg',['-v','error','-y','-f','concat','-safe','0','-i',out+'/frames.txt','-vf','fps=30','-c:v','libx264','-threads','2','-preset','fast','-crf','19','-pix_fmt','yuv420p','-movflags','+faststart',out+'/transition.mp4'],{stdio:'inherit'});if(encoded.status!==0)throw Error('Encoding failed')
- for(const [seam,event] of [['click',events.find(e=>e.type==='click')],['awakening',events.find(e=>e.type==='ended'&&e.src?.endsWith('awakening.mp4'))],['intro',events.find(e=>e.type==='ended'&&e.src?.endsWith('reveal.mp4'))]]){
+ for(const [seam,event] of [['click',events.find(e=>e.type==='click')],['awakening',events.find(e=>e.type==='ended'&&e.src?.includes('forest-awakening.mp4'))],['intro',events.find(e=>e.type==='ended'&&e.src?.includes('forest-reveal.mp4'))]]){
    if(!event)continue
    for(const offset of [-200,0,100,250,500,1000]){
     const time=Math.max(0,event.wall/1000-frames[0].time+offset/1000)

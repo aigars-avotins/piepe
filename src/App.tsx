@@ -17,6 +17,7 @@ import { useForestMotion } from './useForestMotion'
 import { readSession, saveData, useReducedMotion, writeSession } from './usePreferences'
 import { useForestAudio } from './useForestAudio'
 import SoundControl from './SoundControl'
+import { mediaUrl } from './mediaUrl'
 
 const chapters = ['forest', 'understory', 'encounter', 'return']
 export default function App({ initialLocale }: { initialLocale?: Locale }) {
@@ -29,12 +30,14 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const [origin, setOrigin] = useState<CinemaOrigin>()
   const [cinemaActive, setCinemaActive] = useState({ understory: false, breathing: false })
   const [cinemaMounted, setCinemaMounted] = useState({ understory: false, breathing: false })
+  const [cinemaErrors, setCinemaErrors] = useState({ understory: false, breathing: false })
+  const [cinemaRetries, setCinemaRetries] = useState({ understory: 0, breathing: 0 })
   const prepareCinema = useCallback((name: 'understory' | 'breathing') => {
     setCinemaMounted(value => value[name] ? value : { ...value, [name]: true })
   }, [])
   const changeCinema = useCallback((name: 'understory' | 'breathing', active: boolean) => {
     if (active) setCinemaMounted(value => value[name] ? value : { ...value, [name]: true })
-    setCinemaActive(value => value[name] === active ? value : { ...value, [name]: active })
+    setCinemaActive(value => value[name] === active ? value : active ? { understory: name === 'understory', breathing: name === 'breathing' } : { ...value, [name]: false })
   }, [])
   const changeLocale = (value: Locale) => {
     if (value === locale) return
@@ -82,16 +85,18 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const finish = useCallback((reason: string) => {
     if (finishLock.current) return
     finishLock.current = true
+    document.querySelector<HTMLVideoElement>('video.forest-film')?.pause()
     clearTimeout(unmountTimer.current)
     setIntro(false); setTypography(true); setExitReason(reason)
     writeSession('piepe-entered')
     unmountTimer.current = setTimeout(() => setFilmMounted(false), 650)
   }, [])
   const initialize = useCallback(() => {
-    const saving = saveData(), staticVisit = matchMedia('(prefers-reduced-motion: reduce)').matches || saving || readSession('piepe-entered')
+    const saving = saveData(), anchorVisit = !!location.hash && location.hash !== '#forest', staticVisit = matchMedia('(prefers-reduced-motion: reduce)').matches || saving || readSession('piepe-entered')
     setDataSaving(saving); setCollected(readSession('piepe-note-found')); setBooted(true)
     const image = document.querySelector<HTMLImageElement>('.asset-monitor')
     if (image?.complete && !image.naturalWidth) { setImageFailed(true); finish('image-error') }
+    else if (anchorVisit) finish('anchor-navigation')
     else if (staticVisit) finish('preference-or-return')
     else if (document.documentElement.dataset.skipIntro === '1') finish('skipped')
     else setFilmMounted(true)
@@ -99,10 +104,40 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   // Keep the server-painted controls stable; start cinema after hydration's first paint.
   useEffect(() => { const frame = requestAnimationFrame(initialize); return () => cancelAnimationFrame(frame) }, [initialize])
   useEffect(() => {
+    if (!booted || exitReason !== 'anchor-navigation') return
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined
+    if (navigation && navigation.type !== 'navigate' && new URL(navigation.name).hash === location.hash) return
+    const hash = location.hash
+    let cancelled = false, frame = 0
+    const interrupt = () => { cancelled = true }
+    const changeHash = () => { if (location.hash !== hash) interrupt() }
+    // Resolve the initial explicit anchor after restoration, fonts and camera layout.
+    // All later links use native scrolling; reload/back keep their saved position.
+    const ready = () => { void document.fonts.ready.then(() => {
+      if (cancelled) return
+      frame = requestAnimationFrame(() => { frame = requestAnimationFrame(() => {
+        if (!cancelled && location.hash === hash) document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'instant', block: 'start' })
+      }) })
+    }) }
+    window.addEventListener('wheel', interrupt, { passive: true })
+    window.addEventListener('touchstart', interrupt, { passive: true })
+    window.addEventListener('pointerdown', interrupt, { passive: true })
+    window.addEventListener('keydown', interrupt)
+    window.addEventListener('hashchange', changeHash)
+    if (document.readyState === 'complete') ready(); else window.addEventListener('load', ready, { once: true })
+    return () => { cancelled = true; cancelAnimationFrame(frame); window.removeEventListener('load', ready); window.removeEventListener('wheel', interrupt); window.removeEventListener('touchstart', interrupt); window.removeEventListener('pointerdown', interrupt); window.removeEventListener('keydown', interrupt); window.removeEventListener('hashchange', changeHash) }
+  }, [booted, exitReason])
+  useEffect(() => {
     if (!intro && exitReason === 'skipped') hotspot.current?.focus({ preventScroll: true })
   }, [intro, exitReason])
   const revealTypography = useCallback(() => setTypography(true), [])
   useEffect(() => () => clearTimeout(unmountTimer.current), [])
+  useEffect(() => {
+    if (!intro) return
+    const continueForward = () => { if (window.scrollY > window.innerHeight * .25) finish('scroll-forward') }
+    window.addEventListener('scroll', continueForward, { passive: true })
+    return () => window.removeEventListener('scroll', continueForward)
+  }, [intro, finish])
   useEffect(() => {
     const query = matchMedia('(prefers-reduced-motion: reduce)')
     const change = () => { if (query.matches) finish('reduced-motion') }
@@ -115,7 +150,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     const resize = () => {
       const { width, height } = environment.current?.getBoundingClientRect() ?? { width: window.innerWidth, height: window.innerHeight }
       const scale = Math.max(width / 1920, height / 1080)
-      const focal = width < 700 ? .64 : .5
+      const focal = width < 700 ? .60 : .5
       setPlane({ width: 1920 * scale, height: 1080 * scale, left: (width - 1920 * scale) * focal, top: (height - 1080 * scale) * .5 })
     }
     const observer = new ResizeObserver(resize)
@@ -133,14 +168,19 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     root.current?.querySelectorAll('section[data-scene]').forEach(section => observer.observe(section))
     return () => observer.disconnect()
   }, [])
-  const motionFailed = useForestMotion(root, !intro && !reduced && !paused, dataSaving, changeCinema, prepareCinema)
+  const motionFailed = useForestMotion(root, !intro && !reduced && !dataSaving && !paused, dataSaving, changeCinema, prepareCinema, locale)
+  const cinemaResult = (name: 'understory' | 'breathing', error: boolean) => setCinemaErrors(value => value[name] === error ? value : { ...value, [name]: error })
+  const retryCinema = (name: 'understory' | 'breathing') => {
+    cinemaResult(name, false)
+    setCinemaRetries(value => ({ ...value, [name]: value[name] + 1 }))
+  }
 
   const showNote = useCallback((animate: boolean, frame: string) => {
     setHeldFrame(frame); setOrigin(animate ? cinemaOrigin() : undefined); setDiscovery(true)
     if (!animate) setAwakening('idle')
   }, [])
   const freezeFrame = useCallback(() => {
-    const video = document.querySelector<HTMLVideoElement>('video[src$="awakening.mp4"]')
+    const video = document.querySelector<HTMLVideoElement>('video[src*="/media/forest-awakening.mp4"]')
     if (!video || video.readyState < 2) return heldFrame
     try { const canvas = document.createElement('canvas'); canvas.width = video.videoWidth; canvas.height = video.videoHeight; canvas.getContext('2d')!.drawImage(video, 0, 0); return canvas.toDataURL('image/jpeg', .95) } catch { return heldFrame }
   }, [heldFrame])
@@ -169,6 +209,12 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   }, [discovery, awakening])
   const cinemaRunning = awakening === 'preparing' || awakening === 'playing'
   useEffect(() => {
+    if (discovery || intro || paused || awakening !== 'idle' || (!cinemaActive.understory && !cinemaActive.breathing)) return
+    const escape = (event: KeyboardEvent) => { if (event.key === 'Escape') setPaused(true) }
+    document.addEventListener('keydown', escape)
+    return () => document.removeEventListener('keydown', escape)
+  }, [discovery, intro, paused, awakening, cinemaActive.understory, cinemaActive.breathing])
+  useEffect(() => {
     if (!cinemaRunning) return
     const previous = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -194,25 +240,25 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const collect = () => { writeSession('piepe-note-found'); setCollected(true) }
   const inspectEvents = { onMouseEnter: () => setInspect(true), onMouseLeave: () => setInspect(false), onFocus: () => setInspect(true), onBlur: () => setInspect(false) }
 
-  return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || paused || motionFailed ? 'motion-off' : ''} ${hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${collected ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version="2.2" data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
+  return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || dataSaving || paused || motionFailed ? 'motion-off' : ''} ${reduced || dataSaving || motionFailed ? 'static-preference' : ''} ${hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${collected ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version="2.3" data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
     <a className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}>{t.skipContent}</a>
     <ForestScene ref={environment} plane={plane} inspect={inspect && (scene === 'forest' || scene === 'encounter')} still={heldFrame}
-      macro={cinemaMounted.understory && <MotionClip name="understory" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.understory && !intro && !discovery && awakening === 'idle'} />}
-      breathing={cinemaMounted.breathing && <MotionClip name="breathing" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.breathing && !intro && !discovery && awakening === 'idle'} />}>
+      macro={cinemaMounted.understory && <MotionClip key={cinemaRetries.understory} name="understory" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.understory && !intro && !discovery && awakening === 'idle'} onReady={() => cinemaResult('understory', false)} onFinish={() => cinemaResult('understory', true)} />}
+      breathing={cinemaMounted.breathing && <MotionClip key={cinemaRetries.breathing} name="breathing" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.breathing && !intro && !discovery && awakening === 'idle'} onReady={() => cinemaResult('breathing', false)} onFinish={() => cinemaResult('breathing', true)} />}>
       {awakening !== 'idle' && <div className="world-awakening"><MotionClip name="awakening" enabled={!reduced && !dataSaving && !paused} onReady={() => setAwakening('playing')} onFinish={completeAwakening} /></div>}
       <div className={`film-wrap ${intro ? '' : 'film-finished'}`}>{filmMounted && <IntroFilm key={filmKey} onFinish={finish} onTypography={revealTypography} skipRequested={skipRequested} />}</div>
     </ForestScene>
     {awakening !== 'idle' && !discovery && <div className="awakening-controls" role="region" aria-label={t.awakening}>
       <button className="text-button skip-awakening" onClick={skipAwakening}>{t.skipAwakening} <Arrow direction="right" /></button>
     </div>}
-    <img className="asset-monitor" src="/media/forest-final.jpg" alt="" aria-hidden="true" onError={() => { setImageFailed(true); finish('image-error') }} />
+    <img className="asset-monitor" src={mediaUrl('/media/forest-final.jpg')} alt="" aria-hidden="true" onError={() => { setImageFailed(true); finish('image-error') }} />
     <header className="site-header">
       <a className="brand" href="#forest" onClick={returnToForest} aria-label={t.homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a>
       <span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} onChange={changeLocale} />
       {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}>{t.skipIntro} <span aria-hidden="true"><Arrow direction="diagonal" /></span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}>{t.replay} <span aria-hidden="true">↺</span></button>}
     </header>
     <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span>0{index + 1}</span><i /><span>{t.chapters[index]}</span></a>)}</nav>
-    <Story inactive={cinemaRunning} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} collected={collected} paused={paused} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
+    <Story inactive={cinemaRunning} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} collected={collected} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
     {!discovery && <SoundControl audio={audio} locale={locale} />}
     <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={() => setAwakening('idle')} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
   </div>

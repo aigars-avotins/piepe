@@ -27,7 +27,7 @@ for (const locale of ['lv', 'en'] as const) {
   test(`${locale}: localized field note and wallpaper files are real downloads`, async ({ page, request }) => {
     const t = messages[locale]
     await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto(path)
-    const videoRequests: string[] = []; page.on('request', r => { if (r.url().endsWith('.mp4')) videoRequests.push(r.url()) })
+    const videoRequests: string[] = []; page.on('request', r => { if (new URL(r.url()).pathname.endsWith('.mp4')) videoRequests.push(r.url()) })
     await page.getByRole('button', { name: t.closer, exact: true }).click()
     await page.getByRole('tab', { name: t.observations[0].label, exact: false }).press('End')
     const download = page.waitForEvent('download'); await page.getByRole('link', { name: t.keepNote, exact: false }).click()
@@ -67,7 +67,7 @@ test('language links preserve active intro, open discovery, observation, collect
   await expect(page.locator('video.forest-film')).toHaveCount(0)
 })
 
-test('all cinematic shots play naturally once, hold the exact end still and never overlap decoders', async ({ page }) => {
+test('awakening completes once; environmental films replay with matched ending frames and one decoder', async ({ page }) => {
   test.setTimeout(45000)
   await page.addInitScript(() => { sessionStorage.setItem('piepe-entered', '1'); (window as unknown as { maxPlaying: number }).maxPlaying = 0; setInterval(() => { const w = window as unknown as { maxPlaying: number }; w.maxPlaying = Math.max(w.maxPlaying, [...document.querySelectorAll('video')].filter(v => !v.paused && !v.ended).length) }, 50) })
   await page.addInitScript(() => {
@@ -82,31 +82,34 @@ test('all cinematic shots play naturally once, hold the exact end still and neve
   })
   await page.goto('/en/')
   await page.getByRole('button', { name: 'Look closer at the fungus', exact: true }).click()
-  await expect(page.locator('video[src$="awakening.mp4"]')).toBeVisible()
-  await expect.poll(() => page.locator('video[src$="awakening.mp4"]').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.1)
+  await expect(page.locator('video[src*="/media/forest-awakening.mp4"]')).toBeVisible()
+  await expect.poll(() => page.locator('video[src*="/media/forest-awakening.mp4"]').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.1)
   await expect(page.getByRole('heading', { name: /A small shelf/ })).toBeVisible({ timeout: 11000 })
   await page.getByRole('button', { name: 'Close discovery' }).click()
   for (const [section, clip] of [['understory', 'understory'], ['return', 'breathing']] as const) {
     await page.locator('#' + section).scrollIntoViewIfNeeded()
     const layer = page.locator(`[data-clip="${clip}"]`)
-    await expect(layer).toBeVisible(); await expect(layer).toHaveAttribute('data-clip-state', 'complete', { timeout: 11000 })
+    await expect(layer).toBeVisible(); await expect.poll(() => layer.getAttribute('data-clip-cycles').then(Number), { timeout: 11000 }).toBeGreaterThanOrEqual(1)
     await expect(layer).toHaveAttribute('data-clip-reason', 'ended')
-    await expect(layer.locator('video')).toHaveCount(0)
-    await expect(layer.locator('img')).toHaveAttribute('src', `/media/forest-${clip}-final.jpg`)
-    expect(await layer.locator('img').evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth === 1920)).toBe(true)
+    await expect(layer.locator('video')).toHaveCount(1)
+    await expect(layer).toHaveAttribute('data-clip-state', 'playing')
+    await expect(layer.locator('.clip-end')).toHaveAttribute('src', `/media/forest-${clip}-final.jpg?v=2.3`)
+    expect(await layer.locator('.clip-end').evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth >= 1900)).toBe(true)
+    const presented = await layer.locator('video').evaluate((v: HTMLVideoElement) => v.getVideoPlaybackQuality().totalVideoFrames)
+    await expect.poll(() => layer.locator('video').evaluate((v: HTMLVideoElement) => v.getVideoPlaybackQuality().totalVideoFrames)).toBeGreaterThan(presented)
   }
-  await page.locator('#understory').scrollIntoViewIfNeeded(); await expect(page.locator('video')).toHaveCount(0)
+  await page.locator('#understory').scrollIntoViewIfNeeded(); await expect(page.locator('[data-clip=understory]')).toHaveAttribute('data-clip-ready', 'true'); await expect(page.locator('[data-clip=understory] video')).toHaveCount(1)
   expect(await page.evaluate(() => (window as unknown as { maxPlaying: number }).maxPlaying)).toBe(1)
   const frames = await page.evaluate(() => (window as unknown as { clipFrames: { name: string; difference: number }[] }).clipFrames)
-  expect(frames.map(f => f.name)).toEqual(['awakening', 'understory', 'breathing'])
+  expect([...new Set(frames.map(f => f.name))]).toEqual(['awakening', 'understory', 'breathing'])
   for (const frame of frames) expect(frame.difference).toBeLessThan(10)
 })
 
 for (const scenario of ['blocked', 'missing', 'stall', 'pending'] as const) test(`awakening ${scenario} recovers to the complete accessible note`, async ({ page }) => {
   await page.addInitScript(() => sessionStorage.setItem('piepe-entered', '1'))
   if (scenario === 'blocked') await page.addInitScript(() => { HTMLMediaElement.prototype.play = () => Promise.reject(new DOMException('Blocked', 'NotAllowedError')) })
-  if (scenario === 'missing') await page.route('**/media/forest-awakening.mp4', route => route.abort())
-  if (scenario === 'pending') await page.route('**/media/forest-awakening.mp4', () => {})
+  if (scenario === 'missing') await page.route('**/media/forest-awakening.mp4*', route => route.abort())
+  if (scenario === 'pending') await page.route('**/media/forest-awakening.mp4*', () => {})
   await page.goto('/en/'); await page.getByRole('button', { name: 'Look closer at the fungus', exact: true }).click()
   if (scenario === 'stall') { await expect.poll(() => page.locator('video').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(.1); await page.locator('video').evaluate((v: HTMLVideoElement) => v.pause()) }
   await expect(page.getByRole('heading', { name: /A small shelf/ })).toBeVisible({ timeout: 11000 })
@@ -138,7 +141,7 @@ for (const [width,height] of requiredViewports) test.describe(`${width}x${height
   })
   test('scene video covers phones, MacBook and ultrawide without stretching or side borders',async({page})=>{
     await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
-    const video=page.locator('video[src$="understory.mp4"]')
+    const video=page.locator('video[src*="/media/forest-understory.mp4"]')
     await page.goto('/en/');await page.locator('#understory').scrollIntoViewIfNeeded()
     await expect(video).toBeVisible();await expect(video).toHaveCSS('object-fit','cover')
     const visible=await page.evaluate(()=>({width:innerWidth,height:innerHeight})),box=await video.boundingBox()
@@ -172,16 +175,16 @@ test('save-data bypasses all automatic films and never fetches full wallpapers o
   await page.goto('/')
   expect(requests.filter(r => /\.mp4$|wallpapers\/piepe-.*\.jpg(?:\?|$)/.test(r))).toEqual([])
   for (const id of ['understory', 'return']) { await page.locator('#' + id).scrollIntoViewIfNeeded(); await expect(page.locator('video')).toHaveCount(0) }
-  expect(requests.filter(r => r.endsWith('.mp4'))).toEqual([])
+  expect(requests.filter(r => new URL(r).pathname.endsWith('.mp4'))).toEqual([])
 })
 
 
 test('missing awakening still recovers to the preserved forest photo', async ({ page }) => {
   await page.emulateMedia({reducedMotion:'reduce'})
-  await page.route('**/media/forest-awakening-final.jpg', route => route.abort())
+  await page.route('**/media/forest-awakening-final.jpg*', route => route.abort())
   await page.goto('/en/'); await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   const photo=page.locator('.specimen-photo img')
-  await expect(photo).toHaveAttribute('src','/media/forest-final.jpg')
+  await expect(photo).toHaveAttribute('src','/media/forest-final.jpg?v=2.3')
   expect(await photo.evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth===1920)).toBe(true)
   await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
 })

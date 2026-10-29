@@ -1,12 +1,20 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { hasPlayedClip, rememberClip } from './clipHistory'
+import EnvironmentalFilm from './EnvironmentalFilm'
+import { mediaUrl } from './mediaUrl'
 export type ClipName = 'awakening' | 'understory' | 'breathing'
-const posterFor = (name: ClipName) => `/media/forest-${name}${name === 'understory' ? '' : '-poster'}.jpg`
+const posterFor = (name: ClipName) => mediaUrl(`/media/forest-${name}${name === 'understory' ? '' : '-poster'}.jpg`)
 type Props = { name: ClipName; enabled: boolean; active?: boolean; onReady?: () => void; onFinish?: (reason: string) => void; remember?: boolean }
 /** Decode behind the held source frame; expose only an actually presented video frame. */
-export default function MotionClip({ name, enabled, active = true, onReady, onFinish, remember = true }: Props) {
-  const [done, setDone] = useState(() => remember && hasPlayedClip(name))
+export default function MotionClip(props: Props) {
+  if (props.name !== 'awakening') return <EnvironmentalFilm key={`${props.name}-${props.enabled}-${props.active ?? true}`} {...props} name={props.name} />
+  return <AwakeningClip {...props} />
+}
+function AwakeningClip({ name, enabled, active = true, onReady, onFinish, remember = true }: Props) {
+  const [playedBeforeMount] = useState(() => remember && hasPlayedClip(name))
+  const [done, setDone] = useState(playedBeforeMount)
   const [ready, setReady] = useState(false)
+  const [staged, setStaged] = useState(false)
   const [stillReady, setStillReady] = useState(false)
   const [endReady, setEndReady] = useState(false)
   const [reason, setReason] = useState('')
@@ -31,29 +39,40 @@ export default function MotionClip({ name, enabled, active = true, onReady, onFi
     else complete()
   }, [])
   useEffect(() => {
-    if (done) return
+    // A concurrent/remounted activation can observe history written by the first
+    // instance. Complete that activation too, so its parent cannot stay preparing.
+    if (playedBeforeMount) { if (!lock.current) finish('already-played'); return }
     if (!enabled) { finish('preference'); return }
     if (!active) { if (started.current) finish('offstage'); return }
     const video = videoRef.current
     if (!video) return
     started.current = true
     if (remember) rememberClip(name)
-    let lastTime = 0, progressAt = performance.now(), activeTime = 0, previous = performance.now(), revealed = false, frame = 0
+    let lastTime = 0, progressAt = performance.now(), activeTime = 0, previous = performance.now(), revealed = false, frame = 0, loadedFrame = 0, paint = 0
+    const play = () => { if (lock.current) return; progressAt = performance.now(); video.play()?.catch(() => { if (!lock.current) finish('autoplay-blocked') }) }
     const present = () => {
       if (revealed || lock.current || !alive.current) return
-      if (video.readyState < 2) { decoded(); return }
+      // A paused first frame can be presented just before readyState advances. There is
+      // no second frame callback until playback, so recheck readiness on the next paint.
+      if (video.readyState < 2) { paint = requestAnimationFrame(present); return }
       revealed = true; setReady(true); callbacks.current.onReady?.()
+      // Commit the exact source opening before advancing the decoder's clock.
+      paint = requestAnimationFrame(() => { paint = requestAnimationFrame(() => { if (!document.hidden && !lock.current) play() }) })
     }
     const decoded = () => {
       if (video.requestVideoFrameCallback) frame = video.requestVideoFrameCallback(present)
       else frame = requestAnimationFrame(present)
     }
-    const play = () => { progressAt = performance.now(); video.play()?.catch(() => finish('autoplay-blocked')) }
-    const visibility = () => { if (document.hidden) video.pause(); else play(); previous = performance.now() }
+    // A fully transparent paused video may be culled by WebKit's compositor and
+    // never receive its first presented-frame callback. Stage the decoded frame
+    // zero in the existing matching forest plane, still paused. Readiness and the
+    // playback clock remain gated by the actual presented-frame callback above.
+    const stage = () => { if (!lock.current && video.readyState >= 2) setStaged(true) }
+    const visibility = () => { if (document.hidden) video.pause(); else if (revealed) play(); previous = performance.now() }
     const progress = () => { if (video.currentTime > lastTime) { lastTime = video.currentTime; progressAt = performance.now() } }
     const ended = () => finish('ended'), error = () => finish('media-error')
-    video.addEventListener('loadeddata', decoded, { once: true }); if (video.readyState >= 2) decoded()
     video.addEventListener('timeupdate', progress); video.addEventListener('ended', ended); video.addEventListener('error', error)
+    video.addEventListener('loadeddata', stage); video.addEventListener('canplay', stage)
     document.addEventListener('visibilitychange', visibility)
     const timer = setInterval(() => {
       const now = performance.now()
@@ -64,16 +83,27 @@ export default function MotionClip({ name, enabled, active = true, onReady, onFi
       }
       previous = now
     }, 200)
-    video.muted = true; if (!document.hidden) play()
+    video.muted = true
+    // Subscribe before assigning the source: preload may present frame zero before
+    // loadeddata. Playing merely to obtain readiness would skip that opening frame.
+    if (typeof video.requestVideoFrameCallback === 'function') decoded()
+    else video.addEventListener('loadeddata', decoded, { once: true })
+    video.src = mediaUrl(`/media/forest-${name}.mp4`)
+    // Loading a new resource may discard an earlier callback registration. Keep a
+    // same-task post-assignment subscription too; present() commits only once.
+    if (typeof video.requestVideoFrameCallback === 'function') loadedFrame = video.requestVideoFrameCallback(present)
     return () => {
-      clearInterval(timer); video.pause(); video.removeEventListener('loadeddata', decoded); video.removeEventListener('timeupdate', progress); video.removeEventListener('ended', ended); video.removeEventListener('error', error); document.removeEventListener('visibilitychange', visibility)
-      if (video.cancelVideoFrameCallback) video.cancelVideoFrameCallback(frame); else cancelAnimationFrame(frame)
-      video.removeAttribute('src'); video.load()
+      clearInterval(timer); video.pause(); video.removeEventListener('loadeddata', decoded); video.removeEventListener('loadeddata', stage); video.removeEventListener('canplay', stage); video.removeEventListener('timeupdate', progress); video.removeEventListener('ended', ended); video.removeEventListener('error', error); document.removeEventListener('visibilitychange', visibility)
+      if (video.cancelVideoFrameCallback) { video.cancelVideoFrameCallback(frame); video.cancelVideoFrameCallback(loadedFrame) } else cancelAnimationFrame(frame)
+      cancelAnimationFrame(paint)
+      // Keep the paused final surface through the camera handoff. Reset a detached
+      // decoder after the next paint, rather than synchronously during that move.
+      requestAnimationFrame(() => { if (!video.isConnected) { video.removeAttribute('src'); video.load() } })
     }
-  }, [name, enabled, active, done, finish, remember])
-  return <div className={`motion-clip clip-${name}`} data-clip={name} data-clip-state={done ? 'complete' : ready ? 'playing' : 'preparing'} data-clip-ready={ready} data-still-ready={done ? endReady : stillReady} data-clip-reason={reason} aria-hidden="true">
-    <img ref={endRef} className="clip-end" onLoad={event => { void event.currentTarget.decode().then(() => { if (alive.current) setEndReady(true) }).catch(() => {}) }} onError={event => { event.currentTarget.dataset.fallback = 'true'; if (!event.currentTarget.src.endsWith('/media/forest-final.jpg')) event.currentTarget.src = '/media/forest-final.jpg' }} src={`/media/forest-${name}-final.jpg`} alt="" width="1920" height="1080" />
+  }, [name, enabled, active, playedBeforeMount, finish, remember])
+  return <div className={`motion-clip clip-${name}`} data-clip={name} data-clip-state={done ? 'complete' : ready ? 'playing' : 'preparing'} data-clip-ready={ready} data-frame-staged={staged} data-still-ready={done ? endReady : stillReady} data-clip-reason={reason} aria-hidden="true">
+    <img ref={endRef} className="clip-end" onLoad={event => { void event.currentTarget.decode().then(() => { if (alive.current) setEndReady(true) }).catch(() => {}) }} onError={event => { event.currentTarget.dataset.fallback = 'true'; if (!new URL(event.currentTarget.src).pathname.endsWith('/media/forest-final.jpg')) event.currentTarget.src = mediaUrl('/media/forest-final.jpg') }} src={mediaUrl(`/media/forest-${name}-final.jpg`)} alt="" width="1920" height="1080" />
     {!done && name !== 'awakening' && <img className="clip-poster" onLoad={event => { void event.currentTarget.decode().then(() => { if (alive.current) setStillReady(true) }).catch(() => {}) }} onError={event => { event.currentTarget.style.display = 'none' }} src={posterFor(name)} alt="" width="1920" height="1080" />}
-    {enabled && active && !done && <video ref={videoRef} src={`/media/forest-${name}.mp4`} muted playsInline preload="auto" tabIndex={-1} />}
+    {enabled && active && !playedBeforeMount && <video ref={videoRef} muted playsInline preload="auto" tabIndex={-1} />}
   </div>
 }

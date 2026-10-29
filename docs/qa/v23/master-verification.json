@@ -1,0 +1,166 @@
+[
+  {
+    "shot": "reveal",
+    "sourceBlob": "b6532f81fe9fe067dbf3f5f035fdbbd94928dd62",
+    "sourceSha256": "8a1ed813de90e5a78cc9e9ff9818f25013f9f46e311ff8a3695d6613aa45c03d",
+    "sourceBytes": 19070653,
+    "sourceCodec": "hevc",
+    "sourcePixelFormat": "yuv420p10le",
+    "sourceDimensions": [
+      1920,
+      1080
+    ],
+    "deliverySha256": "6f3e32573ccff903740ebe58455e8fe579f280946041609c028b08ac50db64f5",
+    "deliveryBytes": 9212166,
+    "deliveryDimensions": [
+      1920,
+      1080
+    ],
+    "frames": "145",
+    "fps": "24/1",
+    "duration": "6.041667",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "level": 41,
+    "candidates": [
+      {
+        "crf": 16,
+        "tune": "grain",
+        "bytes": 9212166
+      },
+      {
+        "crf": 18,
+        "tune": "grain",
+        "bytes": 6794250
+      },
+      {
+        "crf": 20,
+        "tune": "film",
+        "bytes": 4220489
+      }
+    ]
+  },
+  {
+    "shot": "awakening",
+    "sourceBlob": "88fd1cef74de6abd57bd15c8d456e2ee857325d7",
+    "sourceSha256": "50266c1c077aa157977ce0f7cd36b441e2d55458e356c3d5fa6a87e4aa0e881a",
+    "sourceBytes": 9495118,
+    "sourceCodec": "h264",
+    "sourcePixelFormat": "yuv420p",
+    "sourceDimensions": [
+      1920,
+      1080
+    ],
+    "deliverySha256": "dffdfd61d2dc31f4dfe5dfa490ee57db1a3055f35bc2bc1387e54d8820b68cf2",
+    "deliveryBytes": 8237084,
+    "deliveryDimensions": [
+      1920,
+      1080
+    ],
+    "frames": "145",
+    "fps": "24/1",
+    "duration": "6.041667",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "level": 41,
+    "candidates": [
+      {
+        "crf": 16,
+        "tune": "grain",
+        "bytes": 8237084
+      },
+      {
+        "crf": 18,
+        "tune": "grain",
+        "bytes": 5446162
+      },
+      {
+        "crf": 20,
+        "tune": "film",
+        "bytes": 3594270
+      }
+    ]
+  },
+  {
+    "shot": "understory",
+    "sourceBlob": "156f5401893f2690a02aa4b35b36edff3cc89507",
+    "sourceSha256": "3502e5eff08c7729b5c95b26f8c7ced679bf242b1f81bd7237f0672e85c9f2e4",
+    "sourceBytes": 7056234,
+    "sourceCodec": "h264",
+    "sourcePixelFormat": "yuv420p",
+    "sourceDimensions": [
+      1996,
+      1036
+    ],
+    "deliverySha256": "d4a83a5cff4eff09e9fb14d1b8d7df8d0985a280a1a79e6123f3a2fdb360453f",
+    "deliveryBytes": 5846195,
+    "deliveryDimensions": [
+      1900,
+      988
+    ],
+    "frames": "145",
+    "fps": "24/1",
+    "duration": "6.041667",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "level": 41,
+    "candidates": [
+      {
+        "crf": 16,
+        "tune": "grain",
+        "bytes": 5846195
+      },
+      {
+        "crf": 18,
+        "tune": "grain",
+        "bytes": 4073082
+      },
+      {
+        "crf": 20,
+        "tune": "film",
+        "bytes": 2637725
+      }
+    ]
+  },
+  {
+    "shot": "breathing",
+    "sourceBlob": "d08ed1d04652b5abe4cd8e34a3c5cb3879357385",
+    "sourceSha256": "995f5d18b64078bda7ef77323fe8763b28360f6daf2466df432300db489c1a82",
+    "sourceBytes": 9247458,
+    "sourceCodec": "h264",
+    "sourcePixelFormat": "yuv420p",
+    "sourceDimensions": [
+      1920,
+      1080
+    ],
+    "deliverySha256": "a3bc82771398b754d22273fbdd8d1023f04de0778ecef5b8b90ff8bdb64316ef",
+    "deliveryBytes": 7025165,
+    "deliveryDimensions": [
+      1920,
+      1080
+    ],
+    "frames": "145",
+    "fps": "24/1",
+    "duration": "6.041667",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "level": 41,
+    "candidates": [
+      {
+        "crf": 16,
+        "tune": "grain",
+        "bytes": 7025165
+      },
+      {
+        "crf": 18,
+        "tune": "grain",
+        "bytes": 4940643
+      },
+      {
+        "crf": 20,
+        "tune": "film",
+        "bytes": 3513663
+      }
+    ]
+  }
+]

@@ -39,21 +39,25 @@ on:
   workflow_dispatch:
     inputs:
       validation:
-        description: 'Release requires both browsers; single-browser modes are diagnostics only'
+        description: 'Release: full suites; production: live smoke after a validated release; single browsers: diagnostics'
         type: choice
-        options: [release, chromium, webkit]
+        options: [release, chromium, webkit, production]
         default: release
       production_smoke:
         description: 'Also verify the deployed release in both browsers (run after deployment)'
         type: boolean
         default: false
+      diagnostic_grep:
+        description: 'Optional single-browser diagnostic filter; ignored for release and production smoke'
+        type: string
+        default: ''
 permissions:
   contents: read
 # Automatic/diagnostic runs share a per-branch or PR group. Each release has its own group,
 # so even a newer push or another manual release cannot cancel an approved validation.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.production_smoke) && format('release-{0}', github.run_id) || format('checks-{0}', github.event.pull_request.number || github.ref) }}
-  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || (inputs.validation != 'release' && !inputs.production_smoke) }}
+  group: ${{ github.workflow }}-${{ github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.validation == 'production' || inputs.production_smoke) && format('release-{0}', github.run_id) || format('checks-{0}', github.event.pull_request.number || github.ref) }}
+  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || (inputs.validation != 'release' && inputs.validation != 'production' && !inputs.production_smoke) }}
 jobs:
   checks:
     name: Lightweight checks
@@ -75,11 +79,11 @@ jobs:
       - name: Production build
         run: npm run build
   chromium:
-    if: github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.validation == 'chromium' || inputs.production_smoke)
+    if: github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.validation == 'chromium' || inputs.validation == 'production' || inputs.production_smoke)
     needs: checks
     runs-on: ubuntu-24.04
     container: mcr.microsoft.com/playwright:v1.64.1-noble
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -88,10 +92,17 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: npm test -- --project=chrome-desktop
+      - if: inputs.validation != 'production'
+        run: |
+          if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then
+            npm test -- --project=chrome-desktop --grep "$PIEPE_DIAGNOSTIC_GREP"
+          else
+            npm test -- --project=chrome-desktop
+          fi
         env:
           CI: true
-      - if: inputs.production_smoke
+          PIEPE_DIAGNOSTIC_GREP: ${{ inputs.validation != 'release' && !inputs.production_smoke && inputs.diagnostic_grep || '' }}
+      - if: inputs.production_smoke || inputs.validation == 'production'
         run: npm test -- tests/production.spec.ts --project=chrome-desktop
         env:
           CI: true
@@ -107,11 +118,11 @@ jobs:
             production-results/
           retention-days: 14
   webkit:
-    if: github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.validation == 'webkit' || inputs.production_smoke)
+    if: github.event_name == 'workflow_dispatch' && (inputs.validation == 'release' || inputs.validation == 'webkit' || inputs.validation == 'production' || inputs.production_smoke)
     needs: checks
     # Native macOS media codecs remain part of every release validation.
     runs-on: macos-15-intel
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -121,10 +132,17 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npx playwright install webkit
-      - run: npm test -- --project=webkit-iphone
+      - if: inputs.validation != 'production'
+        run: |
+          if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then
+            npm test -- --project=webkit-iphone --grep "$PIEPE_DIAGNOSTIC_GREP"
+          else
+            npm test -- --project=webkit-iphone
+          fi
         env:
           CI: true
-      - if: inputs.production_smoke
+          PIEPE_DIAGNOSTIC_GREP: ${{ inputs.validation != 'release' && !inputs.production_smoke && inputs.diagnostic_grep || '' }}
+      - if: inputs.production_smoke || inputs.validation == 'production'
         run: npm test -- tests/production.spec.ts --project=webkit-iphone
         env:
           CI: true

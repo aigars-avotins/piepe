@@ -1,3 +1,4 @@
+import { mediaUrl } from './mediaUrl'
 import { useEffect, useRef } from 'react'
 
 type Props = { onFinish: (reason: string) => void; onTypography: () => void; skipRequested: boolean }
@@ -60,7 +61,7 @@ export default function IntroFilm({ onFinish, onTypography, skipRequested }: Pro
     }
   }, [skipRequested, onFinish])
 
-  return <video ref={videoRef} className="forest-film" poster="/media/forest-poster.jpg" muted playsInline autoPlay preload="auto" aria-hidden="true" tabIndex={-1}>
-    <source src="/media/forest-reveal.mp4" type="video/mp4" />
+  return <video ref={videoRef} className="forest-film" poster={mediaUrl('/media/forest-poster.jpg')} muted playsInline autoPlay preload="auto" aria-hidden="true" tabIndex={-1}>
+    <source src={mediaUrl('/media/forest-reveal.mp4')} type="video/mp4" />
   </video>
 }

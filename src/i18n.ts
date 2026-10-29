@@ -10,11 +10,12 @@ export const english = {
   imageError: 'The image could not load. The field note is still here.', openEncounter: 'Open the encounter',
   beneathLabel: '01 / Beneath the surface', beneathTitle: 'Even in stillness,', beneathEm: 'life goes on.',
   beneathBody: 'A change of scale. A drop of water. A world that never stopped.', stay: 'Stay a little longer', depth: 'Beyond the familiar',
+  continueJourney: 'Continue through the forest', pauseFilm: 'Pause film', resumeFilm: 'Resume film', retryFilm: 'Play film again',
   encounterLabel: '02 / The encounter', small: 'Small enough to overlook.', encounterTitle: 'What you see', encounterEm: 'is a beginning.',
   encounterBody: 'A shelf in the bark. Three observations. Another way of seeing.', openNote: 'Open the field note', enterEncounter: 'Enter the fungus encounter',
   waiting: 'Field note 001 · Waiting to be found', collectedShort: 'Field note 001 · Collected', visibleBeginning: 'The visible is only the beginning',
-  returnLabel: '03 / Back in the light', returnTitle: 'Same forest.', returnEm: 'Another way of seeing.',
-  returnThought: 'Every ending makes room for something new.', returnForest: 'Return to forest', pause: 'Pause atmosphere', resume: 'Resume atmosphere',
+  returnLabel: '03 / Back in the light', returnTitle: 'The forest stays.', returnEm: 'Your gaze changes.',
+  returnThought: 'The light shifts. Life in the forest carries on.', endingWallpapers: 'Forest wallpapers', returnForest: 'Return to forest', pause: 'Pause atmosphere', resume: 'Resume atmosphere',
   noteLabel: 'Field note 001', closeDiscovery: 'Close discovery', atlas: 'A small atlas of attention', observationsLabel: 'Field note observations',
   observations: [
     { id: 'surface', label: 'Surface', title: 'A small shelf.\nAnother world.', text: 'A pale edge catches the morning light. Below it, another. And another. What looked like a detail in the bark becomes a place to linger.', footnote: 'Begin with what is in front of you.' },
@@ -26,6 +27,12 @@ export const english = {
   mediaUnavailable: 'The film is resting. You can still explore the forest.',
   forestSound: 'Forest sound', muteSound: 'Mute forest sound', enableSound: 'Enable forest sound', soundPlaying: 'Quiet forest ambience is playing.', soundWaiting: 'Forest sound starts with your first interaction.', soundMuted: 'Forest sound is off.', soundUnavailable: 'Forest sound could not load. You can try again.',
   factsTitle: 'What is a bracket fungus?', factsIntro: 'A shelf on a tree. A life mostly out of sight.',
+  glossaryTitle: 'Three words for looking closer',
+  glossary: [
+    { term: 'Fruiting body', definition: 'The reproductive structure where spores form. The shelf on a tree is only part of the fungus.' },
+    { term: 'Pores', definition: 'In many bracket fungi, tiny openings lead into tubes with spore-producing surfaces. Other bracket fungi have gills or different undersides.' },
+    { term: 'Mycelium', definition: 'A network of microscopic fungal threads called hyphae. In wood-decaying fungi, these threads grow through the wood.' },
+  ],
   facts: [
     { title: 'A fruiting body', text: 'The bracket is the visible fruiting body. Fine fungal threads, called hyphae, can grow through the wood: the shelf is only part of the organism.' },
     { title: 'A hidden underside', text: 'Many bracket fungi have tiny pores underneath. Spores form on the surfaces of tubes opening into these pores and are released into the air. Not every bracket has pores.' },
@@ -46,10 +53,11 @@ const latvian: Messages = {
   discover: 'Atklāt piepi uz koka', closer: 'Aplūkot piepi tuvāk', lookCloser: 'Aplūkot piepi tuvāk', wordMeaning: 'Maza forma. Plaša pasaule.',
   follow: 'Ieskaties dziļāk', edition: 'Satikšanās mežā · 001', imageError: 'Attēlu neizdevās ielādēt. Meža piezīme joprojām ir šeit.', openEncounter: 'Atvērt satikšanos',
   beneathLabel: '01 / Zem virsmas', beneathTitle: 'Arī klusumā', beneathEm: 'viss turpinās.', beneathBody: 'Cits mērogs. Ūdens lāse. Pasaule, kas nav apstājusies.', stay: 'Uzkavējies vēl', depth: 'Aiz ierastā',
+  continueJourney: 'Turpināt ceļu', pauseFilm: 'Apturēt filmu', resumeFilm: 'Turpināt filmu', retryFilm: 'Atskaņot filmu vēlreiz',
   encounterLabel: '02 / Satikšanās', small: 'Viegli paiet garām.', encounterTitle: 'Redzamais ir', encounterEm: 'tikai sākums.',
   encounterBody: 'Piepe uz mizas. Trīs vērojumi. Citāds skatiens.', openNote: 'Atvērt meža piezīmi', enterEncounter: 'Iepazīt piepes pasauli',
   waiting: 'Meža piezīme 001 · Vēl neatklāta', collectedShort: 'Meža piezīme 001 · Saglabāta', visibleBeginning: 'Redzamais ir tikai sākums',
-  returnLabel: '03 / Atkal gaismā', returnTitle: 'Tas pats mežs.', returnEm: 'Citāds skatiens.', returnThought: 'Tas, kas beidzas, dod vietu jaunam.',
+  returnLabel: '03 / Atkal gaismā', returnTitle: 'Mežs paliek.', returnEm: 'Skatiens mainās.', returnThought: 'Gaisma mainās. Mežs turpina savu dzīvi.', endingWallpapers: 'Meža foni',
   returnForest: 'Atgriezties mežā', pause: 'Apturēt kustību', resume: 'Turpināt kustību', noteLabel: 'Meža piezīme 001', closeDiscovery: 'Aizvērt piepes stāstu',
   atlas: 'Mazs vērības atlants', observationsLabel: 'Meža piezīmes vērojumi',
   observations: [
@@ -62,6 +70,12 @@ const latvian: Messages = {
   mediaUnavailable: 'Filma šobrīd atpūšas. Mežu joprojām vari iepazīt.',
   forestSound: 'Meža skaņas', muteSound: 'Izslēgt meža skaņas', enableSound: 'Ieslēgt meža skaņas', soundPlaying: 'Skan klusas meža skaņas.', soundWaiting: 'Meža skaņas sāksies pēc pirmā pieskāriena.', soundMuted: 'Meža skaņas ir izslēgtas.', soundUnavailable: 'Meža skaņas neizdevās ielādēt. Vari mēģināt vēlreiz.',
   factsTitle: 'Kas ir piepe?', factsIntro: 'Redzama pie koka. Lielākoties — skatienam slēpta.',
+  glossaryTitle: 'Trīs vārdi tuvākam skatienam',
+  glossary: [
+    { term: 'Augļķermenis', definition: 'Sēnes vairošanās struktūra, kurā veidojas sporas. Pie koka redzamā piepe ir tikai daļa no sēnes.' },
+    { term: 'Poras', definition: 'Daudzām piepēm sīkās atveres ved stobriņos, uz kuru virsmām veidojas sporas. Citām piepēm apakšpusē ir lapiņas vai citāda virsma.' },
+    { term: 'Sēņotne', definition: 'Mikroskopisku sēnes pavedienu jeb hifu tīkls. Koksni noārdošām sēnēm šie pavedieni aug cauri koksnei.' },
+  ],
   facts: [
     { title: 'Sēnes augļķermenis', text: 'Piepe ir sēnes redzamais augļķermenis. Smalki sēnes pavedieni jeb hifas var augt koksnē: piepe ir tikai daļa no visa organisma.' },
     { title: 'Mazā pasaule apakšpusē', text: 'Daudzām piepēm apakšpusē ir sīkas poras. Sporas veidojas uz to stobriņu virsmām, kas atveras porās, un nonāk gaisā. Tomēr ne visām piepēm ir poras.' },

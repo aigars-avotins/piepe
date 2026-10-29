@@ -9,6 +9,7 @@ import type { CinemaOrigin } from './cinemaGeometry'
 import { EdgeLight } from './ForestScene'
 import SoundControl from './SoundControl'
 import type { ForestAudio } from './useForestAudio'
+import { mediaUrl } from './mediaUrl'
 
 export default function Discovery({ audio, locale, onLocaleChange, origin, photoSrc, onDocked, open, dialog, onClose, onCollect, collected }: {
   audio: ForestAudio;
@@ -29,7 +30,7 @@ export default function Discovery({ audio, locale, onLocaleChange, origin, photo
     {moving && <button className="text-button skip-dock" onClick={settle}>{t.skipAwakening}</button>}
     <div className="discovery-stage">
       <LanguageSwitch locale={locale} onChange={onLocaleChange} />
-      <div className="specimen-photo" aria-hidden="true"><img src={photoSrc} loading="lazy" onError={event => { if (!event.currentTarget.src.endsWith('/media/forest-final.jpg')) event.currentTarget.src = '/media/forest-final.jpg' }} alt="" width="1920" height="1080" /><span className="specimen-photo-shade" /><span className="photo-world-shade" /></div>
+      <div className="specimen-photo" aria-hidden="true"><img src={mediaUrl(photoSrc)} loading={open ? 'eager' : 'lazy'} onError={event => { if (!new URL(event.currentTarget.src).pathname.endsWith('/media/forest-final.jpg')) event.currentTarget.src = mediaUrl('/media/forest-final.jpg') }} alt="" width="1920" height="1080" /><span className="specimen-photo-shade" /><span className="photo-world-shade" /></div>
       <div className="discovery-edge" aria-hidden="true"><EdgeLight /></div>
       <header className="discovery-header"><span className="label">{t.noteLabel} <span className="tiny-dot" /> pie.pe</span><button autoFocus className="close-discovery" onClick={requestClose} aria-label={t.closeDiscovery}><span>{t.closeDiscovery}</span><span aria-hidden="true">×</span></button></header>
       <div className="specimen-caption"><span className="specimen-rule" /><span lang="lv">piepe</span><span>{t.wordMeaning}</span></div>
