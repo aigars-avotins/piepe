@@ -142,7 +142,7 @@ test('expanded facts, locale changes, explicit pause and a failed environmental 
   await page.locator('#return .cinema-pause').click()
   await wheelTo(page, 'wallpapers', 0)
   await page.route('**/media/forest-understory.mp4*', route => route.abort())
-  await wheelTo(page, 'understory', .65)
+  await wheelTo(page, 'understory', .3)
   await expect(page.locator('[data-clip=understory]')).toHaveAttribute('data-clip-state', 'error')
   await page.unroute('**/media/forest-understory.mp4*')
   await page.locator('#understory .cinema-pause').click()
@@ -166,7 +166,12 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`${width}
     const evidence: unknown[] = []
     for (const [name, id, exit] of [['understory', 'understory', 'encounter'], ['breathing', 'return', 'wallpapers']] as const) {
       await wheelTo(page, id, .3)
-      for (const fraction of [.3, .85, 1.4]) {
+      // Probe three separated positions in the actual sticky viewing region.
+      // Understory is deliberately shorter than Breathing; the old 140vh
+      // offset is now in its exit dissolve rather than its full-opacity plateau.
+      const plateau = await page.locator(`#${id}`).evaluate(e => (e.getBoundingClientRect().height - e.querySelector('.cinema-content')!.getBoundingClientRect().height) / innerHeight)
+      const positions = name === 'understory' ? [.15, .5, .85].map(f => f * plateau) : [.3, .85, 1.4]
+      for (const fraction of positions) {
         await wheelTo(page, id, fraction)
         console.log('Visible cinema probe', id, fraction)
         const result = await movingPicture(page, name); evidence.push({ name, fraction, ...result })
@@ -182,7 +187,7 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`${width}
       const loop = await movingPicture(page, name); evidence.push({ name, loop: true, ...loop }); expect(loop.paused).toBe(false); expect(distinctFrames(loop.frames)).toBeGreaterThan(2)
       for (let visit = 1; visit <= 3; visit++) {
         await wheelTo(page, exit, .3); await expect(layer.locator('video')).toHaveCount(0)
-        await wheelTo(page, id, .65)
+        await wheelTo(page, id, name === 'understory' ? plateau * .5 : .65)
         const result = await movingPicture(page, name); evidence.push({ name, visit, ...result }); expect(result.paused).toBe(false); expect(result.opacity).toBeGreaterThan(.98); expect(distinctFrames(result.frames)).toBeGreaterThan(2)
       }
     }

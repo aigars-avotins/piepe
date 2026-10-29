@@ -184,6 +184,10 @@ html:not(.js) .prerendered .skip-intro,.js.preference-static .prerendered .skip-
 .clip-breathing>.clip-held{object-position:55% 50%}.motion-clip[data-loop-hold=true]>.clip-held{opacity:1;transition:none}
 .motion-off .cinematic-chapter::before{content:none}.motion-off .cinema-content::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,13,8,.4),transparent 75%),url('/media/forest-understory-final.jpg?v=2.3') 58% 50%/cover}
 .motion-off .return-chapter .cinema-content::before{background-image:linear-gradient(90deg,rgba(3,13,8,.4),transparent 75%),url('/media/forest-breathing-final.jpg?v=2.3');background-position:55% 50%}
+/* Understory needs a short viewing pause, independent of the film clock.
+   Keep Breathing's existing length and let the static preference win below. */
+.bark-chapter.cinematic-chapter{min-height:160svh}
+@media(max-width:699px){.bark-chapter.cinematic-chapter{min-height:170svh}}
 .static-preference .cinematic-chapter{min-height:100svh}.static-preference .cinema-content{position:relative}
 .static-preference .cinema-controls{display:none}
 @media(max-width:699px){.cinematic-chapter{min-height:300svh}.cinema-content{padding:90px 24px 100px;justify-content:flex-end}.cinema-content .bark-copy,.cinema-content .return-copy{max-width:100%}.cinema-content .chapter-label{top:calc(80px + env(safe-area-inset-top))}.cinema-content .bark-copy h2,.cinema-content .return-copy h2{font-size:clamp(43px,11.5vw,56px);line-height:1.04}.cinema-content .chapter-body,.return-thought{font-size:16px;line-height:1.65;margin-top:20px;max-width:300px}.cinema-content .return-copy>.label{margin-bottom:18px}.cinema-controls{margin-top:8px}.cinema-content .return-copy .line-link{margin-top:10px}.cinema-content .bark-copy .line-link{margin-top:18px}.clip-understory>.clip-held{object-position:58% 50%}.cinema-content .depth-coordinate{bottom:32px;right:24px}}
