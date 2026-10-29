@@ -6,6 +6,7 @@ import type { CSSProperties } from 'react'
 import { updateMetadata } from './seo'
 import LanguageSwitch from './LanguageSwitch'
 import Story from './Story'
+import type { NoteState } from './Story'
 import MotionClip from './MotionClip'
 import { cinemaOrigin } from './cinemaGeometry'
 import type { CinemaOrigin } from './cinemaGeometry'
@@ -67,7 +68,8 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const [skipRequested, setSkipRequested] = useState(false)
   const [exitReason, setExitReason] = useState(intro ? '' : 'preference-or-return')
   const [discovery, setDiscovery] = useState(false)
-  const [collected, setCollected] = useState(false)
+  const [noteState, setNoteState] = useState<NoteState>('unseen')
+  const collected = noteState === 'collected'
   const [inspect, setInspect] = useState(false)
   const [paused, setPaused] = useState(false)
   const [hidden, setHidden] = useState(false)
@@ -93,7 +95,13 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   }, [])
   const initialize = useCallback(() => {
     const saving = saveData(), anchorVisit = !!location.hash && location.hash !== '#forest', staticVisit = matchMedia('(prefers-reduced-motion: reduce)').matches || saving || readSession('piepe-entered')
-    setDataSaving(saving); setCollected(readSession('piepe-note-found')); setBooted(true)
+    setDataSaving(saving)
+    setNoteState(current => {
+      if (current === 'collected' || readSession('piepe-note-found')) return 'collected'
+      if (current === 'discovered' || readSession('piepe-note-discovered')) return 'discovered'
+      return 'unseen'
+    })
+    setBooted(true)
     const image = document.querySelector<HTMLImageElement>('.asset-monitor')
     if (image?.complete && !image.naturalWidth) { setImageFailed(true); finish('image-error') }
     else if (anchorVisit) finish('anchor-navigation')
@@ -142,9 +150,12 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     const query = matchMedia('(prefers-reduced-motion: reduce)')
     const change = () => { if (query.matches) finish('reduced-motion') }
     const visibility = () => setHidden(document.hidden)
+    const connection = (navigator as Navigator & { connection?: Partial<EventTarget> }).connection
+    const dataChange = () => { const saving = saveData(); setDataSaving(saving); if (saving) finish('data-saving') }
+    connection?.addEventListener?.('change', dataChange)
     query.addEventListener('change', change)
     document.addEventListener('visibilitychange', visibility)
-    return () => { query.removeEventListener('change', change); document.removeEventListener('visibilitychange', visibility) }
+    return () => { connection?.removeEventListener?.('change', dataChange); query.removeEventListener('change', change); document.removeEventListener('visibilitychange', visibility) }
   }, [finish])
   useLayoutEffect(() => {
     const resize = () => {
@@ -229,6 +240,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     window.scrollTo({ top: 0, behavior: reduced || paused ? 'instant' : 'smooth' })
   }
   const replay = () => {
+    if (reduced || dataSaving) return
     finishLock.current = false
     clearTimeout(unmountTimer.current)
     history.replaceState(null, '', '#forest')
@@ -237,10 +249,14 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     setFilmMounted(true); setExitReason(''); setIntro(true)
     requestAnimationFrame(() => document.querySelector<HTMLButtonElement>('.skip-intro')?.focus({ preventScroll: true }))
   }
-  const collect = () => { writeSession('piepe-note-found'); setCollected(true) }
+  const dockNote = () => {
+    setAwakening('idle'); setNoteState(current => current === 'unseen' ? 'discovered' : current)
+    writeSession('piepe-note-discovered')
+  }
+  const collect = () => { writeSession('piepe-note-found'); setNoteState('collected') }
   const inspectEvents = { onMouseEnter: () => setInspect(true), onMouseLeave: () => setInspect(false), onFocus: () => setInspect(true), onBlur: () => setInspect(false) }
 
-  return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || dataSaving || paused || motionFailed ? 'motion-off' : ''} ${reduced || dataSaving || motionFailed ? 'static-preference' : ''} ${hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${collected ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version="2.3" data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
+  return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || dataSaving || paused || motionFailed ? 'motion-off' : ''} ${reduced || dataSaving || motionFailed ? 'static-preference' : ''} ${hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${noteState !== 'unseen' ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version="2.4" data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
     <a className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}>{t.skipContent}</a>
     <ForestScene ref={environment} plane={plane} inspect={inspect && (scene === 'forest' || scene === 'encounter')} still={heldFrame}
       macro={cinemaMounted.understory && <MotionClip key={cinemaRetries.understory} name="understory" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.understory && !intro && !discovery && awakening === 'idle'} onReady={() => cinemaResult('understory', false)} onFinish={() => cinemaResult('understory', true)} />}
@@ -258,8 +274,8 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
       {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}>{t.skipIntro} <span aria-hidden="true"><Arrow direction="diagonal" /></span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}>{t.replay} <span aria-hidden="true">↺</span></button>}
     </header>
     <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span>0{index + 1}</span><i /><span>{t.chapters[index]}</span></a>)}</nav>
-    <Story inactive={cinemaRunning} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} collected={collected} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
+    <Story inactive={cinemaRunning} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} noteState={noteState} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
     {!discovery && <SoundControl audio={audio} locale={locale} />}
-    <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={() => setAwakening('idle')} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
+    <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={dockNote} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
   </div>
 }

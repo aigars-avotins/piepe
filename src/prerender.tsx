@@ -13,7 +13,7 @@ export function renderHead(locale: Locale) {
     <meta property="og:type" content="website" /><meta property="og:site_name" content="PIE.PE" /><meta property="og:title" content={t.title} /><meta property="og:description" content={t.description} /><meta property="og:url" content={url} />
     <meta property="og:locale" content={locale === 'lv' ? 'lv_LV' : 'en_GB'} /><meta property="og:locale:alternate" content={locale === 'lv' ? 'en_GB' : 'lv_LV'} />
     <meta property="og:image" content="https://pie.pe/social-preview.jpg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={t.wallpaperAltDesktop} />
-    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={t.title} /><meta name="twitter:description" content={t.description} /><meta name="twitter:image" content="https://pie.pe/social-preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={t.title} /><meta name="twitter:description" content={t.description} /><meta name="twitter:image" content="https://pie.pe/social-preview.jpg" /><meta name="twitter:image:alt" content={t.wallpaperAltDesktop} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData(locale)).replace(/</g, '\\u003c') }} />
   </>)
 }

@@ -1,0 +1,54 @@
+{
+  "applicationCommit": "c59e8e9db278fae3ab374a614a4c7b0c8d87fc33",
+  "applicationAndMediaIdenticalAcrossRuns": true,
+  "fullTwoBrowserRuns": 1,
+  "necessaryFullNativeRetries": 1,
+  "testCorrection": "After restoring motion, natively revisit Understory before requiring playback; WebKit may anchor the shorter static layout at the following encounter. All prior cinematic assertions unchanged.",
+  "expectedNativeSkip": "Chromium-only CI scroll recorder",
+  "productionSmoke": false,
+  "deployed": false,
+  "runs": [
+    {
+      "browserRun": "chromium",
+      "url": "https://github.com/aigars-avotins/piepe/actions/runs/40832227488",
+      "sourceCommit": "56fe6724d0d75ea5b29f03ae1fbf2ac236a64a9f",
+      "stats": {
+        "startTime": "2026-10-29T06:57:49.480Z",
+        "duration": 559978.0210000001,
+        "expected": 100,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "topLevelErrors": []
+    },
+    {
+      "browserRun": "initial-native-webkit",
+      "url": "https://github.com/aigars-avotins/piepe/actions/runs/40832227488",
+      "sourceCommit": "56fe6724d0d75ea5b29f03ae1fbf2ac236a64a9f",
+      "stats": {
+        "startTime": "2026-10-29T06:58:15.168Z",
+        "duration": 695584.4430000001,
+        "expected": 96,
+        "skipped": 1,
+        "unexpected": 3,
+        "flaky": 0
+      },
+      "topLevelErrors": []
+    },
+    {
+      "browserRun": "final-native-webkit",
+      "url": "https://github.com/aigars-avotins/piepe/actions/runs/40834339073",
+      "sourceCommit": "2702ebba370a56ea57a1abc3bc01223d3af76ef6",
+      "stats": {
+        "startTime": "2026-10-29T07:18:00.025Z",
+        "duration": 632101.631,
+        "expected": 99,
+        "skipped": 1,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "topLevelErrors": []
+    }
+  ]
+}

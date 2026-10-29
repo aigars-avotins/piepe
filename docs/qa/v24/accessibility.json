@@ -1,0 +1,451 @@
+{
+  "tool": "axe-core via @axe-core/playwright",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa"
+  ],
+  "totalStates": 20,
+  "violations": 0,
+  "states": [
+    {
+      "locale": "lv",
+      "viewport": [
+        1512,
+        982
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        1512,
+        982
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        390,
+        664
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        390,
+        664
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        320,
+        690
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        320,
+        690
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        844,
+        390
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "lv",
+      "viewport": [
+        844,
+        390
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        1512,
+        982
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        1512,
+        982
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        390,
+        844
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        390,
+        664
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        390,
+        664
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        320,
+        690
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        320,
+        690
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast",
+        "label-content-name-mismatch"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        844,
+        390
+      ],
+      "scene": "glossary",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    },
+    {
+      "locale": "en",
+      "viewport": [
+        844,
+        390
+      ],
+      "scene": "note",
+      "violations": 0,
+      "manualReview": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "manualReviewTargets": {
+    "color-contrast": [
+      [
+        "#bark-title"
+      ],
+      [
+        "#bark-title > em"
+      ],
+      [
+        "#discovery-description"
+      ],
+      [
+        "#discovery-title > span:nth-child(1)"
+      ],
+      [
+        "#encounter > .chapter-label > .label"
+      ],
+      [
+        "#encounter-title"
+      ],
+      [
+        "#encounter-title > em"
+      ],
+      [
+        "#facts-title"
+      ],
+      [
+        "#hero-title > span:nth-child(1)"
+      ],
+      [
+        "#hero-title > span:nth-child(3)"
+      ],
+      [
+        "#return-title"
+      ],
+      [
+        "#return-title > em"
+      ],
+      [
+        "#tab-beneath"
+      ],
+      [
+        "#tab-beneath > .observation-number"
+      ],
+      [
+        "#tab-beyond"
+      ],
+      [
+        "#tab-beyond > .observation-number"
+      ],
+      [
+        "#tab-surface"
+      ],
+      [
+        "#tab-surface > .observation-number"
+      ],
+      [
+        ".art-note"
+      ],
+      [
+        ".bark-copy > .chapter-body"
+      ],
+      [
+        ".cinema-content > .chapter-label > .label"
+      ],
+      [
+        ".close-discovery > span:nth-child(1)"
+      ],
+      [
+        ".close-discovery > span[aria-hidden=\"true\"]"
+      ],
+      [
+        ".depth-coordinate"
+      ],
+      [
+        ".discovery-header > .label"
+      ],
+      [
+        ".discovery-kicker"
+      ],
+      [
+        ".discovery-stage > .language-switch[aria-label=\"Language\"] > a[aria-current=\"page\"][lang=\"en\"][hreflang=\"en\"]"
+      ],
+      [
+        ".discovery-stage > .language-switch[aria-label=\"Language\"] > a[href=\"/\"][hreflang=\"lv\"][lang=\"lv\"]"
+      ],
+      [
+        ".discovery-stage > .language-switch[aria-label=\"Valoda\"] > a[href=\"/\"][aria-current=\"page\"][hreflang=\"lv\"]"
+      ],
+      [
+        ".discovery-stage > .language-switch[aria-label=\"Valoda\"] > a[lang=\"en\"][href$=\"en/\"][hreflang=\"en\"]"
+      ],
+      [
+        ".edition"
+      ],
+      [
+        ".encounter-copy > .chapter-body"
+      ],
+      [
+        ".encounter-copy > .line-link"
+      ],
+      [
+        ".encounter-status"
+      ],
+      [
+        ".hero-deck"
+      ],
+      [
+        ".hero-foot > p"
+      ],
+      [
+        ".italic-line"
+      ],
+      [
+        ".journey-index > a[href$=\"#understory\"] > span:nth-child(1)"
+      ],
+      [
+        ".line-link[href$=\"#encounter\"]"
+      ],
+      [
+        ".observation-actions > .line-link"
+      ],
+      [
+        ".observation-count"
+      ],
+      [
+        ".observation-footnote"
+      ],
+      [
+        ".return-copy > .label"
+      ],
+      [
+        ".return-copy > .line-link:nth-child(4)"
+      ],
+      [
+        ".return-thought"
+      ],
+      [
+        ".scroll-cue"
+      ],
+      [
+        ".sound-control > span:nth-child(2)"
+      ],
+      [
+        ".specimen-caption > span:nth-child(3)"
+      ],
+      [
+        ".specimen-caption > span[lang=\"lv\"]"
+      ],
+      [
+        ".specimen-invitation > span:nth-child(2)"
+      ],
+      [
+        ".title-enter.label"
+      ],
+      [
+        ".vocabulary-note"
+      ],
+      [
+        ".warm-label"
+      ],
+      [
+        "a[aria-current=\"location\"] > span:nth-child(1)"
+      ],
+      [
+        "a[href$=\"#forest\"] > span:nth-child(1)"
+      ],
+      [
+        "a[href$=\"#wallpapers\"]"
+      ],
+      [
+        "article:nth-child(2) > .label"
+      ],
+      [
+        "div:nth-child(1) > dd"
+      ],
+      [
+        "div:nth-child(2) > dd"
+      ],
+      [
+        "div:nth-child(3) > dd"
+      ],
+      [
+        "p > span[lang=\"lv\"]"
+      ]
+    ],
+    "label-content-name-mismatch": [
+      [
+        ".close-discovery"
+      ]
+    ]
+  }
+}
