@@ -72,13 +72,12 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
       const frame: VideoFrameRequestCallback = (_, metadata) => {
         if (settled) return
         if (video.parentElement?.dataset.loopHold === 'true') { request = video.requestVideoFrameCallback(frame); return }
-        void (async () => {
-          const sample: typeof frames[number] = { time: metadata.mediaTime, presented: metadata.presentedFrames, phase: 'pixels' }
-          let bitmap: ImageBitmap | undefined
+        try {
+          const sample: typeof frames[number] = { time: metadata.mediaTime, presented: metadata.presentedFrames, phase: 'pixels', copyMethod: 'scaled-video-canvas' }
           const started = performance.now()
-          try { bitmap = await createImageBitmap(video, sx, sy, sw, sh, { resizeWidth: 128, resizeHeight: 72 }); ctx.drawImage(bitmap, 0, 0); sample.copyMethod = 'bitmap' }
-          catch { ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72); sample.copyMethod = 'video-canvas' }
-          finally { bitmap?.close() }
+          // Downsample directly into the tiny CPU canvas. createImageBitmap(video)
+          // was observed taking over 5s to copy the native full-resolution surface.
+          ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
           const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
           for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
           sample.hash = hash >>> 0; sample.copyMs = performance.now() - started
@@ -87,7 +86,7 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
           if (pixelsRead >= 3 && !video.paused && !video.ended && video.parentElement?.dataset.loopHold === 'false') {
             settled = true; clearTimeout(timeout); resolve()
           } else next = window.setTimeout(() => { request = video.requestVideoFrameCallback(frame) }, 250)
-        })().catch(error => { settled = true; clearTimeout(timeout); clearTimeout(next); video.cancelVideoFrameCallback(request); reject(error) })
+        } catch (error) { settled = true; clearTimeout(timeout); clearTimeout(next); video.cancelVideoFrameCallback(request); reject(error) }
       }
       request = video.requestVideoFrameCallback(frame)
     })
