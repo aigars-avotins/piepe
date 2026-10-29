@@ -46,7 +46,7 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
     const sw = r.width / scale, sh = r.height / scale, sx = (video.videoWidth - sw) * position[0] / 100, sy = (video.videoHeight - sh) * position[1] / 100
     const canvas = document.createElement('canvas'); canvas.width = 128; canvas.height = 72
     const ctx = canvas.getContext('2d', { willReadFrequently: true })!
-    const frames: { time: number; hash?: number; presented: number; phase: 'cadence' | 'pixels'; copyMs?: number; copyMethod?: string }[] = []
+    const frames: { time: number; hash?: number; presented?: number; phase: 'cadence' | 'pixels'; copyMs?: number; copyMethod?: string }[] = []
     const diagnostic = (phase: string) => JSON.stringify({ phase, src: video.currentSrc, time: video.currentTime, paused: video.paused, ended: video.ended, ready: video.readyState, connected: video.isConnected, reason: video.parentElement?.dataset.clipReason, cycles: video.parentElement?.dataset.clipCycles, held: video.parentElement?.dataset.loopHold, totalFrames: video.getVideoPlaybackQuality().totalVideoFrames, frames })
     // Measure presentation without GPU readback first. Even createImageBitmap(video)
     // can force a synchronous native video-surface copy in WebKit; interleaving it
@@ -64,31 +64,28 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
       }
       request = video.requestVideoFrameCallback(frame)
     })
-    // Independently require three real cropped pixel samples. Keep the same 2.5s
-    // bound for this phase and retain the strict cadence threshold above.
+    // Pixel inspection has its own clock: CPU readback can suppress subsequent
+    // native WebKit frame callbacks. Cadence above remains completely readback-free.
+    // These snapshots still copy actual decoded pixels, never a poster or test clock.
     await new Promise<void>((resolve, reject) => {
-      let request = 0, next = 0, settled = false, pixelsRead = 0
-      const timeout = setTimeout(() => { settled = true; clearTimeout(next); video.cancelVideoFrameCallback(request); reject(Error('No distinct video pixel samples: ' + diagnostic('pixels'))) }, 2500)
-      const frame: VideoFrameRequestCallback = (_, metadata) => {
+      let next = 0, settled = false, pixelsRead = 0
+      const timeout = setTimeout(() => { settled = true; clearTimeout(next); reject(Error('No distinct video pixel samples: ' + diagnostic('pixels'))) }, 2500)
+      const sample = () => {
         if (settled) return
-        if (video.parentElement?.dataset.loopHold === 'true') { request = video.requestVideoFrameCallback(frame); return }
+        if (video.readyState < 2 || video.paused || video.ended || video.parentElement?.dataset.loopHold === 'true') { next = window.setTimeout(sample, 50); return }
         try {
-          const sample: typeof frames[number] = { time: metadata.mediaTime, presented: metadata.presentedFrames, phase: 'pixels', copyMethod: 'scaled-video-canvas' }
+          const snapshot: typeof frames[number] = { time: video.currentTime, phase: 'pixels', copyMethod: 'scaled-video-canvas' }
           const started = performance.now()
-          // Downsample directly into the tiny CPU canvas. createImageBitmap(video)
-          // was observed taking over 5s to copy the native full-resolution surface.
           ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
           const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
           for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
-          sample.hash = hash >>> 0; sample.copyMs = performance.now() - started
-          if (settled) return
-          frames.push(sample); pixelsRead++
-          if (pixelsRead >= 3 && !video.paused && !video.ended && video.parentElement?.dataset.loopHold === 'false') {
-            settled = true; clearTimeout(timeout); resolve()
-          } else next = window.setTimeout(() => { request = video.requestVideoFrameCallback(frame) }, 250)
-        } catch (error) { settled = true; clearTimeout(timeout); clearTimeout(next); video.cancelVideoFrameCallback(request); reject(error) }
+          snapshot.hash = hash >>> 0; snapshot.copyMs = performance.now() - started
+          frames.push(snapshot); pixelsRead++
+          if (pixelsRead >= 3) { settled = true; clearTimeout(timeout); resolve() }
+          else next = window.setTimeout(sample, 250)
+        } catch (error) { settled = true; clearTimeout(timeout); clearTimeout(next); reject(error) }
       }
-      request = video.requestVideoFrameCallback(frame)
+      sample()
     })
     opacity = 1
     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)
