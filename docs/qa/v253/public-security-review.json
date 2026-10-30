@@ -78,5 +78,24 @@
   ],
   "secretsPrinted": false,
   "credentialValidationAttempts": false,
-  "credentialsRotated": false
+  "credentialsRotated": false,
+  "followUpValidationAudit": {
+    "newLogRuns": [
+      {
+        "run": 41125840232,
+        "files": 26,
+        "status": "downloaded"
+      },
+      {
+        "run": 41125815866,
+        "files": 13,
+        "status": "downloaded"
+      }
+    ],
+    "newArtifactTextStreams": 33,
+    "credentialCandidates": 0,
+    "confirmedCredentialExposures": 0,
+    "immediateRotationFindings": 0,
+    "extendedShortCredentialAndAuthHeaderCandidates": 0
+  }
 }

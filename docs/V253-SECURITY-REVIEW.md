@@ -34,3 +34,11 @@ The 255 binary media blobs were excluded from credential text scanning. Remote A
 ## Release boundary
 
 PR #16 remains unmerged and production remains 2.5.2. The owner's latest instruction permits necessary validation on **standard** GitHub-hosted Ubuntu/macOS runners now that the repository is public; paid larger runners remain prohibited. The previous Chromium 152/152 result remains applicable because application code is unchanged. One final native-only full validation is justified by the previously interrupted full attempt and corrected clock observer; no duplicate full Chromium run is needed. Native failures, if any, must remain visible. Merge and production deployment still require new owner approval.
+
+## Follow-up after final native validation
+
+Downloaded and scanned the two new Actions run log archives (39 additional files) and **33 textual new native artifact/trace streams**. No credential candidate was found. Together with the initial review, **135 run log archives / 469 files** have been scanned at this cutoff. Extra checks for shorter password/API-key literals, Basic authentication, `x-auth-key`, `x-api-key` and `_authToken` also returned zero candidates. No rotation finding was introduced by the final validation. This does not claim to cover future Actions logs.
+
+The final native run completed all 152 cases: **147 passed, four failed, one expected skip**; every new 2.5.3 case passed. [Detailed native QA](V253-QA.md#final-public-candidate-native-results). PR #16 remains unmerged and production deployment remains unauthorized.
+
+A read-only baseline check found an external main rebuild that predates this review: existing Worker `piepe`, version `d83207f4-4f22-4c5f-8315-0b6097693fe8`, source `17bbb92af34fa610b4f28b825d59d1d2308a2b53` (**2.5.2**). The successful Cloudflare build log contains that active version ID. No candidate deployment was performed. Current direct live HTTP requests return 403; no current live-browser verification or security-setting change is claimed.

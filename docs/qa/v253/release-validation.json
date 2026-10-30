@@ -119,7 +119,6 @@
       "passed": 151,
       "skipped": 1
     },
-    "remainingFailure": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
     "fullyValidated": false,
     "coverageBeforeFinalIsolation": {
       "passed": 150,
@@ -176,12 +175,43 @@
       "maxFrameGap": 879,
       "interpretation": "The same legacy LV cinema test passed in isolation without a product code change. This does not resolve the earlier load/cadence failures. Actual display bounds were obtained; WindowServer bounds were unavailable from this JXA binding, so occlusion is not excluded. The failed optional WindowServer query is removed from the final helper; display evidence remains."
     },
-    "intermittentFailureUnresolved": true
+    "intermittentFailureUnresolved": true,
+    "previousRemainingFailure": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+    "remainingFailures": [
+      "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "1512x982 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "390x664 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload"
+    ],
+    "finalPublicFullAttempt": {
+      "run": "https://github.com/aigars-avotins/piepe/actions/runs/41125840232",
+      "sourceSHA": "712bf6a624abc775cd12f5e8acc18cfeb04efd88",
+      "runner": "macos-15-intel",
+      "stats": {
+        "startTime": "2026-10-30T20:48:36.560Z",
+        "duration": 1131656.869,
+        "expected": 147,
+        "skipped": 1,
+        "unexpected": 4,
+        "flaky": 0
+      },
+      "caseCount": 152,
+      "actualStatuses": {
+        "passed": 147,
+        "failed": 4,
+        "skipped": 1
+      },
+      "newV253Cases": {
+        "passed": 15
+      },
+      "fullSuiteGreen": false,
+      "detailedReport": "public-native-validation.json"
+    }
   },
   "applicationSourceUnchangedAfterFullRun": true,
   "readiness": {
     "pullRequestReviewReady": true,
     "productionReady": false,
-    "reason": "Full native attempt hit its job cap and repeated native load/cadence observations remain causally unresolved. An isolated pass is not counted as a product fix or an unfiltered successful full suite."
+    "reason": "Four legacy native timing/presentation assertions remain failing; actual Safari impact and causal fixes are unverified. No merge/deployment approval."
   }
 }
