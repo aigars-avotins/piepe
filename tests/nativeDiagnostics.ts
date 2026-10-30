@@ -1,4 +1,4 @@
-import { test } from '@playwright/test'
+import { test, expect } from '@playwright/test'
 import { execFileSync } from 'node:child_process'
 
 const activateBrowser = `ObjC.import('AppKit');
@@ -13,13 +13,15 @@ JSON.stringify({ requested, frontmost: $.NSWorkspace.sharedWorkspace.frontmostAp
 /** Native-only evidence for compositor/input failures; no product instrumentation. */
 export function nativeDiagnostics() {
   if (process.platform !== 'darwin') return
-  test.use({ video: 'on' })
   test.beforeEach(async ({ page }, info) => {
     // DOM focus alone does not activate an AppKit application on a CI desktop.
     // Use the native workspace API, without System Events/Accessibility control.
     const activation = execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', activateBrowser], { encoding: 'utf8' })
     await info.attach('native-window-activation', { body: activation, contentType: 'application/json' })
     await page.bringToFront()
+    const requested = JSON.parse(activation).requested as { name: string }[]
+    expect(requested.length, 'A native WebKit application must be running').toBeGreaterThan(0)
+    await expect.poll(() => execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', "ObjC.import('AppKit'); $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js"], { encoding: 'utf8' }).trim(), { timeout: 5000 }).toBe(requested[0].name)
     await page.addInitScript(() => {
       const events: unknown[] = [], state = { events, maxFrameGap: 0, frames: 0 }
       ;(window as unknown as { nativeEvidence: typeof state }).nativeEvidence = state
