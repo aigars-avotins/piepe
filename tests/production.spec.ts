@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { messages } from '../src/i18n'
+import { nativeDiagnostics } from './nativeDiagnostics'
+nativeDiagnostics()
 
 // Production smoke is manual-only; retain actual live playback evidence on success.
 test.use({ video: 'on' })

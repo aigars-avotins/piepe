@@ -129,21 +129,22 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   test.setTimeout(25000);await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   await page.goto('/en/')
   await page.evaluate(()=>{
-    const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
+    const samples:{t:number;end:number;raf:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
     const observer=new MutationObserver(()=>{
       const photo=document.querySelector('.specimen-photo')
       if(!photo||!document.querySelector('dialog[open].photo-moving'))return
       observer.disconnect();let start:number|undefined,ran=false
       const frame=(now:number)=>{
-        start ??=now
+        const readStart=performance.now();start ??=readStart
         const r=photo.getBoundingClientRect(),camera=(photo as HTMLElement).dataset.cameraPhase
         const moving=(camera==='moving'||camera==='returning')&&Number((photo as HTMLElement).dataset.cameraProgress)>0;ran ||=moving
         // One geometry read samples the rendered source at one instant, including both transforms.
         const source=photo.querySelector('img')!.getBoundingClientRect()
-        // Sample geometry on the render clock itself. A queued timer can run
-        // late and then catch up a few ms later, inventing a velocity spike.
-        samples.push({t:now-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
-        if((!ran||document.querySelector('dialog.photo-moving'))&&now-start<10000)requestAnimationFrame(frame)
+        // Bracket the actual geometry reads. A delayed native RAF timestamp
+        // does not describe when GSAP updated the geometry we are observing.
+        const readEnd=performance.now()
+        samples.push({t:readStart-start,end:readEnd-start,raf:now-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
+        if((!ran||document.querySelector('dialog.photo-moving'))&&readEnd-start<10000)requestAnimationFrame(frame)
       };requestAnimationFrame(frame)
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})
   })
@@ -151,7 +152,7 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   // The existing movie deadline is 10s, followed by up to 1.5s of end-still
   // recovery and the 1s camera. Cover that bounded path without changing it.
   await expect(page.getByRole('heading',{name:/A small shelf/})).toBeVisible({timeout:14000})
-  const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]}).dockFrames)
+  const frames=await page.evaluate(()=>(window as unknown as {dockFrames:{t:number;end:number;raf:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]}).dockFrames)
   await testInfo.attach('photo-docking-frames',{body:JSON.stringify(frames),contentType:'application/json'})
   expect(frames.filter(frame=>frame.moving).length).toBeGreaterThan(10)
   expect(new Set(frames.filter(frame=>frame.moving).map(frame=>`${frame.w.toFixed(2)},${frame.h.toFixed(2)}`)).size).toBeGreaterThan(10)
@@ -161,7 +162,19 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   const camera=frames.filter(frame=>frame.camera),scaleError=Math.max(...camera.map(frame=>Math.abs(frame.sx-frame.sy)*1920))
   console.log(`Photo camera ${width}x${height}: ${frames.filter(frame=>frame.moving).length} moving frames; maximum projected width error ${scaleError.toFixed(4)} CSS pixels`)
   expect(scaleError).toBeLessThan(1)
-  for(let i=1;i<frames.length;i++){const dt=frames[i].t-frames[i-1].t;if(dt<1)continue;expect(Math.abs(frames[i].w-frames[i-1].w)/dt).toBeLessThan(3);expect(Math.abs(frames[i].h-frames[i-1].h)/dt).toBeLessThan(3)}
+  let reliableMotionPairs=0
+  for(let i=1;i<frames.length;i++){
+    const previous=frames[i-1],current=frames[i]
+    // A read taking over 5ms materially perturbs a 60Hz frame. Do not mistake
+    // observer stalls for screen velocity; require >10 precise motion pairs.
+    if(previous.end-previous.t>5||current.end-current.t>5)continue
+    const dt=current.t-previous.end // minimum possible elapsed time: conservative velocity bound
+    if(dt<1)continue
+    expect(Math.abs(current.w-previous.w)/dt).toBeLessThan(3)
+    expect(Math.abs(current.h-previous.h)/dt).toBeLessThan(3)
+    if(previous.moving&&current.moving)reliableMotionPairs++
+  }
+  expect(reliableMotionPairs).toBeGreaterThan(10)
   await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
   expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg?v=2.3')
