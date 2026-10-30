@@ -89,6 +89,9 @@ export function usePhotoHandoff(dialog: RefObject<HTMLDialogElement | null>, ope
         prepareFrame = requestAnimationFrame(() => { prepareFrame = requestAnimationFrame(() => {
           if (cancelled || turn !== generation || !installed) return
           photo.dataset.cameraPhase = back ? 'returning' : 'moving'
+          // Preparation can outlive the last GSAP tick (notably in WebKit).
+          // Start on the current root clock so that its delay is not tween time.
+          gsap.ticker.tick()
           tween = gsap.to(clock, { progress: 1, duration: 1, ease: 'power2.out', onUpdate: paint, onComplete: complete })
         }) })
       })
