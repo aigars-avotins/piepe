@@ -1,0 +1,50 @@
+[
+  {
+    "preference": "no-js",
+    "viewport": 982,
+    "height": 982,
+    "position": "relative",
+    "videos": 0,
+    "filmRequests": 0,
+    "configuredViewport": {
+      "width": 1512,
+      "height": 982
+    }
+  },
+  {
+    "preference": "save-data",
+    "viewport": 982,
+    "height": 982,
+    "position": "relative",
+    "videos": 0,
+    "filmRequests": 0,
+    "configuredViewport": {
+      "width": 1512,
+      "height": 982
+    }
+  },
+  {
+    "preference": "no-js",
+    "viewport": 664,
+    "height": 664,
+    "position": "relative",
+    "videos": 0,
+    "filmRequests": 0,
+    "configuredViewport": {
+      "width": 390,
+      "height": 664
+    }
+  },
+  {
+    "preference": "save-data",
+    "viewport": 664,
+    "height": 664,
+    "position": "relative",
+    "videos": 0,
+    "filmRequests": 0,
+    "configuredViewport": {
+      "width": 390,
+      "height": 664
+    }
+  }
+]

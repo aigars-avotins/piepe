@@ -1,0 +1,154 @@
+[
+  {
+    "visit": 0,
+    "presented": [
+      {
+        "time": 0.208333,
+        "presented": 6
+      },
+      {
+        "time": 0.25,
+        "presented": 7
+      },
+      {
+        "time": 0.291667,
+        "presented": 8
+      }
+    ],
+    "samples": [
+      {
+        "time": 0.316241,
+        "hash": 3641173499
+      },
+      {
+        "time": 0.546119,
+        "hash": 3460655795
+      },
+      {
+        "time": 0.772235,
+        "hash": 2664830278
+      }
+    ],
+    "opacity": 1,
+    "paused": false,
+    "scroll": 646,
+    "rect": {
+      "width": 390,
+      "height": 664
+    }
+  },
+  {
+    "visit": 1,
+    "presented": [
+      {
+        "time": 2.333333,
+        "presented": 55
+      },
+      {
+        "time": 2.375,
+        "presented": 56
+      },
+      {
+        "time": 2.416667,
+        "presented": 57
+      }
+    ],
+    "samples": [
+      {
+        "time": 2.44175,
+        "hash": 996030081
+      },
+      {
+        "time": 2.673917,
+        "hash": 3623416380
+      },
+      {
+        "time": 2.900641,
+        "hash": 842489519
+      }
+    ],
+    "opacity": 1,
+    "paused": false,
+    "scroll": 646,
+    "rect": {
+      "width": 390,
+      "height": 664
+    }
+  },
+  {
+    "visit": 2,
+    "presented": [
+      {
+        "time": 2.291667,
+        "presented": 56
+      },
+      {
+        "time": 2.333333,
+        "presented": 57
+      },
+      {
+        "time": 2.375,
+        "presented": 58
+      }
+    ],
+    "samples": [
+      {
+        "time": 2.413525,
+        "hash": 1967569662
+      },
+      {
+        "time": 2.644154,
+        "hash": 4116786939
+      },
+      {
+        "time": 2.874945,
+        "hash": 3074483535
+      }
+    ],
+    "opacity": 1,
+    "paused": false,
+    "scroll": 646,
+    "rect": {
+      "width": 390,
+      "height": 664
+    }
+  },
+  {
+    "visit": 3,
+    "presented": [
+      {
+        "time": 2.291667,
+        "presented": 56
+      },
+      {
+        "time": 2.333333,
+        "presented": 57
+      },
+      {
+        "time": 2.375,
+        "presented": 58
+      }
+    ],
+    "samples": [
+      {
+        "time": 2.407762,
+        "hash": 1967569662
+      },
+      {
+        "time": 2.635549,
+        "hash": 4116786939
+      },
+      {
+        "time": 2.862127,
+        "hash": 3074483535
+      }
+    ],
+    "opacity": 1,
+    "paused": false,
+    "scroll": 646,
+    "rect": {
+      "width": 390,
+      "height": 664
+    }
+  }
+]
