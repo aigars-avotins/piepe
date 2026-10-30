@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-30T21:01:06.024144+00:00",
+  "build": "176e0efd-8610-4ff2-92bf-e1bc00d7f7f4",
+  "sourceSHA": "17bbb92af34fa610b4f28b825d59d1d2308a2b53",
+  "branch": "main",
+  "activeWorkerVersion": "d83207f4-4f22-4c5f-8315-0b6097693fe8",
+  "activeVersionFoundInSuccessfulBuildLog": true,
+  "release": "2.5.2",
+  "candidateDeployedByThisTask": false,
+  "liveHttpAuditStatus": 403
+}

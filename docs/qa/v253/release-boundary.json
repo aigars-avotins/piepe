@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-10-30T17:40:43.767480+00:00",
+  "worker": "piepe",
+  "productionVersion": "2.5.2",
+  "activeDeployment": {
+    "id": "2d025dae-c8ad-49f0-b3df-c46af67600e5",
+    "versions": [
+      {
+        "version_id": "c747f44f-c2a4-4622-a058-de73872e3f24",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-30T14:31:09.183252Z"
+  },
+  "candidateDeployed": false,
+  "currentProductionRetained": true
+}

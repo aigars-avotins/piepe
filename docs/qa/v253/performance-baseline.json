@@ -1,0 +1,6275 @@
+{
+  "conditions": {
+    "latencyMs": 100,
+    "downloadBytesPerSec": 750000,
+    "cpuThrottle": 1,
+    "cache": "disabled except warm-return; warm-return primes a static visit with the observed public media/asset cache policies",
+    "build": "production via real media Worker",
+    "window": "8500ms after DCL cinematic;2500ms static"
+  },
+  "results": [
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "lv",
+      "mode": "first",
+      "lcp": [
+        {
+          "time": 748,
+          "size": 1600,
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "element": "<img src=\"/brand-mark.svg\" alt=\"\" width=\"40\" height=\"40\">"
+        },
+        {
+          "time": 760,
+          "size": 1792,
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "element": "<img class=\"brand-wordmark\" src=\"/brand-wordmark.svg\" alt=\"pie.pe\" width=\"64\" height=\"34\">"
+        }
+      ],
+      "cls": 0,
+      "firstFrames": [
+        {
+          "now": 3849.8,
+          "time": 0,
+          "ready": 1,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4233.1,
+          "time": 0.041667,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4266.4,
+          "time": 0.083333,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4299.8,
+          "time": 0.125,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 484.6000000089407,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 484.70000000298023,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 692.5,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 692.6000000089407,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2547,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2547,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2806.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "at": 3250.5,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 748
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 748
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2603.800000011921
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 11120.300000011921,
+      "reason": "",
+      "movie": [
+        {
+          "time": 3.103379,
+          "ready": 2,
+          "paused": false
+        }
+      ],
+      "videos": 1,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 144.66900000115857
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 130.99000000511296,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 346.6980000084732
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 133.38600000133738,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 307.2050000046147
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 133.5150000086287,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2543.230000010226
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 133.64700000965968,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2559.317999999621
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 133.80000001052395,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 527.5600000022678
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 133.88000000850298,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 677.1080000034999
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2803.1670000054874
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 133.95500001206528,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3246.964999998454
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 134.12200000311714,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 477.81500000564847
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 134.22900000296067,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 677.0900000119582
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 607.4500000104308
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 552.4040000018431,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 811.3169999996899
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 554.8620000045048,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 864.4700000004377
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 816.7460000113351,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1095.1490000006743
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 883.668000009493,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1164.6010000113165
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3",
+          "type": "Media",
+          "priority": "Low",
+          "at": 2712.8970000048866,
+          "initiator": "parser",
+          "changes": [],
+          "received": 5993164
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4187.879999997676,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4298.957999999402
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4307.633000003989,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4543.132000006153
+        }
+      ],
+      "totalFinishedBytes": 2157880,
+      "totalReceivedBytes": 8133044
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "lv",
+      "mode": "return",
+      "lcp": [
+        {
+          "time": 708,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0020215483147757196,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 417.90000000596046,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 417.90000000596046,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 640.7999999970198,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 641,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2539.0999999940395,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2539.0999999940395,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2760.0999999940395,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2814.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 4207.79999999702,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 4292.20000000298,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 708
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 708
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2612.2999999970198
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5131.20000000298,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 138.93000000098255
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 126.1510000040289,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 276.6189999965718
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 127.9670000076294,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 285.84300000511575
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 132.3090000078082,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2535.8160000032512
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 132.87200000195298,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2552.3209999955725
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 133.0080000043381,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 535.8320000086678
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 133.06799999554642,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 624.8429999977816
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2784.9109999951907
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 133.12199999927543,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3226.3610000081826
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 133.42800000100397,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 409.6900000004098
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 133.5560000006808,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 624.8120000091149
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 546.3610000006156
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 551.40900000697,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 816.2149999989197
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 551.5830000076676,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 818.6090000090189
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 824.2000000027474,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1114.4710000080522
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 824.9099999957252,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1118.5870000044815
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2812.294000003021,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4290.299000000232
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2812.4490000045625,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 2814.463999995496
+            }
+          ],
+          "received": 444134,
+          "bytes": 444399,
+          "end": 4206.004000006942
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4302.270000000135,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4409.182999996119
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4415.592999997898,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4584.107999995467
+        }
+      ],
+      "totalFinishedBytes": 3109390,
+      "totalReceivedBytes": 3109390
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "lv",
+      "mode": "reduced",
+      "lcp": [
+        {
+          "time": 684,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0023931853400346375,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 458,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 458.29999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 642.1000000089407,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 642.2000000029802,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2544.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2544.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2814.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2817.2999999970198,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 684
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 684
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2645.4000000059605
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5153.4000000059605,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 135.24400000460446
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 122.68400000175461,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 327.4800000071991
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 124.08300000242889,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 315.232000008109
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 124.17999999888707,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2541.2450000003446
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 124.26799999957439,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2559.2929999984335
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 124.34100000245962,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 533.6800000077346
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 124.39399999857415,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 624.8760000016773
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2801.300999999512
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 124.43700000585523,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3319.1420000075595
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 124.5210000051884,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 451.4080000080867
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 124.57200000062585,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 624.8159999959171
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 581.8549999967217
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 545.310999994399,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 805.2880000032019
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 545.471000004909,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 843.6479999945732
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 811.7210000054911,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1093.7379999959376
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 858.5790000070119,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1143.7029999942752
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2780.7469999970635,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4381.561000001966
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2785.1769999979297,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4503.043000004254
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4512.518999996246,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4617.578000004869
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4624.718000006396,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4795.240000006743
+        }
+      ],
+      "totalFinishedBytes": 3259394,
+      "totalReceivedBytes": 3259394
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "lv",
+      "mode": "save-data",
+      "lcp": [
+        {
+          "time": 708,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0023931853400346375,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 429.79999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 429.79999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 646.7000000029802,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 646.7000000029802,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2527.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2527.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2632.5,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2840.4000000059605,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 708
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 708
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2594.5
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5107.29999999702,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 135.05799999984447
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 121.36399999144487,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 300.0879999890458
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 121.70999999216292,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 296.30999999062624
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 121.79599999217317,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2524.9149999872316
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 121.96399999083951,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2541.1499999900116
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 124.2389999970328,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 514.7149999975227
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 124.52999998640735,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 627.1169999963604
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2836.7289999878267
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 124.61799998709466,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3520.610999999917
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 124.71999999252148,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 425.4099999961909
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 124.79199998779222,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 627.091999995173
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 558.8089999946533
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 525.5469999974594,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 786.9699999864679
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 525.7139999885112,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 820.9879999922123
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 804.4949999894015,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1091.6049999941606
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 842.7239999873564,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1128.893999994034
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2626.9269999902463,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4369.460999994772
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2627.7489999920363,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4491.2659999972675
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4500.470999992103,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4604.7599999874365
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4613.757999992231,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4783.628999997745
+        }
+      ],
+      "totalFinishedBytes": 3259394,
+      "totalReceivedBytes": 3259394
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "lv",
+      "mode": "warm-return",
+      "lcp": [
+        {
+          "time": 468,
+          "size": 82375,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 7.296126657490836e-05,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 171,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "at": 171.09999999403954,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 171.09999999403954,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 171.09999999403954,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 217.40000000596046,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 312.5,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 312.5,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 312.79999999701977,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 312.79999999701977,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 313.79999999701977,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 1663.5,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 1752.5,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 468
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 468
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 216.09999999403954
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 2731.7000000029802,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 150.4690000001574
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 138.26399999379646,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 138.45099999161903
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 138.56399999349378,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 138.76899999741
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 138.85299999674316,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 139.05099999101367
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 139.12999999593012,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 139.29500000085682
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 139.60899999074172,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 139.78800000040792
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 139.85999999567866,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 140.47199999913573
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 140.55199999711476,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 140.81899999291636
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 140.96199999039527,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 198.65399999252986
+            }
+          ],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 248.9389999973355
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 141.27199999347795,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 198.66199999523815
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 254.04299999354407
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 178.55199999758042,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 178.77699999371544
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 178.8419999938924,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 178.90799998713192
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 178.95299999509007,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 179.0130000008503
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 179.02799999865238,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 179.0809999947669
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 358.0799999908777,
+          "initiator": "other",
+          "changes": [],
+          "received": 444835,
+          "bytes": 445149,
+          "end": 1750.2189999941038
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 358.57799999939743,
+          "initiator": "other",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 376.68799998937175
+            }
+          ],
+          "received": 383623,
+          "bytes": 383937,
+          "end": 1660.3179999947315
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 359.21899999084417,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 473.7699999968754
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 483.6209999921266,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 789.4729999970878
+        }
+      ],
+      "totalFinishedBytes": 911414,
+      "totalReceivedBytes": 911414
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "en",
+      "mode": "first",
+      "lcp": [
+        {
+          "time": 1040,
+          "size": 1938,
+          "url": "",
+          "element": "<span class=\"header-caption\">The living forest</span>"
+        }
+      ],
+      "cls": 0,
+      "firstFrames": [
+        {
+          "now": 3882.9,
+          "time": 0,
+          "ready": 1,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4232.9,
+          "time": 0.041667,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4282.9,
+          "time": 0.083333,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4332.9,
+          "time": 0.125,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 514.0999999940395,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 514.2000000029802,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 913,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 913,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2603.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2603.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2810.5,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "at": 3215.5999999940395,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 1040
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 1040
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2676.7999999970198
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 11186.70000000298,
+      "reason": "",
+      "movie": [
+        {
+          "time": 3.094346,
+          "ready": 2,
+          "paused": false
+        }
+      ],
+      "videos": 1,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 144.3390000058571
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 137.15999999840278,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 370.70100000710227
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 137.78400000592228,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2596.8339999963064
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 138.10199999716133,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2610.7340000016848
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 138.21699999971315,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 574.5310000056634
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 139.3240000033984,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 847.3599999997532
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2784.8809999995865
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 139.50400000612717,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3206.7510000051698
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 139.67200000479352,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 496.9980000023497
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 139.72400000784546,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 847.343000001274
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 624.4169999990845
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 637.4979999964125,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 808.8070000085281
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 638.7890000041807,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 890.9310000017285
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 639.074000006076,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 1050.9790000069188
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 933.2140000042273,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1200.8910000004107
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 1082.802000004449,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1349.0429999947082
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3",
+          "type": "Media",
+          "priority": "Low",
+          "at": 2800.0670000037644,
+          "initiator": "parser",
+          "changes": [],
+          "received": 6043744
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4215.175999997882,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4324.999000004027
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4335.328000001027,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4570.905000000494
+        }
+      ],
+      "totalFinishedBytes": 2157739,
+      "totalReceivedBytes": 8184983
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "en",
+      "mode": "return",
+      "lcp": [
+        {
+          "time": 724,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.002096557617709495,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 482,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 482.20000000298023,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 650.7999999970198,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 650.7999999970198,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2577.1000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2577.1000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2798.9000000059605,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2799.2000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 4222.5,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 4306.600000008941,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 724
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 724
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2646.2999999970198
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5156.600000008941,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 138.26000000699423
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 125.79900000127964,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 350.93800000322517
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 127.08600000769366,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2574.6650000073714
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 127.7130000089528,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2589.452000000165
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 128.4180000075139,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 554.7630000073696
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 128.96200000250246,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 635.0340000062715
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2765.322000006563
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 129.75200000801124,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3183.6380000022473
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 130.21700001263525,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 475.2110000117682
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 130.34700001298916,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 635.0130000064382
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 605.6480000115698
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 575.1100000052247,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 739.4090000016149
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 575.7460000022547,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 853.5240000055637
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 576.2990000075661,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 985.4410000116332
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 863.4100000053877,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1135.072000004584
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 997.0240000111517,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1265.8030000020517
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2852.327000000514,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4302.960000000894
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2852.788000003784,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 2881.933000011486
+            }
+          ],
+          "received": 444134,
+          "bytes": 444399,
+          "end": 4218.808000005083
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4326.553999999305,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4433.255000010831
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4443.290000010165,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4613.401000009617
+        }
+      ],
+      "totalFinishedBytes": 3109249,
+      "totalReceivedBytes": 3109249
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "en",
+      "mode": "reduced",
+      "lcp": [
+        {
+          "time": 700,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0023554910895978894,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 484.70000000298023,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 484.79999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 661.5,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 661.5,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2591.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2592,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2874.7999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2875,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 700
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 700
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2654.5
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5167.5999999940395,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 136.86300000699703
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 120.0960000132909,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 349.76800000004005
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 120.51600000995677,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2575.471000003745
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 120.68400000862312,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2587.5450000021374
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 120.75800000457093,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 553.7110000004759
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 120.81600000965409,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 646.9270000088727
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2764.0080000128364
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 120.85800000932068,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3239.346000002115
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 120.91500000678934,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 473.5460000083549
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 120.96900001051836,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 646.9130000041332
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 605.9760000061942
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 568.5690000100294,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 732.8860000125133
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 568.9170000114245,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 853.5520000004908
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 569.0430000104243,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 979.2110000125831
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 856.8770000129007,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1126.8960000015795
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 984.4980000052601,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1256.3480000098934
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2821.1150000133784,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4382.557000004454
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2830.8990000077756,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4505.451000004541
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4513.029000008828,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4623.957000003429
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4630.919000002905,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4803.817000007257
+        }
+      ],
+      "totalFinishedBytes": 3259253,
+      "totalReceivedBytes": 3259253
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "en",
+      "mode": "save-data",
+      "lcp": [
+        {
+          "time": 828,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0023554910895978894,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 488.20000000298023,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 490.20000000298023,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 716.7999999970198,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 716.7999999970198,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2584.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2584.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2784.5,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2788.9000000059605,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 828
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 828
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2706.6000000089407
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5219.20000000298,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 142.50999999057967
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 125.65499999618623,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 353.4030000009807
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 126.28199999744538,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2582.191999987117
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 126.39299999864306,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2589.983999991091
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 126.5409999905387,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 559.3089999892982
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 127.7879999979632,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 701.8849999876693
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2768.3759999927133
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 127.8899999888381,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3344.4449999951757
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 127.96999998681713,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 478.55399998661596
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 128.20999999530613,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 701.8489999900339
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 613.428999989992
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 590.1069999963511,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 758.295999999973
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 592.3229999898467,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 860.2519999985816
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 592.5649999990128,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 1004.3549999973038
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 874.0649999963352,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1144.5129999920027
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 1016.5619999897899,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1282.5799999991432
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2773.6949999962235,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4385.989999995218
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2774.481000000378,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4505.076999994344
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4510.816999987583,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4618.801999997231
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4623.230999990483,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4794.108999994933
+        }
+      ],
+      "totalFinishedBytes": 3259253,
+      "totalReceivedBytes": 3259253
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": false,
+      "locale": "en",
+      "mode": "warm-return",
+      "lcp": [
+        {
+          "time": 340,
+          "size": 82375,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.00015110804392170403,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 150.40000000596046,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 150.5,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 150.5,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 180.5,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 236.80000001192093,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 277.1000000089407,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 277.20000000298023,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 277.70000000298023,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 277.70000000298023,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 1620.9000000059605,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 1700.800000011921,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 340
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 340
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 179.1000000089407
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 2698.5,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 144.9070000089705
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 127.49800000165123,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 127.62700000894256
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 127.69700000353623,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 127.77099999948405
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 127.80800000473391,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 127.9050000011921
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 127.94299999950454,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 128.29700000293087
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 128.36699999752454,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 128.4529999975348
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 128.52700000803452,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22880,
+          "bytes": 23196,
+          "end": 374.8140000097919
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 128.8230000063777,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 173.27100000693463
+            }
+          ],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 241.65200001152698
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 128.92400000419002,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 173.26100000354927
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 247.7050000015879
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 158.63200000603683,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 159.26900001068134
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 159.34199999901466,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 159.6060000010766
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 159.6750000026077,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 159.75500000058673
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 159.7780000010971,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 159.85100000398234
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 160.08400000282563,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 160.36500000336673
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 273.4000000054948,
+          "initiator": "parser",
+          "changes": [],
+          "received": 486835,
+          "bytes": 487149,
+          "end": 1696.8940000078874
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 274.199999999837,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 291.07600000861567
+            }
+          ],
+          "received": 424123,
+          "bytes": 424437,
+          "end": 1612.9780000046594
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 1712.7540000074077,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 1819.5249999989755
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 1825.4870000091614,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 1997.3450000106823
+        }
+      ],
+      "totalFinishedBytes": 1016969,
+      "totalReceivedBytes": 1016969
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "lv",
+      "mode": "first",
+      "lcp": [
+        {
+          "time": 684,
+          "size": 1224,
+          "url": "",
+          "element": "<button class=\"text-button skip-intro\">Izlaist ievadu<!-- --> <span aria-hidden=\"true\"><svg class=\"direction-arrow\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin"
+        }
+      ],
+      "cls": 0,
+      "firstFrames": [
+        {
+          "now": 3859.2,
+          "time": 0,
+          "ready": 1,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4242.5,
+          "time": 0.041667,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4259.2,
+          "time": 0.083333,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4309.2,
+          "time": 0.125,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 493.6000000089407,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 493.6000000089407,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 651.9000000059605,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 652,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2561.7999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2561.9000000059605,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2825.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "at": 3173.1000000089407,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 684
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 684
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2651.5
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 11162,
+      "reason": "",
+      "movie": [
+        {
+          "time": 3.092552,
+          "ready": 2,
+          "paused": false
+        }
+      ],
+      "videos": 1,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 158.94500000285916
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 140.50000000861473,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 362.67300001054537
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 141.9140000070911,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 322.4880000052508
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 142.12200000474695,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2558.7560000130907
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 142.62300000700634,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2574.1610000113724
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 143.502000006265,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 547.7340000070399
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 143.63700000103563,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 636.3930000079563
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2814.501000000746
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 143.73999999952503,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3170.14200000267
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 143.86800001375377,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 486.114000013913
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 143.99300000513904,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 636.3830000045709
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 616.5770000079647
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 559.9890000012238,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 816.7470000043977
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 560.3530000080355,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 874.4940000033239
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 826.7360000027111,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1107.8740000084508
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 893.5270000074524,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1174.4380000018282
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3",
+          "type": "Media",
+          "priority": "Low",
+          "at": 2814.8370000126306,
+          "initiator": "parser",
+          "changes": [],
+          "received": 6017840
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4205.862000002526,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4317.914000013843
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4323.637000008603,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4560.550000009243
+        }
+      ],
+      "totalFinishedBytes": 2157880,
+      "totalReceivedBytes": 8168220
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "lv",
+      "mode": "return",
+      "lcp": [
+        {
+          "time": 664,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0019035842745402372,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 448.1000000089407,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 448.29999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 638.9000000059605,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 638.9000000059605,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2559.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2559.7999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2820.1000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2866,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 4224.100000008941,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 4310.600000008941,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 664
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 664
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2638
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5146.5,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 137.37299999047536
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 142.61599999736063,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 279.34999999706633
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 145.17599999089725,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 317.3479999968549
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 147.61800000269432,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2555.5480000039097
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 147.76500000152737,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2569.015999994008
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 147.88699999917299,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 548.2239999982994
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 148.0639999936102,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 623.5759999981383
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2795.440999994753
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 148.2220000034431,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3136.895999996341
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 148.34099999279715,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 441.8100000038976
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 148.43200000177603,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 623.5610000003362
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 573.0519999924581
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 562.2500000026776,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 825.593999994453
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 562.4280000047293,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 839.391000001342
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 841.0449999937555,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1131.624000001466
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 859.7000000008848,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1150.8360000007087
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2873.6079999944195,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4305.678000004264
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2874.4409999926575,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 2877.219000001787
+            }
+          ],
+          "received": 444134,
+          "bytes": 444399,
+          "end": 4221.4939999976195
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4334.1010000003735,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4442.127000002074
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4446.666999996523,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4615.8310000028
+        }
+      ],
+      "totalFinishedBytes": 3109390,
+      "totalReceivedBytes": 3109390
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "lv",
+      "mode": "reduced",
+      "lcp": [
+        {
+          "time": 652,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.003273910051698918,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 474.79999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 475,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 615.2999999970198,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 615.2999999970198,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2541.2000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2541.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2741.1000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2799.5,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 652
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 652
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2625.1000000089407
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5135.100000008941,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 135.98399999318644
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 129.57099999766797,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 340.2070000011008
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 130.1379999931669,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 300.3269999899203
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 130.26900000113528,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2538.3569999976316
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 130.38499999674968,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2554.6590000012657
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 130.47899999946821,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 528.80999998888
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 130.55299999541603,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 600.9379999886733
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2796.4409999985946
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 130.81699999747798,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3432.437999988906
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 131.15899999684189,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 464.88799998769537
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 131.2599999946542,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 600.9300000005169
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 598.3039999991888
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 536.8469999957597,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 792.1689999930095
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 537.0569999940926,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 854.6280000009574
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 798.1569999974454,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1076.424999992014
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 861.5769999887561,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1142.3779999895487
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2720.3819999995176,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4378.247000000556
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2723.37300000072,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4497.840999989421
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4505.190999989281,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4610.818000001018
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4615.494999990915,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4783.809000000474
+        }
+      ],
+      "totalFinishedBytes": 3259394,
+      "totalReceivedBytes": 3259394
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "lv",
+      "mode": "save-data",
+      "lcp": [
+        {
+          "time": 672,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0040973861269917485,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 494.40000000596046,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 494.5,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 642.6000000089407,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 642.6000000089407,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2610.6000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2610.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2733.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2895.7000000029802,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 672
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 672
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 2682.1000000089407
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5188.79999999702,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 138.4749999997439
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 142.63499999651685,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 357.5100000016391
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 144.5440000097733,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 319.2819999967469
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 145.18600000883453,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2607.4829999997746
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 145.32000001054257,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2616.607000003569
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 145.5569999961881,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 547.0080000086455
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 145.75799999875017,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 629.6520000032615
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2892.799000008381
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 145.8390000043437,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3567.79300000926
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 150.26799999759533,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 481.0410000063712
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 150.44199999829289,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 629.6620000066468
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 611.23100000259
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 556.8389999971259,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 813.2780000014463
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 557.0240000088234,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 868.5820000100648
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 830.4510000016307,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1110.7049999991432
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 881.2889999971958,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1162.5130000029458
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2725.177000000258,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4441.208999996888
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2726.07699999935,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4574.577000006684
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4581.300999998348,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4687.067000006209
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4692.746000000625,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4862.713000009535
+        }
+      ],
+      "totalFinishedBytes": 3259394,
+      "totalReceivedBytes": 3259394
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "lv",
+      "mode": "warm-return",
+      "lcp": [
+        {
+          "time": 216,
+          "size": 14661,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 149.40000000596046,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 149.40000000596046,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 149.40000000596046,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 151.09999999403954,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 233.20000000298023,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 267.90000000596046,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 268.09999999403954,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 268.79999999701977,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 268.90000000596046,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 1609.5999999940395,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 1696.5,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 216
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 216
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23816,
+          "domContentLoaded": 179.90000000596046
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 2692.0999999940395,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23726,
+          "end": 148.95099999557715
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 137.56699999794364,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 137.6929999969434
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 137.76100000541192,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 137.85700000880752
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 138.01700000476558,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 138.15700000850484
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 138.22500000242144,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 138.38400000531692
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 138.54500000888947,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 138.71700000890996
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 138.76899999741,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 138.8520000036806
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 138.93499999539927,
+          "initiator": "parser",
+          "changes": [],
+          "received": 39380,
+          "bytes": 39696,
+          "end": 407.26000000722706
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 139.62899999751244,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 174.58900000201538
+            }
+          ],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 246.81900000723545
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 139.8719999997411,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 174.59700000472367
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 252.25900000077672
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 155.24000000732485,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 155.35100000852253
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 155.4000000032829,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 155.53899999940768
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 155.60199999890756,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 155.681000003824
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 155.70400000433438,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 155.7710000051884
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 264.5579999953043,
+          "initiator": "parser",
+          "changes": [],
+          "received": 488335,
+          "bytes": 488649,
+          "end": 1691.0190000053262
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 265.6439999991562,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 267.9400000051828
+            }
+          ],
+          "received": 425623,
+          "bytes": 425937,
+          "end": 1606.7869999969844
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 1710.0349999964237,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 1817.494999995688
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 1822.5119999988237,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 1994.8680000088643
+        }
+      ],
+      "totalFinishedBytes": 1036610,
+      "totalReceivedBytes": 1036610
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "en",
+      "mode": "first",
+      "lcp": [
+        {
+          "time": 704,
+          "size": 1241,
+          "url": "",
+          "element": "<span>Forest sound</span>"
+        }
+      ],
+      "cls": 0,
+      "firstFrames": [
+        {
+          "now": 3825.9,
+          "time": 0,
+          "ready": 1,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4192.5,
+          "time": 0.041667,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4259.2,
+          "time": 0.083333,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        },
+        {
+          "now": 4292.5,
+          "time": 0.125,
+          "ready": 3,
+          "src": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3"
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 472.69999998807907,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 472.79999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 662.0999999940395,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 662.0999999940395,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2572.7999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2573,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2786.2999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "at": 3162.5,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 704
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 704
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2652.8999999910593
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 11164.79999999702,
+      "reason": "",
+      "movie": [
+        {
+          "time": 3.092397,
+          "ready": 2,
+          "paused": false
+        }
+      ],
+      "videos": 1,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 137.85400000051595
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 124.43899999198038,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 342.0099999930244
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 125.29999999969732,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2568.080999990343
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 125.48299999616574,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2581.9079999928363
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 125.57399999059271,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 543.8480000011623
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 125.62900000193622,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 647.3140000016429
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2757.6419999968493
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 125.6710000016028,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3156.480999998166
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 126.63299999258015,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 467.45899999223184
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 127.05199999618344,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 647.3009999899659
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 596.2169999984326
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 574.2929999978514,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 742.0219999912661
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 574.9669999931939,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 844.186999995145
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 575.1759999984642,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 988.4369999927003
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 860.075999997207,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1131.3890000019455
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 993.4039999934612,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1264.2369999957737
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-reveal.mp4?v=2.3",
+          "type": "Media",
+          "priority": "Low",
+          "at": 2787.3299999919254,
+          "initiator": "parser",
+          "changes": [],
+          "received": 6036432
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4173.674999998184,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4282.053999995696
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4287.509000001592,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4523.746999999275
+        }
+      ],
+      "totalFinishedBytes": 2157739,
+      "totalReceivedBytes": 8180671
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "en",
+      "mode": "return",
+      "lcp": [
+        {
+          "time": 684,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.0021361948023791177,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 473.70000000298023,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 475.1000000089407,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 656.7000000029802,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 656.7000000029802,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2577.6000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2577.6000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2765.1000000089407,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2800.4000000059605,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 4221.29999999702,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 4306.29999999702,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 684
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 684
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2638.5
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5177,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 136.13600000098813
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 135.08399999409448,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 344.16999999666587
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 136.60099999106023,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2574.2109999991953
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 136.83999999193475,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2588.110999990022
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 139.42099999985658,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 560.0239999912446
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 139.7199999919394,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 637.0170000009239
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2768.296999987797
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 140.00699999451172,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3281.3659999956144
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 140.15099999960512,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 468.1819999968866
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 140.25199999741744,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 637.0249999890802
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 598.1209999881685
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 574.9089999881107,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 737.7839999971911
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 575.2389999979641,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 845.7499999931315
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 575.3249999979744,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 984.3089999922086
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 854.8179999925196,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1120.188999993843
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 1011.9509999931324,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1276.1479999899166
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2797.0189999905415,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4301.415999987512
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2797.408999991603,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 2799.5430000009947
+            }
+          ],
+          "received": 444134,
+          "bytes": 444399,
+          "end": 4218.227999997907
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4311.642999993637,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4417.895999999018
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4423.758999997517,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4596.794999990379
+        }
+      ],
+      "totalFinishedBytes": 3109249,
+      "totalReceivedBytes": 3109249
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "en",
+      "mode": "reduced",
+      "lcp": [
+        {
+          "time": 672,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.002985423723973745,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 529.2000000029802,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 529.2000000029802,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 659.3999999910593,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 659.3999999910593,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2614.7000000029802,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2614.7999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2808.0999999940395,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2810.5,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 672
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 672
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2685.5999999940395
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5198.70000000298,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 171.9569999986561
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 145.80699999351054,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 400.46599999186583
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 146.3709999952698,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2610.165000005509
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 146.46400000492577,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2625.9460000001127
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 148.17800000309944,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 540.3579999983776
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 148.33399999770336,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 626.4379999920493
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2800.8279999921797
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 148.3940000034636,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3403.877000004286
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 148.45799999602605,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 524.4760000059614
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 148.522999996203,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 626.4280000032159
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 654.6799999923678
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 557.4479999922914,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 720.4879999917466
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 557.8839999943739,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 912.3899999976857
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 557.9649999999674,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 976.609000004828
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 916.8809999973746,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1192.6950000051875
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 985.3359999979148,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1268.9359999931185
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2788.633000003756,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4416.794000004302
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2790.261999994982,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4535.182999999961
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4542.549000005238,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4648.545999996713
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4653.791000004276,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4824.942999999621
+        }
+      ],
+      "totalFinishedBytes": 3259253,
+      "totalReceivedBytes": 3259253
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "en",
+      "mode": "save-data",
+      "lcp": [
+        {
+          "time": 692,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0.002161947648680915,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 485,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 485,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 666.8999999910593,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 666.8999999910593,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2585,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2585,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 2733.7999999970198,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 2774.7999999970198,
+          "width": 1920
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 692
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 692
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 2676.0999999940395
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 5182.20000000298,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 134.9459999910323
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 134.4449999887729,
+          "initiator": "parser",
+          "changes": [],
+          "received": 14108,
+          "bytes": 14346,
+          "end": 354.8889999947278
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 134.98499999695923,
+          "initiator": "parser",
+          "changes": [],
+          "received": 396424,
+          "bytes": 396689,
+          "end": 2580.9359999984736
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 135.23099999292754,
+          "initiator": "parser",
+          "changes": [],
+          "received": 399677,
+          "bytes": 399929,
+          "end": 2595.092999996268
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 135.31699999293778,
+          "initiator": "parser",
+          "changes": [],
+          "received": 43736,
+          "bytes": 43972,
+          "end": 561.6349999909289
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 135.36899999598972,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 654.473999995389
+            }
+          ],
+          "received": 463839,
+          "bytes": 464103,
+          "end": 2770.8239999919897
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 135.41399998939596,
+          "initiator": "parser",
+          "changes": [],
+          "received": 660060,
+          "bytes": 660325,
+          "end": 3444.999999992433
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 135.47199999447912,
+          "initiator": "parser",
+          "changes": [],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 479.29499999736436
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 135.51499998720828,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 654.4819999980973
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 609.5409999979893
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 578.5019999893848,
+          "initiator": "parser",
+          "changes": [],
+          "received": 8292,
+          "bytes": 8528,
+          "end": 743.1389999983367
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 578.8499999907799,
+          "initiator": "parser",
+          "changes": [],
+          "received": 19888,
+          "bytes": 20126,
+          "end": 857.5889999920037
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 578.944999986561,
+          "initiator": "parser",
+          "changes": [],
+          "received": 20284,
+          "bytes": 20522,
+          "end": 991.3589999923715
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 864.0569999988656,
+          "initiator": "parser",
+          "changes": [],
+          "received": 22876,
+          "bytes": 23114,
+          "end": 1137.12499999383
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 998.9179999975022,
+          "initiator": "parser",
+          "changes": [],
+          "received": 23660,
+          "bytes": 23898,
+          "end": 1267.4629999964964
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2724.0599999931874,
+          "initiator": "parser",
+          "changes": [],
+          "received": 506846,
+          "bytes": 507111,
+          "end": 4387.415999997756
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 2725.033999988227,
+          "initiator": "parser",
+          "changes": [],
+          "received": 594138,
+          "bytes": 594403,
+          "end": 4508.775999987847
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 4516.188999987207,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 4625.107999992906
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 4628.82999998692,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 4799.8679999873275
+        }
+      ],
+      "totalFinishedBytes": 3259253,
+      "totalReceivedBytes": 3259253
+    },
+    {
+      "phase": "isolated-before",
+      "mobile": true,
+      "locale": "en",
+      "mode": "warm-return",
+      "lcp": [
+        {
+          "time": 228,
+          "size": 14661,
+          "url": "",
+          "element": "<span>pie</span>"
+        }
+      ],
+      "cls": 0,
+      "firstFrames": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "at": 135.8999999910593,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 136,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 136,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 144.09999999403954,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "at": 211,
+          "width": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 250.79999999701977,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-mark.svg",
+          "at": 250.8999999910593,
+          "width": 120
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 250.8999999910593,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "at": 250.8999999910593,
+          "width": 300
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "at": 1573.3999999910593,
+          "width": 1900
+        },
+        {
+          "src": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "at": 1659.0999999940395,
+          "width": 1900
+        }
+      ],
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 228
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 228
+        }
+      ],
+      "navigation": [
+        {
+          "transferSize": 23676,
+          "domContentLoaded": 164.5
+        }
+      ],
+      "poster": {
+        "src": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "complete": true
+      },
+      "now": 2678.3999999910593,
+      "reason": "preference-or-return",
+      "movie": [],
+      "videos": 0,
+      "preloads": [
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+        "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+        "http://127.0.0.1:4178/brand-mark.svg",
+        "http://127.0.0.1:4178/brand-wordmark.svg"
+      ],
+      "network": [
+        {
+          "url": "http://127.0.0.1:4178/en/",
+          "type": "Document",
+          "priority": "VeryHigh",
+          "at": 0,
+          "initiator": "other",
+          "changes": [],
+          "received": 0,
+          "bytes": 23585,
+          "end": 145.37399999971967
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "type": "Font",
+          "priority": "High",
+          "at": 127.50999999116175,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 127.60599999455735
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 127.6569999899948,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 127.7739999932237
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-DVCRdy1W.js",
+          "type": "Script",
+          "priority": "High",
+          "at": 127.79799998679664,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 127.84399998781737
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/index-eVE_lEFX.css",
+          "type": "Stylesheet",
+          "priority": "VeryHigh",
+          "at": 127.86399999458808,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 127.94799999392126
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-breathing-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 127.97099999443162,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 128.0279999919003
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-poster.jpg?v=2.3",
+          "type": "Image",
+          "priority": "High",
+          "at": 128.11899998632725,
+          "initiator": "parser",
+          "changes": [],
+          "received": 61404,
+          "bytes": 61720,
+          "end": 423.7739999953192
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-mark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 128.6019999970449,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 159.53199999057688
+            }
+          ],
+          "received": 1758,
+          "bytes": 1969,
+          "end": 240.99500000011176
+        },
+        {
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "type": "Image",
+          "priority": "Low",
+          "at": 128.80999999470077,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 159.51199999835808
+            }
+          ],
+          "received": 3427,
+          "bytes": 3639,
+          "end": 243.4579999971902
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 152.8239999897778,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 152.92899998894427
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 152.97099998861086,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 153.02699999301694
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 153.08999999251682,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 153.27899999101646
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 153.2959999894956,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 153.3449999988079
+        },
+        {
+          "url": "http://127.0.0.1:4178/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "type": "Font",
+          "priority": "VeryHigh",
+          "at": 153.3589999889955,
+          "initiator": "parser",
+          "changes": [],
+          "received": 0,
+          "bytes": 0,
+          "end": 153.40199999627657
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory-final.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 230.94099998706952,
+          "initiator": "parser",
+          "changes": [],
+          "received": 486835,
+          "bytes": 487149,
+          "end": 1652.8699999907985
+        },
+        {
+          "url": "http://127.0.0.1:4178/media/forest-understory.jpg?v=2.3",
+          "type": "Image",
+          "priority": "Low",
+          "at": 231.16799999843352,
+          "initiator": "parser",
+          "changes": [
+            {
+              "priority": "High",
+              "at": 239.7049999999581
+            }
+          ],
+          "received": 424123,
+          "bytes": 424437,
+          "end": 1569.7349999973085
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.svg",
+          "type": "Other",
+          "priority": "High",
+          "at": 1667.8359999932582,
+          "initiator": "other",
+          "changes": [],
+          "received": 1825,
+          "bytes": 2037,
+          "end": 1773.4879999916302
+        },
+        {
+          "url": "http://127.0.0.1:4178/favicon.ico",
+          "type": "Other",
+          "priority": "High",
+          "at": 1779.2329999938374,
+          "initiator": "other",
+          "changes": [],
+          "received": 50745,
+          "bytes": 50957,
+          "end": 1949.0009999863105
+        }
+      ],
+      "totalFinishedBytes": 1055493,
+      "totalReceivedBytes": 1055493
+    }
+  ]
+}

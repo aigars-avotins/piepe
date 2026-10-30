@@ -45,7 +45,10 @@ em,.italic-line{font-family:var(--serif);font-weight:400;font-style:italic;color
 .hero-deck{font-family:var(--serif);font-size:clamp(28px,2.8vw,44px);line-height:1.1;letter-spacing:-.02em;margin:14px 0 0 8px}
 .title-enter{opacity:0;transform:translateY(10px);transition:opacity 1.2s ease .4s,transform 1.3s ease .4s}.has-title .title-enter{opacity:1;transform:none}
 .hero-hotspot-plane{position:absolute;z-index:4;pointer-events:none}.fungus-hit{position:absolute;pointer-events:auto;left:46.5%;top:35.8%;width:40%;height:48%;clip-path:polygon(14% 1%,62% 0,60% 10%,82% 13%,81% 22%,98% 30%,97% 44%,80% 49%,78% 64%,60% 74%,48% 95%,30% 95%,24% 76%,11% 66%,7% 48%,0 31%,7% 21%,20% 19%)}
-.fungus-hit:focus-visible{background:rgba(235,218,173,.06);outline:none}.fungus-annotation{pointer-events:auto;position:absolute;left:72%;top:72%;display:flex;align-items:center;gap:13px;min-height:46px;white-space:nowrap;opacity:0;transition:opacity .8s .4s;font-size:12px;letter-spacing:.025em}
+.fungus-hit:focus-visible{background:rgba(235,218,173,.06);outline:none}
+/* The polygon clips an ordinary outline; mark its existing visible invitation instead. */
+.fungus-hit:focus-visible+.fungus-annotation .annotation-cross{animation:none;outline:3px solid var(--gold);outline-offset:4px;box-shadow:0 0 0 5px var(--color-forest)}
+.fungus-annotation{pointer-events:auto;position:absolute;left:72%;top:72%;display:flex;align-items:center;gap:13px;min-height:46px;white-space:nowrap;opacity:0;transition:opacity .8s .4s;font-size:12px;letter-spacing:.025em}
 .fungus-annotation>span:last-child{display:flex;gap:15px;align-items:center}.annotation-cross{font-family:'Manrope',sans-serif;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(234,232,223,.55);border-radius:50%;font-size:23px;line-height:1;color:#e5d9bd;background:rgba(6,19,11,.22);transition:background .4s,transform .6s}
 @media(hover:hover) and (pointer:fine){.fungus-annotation:hover .annotation-cross,.specimen-invitation:hover .annotation-cross{background:rgba(173,137,81,.24);transform:rotate(90deg)}}.is-ready .fungus-annotation{opacity:1}.is-intro .hero-hotspot-plane{visibility:hidden}
 .hero-foot{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(33px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:12px;color:#c4caba;z-index:3}
@@ -141,14 +144,14 @@ main{position:relative;z-index:1}
 @media(max-width:699px){.clip-understory>img,.clip-understory>video{object-position:58% 50%}.motion-off[data-scene="understory"] .bark-chapter::before{background-position:58% 50%}}
 /* 2.2: the awakening stays inside the original, graded world/source plane. */
 .world-awakening{position:absolute;inset:0;z-index:2}.world-awakening .motion-clip{width:100%;height:100%}.clip-awakening .clip-end{opacity:0}.clip-awakening[data-clip-state=complete] .clip-end{opacity:1}
-.motion-clip>video{opacity:0}.motion-clip[data-clip-ready=true]>video,.clip-awakening[data-frame-staged=true]>video{opacity:1}.world-awakening .motion-clip>video{transition:opacity .16s linear}
+.motion-clip>video{opacity:0}.motion-clip[data-clip-ready=true]>video,.motion-clip[data-frame-staged=true]>video{opacity:1}.world-awakening .motion-clip>video{transition:opacity .16s linear}
 .has-awakening .hero-hotspot-plane{visibility:hidden}.has-awakening .hero-copy,.has-awakening .hero-foot,.has-awakening .journey-index{pointer-events:none;transition:opacity .55s ease}.cinema-presented .hero-copy,.cinema-presented .hero-foot,.cinema-presented .journey-index{opacity:0}
 .awakening-controls{position:fixed;inset:0;z-index:22;pointer-events:none}.awakening-controls>button{pointer-events:auto}.has-awakening .site-header .replay-intro{visibility:hidden}.has-awakening{touch-action:none}
 .understory-cinema{position:absolute;inset:0;z-index:5;opacity:0;transform-origin:58% 50%}.wide-environment>.motion-clip{z-index:1}.wide-environment>.dawn-light{z-index:0}.wide-environment>.motion-clip>img,.wide-environment>.motion-clip>video{object-position:55% 50%}
 .forest-mist,.light-shaft,.spores{z-index:2}
 .foreground-carrier{position:absolute;inset:0;z-index:6}
 .atmosphere-paused .edge-light path{animation-play-state:paused}
-.clip-understory,.clip-breathing{opacity:0;transition:opacity .24s linear}.clip-understory[data-still-ready=true],.clip-understory[data-clip-ready=true],.clip-breathing[data-still-ready=true],.clip-breathing[data-clip-ready=true]{opacity:1}
+.clip-understory,.clip-breathing{opacity:0;transition:opacity .24s linear}.clip-understory[data-still-ready=true],.clip-understory[data-frame-staged=true],.clip-understory[data-clip-ready=true],.clip-breathing[data-still-ready=true],.clip-breathing[data-frame-staged=true],.clip-breathing[data-clip-ready=true]{opacity:1}
 /* One actual end frame docks into the note; no entrance scale/opacity animation replaces it. */
 .discovery-dialog[open] .specimen-photo{animation:none}.specimen-photo>img{position:absolute;inset:0;transform:none;object-position:68% 53%}.photo-world-shade{position:absolute;inset:0;pointer-events:none;opacity:0}.photo-moving .photo-world-shade{opacity:1}.photo-moving .discovery-copy,.photo-moving .specimen-caption,.photo-moving .discovery-kicker,.photo-moving .discovery-header>.label,.photo-moving .discovery-stage>.language-switch{visibility:hidden}.photo-moving .discovery-header{background:none}.photo-moving .specimen-photo>img{transition:none}
 .skip-dock{position:fixed;z-index:10;left:var(--gutter);bottom:30px;background:#0b1712dd;padding:8px 16px;border:1px solid var(--line)}.photo-moving .close-discovery{visibility:visible}
