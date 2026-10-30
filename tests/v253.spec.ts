@@ -85,9 +85,8 @@ for (const [clip, anchor] of [['understory', 'understory'], ['breathing', 'retur
       return request.call(this, (now, metadata) => {
         const present = () => {
           if (!this.isConnected) return
-          let opacity = 1
-          for (let element: Element | null = this; element; element = element.parentElement) opacity *= Number(getComputedStyle(element).opacity)
-          if (opacity < .99) { requestAnimationFrame(present); return }
+          const opacity = (element: Element | null): number => element ? Number(getComputedStyle(element).opacity) * opacity(element.parentElement) : 1
+          if (opacity(this) < .99) { requestAnimationFrame(present); return }
           const witnesses = (window as unknown as { stagedFilms?: unknown[] })
           witnesses.stagedFilms ||= []
           witnesses.stagedFilms.push({ source: this.currentSrc, time: metadata.mediaTime, ready: this.readyState, opacity: getComputedStyle(this).opacity })
