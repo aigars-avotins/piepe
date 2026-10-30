@@ -14,7 +14,7 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
   const raw=await request.get(path);expect(raw.status()).toBe(200);expect(await raw.text()).toContain(t.factsTitle)
   await page.goto(path)
-  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.2')
+  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.3')
   const local=await readFile('dist/index.html','utf8');const script=/src="(\/assets\/[^"]+\.js)"/.exec(local)![1]
   await expect(page.locator('head script[type="module"][src^="/assets/"]')).toHaveAttribute('src',script)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:13000})

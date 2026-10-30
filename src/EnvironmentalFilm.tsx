@@ -5,7 +5,7 @@ type Props = { name: 'understory' | 'breathing'; enabled: boolean; active?: bool
 
 /** One decoder per visible visit. A painted end-frame bridges a forward replay, never a session flag. */
 export default function EnvironmentalFilm({ name, enabled, active = true, onReady, onFinish }: Props) {
-  const [ready, setReady] = useState(false), [posterReady, setPosterReady] = useState(false)
+  const [ready, setReady] = useState(false), [staged, setStaged] = useState(false), [posterReady, setPosterReady] = useState(false)
   const [held, setHeld] = useState(false), [cycles, setCycles] = useState(0), [reason, setReason] = useState('')
   const video = useRef<HTMLVideoElement>(null), carrier = useRef<HTMLCanvasElement>(null)
   const callbacks = useRef({ onReady, onFinish })
@@ -34,6 +34,10 @@ export default function EnvironmentalFilm({ name, enabled, active = true, onRead
       if (film.requestVideoFrameCallback) callback = film.requestVideoFrameCallback(present)
       else callback = requestAnimationFrame(present)
     }
+    // WebKit may cull a fully transparent video before its first presentation.
+    // Stage only decoded pixels; the actual frame callback still owns readiness.
+    const stage = () => { if (!disposed && !failed && film.readyState >= 2) setStaged(true) }
+    const loaded = () => { stage(); decode() }
     const play = () => {
       if (disposed || failed || document.hidden) return
       progressAt = performance.now()
@@ -50,7 +54,7 @@ export default function EnvironmentalFilm({ name, enabled, active = true, onRead
     }
     const visibility = () => { if (document.hidden) film.pause(); else { if (film.ended) ended(); else play() } }
     const error = () => fail('media-error')
-    film.addEventListener('loadeddata', decode, { once: true }); if (film.readyState >= 2) decode()
+    film.addEventListener('loadeddata', loaded, { once: true }); if (film.readyState >= 2) loaded()
     film.addEventListener('ended', ended); film.addEventListener('error', error)
     document.addEventListener('visibilitychange', visibility)
     const watchdog = setInterval(() => {
@@ -63,12 +67,12 @@ export default function EnvironmentalFilm({ name, enabled, active = true, onRead
     return () => {
       disposed = true; clearInterval(watchdog); cancelAnimationFrame(restart)
       if (film.cancelVideoFrameCallback) film.cancelVideoFrameCallback(callback); else cancelAnimationFrame(callback)
-      film.pause(); film.removeEventListener('loadeddata', decode); film.removeEventListener('ended', ended); film.removeEventListener('error', error)
+      film.pause(); film.removeEventListener('loadeddata', loaded); film.removeEventListener('ended', ended); film.removeEventListener('error', error)
       document.removeEventListener('visibilitychange', visibility); film.removeAttribute('src'); film.load()
     }
   }, [name, enabled, active])
   const poster = mediaUrl(`/media/forest-${name}${name === 'understory' ? '' : '-poster'}.jpg`)
-  return <div className={`motion-clip clip-${name}`} data-clip={name} data-clip-state={!active || !enabled ? 'idle' : reason && reason !== 'ended' ? 'error' : ready ? 'playing' : 'preparing'} data-clip-ready={ready} data-still-ready={posterReady} data-clip-reason={reason} data-clip-cycles={cycles} data-loop-hold={held} aria-hidden="true">
+  return <div className={`motion-clip clip-${name}`} data-clip={name} data-clip-state={!active || !enabled ? 'idle' : reason && reason !== 'ended' ? 'error' : ready ? 'playing' : 'preparing'} data-clip-ready={ready} data-frame-staged={staged} data-still-ready={posterReady} data-clip-reason={reason} data-clip-cycles={cycles} data-loop-hold={held} aria-hidden="true">
     <img className="clip-end" src={mediaUrl(`/media/forest-${name}-final.jpg`)} fetchPriority="low" alt="" width={name === 'understory' ? 1900 : 1920} height={name === 'understory' ? 988 : 1080} />
     <img className="clip-poster" src={poster} alt="" width={name === 'understory' ? 1900 : 1920} height={name === 'understory' ? 988 : 1080} onLoad={event => { void event.currentTarget.decode().then(() => setPosterReady(true)).catch(() => {}) }} onError={event => { if (!new URL(event.currentTarget.src).pathname.endsWith('/media/forest-final.jpg')) event.currentTarget.src = mediaUrl('/media/forest-final.jpg') }} />
     {enabled && active && <video ref={video} src={mediaUrl(`/media/forest-${name}.mp4`)} muted playsInline preload="auto" tabIndex={-1} />}

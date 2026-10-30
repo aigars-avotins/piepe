@@ -23,11 +23,16 @@ export function nativeDiagnostics() {
     expect(requested.length, 'A native WebKit application must be running').toBeGreaterThan(0)
     await expect.poll(() => execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', "ObjC.import('AppKit'); $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js"], { encoding: 'utf8' }).trim(), { timeout: 5000 }).toBe(requested[0].name)
     await page.addInitScript(() => {
-      const events: unknown[] = [], state = { events, maxFrameGap: 0, frames: 0 }
+      const events: unknown[] = [], photoPhases: unknown[] = [], state = { events, photoPhases, maxFrameGap: 0, frames: 0 }
       ;(window as unknown as { nativeEvidence: typeof state }).nativeEvidence = state
       let previous = performance.now()
       const frame = (now: number) => { state.maxFrameGap = Math.max(state.maxFrameGap, now - previous); state.frames++; previous = now; requestAnimationFrame(frame) }
       requestAnimationFrame(frame)
+      // Observe lifecycle timing without layout reads or video surface copying.
+      new MutationObserver(records => { for (const record of records) {
+        const photo = record.target as HTMLElement
+        photoPhases.push({ at: performance.now(), phase: photo.dataset.cameraPhase || 'settled', progress: photo.dataset.cameraProgress, dialogOpen: !!document.querySelector('dialog[open]') })
+      } }).observe(document, { subtree: true, attributes: true, attributeFilter: ['data-camera-phase'] })
       for (const name of ['click', 'keydown', 'keyup', 'cancel', 'focusin', 'hashchange', 'visibilitychange', 'loadstart', 'loadedmetadata', 'loadeddata', 'playing', 'waiting', 'stalled', 'error']) {
         document.addEventListener(name, event => {
           const target = event.target
