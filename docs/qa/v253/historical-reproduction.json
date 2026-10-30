@@ -1,0 +1,278 @@
+{
+  "source": "17bbb92af34fa610b4f28b825d59d1d2308a2b53",
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/41092647428",
+  "stats": {
+    "startTime": "2026-10-30T16:46:56.476Z",
+    "duration": 94620.029,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "title": "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "status": "unexpected",
+      "duration": 21535,
+      "errors": [
+        {
+          "location": {
+            "file": "/Users/runner/work/piepe/piepe/tests/cinema.spec.ts",
+            "column": 82,
+            "line": 163
+          },
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog')\nExpected: not visible\nReceived: visible\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeVisible\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    17 \u00d7 locator resolved to <dialog open=\"\" aria-labelledby=\"discovery-title\" aria-describedby=\"discovery-description\" class=\"discovery-dialog observation-surface photo-moving\">\u2026</dialog>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n  161 |   for(let i=1;i<frames.length;i++){const dt=frames[i].t-frames[i-1].t;if(dt<1)continue;expect(Math.abs(frames[i].w-frames[i-1].w)/dt).toBeLessThan(3);expect(Math.abs(frames[i].h-frames[i-1].h)/dt).toBeLessThan(3)}\n  162 |   await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()\n> 163 |   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()\n      |                                                                                  ^\n  164 |   expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg?v=2.3')\n  165 | }))\n  166 |\n    at /Users/runner/work/piepe/piepe/tests/cinema.spec.ts:163:82"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "native-input-and-compositor",
+          "data": {
+            "maxFrameGap": 2441,
+            "frames": 256,
+            "href": "http://127.0.0.1:4173/en/",
+            "scroll": 0,
+            "focus": true,
+            "visibility": "visible",
+            "viewport": {
+              "width": 1512,
+              "height": 982
+            },
+            "screen": {
+              "width": 1512,
+              "height": 982
+            },
+            "world": "world  is-ready has-title     has-note  has-awakened  ",
+            "photo": {},
+            "videos": [],
+            "inputEvents": [
+              {
+                "event": "focusin",
+                "at": 4849,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "SECTION.hero"
+              },
+              {
+                "event": "focusin",
+                "at": 4900,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "BUTTON.text-button skip-awakening"
+              },
+              {
+                "event": "focusin",
+                "at": 12214,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "BUTTON.close-discovery"
+              },
+              {
+                "event": "keydown",
+                "at": 14481,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "BUTTON.close-discovery",
+                "key": "Escape"
+              },
+              {
+                "event": "cancel",
+                "at": 14481,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "DIALOG.discovery-dialog observation-surface "
+              },
+              {
+                "event": "focusin",
+                "at": 16512,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "BUTTON.fungus-annotation"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "actual film plays once, reveals title, ends and becomes interactive",
+      "status": "expected",
+      "duration": 16399,
+      "errors": [],
+      "evidence": [
+        {
+          "name": "native-input-and-compositor",
+          "data": {
+            "maxFrameGap": 964,
+            "frames": 322,
+            "href": "http://127.0.0.1:4173/en/#forest",
+            "scroll": 0,
+            "focus": true,
+            "visibility": "visible",
+            "viewport": {
+              "width": 390,
+              "height": 664
+            },
+            "screen": {
+              "width": 390,
+              "height": 844
+            },
+            "world": "world  is-ready has-title     has-note    ",
+            "photo": {},
+            "videos": [],
+            "inputEvents": [
+              {
+                "event": "focusin",
+                "at": 8145,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "SECTION.hero"
+              },
+              {
+                "event": "focusin",
+                "at": 8155,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "BUTTON.close-discovery"
+              },
+              {
+                "event": "focusin",
+                "at": 10409,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "DIALOG.discovery-dialog observation-surface "
+              },
+              {
+                "event": "focusin",
+                "at": 11462,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "SECTION.hero"
+              },
+              {
+                "event": "focusin",
+                "at": 11463,
+                "scroll": 0,
+                "hash": "",
+                "focus": true,
+                "target": "BUTTON.fungus-hit"
+              },
+              {
+                "event": "focusin",
+                "at": 13921,
+                "scroll": 4561,
+                "hash": "#forest",
+                "focus": true,
+                "target": "SECTION.hero"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "unexpected",
+      "duration": 12728,
+      "errors": [
+        {
+          "location": {
+            "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+            "column": 33,
+            "line": 43
+          },
+          "message": "Error: locator.evaluate: Error: No advancing presented video frames: {\"phase\":\"cadence\",\"src\":\"http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3\",\"time\":4.741538379000013,\"paused\":false,\"ended\":false,\"ready\":4,\"connected\":true,\"reason\":\"\",\"cycles\":\"0\",\"held\":\"false\",\"totalFrames\":145,\"frames\":[{\"time\":4,\"presented\":2,\"phase\":\"cadence\"}]}\n\n  41 |     return opacity\n  42 |   })).toBeGreaterThan(.98)\n> 43 |   return layer.locator('video').evaluate(async (video: HTMLVideoElement) => {\n     |                                 ^\n  44 |     let opacity = 1\n  45 |     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)\n  46 |     const r = video.getBoundingClientRect(), scale = Math.max(r.width / video.videoWidth, r.height / video.videoHeight)\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:43:33)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:179:24"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "native-input-and-compositor",
+          "data": {
+            "maxFrameGap": 3022,
+            "frames": 117,
+            "href": "http://127.0.0.1:4173/",
+            "scroll": 1071,
+            "focus": true,
+            "visibility": "visible",
+            "viewport": {
+              "width": 1512,
+              "height": 982
+            },
+            "screen": {
+              "width": 1512,
+              "height": 982
+            },
+            "world": "world  is-ready has-title   atmosphere-paused      ",
+            "photo": {},
+            "videos": [
+              {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0.5740933010000056,
+                "ready": 4,
+                "paused": false,
+                "frames": 154
+              }
+            ],
+            "inputEvents": []
+          }
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 390x664 / lv: bottom to top stays a single forest after refresh and three native returns",
+      "status": "expected",
+      "duration": 33240,
+      "errors": [],
+      "evidence": []
+    }
+  ],
+  "originalRun": "https://github.com/aigars-avotins/piepe/actions/runs/40904277665",
+  "originalFailures": [
+    {
+      "file": "cinema.spec.ts",
+      "title": "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "line": 126,
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog')\nExpected: not visible\nReceived: visible\nTimeout:  2000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeVisible\" getByRole('dialog') with timeout 2000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n\u001b[2m    16 \u00d7 locator resolved to <dialog open=\"\" aria-labelledby=\"discovery-title\" aria-describedby=\"discovery-description\" class=\"discovery-dialog observation-surface photo-moving\">\u2026</dialog>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n  159 |   for(let i=1;i<frames.length;i++){const dt=frames[i].t-frames[i-1].t;if(dt<1)continue;expect(Math.abs(frames[i].w-frames[i-1].w)/dt).toBeLessThan(3);expect(Math.abs(frames[i].h-frames[i-1].h)/dt).toBeLessThan(3)}\n  160 |   await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()\n> 161 |   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()\n      |                                                                                  ^\n  162 |   expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg?v=2.3')\n  163 | }))\n  164 |\n    at /Users/runner/work/piepe/piepe/tests/cinema.spec.ts:161:82"
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "actual film plays once, reveals title, ends and becomes interactive",
+      "line": 6,
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m5\u001b[39m\nReceived:   \u001b[31m5025\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  29 |   await expect(page.getByRole('button', { name: 'Open the field note', exact: true })).toBeVisible()\n  30 |   await page.getByRole('button', { name: 'Return to forest' }).click()\n> 31 |   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5)\n     |                                                                ^\n  32 |   await expect(page).toHaveURL(/#forest$/)\n  33 |   await expect(page.locator('#forest')).toBeFocused()\n  34 |   await expect(film).toHaveCount(0)\n    at /Users/runner/work/piepe/piepe/tests/forest.spec.ts:31:64"
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "line": 156,
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-clip=\"breathing\"]')\nExpected: \u001b[32m\"\u001b[7mtru\u001b[27me\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mfals\u001b[27me\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-clip=\"breathing\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-clip=\"breathing\"]')\u001b[22m\n\u001b[2m    19 \u00d7 locator resolved to <div aria-hidden=\"true\" data-clip-reason=\"\" data-clip-cycles=\"0\" data-clip=\"breathing\" data-loop-hold=\"false\" data-clip-ready=\"false\" data-still-ready=\"true\" data-clip-state=\"preparing\" class=\"motion-clip clip-breathing\">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"false\"\u001b[22m\n\u001b[2m    5 \u00d7 locator resolved to <div aria-hidden=\"true\" data-clip-cycles=\"0\" data-clip=\"breathing\" data-loop-hold=\"false\" data-clip-state=\"error\" data-clip-ready=\"false\" data-still-ready=\"true\" data-clip-reason=\"load-timeout\" class=\"motion-clip clip-breathing\">\u2026</div>\u001b[22m\n\u001b[2m      - unexpected value \"false\"\u001b[22m\n\n\n  29 | async function movingPicture(page: Page, name: 'understory' | 'breathing') {\n  30 |   const layer = page.locator(`[data-clip=\"${name}\"]`)\n> 31 |   await expect(layer).toHaveAttribute('data-clip-ready', 'true', { timeout: 10000 })\n     |                       ^\n  32 |   await expect(layer).toHaveAttribute('data-loop-hold', 'false')\n  33 |   // Decode readiness can precede the scroll entrance. Sample the actual visible\n  34 |   // scene after its existing camera scrub settles, rather than reading back a\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:31:23)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:191:30"
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 390x664 / lv: bottom to top stays a single forest after refresh and three native returns",
+      "line": 112,
+      "errors": [
+        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"base\": Object {\u001b[22m\n\u001b[32m-     \"opacity\": 1,\u001b[39m\n\u001b[31m+     \"opacity\": 0.0004,\u001b[39m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"dawn\": Object {\u001b[22m\n\u001b[32m-     \"contribution\": 0,\u001b[39m\n\u001b[31m+     \"contribution\": 0.3399,\u001b[39m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"foreground\": Object {\u001b[22m\n\u001b[2m      \"contribution\": 0,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"macro\": Object {\u001b[22m\n\u001b[2m      \"contribution\": 0,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[32m-   \"scroll\": 0,\u001b[39m\n\u001b[31m+   \"scroll\": 4530,\u001b[39m\n\u001b[2m    \"wide\": Object {\u001b[22m\n\u001b[32m-     \"contribution\": 0,\u001b[39m\n\u001b[31m+     \"contribution\": 1,\u001b[39m\n\u001b[2m    },\u001b[22m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 4000ms exceeded while waiting on the predicate\n\n  22 | }\n  23 | async function singleForest(page: Page) {\n> 24 |   await expect.poll(() => heroLayers(page), { timeout: 4000 }).toMatchObject({ scroll: 0, base: { opacity: 1 }, foreground: { contribution: 0 }, macro: { contribution: 0 }, wide: { contribution: 0 }, dawn: { contribution: 0 } })\n     |                                                                ^\n  25 |   const transform = await page.locator('.base-camera').evaluate(e => new DOMMatrix(getComputedStyle(e).transform).toFloat64Array().join(','))\n  26 |   expect(transform).toBe('1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1')\n  27 | }\n    at singleForest (/Users/runner/work/piepe/piepe/tests/v251.spec.ts:24:64)\n    at /Users/runner/work/piepe/piepe/tests/v251.spec.ts:145:11"
+      ]
+    }
+  ]
+}
