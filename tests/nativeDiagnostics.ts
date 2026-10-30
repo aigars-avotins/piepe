@@ -8,7 +8,13 @@ for (const app of apps) {
   const name = app.localizedName.js;
   if (/^(Playwright|MiniBrowser)$/.test(name)) requested.push({ name, activated: !!app.activateWithOptions(3) });
 }
-JSON.stringify({ requested, frontmost: $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js });`
+let displays = [], windows = [], displayError;
+try {
+  displays = $.NSScreen.screens.js.map(screen => ({ frame: screen.frame, visible: screen.visibleFrame, scale: Number(screen.backingScaleFactor) }));
+  ObjC.import('CoreGraphics');
+  windows = ObjC.deepUnwrap($.CGWindowListCopyWindowInfo(17, 0)).filter(window => /Playwright|MiniBrowser/.test(window.kCGWindowOwnerName || '')).map(window => ({ owner: window.kCGWindowOwnerName, bounds: window.kCGWindowBounds, layer: window.kCGWindowLayer, onScreen: window.kCGWindowIsOnscreen }));
+} catch (error) { displayError = String(error); }
+JSON.stringify({ requested, frontmost: $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js, displays, windows, displayError });`
 
 /** Native-only evidence for compositor/input failures; no product instrumentation. */
 export function nativeDiagnostics() {
