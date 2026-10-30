@@ -13,7 +13,18 @@ JSON.stringify({ requested, frontmost: $.NSWorkspace.sharedWorkspace.frontmostAp
 /** Native-only evidence for compositor/input failures; no product instrumentation. */
 export function nativeDiagnostics() {
   if (process.platform !== 'darwin') return
+  const mediaRequests = new WeakMap<object, unknown[]>()
   test.beforeEach(async ({ page }, info) => {
+    // Passive headers/events distinguish transport cancellation from native decode
+    // stalls without tracing response bodies or copying video surfaces.
+    const transfers: unknown[] = [], ids = new WeakMap<object, number>()
+    let serial = 0
+    mediaRequests.set(page, transfers)
+    const id = (request: object) => { if (!ids.has(request)) ids.set(request, ++serial); return ids.get(request) }
+    page.on('request', request => { if (new URL(request.url()).pathname.endsWith('.mp4')) transfers.push({ event: 'request', id: id(request), at: Date.now(), url: request.url(), range: request.headers().range }) })
+    page.on('response', response => { if (new URL(response.url()).pathname.endsWith('.mp4')) transfers.push({ event: 'response', id: id(response.request()), at: Date.now(), status: response.status(), range: response.headers()['content-range'], bytes: response.headers()['content-length'] }) })
+    page.on('requestfinished', request => { if (new URL(request.url()).pathname.endsWith('.mp4')) transfers.push({ event: 'finished', id: id(request), at: Date.now() }) })
+    page.on('requestfailed', request => { if (new URL(request.url()).pathname.endsWith('.mp4')) transfers.push({ event: 'failed', id: id(request), at: Date.now(), error: request.failure()?.errorText }) })
     // DOM focus alone does not activate an AppKit application on a CI desktop.
     // Use the native workspace API, without System Events/Accessibility control.
     const activation = execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', activateBrowser], { encoding: 'utf8' })
@@ -50,8 +61,9 @@ export function nativeDiagnostics() {
       viewport: { width: innerWidth, height: innerHeight }, screen: { width: screen.width, height: screen.height },
       world: document.querySelector('.world')?.className,
       photo: (document.querySelector('.specimen-photo') as HTMLElement | null)?.dataset,
-      videos: [...document.querySelectorAll('video')].map(v => ({ src: v.currentSrc, time: v.currentTime, ready: v.readyState, paused: v.paused, frames: v.getVideoPlaybackQuality().totalVideoFrames }))
+      videos: [...document.querySelectorAll('video')].map(v => ({ src: v.currentSrc, time: v.currentTime, ready: v.readyState, network: v.networkState, paused: v.paused, error: v.error ? { code: v.error.code, message: v.error.message } : null, buffered: Array.from({ length: v.buffered.length }, (_, i) => [v.buffered.start(i), v.buffered.end(i)]), frames: v.getVideoPlaybackQuality().totalVideoFrames }))
     }))
+    await info.attach('native-media-requests', { body: JSON.stringify(mediaRequests.get(page) || []), contentType: 'application/json' })
     await info.attach('native-input-and-compositor', { body: JSON.stringify(state), contentType: 'application/json' })
   })
 }
