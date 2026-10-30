@@ -1,0 +1,740 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/41098371858",
+  "source": "cfefac9b745fcf78b848210428d0974347bb16a2",
+  "planned": 152,
+  "outcomes": [
+    {
+      "status": "passed",
+      "index": 1,
+      "title": "tests/cinema.spec.ts:22:1 \u203a compact phone retains native scroll when translated facts change height (11.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 2,
+      "title": "tests/cinema.spec.ts:38:1 \u203a server-painted controls and cover geometry survive delayed hydration without a layout jump (5.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 3,
+      "title": "tests/cinema.spec.ts:59:93 \u203a 1512x982 rendering \u203a held frame and first decoded awakening stay in the same plane at 1512x982 (12.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 4,
+      "title": "tests/cinema.spec.ts:59:93 \u203a 2560x1080 rendering \u203a held frame and first decoded awakening stay in the same plane at 2560x1080 (6.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 5,
+      "title": "tests/cinema.spec.ts:59:93 \u203a 390x664 rendering \u203a held frame and first decoded awakening stay in the same plane at 390x664 (4.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 6,
+      "title": "tests/cinema.spec.ts:99:1 \u203a the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error (6.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 7,
+      "title": "tests/cinema.spec.ts:128:80 \u203a 1512x982 rendering \u203a awakening final frame docks and returns continuously at 1512x982 (24.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 8,
+      "title": "tests/cinema.spec.ts:128:80 \u203a 390x664 rendering \u203a awakening final frame docks and returns continuously at 390x664 (12.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 9,
+      "title": "tests/cinema.spec.ts:167:1 \u203a Escape while preparing cancels in place; repeat activation opens the accessible note (3.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 10,
+      "title": "tests/cinema.spec.ts:175:1 \u203a environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts (5.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 11,
+      "title": "tests/cinema.spec.ts:197:1 \u203a unavailable end-still uses the actual decoded frame for a continuous note handoff (12.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 12,
+      "title": "tests/cinema.spec.ts:208:1 \u203a locale change while decoding does not reopen a modal, move focus or restart playback (2.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 13,
+      "title": "tests/cinema.spec.ts:223:25 \u203a 1512x982 rendering \u203a Escape during the photo move reverses the current camera instead of snapping to full frame (14.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 14,
+      "title": "tests/cinema.spec.ts:234:1 \u203a a transient readiness drop at the presented-frame callback retries behind the held forest (3.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 15,
+      "title": "tests/cinema.spec.ts:253:1 \u203a Escape before the photo clock starts cancels a pending decode without waiting or an unhandled rejection (2.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 16,
+      "title": "tests/cinema.spec.ts:265:1 \u203a a playback-history change between activation and mounting recovers to the note (2.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 17,
+      "title": "tests/cinema.spec.ts:276:1 \u203a a compositor withholding transparent video frames still presents paused frame zero before playback (4.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 18,
+      "title": "tests/cinema.spec.ts:300:1 \u203a source assignment discarding old frame subscriptions still prepares a real opening frame (4.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 19,
+      "title": "tests/forest.spec.ts:8:1 \u203a actual film plays once, reveals title, ends and becomes interactive (17.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 20,
+      "title": "tests/forest.spec.ts:49:1 \u203a skip is immediate and fungus works with keyboard and Escape (5.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 21,
+      "title": "tests/forest.spec.ts:65:1 \u203a reduced motion avoids downloading film, remains readable and has no overflow (3.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 22,
+      "title": "tests/forest.spec.ts:83:1 \u203a blocked autoplay falls back immediately to the interactive still (2.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 23,
+      "title": "tests/forest.spec.ts:90:1 \u203a missing video recovers without trapping the visitor (6.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 24,
+      "title": "tests/forest.spec.ts:98:1 \u203a pending playback and a mid-film stall both have bounded recovery (6.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 25,
+      "title": "tests/forest.spec.ts:105:1 \u203a an actual decoding stall recovers to the still (6.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 26,
+      "title": "tests/forest.spec.ts:112:1 \u203a missing still retains accessible text and controls (2.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 27,
+      "title": "tests/forest.spec.ts:122:1 \u203a data saving preference avoids video request (2.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 28,
+      "title": "tests/forest.spec.ts:129:1 \u203a cover geometry keeps hotspot aligned to the actual fungus across viewport changes (5.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 29,
+      "title": "tests/forest.spec.ts:151:1 \u203a discovery is a complete three-step field note with a real downloadable artifact (3.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 30,
+      "title": "tests/forest.spec.ts:168:1 \u203a returning visitors can explicitly replay the original introduction without scroll replay (5.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 31,
+      "title": "tests/forest.spec.ts:181:1 \u203a visible wordmark and discovery controls fit all specified portrait and landscape sizes (3.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 32,
+      "title": "tests/forest.spec.ts:200:1 \u203a scroll changes photographic camera, foreground and return lighting rather than only text (6.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 33,
+      "title": "tests/forest.spec.ts:212:1 \u203a animation setup failure leaves a readable interactive static journey (3.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 34,
+      "title": "tests/forest.spec.ts:227:1 \u203a mobile discovery keeps close available at the bottom and supports touch-sized controls (5.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 35,
+      "title": "tests/forest.spec.ts:244:1 \u203a pause and changing motion preference clean up the camera while retaining navigation (3.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 36,
+      "title": "tests/photo-clock.spec.ts:7:3 \u203a photo clock 1512x982 \u203a late preparation preserves the beginning of the camera trajectory (5.2s)"
+    },
+    {
+      "status": "failed",
+      "index": 37,
+      "title": "tests/photo-clock.spec.ts:7:3 \u203a photo clock 390x664 \u203a late preparation preserves the beginning of the camera trajectory (4.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 38,
+      "title": "tests/polish.spec.ts:3:36 \u203a lv: encounter plus, readable support copy and safe source links (5.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 39,
+      "title": "tests/polish.spec.ts:3:36 \u203a en: encounter plus, readable support copy and safe source links (6.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 40,
+      "title": "tests/polish.spec.ts:27:1 \u203a macro is prepared behind the existing bark before its scroll envelope, and waits for actual media (4.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 41,
+      "title": "tests/polish.spec.ts:47:1 \u203a sound waits for permission, plays a real native loop, remains controllable in the note and remembers mute (4.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 42,
+      "title": "tests/polish.spec.ts:84:1 \u203a save-data never starts automatic ambience, and a missing recording has a usable retry (2.1s)"
+    },
+    {
+      "status": "skipped",
+      "index": 43,
+      "title": "tests/scroll-recording.spec.ts:3:1 \u203a silent fifteen-second before and after scroll captures"
+    },
+    {
+      "status": "passed",
+      "index": 44,
+      "title": "tests/v21.spec.ts:8:3 \u203a lv: raw HTML, facts, metadata, reciprocal alternates and strict 404 (1.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 45,
+      "title": "tests/v21.spec.ts:27:3 \u203a lv: localized field note and wallpaper files are real downloads (2.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 46,
+      "title": "tests/v21.spec.ts:8:3 \u203a en: raw HTML, facts, metadata, reciprocal alternates and strict 404 (1.4s)"
+    },
+    {
+      "status": "passed",
+      "index": 47,
+      "title": "tests/v21.spec.ts:27:3 \u203a en: localized field note and wallpaper files are real downloads (2.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 48,
+      "title": "tests/v21.spec.ts:51:1 \u203a language links preserve active intro, open discovery, observation, collection and scroll; back works (5.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 49,
+      "title": "tests/v21.spec.ts:70:1 \u203a awakening completes once; environmental films replay with matched ending frames and one decoder (30.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 50,
+      "title": "tests/v21.spec.ts:108:77 \u203a awakening blocked recovers to the complete accessible note (3.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 51,
+      "title": "tests/v21.spec.ts:108:77 \u203a awakening missing recovers to the complete accessible note (2.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 52,
+      "title": "tests/v21.spec.ts:108:77 \u203a awakening stall recovers to the complete accessible note (6.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 53,
+      "title": "tests/v21.spec.ts:108:77 \u203a awakening pending recovers to the complete accessible note (6.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 54,
+      "title": "tests/v21.spec.ts:125:50 \u203a 1440x900 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (3.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 55,
+      "title": "tests/v21.spec.ts:125:50 \u203a 1440x900 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (2.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 56,
+      "title": "tests/v21.spec.ts:142:3 \u203a 1440x900 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (2.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 57,
+      "title": "tests/v21.spec.ts:125:50 \u203a 1512x982 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (2.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 58,
+      "title": "tests/v21.spec.ts:125:50 \u203a 1512x982 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (3.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 59,
+      "title": "tests/v21.spec.ts:142:3 \u203a 1512x982 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (9.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 60,
+      "title": "tests/v21.spec.ts:125:50 \u203a 390x844 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (2.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 61,
+      "title": "tests/v21.spec.ts:125:50 \u203a 390x844 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (2.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 62,
+      "title": "tests/v21.spec.ts:142:3 \u203a 390x844 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (3.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 63,
+      "title": "tests/v21.spec.ts:125:50 \u203a 390x664 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (2.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 64,
+      "title": "tests/v21.spec.ts:125:50 \u203a 390x664 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (1.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 65,
+      "title": "tests/v21.spec.ts:142:3 \u203a 390x664 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (8.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 66,
+      "title": "tests/v21.spec.ts:125:50 \u203a 320x690 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (2.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 67,
+      "title": "tests/v21.spec.ts:125:50 \u203a 320x690 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (2.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 68,
+      "title": "tests/v21.spec.ts:142:3 \u203a 320x690 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (3.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 69,
+      "title": "tests/v21.spec.ts:125:50 \u203a 430x932 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (2.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 70,
+      "title": "tests/v21.spec.ts:125:50 \u203a 430x932 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (1.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 71,
+      "title": "tests/v21.spec.ts:142:3 \u203a 430x932 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (3.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 72,
+      "title": "tests/v21.spec.ts:125:50 \u203a 844x390 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (2.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 73,
+      "title": "tests/v21.spec.ts:125:50 \u203a 844x390 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (1.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 74,
+      "title": "tests/v21.spec.ts:142:3 \u203a 844x390 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (2.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 75,
+      "title": "tests/v21.spec.ts:125:50 \u203a 2560x1080 device \u203a static responsive view \u203a both locales fit the required viewport matrix: lv (2.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 76,
+      "title": "tests/v21.spec.ts:125:50 \u203a 2560x1080 device \u203a static responsive view \u203a both locales fit the required viewport matrix: en (2.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 77,
+      "title": "tests/v21.spec.ts:142:3 \u203a 2560x1080 device \u203a scene video covers phones, MacBook and ultrawide without stretching or side borders (3.4s)"
+    },
+    {
+      "status": "passed",
+      "index": 78,
+      "title": "tests/v21.spec.ts:152:1 \u203a assets, sitemap, CSP and dictionary parity (111ms)"
+    },
+    {
+      "status": "passed",
+      "index": 79,
+      "title": "tests/v21.spec.ts:162:1 \u203a storage denial still permits localized interaction and explicit replay (2.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 80,
+      "title": "tests/v21.spec.ts:172:1 \u203a save-data bypasses all automatic films and never fetches full wallpapers on arrival (1.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 81,
+      "title": "tests/v21.spec.ts:182:1 \u203a missing awakening still recovers to the preserved forest photo (1.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 82,
+      "title": "tests/v23.spec.ts:100:1 \u203a native keyboard advance interrupts the fresh intro, and direct anchors do not start a competing film (23.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 83,
+      "title": "tests/v23.spec.ts:126:1 \u203a expanded facts, locale changes, explicit pause and a failed environmental decode keep native navigation usable (19.8s)"
+    },
+    {
+      "status": "failed",
+      "index": 84,
+      "title": "tests/v23.spec.ts:158:47 \u203a 1512x982 repeatable cinema \u203a lv: visible moving frames across broad plateaus, three revisits, loops and reload (29.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 85,
+      "title": "tests/v23.spec.ts:158:47 \u203a 1512x982 repeatable cinema \u203a en: visible moving frames across broad plateaus, three revisits, loops and reload (48.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 86,
+      "title": "tests/v23.spec.ts:205:47 \u203a 1512x982 repeatable cinema \u203a lv: the photograph settles once and preserves observation/return transitions (21.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 87,
+      "title": "tests/v23.spec.ts:205:47 \u203a 1512x982 repeatable cinema \u203a en: the photograph settles once and preserves observation/return transitions (20.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 88,
+      "title": "tests/v23.spec.ts:158:47 \u203a 390x664 repeatable cinema \u203a lv: visible moving frames across broad plateaus, three revisits, loops and reload (46.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 89,
+      "title": "tests/v23.spec.ts:158:47 \u203a 390x664 repeatable cinema \u203a en: visible moving frames across broad plateaus, three revisits, loops and reload (48.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 90,
+      "title": "tests/v23.spec.ts:205:47 \u203a 390x664 repeatable cinema \u203a lv: the photograph settles once and preserves observation/return transitions (20.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 91,
+      "title": "tests/v23.spec.ts:205:47 \u203a 390x664 repeatable cinema \u203a en: the photograph settles once and preserves observation/return transitions (20.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 92,
+      "title": "tests/v24.spec.ts:14:45 \u203a lv: discovered and downloaded notes retain distinct session progress (3.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 93,
+      "title": "tests/v24.spec.ts:14:45 \u203a en: discovered and downloaded notes retain distinct session progress (2.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 94,
+      "title": "tests/v24.spec.ts:47:1 \u203a storage denial keeps in-memory progress through close, locale and history (2.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 95,
+      "title": "tests/v24.spec.ts:71:1 \u203a legacy 2.3 collection survives restoration and reopening (1.4s)"
+    },
+    {
+      "status": "passed",
+      "index": 96,
+      "title": "tests/v24.spec.ts:80:1 \u203a cancelled film preparation stays unseen; a readable fallback counts as discovered (2.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 97,
+      "title": "tests/v24.spec.ts:97:45 \u203a reduce: static preferences also prevent explicit replay (1.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 98,
+      "title": "tests/v24.spec.ts:97:45 \u203a save-data: static preferences also prevent explicit replay (1.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 99,
+      "title": "tests/v24.spec.ts:125:1 \u203a live reduced-motion and data-saving toggles suspend and restore scenes without losing the note (8.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 100,
+      "title": "tests/v24.spec.ts:161:1 \u203a a paused failed scene offers Resume and can actually play again (5.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 101,
+      "title": "tests/v24.spec.ts:174:45 \u203a lv: mobile note invitation, optional learning and social preview stay coherent (4.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 102,
+      "title": "tests/v24.spec.ts:174:45 \u203a en: mobile note invitation, optional learning and social preview stay coherent (3.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 103,
+      "title": "tests/v25.spec.ts:6:1 \u203a real sitemap and robots assets describe exactly the two crawlable canonical pages (547ms)"
+    },
+    {
+      "status": "passed",
+      "index": 104,
+      "title": "tests/v25.spec.ts:36:3 \u203a lv: useful educational copy is visible without JavaScript and agrees with the downloaded note (1.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 105,
+      "title": "tests/v25.spec.ts:62:3 \u203a lv: one connected schema keeps stable site identity through locale and note-state changes (1.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 106,
+      "title": "tests/v25.spec.ts:95:3 \u203a lv: educational reading fits desktop and small phones without hiding copy or changing the hero (3.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 107,
+      "title": "tests/v25.spec.ts:36:3 \u203a en: useful educational copy is visible without JavaScript and agrees with the downloaded note (1.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 108,
+      "title": "tests/v25.spec.ts:62:3 \u203a en: one connected schema keeps stable site identity through locale and note-state changes (1.4s)"
+    },
+    {
+      "status": "passed",
+      "index": 109,
+      "title": "tests/v25.spec.ts:95:3 \u203a en: educational reading fits desktop and small phones without hiding copy or changing the hero (3.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 110,
+      "title": "tests/v253.spec.ts:7:86 \u203a lv: server paint and hydrated playback respect the first visitor (2.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 111,
+      "title": "tests/v253.spec.ts:7:86 \u203a lv: server paint and hydrated playback respect the return visitor (2.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 112,
+      "title": "tests/v253.spec.ts:7:86 \u203a lv: server paint and hydrated playback respect the reduced visitor (1.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 113,
+      "title": "tests/v253.spec.ts:7:86 \u203a lv: server paint and hydrated playback respect the save-data visitor (1.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 114,
+      "title": "tests/v253.spec.ts:7:86 \u203a lv: server paint and hydrated playback respect the anchor visitor (3.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 115,
+      "title": "tests/v253.spec.ts:40:3 \u203a desktop keyboard \u203a lv: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls (10.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 116,
+      "title": "tests/v253.spec.ts:7:86 \u203a en: server paint and hydrated playback respect the first visitor (2.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 117,
+      "title": "tests/v253.spec.ts:7:86 \u203a en: server paint and hydrated playback respect the return visitor (1.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 118,
+      "title": "tests/v253.spec.ts:7:86 \u203a en: server paint and hydrated playback respect the reduced visitor (1.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 119,
+      "title": "tests/v253.spec.ts:7:86 \u203a en: server paint and hydrated playback respect the save-data visitor (2.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 120,
+      "title": "tests/v253.spec.ts:7:86 \u203a en: server paint and hydrated playback respect the anchor visitor (3.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 121,
+      "title": "tests/v253.spec.ts:40:3 \u203a desktop keyboard \u203a en: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls (6.4s)"
+    },
+    {
+      "status": "passed",
+      "index": 122,
+      "title": "tests/v253.spec.ts:90:96 \u203a understory: decoded frame can reach a compositor that withholds transparent video callbacks (4.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 123,
+      "title": "tests/v253.spec.ts:90:96 \u203a breathing: decoded frame can reach a compositor that withholds transparent video callbacks (4.4s)"
+    },
+    {
+      "status": "passed",
+      "index": 124,
+      "title": "tests/v253.spec.ts:141:1 \u203a environmental films pause on a hidden-document event and resume actual frames on return (4.3s)"
+    },
+    {
+      "status": "passed",
+      "index": 125,
+      "title": "tests/v251.spec.ts:44:38 \u203a 2.5.1 cold 1512x982 \u203a lv: opening poster owns every paint through hydration, delayed decoding and Replay (13.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 126,
+      "title": "tests/v251.spec.ts:44:38 \u203a 2.5.1 cold 1512x982 \u203a en: opening poster owns every paint through hydration, delayed decoding and Replay (13.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 127,
+      "title": "tests/v251.spec.ts:44:38 \u203a 2.5.1 cold 390x664 \u203a lv: opening poster owns every paint through hydration, delayed decoding and Replay (10.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 128,
+      "title": "tests/v251.spec.ts:44:38 \u203a 2.5.1 cold 390x664 \u203a en: opening poster owns every paint through hydration, delayed decoding and Replay (11.6s)"
+    },
+    {
+      "status": "passed",
+      "index": 129,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 1512x982 \u203a lv: bottom to top stays a single forest after refresh and three native returns (22.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 130,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 1512x982 \u203a en: bottom to top stays a single forest after refresh and three native returns (32.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 131,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 1440x900 \u203a lv: bottom to top stays a single forest after refresh and three native returns (21.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 132,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 1440x900 \u203a en: bottom to top stays a single forest after refresh and three native returns (21.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 133,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 390x844 \u203a lv: bottom to top stays a single forest after refresh and three native returns (22.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 134,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 390x844 \u203a en: bottom to top stays a single forest after refresh and three native returns (26.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 135,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 390x664 \u203a lv: bottom to top stays a single forest after refresh and three native returns (26.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 136,
+      "title": "tests/v251.spec.ts:112:38 \u203a 2.5.1 reverse 390x664 \u203a en: bottom to top stays a single forest after refresh and three native returns (25.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 137,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 1512x982 \u203a lv: short Understory budget preserves full bleed, copy and static overrides (3.7s)"
+    },
+    {
+      "status": "passed",
+      "index": 138,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 1512x982 \u203a en: short Understory budget preserves full bleed, copy and static overrides (3.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 139,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 1440x900 \u203a lv: short Understory budget preserves full bleed, copy and static overrides (4.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 140,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 1440x900 \u203a en: short Understory budget preserves full bleed, copy and static overrides (4.1s)"
+    },
+    {
+      "status": "passed",
+      "index": 141,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 390x844 \u203a lv: short Understory budget preserves full bleed, copy and static overrides (3.0s)"
+    },
+    {
+      "status": "passed",
+      "index": 142,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 390x844 \u203a en: short Understory budget preserves full bleed, copy and static overrides (2.8s)"
+    },
+    {
+      "status": "passed",
+      "index": 143,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 390x664 \u203a lv: short Understory budget preserves full bleed, copy and static overrides (3.2s)"
+    },
+    {
+      "status": "passed",
+      "index": 144,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 390x664 \u203a en: short Understory budget preserves full bleed, copy and static overrides (2.5s)"
+    },
+    {
+      "status": "passed",
+      "index": 145,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 320x690 \u203a lv: short Understory budget preserves full bleed, copy and static overrides (2.9s)"
+    },
+    {
+      "status": "passed",
+      "index": 146,
+      "title": "tests/v252.spec.ts:26:38 \u203a 2.5.2 geometry 320x690 \u203a en: short Understory budget preserves full bleed, copy and static overrides (2.5s)"
+    }
+  ],
+  "jsonReportAvailable": false,
+  "interruption": "20-minute native job cap; operation canceled at 17:44:21Z; six scenarios have no completed outcome.",
+  "fullSuiteGreen": false
+}

@@ -1,0 +1,104 @@
+{
+  "observedAt": "2026-10-30T17:31:59.004614+00:00",
+  "productionVersion": "2.5.2",
+  "candidateVersion": "2.5.3",
+  "pages": [
+    {
+      "url": "https://pie.pe/",
+      "locale": "lv",
+      "canonical": [
+        "https://pie.pe/"
+      ],
+      "hreflang": [
+        [
+          "lv",
+          "https://pie.pe/"
+        ],
+        [
+          "en",
+          "https://pie.pe/en/"
+        ],
+        [
+          "x-default",
+          "https://pie.pe/"
+        ]
+      ],
+      "jsonLdTypes": [
+        "WebPage",
+        "WebSite"
+      ],
+      "metadataMatchesCandidate": true,
+      "hsts": [
+        "max-age=2592000"
+      ],
+      "securityHeadersSingle": true,
+      "sha256": "2ea8b021fb0fe54b5e88505ac826d63d384ce1a3a6744563c07ca7e6e245d61e",
+      "status": 200
+    },
+    {
+      "url": "https://pie.pe/en/",
+      "locale": "en",
+      "canonical": [
+        "https://pie.pe/en/"
+      ],
+      "hreflang": [
+        [
+          "lv",
+          "https://pie.pe/"
+        ],
+        [
+          "en",
+          "https://pie.pe/en/"
+        ],
+        [
+          "x-default",
+          "https://pie.pe/"
+        ]
+      ],
+      "jsonLdTypes": [
+        "WebPage",
+        "WebSite"
+      ],
+      "metadataMatchesCandidate": true,
+      "hsts": [
+        "max-age=2592000"
+      ],
+      "securityHeadersSingle": true,
+      "sha256": "ec40ef54e72da87bf8f6172a3ebd76bb5998906d853f5d74c8795ba939b1f36e",
+      "status": 200
+    }
+  ],
+  "robotsMatchesSource": true,
+  "sitemapMatchesSource": true,
+  "sitemapPages": [
+    "https://pie.pe/",
+    "https://pie.pe/en/"
+  ],
+  "mediaRanges": [
+    {
+      "path": "/media/forest-reveal.mp4?v=2.3",
+      "bytes": 64,
+      "contentRange": "bytes 0-63/9212166",
+      "status": 206
+    },
+    {
+      "path": "/media/forest-awakening.mp4?v=2.3",
+      "bytes": 64,
+      "contentRange": "bytes 0-63/8237084",
+      "status": 206
+    },
+    {
+      "path": "/media/forest-understory.mp4?v=2.3",
+      "bytes": 64,
+      "contentRange": "bytes 0-63/5846195",
+      "status": 206
+    },
+    {
+      "path": "/media/forest-breathing.mp4?v=2.3",
+      "bytes": 64,
+      "contentRange": "bytes 0-63/7025165",
+      "status": 206
+    }
+  ],
+  "configurationChanges": false
+}

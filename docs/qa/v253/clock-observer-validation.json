@@ -1,0 +1,36 @@
+{
+  "reason": "First positive rAF is not necessarily the first moving update; register actual aperture geometry against elapsed time instead.",
+  "oldNativeFirstObserved": {
+    "progress": 0.134477,
+    "height": 613.1026000976562,
+    "viewportHeight": 664,
+    "ratio": 0.9233472893036991,
+    "nominalTrajectoryMs": 47.000064963025004
+  },
+  "negativeControl": {
+    "source": "2.5.1 snapshot before GSAP root synchronization",
+    "cases": 2,
+    "failed": 2,
+    "measuredClockLeadMs": [
+      250.70019586822053,
+      248.90022603864816
+    ],
+    "allowedFrameQuantizationMs": 16.666666666666668
+  },
+  "currentChromium": {
+    "cases": 2,
+    "passed": 2
+  },
+  "currentNative": {
+    "cases": 2,
+    "passed": 2
+  },
+  "preservedAssertions": [
+    "zero-progress aperture above94%",
+    "more than10 moving poses",
+    "every moving geometry sample checked against one-second ease and elapsed time",
+    "Escape closes within2seconds",
+    "opener focus restored"
+  ],
+  "productionCameraChanges": false
+}
