@@ -1,0 +1,82 @@
+{
+  "observedAt": "2026-10-30T20:46:02.144654+00:00",
+  "repository": "aigars-avotins/piepe",
+  "visibility": "public",
+  "sourceSHA": "1246ce42c381cf28ff7ee81442f74758084ef0cd",
+  "scanner": {
+    "name": "gitleaks",
+    "version": "8.30.1",
+    "releaseChecksumVerified": true,
+    "redactionPercent": 100,
+    "defaultRules": true,
+    "repositoryAllowCommentsIgnored": true
+  },
+  "scope": {
+    "reachableCommits": 121,
+    "remoteHeadRefs": 9,
+    "pullHeadRefs": 6,
+    "historicalBlobs": 786,
+    "nonMediaBlobsScanned": 531,
+    "compressedHistoricalReportsExpanded": 44,
+    "binaryMediaBlobsNotScanned": 255,
+    "actionRuns": 133,
+    "actionRunsDownloaded": 133,
+    "actionLogFiles": 430,
+    "actionLogBytes": 7535107,
+    "unavailableLogs": [],
+    "publicIssueAndPRBodies": 16,
+    "publicIssueComments": 8,
+    "publicReviewComments": 0,
+    "releases": 0
+  },
+  "scanResults": {
+    "gitDiffCandidates": 0,
+    "allHistoricalTextAndExpandedReportsCandidates": 0,
+    "commitMessageCandidates": 0,
+    "actionLogCandidates": 2,
+    "supplementaryCredentialPatternCandidates": 0,
+    "publicDiscussionCandidates": 0,
+    "confirmedCredentialExposures": 0,
+    "immediateRotationFindings": 0
+  },
+  "reviewedCandidates": [
+    {
+      "rule": "generic-api-key",
+      "run": 40562586138,
+      "occurrences": 2,
+      "classification": "Public Cloudflare Web Analytics browser beacon identifier; not an API credential. Value deliberately omitted.",
+      "rotationRequired": false
+    }
+  ],
+  "githubSecurityApi": {
+    "secretAlerts": {
+      "available": false,
+      "httpStatus": 403
+    },
+    "codeSecurity": {
+      "available": false,
+      "httpStatus": 403
+    }
+  },
+  "workflowReview": {
+    "permissions": "contents: read",
+    "pullRequestTarget": false,
+    "secretExpressionsInWorkflow": false,
+    "standardRunnerLabels": [
+      "ubuntu-24.04",
+      "macos-15-intel"
+    ],
+    "existingConcurrencyPreserved": true,
+    "cloudflareIntegrationChanged": false
+  },
+  "limitations": [
+    "GitHub secret-scanning alerts/configuration endpoints returned 403; their status is not established by this audit.",
+    "Scope is reachable Git history and all currently listed available Actions logs, plus public discussions; unknown unreachable server objects and fork-only history are not enumerated.",
+    "255 binary media blobs were excluded from credential text scanning.",
+    "125 remote Actions artifacts were inventoried, but their entire binary contents were not all downloaded/scanned. Committed compressed reports were expanded and scanned.",
+    "Pattern-based scanning and source review cannot prove that every novel credential format is absent."
+  ],
+  "secretsPrinted": false,
+  "credentialValidationAttempts": false,
+  "credentialsRotated": false
+}
