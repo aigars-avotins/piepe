@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { messages } from '../src/i18n'
+import { nativeDiagnostics } from './nativeDiagnostics'
+nativeDiagnostics()
 
 // Production smoke is manual-only; retain actual live playback evidence on success.
 test.use({ video: 'on' })
@@ -12,7 +14,7 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
   const raw=await request.get(path);expect(raw.status()).toBe(200);expect(await raw.text()).toContain(t.factsTitle)
   await page.goto(path)
-  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.1')
+  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.2')
   const local=await readFile('dist/index.html','utf8');const script=/src="(\/assets\/[^"]+\.js)"/.exec(local)![1]
   await expect(page.locator('head script[type="module"][src^="/assets/"]')).toHaveAttribute('src',script)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:13000})
@@ -33,6 +35,11 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
     await page.locator('#'+id).evaluate(element=>element.scrollIntoView({block:'start'}))
     const layer=page.locator(`[data-clip="${clip}"]`)
     await expect(layer).toHaveAttribute('data-clip-ready','true',{timeout:11000})
+    if(id==='understory'){
+      const budget=await page.locator('#understory').evaluate(e=>{const r=e.getBoundingClientRect(),heading=document.getElementById('encounter-title')!.getBoundingClientRect();return{section:r.height/innerHeight,nextHeading:(heading.top-r.top-innerHeight+48)/innerHeight,mobile:innerWidth<700}})
+      expect(budget.section).toBeCloseTo(budget.mobile?1.7:1.6,2)
+      expect(budget.nextHeading).toBeLessThan(budget.mobile?1.7:1.2)
+    }
     const frames=await layer.locator('video').evaluate(async(video:HTMLVideoElement)=>{
       const canvas=document.createElement('canvas');canvas.width=64;canvas.height=36;const ctx=canvas.getContext('2d')!
       const samples:{time:number;hash:number}[]=[]

@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test'
+import { nativeDiagnostics } from './nativeDiagnostics'
+nativeDiagnostics()
 // Exercise the preserved discovery flow independently of the new first-activation film.
 test.beforeEach(async ({ page }) => { await page.addInitScript(() => sessionStorage.setItem('piepe-awakening', '1')) })
 test.afterEach(async({page},testInfo)=>{ const events=await page.evaluate(()=>(window as unknown as {filmEvents?:unknown[]}).filmEvents).catch(()=>undefined); if(events) await testInfo.attach('film-events',{body:JSON.stringify(events),contentType:'application/json'}) })
@@ -25,8 +27,16 @@ test('actual film plays once, reveals title, ends and becomes interactive', asyn
   await expect(page.getByRole('dialog')).toBeVisible()
   await expect(page.getByRole('heading', { name: /A small shelf/ })).toBeVisible()
   await page.getByRole('button', { name: 'Close discovery' }).click()
+  await expect(page.getByRole('dialog')).not.toBeVisible()
   await page.locator('#encounter').scrollIntoViewIfNeeded()
   await expect(page.getByRole('button', { name: 'Open the field note', exact: true })).toBeVisible()
+  // Exercise an onstage Return button. Clicking a distant sticky descendant
+  // also asks WebKit to scroll it into view, racing the button's own scroll.
+  await page.locator('#return').evaluate(e => e.scrollIntoView({ behavior: 'instant', block: 'start' }))
+  await page.evaluate(async () => {
+    let previous = scrollY, still = 0
+    while (still < 5) { await new Promise(requestAnimationFrame); still = Math.abs(scrollY - previous) < .5 ? still + 1 : 0; previous = scrollY }
+  })
   await page.getByRole('button', { name: 'Return to forest' }).click()
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5)
   await expect(page).toHaveURL(/#forest$/)

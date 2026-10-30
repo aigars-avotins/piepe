@@ -1,0 +1,63 @@
+{
+  "preparationDelayMs": 250,
+  "before": [
+    {
+      "viewport": {
+        "width": 1512,
+        "height": 982
+      },
+      "firstMovingPose": {
+        "time": 3124.2,
+        "phase": "moving",
+        "progress": 0.648104,
+        "width": 1178.8138427734375,
+        "height": 982
+      },
+      "remainingApertureFraction": 0.7796387849030672
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 664
+      },
+      "firstMovingPose": {
+        "time": 1894.2,
+        "phase": "moving",
+        "progress": 0.654052,
+        "width": 390,
+        "height": 416.4515380859375
+      },
+      "remainingApertureFraction": 0.6271860513342432
+    }
+  ],
+  "after": [
+    {
+      "viewport": {
+        "width": 1512,
+        "height": 982
+      },
+      "firstMovingPose": {
+        "time": 1253,
+        "phase": "moving",
+        "progress": 0.07599,
+        "width": 1472.9339599609375,
+        "height": 982
+      },
+      "remainingApertureFraction": 0.9741626719318369
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 664
+      },
+      "firstMovingPose": {
+        "time": 2156.1,
+        "phase": "moving",
+        "progress": 0.032638,
+        "width": 390,
+        "height": 651.6470336914062
+      },
+      "remainingApertureFraction": 0.9813961350774191
+    }
+  ]
+}

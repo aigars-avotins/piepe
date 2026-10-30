@@ -1,4 +1,6 @@
 import {test,expect} from '@playwright/test'
+import { nativeDiagnostics } from './nativeDiagnostics'
+nativeDiagnostics()
 
 test.beforeEach(async({page})=>{await page.bringToFront()})
 
