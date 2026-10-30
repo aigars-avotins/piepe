@@ -9,7 +9,7 @@ export function EdgeLight({ className = '', transformed = false }: { className?:
 
 export const ForestScene = forwardRef<HTMLDivElement, { plane: CSSProperties; children: ReactNode; inspect: boolean; still: string; macro: ReactNode; breathing: ReactNode }>(function ForestScene({ plane, children, inspect, still, macro, breathing }, ref) {
   return <div className={`environment ${inspect ? 'is-inspecting' : ''}`} ref={ref} aria-hidden="true">
-    <div className="wide-environment"><img src={mediaUrl('/media/forest-breathing-poster.jpg')} fetchPriority="low" alt="" width="1920" height="1080" /><div className="dawn-light" />{breathing}</div>
+    <div className="wide-environment"><img src={mediaUrl('/media/forest-breathing-poster.jpg')} alt="" width="1920" height="1080" /><div className="dawn-light" />{breathing}</div>
     <div className="base-camera">
       <div className="media-plane" style={plane}>
         <img className="forest-still" src={mediaUrl(still)} alt="" width="1920" height="1080" fetchPriority="high" />
@@ -17,7 +17,7 @@ export const ForestScene = forwardRef<HTMLDivElement, { plane: CSSProperties; ch
         {!still.startsWith('data:') && <EdgeLight transformed={still.endsWith('forest-awakening-final.jpg')} />}
       </div>
     </div>
-    <div className="foreground-carrier"><div className="foreground-camera"><div className="media-plane" style={plane}><img src={mediaUrl('/media/forest-final.jpg')} fetchPriority="low" alt="" width="1920" height="1080" /></div></div></div>
+    <div className="foreground-carrier"><div className="foreground-camera"><div className="media-plane" style={plane}><img src={mediaUrl('/media/forest-final.jpg')} alt="" width="1920" height="1080" /></div></div></div>
 
     <div className="understory-cinema">{macro}</div>
     <div className="forest-shade" /><div className="cool-veil" /><div className="dark-veil" />

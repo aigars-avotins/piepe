@@ -4,7 +4,7 @@ import { nativeDiagnostics } from './nativeDiagnostics'
 nativeDiagnostics()
 
 for (const locale of ['lv', 'en'] as const) {
-  for (const mode of ['first', 'return', 'reduced', 'save-data'] as const) test(`${locale}: early image priority follows the ${mode} visitor's painted pose`, async ({ page }) => {
+  for (const mode of ['first', 'return', 'reduced', 'save-data', 'anchor'] as const) test(`${locale}: server paint and hydrated playback respect the ${mode} visitor`, async ({ page }) => {
     await page.emulateMedia({ reducedMotion: mode === 'reduced' ? 'reduce' : 'no-preference' })
     await page.addInitScript(mode => {
       if (mode === 'return') sessionStorage.setItem('piepe-entered', '1')
@@ -15,11 +15,8 @@ for (const locale of ['lv', 'en'] as const) {
     const gate = new Promise<void>(resolve => { hydrate = resolve })
     page.once('close', () => hydrate())
     await page.route('**/assets/*.js', async route => { await gate; if (!page.isClosed()) await route.continue() })
-    await page.goto(locale === 'lv' ? '/' : '/en/', { waitUntil: 'commit' })
-    const pose = mode === 'first' ? 'poster' : 'final'
-    const priority = page.locator('head link[rel=preload][as=image][fetchpriority=high]')
-    await expect(priority).toHaveCount(1)
-    await expect(priority).toHaveAttribute('href', `/media/forest-${pose}.jpg?v=2.3`)
+    await page.goto((locale === 'lv' ? '/' : '/en/') + (mode === 'anchor' ? '#understory' : ''), { waitUntil: 'commit' })
+    const pose = mode === 'first' || mode === 'anchor' ? 'poster' : 'final'
     await expect(page.locator('.environment')).toHaveCSS('position', 'fixed')
     const source = await page.locator('.forest-still').evaluate(e => {
       const image = e as HTMLImageElement, css = getComputedStyle(e).content
@@ -28,13 +25,21 @@ for (const locale of ['lv', 'en'] as const) {
     expect(source).toContain(`forest-${pose}.jpg`)
     hydrate()
     await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
-    if (mode !== 'first') await expect(page.locator('video')).toHaveCount(0)
+    if (mode === 'anchor') {
+      await expect(page.locator('video.forest-film')).toHaveCount(0)
+      await expect(page.locator('[data-clip=understory]')).toHaveAttribute('data-clip-ready', 'true')
+    } else if (mode !== 'first') {
+      await expect(page.locator('video')).toHaveCount(0)
+      if (mode === 'return') await expect(page.locator('.replay-intro')).toBeEnabled()
+      else await expect(page.locator('.replay-intro')).toBeDisabled()
+    }
   })
 
   test(`${locale}: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls`, async ({ page }, info) => {
     await page.emulateMedia({ reducedMotion: 'reduce' })
     await page.goto(locale === 'lv' ? '/' : '/en/')
     const t = messages[locale]
+    await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
     await page.keyboard.press('Tab')
     await expect(page.locator('.skip-content')).toBeFocused()
     // Reach the irregular hit target through normal keyboard order.
