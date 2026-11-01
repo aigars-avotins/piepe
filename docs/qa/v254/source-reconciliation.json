@@ -1,0 +1,29 @@
+{
+  "observedAt": "2026-11-01T09:46:28.585824+00:00",
+  "liveVersion": "2.5.2",
+  "mainSHA": "17bbb92af34fa610b4f28b825d59d1d2308a2b53",
+  "activeWorker": "piepe",
+  "rollbackVersion": "d83207f4-4f22-4c5f-8315-0b6097693fe8",
+  "liveAssetByteProof": [
+    {
+      "url": "/assets/index-DVCRdy1W.js",
+      "status": 200,
+      "sha256": "6080d00fee0ba1a2e7f6e988e2b3ebc54a1e3aa00de1e6868cbd794827b0b0c4",
+      "matchesVerified252Build": true
+    },
+    {
+      "url": "/assets/index-eVE_lEFX.css",
+      "status": 200,
+      "sha256": "8bbeb89b7bbcf6caff37200694c753cfa48d1c9ae22d3d8658cdfb1f72cf4887",
+      "matchesVerified252Build": true
+    }
+  ],
+  "implementationBase": "e993927bb1c29adb78d3e35d65c7cff033875a6f",
+  "preserved253Fixes": [
+    "EnvironmentalFilm decoded-pixel staging and actual callback readiness",
+    "Visible clipped-hotspot keyboard focus marker"
+  ],
+  "releaseHistoryPlan": "Release branch includes all PR16 commits, then brightness/readability changes; release PR targets main. Deliberately reconcile253 source through release PR without a separate unrelated PR16 merge. Do not squash away provenance or overwrite production with main252.",
+  "wranglerReadOnlyInspected": true,
+  "productionSettingsChanged": false
+}
