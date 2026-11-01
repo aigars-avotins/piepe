@@ -34,6 +34,12 @@ for (const [width, height] of viewports) test.describe(`2.5.4 readability ${widt
     test.setTimeout(30000)
     await enter(page, locale)
     const evidence: unknown[] = []
+    if (width < 700) {
+      await expect(page.locator('.scroll-cue')).toHaveAccessibleName(messages[locale].follow)
+      const cue = await page.locator('.scroll-cue').boundingBox()
+      expect(cue!.width).toBeGreaterThanOrEqual(44); expect(cue!.height).toBeGreaterThanOrEqual(44)
+      expect(await page.locator('.scroll-cue').evaluate(e => ({ width: e.scrollWidth - e.clientWidth, height: e.scrollHeight - e.clientHeight }))).toEqual({ width: 0, height: 0 })
+    }
     const header = await readable(page, ['.site-header .language-switch a', '.replay-intro'], 14)
     for (const box of header) { expect(box.x).toBeGreaterThanOrEqual(0); expect(box.right).toBeLessThanOrEqual(width + 1) }
     await expect(page.locator('.fungus-annotation')).toHaveCSS('opacity', '1')

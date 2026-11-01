@@ -260,3 +260,6 @@ html:not(.js) .cinematic-chapter{min-height:100svh}html:not(.js) .cinema-content
 @media(min-width:700px) and (max-width:1100px) and (pointer:coarse){.encounter-copy{margin-bottom:clamp(80px,24svh,216px)}}
 @media(max-height:520px) and (min-width:700px){.hero-copy{padding-top:94px;padding-bottom:0}.wordmark{font-size:125px}.hero-deck{font-size:16px;line-height:1.5}}
 @media(max-height:520px) and (max-width:1100px){.fungus-annotation>span:last-child{top:auto;bottom:calc(100% + 8px)}}
+
+/* This existing phone cue is intentionally icon-only; its accessible text is retained. */
+@media(max-width:699px){.scroll-cue{font-size:0}}

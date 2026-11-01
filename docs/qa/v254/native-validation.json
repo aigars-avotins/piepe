@@ -1,0 +1,816 @@
+{
+  "sourceSHA": "733835981d60202d3b3fe460eab8e56d9006b802",
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/41299379383",
+  "runner": "standard macos-15-intel, headed Playwright WebKit, not Safari app or physical iPhone",
+  "stats": {
+    "startTime": "2026-11-01T10:57:51.843Z",
+    "duration": 469542.88300000003,
+    "expected": 29,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "title": "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "failed",
+      "errors": [
+        "Error: locator.evaluate: Error: No advancing presented video frames: {\"phase\":\"cadence\",\"src\":\"http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3\",\"time\":4.735274616999974,\"paused\":false,\"ended\":false,\"ready\":4,\"connected\":true,\"reason\":\"\",\"cycles\":\"0\",\"held\":\"false\",\"totalFrames\":145,\"frames\":[{\"time\":2,\"presented\":2,\"phase\":\"cadence\"},{\"time\":4,\"presented\":3,\"phase\":\"cadence\"}]}\n\n  41 |     return opacity\n  42 |   })).toBeGreaterThan(.98)\n> 43 |   return layer.locator('video').evaluate(async (video: HTMLVideoElement) => {\n     |                                 ^\n  44 |     let opacity = 1\n  45 |     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)\n  46 |     const r = video.getBoundingClientRect(), scale = Math.max(r.width / video.videoWidth, r.height / video.videoHeight)\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:43:33)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:179:24"
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "390x664 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 1512x982 / lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 1512x982 / en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 390x664 / lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 390x664 / en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 static reduced lv: brighter fallbacks preserve preference and note access",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 static reduced en: brighter fallbacks preserve preference and note access",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 static save-data lv: brighter fallbacks preserve preference and note access",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 static save-data en: brighter fallbacks preserve preference and note access",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 390x844 / lv: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 390x844 / en: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 430x932 / lv: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 430x932 / en: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 800x900 / lv: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 800x900 / en: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 1024x768 / lv: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 1024x768 / en: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 1440x900 / lv: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 readability 1440x900 / en: body and secondary copy remain readable across the journey and field note",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 cinema comparison 390x844 / before253: en actual moving frames, repeated visits and discovery",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 cinema comparison 390x844 / candidate254: en actual moving frames, repeated visits and discovery",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 cinema comparison 800x900 / candidate254: lv actual moving frames, repeated visits and discovery",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 cinema comparison 800x900 / before253: lv actual moving frames, repeated visits and discovery",
+      "status": "failed",
+      "errors": [
+        "Error: locator.evaluate: Error: Fewer than six advancing presented film frames within2500ms\n\n  75 |     return opacity\n  76 |   })).toBeGreaterThan(.98)\n> 77 |   const frames = await video.evaluate(v => new Promise<number[]>((resolve, reject) => {\n     |                              ^\n  78 |     const values: number[] = [], start = performance.now()\n  79 |     let request = 0\n  80 |     const timeout = setTimeout(() => { v.cancelVideoFrameCallback(request); reject(Error('Fewer than six advancing presented film frames within2500ms')) }, 2500)\n    at moving (/Users/runner/work/piepe/piepe/tests/v254.spec.ts:77:30)\n    at /Users/runner/work/piepe/piepe/tests/v254.spec.ts:116:7"
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 cinema comparison 1512x982 / before253: en actual moving frames, repeated visits and discovery",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 cinema comparison 1512x982 / candidate254: en actual moving frames, repeated visits and discovery",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "file": "v254.spec.ts",
+      "title": "2.5.4 folding and landscape / caption and note controls stay onstage through representative touch viewport changes",
+      "status": "passed",
+      "errors": []
+    }
+  ],
+  "failures": [
+    {
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "durationMs": 12137,
+      "attachments": {
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "native-media-requests": [
+          {
+            "event": "request",
+            "id": 1,
+            "at": 1793530701840,
+            "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "range": "bytes=0-1"
+          },
+          {
+            "event": "response",
+            "id": 1,
+            "at": 1793530701840,
+            "status": 206,
+            "range": "bytes 0-1/5846195",
+            "bytes": "2"
+          },
+          {
+            "event": "finished",
+            "id": 1,
+            "at": 1793530701840
+          },
+          {
+            "event": "request",
+            "id": 2,
+            "at": 1793530701840,
+            "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "range": "bytes=0-5846194"
+          },
+          {
+            "event": "response",
+            "id": 2,
+            "at": 1793530701847,
+            "status": 206,
+            "range": "bytes 0-5846194/5846195",
+            "bytes": "5846195"
+          },
+          {
+            "event": "finished",
+            "id": 2,
+            "at": 1793530701924
+          }
+        ],
+        "native-input-and-compositor": {
+          "events": [
+            {
+              "event": "loadstart",
+              "at": 769,
+              "scroll": 392,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 0,
+                "paused": true
+              }
+            },
+            {
+              "event": "waiting",
+              "at": 771,
+              "scroll": 392,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 0,
+                "paused": false
+              }
+            },
+            {
+              "event": "loadedmetadata",
+              "at": 908,
+              "scroll": 392,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 1,
+                "paused": false
+              }
+            },
+            {
+              "event": "loadeddata",
+              "at": 1099,
+              "scroll": 392,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 4,
+                "paused": false
+              }
+            },
+            {
+              "event": "playing",
+              "at": 1101,
+              "scroll": 392,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 4,
+                "paused": false
+              }
+            },
+            {
+              "event": "playing",
+              "at": 10402,
+              "scroll": 1071,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 4,
+                "paused": false
+              }
+            }
+          ],
+          "photoPhases": [],
+          "maxFrameGap": 3259,
+          "frames": 90,
+          "href": "http://127.0.0.1:4173/",
+          "scroll": 1071,
+          "focus": true,
+          "visibility": "visible",
+          "viewport": {
+            "width": 1512,
+            "height": 982
+          },
+          "screen": {
+            "width": 1512,
+            "height": 982
+          },
+          "world": "world  is-ready has-title   atmosphere-paused      ",
+          "photo": {},
+          "videos": [
+            {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "ready": 4,
+              "network": 1,
+              "paused": false,
+              "error": null,
+              "buffered": [
+                [
+                  0,
+                  6.042
+                ]
+              ],
+              "frames": 145
+            }
+          ]
+        },
+        "environmental-state-on-failure": {
+          "visibility": "visible",
+          "scroll": 1071,
+          "clips": [
+            {
+              "clip": "understory",
+              "clipState": "playing",
+              "clipReady": "true",
+              "frameStaged": "true",
+              "stillReady": "true",
+              "clipReason": "ended",
+              "clipCycles": "1",
+              "loopHold": "true"
+            }
+          ],
+          "videos": [
+            {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "paused": false,
+              "ended": false,
+              "ready": 4,
+              "total": 145
+            }
+          ]
+        }
+      }
+    },
+    {
+      "title": "before253: lv actual moving frames, repeated visits and discovery",
+      "durationMs": 18392,
+      "attachments": {
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "native-media-requests": [
+          {
+            "event": "request",
+            "id": 1,
+            "at": 1793530974282,
+            "url": "http://127.0.0.1:4173/media/forest-awakening.mp4?v=2.3",
+            "range": "bytes=0-1"
+          },
+          {
+            "event": "response",
+            "id": 1,
+            "at": 1793530974292,
+            "status": 206,
+            "range": "bytes 0-1/8237084",
+            "bytes": "2"
+          },
+          {
+            "event": "finished",
+            "id": 1,
+            "at": 1793530974292
+          },
+          {
+            "event": "request",
+            "id": 2,
+            "at": 1793530974293,
+            "url": "http://127.0.0.1:4173/media/forest-awakening.mp4?v=2.3",
+            "range": "bytes=0-8237083"
+          },
+          {
+            "event": "response",
+            "id": 2,
+            "at": 1793530974305,
+            "status": 206,
+            "range": "bytes 0-8237083/8237084",
+            "bytes": "8237084"
+          },
+          {
+            "event": "finished",
+            "id": 2,
+            "at": 1793530974407
+          },
+          {
+            "event": "request",
+            "id": 3,
+            "at": 1793530984479,
+            "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "range": "bytes=0-1"
+          },
+          {
+            "event": "response",
+            "id": 3,
+            "at": 1793530984505,
+            "status": 206,
+            "range": "bytes 0-1/5846195",
+            "bytes": "2"
+          },
+          {
+            "event": "finished",
+            "id": 3,
+            "at": 1793530984505
+          },
+          {
+            "event": "request",
+            "id": 4,
+            "at": 1793530984508,
+            "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "range": "bytes=0-5846194"
+          },
+          {
+            "event": "response",
+            "id": 4,
+            "at": 1793530984521,
+            "status": 206,
+            "range": "bytes 0-5846194/5846195",
+            "bytes": "5846195"
+          },
+          {
+            "event": "finished",
+            "id": 4,
+            "at": 1793530984681
+          }
+        ],
+        "native-input-and-compositor": {
+          "events": [
+            {
+              "event": "focusin",
+              "at": 773,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "SECTION.hero"
+            },
+            {
+              "event": "click",
+              "at": 779,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "SPAN.annotation-cross"
+            },
+            {
+              "event": "focusin",
+              "at": 789,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "BUTTON.text-button skip-awakening"
+            },
+            {
+              "event": "loadstart",
+              "at": 926,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-awakening.mp4?v=2.3",
+                "time": 0,
+                "ready": 0,
+                "paused": true
+              }
+            },
+            {
+              "event": "loadedmetadata",
+              "at": 1159,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-awakening.mp4?v=2.3",
+                "time": 0,
+                "ready": 1,
+                "paused": true
+              }
+            },
+            {
+              "event": "loadeddata",
+              "at": 1318,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-awakening.mp4?v=2.3",
+                "time": 0,
+                "ready": 2,
+                "paused": true
+              }
+            },
+            {
+              "event": "playing",
+              "at": 1386,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-awakening.mp4?v=2.3",
+                "time": 0,
+                "ready": 4,
+                "paused": false
+              }
+            },
+            {
+              "event": "focusin",
+              "at": 7630,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "BUTTON.close-discovery"
+            },
+            {
+              "event": "focusin",
+              "at": 9689,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "DIALOG.discovery-dialog observation-surface "
+            },
+            {
+              "event": "click",
+              "at": 9691,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "SPAN.null"
+            },
+            {
+              "event": "focusin",
+              "at": 10796,
+              "scroll": 0,
+              "hash": "",
+              "focus": true,
+              "target": "BUTTON.fungus-annotation"
+            },
+            {
+              "event": "loadstart",
+              "at": 10998,
+              "scroll": 1089,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 0,
+                "paused": true
+              }
+            },
+            {
+              "event": "waiting",
+              "at": 11000,
+              "scroll": 1089,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 0,
+                "paused": false
+              }
+            },
+            {
+              "event": "loadedmetadata",
+              "at": 11346,
+              "scroll": 1089,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 1,
+                "paused": false
+              }
+            },
+            {
+              "event": "loadeddata",
+              "at": 11542,
+              "scroll": 1089,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 2,
+                "paused": false
+              }
+            },
+            {
+              "event": "playing",
+              "at": 11543,
+              "scroll": 1089,
+              "hash": "",
+              "focus": true,
+              "target": "VIDEO.null",
+              "media": {
+                "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "time": 0,
+                "ready": 4,
+                "paused": false
+              }
+            }
+          ],
+          "photoPhases": [
+            {
+              "at": 7647,
+              "phase": "preparing",
+              "progress": "0",
+              "dialogOpen": true
+            },
+            {
+              "at": 7947,
+              "phase": "moving",
+              "progress": "0",
+              "dialogOpen": true
+            },
+            {
+              "at": 8951,
+              "phase": "settled",
+              "dialogOpen": true
+            },
+            {
+              "at": 9697,
+              "phase": "preparing",
+              "progress": "0",
+              "dialogOpen": true
+            },
+            {
+              "at": 9763,
+              "phase": "returning",
+              "progress": "0",
+              "dialogOpen": true
+            },
+            {
+              "at": 10781,
+              "phase": "settled",
+              "dialogOpen": true
+            }
+          ],
+          "maxFrameGap": 1308,
+          "frames": 405,
+          "href": "http://127.0.0.1:4173/",
+          "scroll": 1089,
+          "focus": true,
+          "visibility": "visible",
+          "viewport": {
+            "width": 800,
+            "height": 900
+          },
+          "screen": {
+            "width": 800,
+            "height": 900
+          },
+          "world": "world  is-ready has-title   atmosphere-paused  has-note  has-awakened  ",
+          "photo": {},
+          "videos": [
+            {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 5.175662786000014,
+              "ready": 4,
+              "network": 1,
+              "paused": false,
+              "error": null,
+              "buffered": [
+                [
+                  0,
+                  6.042
+                ]
+              ],
+              "frames": 145
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "releaseSafe": false,
+  "limitation": "Final phone icon-only cue restoration has local focused coverage only; native run predates this 3-line style restoration. No further native run was launched after the release gate failed."
+}
