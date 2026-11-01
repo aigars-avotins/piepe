@@ -1,0 +1,242 @@
+{
+  "file": "v23.spec.ts",
+  "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+  "status": "failed",
+  "errors": [
+    "Error: locator.evaluate: Error: No advancing presented video frames: {\"phase\":\"cadence\",\"src\":\"http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3\",\"time\":4.335032774999974,\"paused\":false,\"ended\":false,\"ready\":4,\"connected\":true,\"reason\":\"ended\",\"cycles\":\"1\",\"held\":\"false\",\"totalFrames\":290,\"frames\":[{\"time\":2,\"presented\":8,\"phase\":\"cadence\"},{\"time\":4,\"presented\":9,\"phase\":\"cadence\"}]}\n\n  41 |     return opacity\n  42 |   })).toBeGreaterThan(.98)\n> 43 |   return layer.locator('video').evaluate(async (video: HTMLVideoElement) => {\n     |                                 ^\n  44 |     let opacity = 1\n  45 |     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)\n  46 |     const r = video.getBoundingClientRect(), scale = Math.max(r.width / video.videoWidth, r.height / video.videoHeight)\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:43:33)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:179:24"
+  ],
+  "evidence": [
+    {
+      "name": "native-window-activation",
+      "data": {
+        "requested": [
+          {
+            "name": "Playwright",
+            "activated": true
+          }
+        ],
+        "frontmost": "Playwright"
+      }
+    },
+    {
+      "name": "native-media-requests",
+      "data": [
+        {
+          "event": "request",
+          "id": 1,
+          "at": 1793383539072,
+          "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+          "range": "bytes=0-1"
+        },
+        {
+          "event": "response",
+          "id": 1,
+          "at": 1793383539089,
+          "status": 206,
+          "range": "bytes 0-1/5846195",
+          "bytes": "2"
+        },
+        {
+          "event": "finished",
+          "id": 1,
+          "at": 1793383539090
+        },
+        {
+          "event": "request",
+          "id": 2,
+          "at": 1793383539093,
+          "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+          "range": "bytes=0-5846194"
+        },
+        {
+          "event": "response",
+          "id": 2,
+          "at": 1793383539103,
+          "status": 206,
+          "range": "bytes 0-5846194/5846195",
+          "bytes": "5846195"
+        },
+        {
+          "event": "failed",
+          "id": 2,
+          "at": 1793383539464,
+          "error": "cancelled"
+        },
+        {
+          "event": "request",
+          "id": 3,
+          "at": 1793383541373,
+          "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+          "range": "bytes=720896-5846194"
+        },
+        {
+          "event": "response",
+          "id": 3,
+          "at": 1793383541450,
+          "status": 206,
+          "range": "bytes 720896-5846194/5846195",
+          "bytes": "5125299"
+        },
+        {
+          "event": "finished",
+          "id": 3,
+          "at": 1793383541465
+        }
+      ]
+    },
+    {
+      "name": "native-input-and-compositor",
+      "data": {
+        "events": [
+          {
+            "event": "loadstart",
+            "at": 1389,
+            "scroll": 392,
+            "hash": "",
+            "focus": true,
+            "target": "VIDEO.null",
+            "media": {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "ready": 0,
+              "paused": true
+            }
+          },
+          {
+            "event": "waiting",
+            "at": 1396,
+            "scroll": 392,
+            "hash": "",
+            "focus": true,
+            "target": "VIDEO.null",
+            "media": {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "ready": 0,
+              "paused": false
+            }
+          },
+          {
+            "event": "loadedmetadata",
+            "at": 2133,
+            "scroll": 392,
+            "hash": "",
+            "focus": true,
+            "target": "VIDEO.null",
+            "media": {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "ready": 1,
+              "paused": false
+            }
+          },
+          {
+            "event": "loadeddata",
+            "at": 3612,
+            "scroll": 392,
+            "hash": "",
+            "focus": true,
+            "target": "VIDEO.null",
+            "media": {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "ready": 2,
+              "paused": false
+            }
+          },
+          {
+            "event": "playing",
+            "at": 3615,
+            "scroll": 392,
+            "hash": "",
+            "focus": true,
+            "target": "VIDEO.null",
+            "media": {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "ready": 4,
+              "paused": false
+            }
+          },
+          {
+            "event": "playing",
+            "at": 10279,
+            "scroll": 1071,
+            "hash": "",
+            "focus": true,
+            "target": "VIDEO.null",
+            "media": {
+              "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+              "time": 0,
+              "ready": 4,
+              "paused": false
+            }
+          }
+        ],
+        "photoPhases": [],
+        "maxFrameGap": 2905,
+        "frames": 161,
+        "href": "http://127.0.0.1:4173/",
+        "scroll": 1276,
+        "focus": true,
+        "visibility": "visible",
+        "viewport": {
+          "width": 1512,
+          "height": 982
+        },
+        "screen": {
+          "width": 1512,
+          "height": 982
+        },
+        "world": "world  is-ready has-title   atmosphere-paused      ",
+        "photo": {},
+        "videos": [
+          {
+            "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "time": 6.042,
+            "ready": 4,
+            "network": 1,
+            "paused": true,
+            "error": null,
+            "buffered": [
+              [
+                0,
+                6.042
+              ]
+            ],
+            "frames": 290
+          }
+        ]
+      }
+    },
+    {
+      "name": "environmental-state-on-failure",
+      "data": {
+        "visibility": "visible",
+        "scroll": 1276,
+        "clips": [
+          {
+            "clip": "understory",
+            "clipState": "playing",
+            "clipReady": "true",
+            "frameStaged": "true",
+            "stillReady": "true",
+            "clipReason": "ended",
+            "clipCycles": "2",
+            "loopHold": "false"
+          }
+        ],
+        "videos": [
+          {
+            "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "time": 0.5952134509999508,
+            "paused": false,
+            "ended": false,
+            "ready": 4,
+            "total": 298
+          }
+        ]
+      }
+    }
+  ]
+}

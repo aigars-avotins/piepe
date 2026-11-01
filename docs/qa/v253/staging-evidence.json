@@ -1,0 +1,330 @@
+[
+  {
+    "phase": "before",
+    "clip": "understory",
+    "locale": "en",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "samples": [
+      {
+        "time": 3.705808,
+        "ready": 4,
+        "paused": false,
+        "opacity": 0,
+        "hash": 960483482,
+        "clip": {
+          "clip": "understory",
+          "clipState": "preparing",
+          "clipReady": "false",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "time": 3.974277,
+        "ready": 4,
+        "paused": false,
+        "opacity": 0,
+        "hash": 4020720224,
+        "clip": {
+          "clip": "understory",
+          "clipState": "preparing",
+          "clipReady": "false",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "time": 4.241439,
+        "ready": 4,
+        "paused": false,
+        "opacity": 0,
+        "hash": 2391133338,
+        "clip": {
+          "clip": "understory",
+          "clipState": "preparing",
+          "clipReady": "false",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      }
+    ],
+    "presentations": []
+  },
+  {
+    "phase": "before",
+    "clip": "breathing",
+    "locale": "lv",
+    "viewport": {
+      "width": 390,
+      "height": 664
+    },
+    "samples": [
+      {
+        "time": 3.560954,
+        "ready": 4,
+        "paused": false,
+        "opacity": 0,
+        "hash": 3721010610,
+        "clip": {
+          "clip": "breathing",
+          "clipState": "preparing",
+          "clipReady": "false",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "time": 3.831856,
+        "ready": 4,
+        "paused": false,
+        "opacity": 0,
+        "hash": 809678585,
+        "clip": {
+          "clip": "breathing",
+          "clipState": "preparing",
+          "clipReady": "false",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "time": 4.10503,
+        "ready": 4,
+        "paused": false,
+        "opacity": 0,
+        "hash": 3800983403,
+        "clip": {
+          "clip": "breathing",
+          "clipState": "preparing",
+          "clipReady": "false",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      }
+    ],
+    "presentations": []
+  },
+  {
+    "phase": "after",
+    "clip": "understory",
+    "locale": "en",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "samples": [
+      {
+        "time": 3.705502,
+        "ready": 4,
+        "paused": false,
+        "opacity": 1,
+        "hash": 1992894315,
+        "clip": {
+          "clip": "understory",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "time": 4.018349,
+        "ready": 4,
+        "paused": false,
+        "opacity": 1,
+        "hash": 779912189,
+        "clip": {
+          "clip": "understory",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      },
+      {
+        "time": 4.288145,
+        "ready": 4,
+        "paused": false,
+        "opacity": 1,
+        "hash": 3727238082,
+        "clip": {
+          "clip": "understory",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1512,
+          "h": 982
+        }
+      }
+    ],
+    "presentations": [
+      {
+        "at": 1345.2999999970198,
+        "time": 0.083333
+      }
+    ]
+  },
+  {
+    "phase": "after",
+    "clip": "breathing",
+    "locale": "lv",
+    "viewport": {
+      "width": 390,
+      "height": 664
+    },
+    "samples": [
+      {
+        "time": 3.60684,
+        "ready": 4,
+        "paused": false,
+        "opacity": 1,
+        "hash": 231568434,
+        "clip": {
+          "clip": "breathing",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "time": 3.87443,
+        "ready": 4,
+        "paused": false,
+        "opacity": 1,
+        "hash": 3300850179,
+        "clip": {
+          "clip": "breathing",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      },
+      {
+        "time": 4.187201,
+        "ready": 4,
+        "paused": false,
+        "opacity": 1,
+        "hash": 2835654372,
+        "clip": {
+          "clip": "breathing",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "false",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 664
+        }
+      }
+    ],
+    "presentations": [
+      {
+        "at": 1375.9000000059605,
+        "time": 0.041667
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-30T17:12:08.747954+00:00",
+  "servedVersion": "2.5.2",
+  "responses": [
+    {
+      "url": "https://pie.pe/",
+      "hsts": [
+        "max-age=2592000"
+      ],
+      "duplicate": false,
+      "maxAgeSeconds": 2592000,
+      "includeSubDomains": false,
+      "preload": false
+    },
+    {
+      "url": "https://pie.pe/en/",
+      "hsts": [
+        "max-age=2592000"
+      ],
+      "duplicate": false,
+      "maxAgeSeconds": 2592000,
+      "includeSubDomains": false,
+      "preload": false
+    }
+  ],
+  "codeChanges": false
+}

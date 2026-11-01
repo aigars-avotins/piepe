@@ -1,0 +1,844 @@
+{
+  "decision": "Reject the preload/hidden-image priority experiment; preserve original index.html, boot.js, ForestScene.tsx and App monitor priority. First-frame changes are small/inconsistent, and both mobile opening-poster responses regressed. Final 2.5.3 makes no first-load priority change.",
+  "conditions": {
+    "latencyMs": 100,
+    "downloadBytesPerSec": 750000,
+    "cpuThrottle": 1,
+    "cache": "disabled except warm-return; warm-return primes a static visit with the observed public media/asset cache policies",
+    "build": "production via real media Worker",
+    "window": "8500ms after DCL cinematic;2500ms static"
+  },
+  "cache": "cold for first/session-return/reduced/save-data;warm-return uses matching public cache policies and a primed static visit. Fresh Chromium process per case.",
+  "samplesPerConfiguration": 1,
+  "fieldData": false,
+  "comparisons": [
+    {
+      "mobile": false,
+      "locale": "lv",
+      "mode": "first",
+      "baseline": {
+        "lcp": {
+          "time": 760,
+          "size": 1792,
+          "url": "http://127.0.0.1:4178/brand-wordmark.svg",
+          "element": "<img class=\"brand-wordmark\" src=\"/brand-wordmark.svg\" alt=\"pie.pe\" width=\"64\" height=\"34\">"
+        },
+        "fcp": 748,
+        "posterResponseEnd": 3246.964999998454,
+        "posterRequestPriority": "High",
+        "firstPresented": 3849.8,
+        "firstAdvancing": 4233.1,
+        "cls": 0,
+        "receivedBytes": 8133044,
+        "movie": [
+          {
+            "time": 3.103379,
+            "ready": 2,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 644,
+          "size": 1792,
+          "url": "http://127.0.0.1:4179/brand-wordmark.svg",
+          "element": "<img class=\"brand-wordmark\" src=\"/brand-wordmark.svg\" alt=\"pie.pe\" width=\"64\" height=\"34\">"
+        },
+        "fcp": 644,
+        "posterResponseEnd": 3210.9720000007655,
+        "posterRequestPriority": "High",
+        "firstPresented": 3848.5,
+        "firstAdvancing": 4215.2,
+        "cls": 0,
+        "receivedBytes": 8105829,
+        "movie": [
+          {
+            "time": 3.093762,
+            "ready": 2,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "lv",
+      "mode": "return",
+      "baseline": {
+        "lcp": {
+          "time": 708,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 708,
+        "posterResponseEnd": 2535.8160000032512,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0020215483147757196,
+        "receivedBytes": 3109390,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 664,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 664,
+        "posterResponseEnd": 2519.8010000021895,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0019859523235624572,
+        "receivedBytes": 3109979,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "lv",
+      "mode": "reduced",
+      "baseline": {
+        "lcp": {
+          "time": 684,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 684,
+        "posterResponseEnd": 2541.2450000003446,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0023931853400346375,
+        "receivedBytes": 3259394,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 632,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 632,
+        "posterResponseEnd": 2502.5129999994533,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0023931853400346375,
+        "receivedBytes": 3259983,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "lv",
+      "mode": "save-data",
+      "baseline": {
+        "lcp": {
+          "time": 708,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 708,
+        "posterResponseEnd": 2524.9149999872316,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0023931853400346375,
+        "receivedBytes": 3259394,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 672,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 672,
+        "posterResponseEnd": 2525.7280000078026,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0024287813312479,
+        "receivedBytes": 3259983,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "lv",
+      "mode": "warm-return",
+      "baseline": {
+        "lcp": {
+          "time": 468,
+          "size": 82375,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 468,
+        "posterResponseEnd": 139.05099999101367,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 7.296126657490836e-05,
+        "receivedBytes": 911414,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 364,
+          "size": 82375,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 364,
+        "posterResponseEnd": 125.05200000305194,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 7.296126657490836e-05,
+        "receivedBytes": 1054798,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "en",
+      "mode": "first",
+      "baseline": {
+        "lcp": {
+          "time": 1040,
+          "size": 1938,
+          "url": "",
+          "element": "<span class=\"header-caption\">The living forest</span>"
+        },
+        "fcp": 1040,
+        "posterResponseEnd": 3206.7510000051698,
+        "posterRequestPriority": "High",
+        "firstPresented": 3882.9,
+        "firstAdvancing": 4232.9,
+        "cls": 0,
+        "receivedBytes": 8184983,
+        "movie": [
+          {
+            "time": 3.094346,
+            "ready": 2,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 680,
+          "size": 1938,
+          "url": "",
+          "element": "<span class=\"header-caption\">The living forest</span>"
+        },
+        "fcp": 680,
+        "posterResponseEnd": 3175.3129999997327,
+        "posterRequestPriority": "High",
+        "firstPresented": 3817.8,
+        "firstAdvancing": 4217.8,
+        "cls": 0,
+        "receivedBytes": 8095837,
+        "movie": [
+          {
+            "time": 3.09336,
+            "ready": 2,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "en",
+      "mode": "return",
+      "baseline": {
+        "lcp": {
+          "time": 724,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 724,
+        "posterResponseEnd": 2574.6650000073714,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.002096557617709495,
+        "receivedBytes": 3109249,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 688,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 688,
+        "posterResponseEnd": 2537.81500000332,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.002096557617709495,
+        "receivedBytes": 3109839,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "en",
+      "mode": "reduced",
+      "baseline": {
+        "lcp": {
+          "time": 700,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 700,
+        "posterResponseEnd": 2575.471000003745,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0023554910895978894,
+        "receivedBytes": 3259253,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 624,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 624,
+        "posterResponseEnd": 2535.1559999980964,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0023554910895978894,
+        "receivedBytes": 3259843,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "en",
+      "mode": "save-data",
+      "baseline": {
+        "lcp": {
+          "time": 828,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 828,
+        "posterResponseEnd": 2582.191999987117,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0023554910895978894,
+        "receivedBytes": 3259253,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 672,
+          "size": 85798,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 672,
+        "posterResponseEnd": 2537.875999987591,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0023554910895978894,
+        "receivedBytes": 3259843,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": false,
+      "locale": "en",
+      "mode": "warm-return",
+      "baseline": {
+        "lcp": {
+          "time": 340,
+          "size": 82375,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 340,
+        "posterResponseEnd": 127.77099999948405,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.00015110804392170403,
+        "receivedBytes": 1016969,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 444,
+          "size": 82375,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 444,
+        "posterResponseEnd": 136.1650000035297,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.00015110804392170403,
+        "receivedBytes": 1063658,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "lv",
+      "mode": "first",
+      "baseline": {
+        "lcp": {
+          "time": 684,
+          "size": 1224,
+          "url": "",
+          "element": "<button class=\"text-button skip-intro\">Izlaist ievadu<!-- --> <span aria-hidden=\"true\"><svg class=\"direction-arrow\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin"
+        },
+        "fcp": 684,
+        "posterResponseEnd": 3170.14200000267,
+        "posterRequestPriority": "High",
+        "firstPresented": 3859.2,
+        "firstAdvancing": 4242.5,
+        "cls": 0,
+        "receivedBytes": 8168220,
+        "movie": [
+          {
+            "time": 3.092552,
+            "ready": 2,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 712,
+          "size": 1224,
+          "url": "",
+          "element": "<button class=\"text-button skip-intro\">Izlaist ievadu<!-- --> <span aria-hidden=\"true\"><svg class=\"direction-arrow\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin"
+        },
+        "fcp": 712,
+        "posterResponseEnd": 3280.825999987428,
+        "posterRequestPriority": "High",
+        "firstPresented": 3837.5,
+        "firstAdvancing": 4220.8,
+        "cls": 0,
+        "receivedBytes": 8086789,
+        "movie": [
+          {
+            "time": 2.96246,
+            "ready": 3,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "lv",
+      "mode": "return",
+      "baseline": {
+        "lcp": {
+          "time": 664,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 664,
+        "posterResponseEnd": 2555.5480000039097,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0019035842745402372,
+        "receivedBytes": 3109390,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 608,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 608,
+        "posterResponseEnd": 2520.174000004772,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0019035842745402372,
+        "receivedBytes": 3109979,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "lv",
+      "mode": "reduced",
+      "baseline": {
+        "lcp": {
+          "time": 652,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 652,
+        "posterResponseEnd": 2538.3569999976316,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.003273910051698918,
+        "receivedBytes": 3259394,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 640,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 640,
+        "posterResponseEnd": 2524.8009999922942,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0040973861269917485,
+        "receivedBytes": 3259983,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "lv",
+      "mode": "save-data",
+      "baseline": {
+        "lcp": {
+          "time": 672,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 672,
+        "posterResponseEnd": 2607.4829999997746,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0040973861269917485,
+        "receivedBytes": 3259394,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 660,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 660,
+        "posterResponseEnd": 2565.705999993952,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0040973861269917485,
+        "receivedBytes": 3259983,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "lv",
+      "mode": "warm-return",
+      "baseline": {
+        "lcp": {
+          "time": 216,
+          "size": 14661,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 216,
+        "posterResponseEnd": 138.15700000850484,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0,
+        "receivedBytes": 1036610,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 208,
+          "size": 14661,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 208,
+        "posterResponseEnd": 134.22300000092946,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0,
+        "receivedBytes": 1091530,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "en",
+      "mode": "first",
+      "baseline": {
+        "lcp": {
+          "time": 704,
+          "size": 1241,
+          "url": "",
+          "element": "<span>Forest sound</span>"
+        },
+        "fcp": 704,
+        "posterResponseEnd": 3156.480999998166,
+        "posterRequestPriority": "High",
+        "firstPresented": 3825.9,
+        "firstAdvancing": 4192.5,
+        "cls": 0,
+        "receivedBytes": 8180671,
+        "movie": [
+          {
+            "time": 3.092397,
+            "ready": 2,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 608,
+          "size": 1241,
+          "url": "",
+          "element": "<span>Forest sound</span>"
+        },
+        "fcp": 608,
+        "posterResponseEnd": 3243.6319999978878,
+        "posterRequestPriority": "High",
+        "firstPresented": 3830.2,
+        "firstAdvancing": 4196.8,
+        "cls": 0,
+        "receivedBytes": 8094337,
+        "movie": [
+          {
+            "time": 3.09463,
+            "ready": 2,
+            "paused": false
+          }
+        ],
+        "exit": ""
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "en",
+      "mode": "return",
+      "baseline": {
+        "lcp": {
+          "time": 684,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 684,
+        "posterResponseEnd": 2574.2109999991953,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0021361948023791177,
+        "receivedBytes": 3109249,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 660,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 660,
+        "posterResponseEnd": 2555.116999996244,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.0021361948023791177,
+        "receivedBytes": 3109839,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "en",
+      "mode": "reduced",
+      "baseline": {
+        "lcp": {
+          "time": 672,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 672,
+        "posterResponseEnd": 2610.165000005509,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.002985423723973745,
+        "receivedBytes": 3259253,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 648,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 648,
+        "posterResponseEnd": 2541.354999993928,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.002161947648680915,
+        "receivedBytes": 3259843,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "en",
+      "mode": "save-data",
+      "baseline": {
+        "lcp": {
+          "time": 692,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 692,
+        "posterResponseEnd": 2580.9359999984736,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.002161947648680915,
+        "receivedBytes": 3259253,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 628,
+          "size": 15148,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 628,
+        "posterResponseEnd": 2536.5140000067186,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0.002161947648680915,
+        "receivedBytes": 3259843,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    },
+    {
+      "mobile": true,
+      "locale": "en",
+      "mode": "warm-return",
+      "baseline": {
+        "lcp": {
+          "time": 228,
+          "size": 14661,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 228,
+        "posterResponseEnd": 127.7739999932237,
+        "posterRequestPriority": "High",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0,
+        "receivedBytes": 1055493,
+        "movie": [],
+        "exit": "preference-or-return"
+      },
+      "rejectedPriorityCandidate": {
+        "lcp": {
+          "time": 212,
+          "size": 14661,
+          "url": "",
+          "element": "<span>pie</span>"
+        },
+        "fcp": 212,
+        "posterResponseEnd": 137.87400000728667,
+        "posterRequestPriority": "Low",
+        "firstPresented": null,
+        "firstAdvancing": null,
+        "cls": 0,
+        "receivedBytes": 1048182,
+        "movie": [],
+        "exit": "preference-or-return"
+      }
+    }
+  ]
+}

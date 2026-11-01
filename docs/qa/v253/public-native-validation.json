@@ -1,0 +1,1751 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/41125840232",
+  "sourceSHA": "712bf6a624abc775cd12f5e8acc18cfeb04efd88",
+  "runner": "macos-15-intel",
+  "runnerClass": "standard GitHub hosted",
+  "stats": {
+    "startTime": "2026-10-30T20:48:36.560Z",
+    "duration": 1131656.869,
+    "expected": 147,
+    "skipped": 1,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "caseCount": 152,
+  "actualStatuses": {
+    "passed": 147,
+    "failed": 4,
+    "skipped": 1
+  },
+  "newV253Cases": {
+    "passed": 15
+  },
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "title": "compact phone retains native scroll when translated facts change height",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 7086,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "server-painted controls and cover geometry survive delayed hydration without a layout jump",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4694,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 5314,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "Escape while preparing cancels in place; repeat activation opens the accessible note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2955,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 6696,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "unavailable end-still uses the actual decoded frame for a continuous note handoff",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 14310,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "locale change while decoding does not reopen a modal, move focus or restart playback",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4700,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "a transient readiness drop at the presented-frame callback retries behind the held forest",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3729,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "Escape before the photo clock starts cancels a pending decode without waiting or an unhandled rejection",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3277,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "a playback-history change between activation and mounting recovers to the note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2272,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "a compositor withholding transparent video frames still presents paused frame zero before playback",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4225,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "source assignment discarding old frame subscriptions still prepares a real opening frame",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 8222,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "1512x982 rendering / held frame and first decoded awakening stay in the same plane at 1512x982",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 9919,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "status": "failed",
+      "outcome": "unexpected",
+      "durationMs": 19769,
+      "failureCategories": [
+        "Discovery heading not visible within14000ms; preparation begins10039ms, movement13805ms, settlement17281ms."
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "1512x982 rendering / Escape during the photo move reverses the current camera instead of snapping to full frame",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 14954,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "2560x1080 rendering / held frame and first decoded awakening stay in the same plane at 2560x1080",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 6115,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "390x664 rendering / held frame and first decoded awakening stay in the same plane at 390x664",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4818,
+      "failureCategories": []
+    },
+    {
+      "file": "cinema.spec.ts",
+      "title": "390x664 rendering / awakening final frame docks and returns continuously at 390x664",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 13007,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "actual film plays once, reveals title, ends and becomes interactive",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 16790,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "skip is immediate and fungus works with keyboard and Escape",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4436,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "reduced motion avoids downloading film, remains readable and has no overflow",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2954,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "blocked autoplay falls back immediately to the interactive still",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2833,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "missing video recovers without trapping the visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 7156,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "pending playback and a mid-film stall both have bounded recovery",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 7677,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "an actual decoding stall recovers to the still",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 7410,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "missing still retains accessible text and controls",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3941,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "data saving preference avoids video request",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1940,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "cover geometry keeps hotspot aligned to the actual fungus across viewport changes",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 5841,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "discovery is a complete three-step field note with a real downloadable artifact",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2714,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "returning visitors can explicitly replay the original introduction without scroll replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4600,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "visible wordmark and discovery controls fit all specified portrait and landscape sizes",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3077,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "scroll changes photographic camera, foreground and return lighting rather than only text",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 6230,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "animation setup failure leaves a readable interactive static journey",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2348,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "mobile discovery keeps close available at the bottom and supports touch-sized controls",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4445,
+      "failureCategories": []
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "pause and changing motion preference clean up the camera while retaining navigation",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3952,
+      "failureCategories": []
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "title": "photo clock 1512x982 / late preparation preserves the beginning of the camera trajectory",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 5773,
+      "failureCategories": []
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "title": "photo clock 390x664 / late preparation preserves the beginning of the camera trajectory",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 5017,
+      "failureCategories": []
+    },
+    {
+      "file": "polish.spec.ts",
+      "title": "lv: encounter plus, readable support copy and safe source links",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 5097,
+      "failureCategories": []
+    },
+    {
+      "file": "polish.spec.ts",
+      "title": "en: encounter plus, readable support copy and safe source links",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4993,
+      "failureCategories": []
+    },
+    {
+      "file": "polish.spec.ts",
+      "title": "macro is prepared behind the existing bark before its scroll envelope, and waits for actual media",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4063,
+      "failureCategories": []
+    },
+    {
+      "file": "polish.spec.ts",
+      "title": "sound waits for permission, plays a real native loop, remains controllable in the note and remembers mute",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3788,
+      "failureCategories": []
+    },
+    {
+      "file": "polish.spec.ts",
+      "title": "save-data never starts automatic ambience, and a missing recording has a usable retry",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2234,
+      "failureCategories": []
+    },
+    {
+      "file": "scroll-recording.spec.ts",
+      "title": "silent fifteen-second before and after scroll captures",
+      "status": "skipped",
+      "outcome": "skipped",
+      "durationMs": 2,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "lv: raw HTML, facts, metadata, reciprocal alternates and strict 404",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1557,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "lv: localized field note and wallpaper files are real downloads",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2880,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "en: raw HTML, facts, metadata, reciprocal alternates and strict 404",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1694,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "en: localized field note and wallpaper files are real downloads",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2741,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "language links preserve active intro, open discovery, observation, collection and scroll; back works",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 5161,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "awakening completes once; environmental films replay with matched ending frames and one decoder",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 31871,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "awakening blocked recovers to the complete accessible note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2943,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "awakening missing recovers to the complete accessible note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2140,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "awakening stall recovers to the complete accessible note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 7050,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "awakening pending recovers to the complete accessible note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 7424,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "assets, sitemap, CSP and dictionary parity",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 105,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "storage denial still permits localized interaction and explicit replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3375,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "save-data bypasses all automatic films and never fetches full wallpapers on arrival",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1926,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "missing awakening still recovers to the preserved forest photo",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1924,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "1440x900 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 7729,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "1440x900 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3537,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "1440x900 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2776,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "1512x982 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4686,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "1512x982 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 6869,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "1512x982 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4358,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "390x844 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2258,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "390x844 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2456,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "390x844 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1696,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "390x664 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2522,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "390x664 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2668,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "390x664 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2163,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "320x690 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2286,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "320x690 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3778,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "320x690 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3703,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "430x932 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2913,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "430x932 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2204,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "430x932 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2041,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "844x390 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2554,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "844x390 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2499,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "844x390 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2192,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "2560x1080 device / scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3414,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "2560x1080 device / static responsive view / both locales fit the required viewport matrix: lv",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2595,
+      "failureCategories": []
+    },
+    {
+      "file": "v21.spec.ts",
+      "title": "2560x1080 device / static responsive view / both locales fit the required viewport matrix: en",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2776,
+      "failureCategories": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "native keyboard advance interrupts the fresh intro, and direct anchors do not start a competing film",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 26574,
+      "failureCategories": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "expanded facts, locale changes, explicit pause and a failed environmental decode keep native navigation usable",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 19938,
+      "failureCategories": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "failed",
+      "outcome": "unexpected",
+      "durationMs": 11117,
+      "failureCategories": [
+        "Understory: one advancing presentation callback within2500ms; minimum6 unchanged. This is the first sampled pose, before this test performs pixel readback."
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "failed",
+      "outcome": "unexpected",
+      "durationMs": 32322,
+      "failureCategories": [
+        "Breathing: only one distinct hash from three actual pixel samples; minimum3 unchanged. Earlier Understory poses/revisits completed."
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / lv: the photograph settles once and preserves observation/return transitions",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 25061,
+      "failureCategories": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / en: the photograph settles once and preserves observation/return transitions",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 24927,
+      "failureCategories": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 54671,
+      "failureCategories": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "390x664 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "status": "failed",
+      "outcome": "unexpected",
+      "durationMs": 13793,
+      "failureCategories": [
+        "Phone EN Understory: one advancing presentation callback within2500ms; minimum6 unchanged."
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "390x664 repeatable cinema / lv: the photograph settles once and preserves observation/return transitions",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 20504,
+      "failureCategories": []
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "390x664 repeatable cinema / en: the photograph settles once and preserves observation/return transitions",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 20305,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "lv: discovered and downloaded notes retain distinct session progress",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3704,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "en: discovered and downloaded notes retain distinct session progress",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3506,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "storage denial keeps in-memory progress through close, locale and history",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1985,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "legacy 2.3 collection survives restoration and reopening",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1516,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "cancelled film preparation stays unseen; a readable fallback counts as discovered",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3781,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "reduce: static preferences also prevent explicit replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1866,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "save-data: static preferences also prevent explicit replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1904,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "live reduced-motion and data-saving toggles suspend and restore scenes without losing the note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 8255,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "a paused failed scene offers Resume and can actually play again",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4774,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "lv: mobile note invitation, optional learning and social preview stay coherent",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 5127,
+      "failureCategories": []
+    },
+    {
+      "file": "v24.spec.ts",
+      "title": "en: mobile note invitation, optional learning and social preview stay coherent",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 6373,
+      "failureCategories": []
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "real sitemap and robots assets describe exactly the two crawlable canonical pages",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 725,
+      "failureCategories": []
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "lv: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1343,
+      "failureCategories": []
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "lv: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1791,
+      "failureCategories": []
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "lv: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4164,
+      "failureCategories": []
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "en: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1651,
+      "failureCategories": []
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "en: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1783,
+      "failureCategories": []
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "en: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4694,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 1512x982 / lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 14562,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 1512x982 / en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 13833,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 390x664 / lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 11285,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 cold 390x664 / en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 11254,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 1512x982 / lv: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 23028,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 1512x982 / en: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 21507,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 1440x900 / lv: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 21662,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 1440x900 / en: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 22095,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 390x844 / lv: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 23851,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 390x844 / en: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 25327,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 390x664 / lv: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 26736,
+      "failureCategories": []
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "2.5.1 reverse 390x664 / en: bottom to top stays a single forest after refresh and three native returns",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 24946,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 1512x982 / lv: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4170,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 1512x982 / en: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4299,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 1440x900 / lv: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4039,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 1440x900 / en: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4684,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 390x844 / lv: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3252,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 390x844 / en: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3301,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 390x664 / lv: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2503,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 390x664 / en: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2441,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 320x690 / lv: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3105,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 geometry 320x690 / en: short Understory budget preserves full bleed, copy and static overrides",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2561,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 native journey 1512x982 / wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 21297,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 native journey 1512x982 / native scrolling leaves a genuinely buffering film",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3973,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 native journey 1512x982 / native scrolling leaves a genuinely error film",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3993,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 native journey 390x664 / wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 17632,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 native journey 390x664 / native scrolling leaves a genuinely buffering film",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3692,
+      "failureCategories": []
+    },
+    {
+      "file": "v252.spec.ts",
+      "title": "2.5.2 native journey 390x664 / native scrolling leaves a genuinely error film",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2194,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "lv: server paint and hydrated playback respect the first visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2119,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "lv: server paint and hydrated playback respect the return visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2656,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "lv: server paint and hydrated playback respect the reduced visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1954,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "lv: server paint and hydrated playback respect the save-data visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2149,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "lv: server paint and hydrated playback respect the anchor visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4045,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "en: server paint and hydrated playback respect the first visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2339,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "en: server paint and hydrated playback respect the return visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2291,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "en: server paint and hydrated playback respect the reduced visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 2033,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "en: server paint and hydrated playback respect the save-data visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 1877,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "en: server paint and hydrated playback respect the anchor visitor",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 3558,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4948,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4194,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "environmental films pause on a hidden-document event and resume actual frames on return",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 4461,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "desktop keyboard / lv: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 13272,
+      "failureCategories": []
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "desktop keyboard / en: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls",
+      "status": "passed",
+      "outcome": "expected",
+      "durationMs": 8677,
+      "failureCategories": []
+    }
+  ],
+  "controlledClockObservationExcluded": "The locale-change/pending-decode test deliberately advances page.clock by60seconds; its synthetic gap is not runtime-performance evidence.",
+  "largestPassiveRafGaps": [
+    {
+      "title": "desktop keyboard / lv: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls",
+      "maxFrameGapMs": 4023,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "maxFrameGapMs": 3762,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "maxFrameGapMs": 2521,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "1512x982 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "maxFrameGapMs": 2375,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "1512x982 rendering / held frame and first decoded awakening stay in the same plane at 1512x982",
+      "maxFrameGapMs": 1923,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "390x664 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "maxFrameGapMs": 1718,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "1512x982 repeatable cinema / en: the photograph settles once and preserves observation/return transitions",
+      "maxFrameGapMs": 1678,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "unavailable end-still uses the actual decoded frame for a continuous note handoff",
+      "maxFrameGapMs": 1260,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "1512x982 repeatable cinema / lv: the photograph settles once and preserves observation/return transitions",
+      "maxFrameGapMs": 1260,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "source assignment discarding old frame subscriptions still prepares a real opening frame",
+      "maxFrameGapMs": 1192,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "1512x982 rendering / Escape during the photo move reverses the current camera instead of snapping to full frame",
+      "maxFrameGapMs": 1000,
+      "focus": true,
+      "visibility": "visible"
+    },
+    {
+      "title": "390x664 repeatable cinema / en: the photograph settles once and preserves observation/return transitions",
+      "maxFrameGapMs": 838,
+      "focus": true,
+      "visibility": "visible"
+    }
+  ],
+  "successfulVisibleFilmPoses": [
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "understory",
+      "fraction": 0.10499929405120483,
+      "visit": null,
+      "loop": false,
+      "frameCount": 18,
+      "maxPixelCopyMs": 181
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "understory",
+      "fraction": 0.3499976468373494,
+      "visit": null,
+      "loop": false,
+      "frameCount": 22,
+      "maxPixelCopyMs": 178
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "understory",
+      "fraction": 0.594995999623494,
+      "visit": null,
+      "loop": false,
+      "frameCount": 22,
+      "maxPixelCopyMs": 61
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "understory",
+      "fraction": null,
+      "visit": null,
+      "loop": true,
+      "frameCount": 21,
+      "maxPixelCopyMs": 62
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "understory",
+      "fraction": null,
+      "visit": 1,
+      "loop": false,
+      "frameCount": 21,
+      "maxPixelCopyMs": 70
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "understory",
+      "fraction": null,
+      "visit": 2,
+      "loop": false,
+      "frameCount": 20,
+      "maxPixelCopyMs": 66
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "understory",
+      "fraction": null,
+      "visit": 3,
+      "loop": false,
+      "frameCount": 21,
+      "maxPixelCopyMs": 59
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "breathing",
+      "fraction": 0.3,
+      "visit": null,
+      "loop": false,
+      "frameCount": 21,
+      "maxPixelCopyMs": 70
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "breathing",
+      "fraction": 0.85,
+      "visit": null,
+      "loop": false,
+      "frameCount": 20,
+      "maxPixelCopyMs": 79
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "breathing",
+      "fraction": 1.4,
+      "visit": null,
+      "loop": false,
+      "frameCount": 18,
+      "maxPixelCopyMs": 65
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "breathing",
+      "fraction": null,
+      "visit": null,
+      "loop": true,
+      "frameCount": 20,
+      "maxPixelCopyMs": 66
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "breathing",
+      "fraction": null,
+      "visit": 1,
+      "loop": false,
+      "frameCount": 21,
+      "maxPixelCopyMs": 75
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "breathing",
+      "fraction": null,
+      "visit": 2,
+      "loop": false,
+      "frameCount": 22,
+      "maxPixelCopyMs": 69
+    },
+    {
+      "title": "390x664 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "clip": "breathing",
+      "fraction": null,
+      "visit": 3,
+      "loop": false,
+      "frameCount": 17,
+      "maxPixelCopyMs": 111
+    }
+  ],
+  "decodedStagingEvidence": [
+    {
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "evidence": {
+        "moving": [
+          {
+            "time": 0.3333333333333333,
+            "pixel": 3232245033
+          },
+          {
+            "time": 0.6666666666666666,
+            "pixel": 4066403942
+          },
+          {
+            "time": 1.0416666666666667,
+            "pixel": 3990360030
+          }
+        ],
+        "witnesses": [
+          {
+            "source": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "time": 0.041666666666666664,
+            "ready": 4,
+            "opacity": "1"
+          },
+          {
+            "source": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "time": 0.3333333333333333,
+            "ready": 4,
+            "opacity": "1"
+          },
+          {
+            "source": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "time": 0.6666666666666666,
+            "ready": 4,
+            "opacity": "1"
+          },
+          {
+            "source": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+            "time": 1.0416666666666667,
+            "ready": 4,
+            "opacity": "1"
+          }
+        ]
+      }
+    },
+    {
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "evidence": {
+        "moving": [
+          {
+            "time": 0.4166666666666667,
+            "pixel": 4269707982
+          },
+          {
+            "time": 0.75,
+            "pixel": 265482593
+          },
+          {
+            "time": 1.0833333333333333,
+            "pixel": 1469053618
+          }
+        ],
+        "witnesses": [
+          {
+            "source": "http://127.0.0.1:4173/media/forest-breathing.mp4?v=2.3",
+            "time": 0,
+            "ready": 4,
+            "opacity": "1"
+          },
+          {
+            "source": "http://127.0.0.1:4173/media/forest-breathing.mp4?v=2.3",
+            "time": 0.4166666666666667,
+            "ready": 4,
+            "opacity": "1"
+          },
+          {
+            "source": "http://127.0.0.1:4173/media/forest-breathing.mp4?v=2.3",
+            "time": 0.75,
+            "ready": 4,
+            "opacity": "1"
+          },
+          {
+            "source": "http://127.0.0.1:4173/media/forest-breathing.mp4?v=2.3",
+            "time": 1.0833333333333333,
+            "ready": 4,
+            "opacity": "1"
+          }
+        ]
+      }
+    }
+  ],
+  "hostDisplay": [
+    {
+      "requested": [
+        {
+          "name": "Playwright",
+          "activated": true
+        }
+      ],
+      "frontmost": "Playwright",
+      "displays": [
+        {
+          "frame": {
+            "origin": {
+              "x": 0,
+              "y": 0
+            },
+            "size": {
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          "visible": {
+            "origin": {
+              "x": 0,
+              "y": 85
+            },
+            "size": {
+              "width": 1920,
+              "height": 970
+            }
+          },
+          "scale": 1
+        }
+      ]
+    }
+  ],
+  "applicationBuildInputsUnchanged": true,
+  "mediaUnchanged": true,
+  "historicalIntermittentFailureCausallyResolved": false,
+  "physicalSafariCertified": false,
+  "mergeAuthorized": false,
+  "deploymentAuthorized": false,
+  "knownFailures": [
+    {
+      "file": "cinema.spec.ts",
+      "title": "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "nativeRafGapMs": 3762,
+      "focusAtCollection": true,
+      "visibilityAtCollection": "visible",
+      "photoPhases": [
+        {
+          "at": 10039,
+          "phase": "preparing",
+          "progress": "0",
+          "dialogOpen": true
+        },
+        {
+          "at": 13805,
+          "phase": "moving",
+          "progress": "0",
+          "dialogOpen": true
+        },
+        {
+          "at": 17281,
+          "phase": "settled",
+          "dialogOpen": true
+        }
+      ],
+      "media": [],
+      "clipStateAtCollection": [],
+      "classification": "Unresolved native timing/presentation observation; no causal product fix or harmless-CI classification established.",
+      "assertion": "Discovery heading not visible within14000ms; preparation begins10039ms, movement13805ms, settlement17281ms."
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "nativeRafGapMs": 2521,
+      "focusAtCollection": true,
+      "visibilityAtCollection": "visible",
+      "photoPhases": [],
+      "media": [
+        {
+          "clip": "forest-understory.mp4?v=2.3",
+          "time": 0.5743610769999377,
+          "ready": 4,
+          "network": 1,
+          "paused": false,
+          "error": null,
+          "buffered": [
+            [
+              0,
+              6.042
+            ]
+          ],
+          "frames": 148
+        }
+      ],
+      "clipStateAtCollection": [
+        {
+          "clip": "understory",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "true",
+          "clipReason": "ended",
+          "clipCycles": "1",
+          "loopHold": "false"
+        }
+      ],
+      "classification": "Unresolved native timing/presentation observation; no causal product fix or harmless-CI classification established.",
+      "assertion": "Understory: one advancing presentation callback within2500ms; minimum6 unchanged. This is the first sampled pose, before this test performs pixel readback."
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "1512x982 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "nativeRafGapMs": 2375,
+      "focusAtCollection": true,
+      "visibilityAtCollection": "visible",
+      "photoPhases": [],
+      "media": [
+        {
+          "clip": "forest-breathing.mp4?v=2.3",
+          "time": 5.482653118999938,
+          "ready": 4,
+          "network": 1,
+          "paused": false,
+          "error": null,
+          "buffered": [
+            [
+              0,
+              6.042
+            ]
+          ],
+          "frames": 145
+        }
+      ],
+      "clipStateAtCollection": [
+        {
+          "clip": "breathing",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "true",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        },
+        {
+          "clip": "understory",
+          "clipState": "idle",
+          "clipReady": "false",
+          "frameStaged": "false",
+          "stillReady": "true",
+          "clipReason": "",
+          "clipCycles": "0",
+          "loopHold": "false"
+        }
+      ],
+      "classification": "Unresolved native timing/presentation observation; no causal product fix or harmless-CI classification established.",
+      "assertion": "Breathing: only one distinct hash from three actual pixel samples; minimum3 unchanged. Earlier Understory poses/revisits completed."
+    },
+    {
+      "file": "v23.spec.ts",
+      "title": "390x664 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "nativeRafGapMs": 1718,
+      "focusAtCollection": true,
+      "visibilityAtCollection": "visible",
+      "photoPhases": [],
+      "media": [
+        {
+          "clip": "forest-understory.mp4?v=2.3",
+          "time": 0,
+          "ready": 4,
+          "network": 1,
+          "paused": false,
+          "error": null,
+          "buffered": [
+            [
+              0,
+              6.042
+            ]
+          ],
+          "frames": 145
+        }
+      ],
+      "clipStateAtCollection": [
+        {
+          "clip": "understory",
+          "clipState": "playing",
+          "clipReady": "true",
+          "frameStaged": "true",
+          "stillReady": "true",
+          "clipReason": "ended",
+          "clipCycles": "1",
+          "loopHold": "false"
+        }
+      ],
+      "classification": "Unresolved native timing/presentation observation; no causal product fix or harmless-CI classification established.",
+      "assertion": "Phone EN Understory: one advancing presentation callback within2500ms; minimum6 unchanged."
+    }
+  ],
+  "interpretation": "Complete native suite executed once on the final public candidate:147pass4fail1expectedskip. All15new2.5.3casespass. No full rerun or deadline/assertion relaxation. Earlier isolated passes do not erase current failures.",
+  "readiness": {
+    "pullRequestReviewReady": true,
+    "productionReady": false,
+    "reason": "Four legacy native timing/presentation assertions remain failing; actual Safari impact and causal fixes are unverified. No merge/deployment approval."
+  }
+}

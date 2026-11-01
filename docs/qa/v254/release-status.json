@@ -1,0 +1,33 @@
+{
+  "releaseDeployed": false,
+  "confirmed254": false,
+  "liveVerifiedBy": "verified-TLS HTTP with inherited managed CA; not a browser playback certification",
+  "live": [
+    {
+      "locale": "lv",
+      "status": 200,
+      "version": "2.5.2",
+      "at": "2026-11-01T11:17:58Z"
+    },
+    {
+      "locale": "en",
+      "status": 200,
+      "version": "2.5.2",
+      "at": "2026-11-01T11:17:58Z"
+    }
+  ],
+  "mainSHA": "17bbb92af34fa610b4f28b825d59d1d2308a2b53",
+  "nativeRun": "https://github.com/aigars-avotins/piepe/actions/runs/41299379383",
+  "nativeConclusion": "failure",
+  "nativeSourceSHA": "733835981d60202d3b3fe460eab8e56d9006b802",
+  "productionBrowserLimitation": "Local Chromium reports ERR_CERT_AUTHORITY_INVALID through managed proxy, including task-scoped NSS public-CA import; TLS verification was never disabled. No254 deployment occurred.",
+  "existingWorker": "piepe",
+  "activeDeployment": "e52ab75c-ae40-4749-ac9c-815cc4393776",
+  "activeWorkerVersions": [
+    {
+      "version_id": "d83207f4-4f22-4c5f-8315-0b6097693fe8",
+      "percentage": 100
+    }
+  ],
+  "rollbackVersion": "d83207f4-4f22-4c5f-8315-0b6097693fe8"
+}

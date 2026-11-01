@@ -1,0 +1,86 @@
+{
+  "before": [
+    {
+      "args": {
+        "mobile": false,
+        "locale": "lv"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(229, 217, 189) none 3px"
+    },
+    {
+      "args": {
+        "mobile": false,
+        "locale": "en"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(229, 217, 189) none 3px"
+    },
+    {
+      "args": {
+        "mobile": true,
+        "locale": "lv"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(229, 217, 189) none 3px"
+    },
+    {
+      "args": {
+        "mobile": true,
+        "locale": "en"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(229, 217, 189) none 3px"
+    }
+  ],
+  "after": [
+    {
+      "args": {
+        "mobile": false,
+        "locale": "lv"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(242, 215, 162) solid 3px"
+    },
+    {
+      "args": {
+        "mobile": false,
+        "locale": "en"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(242, 215, 162) solid 3px"
+    },
+    {
+      "args": {
+        "mobile": true,
+        "locale": "lv"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(242, 215, 162) solid 3px"
+    },
+    {
+      "args": {
+        "mobile": true,
+        "locale": "en"
+      },
+      "focusVisible": true,
+      "style": "rgb(234, 232, 223) none 3px",
+      "background": "rgba(235, 218, 173, 0.06)",
+      "markerOutline": "rgb(242, 215, 162) solid 3px"
+    }
+  ]
+}

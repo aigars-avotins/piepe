@@ -1,0 +1,212 @@
+{
+  "browser": "system Chromium154 on Linux, headless",
+  "notSafari": true,
+  "distinctPassingScenarios": 27,
+  "coverage": "21 new scenarios +2 existing decoded-staging +4 existing cold-opening; results combined across bounded focused invocations, not one full-suite execution",
+  "finalStyleOnlyCheck": "Phone icon-only cue restored after native run;4 phone readability +1 folding pass on final style",
+  "environmentRepairs": [
+    "npm cache moved to workspace without modifying dependencies",
+    "installed Playwright FFmpeg cache path selected; cold tests rerun unchanged4/4"
+  ],
+  "testSetupCorrection": "New folding assertion now waits for actual data-scene after IntersectionObserver before enforcing unchanged overlap bounds; initial failure retained in QA description",
+  "checks": {
+    "typecheck": "passed",
+    "eslint": "passed",
+    "workerTests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "productionBuild": "passed"
+  },
+  "cases": [
+    {
+      "file": "tests/v253.spec.ts",
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 2.7,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v253.spec.ts",
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 2.7,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 390x844 \u203a lv: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.5,
+      "log": "final-cue-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 390x844 \u203a en: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.2,
+      "log": "final-cue-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 430x932 \u203a lv: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.3,
+      "log": "final-cue-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 430x932 \u203a en: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.3,
+      "log": "final-cue-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 800x900 \u203a lv: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.5,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 800x900 \u203a en: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.5,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 1024x768 \u203a lv: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.7,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 1024x768 \u203a en: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.6,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 1440x900 \u203a lv: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.7,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 readability 1440x900 \u203a en: body and secondary copy remain readable across the journey and field note",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 3.9,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 cinema comparison 390x844 \u203a before253: en actual moving frames, repeated visits and discovery",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 19.3,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 cinema comparison 390x844 \u203a candidate254: en actual moving frames, repeated visits and discovery",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 19.4,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 cinema comparison 800x900 \u203a candidate254: lv actual moving frames, repeated visits and discovery",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 20.4,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 cinema comparison 800x900 \u203a before253: lv actual moving frames, repeated visits and discovery",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 21.0,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 cinema comparison 1512x982 \u203a before253: en actual moving frames, repeated visits and discovery",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 22.7,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 cinema comparison 1512x982 \u203a candidate254: en actual moving frames, repeated visits and discovery",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 22.7,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 static reduced lv: brighter fallbacks preserve preference and note access",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 0.774,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 static reduced en: brighter fallbacks preserve preference and note access",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 0.778,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 static save-data lv: brighter fallbacks preserve preference and note access",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 0.851,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 static save-data en: brighter fallbacks preserve preference and note access",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 0.775,
+      "log": "final-local-tests.log"
+    },
+    {
+      "file": "tests/v254.spec.ts",
+      "title": "2.5.4 folding and landscape \u203a caption and note controls stay onstage through representative touch viewport changes",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 1.7,
+      "log": "final-cue-tests.log"
+    },
+    {
+      "file": "tests/v251.spec.ts",
+      "title": "2.5.1 cold 1512x982 \u203a lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 10.4,
+      "log": "cold-tests.log"
+    },
+    {
+      "file": "tests/v251.spec.ts",
+      "title": "2.5.1 cold 1512x982 \u203a en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 10.2,
+      "log": "cold-tests.log"
+    },
+    {
+      "file": "tests/v251.spec.ts",
+      "title": "2.5.1 cold 390x664 \u203a lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 8.7,
+      "log": "cold-tests.log"
+    },
+    {
+      "file": "tests/v251.spec.ts",
+      "title": "2.5.1 cold 390x664 \u203a en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "latestFocusedResult": "passed",
+      "durationSeconds": 8.7,
+      "log": "cold-tests.log"
+    }
+  ]
+}

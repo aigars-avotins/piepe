@@ -1,0 +1,217 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/41098371858",
+  "sourceSHA": "cfefac9b745fcf78b848210428d0974347bb16a2",
+  "chromium": {
+    "stats": {
+      "startTime": "2026-10-30T17:25:08.124Z",
+      "duration": 866215.64,
+      "expected": 152,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "planned": 152,
+    "caseCount": 152,
+    "newCases": 15,
+    "ciBuildFilesIdentical": 57
+  },
+  "native": {
+    "fullAttempt": {
+      "planned": 152,
+      "completed": 146,
+      "passed": 143,
+      "failed": 2,
+      "expectedSkip": 1,
+      "unfinished": 6,
+      "reportSource": "native job log; JSON reporter interrupted at job cap",
+      "jobLimitMinutes": 20,
+      "fullSuiteGreen": false
+    },
+    "focusedCompletion": {
+      "run": "https://github.com/aigars-avotins/piepe/actions/runs/41103135854",
+      "sourceSHA": "bfbf1b5e0baea71e97a7ad253d908b10f1d1e644",
+      "stats": {
+        "startTime": "2026-10-30T18:05:03.164Z",
+        "duration": 162629.376,
+        "expected": 11,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "file": "cinema.spec.ts",
+          "title": "Escape before the photo clock starts cancels a pending decode without waiting or an unhandled rejection",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "photo-clock.spec.ts",
+          "title": "photo clock 1512x982 / late preparation preserves the beginning of the camera trajectory",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "photo-clock.spec.ts",
+          "title": "photo clock 390x664 / late preparation preserves the beginning of the camera trajectory",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v23.spec.ts",
+          "title": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+          "status": "failed",
+          "errors": [
+            "Error: locator.evaluate: Error: No advancing presented video frames: {\"phase\":\"cadence\",\"src\":\"http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3\",\"time\":4.335032774999974,\"paused\":false,\"ended\":false,\"ready\":4,\"connected\":true,\"reason\":\"ended\",\"cycles\":\"1\",\"held\":\"false\",\"totalFrames\":290,\"frames\":[{\"time\":2,\"presented\":8,\"phase\":\"cadence\"},{\"time\":4,\"presented\":9,\"phase\":\"cadence\"}]}\n\n  41 |     return opacity\n  42 |   })).toBeGreaterThan(.98)\n> 43 |   return layer.locator('video').evaluate(async (video: HTMLVideoElement) => {\n     |                                 ^\n  44 |     let opacity = 1\n  45 |     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)\n  46 |     const r = video.getBoundingClientRect(), scale = Math.max(r.width / video.videoWidth, r.height / video.videoHeight)\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:43:33)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:179:24"
+          ]
+        },
+        {
+          "file": "v252.spec.ts",
+          "title": "2.5.2 native journey 1512x982 / wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v252.spec.ts",
+          "title": "2.5.2 native journey 1512x982 / native scrolling leaves a genuinely buffering film",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v252.spec.ts",
+          "title": "2.5.2 native journey 1512x982 / native scrolling leaves a genuinely error film",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v252.spec.ts",
+          "title": "2.5.2 native journey 390x664 / wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v252.spec.ts",
+          "title": "2.5.2 native journey 390x664 / native scrolling leaves a genuinely buffering film",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v252.spec.ts",
+          "title": "2.5.2 native journey 390x664 / native scrolling leaves a genuinely error film",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v253.spec.ts",
+          "title": "desktop keyboard / lv: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls",
+          "status": "passed",
+          "errors": []
+        },
+        {
+          "file": "v253.spec.ts",
+          "title": "desktop keyboard / en: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls",
+          "status": "passed",
+          "errors": []
+        }
+      ]
+    },
+    "uniqueScenarioCoverageAcrossAttempts": {
+      "passed": 151,
+      "skipped": 1
+    },
+    "fullyValidated": false,
+    "coverageBeforeFinalIsolation": {
+      "passed": 150,
+      "skipped": 1,
+      "failed": 1
+    },
+    "isolatedDiagnostic": {
+      "run": "https://github.com/aigars-avotins/piepe/actions/runs/41106976080",
+      "sourceSHA": "7d1c285749c56d56569a841152eac0d9ee3e4c1b",
+      "stats": {
+        "startTime": "2026-10-30T18:28:33.591Z",
+        "duration": 54609.792,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "host": {
+        "requested": [
+          {
+            "name": "Playwright",
+            "activated": true
+          }
+        ],
+        "frontmost": "Playwright",
+        "displays": [
+          {
+            "frame": {
+              "origin": {
+                "x": 0,
+                "y": 0
+              },
+              "size": {
+                "width": 1920,
+                "height": 1080
+              }
+            },
+            "visible": {
+              "origin": {
+                "x": 0,
+                "y": 85
+              },
+              "size": {
+                "width": 1920,
+                "height": 970
+              }
+            },
+            "scale": 1
+          }
+        ],
+        "windows": [],
+        "displayError": "TypeError: ObjC.deepUnwrap($.CGWindowListCopyWindowInfo(17, 0)).filter is not a function. (In 'ObjC.deepUnwrap($.CGWindowListCopyWindowInfo(17, 0)).filter(window => /Playwright|MiniBrowser/.test(window.kCGWindowOwnerName || ''))', 'ObjC.deepUnwrap($.CGWindowListCopyWindowInfo(17, 0)).filter' is undefined)"
+      },
+      "maxFrameGap": 879,
+      "interpretation": "The same legacy LV cinema test passed in isolation without a product code change. This does not resolve the earlier load/cadence failures. Actual display bounds were obtained; WindowServer bounds were unavailable from this JXA binding, so occlusion is not excluded. The failed optional WindowServer query is removed from the final helper; display evidence remains."
+    },
+    "intermittentFailureUnresolved": true,
+    "previousRemainingFailure": "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+    "remainingFailures": [
+      "1512x982 rendering / awakening final frame docks and returns continuously at 1512x982",
+      "1512x982 repeatable cinema / lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "1512x982 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "390x664 repeatable cinema / en: visible moving frames across broad plateaus, three revisits, loops and reload"
+    ],
+    "finalPublicFullAttempt": {
+      "run": "https://github.com/aigars-avotins/piepe/actions/runs/41125840232",
+      "sourceSHA": "712bf6a624abc775cd12f5e8acc18cfeb04efd88",
+      "runner": "macos-15-intel",
+      "stats": {
+        "startTime": "2026-10-30T20:48:36.560Z",
+        "duration": 1131656.869,
+        "expected": 147,
+        "skipped": 1,
+        "unexpected": 4,
+        "flaky": 0
+      },
+      "caseCount": 152,
+      "actualStatuses": {
+        "passed": 147,
+        "failed": 4,
+        "skipped": 1
+      },
+      "newV253Cases": {
+        "passed": 15
+      },
+      "fullSuiteGreen": false,
+      "detailedReport": "public-native-validation.json"
+    }
+  },
+  "applicationSourceUnchangedAfterFullRun": true,
+  "readiness": {
+    "pullRequestReviewReady": true,
+    "productionReady": false,
+    "reason": "Four legacy native timing/presentation assertions remain failing; actual Safari impact and causal fixes are unverified. No merge/deployment approval."
+  }
+}

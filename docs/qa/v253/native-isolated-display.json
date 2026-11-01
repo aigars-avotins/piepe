@@ -1,0 +1,50 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/41106976080",
+  "sourceSHA": "7d1c285749c56d56569a841152eac0d9ee3e4c1b",
+  "stats": {
+    "startTime": "2026-10-30T18:28:33.591Z",
+    "duration": 54609.792,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "host": {
+    "requested": [
+      {
+        "name": "Playwright",
+        "activated": true
+      }
+    ],
+    "frontmost": "Playwright",
+    "displays": [
+      {
+        "frame": {
+          "origin": {
+            "x": 0,
+            "y": 0
+          },
+          "size": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "visible": {
+          "origin": {
+            "x": 0,
+            "y": 85
+          },
+          "size": {
+            "width": 1920,
+            "height": 970
+          }
+        },
+        "scale": 1
+      }
+    ],
+    "windows": [],
+    "displayError": "TypeError: ObjC.deepUnwrap($.CGWindowListCopyWindowInfo(17, 0)).filter is not a function. (In 'ObjC.deepUnwrap($.CGWindowListCopyWindowInfo(17, 0)).filter(window => /Playwright|MiniBrowser/.test(window.kCGWindowOwnerName || ''))', 'ObjC.deepUnwrap($.CGWindowListCopyWindowInfo(17, 0)).filter' is undefined)"
+  },
+  "maxFrameGap": 879,
+  "interpretation": "The same legacy LV cinema test passed in isolation without a product code change. This does not resolve the earlier load/cadence failures. Actual display bounds were obtained; WindowServer bounds were unavailable from this JXA binding, so occlusion is not excluded. The failed optional WindowServer query is removed from the final helper; display evidence remains."
+}

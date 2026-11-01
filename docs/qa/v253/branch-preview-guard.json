@@ -1,0 +1,7 @@
+{
+  "build": "6126c0c5-3d9f-4a61-b85b-03b7608c0bc5",
+  "messages": [
+    "[1793381030934, \"\\u2718 [ERROR] The name in your wrangler.jsonc file (piepe) must match the name of your Worker. Please update the name field in your wrangler.jsonc file.\"]"
+  ],
+  "productionUnchanged": true
+}

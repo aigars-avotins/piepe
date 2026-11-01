@@ -122,7 +122,9 @@ jobs:
     needs: checks
     # Native macOS media codecs remain part of every release validation.
     runs-on: macos-15-intel
-    timeout-minutes: 20
+    # The full native suite reached the 20-minute job cap before its final journeys.
+    # Budget setup/artifact time without relaxing any individual assertion deadline.
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7

@@ -1,0 +1,386 @@
+[
+  {
+    "phase": "before",
+    "width": 390,
+    "height": 844,
+    "locale": "en",
+    "source": "Actual unmodified playback/native browser wheel; no seeking, pausing or synthetic readiness",
+    "clips": [
+      {
+        "clip": "intro",
+        "times": [
+          0,
+          0.041667,
+          0.083333
+        ],
+        "current": 0.061482,
+        "ready": 4
+      },
+      {
+        "clip": "awakening",
+        "times": [
+          0.041667,
+          0.083333,
+          0.125
+        ],
+        "current": 0.140937,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 1,
+        "times": [
+          0.375,
+          0.416667,
+          0.458333
+        ],
+        "current": 0.475832,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "loop": true,
+        "times": [
+          0.291667,
+          0.333333,
+          0.375
+        ],
+        "current": 0.36362,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 1,
+        "times": [
+          0.416667,
+          0.458333,
+          0.5
+        ],
+        "current": 0.487546,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "loop": true,
+        "times": [
+          0.333333,
+          0.375,
+          0.416667
+        ],
+        "current": 0.407143,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 2,
+        "times": [
+          0.291667,
+          0.333333,
+          0.375
+        ],
+        "current": 0.388817,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 2,
+        "times": [
+          0.458333,
+          0.5,
+          0.541667
+        ],
+        "current": 0.553907,
+        "ready": 4
+      }
+    ],
+    "version": "2.5.3"
+  },
+  {
+    "phase": "before",
+    "width": 800,
+    "height": 900,
+    "locale": "lv",
+    "source": "Actual unmodified playback/native browser wheel; no seeking, pausing or synthetic readiness",
+    "clips": [
+      {
+        "clip": "intro",
+        "times": [
+          0.041667,
+          0.083333,
+          0.125
+        ],
+        "current": 0.142402,
+        "ready": 4
+      },
+      {
+        "clip": "awakening",
+        "times": [
+          0.041667,
+          0.083333,
+          0.125
+        ],
+        "current": 0.146798,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 1,
+        "times": [
+          0.416667,
+          0.458333,
+          0.5
+        ],
+        "current": 0.493432,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "loop": true,
+        "times": [
+          0.333333,
+          0.375,
+          0.416667
+        ],
+        "current": 0.415558,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 1,
+        "times": [
+          0.583333,
+          0.625,
+          0.666667
+        ],
+        "current": 0.694629,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "loop": true,
+        "times": [
+          0.541667,
+          0.583333,
+          0.625
+        ],
+        "current": 0.61271,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 2,
+        "times": [
+          0.291667,
+          0.333333,
+          0.375
+        ],
+        "current": 0.365354,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 2,
+        "times": [
+          0.708333,
+          0.75,
+          0.791667
+        ],
+        "current": 0.800219,
+        "ready": 4
+      }
+    ],
+    "version": "2.5.3"
+  },
+  {
+    "phase": "after",
+    "width": 390,
+    "height": 844,
+    "locale": "en",
+    "source": "Actual unmodified playback/native browser wheel; no seeking, pausing or synthetic readiness",
+    "clips": [
+      {
+        "clip": "intro",
+        "times": [
+          0.083333,
+          0.125,
+          0.166667
+        ],
+        "current": 0.164235,
+        "ready": 4
+      },
+      {
+        "clip": "awakening",
+        "times": [
+          0.041667,
+          0.083333,
+          0.125
+        ],
+        "current": 0.115441,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 1,
+        "times": [
+          0.375,
+          0.416667,
+          0.458333
+        ],
+        "current": 0.473965,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "loop": true,
+        "times": [
+          0.291667,
+          0.333333,
+          0.375
+        ],
+        "current": 0.36238,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 1,
+        "times": [
+          0.583333,
+          0.625,
+          0.666667
+        ],
+        "current": 0.650576,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "loop": true,
+        "times": [
+          0.458333,
+          0.5,
+          0.541667
+        ],
+        "current": 0.556126,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 2,
+        "times": [
+          0.375,
+          0.416667,
+          0.458333
+        ],
+        "current": 0.454265,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 2,
+        "times": [
+          0.541667,
+          0.583333,
+          0.625
+        ],
+        "current": 0.635432,
+        "ready": 4
+      }
+    ],
+    "version": "2.5.4"
+  },
+  {
+    "phase": "after",
+    "width": 800,
+    "height": 900,
+    "locale": "lv",
+    "source": "Actual unmodified playback/native browser wheel; no seeking, pausing or synthetic readiness",
+    "clips": [
+      {
+        "clip": "intro",
+        "times": [
+          0.083333,
+          0.125,
+          0.166667
+        ],
+        "current": 0.16281,
+        "ready": 4
+      },
+      {
+        "clip": "awakening",
+        "times": [
+          0.041667,
+          0.083333,
+          0.125
+        ],
+        "current": 0.10894,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 1,
+        "times": [
+          0.416667,
+          0.458333,
+          0.5
+        ],
+        "current": 0.483722,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "loop": true,
+        "times": [
+          0.291667,
+          0.333333,
+          0.375
+        ],
+        "current": 0.367877,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 1,
+        "times": [
+          0.625,
+          0.666667,
+          0.708333
+        ],
+        "current": 0.740394,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "loop": true,
+        "times": [
+          0.583333,
+          0.625,
+          0.666667
+        ],
+        "current": 0.662449,
+        "ready": 4
+      },
+      {
+        "clip": "understory",
+        "visit": 2,
+        "times": [
+          0.25,
+          0.291667,
+          0.333333
+        ],
+        "current": 0.320755,
+        "ready": 4
+      },
+      {
+        "clip": "breathing",
+        "visit": 2,
+        "times": [
+          0.625,
+          0.666667,
+          0.708333
+        ],
+        "current": 0.716219,
+        "ready": 4
+      }
+    ],
+    "version": "2.5.4"
+  }
+]

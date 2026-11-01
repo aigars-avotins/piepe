@@ -1,0 +1,30 @@
+[
+  {
+    "phase": "before",
+    "width": 390,
+    "recordingDurationSeconds": 33.24,
+    "chronologicalSamples": 33,
+    "samplingIntervalSeconds": 1
+  },
+  {
+    "phase": "before",
+    "width": 800,
+    "recordingDurationSeconds": 32.72,
+    "chronologicalSamples": 33,
+    "samplingIntervalSeconds": 1
+  },
+  {
+    "phase": "after",
+    "width": 390,
+    "recordingDurationSeconds": 33.28,
+    "chronologicalSamples": 33,
+    "samplingIntervalSeconds": 1
+  },
+  {
+    "phase": "after",
+    "width": 800,
+    "recordingDurationSeconds": 33.12,
+    "chronologicalSamples": 33,
+    "samplingIntervalSeconds": 1
+  }
+]
