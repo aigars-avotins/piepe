@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-11-01T12:21:45.462705+00:00",
+  "worker": "piepe",
+  "deploymentId": "8194d627-cda4-4ec9-895b-39d16e09f67b",
+  "versions": [
+    {
+      "version_id": "25c40836-38d9-4b86-b2bb-c4cf82947463",
+      "percentage": 100
+    }
+  ],
+  "createdOn": "2026-11-01T12:19:57.334651Z",
+  "releaseCommit": "b79a86cff4b708fdc96114c03f4fa27566501565",
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "version": "2.5.4",
+      "assets": [
+        "/assets/index-B_bEm5Yj.js",
+        "/assets/index-DKObstbk.css"
+      ]
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "version": "2.5.4",
+      "assets": [
+        "/assets/index-B_bEm5Yj.js",
+        "/assets/index-DKObstbk.css"
+      ]
+    }
+  ],
+  "publishedByOwnerException": true,
+  "fullyNativeReleaseValidated": false,
+  "ownerRequest": "bet vai vari izlaist to pārbaudi un publicēt tāpat?",
+  "preReleaseRollbackVersion": "d83207f4-4f22-4c5f-8315-0b6097693fe8",
+  "productionBrowserRun": "https://github.com/aigars-avotins/piepe/actions/runs/41306187778",
+  "testsRemovedOrWeakened": false,
+  "cloudflareConfigurationChanged": false,
+  "productionBrowserChecks": {
+    "chromium": {
+      "passed": 2,
+      "failed": 0
+    },
+    "nativeMacOSWebKit": {
+      "passed": 2,
+      "failed": 0
+    },
+    "notAReplacementForFullNativeRegression": true
+  },
+  "localBrowserTLSLimitationResolved": true,
+  "pr16AncestryInMain": true
+}

@@ -1,0 +1,65 @@
+{
+  "workflow": "https://github.com/aigars-avotins/piepe/actions/runs/41306187778",
+  "sourceSHA": "b79a86cff4b708fdc96114c03f4fa27566501565",
+  "mode": "production-only:2 locale journeys per browser; not the full or waived native regression suite",
+  "checks": [
+    {
+      "browser": "chromium",
+      "nativeMacOS": false,
+      "stats": {
+        "startTime": "2026-11-01T12:25:13.588Z",
+        "duration": 54341.062000000005,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "title": "lv: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "result": "passed",
+          "durationMs": 27575,
+          "errors": []
+        },
+        {
+          "title": "en: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "result": "passed",
+          "durationMs": 25919,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "nativeMacOS": true,
+      "stats": {
+        "startTime": "2026-11-01T12:26:57.174Z",
+        "duration": 130166.82899999998,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "title": "lv: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "result": "passed",
+          "durationMs": 59511,
+          "errors": []
+        },
+        {
+          "title": "en: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "result": "passed",
+          "durationMs": 64710,
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "nativeFullRegressionStillUnresolved": true,
+  "ownerApprovedException": true
+}

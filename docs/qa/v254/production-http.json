@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-11-01T12:23:16.540972+00:00",
+  "releaseCommit": "b79a86cff4b708fdc96114c03f4fa27566501565",
+  "tlsVerification": true,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "version": "2.5.4",
+      "language": "lv",
+      "assets": [
+        {
+          "path": "/assets/index-B_bEm5Yj.js",
+          "status": 200,
+          "bytes": 399775,
+          "sha256": "249abb99a339486f8685c227088a7163e065d7ec30e718e02a9b07cfeb9a3b2f",
+          "byteMatchesBuiltMain": true
+        },
+        {
+          "path": "/assets/index-DKObstbk.css",
+          "status": 200,
+          "bytes": 48637,
+          "sha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71",
+          "byteMatchesBuiltMain": true
+        }
+      ],
+      "securityHeaders": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-VFP1I41H3snmfF9I72opXJJyLSN1N9B+QKxCkxkeElA=' 'sha256-re4Jwkr1KG1vvrpAbyS2GH37zVRG2RS9G9J7EUtq/20='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "strict-transport-security": "max-age=2592000"
+      }
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "version": "2.5.4",
+      "language": "en",
+      "assets": [
+        {
+          "path": "/assets/index-B_bEm5Yj.js",
+          "status": 200,
+          "bytes": 399775,
+          "sha256": "249abb99a339486f8685c227088a7163e065d7ec30e718e02a9b07cfeb9a3b2f",
+          "byteMatchesBuiltMain": true
+        },
+        {
+          "path": "/assets/index-DKObstbk.css",
+          "status": 200,
+          "bytes": 48637,
+          "sha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71",
+          "byteMatchesBuiltMain": true
+        }
+      ],
+      "securityHeaders": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-VFP1I41H3snmfF9I72opXJJyLSN1N9B+QKxCkxkeElA=' 'sha256-re4Jwkr1KG1vvrpAbyS2GH37zVRG2RS9G9J7EUtq/20='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "strict-transport-security": "max-age=2592000"
+      }
+    },
+    {
+      "path": "/media/forest-reveal.mp4?v=2.3",
+      "rangeStatus": 206,
+      "rangeBytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/media/forest-awakening.mp4?v=2.3",
+      "rangeStatus": 206,
+      "rangeBytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/media/forest-understory.mp4?v=2.3",
+      "rangeStatus": 206,
+      "rangeBytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/media/forest-breathing.mp4?v=2.3",
+      "rangeStatus": 206,
+      "rangeBytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200
+    },
+    {
+      "path": "/no-such-page",
+      "status": 404
+    }
+  ],
+  "passed": true
+}
