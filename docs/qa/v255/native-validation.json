@@ -1,0 +1,119 @@
+{
+  "sourceSHA": "a04d18706e222c12f5f403528ef9ca25803ffc19",
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/42038354887",
+  "artifactId": 13420356684,
+  "runner": "standard macos-15-intel, headed Playwright WebKit; not Safari app or physical iPhone",
+  "stats": {
+    "startTime": "2026-11-05T13:48:27.666Z",
+    "duration": 167474.542,
+    "expected": 17,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "title": "real sitemap and robots assets describe exactly the two crawlable canonical pages",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 3839
+    },
+    {
+      "title": "lv: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 4243
+    },
+    {
+      "title": "lv: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 4950
+    },
+    {
+      "title": "lv: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 6073
+    },
+    {
+      "title": "en: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 2128
+    },
+    {
+      "title": "en: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 2873
+    },
+    {
+      "title": "en: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 8049
+    },
+    {
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 35777
+    },
+    {
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 24314
+    },
+    {
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 16052
+    },
+    {
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 16631
+    },
+    {
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 8358
+    },
+    {
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 8280
+    },
+    {
+      "title": "2.5.5 lv: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 2667
+    },
+    {
+      "title": "2.5.5 lv: sharing metadata stays localized through note collection, locale change and browser history",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 3875
+    },
+    {
+      "title": "2.5.5 en: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 2688
+    },
+    {
+      "title": "2.5.5 en: sharing metadata stays localized through note collection, locale change and browser history",
+      "status": "expected",
+      "result": "passed",
+      "durationMs": 4190
+    }
+  ],
+  "scope": "17 focused scenarios; no full regression suite, retries or assertion changes"
+}
