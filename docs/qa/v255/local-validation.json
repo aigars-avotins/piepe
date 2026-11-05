@@ -1,0 +1,104 @@
+{
+  "browser": "Linux system Chromium",
+  "stats": {
+    "startTime": "2026-11-05T13:38:50.974Z",
+    "duration": 63241.631,
+    "expected": 17,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "title": "real sitemap and robots assets describe exactly the two crawlable canonical pages",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "lv: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "lv: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "lv: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "en: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "en: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "en: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "2.5.5 lv: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "2.5.5 lv: sharing metadata stays localized through note collection, locale change and browser history",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "2.5.5 en: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "2.5.5 en: sharing metadata stays localized through note collection, locale change and browser history",
+      "status": "expected",
+      "result": "passed"
+    }
+  ],
+  "checks": {
+    "typescript": "passed",
+    "eslint": "passed",
+    "workerTests": "11/11 passed",
+    "build": "passed"
+  }
+}

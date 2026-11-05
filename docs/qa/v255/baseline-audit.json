@@ -1,0 +1,722 @@
+{
+  "at": "2026-11-05T13:35:31.752632+00:00",
+  "pages": [
+    {
+      "locale": "lv",
+      "htmlBytes": 23516,
+      "title": "PIE.PE — Piepes un dzīvais mežs",
+      "meta": [
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0, viewport-fit=cover"
+        },
+        {
+          "name": "theme-color",
+          "content": "#0B1712"
+        },
+        {
+          "name": "description",
+          "content": "Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam."
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:site_name",
+          "content": "PIE.PE"
+        },
+        {
+          "property": "og:title",
+          "content": "PIE.PE — Piepes un dzīvais mežs"
+        },
+        {
+          "property": "og:description",
+          "content": "Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam."
+        },
+        {
+          "property": "og:url",
+          "content": "https://pie.pe/"
+        },
+        {
+          "property": "og:locale",
+          "content": "lv_LV"
+        },
+        {
+          "property": "og:locale:alternate",
+          "content": "en_GB"
+        },
+        {
+          "property": "og:image",
+          "content": "https://pie.pe/social-preview.jpg"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Plašs mežs ar slāņainām piepēm uz veca koka"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "PIE.PE — Piepes un dzīvais mežs"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://pie.pe/social-preview.jpg"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Plašs mežs ar slāņainām piepēm uz veca koka"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://pie.pe/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "lv",
+          "href": "https://pie.pe/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://pie.pe/en/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "x-default",
+          "href": "https://pie.pe/"
+        },
+        {
+          "rel": "preload",
+          "as": "font",
+          "type": "font/woff2",
+          "crossorigin": null,
+          "href": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2"
+        },
+        {
+          "rel": "preload",
+          "as": "font",
+          "type": "font/woff2",
+          "crossorigin": null,
+          "href": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2"
+        },
+        {
+          "rel": "icon",
+          "type": "image/x-icon",
+          "href": "/favicon.ico",
+          "sizes": "16x16 32x32 48x48"
+        },
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "/favicon.svg"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-touch-icon.png"
+        },
+        {
+          "rel": "manifest",
+          "href": "/site.webmanifest"
+        },
+        {
+          "rel": "preload",
+          "href": "/media/forest-final.jpg?v=2.3",
+          "as": "image",
+          "fetchpriority": "high"
+        },
+        {
+          "rel": "stylesheet",
+          "crossorigin": null,
+          "href": "/assets/index-DKObstbk.css"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/media/forest-breathing-poster.jpg?v=2.3"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/media/forest-poster.jpg?v=2.3",
+          "fetchpriority": "high"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/media/forest-final.jpg?v=2.3"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/brand-mark.svg"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/brand-wordmark.svg"
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/forest-breathing-poster.jpg?v=2.3",
+          "alt": "",
+          "width": "1920",
+          "height": "1080"
+        },
+        {
+          "class": "forest-still",
+          "src": "/media/forest-poster.jpg?v=2.3",
+          "alt": "",
+          "width": "1920",
+          "height": "1080",
+          "fetchpriority": "high"
+        },
+        {
+          "src": "/media/forest-final.jpg?v=2.3",
+          "alt": "",
+          "width": "1920",
+          "height": "1080"
+        },
+        {
+          "class": "asset-monitor",
+          "src": "/media/forest-final.jpg?v=2.3",
+          "alt": "",
+          "aria-hidden": "true"
+        },
+        {
+          "src": "/brand-mark.svg",
+          "alt": "",
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "class": "brand-wordmark",
+          "src": "/brand-wordmark.svg",
+          "alt": "pie.pe",
+          "width": "64",
+          "height": "34"
+        },
+        {
+          "src": "/wallpapers/previews/desktop.webp?v=2.2",
+          "alt": "Plašs mežs ar slāņainām piepēm uz veca koka",
+          "width": "800",
+          "height": "450",
+          "loading": "lazy"
+        },
+        {
+          "src": "/wallpapers/previews/mobile.webp?v=2.2",
+          "alt": "Vertikāls meža skats ar dzintarkrāsas piepēm uz sūnaina stumbra",
+          "width": "369",
+          "height": "800",
+          "loading": "lazy"
+        },
+        {
+          "src": "/brand-mark.svg",
+          "alt": "",
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "class": "brand-wordmark",
+          "src": "/brand-wordmark.svg",
+          "alt": "pie.pe",
+          "width": "64",
+          "height": "34"
+        },
+        {
+          "src": "/media/forest-final.jpg?v=2.3",
+          "loading": "lazy",
+          "alt": "",
+          "width": "1920",
+          "height": "1080"
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "pie.pe"
+        },
+        {
+          "tag": "h2",
+          "text": "Arī klusumāviss turpinās."
+        },
+        {
+          "tag": "h2",
+          "text": "Redzamais irtikai sākums."
+        },
+        {
+          "tag": "h2",
+          "text": "Kas ir piepe?"
+        },
+        {
+          "tag": "h3",
+          "text": "Sēnes augļķermenis"
+        },
+        {
+          "tag": "h3",
+          "text": "Mazā pasaule apakšpusē"
+        },
+        {
+          "tag": "h3",
+          "text": "Koksne dod vietu jaunam"
+        },
+        {
+          "tag": "h2",
+          "text": "Mežs paliek.Skatiens mainās."
+        },
+        {
+          "tag": "h2",
+          "text": "Paņem gabaliņu meža līdzi."
+        },
+        {
+          "tag": "h3",
+          "text": "Datoram"
+        },
+        {
+          "tag": "h3",
+          "text": "Telefonam"
+        },
+        {
+          "tag": "h2",
+          "text": "Maza piepe.Cita pasaule."
+        }
+      ],
+      "jsonLD": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://pie.pe/#webpage",
+          "name": "PIE.PE — Piepes un dzīvais mežs",
+          "description": "Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam.",
+          "url": "https://pie.pe/",
+          "inLanguage": "lv",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://pie.pe/#website",
+            "name": "PIE.PE",
+            "url": "https://pie.pe/",
+            "description": "Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam.",
+            "inLanguage": [
+              "lv",
+              "en"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "htmlBytes": 23376,
+      "title": "PIE.PE — Bracket fungi & the living forest",
+      "meta": [
+        {
+          "charset": "UTF-8"
+        },
+        {
+          "name": "viewport",
+          "content": "width=device-width, initial-scale=1.0, viewport-fit=cover"
+        },
+        {
+          "name": "theme-color",
+          "content": "#0B1712"
+        },
+        {
+          "name": "description",
+          "content": "Look closer at the living forest. A cinematic encounter with bracket fungi, their hidden life in wood, and free forest wallpapers."
+        },
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:site_name",
+          "content": "PIE.PE"
+        },
+        {
+          "property": "og:title",
+          "content": "PIE.PE — Bracket fungi & the living forest"
+        },
+        {
+          "property": "og:description",
+          "content": "Look closer at the living forest. A cinematic encounter with bracket fungi, their hidden life in wood, and free forest wallpapers."
+        },
+        {
+          "property": "og:url",
+          "content": "https://pie.pe/en/"
+        },
+        {
+          "property": "og:locale",
+          "content": "en_GB"
+        },
+        {
+          "property": "og:locale:alternate",
+          "content": "lv_LV"
+        },
+        {
+          "property": "og:image",
+          "content": "https://pie.pe/social-preview.jpg"
+        },
+        {
+          "property": "og:image:width",
+          "content": "1200"
+        },
+        {
+          "property": "og:image:height",
+          "content": "630"
+        },
+        {
+          "property": "og:image:alt",
+          "content": "Wide forest with layered bracket fungi on an old tree"
+        },
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:title",
+          "content": "PIE.PE — Bracket fungi & the living forest"
+        },
+        {
+          "name": "twitter:description",
+          "content": "Look closer at the living forest. A cinematic encounter with bracket fungi, their hidden life in wood, and free forest wallpapers."
+        },
+        {
+          "name": "twitter:image",
+          "content": "https://pie.pe/social-preview.jpg"
+        },
+        {
+          "name": "twitter:image:alt",
+          "content": "Wide forest with layered bracket fungi on an old tree"
+        }
+      ],
+      "links": [
+        {
+          "rel": "canonical",
+          "href": "https://pie.pe/en/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "lv",
+          "href": "https://pie.pe/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "en",
+          "href": "https://pie.pe/en/"
+        },
+        {
+          "rel": "alternate",
+          "hreflang": "x-default",
+          "href": "https://pie.pe/"
+        },
+        {
+          "rel": "preload",
+          "as": "font",
+          "type": "font/woff2",
+          "crossorigin": null,
+          "href": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2"
+        },
+        {
+          "rel": "icon",
+          "type": "image/x-icon",
+          "href": "/favicon.ico",
+          "sizes": "16x16 32x32 48x48"
+        },
+        {
+          "rel": "icon",
+          "type": "image/svg+xml",
+          "href": "/favicon.svg"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-touch-icon.png"
+        },
+        {
+          "rel": "manifest",
+          "href": "/site.webmanifest"
+        },
+        {
+          "rel": "preload",
+          "href": "/media/forest-final.jpg?v=2.3",
+          "as": "image",
+          "fetchpriority": "high"
+        },
+        {
+          "rel": "stylesheet",
+          "crossorigin": null,
+          "href": "/assets/index-DKObstbk.css"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/media/forest-breathing-poster.jpg?v=2.3"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/media/forest-poster.jpg?v=2.3",
+          "fetchpriority": "high"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/media/forest-final.jpg?v=2.3"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/brand-mark.svg"
+        },
+        {
+          "rel": "preload",
+          "as": "image",
+          "href": "/brand-wordmark.svg"
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/forest-breathing-poster.jpg?v=2.3",
+          "alt": "",
+          "width": "1920",
+          "height": "1080"
+        },
+        {
+          "class": "forest-still",
+          "src": "/media/forest-poster.jpg?v=2.3",
+          "alt": "",
+          "width": "1920",
+          "height": "1080",
+          "fetchpriority": "high"
+        },
+        {
+          "src": "/media/forest-final.jpg?v=2.3",
+          "alt": "",
+          "width": "1920",
+          "height": "1080"
+        },
+        {
+          "class": "asset-monitor",
+          "src": "/media/forest-final.jpg?v=2.3",
+          "alt": "",
+          "aria-hidden": "true"
+        },
+        {
+          "src": "/brand-mark.svg",
+          "alt": "",
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "class": "brand-wordmark",
+          "src": "/brand-wordmark.svg",
+          "alt": "pie.pe",
+          "width": "64",
+          "height": "34"
+        },
+        {
+          "src": "/wallpapers/previews/desktop.webp?v=2.2",
+          "alt": "Wide forest with layered bracket fungi on an old tree",
+          "width": "800",
+          "height": "450",
+          "loading": "lazy"
+        },
+        {
+          "src": "/wallpapers/previews/mobile.webp?v=2.2",
+          "alt": "Portrait forest with amber bracket fungi on a mossy trunk",
+          "width": "369",
+          "height": "800",
+          "loading": "lazy"
+        },
+        {
+          "src": "/brand-mark.svg",
+          "alt": "",
+          "width": "40",
+          "height": "40"
+        },
+        {
+          "class": "brand-wordmark",
+          "src": "/brand-wordmark.svg",
+          "alt": "pie.pe",
+          "width": "64",
+          "height": "34"
+        },
+        {
+          "src": "/media/forest-final.jpg?v=2.3",
+          "loading": "lazy",
+          "alt": "",
+          "width": "1920",
+          "height": "1080"
+        }
+      ],
+      "headings": [
+        {
+          "tag": "h1",
+          "text": "pie.pe"
+        },
+        {
+          "tag": "h2",
+          "text": "Even in stillness,life goes on."
+        },
+        {
+          "tag": "h2",
+          "text": "What you seeis a beginning."
+        },
+        {
+          "tag": "h2",
+          "text": "What is a bracket fungus?"
+        },
+        {
+          "tag": "h3",
+          "text": "A fruiting body"
+        },
+        {
+          "tag": "h3",
+          "text": "A hidden underside"
+        },
+        {
+          "tag": "h3",
+          "text": "Wood becomes a beginning"
+        },
+        {
+          "tag": "h2",
+          "text": "The forest stays.Your gaze changes."
+        },
+        {
+          "tag": "h2",
+          "text": "Take a little forest with you."
+        },
+        {
+          "tag": "h3",
+          "text": "Desktop"
+        },
+        {
+          "tag": "h3",
+          "text": "Phone"
+        },
+        {
+          "tag": "h2",
+          "text": "A small shelf.Another world."
+        }
+      ],
+      "jsonLD": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://pie.pe/en/#webpage",
+          "name": "PIE.PE — Bracket fungi & the living forest",
+          "description": "Look closer at the living forest. A cinematic encounter with bracket fungi, their hidden life in wood, and free forest wallpapers.",
+          "url": "https://pie.pe/en/",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://pie.pe/#website",
+            "name": "PIE.PE",
+            "url": "https://pie.pe/",
+            "description": "Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam.",
+            "inLanguage": [
+              "lv",
+              "en"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "http": [
+    {
+      "url": "https://pie.pe/",
+      "status": 200,
+      "location": null,
+      "type": "text/html",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://pie.pe/en/",
+      "status": 200,
+      "location": null,
+      "type": "text/html",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://pie.pe/en",
+      "status": 307,
+      "location": "/en/",
+      "type": null,
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://pie.pe/index.html",
+      "status": 307,
+      "location": "/",
+      "type": null,
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://pie.pe/en/index.html",
+      "status": 307,
+      "location": "/en/",
+      "type": null,
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://pie.pe/robots.txt",
+      "status": 200,
+      "location": null,
+      "type": "text/plain",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://pie.pe/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "type": "application/xml",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://pie.pe/not-a-real-page",
+      "status": 404,
+      "location": null,
+      "type": null,
+      "xRobotsTag": null
+    },
+    {
+      "url": "http://pie.pe/",
+      "status": 301,
+      "location": "https://pie.pe/",
+      "type": "text/html; charset=UTF-8",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://www.pie.pe/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ],
+  "baselineSHA": "37b01367143e994cc17bb1077d98559714f5a599",
+  "baselineWorkerVersion": "c6f3ea58-676c-4051-b049-9a317af006f9",
+  "frameworkCommit": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+  "initialHTMLMatchesBaselineBuild": {
+    "lv": true,
+    "en": true
+  }
+}

@@ -1,7 +1,7 @@
 export type Locale = 'lv' | 'en'
 export const english = {
-  title: 'PIE.PE — Bracket fungi & the living forest',
-  description: 'Look closer at the living forest. A cinematic encounter with bracket fungi, their hidden life in wood, and free forest wallpapers.',
+  title: 'PIE.PE — What is a bracket fungus? The living forest',
+  description: 'Meet bracket fungi, also called shelf fungi, and the mycelium hidden in wood. Explore a cinematic forest, a field note and free forest wallpapers.',
   forest: 'The living forest', language: 'Language', chapters: ['Surface', 'Beneath', 'Encounter', 'Return'],
   skipContent: 'Skip to content', skipIntro: 'Skip intro', replay: 'Replay introduction', replayLabel: 'Replay introduction',
   homeLabel: 'pie.pe — return to forest', heroLabel: 'An invitation to look closer', heroThought: 'The forest keeps more than it shows.',
@@ -27,7 +27,7 @@ export const english = {
   mediaUnavailable: 'The film is resting. You can still explore the forest.',
   forestSound: 'Forest sound', muteSound: 'Mute forest sound', enableSound: 'Enable forest sound', soundPlaying: 'Quiet forest ambience is playing.', soundWaiting: 'Forest sound starts with your first interaction.', soundMuted: 'Forest sound is off.', soundUnavailable: 'Forest sound could not load. You can try again.',
   factsTitle: 'What is a bracket fungus?', factsIntro: 'A shelf on a tree. A life mostly out of sight.',
-  factsDefinition: 'In a forest, a bracket fungus may form a shelf on a trunk or fallen branch. This fruiting body is only part of the fungus: a network of fine threads, called mycelium, can spread through the wood.',
+  factsDefinition: 'A bracket fungus, also called a shelf fungus, may form a shelf on a trunk or fallen branch. This fruiting body is only part of the fungus: a network of fine threads, called mycelium, can spread through the wood.',
   factsContext: 'A careful look can start with simple questions: is the bracket firm or soft, solitary or clustered, on standing wood or a fallen branch? Such details help describe an encounter, but they are not enough to name a species. Field note 001 offers three ways to practise that attention: looking at the surface, considering what lies beneath, and carrying a different gaze back into daily life.',
   glossaryTitle: 'Three words for looking closer',
   glossaryObservation: 'A fruiting body’s size does not reveal how far its hyphae extend through the wood. Pore shape and size are only some of the features specialists use to identify a fungus.',
@@ -48,8 +48,8 @@ export const english = {
 }
 export type Messages = typeof english
 const latvian: Messages = {
-  title: 'PIE.PE — Piepes un dzīvais mežs',
-  description: 'Paskaties tuvāk dzīvajam mežam. Kinematogrāfiska satikšanās ar piepēm, to dzīvi koksnē un bezmaksas meža tapetes tavam ekrānam.',
+  title: 'PIE.PE — Kas ir piepe? Dzīvais mežs tuvplānā',
+  description: 'Kas ir piepe? Iepazīsti piepes uz kokiem un sēņotni koksnē. Ienāc dzīvajā mežā, ieskaties piezīmē un paņem līdzi bezmaksas meža tapeti.',
   forest: 'Dzīvais mežs', language: 'Valoda', chapters: ['Virsma', 'Dziļāk', 'Satikšanās', 'Atgriešanās'],
   skipContent: 'Pāriet uz saturu', skipIntro: 'Izlaist ievadu', replay: 'Atkārtot ievadfilmu', replayLabel: 'Atkārtot ievadfilmu',
   homeLabel: 'pie.pe — atgriezties mežā', heroLabel: 'Aicinājums paskatīties tuvāk', heroThought: 'Mežs glabā vairāk, nekā atklāj.',

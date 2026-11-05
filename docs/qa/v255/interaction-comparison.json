@@ -1,0 +1,42 @@
+[
+  {
+    "phase": "before",
+    "locale": "lv",
+    "noteTabs": "passed",
+    "download": "piepe-field-note-001-lv.txt",
+    "collectedState": "passed",
+    "localeHistory": "passed",
+    "closeFocus": "passed",
+    "errors": []
+  },
+  {
+    "phase": "before",
+    "locale": "en",
+    "noteTabs": "passed",
+    "download": "piepe-field-note-001-en.txt",
+    "collectedState": "passed",
+    "localeHistory": "passed",
+    "closeFocus": "passed",
+    "errors": []
+  },
+  {
+    "phase": "after",
+    "locale": "lv",
+    "noteTabs": "passed",
+    "download": "piepe-field-note-001-lv.txt",
+    "collectedState": "passed",
+    "localeHistory": "passed",
+    "closeFocus": "passed",
+    "errors": []
+  },
+  {
+    "phase": "after",
+    "locale": "en",
+    "noteTabs": "passed",
+    "download": "piepe-field-note-001-en.txt",
+    "collectedState": "passed",
+    "localeHistory": "passed",
+    "closeFocus": "passed",
+    "errors": []
+  }
+]
