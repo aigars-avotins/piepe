@@ -1,0 +1,114 @@
+{
+  "baselineSHA": "37b01367143e994cc17bb1077d98559714f5a599",
+  "frameworkSHA": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+  "builds": {
+    "before": {
+      "css": {
+        "path": "/assets/index-DKObstbk.css",
+        "bytes": 48637,
+        "gzipBytes": 10655,
+        "sha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71"
+      },
+      "js": {
+        "path": "/assets/index-B_bEm5Yj.js",
+        "bytes": 399775,
+        "gzipBytes": 135022,
+        "sha256": "249abb99a339486f8685c227088a7163e065d7ec30e718e02a9b07cfeb9a3b2f"
+      },
+      "html": {
+        "lv": {
+          "bytes": 23516
+        },
+        "en": {
+          "bytes": 23376
+        }
+      }
+    },
+    "after": {
+      "css": {
+        "path": "/assets/index-DKObstbk.css",
+        "bytes": 48637,
+        "gzipBytes": 10655,
+        "sha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71"
+      },
+      "js": {
+        "path": "/assets/index-BnSv9zRo.js",
+        "bytes": 399843,
+        "gzipBytes": 135046,
+        "sha256": "920bf5ba00c930d047150bcf8b25c304c7e30a172d60bd040a8fcc3983c3737c"
+      },
+      "html": {
+        "lv": {
+          "bytes": 23631
+        },
+        "en": {
+          "bytes": 23495
+        }
+      }
+    }
+  },
+  "media": [
+    {
+      "path": "public/media/forest-awakening.mp4",
+      "bytes": 8237084,
+      "sha256": "dffdfd61d2dc31f4dfe5dfa490ee57db1a3055f35bc2bc1387e54d8820b68cf2",
+      "matches254": true
+    },
+    {
+      "path": "public/media/forest-breathing.mp4",
+      "bytes": 7025165,
+      "sha256": "a3bc82771398b754d22273fbdd8d1023f04de0778ecef5b8b90ff8bdb64316ef",
+      "matches254": true
+    },
+    {
+      "path": "public/media/forest-reveal.mp4",
+      "bytes": 9212166,
+      "sha256": "6f3e32573ccff903740ebe58455e8fe579f280946041609c028b08ac50db64f5",
+      "matches254": true
+    },
+    {
+      "path": "public/media/forest-understory.mp4",
+      "bytes": 5846195,
+      "sha256": "d4a83a5cff4eff09e9fb14d1b8d7df8d0985a280a1a79e6123f3a2fdb360453f",
+      "matches254": true
+    }
+  ],
+  "images": [
+    {
+      "path": "public/media/forest-final.jpg",
+      "bytes": 396424,
+      "format": "JPEG",
+      "dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "public/social-preview.jpg",
+      "bytes": 133780,
+      "format": "JPEG",
+      "dimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "path": "public/wallpapers/previews/desktop.webp",
+      "bytes": 33198,
+      "format": "WEBP",
+      "dimensions": [
+        800,
+        450
+      ]
+    },
+    {
+      "path": "public/wallpapers/previews/mobile.webp",
+      "bytes": 30424,
+      "format": "WEBP",
+      "dimensions": [
+        369,
+        800
+      ]
+    }
+  ]
+}
