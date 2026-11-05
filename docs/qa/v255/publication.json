@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-05T14:00:55.773118+00:00",
+  "worker": "piepe",
+  "deploymentId": "1e1eee0b-3413-4ea6-8a3f-37142dd960b6",
+  "versions": [
+    {
+      "version_id": "91f0d894-e0be-4c8c-8d42-19c6e39c8b7d",
+      "percentage": 100
+    }
+  ],
+  "createdOn": "2026-11-05T13:58:57.230728Z",
+  "releaseCommit": "565d8c6572841eaf96488db2fd6f75ee824e543b",
+  "liveVersion": "2.5.5",
+  "rollbackVersion": "c6f3ea58-676c-4051-b049-9a317af006f9",
+  "productionBrowserRun": "https://github.com/aigars-avotins/piepe/actions/runs/42040930293",
+  "productionSmoke": {
+    "chromiumPassed": 2,
+    "nativeMacOSWebKitPassed": 2,
+    "failed": 0,
+    "flaky": 0
+  },
+  "focusedPreRelease": {
+    "chromiumPassed": 17,
+    "nativeMacOSWebKitPassed": 17
+  },
+  "routingSecurityMediaChanged": false
+}

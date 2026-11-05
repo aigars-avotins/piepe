@@ -1,0 +1,133 @@
+{
+  "checkedAt": "2026-11-05T14:00:53.440489+00:00",
+  "liveVersion": "2.5.5",
+  "TLSVerification": true,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "locale": "lv",
+      "title": "PIE.PE — Kas ir piepe? Dzīvais mežs tuvplānā",
+      "version": "2.5.5",
+      "initialHTMLByteMatchesBuild": true,
+      "canonical": "https://pie.pe/",
+      "oneValidConnectedJSONLD": true,
+      "jsonLDCspHashPresent": true,
+      "assets": [
+        {
+          "path": "/assets/index-BnSv9zRo.js",
+          "bytes": 399843,
+          "sha256": "920bf5ba00c930d047150bcf8b25c304c7e30a172d60bd040a8fcc3983c3737c",
+          "matchesBuild": true
+        },
+        {
+          "path": "/assets/index-DKObstbk.css",
+          "bytes": 48637,
+          "sha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71",
+          "matchesBuild": true
+        }
+      ],
+      "securityHeaders": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "strict-transport-security": "max-age=2592000"
+      }
+    },
+    {
+      "path": "/field-note-lv.txt",
+      "status": 200,
+      "matchesBuild": true
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "locale": "en",
+      "title": "PIE.PE — What is a bracket fungus? The living forest",
+      "version": "2.5.5",
+      "initialHTMLByteMatchesBuild": true,
+      "canonical": "https://pie.pe/en/",
+      "oneValidConnectedJSONLD": true,
+      "jsonLDCspHashPresent": true,
+      "assets": [
+        {
+          "path": "/assets/index-BnSv9zRo.js",
+          "bytes": 399843,
+          "sha256": "920bf5ba00c930d047150bcf8b25c304c7e30a172d60bd040a8fcc3983c3737c",
+          "matchesBuild": true
+        },
+        {
+          "path": "/assets/index-DKObstbk.css",
+          "bytes": 48637,
+          "sha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71",
+          "matchesBuild": true
+        }
+      ],
+      "securityHeaders": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "strict-transport-security": "max-age=2592000"
+      }
+    },
+    {
+      "path": "/field-note-en.txt",
+      "status": 200,
+      "matchesBuild": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "matchesUnchangedSource": true,
+      "contentType": "text/plain"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "matchesUnchangedSource": true,
+      "contentType": "application/xml"
+    },
+    {
+      "path": "/media/forest-reveal.mp4?v=2.3",
+      "rangeStatus": 206,
+      "bytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/media/forest-awakening.mp4?v=2.3",
+      "rangeStatus": 206,
+      "bytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/media/forest-understory.mp4?v=2.3",
+      "rangeStatus": 206,
+      "bytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/media/forest-breathing.mp4?v=2.3",
+      "rangeStatus": 206,
+      "bytes": 64,
+      "unsatisfiableRangeStatus": 416
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "path": "/social-preview.jpg",
+      "status": 200
+    },
+    {
+      "path": "/not-a-real-page",
+      "status": 404
+    }
+  ],
+  "allPassed": true,
+  "GoogleIndexingNotVerified": true
+}
