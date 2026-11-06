@@ -45,5 +45,6 @@
   "articleHtmlBytes": {
     "kas-ir-piepe": 11019,
     "en/what-is-a-bracket-fungus": 10712
-  }
+  },
+  "compressionMethod": "Python gzip level9, mtime0; comparison of identical compression settings, not a claim about Cloudflare wire encoding"
 }

@@ -1,0 +1,127 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/42188878230",
+  "testSource": "9d330d8bf45b5e9adb2d7428429bf61673bb9ac0",
+  "productEquivalentTo": "8d3d7bb2eb4c1c671b0a16ed136ec66262a09a50",
+  "productionDeployment": {
+    "id": "fe6a9e09-f027-4cbf-a9dd-a10fcc0506a0",
+    "created_on": "2026-11-06T08:23:25.531731Z",
+    "versions": [
+      {
+        "version_id": "d3a6090e-15b3-4ba9-a186-8ab6070f941f",
+        "percentage": 100
+      }
+    ]
+  },
+  "browsers": [
+    {
+      "browser": "chromium",
+      "runner": "standard ubuntu-24.04, Playwright container",
+      "stats": {
+        "startTime": "2026-11-06T08:38:31.180Z",
+        "duration": 56811.532999999996,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "errors": [],
+      "tests": [
+        {
+          "title": "lv: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 26130
+            }
+          ]
+        },
+        {
+          "title": "en: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 26031
+            }
+          ]
+        },
+        {
+          "title": "2.5.6 lv: production reading is indexable without JS and keeps the matching language route",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 1932
+            }
+          ]
+        },
+        {
+          "title": "2.5.6 en: production reading is indexable without JS and keeps the matching language route",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 1751
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "runner": "standard macos-15-intel (native foreground WebKit27.2)",
+      "stats": {
+        "startTime": "2026-11-06T08:39:13.268Z",
+        "duration": 93974.749,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "errors": [],
+      "tests": [
+        {
+          "title": "lv: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 40091
+            }
+          ]
+        },
+        {
+          "title": "en: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 37923
+            }
+          ]
+        },
+        {
+          "title": "2.5.6 lv: production reading is indexable without JS and keeps the matching language route",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 7099
+            }
+          ]
+        },
+        {
+          "title": "2.5.6 en: production reading is indexable without JS and keeps the matching language route",
+          "status": "expected",
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 6320
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
