@@ -1,0 +1,155 @@
+{
+  "method": "Three cold contexts per phase/locale, alternating home order, system Chromium390x844 DPR1,4x CPU throttle, local real Worker preview, unthrottled local network. Home measured through intro completion/fonts/annotation then one locale-switch. Sixteen new static pages measured through fonts and250ms paint allowance, three cold contexts each. Not Lighthouse, field CWV,75th-percentile INP or physical phone. Zero event timing means no event exceeded16ms observer threshold.",
+  "home": [
+    {
+      "locale": "lv",
+      "phase": "before",
+      "samples": 3,
+      "medianLcpMs": 8764,
+      "medianCls": 0.001355,
+      "medianBlockingMs": 247,
+      "maxSampledInteractionMs": 160
+    },
+    {
+      "locale": "lv",
+      "phase": "after",
+      "samples": 3,
+      "medianLcpMs": 8680,
+      "medianCls": 0.001355,
+      "medianBlockingMs": 185,
+      "maxSampledInteractionMs": 184
+    },
+    {
+      "locale": "en",
+      "phase": "before",
+      "samples": 3,
+      "medianLcpMs": 8860,
+      "medianCls": 0.002324,
+      "medianBlockingMs": 206,
+      "maxSampledInteractionMs": 200
+    },
+    {
+      "locale": "en",
+      "phase": "after",
+      "samples": 3,
+      "medianLcpMs": 8824,
+      "medianCls": 0.002324,
+      "medianBlockingMs": 180,
+      "maxSampledInteractionMs": 176
+    }
+  ],
+  "newPages": [
+    {
+      "path": "/en/field-notes/",
+      "samples": 3,
+      "medianLcpMs": 228,
+      "maxCls": 0,
+      "maxBlockingMs": 17
+    },
+    {
+      "path": "/en/field-notes/001/",
+      "samples": 3,
+      "medianLcpMs": 204,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/en/field-notes/002-chaga/",
+      "samples": 3,
+      "medianLcpMs": 228,
+      "maxCls": 0,
+      "maxBlockingMs": 42
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods/",
+      "samples": 3,
+      "medianLcpMs": 244,
+      "maxCls": 0,
+      "maxBlockingMs": 32
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi/",
+      "samples": 3,
+      "medianLcpMs": 220,
+      "maxCls": 0,
+      "maxBlockingMs": 26
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time/",
+      "samples": 3,
+      "medianLcpMs": 236,
+      "maxCls": 0,
+      "maxBlockingMs": 22
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket/",
+      "samples": 3,
+      "medianLcpMs": 244,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/en/forest-wallpapers/",
+      "samples": 3,
+      "medianLcpMs": 228,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/meza-foni/",
+      "samples": 3,
+      "medianLcpMs": 196,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/meza-piezimes/",
+      "samples": 3,
+      "medianLcpMs": 208,
+      "maxCls": 0,
+      "maxBlockingMs": 5
+    },
+    {
+      "path": "/meza-piezimes/001/",
+      "samples": 3,
+      "medianLcpMs": 224,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/meza-piezimes/002-caga/",
+      "samples": 3,
+      "medianLcpMs": 220,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe/",
+      "samples": 3,
+      "medianLcpMs": 228,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes/",
+      "samples": 3,
+      "medianLcpMs": 256,
+      "maxCls": 0,
+      "maxBlockingMs": 3
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks/",
+      "samples": 3,
+      "medianLcpMs": 232,
+      "maxCls": 0,
+      "maxBlockingMs": 0
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+      "samples": 3,
+      "medianLcpMs": 244,
+      "maxCls": 0,
+      "maxBlockingMs": 21
+    }
+  ]
+}

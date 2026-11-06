@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-06",
+  "method": "Public HTTPS GET with TLS verification through the managed session proxy. Only cited canonical URLs; no images copied.",
+  "sources": [
+    {
+      "id": "chaga",
+      "name": "Latvijas Daba — melnā spulgpiepe, čaga",
+      "url": "https://www.latvijasdaba.lv/senes/inonotus-obliquus-frfr-pilat/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "melnā spulgpiepe, čaga - Inonotus obliquus (Fr.:Fr.) Pilát - Sēnes - Latvijas daba"
+    },
+    {
+      "id": "chagaLife",
+      "name": "Latvijas valsts meži — Dekoratīvā slimība – čaga",
+      "url": "https://www.lvm.lv/jaunumi/2405-dekorativa-slimiba-caga",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Latvijas valsts meži - Dekoratīvā slimība – čaga"
+    },
+    {
+      "id": "birch",
+      "name": "Michael Kuo, MushroomExpert — Fomitopsis betulina",
+      "url": "https://www.mushroomexpert.com/fomitopsis_betulina.html",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Fomitopsis betulina (MushroomExpert.Com)"
+    },
+    {
+      "id": "birchName",
+      "name": "Latvijas Daba — brūnā bērzupiepe (Piptoporus betulinus)",
+      "url": "https://www.latvijasdaba.lv/senes/piptoporus-betulinus-bull-fr-p-karst/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "brūnā bērzupiepe - Piptoporus betulinus (Bull.: Fr.) P. Karst. - Sēnes - Latvijas daba"
+    },
+    {
+      "id": "sulphur",
+      "name": "Latvijas Daba — parastā sērpiepe",
+      "url": "https://www.latvijasdaba.lv/senes/laetiporus-sulphureus-bull-fr-murrill/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "parastā sērpiepe - Laetiporus sulphureus (Bull.: Fr.) Murrill - Sēnes - Latvijas daba"
+    },
+    {
+      "id": "sulphurGuide",
+      "name": "Pat O’Reilly, First Nature — Laetiporus sulphureus",
+      "url": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Laetiporus sulphureus, Chicken-of-the-Woods, identification"
+    },
+    {
+      "id": "tinder",
+      "name": "Latvijas Daba — īstā posapiepe",
+      "url": "https://www.latvijasdaba.lv/senes/fomes-fomentarius-l-fr-fr/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "īstā posapiepe - Fomes fomentarius (L.: Fr.) Fr. - Sēnes - Latvijas daba"
+    },
+    {
+      "id": "redBelt",
+      "name": "Latvijas Daba — parastā apmalpiepe",
+      "url": "https://www.latvijasdaba.lv/senes/fomitopsis-pinicola-sw-fr-p-karst/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "parastā apmalpiepe - Fomitopsis pinicola (Sw.: Fr.) P. Karst. - Sēnes - Latvijas daba"
+    },
+    {
+      "id": "artistName",
+      "name": "Latvijas Daba — parastā plakanpiepe",
+      "url": "https://www.latvijasdaba.lv/senes/ganoderma-applanatum-pers-pat/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "parastā plakanpiepe - Ganoderma applanatum (Pers.) Pat. - Sēnes - Latvijas daba"
+    },
+    {
+      "id": "artist",
+      "name": "Pat O’Reilly, First Nature — Ganoderma applanatum",
+      "url": "https://www.first-nature.com/fungi/ganoderma-applanatum.php",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Ganoderma applanatum, Artist's Fungus"
+    },
+    {
+      "id": "deadwood",
+      "name": "Müller & Bütler — A review of habitat thresholds for dead wood",
+      "url": "https://doi.org/10.1007/s10342-010-0400-5",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "A review of habitat thresholds for dead wood: a baseline for management recommendations in European forests | European Journal of Forest Research | Springer Nature Link"
+    },
+    {
+      "id": "deadwoodHabitats",
+      "name": "Humphrey & Bailey, Forest Research — Managing deadwood in forests and woodlands",
+      "url": "https://www.forestresearch.gov.uk/publications/managing-deadwood-in-forests-and-woodlands/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Managing deadwood in forests and woodlands - Forest Research"
+    },
+    {
+      "id": "decay",
+      "name": "Bai et al. — Spatial Heterogeneity of SOM Concentrations Associated with White-rot Versus Brown-rot Wood Decay",
+      "url": "https://doi.org/10.1038/s41598-017-14181-7",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Spatial Heterogeneity of SOM Concentrations Associated with White-rot Versus Brown-rot Wood Decay | Scientific Reports"
+    },
+    {
+      "id": "mycorrhiza",
+      "name": "Australian National Botanic Gardens — Mycorrhizas",
+      "url": "https://www.anbg.gov.au/fungi/mycorrhiza.html",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Mycorrhiza"
+    },
+    {
+      "id": "lucidum",
+      "name": "Latvijas Sarkanā grāmata — lakas plakanpiepe",
+      "url": "https://sarkanagramata.lu.lv/suga/lakas-plakanpiepe/",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Lakas plakanpiepe - Latvijas Sarkanā grāmata"
+    },
+    {
+      "id": "law",
+      "name": "MK noteikumi Nr. 396 — 1. pielikuma 9.27. punkts",
+      "url": "https://likumi.lv/ta/id/12821-noteikumi-par-ipasi-aizsargajamo-sugu-un-ierobezoti-izmantojamo-ipasi-aizsargajamo-sugu-sarakstu",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Noteikumi par īpaši aizsargājamo sugu un ierobežoti izmantojamo īpaši aizsargājamo sugu sarakstu"
+    },
+    {
+      "id": "taxonomy",
+      "name": "Cao, Wu & Dai — Species clarification of the prize medicinal Ganoderma mushroom “Lingzhi”",
+      "url": "https://doi.org/10.1007/s13225-012-0178-5",
+      "getStatus": 200,
+      "curlExit": 0,
+      "title": "Species clarification of the prize medicinal Ganoderma mushroom “Lingzhi” | Fungal Diversity | Springer Nature Link"
+    }
+  ]
+}

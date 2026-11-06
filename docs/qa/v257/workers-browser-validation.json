@@ -1,0 +1,12 @@
+{
+  "method": "Two focused Chromium cases on actual local Wrangler/Miniflare port 4272 using built _headers CSP, JavaScript enabled; wallpaper LV and protected-fungus note EN. Also validates screenshot attachments.",
+  "stats": {
+    "startTime": "2026-11-06T19:55:56.912Z",
+    "duration": 4519.029,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": []
+}

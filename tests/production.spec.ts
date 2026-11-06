@@ -1,9 +1,35 @@
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { messages, readingPath } from '../src/i18n'
-import { checkReading } from './readingChecks'
+import { checkReading, checkStaticMarkup } from './readingChecks'
+import { forestPages, forestPath } from '../src/forestPaths'
+import { forestMetadata } from '../src/ForestPage'
 import { nativeDiagnostics } from './nativeDiagnostics'
 nativeDiagnostics()
+
+// Runs only after the owner approves and deploys 2.5.7, like the existing smoke.
+for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: every released collection route is real JS-free HTML under the exact built CSP`, async ({ browser, request }, info) => {
+  test.setTimeout(60000)
+  const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } })
+  try {
+    const page = await context.newPage(), builtCsp = /Content-Security-Policy: (.+)/.exec(await readFile('dist/_headers', 'utf8'))![1]
+    for (const document of forestPages) {
+      const path = forestPath(locale, document), meta = forestMetadata(locale, document), response = await request.get(path)
+      expect(response.status()).toBe(200); expect(response.headers()['content-type']).toContain('text/html')
+      expect(response.headers()['content-security-policy']).toBe(builtCsp)
+      expect(await response.text()).toContain('<main id="reading"')
+      await page.goto(path); await expect(page).toHaveTitle(meta.title)
+      await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.7')
+      await expect(page.locator('h1')).toHaveText(meta.heading); await expect(page.locator('.reading-lead')).toHaveText(meta.lead)
+      await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://pie.pe' + path)
+      const other = locale === 'lv' ? 'en' : 'lv'
+      await expect(page.locator(`.reading-languages a[lang="${other}"]`)).toHaveAttribute('href', forestPath(other, document))
+      await checkStaticMarkup(page, { cloudflareAnalytics: true })
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+      if (document.kind !== 'note') await info.attach(`${locale}-production-${document.kind}`, { body: await page.screenshot({ fullPage: true, scale: 'css' }), contentType: 'image/png' })
+    }
+  } finally { await context.close() }
+})
 
 // Production smoke is manual-only; retain actual live playback evidence on success.
 test.use({ video: 'on' })
@@ -15,7 +41,7 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
   const raw=await request.get(path);expect(raw.status()).toBe(200);expect(await raw.text()).toContain(t.factsTitle)
   await page.goto(path)
-  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.6')
+  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.7')
   const local=await readFile('dist/index.html','utf8');const script=/src="(\/assets\/[^"]+\.js)"/.exec(local)![1]
   await expect(page.locator('head script[type="module"][src^="/assets/"]')).toHaveAttribute('src',script)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:13000})

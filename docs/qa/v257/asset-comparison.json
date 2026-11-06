@@ -1,0 +1,20 @@
+{
+  "baseline": {
+    "js": "/assets/index-BEkfRUAk.js",
+    "jsBytes": 400146,
+    "jsGzip9Bytes": 135120,
+    "css": "/assets/index-DKObstbk.css",
+    "cssBytes": 48637,
+    "cssSha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71"
+  },
+  "candidate": {
+    "js": "/assets/index-DuZ52GzY.js",
+    "jsBytes": 401204,
+    "jsGzip9Bytes": 135377,
+    "css": "/assets/index-DKObstbk.css",
+    "cssBytes": 48637,
+    "cssSha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71"
+  },
+  "newCssBytes": 4323,
+  "compressionMethod": "Python gzip level9, mtime0; not a claim about CDN wire encoding"
+}

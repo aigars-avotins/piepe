@@ -1,0 +1,22 @@
+[
+  {
+    "locale": "lv",
+    "width": 390,
+    "pixelIdentical": true
+  },
+  {
+    "locale": "lv",
+    "width": 1440,
+    "pixelIdentical": true
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "pixelIdentical": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "pixelIdentical": true
+  }
+]
