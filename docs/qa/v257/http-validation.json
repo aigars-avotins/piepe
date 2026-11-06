@@ -1,0 +1,309 @@
+{
+  "method": "Local Wrangler/Miniflare Workers Static Assets, unmodified wrangler.jsonc, real _headers and media Worker. No Cloudflare deployment.",
+  "date": "2026-11-06",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/kas-ir-piepe/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/kas-ir-piepe/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-foni/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-foni/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/forest-wallpapers/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/forest-wallpapers/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-piezimes/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-piezimes/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/field-notes/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/field-notes/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-piezimes/001/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-piezimes/001/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/field-notes/001/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/field-notes/001/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-piezimes/002-caga/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-piezimes/002-caga/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/field-notes/002-chaga/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/field-notes/002-chaga/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket/",
+      "status": 200,
+      "rawHtmlMatchesBuild": true,
+      "canonical": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "exactCspMatchesBuild": true,
+      "jsonLdHashAllowed": true
+    },
+    {
+      "path": "/meza-foni",
+      "status": 307,
+      "location": "/meza-foni/"
+    },
+    {
+      "path": "/en/forest-wallpapers",
+      "status": 307,
+      "location": "/en/forest-wallpapers/"
+    },
+    {
+      "path": "/meza-piezimes",
+      "status": 307,
+      "location": "/meza-piezimes/"
+    },
+    {
+      "path": "/en/field-notes",
+      "status": 307,
+      "location": "/en/field-notes/"
+    },
+    {
+      "path": "/meza-piezimes/001",
+      "status": 307,
+      "location": "/meza-piezimes/001/"
+    },
+    {
+      "path": "/en/field-notes/001",
+      "status": 307,
+      "location": "/en/field-notes/001/"
+    },
+    {
+      "path": "/meza-piezimes/002-caga",
+      "status": 307,
+      "location": "/meza-piezimes/002-caga/"
+    },
+    {
+      "path": "/en/field-notes/002-chaga",
+      "status": 307,
+      "location": "/en/field-notes/002-chaga/"
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe",
+      "status": 307,
+      "location": "/meza-piezimes/003-serpiepe/"
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods",
+      "status": 307,
+      "location": "/en/field-notes/003-chicken-of-the-woods/"
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes",
+      "status": 307,
+      "location": "/meza-piezimes/004-latvijas-piepes/"
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi",
+      "status": 307,
+      "location": "/en/field-notes/004-common-bracket-fungi/"
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks",
+      "status": 307,
+      "location": "/meza-piezimes/005-kritalas-un-laiks/"
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time",
+      "status": 307,
+      "location": "/en/field-notes/005-deadwood-and-time/"
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe",
+      "status": 307,
+      "location": "/meza-piezimes/006-lakas-plakanpiepe/"
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket",
+      "status": 307,
+      "location": "/en/field-notes/006-lacquered-bracket/"
+    },
+    {
+      "path": "/meza-piezimes/007/",
+      "status": 404
+    },
+    {
+      "path": "/en/field-notes/999/",
+      "status": 404
+    },
+    {
+      "path": "/meza-foni/missing/",
+      "status": 404
+    },
+    {
+      "path": "/en/forest-wallpapers/missing/",
+      "status": 404
+    },
+    {
+      "path": "/kas-ir-piepe/missing/",
+      "status": 404
+    },
+    {
+      "path": "/not-a-page/",
+      "status": 404
+    },
+    {
+      "path": "/media/forest-reveal.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-31/9212166",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-awakening.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-31/8237084",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-understory.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-31/5846195",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-breathing.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-31/7025165",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-reveal.mp4",
+      "status": 416,
+      "unsatisfiableRange": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "rawMatchesBuild": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "rawMatchesBuild": true
+    }
+  ]
+}

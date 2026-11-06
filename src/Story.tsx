@@ -2,6 +2,8 @@ import Arrow from './Arrow'
 import { useState } from 'react'
 import type { CSSProperties, MouseEvent, RefObject } from 'react'
 import { messages, readingPath } from './i18n'
+import { fieldNotesPath, wallpapersPath, forestNavigation } from './forestPaths'
+import ControlText from './ControlText'
 import type { Locale } from './i18n'
 export type NoteState = 'unseen' | 'discovered' | 'collected'
 type Props = {
@@ -28,7 +30,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <div className="cinema-content">
         <div className="chapter-label"><span className="label">{t.beneathLabel}</span><span className="chapter-line" /></div>
         <div className="bark-copy"><h2 id="bark-title">{t.beneathTitle}<br /><em>{t.beneathEm}</em></h2><p className="chapter-body">{t.beneathBody}</p><a className="line-link" href="#encounter">{t.continueJourney} <span aria-hidden="true"><Arrow direction="down" /></span></a>
-          <div className="cinema-controls">{!paused && cinemaErrors?.understory ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('understory')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+          <div className="cinema-controls">{!paused && cinemaErrors?.understory ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('understory')}><ControlText>{t.retryFilm}</ControlText></button> : <button className="text-button cinema-pause" onClick={onPause}><ControlText>{paused ? t.resumeFilm : t.pauseFilm}</ControlText></button>}</div>
         </div>
         <span className="depth-coordinate" aria-hidden="true">{t.depth}</span>
         </div>
@@ -40,7 +42,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
       </section>
       <section id="fungus-facts" className="fungus-facts" aria-labelledby="facts-title">
         <div className="facts-intro"><p className="label">pie.pe</p><h2 id="facts-title">{t.factsTitle}</h2><p>{t.factsIntro}</p></div>
-        <div className="facts-context"><p>{t.factsDefinition}</p><p>{t.factsContext}</p><a className="line-link" href={readingPath(locale)}>{t.readGuide} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a></div>
+        <div className="facts-context"><p>{t.factsDefinition}</p><p>{t.factsContext}</p><a className="line-link" href={readingPath(locale)}>{t.readGuide} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a><a className="line-link" href={fieldNotesPath(locale)}>{forestNavigation[locale].notes} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a></div>
         <div className="fact-observations">{t.facts.map((fact, index) => <article key={index}><span className="label">0{index + 1}</span><h3>{fact.title}</h3><p>{fact.text}</p></article>)}</div>
         <details className="fungus-vocabulary"><summary>{t.glossaryTitle}</summary><dl>{t.glossary.map(entry => <div key={entry.term}><dt>{entry.term}</dt><dd>{entry.definition}</dd></div>)}</dl><p className="vocabulary-note">{t.glossaryObservation}</p></details>
         <p className="art-note">{t.artNote}</p>
@@ -49,7 +51,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
       <section id="return" className="chapter return-chapter cinematic-chapter" data-scene="return" aria-labelledby="return-title">
         <div className="cinema-content">
         <div className="return-copy"><p className="label">{t.returnLabel}</p><h2 id="return-title">{t.returnTitle}<br /><em>{t.returnEm}</em></h2><p className="return-thought">{t.returnThought}</p><button className="line-link" onClick={onReturn}>{t.returnForest} <span aria-hidden="true"><Arrow direction="up" /></span></button><a className="line-link" href="#wallpapers">{t.endingWallpapers}<span aria-hidden="true"><Arrow direction="down" /></span></a>
-          <div className="cinema-controls">{!paused && cinemaErrors?.breathing ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('breathing')}>{t.retryFilm}</button> : <button className="text-button cinema-pause" onClick={onPause}>{paused ? t.resumeFilm : t.pauseFilm}</button>}</div>
+          <div className="cinema-controls">{!paused && cinemaErrors?.breathing ? <button className="text-button cinema-pause" onClick={() => onRetryCinema?.('breathing')}><ControlText>{t.retryFilm}</ControlText></button> : <button className="text-button cinema-pause" onClick={onPause}><ControlText>{paused ? t.resumeFilm : t.pauseFilm}</ControlText></button>}</div>
         </div>
         </div>
       </section>
@@ -60,8 +62,9 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
           <article><img src="/wallpapers/previews/mobile.webp?v=2.2" alt={t.wallpaperAltPhone} width="369" height="800" loading="lazy" /><h3>{t.phone}</h3><a className="line-link" href="/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2" download target="_blank" rel="noopener" onClick={() => setDownloadHint(true)}>{t.downloadPhone}<span aria-hidden="true"><Arrow direction="down" /></span></a><span className="resolution-link">1440 × 3120</span></article>
         </div>
         {downloadHint && <p className="download-hint" role="status">{t.saveHint}</p>}
+        <a className="line-link" href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a>
       </section>
     </main>
-            <footer inert={inactive}><a className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><span className="footer-edition">{t.forest} — 2026</span><button className="text-button motion-toggle" aria-pressed={paused} onClick={onPause}>{paused ? t.resume : t.pause} <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
+            <footer inert={inactive}><a className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><span className="footer-edition">{t.forest} — 2026</span><button className="text-button motion-toggle" aria-pressed={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
 </>
 }

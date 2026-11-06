@@ -5,6 +5,7 @@ const server = await createServer({ server: { middlewareMode: true }, appType: '
 try {
   const { renderPage, renderHead, renderNote } = await server.ssrLoadModule('/src/prerender.tsx')
   const { renderReadingDocument } = await server.ssrLoadModule('/src/ReadingPage.tsx')
+  const { renderForestDocuments } = await server.ssrLoadModule('/src/ForestPage.tsx')
   const { readingPath } = await server.ssrLoadModule('/src/i18n.ts')
   const template = await readFile('dist/index.html', 'utf8')
   if (!template.includes('<!-- locale:start -->')) throw new Error('Run a fresh Vite build before prerendering')
@@ -14,6 +15,9 @@ try {
   const readingCss = await readFile('src/reading.css', 'utf8')
   const readingStyle = `/assets/reading-${createHash('sha256').update(readingCss).digest('hex').slice(0, 16)}.css`
   await writeFile(`dist${readingStyle}`, readingCss)
+  const forestCss = await readFile('src/forestKnowledge.css', 'utf8')
+  const forestStyle = `/assets/forest-knowledge-${createHash('sha256').update(forestCss).digest('hex').slice(0, 16)}.css`
+  await writeFile(`dist${forestStyle}`, forestCss)
   const boot = await readFile('public/boot.js', 'utf8')
   const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`]
   for (const locale of ['lv', 'en']) {
@@ -35,8 +39,14 @@ try {
     hashes.push(`'sha256-${createHash('sha256').update(readingData).digest('base64')}'`)
     const readingDir = `dist${readingPath(locale)}`
     await mkdir(readingDir, { recursive: true }); await writeFile(`${readingDir}index.html`, readingHtml)
+    for (const document of renderForestDocuments(locale, [...appStyles, readingStyle, forestStyle], readingFonts.map(name => `/assets/${name}`))) {
+      const data = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(document.html)[1]
+      hashes.push(`'sha256-${createHash('sha256').update(data).digest('base64')}'`)
+      await mkdir(`dist${document.path}`, { recursive: true })
+      await writeFile(`dist${document.path}index.html`, document.html)
+    }
   }
   const headers = await readFile('public/_headers', 'utf8')
   await writeFile('dist/_headers', headers.replace("script-src 'self'", `script-src 'self' ${hashes.join(' ')}`))
-  console.log('Prerendered both cinema homepages and both static reading pages with localized metadata and CSP hashes')
+  console.log('Prerendered 20 localized cinema, guide, wallpaper and field-note documents with CSP hashes')
 } finally { await server.close() }

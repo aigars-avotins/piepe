@@ -1,0 +1,608 @@
+{
+  "method": "Focused local system Chromium, real media Worker preview on 4271; no production deployment. Source final; later test-only addition captures representative screenshots.",
+  "stats": {
+    "startTime": "2026-11-06T19:37:42.527Z",
+    "duration": 116130.216,
+    "expected": 66,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "title": "the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "actual film plays once, reveals title, ends and becomes interactive",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "skip is immediate and fungus works with keyboard and Escape",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "title": "discovery is a complete three-step field note with a real downloadable artifact",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "real sitemap and robots assets describe every crawlable canonical page",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "lv: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "lv: one connected schema keeps stable site identity through locale and note-state changes",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "lv: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "en: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "en: one connected schema keeps stable site identity through locale and note-state changes",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "title": "en: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "title": "2.5.5 lv: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "title": "2.5.5 lv: sharing metadata stays localized through note collection, locale change and browser history",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "title": "2.5.5 en: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "title": "2.5.5 en: sharing metadata stays localized through note collection, locale change and browser history",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 lv JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 lv JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 en JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 en JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 lv: homepage links to its real article and returns without losing session semantics",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 en: homepage links to its real article and returns without losing session semantics",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 static documents have matching CSP hashes and do not ship article prose in the cinema bundle",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "title": "2.5.6 edge analytics allowance still rejects application scripts and inline code",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-foni/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-foni/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/002-caga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/002-caga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/003-serpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/003-serpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/forest-wallpapers/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/forest-wallpapers/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/002-chaga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/002-chaga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/005-deadwood-and-time/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/005-deadwood-and-time/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/006-lacquered-bracket/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 /en/field-notes/006-lacquered-bracket/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 route graph, CSP hashes, honest species facts and all internal resources remain coherent",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 2.5.6 guides, original note text, core cinema and every media/download asset remain byte-identical",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 lv: selective supported snippet labels preserve primary content, links and mobile control text",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 en: selective supported snippet labels preserve primary content, links and mobile control text",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "title": "2.5.7 JS-free wallpaper and original-note links download the real existing files",
+      "project": "chrome-desktop",
+      "status": "expected",
+      "results": [
+        "passed"
+      ]
+    }
+  ]
+}

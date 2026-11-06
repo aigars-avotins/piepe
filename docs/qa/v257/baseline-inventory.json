@@ -1,0 +1,58 @@
+{
+  "source": "8fdcbfe7ec469173fe93b1e456a62cb2930c062d",
+  "version": "2.5.6",
+  "preservedGuides": {
+    "kas-ir-piepe/index.html": "76a2084207391fea681e2cdb207d715f7816f965c012a51e2c8f45cd8ad8cdb7",
+    "en/what-is-a-bracket-fungus/index.html": "3cd9f73c55566baa5eca015cbdd0af02d010ef481d1060242aabd669bf1c205e"
+  },
+  "preservedAssets": {
+    "media/forest-awakening.mp4": "dffdfd61d2dc31f4dfe5dfa490ee57db1a3055f35bc2bc1387e54d8820b68cf2",
+    "media/forest-mobile.webp": "f8be6d38950477642f54b72d56f1960fda4b0c0e9b6e409270dc19e01f03172c",
+    "media/forest-awakening-final.jpg": "c33d477e66a0d2fa752f52f134507199510843f864b38ddf6620e9cc8b109923",
+    "media/forest-reveal.mp4": "6f3e32573ccff903740ebe58455e8fe579f280946041609c028b08ac50db64f5",
+    "media/forest-final.jpg": "d38aa9b255d256556d90895aacb28aa753ccb483f8497a78a540fcc753ed3867",
+    "media/forest-understory-final.jpg": "37a5b7f3a00555c1148a5814827ab11a34e2737f1527201509f22383c0c88e3c",
+    "media/forest-understory.jpg": "44522b24265ec06a9c435dc61d2ca9d7b439a9b49ddbf427a12cbd276bd6dd99",
+    "media/forest-breathing-final.jpg": "76740eec331556e6367f39169aaa648eba8ed14abc8ca2f3d2badf412d9ca5e3",
+    "media/forest-awakening-poster.jpg": "a9778a0e22f5710e771afde03855ff19f32bfa9661b597f311e453800d249a36",
+    "media/forest-breathing-poster.jpg": "b33dc7749235dceb12474016e466bdf17efbc7567ffdba7024975e093a82d598",
+    "media/forest-breathing.mp4": "a3bc82771398b754d22273fbdd8d1023f04de0778ecef5b8b90ff8bdb64316ef",
+    "media/forest-understory.mp4": "d4a83a5cff4eff09e9fb14d1b8d7df8d0985a280a1a79e6123f3a2fdb360453f",
+    "media/forest-poster.jpg": "4fc20c123d49474f1d0661cb14756c1c04f8f68a6592c7cf32ff26b85f6fe3cf",
+    "wallpapers/piepe-forest-desktop-5120x2880.jpg": "f7ff27c5c4f088d9f7935fe970858b2097b6471b9ce072bfeddcf7f2cb3e5045",
+    "wallpapers/piepe-forest-mobile-1440x3120.jpg": "75fd73ab59463df8afabcf3ee8c9b1e6cc105c6e6066c229e2461c3cba763a41",
+    "wallpapers/piepe-forest-desktop-3840x2160.jpg": "9157c6b1640de88f27dcb200663daff0afa1f3b3d0e98f302c82b8810888f90e",
+    "wallpapers/previews/desktop.webp": "d44a0ea77e89c301b18e4f3d849df7bd16d32059912af34ef74cc69859b9e321",
+    "wallpapers/previews/mobile.webp": "4e159110c19292ad2d70fbfc807fceb169648ed74ab9ad0f1630ce570f4b8844",
+    "audio/forest-ambience.mp3": "24a2c7786d8e4fd1be24a2398db7b013b83d4556c74da8883d081abc6789bf0e",
+    "audio/CREDITS.txt": "c5cdfb5bff367c5148bad31ea5990dccd679009597271ae0094845b576787b4e",
+    "social-preview.jpg": "6fd896f59e6ac7e4b60b21325b520dc6c82f6f792d1d63ab8271d7e3c5260d75",
+    "brand-mark.svg": "ee99f96fb630dbcfc47b2775533727b1d70617586ca94d695d0c8b99cc927dd1",
+    "brand-wordmark.svg": "960d11a623efa06de6d7497db70b3c49cb0511d5d97bd9bf045061cabb640162",
+    "favicon.ico": "85f0c93e3138662735150b4516ca7c7747c1406c369eb843865c099b6057d095",
+    "favicon.svg": "00a3497dcc41a5778ca6ced7b5c0181399dc819b7ccc6899355a6566062606be",
+    "apple-touch-icon.png": "588502e35c0ab8f98714fb3cab8efec8ff4830fb591d79e240f6bd12d57687c0"
+  },
+  "preservedNotes": {
+    "field-note-lv.txt": "29d1086dd2cbddde21f91b58fd56787cf45994d7bf69ab5c3a566c8526fabd77",
+    "field-note-en.txt": "5b708cf005eac530bdfd973178816bd013f53e2a8ef446be62c2c53a2c2f96e1"
+  },
+  "preservedSource": {
+    "src/useForestMotion.ts": "055d32ea08b2514ac52d48c0177880e9ad426670f95ad193d855c0408438122c",
+    "src/MotionClip.tsx": "879237e0e04ca47ace4550b9fbbea124edc5db914c4588b6213766cb0e47661a",
+    "src/IntroFilm.tsx": "9ce40754c4557f7f2fb074c5a71f8557ae9e1d30db04c4809104e7bb3789eb1c",
+    "src/ForestScene.tsx": "e671aa9f05c234d2ad9bbe6013f3f49dc5378b158e0a0d7cee7e0aacf962ba72",
+    "src/Discovery.tsx": "700b3a84dd34f319f78fa68f690a54658bb6132b9120227e1b6620f6085f954a",
+    "src/useForestAudio.ts": "749908ee8e63b188092c37d77156b31a9a84353e6018c1665742ec8912e88a05",
+    "src/reading.ts": "22352b033c2c93a8f06a6a8db0f61be4c96aabff91adb5a87261d848f1e8834a",
+    "src/ReadingPage.tsx": "d69ffa3e14e48d4bac21d019006fc4d268ad1d6d90398b3f397b599242fb931b",
+    "src/reading.css": "7f829a14b0f92c80ac91998b7468a57151355e14e4ec5ee1af293b76409c0354",
+    "src/style.css": "d127f6be236cc881de348a59f11160a799b5a4216d413abe319b53b54f276988",
+    "src/prerender.tsx": "f2cf811b1398a77dfa41bd7ce2867f58257aac3f683a474d5e1a2c3dbfdb3709",
+    "src/seo.ts": "3b46e6642b9715ee4da4eb64e32c9e5907dd9e1e43890f9f848b462d0cc703c4",
+    "src/i18n.ts": "edd4602ae5969e9b8e98cdbe6b23954653b25829acb725af33f90e3a5da0bcfe",
+    "public/_headers": "d8a26bbb38080891af7565c64f3c4de643ccb24b5dc551ab5de7e8452f242f85",
+    "public/robots.txt": "a7dde0cab785c84d68bf5cec035971fe1dfc02362d6f9efe8b54e560d9f47801",
+    "wrangler.jsonc": "ce46ab101111b3379cf92a7204f8cc0e8a3fe534a20f010f89f27c9400d15349"
+  }
+}

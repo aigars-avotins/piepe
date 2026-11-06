@@ -35,6 +35,13 @@ export async function checkReading(page: Page, locale: Locale, options: { cloudf
   const data = JSON.parse((await script.textContent())!)
   expect(data).toMatchObject({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': url + '#webpage', url, name: t.title, description: t.description, inLanguage: locale, about: { '@type': 'Thing', name: t.topic }, isPartOf: { '@type': 'WebSite', '@id': 'https://pie.pe/#website', url: 'https://pie.pe/', name: 'PIE.PE' } })
   expect(JSON.stringify(data)).not.toMatch(/FAQPage|Organization|Person|AggregateRating|VideoObject|datePublished|reviewedBy/)
+  await checkStaticMarkup(page, options)
+  await expect(page.locator('.reading-return>a')).toHaveAttribute('href', localePath(locale))
+  for (const lang of ['lv', 'en'] as const) await expect(page.locator(`.reading-languages a[lang="${lang}"]`)).toHaveAttribute('href', readingPath(lang))
+}
+
+/** Shared strict authored-document guard; production may contain the known CDN beacon. */
+export async function checkStaticMarkup(page: Page, options: { cloudflareAnalytics?: boolean } = {}) {
   await expect(page.locator('#root, .world, video, audio')).toHaveCount(0)
   const scripts = page.locator('script:not([type="application/ld+json"])')
   if (!options.cloudflareAnalytics) await expect(scripts).toHaveCount(0)
@@ -50,6 +57,4 @@ export async function checkReading(page: Page, locale: Locale, options: { cloudf
     expect(markup.length).toBeLessThanOrEqual(1)
     for (const script of markup) expect(script).toEqual({ type: 'module', source: expect.stringMatching(/^https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js\/v[a-f0-9]+$/), hasInlineContent: false, hasQueryOrHash: false })
   }
-  await expect(page.locator('.reading-return>a')).toHaveAttribute('href', localePath(locale))
-  for (const lang of ['lv', 'en'] as const) await expect(page.locator(`.reading-languages a[lang="${lang}"]`)).toHaveAttribute('href', readingPath(lang))
 }
