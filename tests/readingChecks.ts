@@ -4,7 +4,7 @@ import { localePath, readingPath } from '../src/i18n'
 import type { Locale } from '../src/i18n'
 import { readings, readingSources } from '../src/reading'
 
-export async function checkReading(page: Page, locale: Locale) {
+export async function checkReading(page: Page, locale: Locale, options: { cloudflareAnalytics?: boolean } = {}) {
   const t = readings[locale], url = 'https://pie.pe' + readingPath(locale)
   await expect(page.locator('html')).toHaveAttribute('lang', locale)
   await expect(page).toHaveTitle(t.title)
@@ -35,14 +35,21 @@ export async function checkReading(page: Page, locale: Locale) {
   const data = JSON.parse((await script.textContent())!)
   expect(data).toMatchObject({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': url + '#webpage', url, name: t.title, description: t.description, inLanguage: locale, about: { '@type': 'Thing', name: t.topic }, isPartOf: { '@type': 'WebSite', '@id': 'https://pie.pe/#website', url: 'https://pie.pe/', name: 'PIE.PE' } })
   expect(JSON.stringify(data)).not.toMatch(/FAQPage|Organization|Person|AggregateRating|VideoObject|datePublished|reviewedBy/)
-  const unexpected = page.locator('#root, .world, video, audio, script:not([type="application/ld+json"])')
-  // Describe unexpected markup without logging inline bodies, query strings or tokens.
-  const markup = await unexpected.evaluateAll(elements => elements.map(e => ({
-    tag: e.tagName, type: e.getAttribute('type'), id: e.id,
-    source: e instanceof HTMLScriptElement && e.src ? new URL(e.src).origin + new URL(e.src).pathname : null,
-    cloudflareChallenge: e.textContent?.includes('/cdn-cgi/challenge-platform/') || false,
-  })))
-  await expect(unexpected, `Unexpected article markup: ${JSON.stringify(markup)}`).toHaveCount(0)
+  await expect(page.locator('#root, .world, video, audio')).toHaveCount(0)
+  const scripts = page.locator('script:not([type="application/ld+json"])')
+  if (!options.cloudflareAnalytics) await expect(scripts).toHaveCount(0)
+  else {
+    // Cloudflare may inject its analytics module at the edge. It is absent from
+    // our build and blocked by the unchanged CSP. Permit only that precise
+    // external resource; never permit homepage hydration or arbitrary scripts.
+    const markup = await scripts.evaluateAll(elements => elements.map(e => {
+      const script = e as HTMLScriptElement, url = script.src ? new URL(script.src) : null
+      return { type: script.type, source: url?.protocol === 'https:' ? url.origin + url.pathname : null,
+        hasInlineContent: !!script.textContent?.trim(), hasQueryOrHash: !!(url?.search || url?.hash) }
+    }))
+    expect(markup.length).toBeLessThanOrEqual(1)
+    for (const script of markup) expect(script).toEqual({ type: 'module', source: expect.stringMatching(/^https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js\/v[a-f0-9]+$/), hasInlineContent: false, hasQueryOrHash: false })
+  }
   await expect(page.locator('.reading-return>a')).toHaveAttribute('href', localePath(locale))
   for (const lang of ['lv', 'en'] as const) await expect(page.locator(`.reading-languages a[lang="${lang}"]`)).toHaveAttribute('href', readingPath(lang))
 }

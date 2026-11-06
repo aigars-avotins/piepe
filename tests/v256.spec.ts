@@ -70,3 +70,20 @@ test('2.5.6 static documents have matching CSP hashes and do not ship article pr
   for (const locale of ['lv', 'en'] as const) expect(bundle).not.toContain(readings[locale].lead)
   for (const path of ['/missing-article/', '/kas-ir-piepe/no-such-page/', '/en/what-is-a-bracket-fungus/missing/']) expect((await request.get(path)).status()).toBe(404)
 })
+
+test('2.5.6 edge analytics allowance still rejects application scripts and inline code', async ({ page }) => {
+  // Model delivery-layer markup without executing or downloading either script.
+  await page.route('**/beacon.min.js/**', route => route.abort())
+  await page.route('**/assets/not-the-beacon.js', route => route.abort())
+  await page.goto(readingPath('lv'))
+  await page.evaluate(() => {
+    const script = document.createElement('script'); script.id = 'edge-test'; script.type = 'module'
+    script.src = 'https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092'
+    document.head.append(script)
+  })
+  await checkReading(page, 'lv', { cloudflareAnalytics: true })
+  await page.locator('#edge-test').evaluate(script => { (script as HTMLScriptElement).src = '/assets/not-the-beacon.js' })
+  await expect(checkReading(page, 'lv', { cloudflareAnalytics: true })).rejects.toThrow()
+  await page.locator('#edge-test').evaluate(script => { script.removeAttribute('src'); script.textContent = '/* unexpected inline module */' })
+  await expect(checkReading(page, 'lv', { cloudflareAnalytics: true })).rejects.toThrow()
+})

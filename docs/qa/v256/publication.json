@@ -1,0 +1,51 @@
+{
+  "release": "2.5.6",
+  "baseline": "58301afafec352cad1bead370eab3f3f7ca3a53e",
+  "validatedProductSource": "8d3d7bb2eb4c1c671b0a16ed136ec66262a09a50",
+  "mergedCommit": "51a9cb91f73c2a9ced74fff784416f7df9847a36",
+  "pullRequest": "https://github.com/aigars-avotins/piepe/pull/21",
+  "worker": "piepe",
+  "rollback": {
+    "id": "679cec75-b3c3-421d-bb72-6c607fb8ed26",
+    "created_on": "2026-11-05T14:11:21.323888Z",
+    "versions": [
+      {
+        "version_id": "62e320dd-1820-4b01-b6d4-cf02522a70ec",
+        "percentage": 100
+      }
+    ]
+  },
+  "productionBuild": {
+    "build_uuid": "04cd5c75-fde3-4f46-8708-1278249c9145",
+    "status": "stopped",
+    "build_outcome": "success",
+    "created_on": "2026-11-06T08:06:19.135Z",
+    "running_on": "2026-11-06T08:06:21.796Z",
+    "stopped_on": "2026-11-06T08:07:08.174Z"
+  },
+  "status": "published; production HTTP18/18 and Chromium4/4 plus native macOS WebKit4/4 passed",
+  "production": {
+    "id": "440885a6-affe-40a0-8829-3800d79d7b80",
+    "created_on": "2026-11-06T08:07:01.547044Z",
+    "versions": [
+      {
+        "version_id": "d7510071-d1ca-42cf-97da-855ec1af77bb",
+        "percentage": 100
+      }
+    ]
+  },
+  "followupPullRequest": "https://github.com/aigars-avotins/piepe/pull/22",
+  "finalBrowserRun": "https://github.com/aigars-avotins/piepe/actions/runs/42188878230",
+  "finalTestSource": "9d330d8bf45b5e9adb2d7428429bf61673bb9ac0",
+  "finalBrowserValidatedDeployment": {
+    "id": "fe6a9e09-f027-4cbf-a9dd-a10fcc0506a0",
+    "created_on": "2026-11-06T08:23:25.531731Z",
+    "versions": [
+      {
+        "version_id": "d3a6090e-15b3-4ba9-a186-8ab6070f941f",
+        "percentage": 100
+      }
+    ]
+  },
+  "followupScope": "Tests and evidence only; product files/media identical to8d3d7bb. Final active deployment after the follow-up main build is recorded in PR22 deployment report."
+}

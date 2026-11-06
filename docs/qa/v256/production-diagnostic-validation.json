@@ -1,0 +1,41 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/42187329749",
+  "source": "499a31ee089be7d5c74854a6f850f5cf2e87d86d",
+  "chromium": {
+    "passedCinema": 2,
+    "failedArticle": 2
+  },
+  "nativeMacosWebkit": {
+    "passedCinema": 2,
+    "failedArticle": 2
+  },
+  "unexpectedElement": {
+    "tag": "SCRIPT",
+    "type": "module",
+    "origin": "https://static.cloudflareinsights.com",
+    "pathname": "/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "fromAuthoredBuild": false
+  },
+  "cause": "A zero-extra-script test assertion counted the CDN analytics insertion as application code. CSP and product source are unchanged.",
+  "fix": "Only production may contain at most this exact HTTPS beacon path class, without inline content or query/hash. All other scripts and cinema DOM remain forbidden; full production CSP must exactly match the build. Static/local contract remains zero extra scripts.",
+  "localAfterCorrection": {
+    "v256ExistingCasesPassed": 7,
+    "negativeAnalyticsContractPassed": 1,
+    "productionReadingCasesPassed": 2,
+    "productionReadingMethod": "Actual https://pie.pe/; system Chromium; managed proxy and existing CA trust, TLS validation and CSP enforcement enabled; LV/EN, JS off/on, native language/back links",
+    "fullProductionCspMatchesBuild": 4,
+    "typecheck": "passed",
+    "lint": "passed"
+  },
+  "productEquivalentTo": "8d3d7bb2eb4c1c671b0a16ed136ec66262a09a50",
+  "testedProductionDeployment": {
+    "id": "fe6a9e09-f027-4cbf-a9dd-a10fcc0506a0",
+    "created_on": "2026-11-06T08:23:25.531731Z",
+    "versions": [
+      {
+        "version_id": "d3a6090e-15b3-4ba9-a186-8ab6070f941f",
+        "percentage": 100
+      }
+    ]
+  }
+}
