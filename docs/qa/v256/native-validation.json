@@ -1,0 +1,281 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/42183803970",
+  "source": "8d3d7bb2eb4c1c671b0a16ed136ec66262a09a50",
+  "runner": "standard macos-15-intel",
+  "engine": "Playwright WebKit27.2 build2370, native macOS foreground window; iPhone13 project plus explicit390/800/1440 viewports. Not physical iPhone or Safari app.",
+  "stats": {
+    "startTime": "2026-11-06T07:56:26.002Z",
+    "duration": 135360.424,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "tests": [
+    {
+      "title": "real sitemap and robots assets describe all four crawlable canonical pages",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 2597
+        }
+      ]
+    },
+    {
+      "title": "lv: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 3606
+        }
+      ]
+    },
+    {
+      "title": "lv: one connected schema keeps stable site identity through locale and note-state changes",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 3866
+        }
+      ]
+    },
+    {
+      "title": "lv: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 5989
+        }
+      ]
+    },
+    {
+      "title": "en: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 1381
+        }
+      ]
+    },
+    {
+      "title": "en: one connected schema keeps stable site identity through locale and note-state changes",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 1650
+        }
+      ]
+    },
+    {
+      "title": "en: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 6605
+        }
+      ]
+    },
+    {
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 16676
+        }
+      ]
+    },
+    {
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 13360
+        }
+      ]
+    },
+    {
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 11572
+        }
+      ]
+    },
+    {
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 11773
+        }
+      ]
+    },
+    {
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 5503
+        }
+      ]
+    },
+    {
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 7082
+        }
+      ]
+    },
+    {
+      "title": "2.5.5 lv: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 1873
+        }
+      ]
+    },
+    {
+      "title": "2.5.5 lv: sharing metadata stays localized through note collection, locale change and browser history",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 2917
+        }
+      ]
+    },
+    {
+      "title": "2.5.5 en: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 1646
+        }
+      ]
+    },
+    {
+      "title": "2.5.5 en: sharing metadata stays localized through note collection, locale change and browser history",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 2325
+        }
+      ]
+    },
+    {
+      "title": "2.5.6 lv JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 2454
+        }
+      ]
+    },
+    {
+      "title": "2.5.6 lv JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 5680
+        }
+      ]
+    },
+    {
+      "title": "2.5.6 en JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 2815
+        }
+      ]
+    },
+    {
+      "title": "2.5.6 en JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 3385
+        }
+      ]
+    },
+    {
+      "title": "2.5.6 lv: homepage links to its real article and returns without losing session semantics",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 6369
+        }
+      ]
+    },
+    {
+      "title": "2.5.6 en: homepage links to its real article and returns without losing session semantics",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 4450
+        }
+      ]
+    },
+    {
+      "title": "2.5.6 static documents have matching CSP hashes and do not ship article prose in the cinema bundle",
+      "project": "webkit-iphone",
+      "status": "expected",
+      "attempts": [
+        {
+          "status": "passed",
+          "durationMs": 83
+        }
+      ]
+    }
+  ]
+}

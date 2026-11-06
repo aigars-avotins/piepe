@@ -1,0 +1,78 @@
+{
+  "baseline": "58301afafec352cad1bead370eab3f3f7ca3a53e",
+  "releaseSource": "8d3d7bb",
+  "date": "2026-11-06",
+  "typecheck": "passed",
+  "lint": "passed",
+  "worker": {
+    "passed": 11
+  },
+  "build": "passed",
+  "chromium": {
+    "passed": 24,
+    "fullSuite": false,
+    "method": "Local system Chromium, existing real Worker media preview; targeted 2.5.6/2.5.5/SEO, first-paint and staging checks"
+  },
+  "cspAfterLintCleanup": {
+    "passed": 1
+  },
+  "performance": {
+    "method": "Three cold contexts per phase/locale, alternating home order, system Chromium390x844 DPR1,4x CPU throttle, local real Worker preview, unthrottled local network. Home measured through intro completion/fonts/annotation then one locale-switch. Reading measured through fonts and250ms paint allowance. Not Lighthouse, field CWV,75th-percentile INP or physical phone. Zero event timing means no event exceeded16ms observer threshold.",
+    "summary": [
+      {
+        "locale": "lv",
+        "phase": "before",
+        "samples": 3,
+        "medianLcpMs": 8716,
+        "medianCls": 0.001355,
+        "medianHomeBlockingMs": 205,
+        "maxSampledInteractionMs": 184
+      },
+      {
+        "locale": "lv",
+        "phase": "after",
+        "samples": 3,
+        "medianLcpMs": 8756,
+        "medianCls": 0.001355,
+        "medianHomeBlockingMs": 232,
+        "maxSampledInteractionMs": 176
+      },
+      {
+        "locale": "lv",
+        "phase": "reading",
+        "samples": 3,
+        "medianLcpMs": 256,
+        "medianCls": 0,
+        "medianHomeBlockingMs": null,
+        "maxSampledInteractionMs": null
+      },
+      {
+        "locale": "en",
+        "phase": "before",
+        "samples": 3,
+        "medianLcpMs": 7632,
+        "medianCls": 0.002324,
+        "medianHomeBlockingMs": 208,
+        "maxSampledInteractionMs": 192
+      },
+      {
+        "locale": "en",
+        "phase": "after",
+        "samples": 3,
+        "medianLcpMs": 8732,
+        "medianCls": 0.002324,
+        "medianHomeBlockingMs": 188,
+        "maxSampledInteractionMs": 160
+      },
+      {
+        "locale": "en",
+        "phase": "reading",
+        "samples": 3,
+        "medianLcpMs": 260,
+        "medianCls": 0,
+        "medianHomeBlockingMs": null,
+        "maxSampledInteractionMs": null
+      }
+    ]
+  }
+}

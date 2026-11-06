@@ -1,0 +1,159 @@
+{
+  "reason": "Investigate EN final animated LCP candidate variability in original three local pairs. Same setup; two additional alternating pairs, entry elements recorded. No product changes.",
+  "samples": [
+    {
+      "run": 1,
+      "phase": "before",
+      "windowMs": 9180.199999988079,
+      "candidates": [
+        {
+          "time": 460,
+          "tag": "SPAN",
+          "class": "",
+          "url": "",
+          "size": 1615
+        },
+        {
+          "time": 6440,
+          "tag": "P",
+          "class": "",
+          "url": "",
+          "size": 3211
+        },
+        {
+          "time": 7596,
+          "tag": "P",
+          "class": "label title-enter",
+          "url": "",
+          "size": 6912
+        },
+        {
+          "time": 9040,
+          "tag": "P",
+          "class": "hero-deck title-enter",
+          "url": "",
+          "size": 9504
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "phase": "after",
+      "windowMs": 8931.40000000596,
+      "candidates": [
+        {
+          "time": 392,
+          "tag": "SPAN",
+          "class": "",
+          "url": "",
+          "size": 1615
+        },
+        {
+          "time": 6436,
+          "tag": "P",
+          "class": "",
+          "url": "",
+          "size": 3211
+        },
+        {
+          "time": 7612,
+          "tag": "P",
+          "class": "label title-enter",
+          "url": "",
+          "size": 6912
+        },
+        {
+          "time": 8804,
+          "tag": "P",
+          "class": "hero-deck title-enter",
+          "url": "",
+          "size": 9504
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "phase": "after",
+      "windowMs": 9028,
+      "candidates": [
+        {
+          "time": 352,
+          "tag": "BUTTON",
+          "class": "text-button skip-intro",
+          "url": "",
+          "size": 1159
+        },
+        {
+          "time": 576,
+          "tag": "SPAN",
+          "class": "",
+          "url": "",
+          "size": 1615
+        },
+        {
+          "time": 6248,
+          "tag": "P",
+          "class": "",
+          "url": "",
+          "size": 3211
+        },
+        {
+          "time": 7456,
+          "tag": "P",
+          "class": "label title-enter",
+          "url": "",
+          "size": 6912
+        },
+        {
+          "time": 8932,
+          "tag": "P",
+          "class": "hero-deck title-enter",
+          "url": "",
+          "size": 9504
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "phase": "before",
+      "windowMs": 8889.800000011921,
+      "candidates": [
+        {
+          "time": 332,
+          "tag": "BUTTON",
+          "class": "text-button skip-intro",
+          "url": "",
+          "size": 1159
+        },
+        {
+          "time": 348,
+          "tag": "SPAN",
+          "class": "",
+          "url": "",
+          "size": 1615
+        },
+        {
+          "time": 6116,
+          "tag": "P",
+          "class": "",
+          "url": "",
+          "size": 3211
+        },
+        {
+          "time": 7304,
+          "tag": "P",
+          "class": "label title-enter",
+          "url": "",
+          "size": 6912
+        },
+        {
+          "time": 8748,
+          "tag": "P",
+          "class": "hero-deck title-enter",
+          "url": "",
+          "size": 9504
+        }
+      ]
+    }
+  ]
+}
