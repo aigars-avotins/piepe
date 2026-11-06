@@ -1,0 +1,81 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/42185512508",
+  "source": "51a9cb91f73c2a9ced74fff784416f7df9847a36",
+  "status": "four cinema journeys passed; four article checks failed at unexpected-markup assertion",
+  "browsers": [
+    {
+      "browser": "chromium",
+      "stats": {
+        "startTime": "2026-11-06T08:10:23.182Z",
+        "duration": 67496.236,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "tests": [
+        {
+          "title": "lv: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "unexpectedMarkupCount": null,
+          "durationMs": 27250
+        },
+        {
+          "title": "en: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "unexpectedMarkupCount": null,
+          "durationMs": 26735
+        },
+        {
+          "title": "2.5.6 lv: production reading is indexable without JS and keeps the matching language route",
+          "status": "unexpected",
+          "unexpectedMarkupCount": 1,
+          "durationMs": 5856
+        },
+        {
+          "title": "2.5.6 en: production reading is indexable without JS and keeps the matching language route",
+          "status": "unexpected",
+          "unexpectedMarkupCount": 1,
+          "durationMs": 5751
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "stats": {
+        "startTime": "2026-11-06T08:12:44.488Z",
+        "duration": 125070.581,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "tests": [
+        {
+          "title": "lv: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "unexpectedMarkupCount": null,
+          "durationMs": 51715
+        },
+        {
+          "title": "en: released application, cinema, discovery, wallpapers and media delivery",
+          "status": "expected",
+          "unexpectedMarkupCount": null,
+          "durationMs": 41786
+        },
+        {
+          "title": "2.5.6 lv: production reading is indexable without JS and keeps the matching language route",
+          "status": "unexpected",
+          "unexpectedMarkupCount": 1,
+          "durationMs": 10211
+        },
+        {
+          "title": "2.5.6 en: production reading is indexable without JS and keeps the matching language route",
+          "status": "unexpected",
+          "unexpectedMarkupCount": 1,
+          "durationMs": 11223
+        }
+      ]
+    }
+  ]
+}

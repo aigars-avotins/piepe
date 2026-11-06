@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-06",
+  "client": "curl, managed session proxy, TLS verification enabled",
+  "homepageBundle": "/assets/index-BEkfRUAk.js",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "canonical": "https://pie.pe/",
+      "hreflang": [
+        {
+          "hreflang": "lv",
+          "href": "https://pie.pe/"
+        },
+        {
+          "hreflang": "en",
+          "href": "https://pie.pe/en/"
+        },
+        {
+          "hreflang": "x-default",
+          "href": "https://pie.pe/"
+        }
+      ],
+      "schema": {
+        "type": "WebPage",
+        "id": "https://pie.pe/#webpage",
+        "about": null,
+        "scriptHashAllowed": true
+      },
+      "rawArticleMatchesBuild": false,
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-u8y/1XRRlFJm4jSoFr5yoJrRmZHRBPije8THPnCOW/M=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A=' 'sha256-9SfvGuA/lF/0O/bPgy/gYw6nt4tqTw9u53rQ0NA/k5Y='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "canonical": "https://pie.pe/en/",
+      "hreflang": [
+        {
+          "hreflang": "lv",
+          "href": "https://pie.pe/"
+        },
+        {
+          "hreflang": "en",
+          "href": "https://pie.pe/en/"
+        },
+        {
+          "hreflang": "x-default",
+          "href": "https://pie.pe/"
+        }
+      ],
+      "schema": {
+        "type": "WebPage",
+        "id": "https://pie.pe/en/#webpage",
+        "about": null,
+        "scriptHashAllowed": true
+      },
+      "rawArticleMatchesBuild": false,
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-u8y/1XRRlFJm4jSoFr5yoJrRmZHRBPije8THPnCOW/M=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A=' 'sha256-9SfvGuA/lF/0O/bPgy/gYw6nt4tqTw9u53rQ0NA/k5Y='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/kas-ir-piepe/",
+      "status": 200,
+      "canonical": "https://pie.pe/kas-ir-piepe/",
+      "hreflang": [
+        {
+          "hreflang": "lv",
+          "href": "https://pie.pe/kas-ir-piepe/"
+        },
+        {
+          "hreflang": "en",
+          "href": "https://pie.pe/en/what-is-a-bracket-fungus/"
+        },
+        {
+          "hreflang": "x-default",
+          "href": "https://pie.pe/kas-ir-piepe/"
+        }
+      ],
+      "schema": {
+        "type": "WebPage",
+        "id": "https://pie.pe/kas-ir-piepe/#webpage",
+        "about": {
+          "@type": "Thing",
+          "name": "Piepes"
+        },
+        "scriptHashAllowed": true
+      },
+      "rawArticleMatchesBuild": true,
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-u8y/1XRRlFJm4jSoFr5yoJrRmZHRBPije8THPnCOW/M=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A=' 'sha256-9SfvGuA/lF/0O/bPgy/gYw6nt4tqTw9u53rQ0NA/k5Y='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/",
+      "status": 200,
+      "canonical": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "hreflang": [
+        {
+          "hreflang": "lv",
+          "href": "https://pie.pe/kas-ir-piepe/"
+        },
+        {
+          "hreflang": "en",
+          "href": "https://pie.pe/en/what-is-a-bracket-fungus/"
+        },
+        {
+          "hreflang": "x-default",
+          "href": "https://pie.pe/kas-ir-piepe/"
+        }
+      ],
+      "schema": {
+        "type": "WebPage",
+        "id": "https://pie.pe/en/what-is-a-bracket-fungus/#webpage",
+        "about": {
+          "@type": "Thing",
+          "name": "Bracket fungi"
+        },
+        "scriptHashAllowed": true
+      },
+      "rawArticleMatchesBuild": true,
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-u8y/1XRRlFJm4jSoFr5yoJrRmZHRBPije8THPnCOW/M=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A=' 'sha256-9SfvGuA/lF/0O/bPgy/gYw6nt4tqTw9u53rQ0NA/k5Y='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "canonicalUrls": [
+        "https://pie.pe/",
+        "https://pie.pe/en/",
+        "https://pie.pe/kas-ir-piepe/",
+        "https://pie.pe/en/what-is-a-bracket-fungus/"
+      ],
+      "reciprocalPairs": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "unchanged": true
+    },
+    {
+      "path": "/missing-piepe-v256-page/",
+      "status": 404
+    },
+    {
+      "path": "/kas-ir-piepe/missing/",
+      "status": 404
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/missing/",
+      "status": 404
+    },
+    {
+      "path": "/kas-ir-piepe",
+      "status": 307,
+      "location": "/kas-ir-piepe/"
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus",
+      "status": 307,
+      "location": "/en/what-is-a-bracket-fungus/"
+    },
+    {
+      "path": "/kas-ir-piepe/index.html",
+      "status": 307,
+      "location": "/kas-ir-piepe/"
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/index.html",
+      "status": 307,
+      "location": "/en/what-is-a-bracket-fungus/"
+    },
+    {
+      "path": "/media/forest-reveal.mp4",
+      "status": 206,
+      "range": "bytes 0-31/9212166",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-awakening.mp4",
+      "status": 206,
+      "range": "bytes 0-31/8237084",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-understory.mp4",
+      "status": 206,
+      "range": "bytes 0-31/5846195",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-breathing.mp4",
+      "status": 206,
+      "range": "bytes 0-31/7025165",
+      "bytesMatchSource": true
+    },
+    {
+      "path": "/media/forest-reveal.mp4",
+      "status": 416,
+      "unsatisfiableRange": true
+    }
+  ]
+}

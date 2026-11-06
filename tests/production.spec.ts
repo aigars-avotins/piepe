@@ -84,13 +84,18 @@ for (const locale of ['lv', 'en'] as const) test(`2.5.6 ${locale}: production re
   const response = await request.get(readingPath(locale)); expect(response.status()).toBe(200)
   expect(response.headers()['content-type']).toContain('text/html')
   expect(response.headers()['x-robots-tag'] || '').not.toMatch(/noindex|none/i)
+  const builtCsp = /Content-Security-Policy: (.+)/.exec(await readFile('dist/_headers', 'utf8'))![1]
+  expect(response.headers()['content-security-policy']).toBe(builtCsp)
+  const scriptPolicy = /script-src ([^;]+)/.exec(response.headers()['content-security-policy'])![1]
+  expect(scriptPolicy).toContain("'self'")
+  expect(scriptPolicy).not.toMatch(/unsafe-inline|unsafe-eval|cloudflareinsights|https:|\*/)
   for (const javaScriptEnabled of [false, true]) {
     const context = await browser.newContext({ javaScriptEnabled, viewport: { width: 390, height: 844 } })
     try {
-      const page = await context.newPage(); await page.goto(readingPath(locale)); await checkReading(page, locale)
+      const page = await context.newPage(); await page.goto(readingPath(locale)); await checkReading(page, locale, { cloudflareAnalytics: true })
       const other = locale === 'lv' ? 'en' : 'lv'
-      await page.locator(`.reading-languages a[lang="${other}"]`).click(); await checkReading(page, other)
-      await page.goBack(); await checkReading(page, locale)
+      await page.locator(`.reading-languages a[lang="${other}"]`).click(); await checkReading(page, other, { cloudflareAnalytics: true })
+      await page.goBack(); await checkReading(page, locale, { cloudflareAnalytics: true })
       await info.attach(`${locale}-production-reading-js${javaScriptEnabled}`, { body: await page.screenshot({ fullPage: true, scale: 'css' }), contentType: 'image/png' })
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     } finally { await context.close() }
