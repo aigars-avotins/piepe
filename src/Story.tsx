@@ -1,7 +1,7 @@
 import Arrow from './Arrow'
 import { useState } from 'react'
 import type { CSSProperties, MouseEvent, RefObject } from 'react'
-import { messages } from './i18n'
+import { messages, readingPath } from './i18n'
 import type { Locale } from './i18n'
 export type NoteState = 'unseen' | 'discovered' | 'collected'
 type Props = {
@@ -40,7 +40,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
       </section>
       <section id="fungus-facts" className="fungus-facts" aria-labelledby="facts-title">
         <div className="facts-intro"><p className="label">pie.pe</p><h2 id="facts-title">{t.factsTitle}</h2><p>{t.factsIntro}</p></div>
-        <div className="facts-context"><p>{t.factsDefinition}</p><p>{t.factsContext}</p></div>
+        <div className="facts-context"><p>{t.factsDefinition}</p><p>{t.factsContext}</p><a className="line-link" href={readingPath(locale)}>{t.readGuide} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a></div>
         <div className="fact-observations">{t.facts.map((fact, index) => <article key={index}><span className="label">0{index + 1}</span><h3>{fact.title}</h3><p>{fact.text}</p></article>)}</div>
         <details className="fungus-vocabulary"><summary>{t.glossaryTitle}</summary><dl>{t.glossary.map(entry => <div key={entry.term}><dt>{entry.term}</dt><dd>{entry.definition}</dd></div>)}</dl><p className="vocabulary-note">{t.glossaryObservation}</p></details>
         <p className="art-note">{t.artNote}</p>

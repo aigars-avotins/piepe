@@ -1,0 +1,132 @@
+[
+  {
+    "kind": "reading",
+    "locale": "lv",
+    "width": 390,
+    "height": 844,
+    "errors": [],
+    "bodyHeight": 4350,
+    "overflow": false,
+    "fontSize": "17px",
+    "heading": "48px"
+  },
+  {
+    "kind": "reading",
+    "locale": "lv",
+    "width": 800,
+    "height": 900,
+    "errors": [],
+    "bodyHeight": 3319,
+    "overflow": false,
+    "fontSize": "17px",
+    "heading": "60px"
+  },
+  {
+    "kind": "reading",
+    "locale": "lv",
+    "width": 1440,
+    "height": 900,
+    "errors": [],
+    "bodyHeight": 3493,
+    "overflow": false,
+    "fontSize": "17px",
+    "heading": "84px"
+  },
+  {
+    "kind": "reading",
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "errors": [],
+    "bodyHeight": 4520,
+    "overflow": false,
+    "fontSize": "17px",
+    "heading": "48px"
+  },
+  {
+    "kind": "reading",
+    "locale": "en",
+    "width": 800,
+    "height": 900,
+    "errors": [],
+    "bodyHeight": 3345,
+    "overflow": false,
+    "fontSize": "17px",
+    "heading": "60px"
+  },
+  {
+    "kind": "reading",
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "errors": [],
+    "bodyHeight": 3606,
+    "overflow": false,
+    "fontSize": "17px",
+    "heading": "84px"
+  },
+  {
+    "kind": "homepage",
+    "phase": "before",
+    "locale": "lv",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "kind": "homepage",
+    "phase": "before",
+    "locale": "lv",
+    "width": 1440,
+    "height": 900,
+    "overflow": false
+  },
+  {
+    "kind": "homepage",
+    "phase": "before",
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "kind": "homepage",
+    "phase": "before",
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "overflow": false
+  },
+  {
+    "kind": "homepage",
+    "phase": "after",
+    "locale": "lv",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "kind": "homepage",
+    "phase": "after",
+    "locale": "lv",
+    "width": 1440,
+    "height": 900,
+    "overflow": false
+  },
+  {
+    "kind": "homepage",
+    "phase": "after",
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "kind": "homepage",
+    "phase": "after",
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "overflow": false
+  }
+]

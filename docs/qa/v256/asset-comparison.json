@@ -1,0 +1,49 @@
+{
+  "baseline": {
+    "javascript": "/assets/index-BnSv9zRo.js",
+    "jsBytes": 399843,
+    "jsGzipBytes": 135046,
+    "stylesheet": "/assets/index-DKObstbk.css",
+    "cssBytes": 48637,
+    "cssSha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71"
+  },
+  "candidate": {
+    "javascript": "/assets/index-BEkfRUAk.js",
+    "jsBytes": 400146,
+    "jsGzipBytes": 135120,
+    "stylesheet": "/assets/index-DKObstbk.css",
+    "cssBytes": 48637,
+    "cssSha256": "0375ce34c827b77b66a2ac7b91112c337a37fe2bc1ac61e0de8726e3a0acbc71"
+  },
+  "videos": [
+    {
+      "asset": "forest-awakening.mp4",
+      "bytes": 8237084,
+      "sha256": "dffdfd61d2dc31f4dfe5dfa490ee57db1a3055f35bc2bc1387e54d8820b68cf2",
+      "unchanged": true
+    },
+    {
+      "asset": "forest-breathing.mp4",
+      "bytes": 7025165,
+      "sha256": "a3bc82771398b754d22273fbdd8d1023f04de0778ecef5b8b90ff8bdb64316ef",
+      "unchanged": true
+    },
+    {
+      "asset": "forest-reveal.mp4",
+      "bytes": 9212166,
+      "sha256": "6f3e32573ccff903740ebe58455e8fe579f280946041609c028b08ac50db64f5",
+      "unchanged": true
+    },
+    {
+      "asset": "forest-understory.mp4",
+      "bytes": 5846195,
+      "sha256": "d4a83a5cff4eff09e9fb14d1b8d7df8d0985a280a1a79e6123f3a2fdb360453f",
+      "unchanged": true
+    }
+  ],
+  "readingCssBytes": 3183,
+  "articleHtmlBytes": {
+    "kas-ir-piepe": 11019,
+    "en/what-is-a-bracket-fungus": 10712
+  }
+}

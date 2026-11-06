@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
 import { messages } from '../src/i18n'
 
-test('real sitemap and robots assets describe exactly the two crawlable canonical pages', async ({ page, request }) => {
+test('real sitemap and robots assets describe all four crawlable canonical pages', async ({ page, request }) => {
   const sitemap = await request.get('/sitemap.xml'), robots = await request.get('/robots.txt')
   expect(sitemap.status()).toBe(200); expect(sitemap.headers()['content-type']).toContain('application/xml')
   expect(robots.status()).toBe(200); expect(robots.headers()['content-type']).toContain('text/plain')
@@ -19,9 +19,11 @@ test('real sitemap and robots assets describe exactly the two crawlable canonica
     })) }
   }, xml)
   expect(parsed.errors).toBe(0)
-  expect(parsed.entries.map(entry => entry.url)).toEqual(['https://pie.pe/', 'https://pie.pe/en/'])
+  expect(parsed.entries.map(entry => entry.url)).toEqual(['https://pie.pe/', 'https://pie.pe/en/', 'https://pie.pe/kas-ir-piepe/', 'https://pie.pe/en/what-is-a-bracket-fungus/'])
   for (const entry of parsed.entries) {
-    expect(entry.alternates).toEqual([{ rel: 'alternate', lang: 'lv', href: 'https://pie.pe/' }, { rel: 'alternate', lang: 'en', href: 'https://pie.pe/en/' }, { rel: 'alternate', lang: 'x-default', href: 'https://pie.pe/' }])
+    const reading = entry.url!.includes('kas-ir-piepe') || entry.url!.includes('what-is-a-bracket-fungus')
+    const lv = reading ? 'https://pie.pe/kas-ir-piepe/' : 'https://pie.pe/', en = reading ? 'https://pie.pe/en/what-is-a-bracket-fungus/' : 'https://pie.pe/en/'
+    expect(entry.alternates).toEqual([{ rel: 'alternate', lang: 'lv', href: lv }, { rel: 'alternate', lang: 'en', href: en }, { rel: 'alternate', lang: 'x-default', href: lv }])
     const response = await request.get(new URL(entry.url!).pathname)
     expect(response.status()).toBe(200); expect(response.headers()['x-robots-tag'] || '').not.toMatch(/noindex|none/i)
     expect(await response.text()).toContain(`rel="canonical" href="${entry.url}"`)

@@ -2,4 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://pie.pe/</loc><xhtml:link rel="alternate" hreflang="lv" href="https://pie.pe/"/><xhtml:link rel="alternate" hreflang="en" href="https://pie.pe/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://pie.pe/"/></url>
   <url><loc>https://pie.pe/en/</loc><xhtml:link rel="alternate" hreflang="lv" href="https://pie.pe/"/><xhtml:link rel="alternate" hreflang="en" href="https://pie.pe/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://pie.pe/"/></url>
+  <url><loc>https://pie.pe/kas-ir-piepe/</loc><xhtml:link rel="alternate" hreflang="lv" href="https://pie.pe/kas-ir-piepe/"/><xhtml:link rel="alternate" hreflang="en" href="https://pie.pe/en/what-is-a-bracket-fungus/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://pie.pe/kas-ir-piepe/"/></url>
+  <url><loc>https://pie.pe/en/what-is-a-bracket-fungus/</loc><xhtml:link rel="alternate" hreflang="lv" href="https://pie.pe/kas-ir-piepe/"/><xhtml:link rel="alternate" hreflang="en" href="https://pie.pe/en/what-is-a-bracket-fungus/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://pie.pe/kas-ir-piepe/"/></url>
 </urlset>
