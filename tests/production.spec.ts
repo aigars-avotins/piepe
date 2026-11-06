@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
-import { messages } from '../src/i18n'
+import { messages, readingPath } from '../src/i18n'
+import { checkReading } from './readingChecks'
 import { nativeDiagnostics } from './nativeDiagnostics'
 nativeDiagnostics()
 
@@ -14,7 +15,7 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
   const raw=await request.get(path);expect(raw.status()).toBe(200);expect(await raw.text()).toContain(t.factsTitle)
   await page.goto(path)
-  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.5')
+  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.6')
   const local=await readFile('dist/index.html','utf8');const script=/src="(\/assets\/[^"]+\.js)"/.exec(local)![1]
   await expect(page.locator('head script[type="module"][src^="/assets/"]')).toHaveAttribute('src',script)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:13000})
@@ -77,4 +78,21 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   expect((await request.get('/favicon.ico')).status()).toBe(200);expect((await request.get('/no-such-page')).status()).toBe(404)
   if(testInfo.project.name==='chrome-desktop'){await page.setViewportSize({width:390,height:664});await page.screenshot({path:testInfo.outputPath(`${locale}-production-mobile.png`),scale:'css'})}
   expect(errors).toEqual([])
+})
+
+for (const locale of ['lv', 'en'] as const) test(`2.5.6 ${locale}: production reading is indexable without JS and keeps the matching language route`, async ({ browser, request }, info) => {
+  const response = await request.get(readingPath(locale)); expect(response.status()).toBe(200)
+  expect(response.headers()['content-type']).toContain('text/html')
+  expect(response.headers()['x-robots-tag'] || '').not.toMatch(/noindex|none/i)
+  for (const javaScriptEnabled of [false, true]) {
+    const context = await browser.newContext({ javaScriptEnabled, viewport: { width: 390, height: 844 } })
+    try {
+      const page = await context.newPage(); await page.goto(readingPath(locale)); await checkReading(page, locale)
+      const other = locale === 'lv' ? 'en' : 'lv'
+      await page.locator(`.reading-languages a[lang="${other}"]`).click(); await checkReading(page, other)
+      await page.goBack(); await checkReading(page, locale)
+      await info.attach(`${locale}-production-reading-js${javaScriptEnabled}`, { body: await page.screenshot({ fullPage: true, scale: 'css' }), contentType: 'image/png' })
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
+    } finally { await context.close() }
+  }
 })

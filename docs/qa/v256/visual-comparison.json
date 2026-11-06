@@ -1,0 +1,22 @@
+[
+  {
+    "locale": "lv",
+    "width": 390,
+    "heroPixelIdentical": true
+  },
+  {
+    "locale": "lv",
+    "width": 1440,
+    "heroPixelIdentical": true
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "heroPixelIdentical": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "heroPixelIdentical": true
+  }
+]

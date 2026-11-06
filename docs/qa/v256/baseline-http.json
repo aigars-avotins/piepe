@@ -1,0 +1,103 @@
+{
+  "client": "curl, managed session proxy",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "is255": true,
+      "contentType": "text/html",
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "is255": true,
+      "contentType": "text/html",
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/kas-ir-piepe/",
+      "status": 404,
+      "is255": false,
+      "contentType": null,
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/",
+      "status": 404,
+      "is255": false,
+      "contentType": null,
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "is255": false,
+      "contentType": "application/xml",
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "is255": false,
+      "contentType": "text/plain",
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    },
+    {
+      "path": "/definitely-not-a-piepe-page/",
+      "status": 404,
+      "is255": false,
+      "contentType": null,
+      "security": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'sha256-k+J9I+M4ATlo+VICDrEh4PMZQUA5B20eaaqZS7rnmlc=' 'sha256-+DsyAae6+p7QuiOeO5NZiRRcJPUYKSIxhnEd+EfJQXk=' 'sha256-d93HrimIeOqg7NIxRR//zgd399wjfjqag+7SLFEEx+A='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "strict-transport-security": "max-age=2592000",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()"
+      }
+    }
+  ]
+}

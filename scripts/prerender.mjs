@@ -4,9 +4,16 @@ import { createHash } from 'node:crypto'
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom' })
 try {
   const { renderPage, renderHead, renderNote } = await server.ssrLoadModule('/src/prerender.tsx')
+  const { renderReadingDocument } = await server.ssrLoadModule('/src/ReadingPage.tsx')
+  const { readingPath } = await server.ssrLoadModule('/src/i18n.ts')
   const template = await readFile('dist/index.html', 'utf8')
   if (!template.includes('<!-- locale:start -->')) throw new Error('Run a fresh Vite build before prerendering')
   const assets = await readdir('dist/assets')
+  const appStyles = [...template.matchAll(/<link\b[^>]*rel="stylesheet"[^>]*href="([^"]+)"/g)].map(match => match[1])
+  if (!appStyles.length) throw new Error('Missing shared typography stylesheet')
+  const readingCss = await readFile('src/reading.css', 'utf8')
+  const readingStyle = `/assets/reading-${createHash('sha256').update(readingCss).digest('hex').slice(0, 16)}.css`
+  await writeFile(`dist${readingStyle}`, readingCss)
   const boot = await readFile('public/boot.js', 'utf8')
   const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`]
   for (const locale of ['lv', 'en']) {
@@ -20,8 +27,16 @@ try {
     await writeFile(`public/field-note-${locale}.txt`, renderNote(locale))
     const dir = locale === 'en' ? 'dist/en' : 'dist'
     await mkdir(dir, { recursive: true }); await writeFile(`${dir}/index.html`, html)
+    // Text-first documents deliberately omit boot.js, #root and the cinema module.
+    // A data-only JSON-LD script is the only script on either reading page.
+    const readingFonts = assets.filter(name => /^(?:manrope|cormorant-garamond)-latin-400-normal-.*\.woff2$/.test(name) || (locale === 'lv' && /^(?:manrope|cormorant-garamond)-latin-ext-400-normal-.*\.woff2$/.test(name)))
+    const readingHtml = renderReadingDocument(locale, [...appStyles, readingStyle], readingFonts.map(name => `/assets/${name}`))
+    const readingData = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(readingHtml)[1]
+    hashes.push(`'sha256-${createHash('sha256').update(readingData).digest('base64')}'`)
+    const readingDir = `dist${readingPath(locale)}`
+    await mkdir(readingDir, { recursive: true }); await writeFile(`${readingDir}index.html`, readingHtml)
   }
   const headers = await readFile('public/_headers', 'utf8')
   await writeFile('dist/_headers', headers.replace("script-src 'self'", `script-src 'self' ${hashes.join(' ')}`))
-  console.log('Prerendered LV / and EN /en/ with localized metadata, visible content and CSP hashes')
+  console.log('Prerendered both cinema homepages and both static reading pages with localized metadata and CSP hashes')
 } finally { await server.close() }

@@ -26,7 +26,7 @@ export const english = {
   collected: 'Field note collected. Your download has started.', skipAwakening: 'Go straight to the field note', awakening: 'What you see is only the beginning.',
   mediaUnavailable: 'The film is resting. You can still explore the forest.',
   forestSound: 'Forest sound', muteSound: 'Mute forest sound', enableSound: 'Enable forest sound', soundPlaying: 'Quiet forest ambience is playing.', soundWaiting: 'Forest sound starts with your first interaction.', soundMuted: 'Forest sound is off.', soundUnavailable: 'Forest sound could not load. You can try again.',
-  factsTitle: 'What is a bracket fungus?', factsIntro: 'A shelf on a tree. A life mostly out of sight.',
+  factsTitle: 'What is a bracket fungus?', factsIntro: 'A shelf on a tree. A life mostly out of sight.', readGuide: 'Bracket fungi: a closer look',
   factsDefinition: 'A bracket fungus, also called a shelf fungus, may form a shelf on a trunk or fallen branch. This fruiting body is only part of the fungus: a network of fine threads, called mycelium, can spread through the wood.',
   factsContext: 'A careful look can start with simple questions: is the bracket firm or soft, solitary or clustered, on standing wood or a fallen branch? Such details help describe an encounter, but they are not enough to name a species. Field note 001 offers three ways to practise that attention: looking at the surface, considering what lies beneath, and carrying a different gaze back into daily life.',
   glossaryTitle: 'Three words for looking closer',
@@ -72,7 +72,7 @@ const latvian: Messages = {
   collected: 'Meža piezīmes lejupielāde sākta. Atceļā nesteidzies.', skipAwakening: 'Uzreiz atvērt meža piezīmi', awakening: 'Redzamais ir tikai sākums.',
   mediaUnavailable: 'Filma šobrīd atpūšas. Mežu joprojām vari iepazīt.',
   forestSound: 'Meža skaņas', muteSound: 'Izslēgt meža skaņas', enableSound: 'Ieslēgt meža skaņas', soundPlaying: 'Skan klusas meža skaņas.', soundWaiting: 'Meža skaņas sāksies pēc pirmā pieskāriena.', soundMuted: 'Meža skaņas ir izslēgtas.', soundUnavailable: 'Meža skaņas neizdevās ielādēt. Vari mēģināt vēlreiz.',
-  factsTitle: 'Kas ir piepe?', factsIntro: 'Redzama pie koka. Lielākoties — skatienam slēpta.',
+  factsTitle: 'Kas ir piepe?', factsIntro: 'Redzama pie koka. Lielākoties — skatienam slēpta.', readGuide: 'Par piepēm, porām un sēņotni',
   factsDefinition: 'Piepe ir redzamais sēnes augļķermenis, ko mežā bieži pamana uz koka stumbra vai kritalas. Tikmēr smalku pavedienu tīkls — sēņotne — var augt dziļāk koksnē un turpināties ārpus mūsu skatiena.',
   factsContext: 'Vērojot īstu piepi, pamani arī tās apkārtni: vai tā aug uz stāvoša koka vai kritalas, viena pati vai vairākas blakus? Augļķermeņa forma un krāsa ir tikai daļa no pazīmēm, ko vērtē sēņu pazinēji; ar vienu detaļu sugas noteikšanai nepietiek. Meža piezīme 001 aicina trenēt šo vērību — vispirms aplūkot virsmu, tad domāt par neredzamo un paņemt citādu skatienu līdzi.',
   glossaryTitle: 'Trīs vārdi tuvākam skatienam',
@@ -94,4 +94,5 @@ const latvian: Messages = {
 }
 export const messages: Record<Locale, Messages> = { lv: latvian, en: english }
 export const localePath = (locale: Locale) => locale === 'en' ? '/en/' : '/'
+export const readingPath = (locale: Locale) => locale === 'lv' ? '/kas-ir-piepe/' : '/en/what-is-a-bracket-fungus/'
 export const localeFromPath = (path: string): Locale => /^\/en(?:\/|$)/.test(path) ? 'en' : 'lv'
