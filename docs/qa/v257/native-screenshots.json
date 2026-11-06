@@ -1,0 +1,114 @@
+[
+  {
+    "name": "lv-wallpapers-390",
+    "sourceAttachment": "lv-wallpapers-390-b44cd13edd602a83abb84990a399862831c88218.png",
+    "file": "native-lv-wallpapers-390.webp",
+    "originalPixelDimensions": [
+      1170,
+      8106
+    ],
+    "cssDimensions": [
+      390,
+      2702
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  },
+  {
+    "name": "lv-wallpapers-1440",
+    "sourceAttachment": "lv-wallpapers-1440-d88cd2a808bcba8f801c42dc680078734fceb7f4.png",
+    "file": "native-lv-wallpapers-1440.webp",
+    "originalPixelDimensions": [
+      4320,
+      5877
+    ],
+    "cssDimensions": [
+      1440,
+      1959
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  },
+  {
+    "name": "lv-note-001-390",
+    "sourceAttachment": "lv-note-001-390-950bb7369a6e3f0866679942406eadf124012565.png",
+    "file": "native-lv-note-001-390.webp",
+    "originalPixelDimensions": [
+      1170,
+      8940
+    ],
+    "cssDimensions": [
+      390,
+      2980
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  },
+  {
+    "name": "lv-note-001-1440",
+    "sourceAttachment": "lv-note-001-1440-99e8d56f2101d48ab311f653f5c24b771523550f.png",
+    "file": "native-lv-note-001-1440.webp",
+    "originalPixelDimensions": [
+      4320,
+      8301
+    ],
+    "cssDimensions": [
+      1440,
+      2767
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  },
+  {
+    "name": "en-index-390",
+    "sourceAttachment": "en-index-390-e1f47967a9602cf4f22b0397571874e4cba69168.png",
+    "file": "native-en-index-390.webp",
+    "originalPixelDimensions": [
+      1170,
+      5346
+    ],
+    "cssDimensions": [
+      390,
+      1782
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  },
+  {
+    "name": "en-index-1440",
+    "sourceAttachment": "en-index-1440-fa0466e7842cf85096290fb9860a0a643b7565cb.png",
+    "file": "native-en-index-1440.webp",
+    "originalPixelDimensions": [
+      4320,
+      4221
+    ],
+    "cssDimensions": [
+      1440,
+      1407
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  },
+  {
+    "name": "en-note-006-390",
+    "sourceAttachment": "en-note-006-390-601cc11fc9e90e5ed3f8f64ef7f5266d9cd7728e.png",
+    "file": "native-en-note-006-390.webp",
+    "originalPixelDimensions": [
+      1170,
+      9912
+    ],
+    "cssDimensions": [
+      390,
+      3304
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  },
+  {
+    "name": "en-note-006-1440",
+    "sourceAttachment": "en-note-006-1440-dddd5b76253a8c4ea973e3391e28610f7b619716.png",
+    "file": "native-en-note-006-1440.webp",
+    "originalPixelDimensions": [
+      4320,
+      8370
+    ],
+    "cssDimensions": [
+      1440,
+      2790
+    ],
+    "method": "Native original PNG in Actions artifact; exported here as CSS-size WebP for economical review."
+  }
+]

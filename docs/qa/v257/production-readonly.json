@@ -1,0 +1,65 @@
+{
+  "method": "Read-only curl HTTP inspection; no browser release smoke or deployment. Confirms 2.5.6 remains live and new route is not prematurely published.",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "versions": [
+        "2.5.6"
+      ],
+      "canonical": [
+        "https://pie.pe/"
+      ]
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "versions": [
+        "2.5.6"
+      ],
+      "canonical": [
+        "https://pie.pe/en/"
+      ]
+    },
+    {
+      "path": "/kas-ir-piepe/",
+      "status": 200,
+      "versions": [
+        "2.5.6"
+      ],
+      "canonical": [
+        "https://pie.pe/kas-ir-piepe/"
+      ]
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/",
+      "status": 200,
+      "versions": [
+        "2.5.6"
+      ],
+      "canonical": [
+        "https://pie.pe/en/what-is-a-bracket-fungus/"
+      ]
+    },
+    {
+      "path": "/meza-piezimes/",
+      "status": 404,
+      "versions": [],
+      "canonical": []
+    }
+  ],
+  "homeEntryMatchesBaseline": {
+    "lv": {
+      "matches": true,
+      "entry": [
+        "/assets/index-BEkfRUAk.js"
+      ]
+    },
+    "en": {
+      "matches": true,
+      "entry": [
+        "/assets/index-BEkfRUAk.js"
+      ]
+    }
+  }
+}
