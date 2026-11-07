@@ -1,0 +1,80 @@
+[
+  {
+    "source": "public/media/02_Zoom_in.mp4",
+    "sourceSha256": "82bb1fc5ad6641306b40dae34e96c7c66684337d937d92b61c0ee0f169059ebd",
+    "derivative": "public/media/portal-02-faststart.mp4",
+    "derivativeSha256": "6da221ec9d275aa16992e62804f31bbea4b919dc53da6aeb0a6977eed3d3290f",
+    "bytes": 12233601,
+    "elementaryStreams": {
+      "video": "4cdd1219e554aa0a1bfba28e0b94bf66c3d36a5a140dbc1ff37224bae857a90e",
+      "audio": "cfff5cd4ae1035e62ea947dc349c63ec3efc195a1fd72adf956c3b91e3321c3b"
+    },
+    "poster": "public/media/portal-02-first.webp",
+    "posterSha256": "22874a92eb78da447aa5bb6aca3dc1f1434d9e526f743e7e3b9b9f03a19ccbe6"
+  },
+  {
+    "source": "public/media/03_Entering_fungus.mp4",
+    "sourceSha256": "5fef0a228648d5c0b21007e78d0036cc019521f9d196bbd66015443b201cf304",
+    "derivative": "public/media/portal-03-faststart.mp4",
+    "derivativeSha256": "37591b0491c31bb99c169a521ff38a99a6b0a74040ee1ee4c3f3e39a1aab23cd",
+    "bytes": 8125509,
+    "elementaryStreams": {
+      "video": "b64ff2da0032296ea845f8c44224106df3d5f2ef04e5114fb8c1cd1457a21d10",
+      "audio": "481b890665fff03aecb6088e51ab85b7e6d389bb7c7d3c52c84ca7417b4650b7"
+    },
+    "poster": "public/media/portal-03-first.webp",
+    "posterSha256": "b8401f7797820c2ab1a85cd9de41c9d87e639eb48888b6c84380946bfa87d766"
+  },
+  {
+    "source": "public/media/04_Inside_fungus.mp4",
+    "sourceSha256": "468d28d33a57402d83cf412f02e84f5191cd8508d9e5915cc1cee8267e4e64ed",
+    "derivative": "public/media/portal-04-faststart.mp4",
+    "derivativeSha256": "e0470814966830a5c161e99b909061e73e1aac58c0ef00d31d2879ec65e0658e",
+    "bytes": 14195409,
+    "elementaryStreams": {
+      "video": "4fb7f39be309bba191b6e0ca700d9056ff0f697dfe7a07575d73f0d88b0c3e6e",
+      "audio": "c95d97789bd19d12bbc6d7579a03f5da90e119b97c6557ddf8b986b7b3af7e82"
+    },
+    "poster": "public/media/portal-04-first.webp",
+    "posterSha256": "f3034d751b9f655a2152d5857dd607cd45683d2f509d78d29b7031804cbc934f"
+  },
+  {
+    "source": "public/media/05_Fungus_world.mp4",
+    "sourceSha256": "32c74d65d6d4225343ef5066e9ec4d7de9b1f0d00e754bbfd7f9e3e5b05b6f6d",
+    "derivative": "public/media/portal-05-faststart.mp4",
+    "derivativeSha256": "5160b1a78d2e5fd25fc437b60df8e1960d937587e2ca8a39598425ebd3616aa2",
+    "bytes": 5916689,
+    "elementaryStreams": {
+      "video": "a84826caa824c0a2bef8178c981378c1522d89e1867428ad064e3e255723ca3a",
+      "audio": "486d890205dfa0e8fa48d8bd464ef0fed85307374bb57fd03a254d4b2e3d6e84"
+    },
+    "poster": "public/media/portal-05-first.webp",
+    "posterSha256": "c8b32e624b0098a50867092a82f690396de065e227fbfeb626e2e49977d76548"
+  },
+  {
+    "source": "public/media/06_Leaving_fungus.mp4",
+    "sourceSha256": "1bf2c8253ee549f1d06c14010cc639dd929aa67bad0ecbb8275b1f84bcd881c0",
+    "derivative": "public/media/portal-06-faststart.mp4",
+    "derivativeSha256": "e67a87b1fcea75c0d9712786afa87225a143c6d07a456a2a5fac38dac54306b5",
+    "bytes": 11178320,
+    "elementaryStreams": {
+      "video": "6efd9e97cb6657e6ff34ee0468c81b050e2d234055f6e4fd8bd1fa20c9dd8794",
+      "audio": "33b5edc2b4f364a66ac6546e1f358230005c0a4d3f672b5bda56f0817399accc"
+    },
+    "poster": "public/media/portal-06-first.webp",
+    "posterSha256": "fcbb042b3f39e1488575447513bf1c68872f30c0633fe58a48efd559f397e931"
+  },
+  {
+    "source": "public/media/07_Zoom_out.mp4",
+    "sourceSha256": "cf75c370a943e585441b454586ece04cd50a23171931c6cd1fde21fe2af5e94b",
+    "derivative": "public/media/portal-07-faststart.mp4",
+    "derivativeSha256": "b9ac4c438d641aa7f88e991069afb03826afd1b8b2eed7e5c965547070414d69",
+    "bytes": 13223273,
+    "elementaryStreams": {
+      "video": "2f42e0de4887014a7b8c8ec1c22e926d414a08a778de51aab0bf1a362763497b",
+      "audio": "2fab0628a2de2dc28459a6fdee9bc966c4dfbd4b056559af2995bb4e9ffdd55d"
+    },
+    "poster": "public/media/portal-07-first.webp",
+    "posterSha256": "791a6275f54a7137a692fb51fc3a3ae0be5922bea7bac225f2607f56d8da48b3"
+  }
+]

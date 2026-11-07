@@ -29,7 +29,7 @@ test('actual film plays once, reveals title, ends and becomes interactive', asyn
   await page.getByRole('button', { name: 'Close discovery' }).click()
   await expect(page.getByRole('dialog')).not.toBeVisible()
   await page.locator('#encounter').scrollIntoViewIfNeeded()
-  await expect(page.getByRole('button', { name: 'Open the field note', exact: true })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Enter the fungus', exact: true })).toBeVisible()
   // Exercise an onstage Return button. Clicking a distant sticky descendant
   // also asks WebKit to scroll it into view, racing the button's own scroll.
   await page.locator('#return').evaluate(e => e.scrollIntoView({ behavior: 'instant', block: 'start' }))

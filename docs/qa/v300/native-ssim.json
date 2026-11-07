@@ -1,0 +1,66 @@
+[
+  {
+    "boundary": "01\u219202",
+    "nativeSsim": 0.622027,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "boundary": "02\u219203",
+    "nativeSsim": 0.557296,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "boundary": "03\u219204",
+    "nativeSsim": 0.445108,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "boundary": "04\u219205",
+    "nativeSsim": 0.878413,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "boundary": "05 loop",
+    "nativeSsim": 0.923038,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "boundary": "05\u219206",
+    "nativeSsim": 0.743104,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "boundary": "06\u219207",
+    "nativeSsim": 0.909252,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "boundary": "07\u219201",
+    "nativeSsim": 0.594136,
+    "dimensions": [
+      1920,
+      1080
+    ]
+  }
+]

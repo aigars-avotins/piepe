@@ -1,0 +1,110 @@
+[
+  {
+    "i": 0,
+    "name": "original",
+    "ms": 849.5999999940395,
+    "ready": 3,
+    "transfers": [
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 0-12288852/12288853"
+      },
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 12255232-12288852/12288853"
+      },
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 65536-12288852/12288853"
+      }
+    ]
+  },
+  {
+    "i": 0,
+    "name": "fast",
+    "ms": 542.7000000029802,
+    "ready": 4,
+    "transfers": [
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/fast",
+        "range": "bytes 0-12233600/12233601"
+      }
+    ]
+  },
+  {
+    "i": 1,
+    "name": "original",
+    "ms": 852,
+    "ready": 3,
+    "transfers": [
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 0-12288852/12288853"
+      },
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 12255232-12288852/12288853"
+      },
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 65536-12288852/12288853"
+      }
+    ]
+  },
+  {
+    "i": 1,
+    "name": "fast",
+    "ms": 540.7999999970198,
+    "ready": 4,
+    "transfers": [
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/fast",
+        "range": "bytes 0-12233600/12233601"
+      }
+    ]
+  },
+  {
+    "i": 2,
+    "name": "original",
+    "ms": 856.1000000089407,
+    "ready": 3,
+    "transfers": [
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 0-12288852/12288853"
+      },
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 12255232-12288852/12288853"
+      },
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/original",
+        "range": "bytes 65536-12288852/12288853"
+      }
+    ]
+  },
+  {
+    "i": 2,
+    "name": "fast",
+    "ms": 537.5,
+    "ready": 3,
+    "transfers": [
+      {
+        "status": 206,
+        "url": "http://127.0.0.1:4295/fast",
+        "range": "bytes 0-12233600/12233601"
+      }
+    ]
+  }
+]

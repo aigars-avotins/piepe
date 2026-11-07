@@ -1,3 +1,4 @@
+import {openOriginalNote} from './originalNote'
 import { test, expect } from '@playwright/test'
 import type { Page, TestInfo } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
@@ -52,7 +53,7 @@ for (const [width, height] of viewports) test.describe(`2.5.4 readability ${widt
       evidence.push({ id, body, labels })
     }
     await page.locator('#encounter').evaluate(e => e.scrollIntoView({ block: 'start', behavior: 'instant' }))
-    await page.locator('.encounter-copy .line-link').click()
+    await openOriginalNote(page)
     await expect(page.getByRole('dialog')).toBeVisible()
     await expect(page.locator('.observation-panel')).toHaveCSS('opacity', '1')
     evidence.push(await readable(page, ['#discovery-description'], 16))
@@ -67,12 +68,12 @@ for (const [width, height] of viewports) test.describe(`2.5.4 readability ${widt
     expect((await download).suggestedFilename()).toBe(`piepe-field-note-001-${locale}.txt`)
     await page.locator('.close-discovery').click()
     await expect(page.getByRole('dialog')).not.toBeVisible({ timeout: 2000 })
-    await expect(page.locator('.encounter-copy .line-link')).toBeFocused()
+    await expect(page.locator('.fungus-annotation')).toBeFocused()
     await info.attach('computed-readable-type', { body: JSON.stringify({ width, height, locale, evidence }), contentType: 'application/json' })
   })
 })
 
-async function moving(page: Page, name: string, info: TestInfo) {
+async function moving(page: Page, name: string, info: TestInfo, baseline: boolean) {
   const layer = page.locator(`[data-clip=${name}]`), video = layer.locator('video')
   await expect(layer).toHaveAttribute('data-clip-ready', 'true', { timeout: 10000 })
   await expect.poll(() => video.evaluate(v => {
@@ -102,7 +103,8 @@ async function moving(page: Page, name: string, info: TestInfo) {
     hashes.push(createHash('sha256').update(image).digest('hex'))
   }
   expect(new Set(hashes).size).toBe(3)
-  await expect(video).toHaveCSS('filter', 'none')
+  // 2.5.8.2 moved the approved Morning grade onto media leaves for native WebKit.
+  await expect(video).toHaveCSS('filter', baseline?'none':'brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)')
   const rect = await video.boundingBox()
   expect(rect!.width).toBeGreaterThanOrEqual(size.width - 1)
   expect(rect!.height).toBeGreaterThanOrEqual(size.height - 1)
@@ -119,7 +121,7 @@ for (const [width, height, locale] of [[390, 844, 'en'], [800, 900, 'lv'], [1512
     await expect(page.getByRole('dialog')).not.toBeVisible({ timeout: 2000 })
     for (let visit = 0; visit < 2; visit++) for (const [id, clip] of [['understory', 'understory'], ['return', 'breathing']]) {
       await page.locator('#' + id).evaluate(e => scrollTo({ top: e.getBoundingClientRect().top + scrollY + Math.min((e.offsetHeight - innerHeight) * .35, innerHeight * .65), behavior: 'instant' }))
-      await moving(page, clip, info)
+      await moving(page, clip, info, baseline)
     }
     await page.getByRole('button', { name: messages[locale].returnForest, exact: true }).click()
     await expect.poll(() => page.evaluate(() => scrollY)).toBeLessThan(5)
@@ -136,7 +138,7 @@ for (const preference of ['reduced', 'save-data'] as const) for (const locale of
   await expect(page.locator('video')).toHaveCount(0)
   await readable(page, ['.chapter-body', '.return-thought'], 16)
   await page.locator('#encounter').evaluate(e => e.scrollIntoView({ block: 'start', behavior: 'instant' }))
-  await page.locator('.encounter-copy .line-link').click()
+  await openOriginalNote(page)
   await expect(page.locator('#discovery-description')).toBeVisible()
   await expect(page.locator('video')).toHaveCount(0)
 })
@@ -171,7 +173,7 @@ test.describe('2.5.4 folding and landscape', () => {
         })
         expect(overlap, 'A scene caption must not be hidden by the audio control at its reading anchor').toBe(false)
       }
-      await page.locator('.encounter-copy .line-link').click()
+      await openOriginalNote(page)
       await expect(page.locator('#discovery-description')).toBeVisible()
       const close = await page.locator('.close-discovery').boundingBox()
       expect(close!.y).toBeGreaterThanOrEqual(0); expect(close!.y + close!.height).toBeLessThanOrEqual(height)

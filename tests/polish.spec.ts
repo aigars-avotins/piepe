@@ -1,16 +1,16 @@
 import { test, expect } from '@playwright/test'
 
-for (const locale of ['lv', 'en']) test(`${locale}: encounter plus, readable support copy and safe source links`, async ({ page, context }) => {
+for (const locale of ['lv', 'en']) test(`${locale}: encounter portal, readable support copy and safe source links`, async ({ page, context }) => {
   await page.addInitScript(() => sessionStorage.setItem('piepe-entered', '1'))
   await page.goto(locale === 'lv' ? '/' : '/en/')
   await expect(page.locator('.wallpaper-quality')).toHaveCount(0)
   expect(await page.locator('.encounter-copy .chapter-body').evaluate(e => parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(16)
   expect(await page.locator('.encounter-status').evaluate(e => parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(13)
-  await page.locator('.specimen-invitation').scrollIntoViewIfNeeded()
-  await page.locator('.specimen-invitation').click()
+  await page.locator('[data-portal-entry]').scrollIntoViewIfNeeded()
+  await page.locator('[data-portal-entry]').click()
   await expect(page.getByRole('dialog')).toBeVisible()
   await page.keyboard.press('Escape')
-  await expect(page.locator('.specimen-invitation')).toBeFocused()
+  await expect(page.locator('[data-portal-entry]')).toBeFocused()
   for (const link of await page.locator('.fact-sources a').all()) {
     await expect(link).toHaveAttribute('target', '_blank')
     await expect(link).toHaveAttribute('rel', 'noopener noreferrer')

@@ -1,3 +1,4 @@
+import {portalCopy} from './portalCopy'
 import { discoveryCopy } from './discoveryCopy'
 import { memo, useEffect, useRef } from 'react'
 import type { Locale } from './i18n'
@@ -9,8 +10,8 @@ import RasterImage from './RasterImage'
 import Arrow from './Arrow'
 
 export function DiscoveryEntry({locale}:{locale:Locale}) {
-  const t=discoveryCopy[locale]
-  return <a className="discovery-entry" href="#forest-xray"><span className="discovery-preview" aria-hidden="true"><img src="/media/forest-final.jpg?v=2.3" alt="" width="1920" height="1080" loading="lazy" decoding="async"/><span/></span><span><strong>{t.title}</strong><small>{t.hint}</small></span><span className="discovery-entry-arrow" aria-hidden="true"><Arrow direction="down"/></span></a>
+  const t=portalCopy[locale]
+  return <a className="discovery-entry" href="#encounter"><span className="discovery-preview" aria-hidden="true"><img src="/media/forest-final.jpg?v=2.3" alt="" width="1920" height="1080" loading="lazy" decoding="async"/></span><span><strong>{t.teaser}</strong><small>{t.teaserHint}</small></span><span className="discovery-entry-arrow" aria-hidden="true"><Arrow direction="down"/></span></a>
 }
 const HomeExperiences=memo(function HomeExperiences({locale}:{locale:Locale}) {
   const root=useRef<HTMLDivElement>(null),t=discoveryCopy[locale]

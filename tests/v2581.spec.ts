@@ -1,9 +1,9 @@
+import {portalCopy} from '../src/portalCopy'
 import {test,expect} from '@playwright/test'
 import {createHash} from 'node:crypto'
 import {readFile} from 'node:fs/promises'
 import {messages,readingPath,localePath} from '../src/i18n'
 import {notePath} from '../src/forestPaths'
-import {discoveryCopy} from '../src/discoveryCopy'
 import {experienceCopy} from '../src/experienceCopy'
 import {readings} from '../src/reading'
 import {nativeDiagnostics} from './nativeDiagnostics'
@@ -14,19 +14,19 @@ for(const locale of ['lv','en'] as const){
     // A resized iPhone context remains a coarse-pointer, 3x device. Use actual
     // desktop input/render settings for desktop layouts, not a 4320px phone surface.
     test.use({viewport:{width,height:width===390?844:900},screen:{width,height:width===390?844:900},isMobile:width===390,hasTouch:width===390,deviceScaleFactor:width===390?3:1})
-    test(`2.5.8.1 ${locale} ${width}: first viewport entry reaches the working homepage reveal and native history`,async({page},info)=>{
+    test(`2.5.8.1 ${locale} ${width}: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history`,async({page},info)=>{
     const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
     await page.addInitScript(()=>{sessionStorage.setItem('piepe-entered','1');localStorage.setItem('piepe-forest-sound','off')})
     await page.goto(localePath(locale));await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
     expect(await page.evaluate(()=>innerWidth)).toBe(width)
     expect(await page.evaluate(()=>devicePixelRatio)).toBe(width===390?3:1)
     expect(await page.evaluate(()=>matchMedia('(pointer:coarse)').matches)).toBe(width===390)
-    const entry=page.locator('.discovery-entry');await expect(entry).toBeVisible();await expect(entry).toContainText(discoveryCopy[locale].title)
+    const entry=page.locator('.discovery-entry');await expect(entry).toBeVisible();await expect(entry).toContainText(portalCopy[locale].teaser)
     await expect.poll(()=>entry.locator('img').evaluate((e:HTMLImageElement)=>e.complete&&e.naturalWidth>0)).toBe(true)
     const b=(await entry.boundingBox())!;expect(b.y).toBeGreaterThan(0);expect(b.y+b.height).toBeLessThanOrEqual(width===390?844:900)
     const overlaps=await entry.evaluate(e=>{const a=e.getBoundingClientRect();return [...document.querySelectorAll('.hero-copy,.fungus-annotation>span:last-child,.world>.sound-control,.scroll-cue')].some(n=>{const b=n.getBoundingClientRect();return a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top})});expect(overlaps).toBe(false)
     await info.attach(`${locale}-${width}-home`,{body:await page.screenshot({scale:'css'}),contentType:'image/png'})
-    await entry.click();await expect(page).toHaveURL(/#forest-xray$/)
+    await entry.click();await expect(page).toHaveURL(/#encounter$/);await expect(page.locator('[data-portal-entry]')).toBeVisible();await expect(page.locator('.fungus-portal')).toHaveCount(0);await page.goBack();await page.goto(localePath(locale)+'#forest-xray')
     if(width>=700){const a=(await page.locator('.home-experiences').boundingBox())!,rail=(await page.locator('.journey-index').boundingBox())!;expect(a.x+a.width).toBeLessThan(rail.x-16)}
     const section=page.locator('#forest-xray'),range=section.locator('[data-xray-range]');await expect(section.locator('[data-xray-controls]')).toBeVisible()
     await range.focus();await range.press('Home');await expect(range).toHaveValue('0');const hashes=[]
@@ -53,7 +53,7 @@ for(const locale of ['lv','en'] as const){
   })
   test(`2.5.8.1 ${locale}: homepage entry and explanations remain genuine HTML without JavaScript`,async({browser})=>{
     const c=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}})
-    try{const p=await c.newPage();await p.goto(localePath(locale));await expect(p.locator('.discovery-entry')).toBeVisible();await p.locator('.discovery-entry').click();await expect(p).toHaveURL(/#forest-xray$/);await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toBeVisible();await p.locator('#home-xray-wood summary').click();await expect(p.locator('#home-xray-wood')).toContainText(experienceCopy[locale].xray.stories[0].text);const popupPromise=p.waitForEvent('popup');await p.locator('.exploration-guide').click();const guide=await popupPromise;await expect(guide).toHaveURL(new RegExp(readingPath(locale)+'#beneath-bark$'));await expect(guide.locator('.world,video')).toHaveCount(0)}finally{await c.close()}
+    try{const p=await c.newPage();await p.goto(localePath(locale));await expect(p.locator('.discovery-entry')).toBeVisible();await p.locator('.discovery-entry').click();await expect(p).toHaveURL(/#encounter$/);await p.goto(localePath(locale)+'#forest-xray');await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toBeVisible();await p.locator('#home-xray-wood summary').click();await expect(p.locator('#home-xray-wood')).toContainText(experienceCopy[locale].xray.stories[0].text);const popupPromise=p.waitForEvent('popup');await p.locator('.exploration-guide').click();const guide=await popupPromise;await expect(guide).toHaveURL(new RegExp(readingPath(locale)+'#beneath-bark$'));await expect(guide.locator('.world,video')).toHaveCount(0)}finally{await c.close()}
   })
   test(`2.5.8.1 ${locale}: delayed static code keeps controls visible and enables them only after binding, with header preference and stable layout`,async({page})=>{
     let release!:()=>void;const gate=new Promise<void>(r=>{release=r})
@@ -67,10 +67,14 @@ for(const locale of ['lv','en'] as const){
 }
 for(const mode of ['reduced','save-data'] as const)test(`2.5.8.1 ${mode}: immediate home entry, usable reveal and static film alternative`,async({page})=>{
   if(mode==='reduced')await page.emulateMedia({reducedMotion:'reduce'});else await page.addInitScript(()=>Object.defineProperty(navigator,'connection',{value:{saveData:true},configurable:true}))
-  await page.goto('/en/');await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await expect(page.locator('.discovery-entry')).toBeVisible();await expect(page.locator('video')).toHaveCount(0);await page.locator('.discovery-entry').click();await page.locator('[data-xray-range]').focus();await page.keyboard.press('End');await expect(page.locator('[data-xray-range]')).toHaveValue('100');await expect(page.locator('.xray-cutaway')).toHaveCSS('transition-duration','0s')
+  await page.goto('/en/');await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await expect(page.locator('.discovery-entry')).toBeVisible();await expect(page.locator('video')).toHaveCount(0);await page.locator('.discovery-entry').click();await expect(page).toHaveURL(/#encounter$/);await page.goto('/en/#forest-xray');await page.locator('[data-xray-range]').focus();await page.keyboard.press('End');await expect(page.locator('[data-xray-range]')).toHaveValue('100');await expect(page.locator('.xray-cutaway')).toHaveCSS('transition-duration','0s')
 })
 test('2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module',async({request})=>{
   const fixture=JSON.parse(await readFile('docs/qa/v2581/baseline-inventory.json','utf8'))
+  // 3.0 adds explicit portal-only audio activation; retain the historical fixture
+  // and pin the reviewed audio change alongside functional opt-in/mute tests.
+  const portalSources=JSON.parse(await readFile('docs/qa/v300/preserved-sources.json','utf8'))
+  fixture.protectedSources['src/useForestAudio.ts']=portalSources['src/useForestAudio.ts']
   for(const [path,hash]of Object.entries({...fixture.protectedSources,...fixture.originalAssets}))expect(createHash('sha256').update(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)).digest('hex'),path).toBe(hash)
   const home=await(await request.get('/')).text(),guide=await(await request.get(readingPath('lv'))).text(),entry=/src="(\/assets\/reading-tools-[^"]+\.js)"/.exec(guide)![1],js=await readFile('dist'+entry,'utf8')
   expect(js).not.toMatch(/react|gsap|ScrollTrigger|forest-reveal|AudioContext|import\s/);expect(Buffer.byteLength(js)).toBeLessThan(9000)

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { saveData } from './usePreferences'
-export type ForestAudio = { enabled: boolean; status: 'waiting' | 'playing' | 'muted' | 'unavailable'; toggle: (event?: { isTrusted: boolean }) => void }
+export type ForestAudio = { enabled: boolean; status: 'waiting' | 'playing' | 'muted' | 'unavailable'; toggle: (event?: { isTrusted: boolean }) => void; activate?: (event?: {isTrusted:boolean})=>void }
 type AudioDepth = 'surface' | 'close' | 'beneath'
 const frequencyFor = (depth: AudioDepth) => depth==='beneath'?4600:depth==='close'?10000:20000
 
@@ -8,7 +8,7 @@ const frequencyFor = (depth: AudioDepth) => depth==='beneath'?4600:depth==='clos
 export function useForestAudio(depth: AudioDepth = 'surface'): ForestAudio {
   const [enabled, setEnabled] = useState(true)
   const [status, setStatus] = useState<ForestAudio['status']>('waiting')
-  const command = useRef<((trusted: boolean) => void) | undefined>(undefined)
+  const command = useRef<((trusted: boolean, force?:boolean) => void) | undefined>(undefined)
   const depthValue = useRef(frequencyFor(depth)), graph = useRef<{ context: AudioContext; filter?: BiquadFilterNode } | undefined>(undefined)
   useEffect(() => {
     depthValue.current=frequencyFor(depth)
@@ -81,16 +81,16 @@ export function useForestAudio(depth: AudioDepth = 'surface'): ForestAudio {
         desired = false; setEnabled(false); setStatus('unavailable')
       }
     }
-    command.current = (trusted) => {
+    command.current = (trusted,force) => {
       activated ||= trusted || !!navigator.userActivation?.isActive
-      desired = !desired; setEnabled(desired); setStatus(desired ? 'waiting' : 'muted')
+      desired = force??!desired; setEnabled(desired); setStatus(desired ? 'waiting' : 'muted')
       try { localStorage.setItem('piepe-forest-sound', desired ? 'on' : 'off') } catch { /* Preference works for this visit without storage. */ }
       if (desired) void start(); else silence()
     }
     const interaction = (event: Event) => {
       if (!event.isTrusted) return
+      if (event.target instanceof Element && (event.target.closest('.sound-control')||event.target.closest('.fungus-portal,[data-portal-entry]'))) return
       activated=true
-      if (event.target instanceof Element && event.target.closest('.sound-control')) return
       if (desired && (recording?recording.paused:!context || context.state !== 'running' || !source)) void start()
     }
     const visibility = () => { if (document.hidden) silence(); else if (desired) void start() }
@@ -110,5 +110,5 @@ export function useForestAudio(depth: AudioDepth = 'surface'): ForestAudio {
       if(recording){recording.pause();recording.removeAttribute('src');recording.load()}
     }
   }, [])
-  return { enabled, status, toggle: useCallback((event?: { isTrusted: boolean }) => command.current?.(!!event?.isTrusted), []) }
+  return { enabled, status, toggle: useCallback((event?: { isTrusted: boolean }) => command.current?.(!!event?.isTrusted), []), activate:useCallback((event?:{isTrusted:boolean})=>command.current?.(!!event?.isTrusted,true),[]) }
 }
