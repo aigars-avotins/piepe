@@ -1880,5 +1880,97 @@
         ]
       }
     ]
+  },
+  {
+    "name": "native-macos-final",
+    "run": "https://github.com/aigars-avotins/piepe/actions/runs/42386179694",
+    "code": "b74a5f13c28cb1050e251a9ff129ce356f5e8ff9",
+    "stats": {
+      "startTime": "2026-11-07T15:26:49.022Z",
+      "duration": 47043.192,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "compact phone retains native scroll when translated facts change height",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5818,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 7625,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4952,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5965,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 6987,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4353,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5923,
+            "error": ""
+          }
+        ]
+      }
+    ]
   }
 ]

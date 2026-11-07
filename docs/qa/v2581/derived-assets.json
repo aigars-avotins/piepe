@@ -74,7 +74,7 @@
     "bytes": 20432,
     "url": "/experience/atlas-preview-8eb7ab501796.webp",
     "sha256": "8eb7ab5017960a0c8568d3477f57d63048182ca8a7207c0f90f73a9fe1f10a8b",
-    "interpretation": "Raster preview of this release\u2019s original coded illustration, rendered by Chromium and composed into a thumbnail. Not a photograph or new AI generation."
+    "interpretation": "Raster preview of this release\u2019s original coded illustration, rendered by Chromium and composed into a thumbnail. Not a specimen photograph; no image/video generation service was used."
   },
   {
     "name": "time-preview",
@@ -84,6 +84,6 @@
     "bytes": 21360,
     "url": "/experience/time-preview-536b180370d8.webp",
     "sha256": "536b180370d824df33c0f50d23c2d26a2c86cd4bf0847e3ea8134b609d150c0b",
-    "interpretation": "Raster preview of this release\u2019s original coded illustration, rendered by Chromium and composed into a thumbnail. Not a photograph or new AI generation."
+    "interpretation": "Raster preview of this release\u2019s original coded illustration, rendered by Chromium and composed into a thumbnail. Not a specimen photograph; no image/video generation service was used."
   }
 ]
