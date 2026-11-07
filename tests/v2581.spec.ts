@@ -19,12 +19,14 @@ for(const locale of ['lv','en'] as const){
     await expect.poll(()=>entry.locator('img').evaluate((e:HTMLImageElement)=>e.complete&&e.naturalWidth>0)).toBe(true)
     const b=(await entry.boundingBox())!;expect(b.y).toBeGreaterThan(0);expect(b.y+b.height).toBeLessThanOrEqual(width===390?844:900)
     const overlaps=await entry.evaluate(e=>{const a=e.getBoundingClientRect();return [...document.querySelectorAll('.hero-copy,.fungus-annotation,.world>.sound-control,.scroll-cue')].some(n=>{const b=n.getBoundingClientRect();return a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top})});expect(overlaps).toBe(false)
-    await info.attach(`${locale}-${width}-home`,{body:await page.screenshot(),contentType:'image/png'})
+    await info.attach(`${locale}-${width}-home`,{body:await page.screenshot({scale:'css'}),contentType:'image/png'})
     await entry.click();await expect(page).toHaveURL(/#forest-xray$/)
-    if(width>1100){const a=(await page.locator('.home-experiences').boundingBox())!,rail=(await page.locator('.journey-perspective').boundingBox())!;expect(a.x+a.width).toBeLessThan(rail.x-16)}
+    if(width>=700){const a=(await page.locator('.home-experiences').boundingBox())!,rail=(await page.locator(width>1100?'.journey-perspective':'.journey-index').boundingBox())!;expect(a.x+a.width).toBeLessThan(rail.x-16)}
     const section=page.locator('#forest-xray'),range=section.locator('[data-xray-range]');await expect(section.locator('[data-xray-controls]')).toBeVisible()
     await range.focus();await range.press('Home');await expect(range).toHaveValue('0');const hashes=[]
-    for(const key of ['Home','ArrowRight','End']){await range.press(key);hashes.push(createHash('sha256').update(await section.locator('.xray-view').screenshot()).digest('hex'))}
+    // Assert actual painted states at their CSS pixel size. The iPhone project's 3x scale
+    // otherwise makes a 1440px layout capture a synthetic 4320px bitmap three times.
+    for(const key of ['Home','ArrowRight','End']){await range.press(key);hashes.push(createHash('sha256').update(await section.locator('.xray-view').screenshot({scale:'css'})).digest('hex'))}
     expect(new Set(hashes).size).toBe(3);await expect(range).toHaveAttribute('aria-valuetext',`100% ${experienceCopy[locale].xray.output}`)
     await section.locator('[data-xray-point="hyphae"]').click();await expect(page).toHaveURL(/#home-xray-hyphae$/);await expect(section.locator('#home-xray-hyphae')).toHaveAttribute('open','')
     expect(await section.locator('#home-xray-hyphae').evaluate(e=>e.contains(document.activeElement))).toBe(true)

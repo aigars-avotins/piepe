@@ -1,0 +1,62 @@
+[
+  {
+    "file": "before-lv-1440.webm",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 800,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "12.400000"
+    }
+  },
+  {
+    "file": "before-en-390.webm",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 390,
+        "height": 844,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "12.320000"
+    }
+  },
+  {
+    "file": "after-lv-1440.webm",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 800,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "21.960000"
+    }
+  },
+  {
+    "file": "after-en-390.webm",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 390,
+        "height": 844,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "18.000000"
+    }
+  }
+]

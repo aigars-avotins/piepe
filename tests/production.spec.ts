@@ -56,7 +56,7 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   await page.getByRole('tab',{name:new RegExp(t.observations[0].label)}).press('End')
   const download=page.waitForEvent('download');await page.getByRole('link',{name:t.keepNote,exact:false}).click()
   expect((await download).suggestedFilename()).toBe(`piepe-field-note-001-${locale}.txt`)
-  await expect(page.getByRole('status')).toContainText(t.collected)
+  await expect(page.getByRole('dialog').getByRole('status')).toContainText(t.collected)
   await page.getByRole('button',{name:t.closeDiscovery}).click();await expect(page.getByRole('dialog')).not.toBeVisible()
   await expect(page.getByRole('button',{name:t.closer,exact:true})).toBeFocused()
   for(const [id,clip] of [['understory','understory'],['return','breathing']]){

@@ -79,7 +79,7 @@ for (const locale of ['lv', 'en'] as const) {
     const download = page.waitForEvent('download')
     await page.getByRole('link', { name: t.keepNote, exact: false }).click()
     expect((await download).suggestedFilename()).toBe(`piepe-field-note-001-${locale}.txt`)
-    await expect(page.getByRole('status')).toContainText(t.collected)
+    await expect(page.getByRole('dialog').getByRole('status')).toContainText(t.collected)
     const other: Locale = locale === 'lv' ? 'en' : 'lv'
     await page.getByRole('dialog').getByRole('link', { name: other.toUpperCase(), exact: true }).click()
     await head(page, other)

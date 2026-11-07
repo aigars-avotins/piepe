@@ -1,0 +1,1704 @@
+[
+  {
+    "name": "chromium-focused",
+    "stats": {
+      "startTime": "2026-11-07T14:28:13.105Z",
+      "duration": 364933.232,
+      "expected": 61,
+      "skipped": 1,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1848,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "held frame and first decoded awakening stay in the same plane at 1512x982",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4275,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "awakening final frame docks and returns continuously at 390x664",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 10118,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 10114,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 9881,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8601,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8716,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 20311,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 21577,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 20162,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 20775,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 18862,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 18801,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 19410,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 19472,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2142,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2142,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2047,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1969,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1024,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1044,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1011,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 954,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 877,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 888,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 19382,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "candidate254: lv actual moving frames, repeated visits and discovery",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 19964,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 22132,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: real static educational content and native atlas work without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 532,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 717,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: the four deadwood stages move through a stable illustration and retain every factual caption",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3124,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: atlas magnifies real SVG geometry, closes with Escape and restores summary focus",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 463,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 864,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: real static educational content and native atlas work without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 499,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 696,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: the four deadwood stages move through a stable illustration and retain every factual caption",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3142,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: atlas magnifies real SVG geometry, closes with Escape and restores summary focus",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 530,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 924,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 touch slider gestures and vertical page movement remain native",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 897,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 reduced: illustrations remain factual and controllable with no pulses or transition clocks",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 649,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 save-data: illustrations remain factual and controllable with no pulses or transition clocks",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 665,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 invalid and denied storage keep an operable atmosphere with original default colours",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 694,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 audio is gesture-gated, depth-reactive and shares one real source through the existing scene states",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4756,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 unsupported low-pass processing falls back to the unchanged native recording",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1212,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 unavailable Web Audio retains real gesture-gated native recording playback and mute",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1827,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1381,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 public route baseline remains real HTML on the independent CI network",
+        "status": "skipped",
+        "results": [
+          {
+            "status": "skipped",
+            "duration": 7,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4326,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3257,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5445,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8260,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1938,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: delayed static code exposes controls only after binding, with header preference and stable layout",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 553,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4344,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3929,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5774,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8208,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2050,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: delayed static code exposes controls only after binding, with header preference and stable layout",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 600,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 reduced: immediate home entry, usable reveal and static film alternative",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 675,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 save-data: immediate home entry, usable reveal and static film alternative",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 910,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 103,
+            "error": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chromium-rail-and-download",
+    "stats": {
+      "startTime": "2026-11-07T14:42:04.757Z",
+      "duration": 30752.559,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "lv: localized field note and wallpaper files are real downloads",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1106,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: localized field note and wallpaper files are real downloads",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 883,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2840,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4709,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5651,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4194,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4743,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5712,
+            "error": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "linux-webkit",
+    "stats": {
+      "startTime": "2026-11-07T14:35:13.988Z",
+      "duration": 144036.052,
+      "expected": 14,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "2.5.8 touch slider gestures and vertical page movement remain native",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1070,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 7761,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 12369,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 21206,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "failed",
+            "duration": 19365,
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.world')\nExpected: \u001b[32m\"ended\"\u001b[39m\nReceived: \u001b[31m\"load-timeout\"\u001b[39m\nTimeout:  16000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.world') with timeout 16000ms\u001b[22m\n\u001b[2m  - waiting for locator('.world')\u001b[22m\n\u001b[2m    12 \u00d7 locator resolved to <div data-scene=\"forest\" data-exit-reason=\"\" data-version=\"2.5.9\" data-awakening=\"idle\" data-milestone=\"2.5.8.1\" data-intro-state=\"playing\" class=\"world  is-intro          \">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\u001b[2m    23 \u00d7 locator resolved to <div data-scene=\"forest\" data-version=\"2.5.9\" data-awakening=\"idle\" data-milestone=\"2.5.8.1\" data-intro-state=\"complete\" data-exit-reason=\"load-timeout\" class=\"world  is-ready has-title         \">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"load-timeout\"\u001b[22m\n"
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4053,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: delayed static code exposes controls only after binding, with header preference and stable layout",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2337,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8198,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 12833,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 20260,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "failed",
+            "duration": 19101,
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.world')\nExpected: \u001b[32m\"ended\"\u001b[39m\nReceived: \u001b[31m\"load-timeout\"\u001b[39m\nTimeout:  16000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('.world') with timeout 16000ms\u001b[22m\n\u001b[2m  - waiting for locator('.world')\u001b[22m\n\u001b[2m    12 \u00d7 locator resolved to <div data-scene=\"forest\" data-exit-reason=\"\" data-version=\"2.5.9\" data-awakening=\"idle\" data-milestone=\"2.5.8.1\" data-intro-state=\"playing\" class=\"world  is-intro          \">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"\"\u001b[22m\n\u001b[2m    23 \u00d7 locator resolved to <div data-scene=\"forest\" data-version=\"2.5.9\" data-awakening=\"idle\" data-milestone=\"2.5.8.1\" data-intro-state=\"complete\" data-exit-reason=\"load-timeout\" class=\"world  is-ready has-title         \">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"load-timeout\"\u001b[22m\n"
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4085,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: delayed static code exposes controls only after binding, with header preference and stable layout",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2381,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 reduced: immediate home entry, usable reveal and static film alternative",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2782,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 save-data: immediate home entry, usable reveal and static film alternative",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2767,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 110,
+            "error": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "native-macos-first",
+    "stats": {
+      "startTime": "2026-11-07T14:36:42.180Z",
+      "duration": 654630.139,
+      "expected": 60,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5654,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "held frame and first decoded awakening stay in the same plane at 1512x982",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 13901,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "awakening final frame docks and returns continuously at 390x664",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 12503,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: localized field note and wallpaper files are real downloads",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "failed",
+            "duration": 1718,
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('status')\nExpected substring: \u001b[32m\"Me\u017ea piez\u012bmes lejupiel\u0101de s\u0101kta. Atce\u013c\u0101 nesteidzies.\"\u001b[39m\nError: strict mode violation: getByRole('status') resolved to 2 elements:\n    1) <output for=\"home-xray-reveal\" data-xray-output=\"true\">55% ilustr\u0101cijas atsegti</output> aka getByText('% ilustr\u0101cijas atsegti')\n    2) <p role=\"status\" class=\"collected-message\">Me\u017ea piez\u012bmes lejupiel\u0101de s\u0101kta. Atce\u013c\u0101 nesteidzi\u2026</p> aka getByText('Me\u017ea piez\u012bmes lejupiel\u0101de s\u0101')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('status')\u001b[22m\n"
+          }
+        ]
+      },
+      {
+        "title": "en: localized field note and wallpaper files are real downloads",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "failed",
+            "duration": 2107,
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('status')\nExpected substring: \u001b[32m\"Field note collected. Your download has started.\"\u001b[39m\nError: strict mode violation: getByRole('status') resolved to 2 elements:\n    1) <output for=\"home-xray-reveal\" data-xray-output=\"true\">55% of the illustration revealed</output> aka getByText('% of the illustration revealed')\n    2) <p role=\"status\" class=\"collected-message\">Field note collected. Your download has started.</p> aka getByText('Field note collected. Your')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('status')\u001b[22m\n"
+          }
+        ]
+      },
+      {
+        "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 14621,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 13577,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 11404,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 11876,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 26763,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 27849,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 21974,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 19123,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 29386,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 29812,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 32640,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: bottom to top stays a single forest after refresh and three native returns",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 33126,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8039,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 10939,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5177,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4487,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3282,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3351,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3190,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3112,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2721,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3244,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 25304,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "candidate254: lv actual moving frames, repeated visits and discovery",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 31147,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 29748,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: real static educational content and native atlas work without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1934,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1537,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: the four deadwood stages move through a stable illustration and retain every factual caption",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4511,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: atlas magnifies real SVG geometry, closes with Escape and restores summary focus",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2495,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 lv: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2732,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: real static educational content and native atlas work without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2151,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1817,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: the four deadwood stages move through a stable illustration and retain every factual caption",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4406,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: atlas magnifies real SVG geometry, closes with Escape and restores summary focus",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2435,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 en: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2601,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 touch slider gestures and vertical page movement remain native",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2231,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 reduced: illustrations remain factual and controllable with no pulses or transition clocks",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1684,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 save-data: illustrations remain factual and controllable with no pulses or transition clocks",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1645,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 invalid and denied storage keep an operable atmosphere with original default colours",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2817,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 audio is gesture-gated, depth-reactive and shares one real source through the existing scene states",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5892,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 unsupported low-pass processing falls back to the unchanged native recording",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3005,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 unavailable Web Audio retains real gesture-gated native recording playback and mute",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4179,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3313,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8 public route baseline remains real HTML on the independent CI network",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3239,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 7073,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 16346,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "timedOut",
+            "duration": 25377,
+            "error": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 9947,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2399,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv: delayed static code exposes controls only after binding, with header preference and stable layout",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1393,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 10333,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 13568,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "timedOut",
+            "duration": 29725,
+            "error": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 10311,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 3272,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en: delayed static code exposes controls only after binding, with header preference and stable layout",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1766,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 reduced: immediate home entry, usable reveal and static film alternative",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1891,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 save-data: immediate home entry, usable reveal and static film alternative",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1740,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 1165,
+            "error": ""
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -8,3 +8,4 @@
 @media(max-height:719px){.discovery-entry small,.sound-description small{display:none}.discovery-entry{min-height:44px}.discovery-preview{height:40px;width:44px;flex-basis:44px}.discovery-entry strong{font-size:21px}.world[data-scene=forest]{--sound-offset:94px}}
 .world:not([data-scene=forest])>.sound-control .sound-description small{display:none}
 @media(min-width:1101px){.home-experiences{width:calc(100% - 180px);max-width:1240px;margin-left:0}}
+@media(min-width:700px) and (max-width:1100px){.home-experiences{width:calc(100% - 60px);margin-left:0}}
