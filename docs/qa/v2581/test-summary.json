@@ -1700,5 +1700,185 @@
         ]
       }
     ]
+  },
+  {
+    "name": "native-macos-followup",
+    "stats": {
+      "startTime": "2026-11-07T14:56:46.589Z",
+      "duration": 108500.973,
+      "expected": 5,
+      "skipped": 0,
+      "unexpected": 3,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "lv: localized field note and wallpaper files are real downloads",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8362,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "en: localized field note and wallpaper files are real downloads",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 2806,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 9129,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "failed",
+            "duration": 9554,
+            "error": "TypeError: Cannot read properties of null (reading 'x')"
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "timedOut",
+            "duration": 32955,
+            "error": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 8695,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "unexpected",
+        "results": [
+          {
+            "status": "failed",
+            "duration": 5344,
+            "error": "TypeError: Cannot read properties of null (reading 'x')"
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 15973,
+            "error": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chromium-explicit-contexts",
+    "stats": {
+      "startTime": "2026-11-07T15:20:09.667Z",
+      "duration": 30063.615,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "title": "2.5.8.1 lv 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5182,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4696,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 lv 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4105,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 390: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5060,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 800: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 4729,
+            "error": ""
+          }
+        ]
+      },
+      {
+        "title": "2.5.8.1 en 1440: first viewport entry reaches the working homepage reveal and native history",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "duration": 5560,
+            "error": ""
+          }
+        ]
+      }
+    ]
   }
 ]

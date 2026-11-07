@@ -10,11 +10,17 @@ import {nativeDiagnostics} from './nativeDiagnostics'
 nativeDiagnostics()
 
 for(const locale of ['lv','en'] as const){
-  for(const width of [390,800,1440])test(`2.5.8.1 ${locale} ${width}: first viewport entry reaches the working homepage reveal and native history`,async({page},info)=>{
-    await page.setViewportSize({width,height:width===390?844:900})
+  for(const width of [390,800,1440])test.describe(`${locale} homepage viewport ${width}`,()=>{
+    // A resized iPhone context remains a coarse-pointer, 3x device. Use actual
+    // desktop input/render settings for desktop layouts, not a 4320px phone surface.
+    test.use({viewport:{width,height:width===390?844:900},screen:{width,height:width===390?844:900},isMobile:width===390,hasTouch:width===390,deviceScaleFactor:width===390?3:1})
+    test(`2.5.8.1 ${locale} ${width}: first viewport entry reaches the working homepage reveal and native history`,async({page},info)=>{
     const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
     await page.addInitScript(()=>{sessionStorage.setItem('piepe-entered','1');localStorage.setItem('piepe-forest-sound','off')})
     await page.goto(localePath(locale));await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
+    expect(await page.evaluate(()=>innerWidth)).toBe(width)
+    expect(await page.evaluate(()=>devicePixelRatio)).toBe(width===390?3:1)
+    expect(await page.evaluate(()=>matchMedia('(pointer:coarse)').matches)).toBe(width===390)
     const entry=page.locator('.discovery-entry');await expect(entry).toBeVisible();await expect(entry).toContainText(discoveryCopy[locale].title)
     await expect.poll(()=>entry.locator('img').evaluate((e:HTMLImageElement)=>e.complete&&e.naturalWidth>0)).toBe(true)
     const b=(await entry.boundingBox())!;expect(b.y).toBeGreaterThan(0);expect(b.y+b.height).toBeLessThanOrEqual(width===390?844:900)
@@ -36,6 +42,7 @@ for(const locale of ['lv','en'] as const){
     await expect(page.locator('.exploration-gateways a').first()).toHaveAttribute('href',readingPath(locale)+'#surface-atlas');await expect(page.locator('.exploration-gateways a').last()).toHaveAttribute('href',notePath(locale,'005')+'#deadwood-time')
     // Locale changes remount and bind a fresh controller rather than retaining stale IDs/listeners.
     await page.locator(`.site-header a[lang=${locale==='lv'?'en':'lv'}]`).click();const next=page.locator('#forest-xray [data-xray-range]');await next.focus();await next.press('Home');await expect(next).toHaveValue('0');await next.press('End');await expect(next).toHaveValue('100');expect(errors).toEqual([])
+  })
   })
   test(`2.5.8.1 ${locale}: intro reserves the invitation, skip retains original focus, replay and full film remain intact`,async({page})=>{
     test.setTimeout(30000);await page.addInitScript(()=>localStorage.setItem('piepe-forest-sound','off'));await page.goto(localePath(locale))
