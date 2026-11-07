@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "before",
+    "locale": "lv",
+    "width": 390,
+    "height": 844,
+    "errors": []
+  },
+  {
+    "kind": "before",
+    "locale": "lv",
+    "width": 1440,
+    "height": 900,
+    "errors": []
+  },
+  {
+    "kind": "before",
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "errors": []
+  },
+  {
+    "kind": "before",
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "errors": []
+  },
+  {
+    "kind": "after",
+    "locale": "lv",
+    "width": 390,
+    "height": 844,
+    "errors": []
+  },
+  {
+    "kind": "after",
+    "locale": "lv",
+    "width": 1440,
+    "height": 900,
+    "errors": []
+  },
+  {
+    "kind": "after",
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "errors": []
+  },
+  {
+    "kind": "after",
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "errors": []
+  }
+]

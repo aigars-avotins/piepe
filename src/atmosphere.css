@@ -23,3 +23,5 @@ html[data-atmosphere="nightfall"]  :is(.world,.reading-page,.discovery-stage)::b
 @media(prefers-reduced-motion:reduce){:root, :is(.world,.reading-page,.discovery-stage)::before, :is(.world,.reading-page,.discovery-stage)::after,.environment,.specimen-photo,.raster-grade,.atmosphere-controls button{transition:none!important}}
 
 .discovery-stage::before,.discovery-stage::after{z-index:0}.discovery-copy,.specimen-caption{z-index:1}
+/* Ambient light belongs behind reading and HUD text, including the root footer. */
+.world>main,.world>footer{position:relative;z-index:2}

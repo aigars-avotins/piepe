@@ -35,10 +35,10 @@ for(const locale of ['lv','en'] as const){
  })
  test(`2.5.8.2 ${locale}: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus`,async({page})=>{
   await page.goto(readingPath(locale));const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();const image=picture.locator('img[data-interactive-image]');await expect.poll(()=>image.evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(2400)
-  const b=(await image.boundingBox())!,x=b.width*.65,y=b.height*.6;await page.mouse.move(b.x+x,b.y+y)
+  const b=(await image.boundingBox())!,x=b.width*.65,y=b.height*.6;const mouseX=Math.round(b.x+x),mouseY=Math.round(b.y+y);await page.mouse.move(mouseX,mouseY)
   const lens=picture.locator('.atlas-loupe');await expect(lens).toBeVisible();await expect(lens).toHaveCSS('width','140px')
   const zoom=await lens.locator('img').evaluate((e:HTMLImageElement)=>({width:parseFloat(e.style.width),height:parseFloat(e.style.height),left:parseFloat(e.style.left),top:parseFloat(e.style.top),source:e.currentSrc}))
-  expect(zoom.width).toBeCloseTo(b.width*2.5,1);expect(zoom.height).toBeCloseTo(b.height*2.5,1);expect(zoom.left).toBeCloseTo(70-x*2.5,0);expect(zoom.top).toBeCloseTo(70-y*2.5,0);expect(zoom.source).toContain('atlas-pores.jpg')
+  expect(zoom.width).toBeCloseTo(b.width*2.5,1);expect(zoom.height).toBeCloseTo(b.height*2.5,1);expect(zoom.left).toBeCloseTo(70-(mouseX-b.x)*2.5,0);expect(zoom.top).toBeCloseTo(70-(mouseY-b.y)*2.5,0);expect(zoom.source).toContain('atlas-pores.jpg')
   await picture.click();const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3);expect(await dialog.evaluate(e=>e.matches(':modal'))).toBe(true)
   await page.keyboard.press('Escape');await expect(dialog).toBeHidden();await expect(page.locator('[data-atlas-open]').first()).toBeFocused()
  })
@@ -80,6 +80,7 @@ for(const locale of ['lv','en'] as const)test(`2.5.8.2 ${locale}: narrow-phone H
   const overlaps=await page.evaluate(selectors=>{const boxes=selectors.map(s=>({s,r:document.querySelector(s)!.getBoundingClientRect()})),overlaps:string[][]=[];for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];if(a.r.left<b.r.right&&a.r.right>b.r.left&&a.r.top<b.r.bottom&&a.r.bottom>b.r.top)overlaps.push([a.s,b.s])}return overlaps},selectors)
   expect(overlaps).toEqual([]);expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320)
   await page.locator('[data-atmosphere-choice=nightfall]').click();await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall')
+  expect(await page.locator('.world>main').evaluate(e=>Number(getComputedStyle(e).zIndex))).toBeGreaterThan(await page.locator('.world').evaluate(e=>Number(getComputedStyle(e,'::after').zIndex)))
  }finally{await context.close()}
 })
 
