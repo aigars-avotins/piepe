@@ -45,5 +45,6 @@
       "sha256": "3c6cca1d7d88e6df697a7767e007507e73386c8d33a4826379bbcdaea0f0d1ad"
     }
   ],
-  "nativeRun": "https://github.com/aigars-avotins/piepe/actions/runs/42363146056"
+  "nativeRun": "https://github.com/aigars-avotins/piepe/actions/runs/42363146056",
+  "nativeRecordingSetup": "The untrimmed native recording starts with the newly opened blank browser during AppKit/setup before the scenario navigation; these initial blank frames are retained, not a flash between movie scenes. First server paint, hydration and delayed decoding are validated separately in the four cold-visit tests of the initial native run."
 }
