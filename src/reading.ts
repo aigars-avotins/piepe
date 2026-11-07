@@ -2,8 +2,8 @@ import type { Locale } from './i18n'
 
 export const readingSources = [
   { id: 'anbg', name: 'Australian National Botanic Gardens', title: 'What is a fungus?', url: 'https://www.anbg.gov.au/fungi/what-is-fungus.html' },
-  { id: 'ucipm', name: 'University of California IPM', title: 'Wood Decay Fungi in Landscape Trees', url: 'https://ipm.ucanr.edu/home-and-landscape/wood-decay-fungi-in-landscape-trees/' },
   { id: 'woodland', name: 'Woodland Trust', title: 'Bracket fungi identification', url: 'https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/' },
+  { id: 'ucipm', name: 'University of California IPM', title: 'Wood Decay Fungi in Landscape Trees', url: 'https://ipm.ucanr.edu/home-and-landscape/wood-decay-fungi-in-landscape-trees/' },
 ] as const
 
 type Section = { id: string; heading: string; paragraphs: string[]; sources: (typeof readingSources[number]['id'])[] }

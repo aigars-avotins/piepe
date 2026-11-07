@@ -1,0 +1,149 @@
+[
+  {
+    "path": "/media/forest-reveal.mp4",
+    "status": 206,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-reveal.mp4",
+    "status": 416,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-awakening.mp4",
+    "status": 206,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-awakening.mp4",
+    "status": 416,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-understory.mp4",
+    "status": 206,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-understory.mp4",
+    "status": 416,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-breathing.mp4",
+    "status": 206,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-breathing.mp4",
+    "status": 416,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-awakening.mp4",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-mobile.webp",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-awakening-final.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-reveal.mp4",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-final.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-understory-final.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-understory.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-breathing-final.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-awakening-poster.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-breathing-poster.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-breathing.mp4",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-understory.mp4",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  },
+  {
+    "path": "/media/forest-poster.jpg",
+    "status": 200,
+    "csp": true,
+    "nosniff": true,
+    "cache": "public, max-age=86400, must-revalidate"
+  }
+]

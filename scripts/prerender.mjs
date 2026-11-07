@@ -1,4 +1,4 @@
-import { createServer } from 'vite'
+import { createServer, transformWithEsbuild } from 'vite'
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom' })
@@ -7,6 +7,7 @@ try {
   const { renderReadingDocument } = await server.ssrLoadModule('/src/ReadingPage.tsx')
   const { renderForestDocuments } = await server.ssrLoadModule('/src/ForestPage.tsx')
   const { readingPath } = await server.ssrLoadModule('/src/i18n.ts')
+  const { atmosphereBootstrap } = await server.ssrLoadModule('/src/atmosphere.ts')
   const template = await readFile('dist/index.html', 'utf8')
   if (!template.includes('<!-- locale:start -->')) throw new Error('Run a fresh Vite build before prerendering')
   const assets = await readdir('dist/assets')
@@ -18,8 +19,15 @@ try {
   const forestCss = await readFile('src/forestKnowledge.css', 'utf8')
   const forestStyle = `/assets/forest-knowledge-${createHash('sha256').update(forestCss).digest('hex').slice(0, 16)}.css`
   await writeFile(`dist${forestStyle}`, forestCss)
-  const boot = await readFile('public/boot.js', 'utf8')
-  const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`]
+  const experienceCss = await readFile('src/readingExperiences.css', 'utf8')
+  const experienceStyle = `/assets/forest-experience-${createHash('sha256').update(experienceCss).digest('hex').slice(0,16)}.css`
+  await writeFile(`dist${experienceStyle}`,experienceCss)
+  // A standalone progressive module, not a second application or route entry.
+  const client = await transformWithEsbuild(await readFile('src/readingClient.ts','utf8'),'readingClient.ts',{target:'es2022',minify:true})
+  const readingClient = `/assets/reading-tools-${createHash('sha256').update(client.code).digest('hex').slice(0,16)}.js`
+  await writeFile(`dist${readingClient}`,client.code)
+  const boot = atmosphereBootstrap + await readFile('public/boot.js', 'utf8')
+  const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`, `'sha256-${createHash('sha256').update(atmosphereBootstrap).digest('base64')}'`]
   for (const locale of ['lv', 'en']) {
     const criticalFonts = assets.filter(name => /^manrope-latin-400-normal-.*\.woff2$/.test(name) || (locale === 'lv' && /^manrope-latin-ext-400-normal-.*\.woff2$/.test(name)))
     const head = renderHead(locale) + criticalFonts.map(name => `<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/${name}"/>`).join('')
@@ -31,15 +39,15 @@ try {
     await writeFile(`public/field-note-${locale}.txt`, renderNote(locale))
     const dir = locale === 'en' ? 'dist/en' : 'dist'
     await mkdir(dir, { recursive: true }); await writeFile(`${dir}/index.html`, html)
-    // Text-first documents deliberately omit boot.js, #root and the cinema module.
-    // A data-only JSON-LD script is the only script on either reading page.
+    // Static educational text stays usable without JS. Only the small progressive
+    // controls module is loaded; never boot.js, #root or the cinema application.
     const readingFonts = assets.filter(name => /^(?:manrope|cormorant-garamond)-latin-400-normal-.*\.woff2$/.test(name) || (locale === 'lv' && /^(?:manrope|cormorant-garamond)-latin-ext-400-normal-.*\.woff2$/.test(name)))
-    const readingHtml = renderReadingDocument(locale, [...appStyles, readingStyle], readingFonts.map(name => `/assets/${name}`))
+    const readingHtml = renderReadingDocument(locale, [...appStyles, readingStyle,experienceStyle], readingFonts.map(name => `/assets/${name}`),readingClient)
     const readingData = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(readingHtml)[1]
     hashes.push(`'sha256-${createHash('sha256').update(readingData).digest('base64')}'`)
     const readingDir = `dist${readingPath(locale)}`
     await mkdir(readingDir, { recursive: true }); await writeFile(`${readingDir}index.html`, readingHtml)
-    for (const document of renderForestDocuments(locale, [...appStyles, readingStyle, forestStyle], readingFonts.map(name => `/assets/${name}`))) {
+    for (const document of renderForestDocuments(locale, [...appStyles, readingStyle, forestStyle], readingFonts.map(name => `/assets/${name}`),readingClient,experienceStyle)) {
       const data = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(document.html)[1]
       hashes.push(`'sha256-${createHash('sha256').update(data).digest('base64')}'`)
       await mkdir(`dist${document.path}`, { recursive: true })

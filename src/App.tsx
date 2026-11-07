@@ -20,13 +20,13 @@ import { readSession, saveData, useReducedMotion, writeSession } from './usePref
 import { useForestAudio } from './useForestAudio'
 import SoundControl from './SoundControl'
 import { mediaUrl } from './mediaUrl'
+import ObservationScale from './ObservationScale'
 
 const chapters = ['forest', 'understory', 'encounter', 'return']
 export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const [locale, setLocale] = useState<Locale>(() => initialLocale || localeFromPath(location.pathname))
   const localeScroll = useRef<number | null>(null)
   const t = messages[locale]
-  const audio = useForestAudio()
   const [awakening, setAwakening] = useState<'idle' | 'preparing' | 'playing' | 'docking'>('idle')
   const [heldFrame, setHeldFrame] = useState('/media/forest-final.jpg')
   const [origin, setOrigin] = useState<CinemaOrigin>()
@@ -75,6 +75,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const [paused, setPaused] = useState(false)
   const [hidden, setHidden] = useState(false)
   const [scene, setScene] = useState('forest')
+  const audio = useForestAudio(discovery || awakening!=='idle' || scene==='understory'?'beneath':scene==='encounter'?'close':'surface')
   const [imageFailed, setImageFailed] = useState(false)
   const [plane, setPlane] = useState<CSSProperties>({ width: 'max(100vw,177.777778dvh)', height: 'max(56.25vw,100dvh)', left: 'calc((100vw - max(100vw,177.777778dvh)) * var(--forest-focal,.5))', top: 'calc((100dvh - max(56.25vw,100dvh)) * .5)' })
   const root = useRef<HTMLDivElement>(null)
@@ -257,7 +258,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const collect = () => { writeSession('piepe-note-found'); setNoteState('collected') }
   const inspectEvents = { onMouseEnter: () => setInspect(true), onMouseLeave: () => setInspect(false), onFocus: () => setInspect(true), onBlur: () => setInspect(false) }
 
-  return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || dataSaving || paused || motionFailed ? 'motion-off' : ''} ${reduced || dataSaving || motionFailed ? 'static-preference' : ''} ${hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${noteState !== 'unseen' ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version="2.5.7" data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
+  return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || dataSaving || paused || motionFailed ? 'motion-off' : ''} ${reduced || dataSaving || motionFailed ? 'static-preference' : ''} ${hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${noteState !== 'unseen' ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version="2.5.8" data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
     <a className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}><span data-nosnippet="">{t.skipContent}</span></a>
     <ForestScene ref={environment} plane={plane} inspect={inspect && (scene === 'forest' || scene === 'encounter')} still={intro ? '/media/forest-poster.jpg' : heldFrame}
       macro={cinemaMounted.understory && <MotionClip key={cinemaRetries.understory} name="understory" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.understory && !intro && !discovery && awakening === 'idle'} onReady={() => cinemaResult('understory', false)} onFinish={() => cinemaResult('understory', true)} />}
@@ -274,7 +275,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
       <span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} onChange={changeLocale} />
       {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}><ControlText>{t.skipIntro}</ControlText> <span aria-hidden="true"><Arrow direction="diagonal" /></span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}><ControlText>{t.replay}</ControlText> <span aria-hidden="true">↺</span></button>}
     </header>
-    <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">0{index + 1}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></a>)}</nav>
+    <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">0{index + 1}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></a>)}<ObservationScale locale={locale} scene={scene} /></nav>
     <Story inactive={cinemaRunning} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} noteState={noteState} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
     {!discovery && <SoundControl audio={audio} locale={locale} />}
     <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={dockNote} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />

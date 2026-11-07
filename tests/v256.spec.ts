@@ -3,14 +3,14 @@ import { readFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
 import { localePath, readingPath, messages } from '../src/i18n'
 import { readings } from '../src/reading'
-import { checkReading } from './readingChecks'
+import { checkReading, checkReadingResources } from './readingChecks'
 
 for (const locale of ['lv', 'en'] as const) for (const javaScriptEnabled of [false, true]) test(`2.5.6 ${locale} JS=${javaScriptEnabled}: real text-first HTML, stable article routing and responsive reading`, async ({ browser, request }, info) => {
   const response = await request.get(readingPath(locale)), html = await response.text()
   expect(response.status()).toBe(200); expect(response.headers()['content-type']).toContain('text/html')
   expect(response.headers()['x-robots-tag'] || '').not.toMatch(/noindex|none/i)
   expect(html).toContain(readings[locale].lead)
-  expect(html).not.toMatch(/noindex|nosnippet|data-nosnippet|max-snippet\s*:\s*0/)
+  expect(html).not.toMatch(/noindex|<meta[^>]+content="[^"]*(?:nosnippet|max-snippet\s*:\s*0)/)
   const context = await browser.newContext({ javaScriptEnabled, viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' })
   try {
     const page = await context.newPage(), errors: string[] = []; page.on('pageerror', e => errors.push(e.message))
@@ -25,7 +25,8 @@ for (const locale of ['lv', 'en'] as const) for (const javaScriptEnabled of [fal
     // Waiting for stable fonts/geometry above gives any accidental homepage bootstrap
     // an opportunity to run; the route, title and full article must still be intact.
     await checkReading(page, locale)
-    expect(await page.evaluate(() => performance.getEntriesByType('resource').map(e => new URL(e.name).pathname).filter(path => /\.js$|\.mp4$|\.mp3$|\.ogg$/.test(path)))).toEqual([])
+    await checkReadingResources(page,javaScriptEnabled)
+    await expect(page.locator('h1, .reading-lead, .reading-section').locator('xpath=ancestor::*[@data-nosnippet]')).toHaveCount(0)
     const ids = await page.locator('a[href^="#"]').evaluateAll(links => links.map(e => (e as HTMLAnchorElement).hash.slice(1)))
     for (const id of ids) await expect(page.locator(`[id="${id}"]`)).toHaveCount(1)
     const other = locale === 'lv' ? 'en' : 'lv'

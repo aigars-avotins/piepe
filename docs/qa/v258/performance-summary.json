@@ -1,0 +1,893 @@
+{
+  "method": "Cold isolated contexts, alternating before/after order, Chromium390x844 DPR1 CPU4x. Local network three samples/locale/route/phase; Slow4G1.6Mbit/s150msRTT one exploratory sample/locale/route/phase. Through real intro completion/bounded fallback and fonts+two paints+500ms observer delivery window. Common anchor or locale-switch interactions, candidate-only slider/stage interactions additionally sampled. EventTiming entries only when observer threshold16ms is exceeded. Lab data, not Lighthouse/fieldCWV or75th-percentileINP. CDP main-thread/heap observations do not include decoder/GPU memory or whole-deviceCPU.",
+  "sampleCount": 48,
+  "groups": [
+    {
+      "profile": "local-cpu4",
+      "locale": "lv",
+      "kind": "home",
+      "phase": "before",
+      "n": 3,
+      "medianLcpMs": 8504,
+      "maxCls": 0.0013554422189269368,
+      "medianObservedBlockingMs": 135,
+      "maxSampledEventTimingMs": 128,
+      "exitReasons": [
+        "ended",
+        "ended",
+        "ended"
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "lv",
+      "kind": "home",
+      "phase": "after",
+      "n": 3,
+      "medianLcpMs": 8564,
+      "maxCls": 0.0013554422189269368,
+      "medianObservedBlockingMs": 204,
+      "maxSampledEventTimingMs": 128,
+      "exitReasons": [
+        "ended",
+        "ended",
+        "ended"
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "lv",
+      "kind": "guide",
+      "phase": "before",
+      "n": 3,
+      "medianLcpMs": 168,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 16,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "lv",
+      "kind": "guide",
+      "phase": "after",
+      "n": 3,
+      "medianLcpMs": 244,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 32,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "lv",
+      "kind": "deadwood",
+      "phase": "before",
+      "n": 3,
+      "medianLcpMs": 160,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 16,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "lv",
+      "kind": "deadwood",
+      "phase": "after",
+      "n": 3,
+      "medianLcpMs": 256,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 24,
+      "maxSampledEventTimingMs": 40,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "en",
+      "kind": "home",
+      "phase": "before",
+      "n": 3,
+      "medianLcpMs": 8568,
+      "maxCls": 0.0023244297634824017,
+      "medianObservedBlockingMs": 123,
+      "maxSampledEventTimingMs": 120,
+      "exitReasons": [
+        "ended",
+        "ended",
+        "ended"
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "en",
+      "kind": "home",
+      "phase": "after",
+      "n": 3,
+      "medianLcpMs": 8640,
+      "maxCls": 0.0023244297634824017,
+      "medianObservedBlockingMs": 103,
+      "maxSampledEventTimingMs": 128,
+      "exitReasons": [
+        "ended",
+        "ended",
+        "ended"
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "en",
+      "kind": "guide",
+      "phase": "before",
+      "n": 3,
+      "medianLcpMs": 180,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 16,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "en",
+      "kind": "guide",
+      "phase": "after",
+      "n": 3,
+      "medianLcpMs": 272,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 40,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "en",
+      "kind": "deadwood",
+      "phase": "before",
+      "n": 3,
+      "medianLcpMs": 172,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 24,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "local-cpu4",
+      "locale": "en",
+      "kind": "deadwood",
+      "phase": "after",
+      "n": 3,
+      "medianLcpMs": 264,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 24,
+      "exitReasons": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "lv",
+      "kind": "home",
+      "phase": "before",
+      "n": 1,
+      "medianLcpMs": 15180,
+      "maxCls": 0.0013554422189269368,
+      "medianObservedBlockingMs": 93,
+      "maxSampledEventTimingMs": 0,
+      "exitReasons": [
+        "load-timeout"
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "lv",
+      "kind": "home",
+      "phase": "after",
+      "n": 1,
+      "medianLcpMs": 15240,
+      "maxCls": 0.0013554422189269368,
+      "medianObservedBlockingMs": 121,
+      "maxSampledEventTimingMs": 144,
+      "exitReasons": [
+        "load-timeout"
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "lv",
+      "kind": "guide",
+      "phase": "before",
+      "n": 1,
+      "medianLcpMs": 1096,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 12,
+      "maxSampledEventTimingMs": 16,
+      "exitReasons": [
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "lv",
+      "kind": "guide",
+      "phase": "after",
+      "n": 1,
+      "medianLcpMs": 1260,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 32,
+      "exitReasons": [
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "lv",
+      "kind": "deadwood",
+      "phase": "before",
+      "n": 1,
+      "medianLcpMs": 1116,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 16,
+      "exitReasons": [
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "lv",
+      "kind": "deadwood",
+      "phase": "after",
+      "n": 1,
+      "medianLcpMs": 1464,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 24,
+      "exitReasons": [
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "en",
+      "kind": "home",
+      "phase": "before",
+      "n": 1,
+      "medianLcpMs": 15308,
+      "maxCls": 0.0023244297634824017,
+      "medianObservedBlockingMs": 94,
+      "maxSampledEventTimingMs": 0,
+      "exitReasons": [
+        "load-timeout"
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "en",
+      "kind": "home",
+      "phase": "after",
+      "n": 1,
+      "medianLcpMs": 15396,
+      "maxCls": 0.0023244297634824017,
+      "medianObservedBlockingMs": 126,
+      "maxSampledEventTimingMs": 0,
+      "exitReasons": [
+        "load-timeout"
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "en",
+      "kind": "guide",
+      "phase": "before",
+      "n": 1,
+      "medianLcpMs": 952,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 16,
+      "exitReasons": [
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "en",
+      "kind": "guide",
+      "phase": "after",
+      "n": 1,
+      "medianLcpMs": 1140,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 3,
+      "maxSampledEventTimingMs": 32,
+      "exitReasons": [
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "en",
+      "kind": "deadwood",
+      "phase": "before",
+      "n": 1,
+      "medianLcpMs": 976,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 16,
+      "exitReasons": [
+        null
+      ]
+    },
+    {
+      "profile": "slow4g-cpu4",
+      "locale": "en",
+      "kind": "deadwood",
+      "phase": "after",
+      "n": 1,
+      "medianLcpMs": 1308,
+      "maxCls": 0,
+      "medianObservedBlockingMs": 0,
+      "maxSampledEventTimingMs": 24,
+      "exitReasons": [
+        null
+      ]
+    }
+  ],
+  "payloads": [
+    {
+      "phase": "before",
+      "path": "index.html",
+      "rawBytes": 25437,
+      "gzipBytes": 6547,
+      "sha256": "f3b04505f7a5d67b8057f21571a73e1c952854cc768449570e247a56559ec732"
+    },
+    {
+      "phase": "before",
+      "path": "kas-ir-piepe/index.html",
+      "rawBytes": 11019,
+      "gzipBytes": 3636,
+      "sha256": "76a2084207391fea681e2cdb207d715f7816f965c012a51e2c8f45cd8ad8cdb7"
+    },
+    {
+      "phase": "before",
+      "path": "meza-piezimes/005-kritalas-un-laiks/index.html",
+      "rawBytes": 11346,
+      "gzipBytes": 3516,
+      "sha256": "b289b1fd40fff10ceca1e2df0e6d72f6f9c618da5f8964ba91f2606abde26f15"
+    },
+    {
+      "phase": "before",
+      "path": "assets/forest-knowledge-567686ce4e952632.css",
+      "rawBytes": 4323,
+      "gzipBytes": 1215
+    },
+    {
+      "phase": "before",
+      "path": "assets/index-DKObstbk.css",
+      "rawBytes": 48637,
+      "gzipBytes": 10655
+    },
+    {
+      "phase": "before",
+      "path": "assets/index-DuZ52GzY.js",
+      "rawBytes": 401204,
+      "gzipBytes": 135377
+    },
+    {
+      "phase": "before",
+      "path": "assets/reading-7f829a14b0f92c80.css",
+      "rawBytes": 3183,
+      "gzipBytes": 1066
+    },
+    {
+      "phase": "after",
+      "path": "index.html",
+      "rawBytes": 26148,
+      "gzipBytes": 6781,
+      "sha256": "a06ac809afa0a7c586cba964273169c78618fda641d59bccf5015784fbcc3d01"
+    },
+    {
+      "phase": "after",
+      "path": "kas-ir-piepe/index.html",
+      "rawBytes": 53104,
+      "gzipBytes": 11640,
+      "sha256": "189147479393db0d3632b425c88a90a4f36fde6252af337eb21e9ec39e1d90b3"
+    },
+    {
+      "phase": "after",
+      "path": "meza-piezimes/005-kritalas-un-laiks/index.html",
+      "rawBytes": 116694,
+      "gzipBytes": 13469,
+      "sha256": "2d96f369ff68bccfeaa32e6348ead25a9270f0d32ef9cdbbdf00fbdeecc9d71f"
+    },
+    {
+      "phase": "after",
+      "path": "assets/forest-experience-41c31d2b7fbb0a7e.css",
+      "rawBytes": 8491,
+      "gzipBytes": 2401
+    },
+    {
+      "phase": "after",
+      "path": "assets/forest-knowledge-567686ce4e952632.css",
+      "rawBytes": 4323,
+      "gzipBytes": 1215
+    },
+    {
+      "phase": "after",
+      "path": "assets/index-Bcm9BmmX.js",
+      "rawBytes": 404427,
+      "gzipBytes": 136545
+    },
+    {
+      "phase": "after",
+      "path": "assets/index-CG2ez3Yr.css",
+      "rawBytes": 50444,
+      "gzipBytes": 11057
+    },
+    {
+      "phase": "after",
+      "path": "assets/reading-0bf2a944e8d137f6.css",
+      "rawBytes": 3567,
+      "gzipBytes": 1145
+    },
+    {
+      "phase": "after",
+      "path": "assets/reading-tools-4dffc72cf6ac53e8.js",
+      "rawBytes": 3790,
+      "gzipBytes": 1324
+    }
+  ],
+  "loadedFontRequests": [
+    {
+      "locale": "lv",
+      "phase": "before",
+      "kind": "home",
+      "fonts": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 38.19999999552965,
+          "duration": 15.5
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 40.099999994039536,
+          "duration": 13.700000002980232
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 164.69999999552965,
+          "duration": 117.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "encodedBodySize": 20284,
+          "start": 165.69999999552965,
+          "duration": 116.60000000149012
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 293.29999999701977,
+          "duration": 27.899999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "encodedBodySize": 23660,
+          "start": 301.09999999403954,
+          "duration": 20.30000000447035
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "phase": "after",
+      "kind": "home",
+      "fonts": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 75.60000000149012,
+          "duration": 18.600000001490116
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 77.40000000596046,
+          "duration": 19.099999994039536
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 188.70000000298023,
+          "duration": 97.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "encodedBodySize": 20284,
+          "start": 189.40000000596046,
+          "duration": 96.69999999552965
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 390.70000000298023,
+          "duration": 16.200000002980232
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "encodedBodySize": 23660,
+          "start": 392.6000000014901,
+          "duration": 14.5
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "phase": "before",
+      "kind": "guide",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 40.099999994039536,
+          "duration": 18.80000000447035
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 40.099999994039536,
+          "duration": 18.900000005960464
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 40.099999994039536,
+          "duration": 19
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 40.19999999552965,
+          "duration": 22.600000001490116
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "phase": "after",
+      "kind": "guide",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 60.100000001490116,
+          "duration": 18.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 61,
+          "duration": 23.600000001490116
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 61.100000001490116,
+          "duration": 23.600000001490116
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 61.100000001490116,
+          "duration": 23.5
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "phase": "before",
+      "kind": "deadwood",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 49.399999998509884,
+          "duration": 14.399999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 49.69999999552965,
+          "duration": 14.200000002980232
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 51.099999994039536,
+          "duration": 12.900000005960464
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 52.099999994039536,
+          "duration": 14.600000001490116
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "phase": "after",
+      "kind": "deadwood",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 60.399999998509884,
+          "duration": 17.900000005960464
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 60.600000001490116,
+          "duration": 17.700000002980232
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 61.80000000447035,
+          "duration": 19.899999998509884
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 61.899999998509884,
+          "duration": 20.900000005960464
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "phase": "before",
+      "kind": "home",
+      "fonts": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 54.599999994039536,
+          "duration": 20.200000002980232
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 172.39999999850988,
+          "duration": 118.19999999552965
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 173.59999999403954,
+          "duration": 117.10000000149012
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "encodedBodySize": 20284,
+          "start": 174.5,
+          "duration": 116.19999999552965
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 424.79999999701977,
+          "duration": 27
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "encodedBodySize": 23660,
+          "start": 427.19999999552965,
+          "duration": 25
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "phase": "after",
+      "kind": "home",
+      "fonts": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 44.30000000447035,
+          "duration": 9.899999998509884
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 158.90000000596046,
+          "duration": 112
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 160.5,
+          "duration": 111.90000000596046
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "encodedBodySize": 20284,
+          "start": 160.60000000149012,
+          "duration": 111.89999999850988
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 394.80000000447035,
+          "duration": 46.399999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "encodedBodySize": 23660,
+          "start": 397.5,
+          "duration": 44
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "phase": "before",
+      "kind": "guide",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 45.79999999701977,
+          "duration": 16.600000001490116
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 46.599999994039536,
+          "duration": 17
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 107,
+          "duration": 9.899999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 107.19999999552965,
+          "duration": 10
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "phase": "after",
+      "kind": "guide",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 56.5,
+          "duration": 22.600000001490116
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 56.70000000298023,
+          "duration": 22.799999997019768
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 156.80000000447035,
+          "duration": 11.599999994039536
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 156.89999999850988,
+          "duration": 11.800000004470348
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "phase": "before",
+      "kind": "deadwood",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 41.20000000298023,
+          "duration": 15.199999995529652
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 41.20000000298023,
+          "duration": 17.19999999552965
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 98.20000000298023,
+          "duration": 5.899999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 98.29999999701977,
+          "duration": 6.100000001490116
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "phase": "after",
+      "kind": "deadwood",
+      "fonts": [
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "encodedBodySize": 22876,
+          "start": 56.30000000447035,
+          "duration": 20.19999999552965
+        },
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "encodedBodySize": 14108,
+          "start": 56.399999998509884,
+          "duration": 22.30000000447035
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "encodedBodySize": 8292,
+          "start": 147.39999999850988,
+          "duration": 63.20000000298023
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "encodedBodySize": 19888,
+          "start": 147.60000000149012,
+          "duration": 62.79999999701977
+        }
+      ]
+    }
+  ],
+  "fontDecision": "Preserve current font-display:swap and locale-specific preloads. LV actually requests both Latin and Latin Extended subsets for Manrope and Cormorant; no measured reason to remove coverage or alter metrics. FontFace entries from preloads have universal unicodeRange and do not alone identify chosen glyph subsets; resource URLs confirm coverage."
+}

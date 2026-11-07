@@ -1,0 +1,889 @@
+{
+  "method": "Three cold contexts per phase/locale, alternating order, system Chromium,390x844 DPR1,4x CPU throttle, local real Worker preview, unthrottled local network. Collect through real intro completion/fonts/annotation, then sample one locale-switch interaction. Not Lighthouse, field CWV,75th-percentile INP or a real phone. Zero event timing means no event exceeded16ms observer threshold.",
+  "samples": [
+    {
+      "run": 1,
+      "locale": "lv",
+      "phase": "before",
+      "mainThread": [
+        {
+          "name": "Nodes",
+          "value": 887
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.153903
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.337329
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6385068
+        }
+      ],
+      "lcp": 7088,
+      "cls": 0.0013554422189269368,
+      "longTaskBlockingMs": 219,
+      "interactionDurations": [],
+      "windowMs": 8545.60000000149,
+      "navigation": [
+        {
+          "ttfb": 4.700000002980232,
+          "domContentLoaded": 249.19999999552965,
+          "load": 465.79999999701977
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "transferSize": 14408,
+          "encodedBodySize": 14108
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "transferSize": 8592,
+          "encodedBodySize": 8292
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/assets/index-DuZ52GzY.js",
+          "transferSize": 401504,
+          "encodedBodySize": 401204
+        },
+        {
+          "name": "/assets/index-DKObstbk.css",
+          "transferSize": 48937,
+          "encodedBodySize": 48637
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "transferSize": 464139,
+          "encodedBodySize": 463839
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "transferSize": 20188,
+          "encodedBodySize": 19888
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "transferSize": 20584,
+          "encodedBodySize": 20284
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "transferSize": 23176,
+          "encodedBodySize": 22876
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "transferSize": 23960,
+          "encodedBodySize": 23660
+        },
+        {
+          "name": "/media/forest-reveal.mp4",
+          "transferSize": 9212466,
+          "encodedBodySize": 9212166
+        },
+        {
+          "name": "/favicon.svg",
+          "transferSize": 2125,
+          "encodedBodySize": 1825
+        },
+        {
+          "name": "/favicon.ico",
+          "transferSize": 51045,
+          "encodedBodySize": 50745
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "transferSize": 507146,
+          "encodedBodySize": 506846
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "transferSize": 444434,
+          "encodedBodySize": 444134
+        }
+      ],
+      "exit": "ended",
+      "eventDurations": [
+        120,
+        120,
+        120
+      ],
+      "slowestSampledInteractionMs": 120
+    },
+    {
+      "run": 1,
+      "locale": "en",
+      "phase": "before",
+      "mainThread": [
+        {
+          "name": "Nodes",
+          "value": 935
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.143858
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.32306
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6387068
+        }
+      ],
+      "lcp": 8480,
+      "cls": 0.0023244297634824017,
+      "longTaskBlockingMs": 98,
+      "interactionDurations": [],
+      "windowMs": 8536.19999999553,
+      "navigation": [
+        {
+          "ttfb": 3.3000000044703484,
+          "domContentLoaded": 351.29999999701977,
+          "load": 487.69999999552965
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "transferSize": 14408,
+          "encodedBodySize": 14108
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/assets/index-DuZ52GzY.js",
+          "transferSize": 401504,
+          "encodedBodySize": 401204
+        },
+        {
+          "name": "/assets/index-DKObstbk.css",
+          "transferSize": 48937,
+          "encodedBodySize": 48637
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "transferSize": 464139,
+          "encodedBodySize": 463839
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "transferSize": 8592,
+          "encodedBodySize": 8292
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "transferSize": 20584,
+          "encodedBodySize": 20284
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "transferSize": 20188,
+          "encodedBodySize": 19888
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "transferSize": 23176,
+          "encodedBodySize": 22876
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "transferSize": 23960,
+          "encodedBodySize": 23660
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/media/forest-reveal.mp4",
+          "transferSize": 9212466,
+          "encodedBodySize": 9212166
+        },
+        {
+          "name": "/favicon.svg",
+          "transferSize": 2125,
+          "encodedBodySize": 1825
+        },
+        {
+          "name": "/favicon.ico",
+          "transferSize": 51045,
+          "encodedBodySize": 50745
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "transferSize": 507146,
+          "encodedBodySize": 506846
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "transferSize": 444434,
+          "encodedBodySize": 444134
+        }
+      ],
+      "exit": "ended",
+      "eventDurations": [
+        104,
+        104,
+        104
+      ],
+      "slowestSampledInteractionMs": 104
+    },
+    {
+      "run": 2,
+      "locale": "lv",
+      "phase": "before",
+      "mainThread": [
+        {
+          "name": "Nodes",
+          "value": 936
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.146435
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.428713
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6338732
+        }
+      ],
+      "lcp": 7304,
+      "cls": 0.0013554422189269368,
+      "longTaskBlockingMs": 113,
+      "interactionDurations": [],
+      "windowMs": 8540.89999999851,
+      "navigation": [
+        {
+          "ttfb": 9.100000001490116,
+          "domContentLoaded": 354.5,
+          "load": 393.5
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "transferSize": 14408,
+          "encodedBodySize": 14108
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "transferSize": 8592,
+          "encodedBodySize": 8292
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/assets/index-DuZ52GzY.js",
+          "transferSize": 401504,
+          "encodedBodySize": 401204
+        },
+        {
+          "name": "/assets/index-DKObstbk.css",
+          "transferSize": 48937,
+          "encodedBodySize": 48637
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "transferSize": 464139,
+          "encodedBodySize": 463839
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "transferSize": 20188,
+          "encodedBodySize": 19888
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "transferSize": 20584,
+          "encodedBodySize": 20284
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "transferSize": 23176,
+          "encodedBodySize": 22876
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "transferSize": 23960,
+          "encodedBodySize": 23660
+        },
+        {
+          "name": "/favicon.svg",
+          "transferSize": 2125,
+          "encodedBodySize": 1825
+        },
+        {
+          "name": "/media/forest-reveal.mp4",
+          "transferSize": 9212466,
+          "encodedBodySize": 9212166
+        },
+        {
+          "name": "/favicon.ico",
+          "transferSize": 51045,
+          "encodedBodySize": 50745
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "transferSize": 507146,
+          "encodedBodySize": 506846
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "transferSize": 444434,
+          "encodedBodySize": 444134
+        }
+      ],
+      "exit": "ended",
+      "eventDurations": [
+        128,
+        128,
+        128
+      ],
+      "slowestSampledInteractionMs": 128
+    },
+    {
+      "run": 2,
+      "locale": "en",
+      "phase": "before",
+      "mainThread": [
+        {
+          "name": "Nodes",
+          "value": 886
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.163308
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.329568
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6525464
+        }
+      ],
+      "lcp": 7056,
+      "cls": 0.0023244297634824017,
+      "longTaskBlockingMs": 119,
+      "interactionDurations": [],
+      "windowMs": 8420.5,
+      "navigation": [
+        {
+          "ttfb": 3,
+          "domContentLoaded": 334.29999999701977,
+          "load": 371.79999999701977
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "transferSize": 14408,
+          "encodedBodySize": 14108
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/assets/index-DuZ52GzY.js",
+          "transferSize": 401504,
+          "encodedBodySize": 401204
+        },
+        {
+          "name": "/assets/index-DKObstbk.css",
+          "transferSize": 48937,
+          "encodedBodySize": 48637
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "transferSize": 464139,
+          "encodedBodySize": 463839
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "transferSize": 8592,
+          "encodedBodySize": 8292
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "transferSize": 20188,
+          "encodedBodySize": 19888
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "transferSize": 20584,
+          "encodedBodySize": 20284
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "transferSize": 23176,
+          "encodedBodySize": 22876
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "transferSize": 23960,
+          "encodedBodySize": 23660
+        },
+        {
+          "name": "/favicon.svg",
+          "transferSize": 2125,
+          "encodedBodySize": 1825
+        },
+        {
+          "name": "/media/forest-reveal.mp4",
+          "transferSize": 9212466,
+          "encodedBodySize": 9212166
+        },
+        {
+          "name": "/favicon.ico",
+          "transferSize": 51045,
+          "encodedBodySize": 50745
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "transferSize": 507146,
+          "encodedBodySize": 506846
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "transferSize": 444434,
+          "encodedBodySize": 444134
+        }
+      ],
+      "exit": "ended",
+      "eventDurations": [
+        120,
+        120,
+        120
+      ],
+      "slowestSampledInteractionMs": 120
+    },
+    {
+      "run": 3,
+      "locale": "lv",
+      "phase": "before",
+      "mainThread": [
+        {
+          "name": "Nodes",
+          "value": 936
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.149248
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.354033
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6553448
+        }
+      ],
+      "lcp": 7060,
+      "cls": 0.0013554422189269368,
+      "longTaskBlockingMs": 95,
+      "interactionDurations": [],
+      "windowMs": 8419.89999999851,
+      "navigation": [
+        {
+          "ttfb": 1.8999999985098839,
+          "domContentLoaded": 333.1000000014901,
+          "load": 380
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "transferSize": 14408,
+          "encodedBodySize": 14108
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "transferSize": 8592,
+          "encodedBodySize": 8292
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/assets/index-DuZ52GzY.js",
+          "transferSize": 401504,
+          "encodedBodySize": 401204
+        },
+        {
+          "name": "/assets/index-DKObstbk.css",
+          "transferSize": 48937,
+          "encodedBodySize": 48637
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "transferSize": 464139,
+          "encodedBodySize": 463839
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "transferSize": 20188,
+          "encodedBodySize": 19888
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "transferSize": 20584,
+          "encodedBodySize": 20284
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "transferSize": 23176,
+          "encodedBodySize": 22876
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "transferSize": 23960,
+          "encodedBodySize": 23660
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/favicon.svg",
+          "transferSize": 2125,
+          "encodedBodySize": 1825
+        },
+        {
+          "name": "/media/forest-reveal.mp4",
+          "transferSize": 9212466,
+          "encodedBodySize": 9212166
+        },
+        {
+          "name": "/favicon.ico",
+          "transferSize": 51045,
+          "encodedBodySize": 50745
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "transferSize": 507146,
+          "encodedBodySize": 506846
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "transferSize": 444434,
+          "encodedBodySize": 444134
+        }
+      ],
+      "exit": "ended",
+      "eventDurations": [
+        144,
+        144,
+        144
+      ],
+      "slowestSampledInteractionMs": 144
+    },
+    {
+      "run": 3,
+      "locale": "en",
+      "phase": "before",
+      "mainThread": [
+        {
+          "name": "Nodes",
+          "value": 935
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.147248
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.561791
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6431152
+        }
+      ],
+      "lcp": 7232,
+      "cls": 0.0023244297634824017,
+      "longTaskBlockingMs": 159,
+      "interactionDurations": [],
+      "windowMs": 8713.80000000447,
+      "navigation": [
+        {
+          "ttfb": 1.8999999985098839,
+          "domContentLoaded": 415.40000000596046,
+          "load": 478.1000000014901
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "transferSize": 14408,
+          "encodedBodySize": 14108
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/assets/index-DuZ52GzY.js",
+          "transferSize": 401504,
+          "encodedBodySize": 401204
+        },
+        {
+          "name": "/assets/index-DKObstbk.css",
+          "transferSize": 48937,
+          "encodedBodySize": 48637
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "transferSize": 464139,
+          "encodedBodySize": 463839
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "transferSize": 396724,
+          "encodedBodySize": 396424
+        },
+        {
+          "name": "/brand-mark.svg",
+          "transferSize": 2058,
+          "encodedBodySize": 1758
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "transferSize": 3727,
+          "encodedBodySize": 3427
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "transferSize": 8592,
+          "encodedBodySize": 8292
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "transferSize": 20188,
+          "encodedBodySize": 19888
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "transferSize": 20584,
+          "encodedBodySize": 20284
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "transferSize": 23176,
+          "encodedBodySize": 22876
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "transferSize": 23960,
+          "encodedBodySize": 23660
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "transferSize": 660360,
+          "encodedBodySize": 660060
+        },
+        {
+          "name": "/favicon.svg",
+          "transferSize": 2125,
+          "encodedBodySize": 1825
+        },
+        {
+          "name": "/media/forest-reveal.mp4",
+          "transferSize": 9212466,
+          "encodedBodySize": 9212166
+        },
+        {
+          "name": "/favicon.ico",
+          "transferSize": 51045,
+          "encodedBodySize": 50745
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "transferSize": 507146,
+          "encodedBodySize": 506846
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "transferSize": 444434,
+          "encodedBodySize": 444134
+        }
+      ],
+      "exit": "ended",
+      "eventDurations": [
+        112,
+        112,
+        112
+      ],
+      "slowestSampledInteractionMs": 112
+    }
+  ]
+}
