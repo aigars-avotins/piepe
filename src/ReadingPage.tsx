@@ -50,10 +50,10 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
           {t.sections.map((section,index) => <Fragment key={section.id}><section className="reading-section" aria-labelledby={section.id}><h2 id={section.id}>{section.heading}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{citations(section.sources)}</section>{index===0&&renderXray(locale)}{index===2&&renderAtlas(locale)}</Fragment>)}
           <section className="reading-section" aria-labelledby="notice"><h2 id="notice">{t.noticeHeading}</h2><ul>{t.observations.map(observation => <li key={observation}>{observation}</li>)}</ul><p>{t.identification} {citations(['woodland', 'ucipm'])}</p></section>
           <aside className="reading-art-note"><p>{t.artNote}</p></aside>
-          <section className="reading-sources" aria-labelledby="sources"><h2 id="sources">{t.sourceHeading}</h2><p>{t.sourceNote}</p><ol>{readingSources.map(source => <li key={source.id} id={`source-${source.id}`} tabIndex={-1}><a href={source.url}>{source.name} — {source.title}</a></li>)}</ol></section>
+          <section className="reading-sources" aria-labelledby="sources"><h2 id="sources">{t.sourceHeading}</h2><p>{t.sourceNote}</p><ol>{readingSources.map(source => <li key={source.id} id={`source-${source.id}`} tabIndex={-1}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name} — {source.title}</a></li>)}</ol></section>
         </article>
-        <nav className="reading-next" aria-label={locale==='lv'?'Turpini lasīt':'Keep reading'}><a href={fieldNotesPath(locale)}>{forestNavigation[locale].notes}</a><a href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers}</a></nav>
-        <footer className="reading-return"><p>{t.returnThought}</p><a href={localePath(locale)}>{t.returnLabel}<span aria-hidden="true"> ↗</span></a></footer>
+        <nav className="reading-next" aria-label={locale==='lv'?'Turpini lasīt':'Keep reading'}><a href={fieldNotesPath(locale)} target="_blank" rel="noopener noreferrer">{forestNavigation[locale].notes}</a><a href={wallpapersPath(locale)} target="_blank" rel="noopener noreferrer">{forestNavigation[locale].wallpapers}</a></nav>
+        <footer className="reading-return"><p>{t.returnThought}</p><a href={localePath(locale)} target="_blank" rel="noopener noreferrer">{t.returnLabel}<span aria-hidden="true"> ↗</span></a></footer>
       </main>
     </body>
   </html>)

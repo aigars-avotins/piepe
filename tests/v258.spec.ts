@@ -41,22 +41,22 @@ for(const locale of ['lv','en'] as const){
     try{
       const p=await context.newPage();await p.goto(readingPath(locale));await checkStaticMarkup(p)
       for(const story of t.xray.stories)await expect(p.locator('[data-xray]')).toContainText(story.text)
-      await expect(p.locator('[data-xray-controls]')).toBeHidden();await expect(p.locator('[data-atmosphere-controls]')).toBeHidden()
-      await p.locator('[data-atlas-card] summary').first().focus();await p.keyboard.press('Enter');await expect(p.locator('[data-atlas-card]').first()).toHaveAttribute('open','')
+      await expect(p.locator('[data-xray-controls]')).toBeVisible();await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toBeVisible()
+      await expect(p.locator('[data-atlas-open]').first()).toHaveAttribute('target','_blank');await expect(p.locator('[data-atlas-card]').first().locator('img[data-interactive-image]')).toHaveAttribute('src','/images/interactive/atlas-pores.jpg')
       await expect(p.locator('[data-atlas-card]').first()).toContainText(t.atlas.cards[0].detail)
       await p.goto(notePath(locale,'005'));for(const stage of t.time.stages)await expect(p.locator('.time-stories')).toContainText(stage.text)
-      await expect(p.locator('[data-time-controls]')).toBeHidden();await expect(p.locator('video,audio,#root')).toHaveCount(0)
+      await expect(p.locator('[data-time-controls]')).toBeVisible();await expect(p.locator('[data-time-range]')).toBeDisabled();await expect(p.locator('video,audio,#root')).toHaveCount(0)
       await expect(p.locator('[data-time-figure="0"]')).toHaveCSS('opacity','1')
     }finally{await context.close()}
   })
 
   test(`2.5.8 ${locale}: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer`,async({page})=>{
-    await page.goto(readingPath(locale));const range=page.locator('[data-xray-range]'),photo=page.locator('.xray-surface')
+    await page.goto(readingPath(locale));const range=page.locator('[data-xray-range]'),photo=page.locator('.xray-cutaway')
     await expect(page.locator('[data-xray-controls]')).toBeVisible();await range.focus();await range.press('Home');await expect(range).toHaveValue('0')
     await range.press('ArrowRight');await expect(range).toHaveValue('1');await expect(range).toHaveAttribute('aria-valuetext',`1% ${t.xray.output}`)
     await range.press('End');await expect(range).toHaveValue('100');await expect(page.locator('[data-xray-output]')).toContainText('100%')
     await range.press('Home');for(let i=0;i<5;i++)await range.press('ArrowRight')
-    const before=await photo.evaluate(e=>getComputedStyle(e).clipPath),handle=page.locator('[data-xray-handle]');await handle.scrollIntoViewIfNeeded()
+    const before=await photo.evaluate(e=>getComputedStyle(e).clipPath),handle=page.locator('.xray-view');await handle.scrollIntoViewIfNeeded()
     const box=(await handle.boundingBox())!;await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width/2+90,box.y+box.height/2,{steps:8});await page.mouse.up()
     expect(Number(await range.inputValue())).toBeGreaterThan(10);expect(await photo.evaluate(e=>getComputedStyle(e).clipPath)).not.toBe(before)
     await page.locator('[data-xray-point="hyphae"]').focus();await page.keyboard.press('Enter')
@@ -69,26 +69,26 @@ for(const locale of ['lv','en'] as const){
     await page.goto(notePath(locale,'005'));const capsule=page.locator('[data-time-capsule]'),view=page.locator('.time-visual'),first=(await view.boundingBox())!
     for(let i=0;i<4;i++){
       await page.locator(`[data-time-choice="${i}"]`).click()
-      // The SVGs may dissolve; two different captions must never share that dissolve.
-      expect(await page.locator('[data-time-figure][aria-hidden="true"] figcaption').evaluateAll(es=>es.every(e=>getComputedStyle(e).visibility==='hidden'))).toBe(true)
+      // Photos dissolve, but only one caption remains visible.
+      expect(await page.locator('[data-time-caption][aria-hidden="true"]').evaluateAll(es=>es.every(e=>getComputedStyle(e).visibility==='hidden'))).toBe(true)
       await expect(page.locator(`[data-time-figure="${i}"]`)).toHaveCSS('opacity','1')
       await expect(capsule).toHaveAttribute('data-stage',String(i));await expect(page.locator(`[data-time-choice="${i}"]`)).toHaveAttribute('aria-pressed','true')
-      await expect(page.locator('[data-time-range]')).toHaveAttribute('aria-valuetext',t.time.stages[i].title)
+      await expect(page.locator('[data-time-range]')).toHaveAttribute('aria-valuetext',`${Math.round(i/3*100)}% · ${t.time.stages[i].title}`)
       const next=(await view.boundingBox())!;expect(next.width).toBeCloseTo(first.width,1);expect(next.height).toBeCloseTo(first.height,1)
     }
-    const range=page.locator('[data-time-range]');await range.focus();await range.press('Home');await expect(capsule).toHaveAttribute('data-stage','0');await range.press('End');await range.press('ArrowLeft');await expect(capsule).toHaveAttribute('data-stage','2')
+    const range=page.locator('[data-time-range]');await range.focus();await range.press('Home');await expect(capsule).toHaveAttribute('data-stage','0');await range.press('End');await range.press('ArrowLeft');await expect(range).toHaveValue('99.9');await expect(capsule).toHaveAttribute('data-stage','3')
     for(const stage of t.time.stages){await expect(page.locator('.time-stories')).toContainText(stage.text);await expect(page.locator(stage.source)).toHaveCount(1)}
     await expect(page.locator('#time-scenario')).toHaveText(t.time.scenario);await expect(page.locator('video,audio,#root')).toHaveCount(0)
   })
 
-  test(`2.5.8 ${locale}: atlas magnifies real SVG geometry, closes with Escape and restores summary focus`,async({page})=>{
-    await page.setViewportSize({width:1440,height:900});await page.goto(readingPath(locale))
-    const card=page.locator('[data-atlas-card]').first(),summary=card.locator('summary'),before=(await card.locator('svg').first().boundingBox())!
-    await summary.focus();await summary.press('Enter');await expect(card).toHaveAttribute('open','')
-    await expect.poll(async()=> (await card.locator('svg').first().boundingBox())!.width).toBeGreaterThan(before.width*1.2)
-    await summary.press('Escape');await expect(card).not.toHaveAttribute('open');await expect(summary).toBeFocused()
-    const other=page.locator('[data-atlas-card]').nth(2);await other.locator('summary').click();await expect(other.locator('.atlas-surface-key')).toHaveText(t.atlas.smooth+t.atlas.teeth)
-    await other.locator('[data-atlas-close]').click();await expect(other).not.toHaveAttribute('open');await expect(other.locator('summary')).toBeFocused()
+  test(`2.5.8 ${locale}: atlas opens full-resolution comparison, closes with Escape and restores link focus`,async({page})=>{
+    await page.goto(readingPath(locale))
+    const link=page.locator('[data-atlas-open]').first();await link.focus();await link.press('Enter')
+    const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3)
+    await expect.poll(()=>dialog.locator('img').first().evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(2400)
+    await page.keyboard.press('Escape');await expect(dialog).toBeHidden();await expect(link).toBeFocused()
+    const other=page.locator('[data-atlas-open]').nth(2);await other.click();await expect(dialog.locator('figcaption').first()).toHaveText(t.atlas.cards[2].title)
+    await dialog.locator('[data-atlas-close]').click();await expect(dialog).toBeHidden();await expect(other).toBeFocused()
     await expect(page.locator('.experience-caution')).toHaveText(t.atlas.caution)
   })
 
@@ -114,12 +114,11 @@ test('2.5.8 touch slider gestures and vertical page movement remain native',asyn
   const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true})
   try{
     const p=await context.newPage();await p.goto('/kas-ir-piepe/');const range=p.locator('[data-xray-range]');await range.scrollIntoViewIfNeeded();const box=(await range.boundingBox())!
-    // Check the painted SVG coordinates, not merely the outer element's CSS box:
-    // a contained drawing otherwise leaves bands on the taller phone canvas.
-    expect(await p.locator('.mycelium-drawing').evaluate((e:SVGSVGElement)=>{const r=e.getBoundingClientRect(),m=e.getScreenCTM()!,a=new DOMPoint(0,0).matrixTransform(m),b=new DOMPoint(1000,620).matrixTransform(m);return a.x<=r.left+1&&a.y<=r.top+1&&b.x>=r.right-1&&b.y>=r.bottom-1})).toBe(true)
+    // Both photographs cover the same 16:9 viewport without letterboxing.
+    expect(await p.locator('.xray-images img').evaluateAll(es=>es.every(e=>getComputedStyle(e).objectFit==='cover'))).toBe(true)
     await p.touchscreen.tap(box.x+box.width*.8,box.y+box.height/2);expect(Number(await range.inputValue())).toBeGreaterThan(55)
     if(browserName==='chromium'){
-      await p.locator('[data-xray-handle]').scrollIntoViewIfNeeded();const handle=(await p.locator('[data-xray-handle]').boundingBox())!,x=handle.x+handle.width/2,y=handle.y+handle.height/2,start=Number(await range.inputValue()),cdp=await context.newCDPSession(p)
+      await p.locator('.xray-view').scrollIntoViewIfNeeded();const handle=(await p.locator('.xray-view').boundingBox())!,x=handle.x+handle.width/2,y=handle.y+handle.height/2,start=Number(await range.inputValue()),cdp=await context.newCDPSession(p)
       await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]})
       for(let step=1;step<=8;step++)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x-step*9,y}]})
       await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});expect(Number(await range.inputValue())).toBeLessThan(start-10)
@@ -132,7 +131,7 @@ for(const mode of ['reduced','save-data'] as const)test(`2.5.8 ${mode}: illustra
   if(mode==='reduced')await page.emulateMedia({reducedMotion:'reduce'})
   else await page.addInitScript(()=>Object.defineProperty(navigator,'connection',{value:{saveData:true},configurable:true}))
   await page.goto('/en/what-is-a-bracket-fungus/');const range=page.locator('[data-xray-range]');await range.focus();await range.press('End')
-  await expect(page.locator('.hyphae-flow')).toHaveCSS('animation-name','none')
+  await expect(page.locator('.xray-cutaway')).toHaveCSS('transition-duration','0s')
   await page.goto('/en/field-notes/005-deadwood-and-time/');await page.locator('[data-time-choice="3"]').click();await expect(page.locator('[data-time-figure="3"]')).toHaveCSS('opacity','1');await expect(page.locator('[data-time-figure="3"]')).toHaveCSS('transition-duration','0s')
   await expect(page.locator('video,audio')).toHaveCount(0)
 })
@@ -154,9 +153,9 @@ test('2.5.8 audio is gesture-gated, depth-reactive and shares one real source th
   await page.evaluate(()=>document.dispatchEvent(new KeyboardEvent('keydown',{key:'a',bubbles:true})));expect((await graphState(page)).contexts).toBe(0)
   await page.locator('.site-header a[lang=lv]').click();await expect(page.getByRole('button',{name:messages.lv.muteSound,exact:true})).toHaveAttribute('data-audio-state','playing',{timeout:10000})
   expect(await graphState(page)).toMatchObject({contexts:1,filters:1,gains:1,sources:1,destinations:['filter'],loop:true});expect((await graphState(page)).duration).toBeGreaterThan(59)
-  await page.locator('#understory').evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));await expect(page.locator('[data-scale-scene]')).toHaveAttribute('data-scale-scene','understory')
+  await page.locator('#understory').evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));await expect(page.locator('.world')).toHaveAttribute('data-scene','understory')
   await expect.poll(async()=>(await graphState(page)).frequency!).toBeLessThan(12000);const enclosed=(await graphState(page)).frequency!
-  await page.locator('#return').evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));await expect(page.locator('[data-scale-scene]')).toHaveAttribute('data-scale-scene','return')
+  await page.locator('#return').evaluate(e=>e.scrollIntoView({block:'start',behavior:'instant'}));await expect(page.locator('.world')).toHaveAttribute('data-scene','return')
   await expect.poll(async()=>(await graphState(page)).frequency!).toBeGreaterThan(enclosed+3000)
   expect((await graphState(page)).sources).toBe(1);expect(requests).toHaveLength(1)
   // Controlled visibility events exercise the lifecycle; this is not an OS background/GPU measurement.
@@ -206,7 +205,7 @@ test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs 
   }
   const fixture=JSON.parse(await readFile('docs/qa/v258/baseline-inventory.json','utf8'))
   for(const[path,hash]of Object.entries(fixture.publicAssets))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
-  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(fixture.sources[path])
+  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)).digest('hex'),path).toBe(fixture.sources[path])
   const guide=await(await request.get(readingPath('lv'))).text(),home=await(await request.get('/')).text(),entry=/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],bundle=await readFile('dist'+entry,'utf8');expect(guide).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).not.toContain(readings.lv.sections[1].paragraphs[0]) // Shared homepage X-Ray is intentional in 2.5.8.1; long-form guide still stays static.
 })
 

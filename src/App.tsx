@@ -21,7 +21,6 @@ import { readSession, saveData, useReducedMotion, writeSession } from './usePref
 import { useForestAudio } from './useForestAudio'
 import SoundControl from './SoundControl'
 import { mediaUrl } from './mediaUrl'
-import ObservationScale from './ObservationScale'
 
 const chapters = ['forest', 'understory', 'encounter', 'return']
 export default function App({ initialLocale }: { initialLocale?: Locale }) {
@@ -276,7 +275,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
       <span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} onChange={changeLocale} />
       {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}><ControlText>{t.skipIntro}</ControlText> <span aria-hidden="true"><Arrow direction="diagonal" /></span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}><ControlText>{t.replay}</ControlText> <span aria-hidden="true">↺</span></button>}
     </header>
-    <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">0{index + 1}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></a>)}<ObservationScale locale={locale} scene={scene} /></nav>
+    <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">0{index + 1}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></a>)}</nav>
     <Story inactive={cinemaRunning} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} noteState={noteState} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
     {!discovery && <SoundControl audio={audio} locale={locale} />}
     <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={dockNote} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />

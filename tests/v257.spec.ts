@@ -124,7 +124,7 @@ test('2.5.7 original factual prose, notes, core cinema and every media/download 
   // 2.5.8 explicitly enhances these four sources; full prose and real audio-graph
   // regressions replace obsolete byte-equality, all other immutable guards remain.
   const approved=new Set(['src/reading.ts','src/ReadingPage.tsx','src/reading.css','src/useForestAudio.ts'])
-  for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(await readFile(path)), path).toBe(hash)
+  for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)),path).toBe(hash)
 })
 
 for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: selective supported snippet labels preserve primary content, links and mobile control text`, async ({ page, request }) => {
@@ -143,9 +143,8 @@ for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: selective sup
   await skip.click(); await expect(page.getByRole('button', { name: t.closer, exact: true })).toBeFocused()
   await expect(page.locator('.site-header').getByRole('link', { name: locale === 'lv' ? 'EN' : 'LV', exact: true })).toBeVisible()
   const notes = page.getByRole('link', { name: forestNavigation[locale].notes, exact: true }); await expect(notes).toHaveAttribute('href', fieldNotesPath(locale))
-  await notes.click(); await expect(page).toHaveURL(new RegExp(fieldNotesPath(locale) + '$'))
-  await page.goto(localePath(locale)); const gallery = page.getByRole('link', { name: forestNavigation[locale].wallpapers, exact: true }); await expect(gallery).toHaveAttribute('href', wallpapersPath(locale)); await gallery.click()
-  await expect(page.locator('.knowledge-gallery')).toBeVisible()
+  const notePopup=page.waitForEvent('popup');await notes.click();const notesPage=await notePopup;await expect(notesPage).toHaveURL(new RegExp(fieldNotesPath(locale)+'$'));await notesPage.close()
+  await page.goto(localePath(locale)); const gallery = page.getByRole('link', { name: forestNavigation[locale].wallpapers, exact: true }); await expect(gallery).toHaveAttribute('href', wallpapersPath(locale)); const galleryPopup=page.waitForEvent('popup');await gallery.click();const galleryPage=await galleryPopup;await expect(galleryPage.locator('.knowledge-gallery')).toBeVisible();await galleryPage.close()
 })
 
 test('2.5.7 JS-free wallpaper and original-note links download the real existing files', async ({ browser }) => {

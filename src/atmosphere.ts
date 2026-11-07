@@ -6,7 +6,7 @@ export const atmosphereLabels: Record<Locale, { label: string; morning: string; 
   en: { label: 'Colour atmosphere', morning: 'Morning light', nightfall: 'Nightfall' },
 }
 // Shared, hash-authorized prepaint code: whitelist only a manual colour preference.
-export const atmosphereBootstrap = "(()=>{try{if(localStorage.getItem('piepe-atmosphere')==='nightfall')document.documentElement.dataset.atmosphere='nightfall'}catch{}})();"
+export const atmosphereBootstrap = "(()=>{try{document.documentElement.dataset.atmosphere=localStorage.getItem('piepe-atmosphere')==='nightfall'?'nightfall':'morning'}catch{}})();"
 export const morningSnapshot = (): Atmosphere => 'morning'
 export const atmosphereSnapshot = (): Atmosphere => document.documentElement.dataset.atmosphere==='nightfall'?'nightfall':'morning'
 export function setAtmosphere(value: Atmosphere) {
