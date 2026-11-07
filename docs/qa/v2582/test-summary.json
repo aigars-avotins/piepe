@@ -1,0 +1,88 @@
+{
+  "note": "Selections overlap. These are targeted runs, not a repeated full-suite claim.",
+  "runs": [
+    {
+      "name": "chromium-content-seo-ui",
+      "expectedCases": 95,
+      "passed": 95,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 145066.103
+    },
+    {
+      "name": "chromium-cold-reverse-native-scroll-layout",
+      "expectedCases": 18,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 184537.19700000001
+    },
+    {
+      "name": "chromium-controls-handoff-repeated-films",
+      "expectedCases": 17,
+      "passed": 17,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 115795.703
+    },
+    {
+      "name": "chromium-contrast-hud",
+      "expectedCases": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 33179.37899999999
+    },
+    {
+      "name": "chromium-final-media-leaves",
+      "expectedCases": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 26263.302
+    },
+    {
+      "name": "linux-webkit-ui-initial",
+      "expectedCases": 13,
+      "passed": 11,
+      "failed": 2,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 38797.547
+    },
+    {
+      "name": "linux-webkit-affected-follow-up",
+      "expectedCases": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 19614.633
+    }
+  ],
+  "nativeMacOS": [
+    {
+      "run": 42404116619,
+      "source": "d1967cf",
+      "passed": 21,
+      "failed": 4,
+      "findings": [
+        "2 loupe assertions assumed fractional mouse input; integer input retains the original precision",
+        "2 native video presentation-cadence failures with the environment-wide filter; grading moved to media leaves"
+      ]
+    },
+    {
+      "run": 42405004203,
+      "source": "a1791b5",
+      "expectedCases": 11,
+      "status": "success",
+      "passed": 11,
+      "failed": 0
+    }
+  ]
+}

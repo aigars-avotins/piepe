@@ -1,0 +1,110 @@
+[
+  {
+    "url": "/images/interactive/atlas-gills.jpg",
+    "bytes": 3537803,
+    "dimensions": [
+      2400,
+      1792
+    ],
+    "format": "JPEG",
+    "sha256": "8e959e22d5fba2da4ad8c36770746e7c43fbc4ce46542838b2f2c7e2d91fb310",
+    "source": "public/images/interactive/atlas-gills.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/atlas-pores.jpg",
+    "bytes": 3409337,
+    "dimensions": [
+      2400,
+      1792
+    ],
+    "format": "JPEG",
+    "sha256": "ce16bcb5647283e720e5c13d606e1e4fc015680b0faa639310938e39324d47a4",
+    "source": "public/images/interactive/atlas-pores.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/atlas-smooth.jpg",
+    "bytes": 3632308,
+    "dimensions": [
+      2400,
+      1792
+    ],
+    "format": "JPEG",
+    "sha256": "ca40ab168d941449c56057a71650ba0e7e11f4fed242131829620d95fcc9e283",
+    "source": "public/images/interactive/atlas-smooth.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/deadwood-stage-01.jpg",
+    "bytes": 3283598,
+    "dimensions": [
+      2752,
+      1536
+    ],
+    "format": "JPEG",
+    "sha256": "7c2ecf223eae51e8cd805d9b7ad464d782e6e8765e0171e45267a0bc6f2c5c6f",
+    "source": "public/images/interactive/deadwood-stage-01.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/deadwood-stage-02.jpg",
+    "bytes": 3496556,
+    "dimensions": [
+      2752,
+      1536
+    ],
+    "format": "JPEG",
+    "sha256": "d62415d44ee1fc69936cd75f07271866689255d991fdf1daf8e0dd0118cf5deb",
+    "source": "public/images/interactive/deadwood-stage-02.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/deadwood-stage-03.jpg",
+    "bytes": 3263016,
+    "dimensions": [
+      2752,
+      1536
+    ],
+    "format": "JPEG",
+    "sha256": "00011a8ff1df1fac5e3b49533352d406963b723e37b8c7cf5e0dc978a0a4c55e",
+    "source": "public/images/interactive/deadwood-stage-03.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/deadwood-stage-04.jpg",
+    "bytes": 3283370,
+    "dimensions": [
+      2752,
+      1536
+    ],
+    "format": "JPEG",
+    "sha256": "e9c1e169883d4ed7c5bc178211699db4111e3c55481cf6c415ddf5ba43f27464",
+    "source": "public/images/interactive/deadwood-stage-04.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/xray-bark-surface.jpg",
+    "bytes": 3617990,
+    "dimensions": [
+      2752,
+      1536
+    ],
+    "format": "JPEG",
+    "sha256": "824de9f07d05c0d8c183d55ec8faccd9c191ddadd0a18c471c9578508654ec1a",
+    "source": "public/images/interactive/xray-bark-surface.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  },
+  {
+    "url": "/images/interactive/xray-wood-mycelium.jpg",
+    "bytes": 3003508,
+    "dimensions": [
+      2752,
+      1536
+    ],
+    "format": "JPEG",
+    "sha256": "d63d0018baf770cbc2eef34eff64690a476f4714889c34bf4de0e19ac4bf59e0",
+    "source": "public/images/interactive/xray-wood-mycelium.webp",
+    "quality": "Original bytes; corrected filename extension only"
+  }
+]

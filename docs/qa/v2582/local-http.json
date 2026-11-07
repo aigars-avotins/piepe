@@ -1,0 +1,930 @@
+{
+  "method": "Local Wrangler HTTP candidate 2.5.8.2; no production deployment; authored head metadata, assets and every inline hash compared to the fresh main build. Only the exact optional Cloudflare beacon exception is allowed in addition to authored scripts.",
+  "verifiedAtUtc": "2026-11-07T19:11:56.659632+00:00",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/kas-ir-piepe/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/kas-ir-piepe/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-foni/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-foni/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/forest-wallpapers/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/forest-wallpapers/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-piezimes/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-piezimes/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/field-notes/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/field-notes/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-piezimes/001/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-piezimes/001/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/field-notes/001/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/field-notes/001/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-piezimes/002-caga/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-piezimes/002-caga/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/field-notes/002-chaga/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/field-notes/002-chaga/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket/",
+      "status": 200,
+      "version": "2.5.10",
+      "canonical": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "hreflangMatchesBuild": true,
+      "jsonLdMatchesBuild": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/kas-ir-piepe/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-foni/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/forest-wallpapers/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-piezimes/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/field-notes/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-piezimes/001/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/field-notes/001/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-piezimes/002-caga/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/field-notes/002-chaga/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket/",
+      "method": "HEAD",
+      "status": 200,
+      "exactBuiltCsp": true,
+      "cfCacheStatus": "HIT",
+      "cfRay": null
+    },
+    {
+      "path": "/en",
+      "status": 307,
+      "location": "/en/"
+    },
+    {
+      "path": "/kas-ir-piepe",
+      "status": 307,
+      "location": "/kas-ir-piepe/"
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus",
+      "status": 307,
+      "location": "/en/what-is-a-bracket-fungus/"
+    },
+    {
+      "path": "/meza-foni",
+      "status": 307,
+      "location": "/meza-foni/"
+    },
+    {
+      "path": "/en/forest-wallpapers",
+      "status": 307,
+      "location": "/en/forest-wallpapers/"
+    },
+    {
+      "path": "/meza-piezimes",
+      "status": 307,
+      "location": "/meza-piezimes/"
+    },
+    {
+      "path": "/en/field-notes",
+      "status": 307,
+      "location": "/en/field-notes/"
+    },
+    {
+      "path": "/meza-piezimes/001",
+      "status": 307,
+      "location": "/meza-piezimes/001/"
+    },
+    {
+      "path": "/en/field-notes/001",
+      "status": 307,
+      "location": "/en/field-notes/001/"
+    },
+    {
+      "path": "/meza-piezimes/002-caga",
+      "status": 307,
+      "location": "/meza-piezimes/002-caga/"
+    },
+    {
+      "path": "/en/field-notes/002-chaga",
+      "status": 307,
+      "location": "/en/field-notes/002-chaga/"
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe",
+      "status": 307,
+      "location": "/meza-piezimes/003-serpiepe/"
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods",
+      "status": 307,
+      "location": "/en/field-notes/003-chicken-of-the-woods/"
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes",
+      "status": 307,
+      "location": "/meza-piezimes/004-latvijas-piepes/"
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi",
+      "status": 307,
+      "location": "/en/field-notes/004-common-bracket-fungi/"
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks",
+      "status": 307,
+      "location": "/meza-piezimes/005-kritalas-un-laiks/"
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time",
+      "status": 307,
+      "location": "/en/field-notes/005-deadwood-and-time/"
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe",
+      "status": 307,
+      "location": "/meza-piezimes/006-lakas-plakanpiepe/"
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket",
+      "status": 307,
+      "location": "/en/field-notes/006-lacquered-bracket/"
+    },
+    {
+      "path": "/meza-piezimes/007/",
+      "status": 404
+    },
+    {
+      "path": "/en/field-notes/999/",
+      "status": 404
+    },
+    {
+      "path": "/meza-foni/missing/",
+      "status": 404
+    },
+    {
+      "path": "/en/forest-wallpapers/missing/",
+      "status": 404
+    },
+    {
+      "path": "/kas-ir-piepe/missing/",
+      "status": 404
+    },
+    {
+      "path": "/not-a-page/",
+      "status": 404
+    },
+    {
+      "path": "/media/forest-reveal.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-63/9212166",
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/media/forest-reveal.mp4",
+      "status": 416,
+      "unsatisfiableRange": true
+    },
+    {
+      "path": "/media/forest-awakening.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-63/8237084",
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/media/forest-awakening.mp4",
+      "status": 416,
+      "unsatisfiableRange": true
+    },
+    {
+      "path": "/media/forest-understory.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-63/5846195",
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/media/forest-understory.mp4",
+      "status": 416,
+      "unsatisfiableRange": true
+    },
+    {
+      "path": "/media/forest-breathing.mp4",
+      "status": 206,
+      "contentRange": "bytes 0-63/7025165",
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/media/forest-breathing.mp4",
+      "status": 416,
+      "unsatisfiableRange": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/field-note-lv.txt",
+      "status": 200,
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/field-note-en.txt",
+      "status": 200,
+      "sourceBytesMatch": true
+    },
+    {
+      "path": "/assets/index-BtudqPA9.js",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "a5fc3644101520402a332077d74ee4de64b7690483fb560f369fd3e0d18d7d0e"
+    },
+    {
+      "path": "/assets/index-DnL_sqUF.css",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "bd139d621d0a7c4f1d356d025efef5c62ea5a984d9d63048c5609823bd70bb7d"
+    },
+    {
+      "path": "/media/forest-awakening.mp4",
+      "status": 200,
+      "headBytesMatchBuild": 8237084
+    },
+    {
+      "path": "/media/forest-mobile.webp",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "f8be6d38950477642f54b72d56f1960fda4b0c0e9b6e409270dc19e01f03172c"
+    },
+    {
+      "path": "/media/forest-awakening-final.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "c33d477e66a0d2fa752f52f134507199510843f864b38ddf6620e9cc8b109923"
+    },
+    {
+      "path": "/media/forest-reveal.mp4",
+      "status": 200,
+      "headBytesMatchBuild": 9212166
+    },
+    {
+      "path": "/media/forest-final.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "d38aa9b255d256556d90895aacb28aa753ccb483f8497a78a540fcc753ed3867"
+    },
+    {
+      "path": "/media/forest-understory-final.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "37a5b7f3a00555c1148a5814827ab11a34e2737f1527201509f22383c0c88e3c"
+    },
+    {
+      "path": "/media/forest-understory.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "44522b24265ec06a9c435dc61d2ca9d7b439a9b49ddbf427a12cbd276bd6dd99"
+    },
+    {
+      "path": "/media/forest-breathing-final.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "76740eec331556e6367f39169aaa648eba8ed14abc8ca2f3d2badf412d9ca5e3"
+    },
+    {
+      "path": "/media/forest-awakening-poster.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "a9778a0e22f5710e771afde03855ff19f32bfa9661b597f311e453800d249a36"
+    },
+    {
+      "path": "/media/forest-breathing-poster.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "b33dc7749235dceb12474016e466bdf17efbc7567ffdba7024975e093a82d598"
+    },
+    {
+      "path": "/media/forest-breathing.mp4",
+      "status": 200,
+      "headBytesMatchBuild": 7025165
+    },
+    {
+      "path": "/media/forest-understory.mp4",
+      "status": 200,
+      "headBytesMatchBuild": 5846195
+    },
+    {
+      "path": "/media/forest-poster.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "4fc20c123d49474f1d0661cb14756c1c04f8f68a6592c7cf32ff26b85f6fe3cf"
+    },
+    {
+      "path": "/wallpapers/piepe-forest-desktop-5120x2880.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "f7ff27c5c4f088d9f7935fe970858b2097b6471b9ce072bfeddcf7f2cb3e5045"
+    },
+    {
+      "path": "/wallpapers/piepe-forest-mobile-1440x3120.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "75fd73ab59463df8afabcf3ee8c9b1e6cc105c6e6066c229e2461c3cba763a41"
+    },
+    {
+      "path": "/wallpapers/piepe-forest-desktop-3840x2160.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "9157c6b1640de88f27dcb200663daff0afa1f3b3d0e98f302c82b8810888f90e"
+    },
+    {
+      "path": "/wallpapers/previews/desktop.webp",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "d44a0ea77e89c301b18e4f3d849df7bd16d32059912af34ef74cc69859b9e321"
+    },
+    {
+      "path": "/wallpapers/previews/mobile.webp",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "4e159110c19292ad2d70fbfc807fceb169648ed74ab9ad0f1630ce570f4b8844"
+    },
+    {
+      "path": "/audio/forest-ambience.mp3",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "24a2c7786d8e4fd1be24a2398db7b013b83d4556c74da8883d081abc6789bf0e"
+    },
+    {
+      "path": "/audio/CREDITS.txt",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "c5cdfb5bff367c5148bad31ea5990dccd679009597271ae0094845b576787b4e"
+    },
+    {
+      "path": "/social-preview.jpg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "6fd896f59e6ac7e4b60b21325b520dc6c82f6f792d1d63ab8271d7e3c5260d75"
+    },
+    {
+      "path": "/brand-mark.svg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "ee99f96fb630dbcfc47b2775533727b1d70617586ca94d695d0c8b99cc927dd1"
+    },
+    {
+      "path": "/brand-wordmark.svg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "960d11a623efa06de6d7497db70b3c49cb0511d5d97bd9bf045061cabb640162"
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "85f0c93e3138662735150b4516ca7c7747c1406c369eb843865c099b6057d095"
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "00a3497dcc41a5778ca6ced7b5c0181399dc819b7ccc6899355a6566062606be"
+    },
+    {
+      "path": "/apple-touch-icon.png",
+      "status": 200,
+      "sourceBytesMatch": true,
+      "sha256": "588502e35c0ab8f98714fb3cab8efec8ff4830fb591d79e240f6bd12d57687c0"
+    },
+    {
+      "path": "/apple-touch-icon.png",
+      "status": 200,
+      "contentType": "image/png",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "etag": "\"3f9be2a010c977a794dc61bdc6f0cdab\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"bf2d4b97f41869172ac7df1213ecdfb3\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"f874c6add620ae0f1f5da8c94d5e783c\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/forest-experience-bd507fdba4caf196.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"0805b70a5082564c80d1acc6d188b53b\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/forest-knowledge-567686ce4e952632.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"cb489de51a22bad788c97da09fcc8e67\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/index-BtudqPA9.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"d4b8d3a5efe853863066ac6e7ea4d12f\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/index-DnL_sqUF.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"10b1c10e67870a4dd3d509fcb8b98ba9\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"7d6f2986734ced0724dcf3512e3b817c\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"d5da6b61a7d5660e27ae4e9f25d30b71\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/reading-da7bd40ab17dc94b.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"caf0bac7563dd0228205a6e556c25057\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/reading-tools-af7e84e4428307de.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"ea662e4164bb6dad1799310a3da3a888\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/brand-mark.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "etag": "\"411e72a8e94eb2033cd580ffb1715e19\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/brand-wordmark.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "etag": "\"f06bf3adf154d070aaddd16099035dea\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "contentType": "image/vnd.microsoft.icon",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "etag": "\"185a16dfbd7dd7009a0f314966cf7e83\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "etag": "\"ebf7cc5bd0381e9af3e79d65b0248b44\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/media/forest-breathing-poster.jpg?v=2.3",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "cacheControl": "public, max-age=86400, must-revalidate",
+      "etag": "\"0ce6eaec9db2014edb3912c1741dacde\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/media/forest-final.jpg?v=2.3",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "cacheControl": "public, max-age=86400, must-revalidate",
+      "etag": "\"f7259685a5dc082637dcd7f8d75e969c\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/media/forest-poster.jpg?v=2.3",
+      "status": 200,
+      "contentType": "image/jpeg",
+      "cacheControl": "public, max-age=86400, must-revalidate",
+      "etag": "\"0b766dc52111b2f3b9f5169cd7136b56\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/site.webmanifest",
+      "status": 200,
+      "contentType": "application/manifest+json",
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "etag": "\"d0adfb0c862e7cf3a99a5d9c9f28c995\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/wallpapers/previews/desktop.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "cacheControl": "public, max-age=86400, must-revalidate",
+      "etag": "\"adab6efdcc00c128e7fa775d1c322a20\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/kas-ir-piepe",
+      "method": "HEAD",
+      "status": 307,
+      "location": "/kas-ir-piepe/"
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time",
+      "method": "HEAD",
+      "status": 307,
+      "location": "/en/field-notes/005-deadwood-and-time/"
+    },
+    {
+      "path": "/images/interactive/atlas-gills.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/atlas-pores.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/atlas-smooth.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/deadwood-stage-01.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/deadwood-stage-02.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/deadwood-stage-03.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/deadwood-stage-04.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/xray-bark-surface.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    },
+    {
+      "path": "/images/interactive/xray-wood-mycelium.jpg",
+      "status": 200,
+      "derivedAssetHashMatch": true
+    }
+  ]
+}

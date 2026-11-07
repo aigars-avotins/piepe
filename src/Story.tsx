@@ -3,6 +3,7 @@ import { useState } from 'react'
 import type { CSSProperties, MouseEvent, RefObject } from 'react'
 import { messages, readingPath } from './i18n'
 import { fieldNotesPath, wallpapersPath, forestNavigation } from './forestPaths'
+import AtmosphereSelector from './AtmosphereSelector'
 import ControlText from './ControlText'
 import HomeExperiences, { DiscoveryEntry } from './HomeExperiences'
 import type { Locale } from './i18n'
@@ -24,7 +25,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
           <button className="fungus-hit" disabled={intro} onClick={onDiscovery} aria-label={t.discover} aria-haspopup="dialog" {...inspectEvents} />
           <button ref={hotspot} className="fungus-annotation" disabled={intro} onClick={onDiscovery} aria-label={t.closer} aria-haspopup="dialog" {...inspectEvents}><span className="annotation-cross" aria-hidden="true">+</span><span>{t.lookCloser} <span aria-hidden="true"><Arrow direction="diagonal" /></span></span></button>
         </div>
-        <div className="hero-foot title-enter"><DiscoveryEntry locale={locale}/><p className="hero-word-meaning"><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><a className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></a><span className="edition">{t.edition}</span></div>
+        <div className="hero-foot title-enter"><DiscoveryEntry locale={locale}/><p className="hero-word-meaning"><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><a className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></a><div className="hero-atmosphere"><AtmosphereSelector locale={locale}/></div><span className="edition">{t.edition}</span></div>
         {imageFailed && <p className="media-note">{t.imageError} <button onClick={onDiscovery}>{t.openEncounter}</button>.</p>}
       </section>
       <section id="understory" className="chapter bark-chapter cinematic-chapter" data-scene="understory" aria-labelledby="bark-title">
@@ -43,7 +44,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
       </section>
       <section id="fungus-facts" className="fungus-facts" aria-labelledby="facts-title">
         <div className="facts-intro"><p className="label">pie.pe</p><h2 id="facts-title">{t.factsTitle}</h2><p>{t.factsIntro}</p></div>
-        <div className="facts-context"><p>{t.factsDefinition}</p><p>{t.factsContext}</p><a className="line-link" href={readingPath(locale)}>{t.readGuide} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a><a className="line-link" href={fieldNotesPath(locale)}>{forestNavigation[locale].notes} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a></div>
+        <div className="facts-context"><p>{t.factsDefinition}</p><p>{t.factsContext}</p><a className="line-link" href={readingPath(locale)} target="_blank" rel="noopener noreferrer">{t.readGuide} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a><a className="line-link" href={fieldNotesPath(locale)} target="_blank" rel="noopener noreferrer">{forestNavigation[locale].notes} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a></div>
         <HomeExperiences key={locale} locale={locale}/><div className="fact-observations">{t.facts.map((fact, index) => <article key={index}><span className="label">0{index + 1}</span><h3>{fact.title}</h3><p>{fact.text}</p></article>)}</div>
         <details className="fungus-vocabulary"><summary>{t.glossaryTitle}</summary><dl>{t.glossary.map(entry => <div key={entry.term}><dt>{entry.term}</dt><dd>{entry.definition}</dd></div>)}</dl><p className="vocabulary-note">{t.glossaryObservation}</p></details>
         <p className="art-note">{t.artNote}</p>
@@ -59,11 +60,11 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
       <section className="wallpapers" id="wallpapers" aria-labelledby="wallpapers-title">
         <p className="label">{t.wallpapersSub}</p><h2 id="wallpapers-title">{t.wallpapersTitle}</h2>
         <div className="wallpaper-choices">
-          <article><img src="/wallpapers/previews/desktop.webp?v=2.2" alt={t.wallpaperAltDesktop} width="800" height="450" loading="lazy" /><h3>{t.desktop}</h3><a className="line-link" href="/wallpapers/piepe-forest-desktop-5120x2880.jpg?v=2.2" download target="_blank" rel="noopener" onClick={() => setDownloadHint(true)}>{t.download5k}<span aria-hidden="true"><Arrow direction="down" /></span></a><a className="resolution-link" href="/wallpapers/piepe-forest-desktop-3840x2160.jpg?v=2.2" download target="_blank" rel="noopener" onClick={() => setDownloadHint(true)}>{t.download4k} · 3840 × 2160</a></article>
-          <article><img src="/wallpapers/previews/mobile.webp?v=2.2" alt={t.wallpaperAltPhone} width="369" height="800" loading="lazy" /><h3>{t.phone}</h3><a className="line-link" href="/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2" download target="_blank" rel="noopener" onClick={() => setDownloadHint(true)}>{t.downloadPhone}<span aria-hidden="true"><Arrow direction="down" /></span></a><span className="resolution-link">1440 × 3120</span></article>
+          <article><img src="/wallpapers/previews/desktop.webp?v=2.2" alt={t.wallpaperAltDesktop} width="800" height="450" loading="lazy" /><h3>{t.desktop}</h3><a className="line-link" href="/wallpapers/piepe-forest-desktop-5120x2880.jpg?v=2.2" download target="_blank" rel="noopener noreferrer" onClick={() => setDownloadHint(true)}>{t.download5k}<span aria-hidden="true"><Arrow direction="down" /></span></a><a className="resolution-link" href="/wallpapers/piepe-forest-desktop-3840x2160.jpg?v=2.2" download target="_blank" rel="noopener noreferrer" onClick={() => setDownloadHint(true)}>{t.download4k} · 3840 × 2160</a></article>
+          <article><img src="/wallpapers/previews/mobile.webp?v=2.2" alt={t.wallpaperAltPhone} width="369" height="800" loading="lazy" /><h3>{t.phone}</h3><a className="line-link" href="/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2" download target="_blank" rel="noopener noreferrer" onClick={() => setDownloadHint(true)}>{t.downloadPhone}<span aria-hidden="true"><Arrow direction="down" /></span></a><span className="resolution-link">1440 × 3120</span></article>
         </div>
         {downloadHint && <p className="download-hint" role="status">{t.saveHint}</p>}
-        <a className="line-link" href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a>
+        <a className="line-link" href={wallpapersPath(locale)} target="_blank" rel="noopener noreferrer">{forestNavigation[locale].wallpapers} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a>
       </section>
     </main>
             <footer inert={inactive}><a className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><span className="footer-edition">{t.forest} — 2026<span className="footer-meaning">{t.wordMeaning}</span></span><button className="text-button motion-toggle" aria-pressed={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
