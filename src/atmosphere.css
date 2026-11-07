@@ -11,8 +11,8 @@ html[data-atmosphere="nightfall"]{--bg-primary:#05080d;--bg-elevated:#0a1019;--b
  :is(.world,.reading-page,.discovery-stage)::before{background:radial-gradient(circle at 50% 0%,rgba(235,180,90,.18),transparent 70%);opacity:1}
  :is(.world,.reading-page,.discovery-stage)::after{background:radial-gradient(circle at 50% 0%,rgba(110,160,220,.16),rgba(4,7,12,.65) 80%);opacity:0}
 html[data-atmosphere="nightfall"]  :is(.world,.reading-page,.discovery-stage)::before{opacity:0}html[data-atmosphere="nightfall"]  :is(.world,.reading-page,.discovery-stage)::after{opacity:1}
-/* Grade each visual plane once, so film/still handoffs share the same treatment. */
-.environment,.specimen-photo,.raster-grade{filter:var(--optical-grade);transition:filter 600ms var(--mood-easing)}
+/* Grade only media leaves: a filtered environment subtree flattens native WebKit video compositing. */
+.environment .media-plane>img,.environment .forest-film,.environment .motion-clip>img,.environment .motion-clip>video,.environment .wide-environment>img,.specimen-photo>img,.raster-grade{filter:var(--optical-grade);transition:filter 600ms var(--mood-easing)}
 .reading-page{background:var(--bg-primary);color:var(--text-secondary)}.reading-header,.reading-main{position:relative;z-index:2}.reading-page .reading-header{background:linear-gradient(105deg,var(--bg-elevated),transparent)}
 .atmosphere-controls{display:inline-flex;align-items:center;gap:3px;border:1px solid var(--line);border-radius:40px;padding:3px;margin:0;min-width:0;background:var(--bg-card);font:12px/1.4 'Manrope',sans-serif;box-shadow:0 3px 18px #0002;backdrop-filter:blur(8px)}
 .atmosphere-controls legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
@@ -20,7 +20,7 @@ html[data-atmosphere="nightfall"]  :is(.world,.reading-page,.discovery-stage)::b
 .atmosphere-controls button[aria-pressed=true]{color:var(--text-primary);background:var(--bg-elevated);border-color:var(--line)}.atmosphere-controls button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.atmosphere-controls button>span{font:inherit;color:inherit}.atmosphere-controls button svg{width:17px;height:17px;flex-shrink:0;color:var(--accent)}
 .atmosphere-slot{min-height:52px}.reading-header .atmosphere-slot{order:1;margin-left:auto}.reading-header .reading-languages{order:2}
 @media(max-width:699px){.reading-page .reading-header{display:grid;grid-template-columns:1fr auto;gap:14px 16px;padding-bottom:18px}.reading-header .reading-languages{order:0}.reading-header .atmosphere-slot{grid-column:1/-1;margin:0}.atmosphere-controls button{font-size:11px;padding:8px 11px}footer{flex-wrap:wrap}}
-@media(prefers-reduced-motion:reduce){:root, :is(.world,.reading-page,.discovery-stage)::before, :is(.world,.reading-page,.discovery-stage)::after,.environment,.specimen-photo,.raster-grade,.atmosphere-controls button{transition:none!important}}
+@media(prefers-reduced-motion:reduce){:root, :is(.world,.reading-page,.discovery-stage)::before, :is(.world,.reading-page,.discovery-stage)::after,.environment img,.environment video,.specimen-photo>img,.raster-grade,.atmosphere-controls button{transition:none!important}}
 
 .discovery-stage::before,.discovery-stage::after{z-index:0}.discovery-copy,.specimen-caption{z-index:1}
 /* Ambient light belongs behind reading and HUD text, including the root footer. */
