@@ -1,0 +1,979 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/42363146056",
+  "source": "a9b6f06a4e1929aecacd5641893348c7b683b566",
+  "runner": "standard macos-15-intel; headed WebKit, actual AppKit foreground verification",
+  "stats": {
+    "startTime": "2026-11-07T10:18:12.228Z",
+    "duration": 55443.156,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "name": "v252.spec.ts > 2.5.2 native journey 1512x982 > wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 32090,
+          "evidence": {
+            "native-window-activation": {
+              "requested": [
+                {
+                  "name": "Playwright",
+                  "activated": true
+                }
+              ],
+              "frontmost": "Finder",
+              "displays": [
+                {
+                  "frame": {
+                    "origin": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 1080
+                    }
+                  },
+                  "visible": {
+                    "origin": {
+                      "x": 0,
+                      "y": 85
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 970
+                    }
+                  },
+                  "scale": 1
+                }
+              ]
+            },
+            "native-scroll-independent-of-movie-state": [
+              {
+                "state": "playing",
+                "frames": [
+                  1,
+                  1.1666666666666667,
+                  1.25
+                ],
+                "inputs": 5,
+                "from": 954,
+                "to": 2669,
+                "prevented": [
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "state": "looped",
+                "inputs": 5,
+                "from": 954,
+                "to": 2669,
+                "prevented": [
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "state": "paused",
+                "inputs": 5,
+                "from": 954,
+                "to": 2669,
+                "prevented": [
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ],
+            "native-media-requests": [
+              {
+                "event": "request",
+                "id": 1,
+                "at": 1794046703777,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-1"
+              },
+              {
+                "event": "response",
+                "id": 1,
+                "at": 1794046703777,
+                "status": 206,
+                "range": "bytes 0-1/5846195",
+                "bytes": "2"
+              },
+              {
+                "event": "finished",
+                "id": 1,
+                "at": 1794046703777
+              },
+              {
+                "event": "request",
+                "id": 2,
+                "at": 1794046703777,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-5846194"
+              },
+              {
+                "event": "response",
+                "id": 2,
+                "at": 1794046703781,
+                "status": 206,
+                "range": "bytes 0-5846194/5846195",
+                "bytes": "5846195"
+              },
+              {
+                "event": "failed",
+                "id": 2,
+                "at": 1794046704373,
+                "error": "cancelled"
+              },
+              {
+                "event": "request",
+                "id": 3,
+                "at": 1794046705171,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=983040-5846194"
+              },
+              {
+                "event": "response",
+                "id": 3,
+                "at": 1794046705172,
+                "status": 206,
+                "range": "bytes 983040-5846194/5846195",
+                "bytes": "4863155"
+              },
+              {
+                "event": "finished",
+                "id": 3,
+                "at": 1794046705511
+              },
+              {
+                "event": "request",
+                "id": 4,
+                "at": 1794046708892,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-1"
+              },
+              {
+                "event": "response",
+                "id": 4,
+                "at": 1794046708903,
+                "status": 206,
+                "range": "bytes 0-1/5846195",
+                "bytes": "2"
+              },
+              {
+                "event": "finished",
+                "id": 4,
+                "at": 1794046708903
+              },
+              {
+                "event": "request",
+                "id": 5,
+                "at": 1794046708905,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-5846194"
+              },
+              {
+                "event": "response",
+                "id": 5,
+                "at": 1794046708918,
+                "status": 206,
+                "range": "bytes 0-5846194/5846195",
+                "bytes": "5846195"
+              },
+              {
+                "event": "finished",
+                "id": 5,
+                "at": 1794046709073
+              },
+              {
+                "event": "request",
+                "id": 6,
+                "at": 1794046717844,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-1"
+              },
+              {
+                "event": "response",
+                "id": 6,
+                "at": 1794046717850,
+                "status": 206,
+                "range": "bytes 0-1/5846195",
+                "bytes": "2"
+              },
+              {
+                "event": "finished",
+                "id": 6,
+                "at": 1794046717850
+              },
+              {
+                "event": "request",
+                "id": 7,
+                "at": 1794046717851,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-5846194"
+              },
+              {
+                "event": "response",
+                "id": 7,
+                "at": 1794046717853,
+                "status": 206,
+                "range": "bytes 0-5846194/5846195",
+                "bytes": "5846195"
+              },
+              {
+                "event": "finished",
+                "id": 7,
+                "at": 1794046717881
+              },
+              {
+                "event": "request",
+                "id": 8,
+                "at": 1794046721626,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-1"
+              },
+              {
+                "event": "response",
+                "id": 8,
+                "at": 1794046721627,
+                "status": 206,
+                "range": "bytes 0-1/5846195",
+                "bytes": "2"
+              },
+              {
+                "event": "finished",
+                "id": 8,
+                "at": 1794046721629
+              },
+              {
+                "event": "request",
+                "id": 9,
+                "at": 1794046721631,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-5846194"
+              },
+              {
+                "event": "response",
+                "id": 9,
+                "at": 1794046721632,
+                "status": 206,
+                "range": "bytes 0-5846194/5846195",
+                "bytes": "5846195"
+              },
+              {
+                "event": "finished",
+                "id": 9,
+                "at": 1794046721718
+              },
+              {
+                "event": "request",
+                "id": 10,
+                "at": 1794046723219,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-1"
+              },
+              {
+                "event": "response",
+                "id": 10,
+                "at": 1794046723221,
+                "status": 206,
+                "range": "bytes 0-1/5846195",
+                "bytes": "2"
+              },
+              {
+                "event": "finished",
+                "id": 10,
+                "at": 1794046723222
+              },
+              {
+                "event": "request",
+                "id": 11,
+                "at": 1794046723222,
+                "url": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                "range": "bytes=0-5846194"
+              },
+              {
+                "event": "response",
+                "id": 11,
+                "at": 1794046723222,
+                "status": 206,
+                "range": "bytes 0-5846194/5846195",
+                "bytes": "5846195"
+              },
+              {
+                "event": "finished",
+                "id": 11,
+                "at": 1794046723223
+              }
+            ],
+            "native-input-and-compositor": {
+              "events": [
+                {
+                  "event": "loadstart",
+                  "at": 667,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 0,
+                    "paused": true
+                  }
+                },
+                {
+                  "event": "waiting",
+                  "at": 670,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 0,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "loadedmetadata",
+                  "at": 807,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 1,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "loadeddata",
+                  "at": 970,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 2,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "playing",
+                  "at": 971,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 4,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "click",
+                  "at": 1352,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "A.line-link"
+                },
+                {
+                  "event": "waiting",
+                  "at": 2141,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 0,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "loadstart",
+                  "at": 2146,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 0,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "loadedmetadata",
+                  "at": 2246,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 1,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "loadeddata",
+                  "at": 2432,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 4,
+                    "paused": false
+                  }
+                },
+                {
+                  "event": "playing",
+                  "at": 2436,
+                  "scroll": 954,
+                  "hash": "#understory",
+                  "focus": true,
+                  "target": "VIDEO.null",
+                  "media": {
+                    "src": "http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3",
+                    "time": 0,
+                    "ready": 4,
+                    "paused": false
+                  }
+                }
+              ],
+              "photoPhases": [],
+              "maxFrameGap": 225,
+              "frames": 51,
+              "href": "http://127.0.0.1:4173/?scroll-case=anchor#encounter",
+              "scroll": 2525,
+              "focus": true,
+              "visibility": "visible",
+              "viewport": {
+                "width": 1512,
+                "height": 982
+              },
+              "screen": {
+                "width": 1512,
+                "height": 982
+              },
+              "world": "world  is-ready has-title         ",
+              "photo": {},
+              "videos": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 lv: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5600,
+          "evidence": {
+            "native-window-activation": {
+              "requested": [
+                {
+                  "name": "Playwright",
+                  "activated": true
+                }
+              ],
+              "frontmost": "Playwright",
+              "displays": [
+                {
+                  "frame": {
+                    "origin": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 1080
+                    }
+                  },
+                  "visible": {
+                    "origin": {
+                      "x": 0,
+                      "y": 85
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 970
+                    }
+                  },
+                  "scale": 1
+                }
+              ]
+            },
+            "native-media-requests": [],
+            "native-input-and-compositor": {
+              "events": [
+                {
+                  "event": "focusin",
+                  "at": 307,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "MAIN.reading-main "
+                },
+                {
+                  "event": "click",
+                  "at": 308,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "click",
+                  "at": 888,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "click",
+                  "at": 1607,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "click",
+                  "at": 2564,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "focusin",
+                  "at": 3431,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null"
+                },
+                {
+                  "event": "keydown",
+                  "at": 3441,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "Home"
+                },
+                {
+                  "event": "keyup",
+                  "at": 3443,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "Home"
+                },
+                {
+                  "event": "keydown",
+                  "at": 3456,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "End"
+                },
+                {
+                  "event": "keyup",
+                  "at": 3458,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "End"
+                },
+                {
+                  "event": "keydown",
+                  "at": 3475,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "ArrowLeft"
+                },
+                {
+                  "event": "keyup",
+                  "at": 3480,
+                  "scroll": 1113,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "ArrowLeft"
+                }
+              ],
+              "photoPhases": [],
+              "maxFrameGap": 470,
+              "frames": 92,
+              "href": "http://127.0.0.1:4173/meza-piezimes/005-kritalas-un-laiks/",
+              "scroll": 1113,
+              "focus": true,
+              "visibility": "visible",
+              "viewport": {
+                "width": 390,
+                "height": 664
+              },
+              "screen": {
+                "width": 390,
+                "height": 844
+              },
+              "videos": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 en: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4460,
+          "evidence": {
+            "native-window-activation": {
+              "requested": [
+                {
+                  "name": "Playwright",
+                  "activated": true
+                }
+              ],
+              "frontmost": "Playwright",
+              "displays": [
+                {
+                  "frame": {
+                    "origin": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 1080
+                    }
+                  },
+                  "visible": {
+                    "origin": {
+                      "x": 0,
+                      "y": 85
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 970
+                    }
+                  },
+                  "scale": 1
+                }
+              ]
+            },
+            "native-media-requests": [],
+            "native-input-and-compositor": {
+              "events": [
+                {
+                  "event": "focusin",
+                  "at": 285,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "MAIN.reading-main "
+                },
+                {
+                  "event": "click",
+                  "at": 287,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "click",
+                  "at": 445,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "click",
+                  "at": 1516,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "click",
+                  "at": 2439,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "BUTTON.null"
+                },
+                {
+                  "event": "focusin",
+                  "at": 3314,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null"
+                },
+                {
+                  "event": "keydown",
+                  "at": 3335,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "Home"
+                },
+                {
+                  "event": "keyup",
+                  "at": 3338,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "Home"
+                },
+                {
+                  "event": "keydown",
+                  "at": 3350,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "End"
+                },
+                {
+                  "event": "keyup",
+                  "at": 3352,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "End"
+                },
+                {
+                  "event": "keydown",
+                  "at": 3361,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "ArrowLeft"
+                },
+                {
+                  "event": "keyup",
+                  "at": 3363,
+                  "scroll": 1187,
+                  "hash": "",
+                  "focus": true,
+                  "target": "INPUT.null",
+                  "key": "ArrowLeft"
+                }
+              ],
+              "photoPhases": [],
+              "maxFrameGap": 416,
+              "frames": 102,
+              "href": "http://127.0.0.1:4173/en/field-notes/005-deadwood-and-time/",
+              "scroll": 1187,
+              "focus": true,
+              "visibility": "visible",
+              "viewport": {
+                "width": 390,
+                "height": 664
+              },
+              "screen": {
+                "width": 390,
+                "height": 844
+              },
+              "videos": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 touch slider gestures and vertical page movement remain native",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2248,
+          "evidence": {
+            "native-window-activation": {
+              "requested": [
+                {
+                  "name": "Playwright",
+                  "activated": true
+                }
+              ],
+              "frontmost": "Playwright",
+              "displays": [
+                {
+                  "frame": {
+                    "origin": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 1080
+                    }
+                  },
+                  "visible": {
+                    "origin": {
+                      "x": 0,
+                      "y": 85
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 970
+                    }
+                  },
+                  "scale": 1
+                }
+              ]
+            },
+            "native-media-requests": [],
+            "native-input-and-compositor": {
+              "href": "about:blank",
+              "scroll": 0,
+              "focus": true,
+              "visibility": "visible",
+              "viewport": {
+                "width": 980,
+                "height": 1668
+              },
+              "screen": {
+                "width": 390,
+                "height": 844
+              },
+              "videos": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3271,
+          "evidence": {
+            "native-window-activation": {
+              "requested": [
+                {
+                  "name": "Playwright",
+                  "activated": true
+                }
+              ],
+              "frontmost": "Playwright",
+              "displays": [
+                {
+                  "frame": {
+                    "origin": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 1080
+                    }
+                  },
+                  "visible": {
+                    "origin": {
+                      "x": 0,
+                      "y": 85
+                    },
+                    "size": {
+                      "width": 1920,
+                      "height": 970
+                    }
+                  },
+                  "scale": 1
+                }
+              ]
+            },
+            "native-media-requests": [],
+            "native-input-and-compositor": {
+              "events": [],
+              "photoPhases": [],
+              "maxFrameGap": 42,
+              "frames": 11,
+              "href": "http://127.0.0.1:4173/en/field-notes/006-lacquered-bracket/",
+              "scroll": 0,
+              "focus": true,
+              "visibility": "visible",
+              "viewport": {
+                "width": 390,
+                "height": 664
+              },
+              "screen": {
+                "width": 390,
+                "height": 844
+              },
+              "videos": []
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "interpretation": "Five targeted final cases pass without retry. Earlier90-case run89pass/1failure remains recorded; this follow-up is not a claim of90passing in one run or a proven product-level Safari fix.",
+  "foregroundEvidenceTiming": "The native-window-activation JSON is captured immediately during AppKit activation and can still say Finder. The existing beforeEach then polls the real NSWorkspace frontmost application until it matches the requested browser; that assertion must pass before the test executes. Every test passed this foreground assertion. Final document focus is additionally true."
+}
