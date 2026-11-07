@@ -4,9 +4,9 @@
 @property --text-primary{syntax:"<color>";inherits:true;initial-value:#f7f2e7}
 @property --text-secondary{syntax:"<color>";inherits:true;initial-value:#d8ceb8}
 @property --accent{syntax:"<color>";inherits:true;initial-value:#e5ad57}
-:root,[data-atmosphere="morning"]{--bg-primary:#172017;--bg-elevated:#222e21;--bg-card:rgba(36,48,34,.82);--text-primary:#f7f2e7;--text-secondary:#d8ceb8;--accent:#e5ad57;--optical-grade:brightness(1.08) saturate(1.14) sepia(.08);--mood-easing:cubic-bezier(.22,1,.36,1)}
+:root,[data-atmosphere="morning"]{--bg-primary:#172017;--bg-elevated:#222e21;--bg-card:rgba(36,48,34,.82);--text-primary:#f7f2e7;--text-secondary:#d8ceb8;--accent:#e5ad57;--optical-grade:brightness(1.08) saturate(1.14) sepia(.08) contrast(1) hue-rotate(0deg);--mood-easing:cubic-bezier(.22,1,.36,1)}
 :root{--color-forest:var(--bg-primary);--color-offwhite:var(--text-primary);--color-ivory:var(--accent);--paper:var(--text-primary);--muted:var(--text-secondary);--gold:var(--accent);--line:color-mix(in srgb,var(--text-secondary) 24%,transparent);background:var(--bg-primary);color:var(--text-primary);transition:--bg-primary 600ms var(--mood-easing),--bg-elevated 600ms var(--mood-easing),--bg-card 600ms var(--mood-easing),--text-primary 600ms var(--mood-easing),--text-secondary 600ms var(--mood-easing),--accent 600ms var(--mood-easing)}
-html[data-atmosphere="nightfall"]{--bg-primary:#05080d;--bg-elevated:#0a1019;--bg-card:rgba(11,18,29,.88);--text-primary:#dde7f4;--text-secondary:#9ab0c7;--accent:#82aee0;--optical-grade:brightness(.82) saturate(.75) contrast(1.12) hue-rotate(-18deg)}
+html[data-atmosphere="nightfall"]{--bg-primary:#05080d;--bg-elevated:#0a1019;--bg-card:rgba(11,18,29,.88);--text-primary:#dde7f4;--text-secondary:#9ab0c7;--accent:#82aee0;--optical-grade:brightness(.82) saturate(.75) sepia(0) contrast(1.12) hue-rotate(-18deg)}
  :is(.world,.reading-page,.discovery-stage)::before, :is(.world,.reading-page,.discovery-stage)::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;transition:opacity 600ms var(--mood-easing)}
  :is(.world,.reading-page,.discovery-stage)::before{background:radial-gradient(circle at 50% 0%,rgba(235,180,90,.18),transparent 70%);opacity:1}
  :is(.world,.reading-page,.discovery-stage)::after{background:radial-gradient(circle at 50% 0%,rgba(110,160,220,.16),rgba(4,7,12,.65) 80%);opacity:0}

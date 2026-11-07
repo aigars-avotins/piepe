@@ -86,10 +86,28 @@ for(const locale of ['lv','en'] as const)test(`2.5.8.2 ${locale}: narrow-phone H
 
 test('2.5.8.2 mood changes the entire reading palette and grades the visual plane once',async({page})=>{
  await page.goto('/kas-ir-piepe/');const grade=page.locator('.xray-images'),morning=await grade.evaluate(e=>getComputedStyle(e).filter)
- expect(morning).toBe('brightness(1.08) saturate(1.14) sepia(0.08)')
+ expect(morning).toBe('brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)')
  await page.locator('[data-atmosphere-choice=nightfall]').click()
- await expect(grade).toHaveCSS('filter','brightness(0.82) saturate(0.75) contrast(1.12) hue-rotate(-18deg)')
+ await expect(grade).toHaveCSS('filter','brightness(0.82) saturate(0.75) sepia(0) contrast(1.12) hue-rotate(-18deg)')
  await expect(page.locator('body')).toHaveCSS('background-color','rgb(5, 8, 13)');await expect(grade.locator('img').first()).toHaveCSS('filter','none')
  await page.emulateMedia({reducedMotion:'reduce'});await page.locator('[data-atmosphere-choice=morning]').click();await expect(grade).toHaveCSS('transition-duration','0s')
  await expect(page.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)')
+})
+
+
+test('2.5.8.2 mood optical grade interpolates across actual rendered frames',async({page})=>{
+ await page.emulateMedia({reducedMotion:'no-preference'})
+ await page.goto('/kas-ir-piepe/#beneath-bark');await page.locator('.xray-view').scrollIntoViewIfNeeded()
+ const samples=await page.evaluate(async()=>{
+  const element=document.querySelector('.xray-images')!,startFilter=getComputedStyle(element).filter,frames:{time:number;filter:string}[]=[]
+  document.querySelector<HTMLButtonElement>('[data-atmosphere-choice=nightfall]')!.click()
+  const start=performance.now();await new Promise<void>(resolve=>{const frame=()=>{const time=performance.now()-start;frames.push({time,filter:getComputedStyle(element).filter});if(time<750)requestAnimationFrame(frame);else resolve()};requestAnimationFrame(frame)})
+  return{startFilter,frames}
+ })
+ const end='brightness(0.82) saturate(0.75) sepia(0) contrast(1.12) hue-rotate(-18deg)'
+ expect(samples.frames.at(-1)!.filter).toBe(end)
+ const intermediate=samples.frames.filter(frame=>frame.time<600&&frame.filter!==samples.startFilter&&frame.filter!==end)
+ expect(intermediate.length,'The visible optical grade must interpolate, not cut instantly').toBeGreaterThan(2)
+ expect(new Set(intermediate.map(frame=>frame.filter)).size).toBeGreaterThan(2)
+ await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('.xray-images')).toHaveCSS('transition-duration','0s')
 })
