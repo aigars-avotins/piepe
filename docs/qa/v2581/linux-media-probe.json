@@ -1,0 +1,22 @@
+[
+  {
+    "port": 4290,
+    "canPlay": "probably",
+    "src": "http://127.0.0.1:4290/media/forest-reveal.mp4?v=2.3",
+    "state": 0,
+    "network": 3,
+    "paused": true,
+    "time": 0,
+    "exit": "load-timeout"
+  },
+  {
+    "port": 4291,
+    "canPlay": "probably",
+    "src": "http://127.0.0.1:4291/media/forest-reveal.mp4?v=2.3",
+    "state": 0,
+    "network": 3,
+    "paused": true,
+    "time": 0,
+    "exit": "load-timeout"
+  }
+]

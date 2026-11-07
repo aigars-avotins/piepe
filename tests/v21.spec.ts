@@ -32,13 +32,13 @@ for (const locale of ['lv', 'en'] as const) {
     await page.getByRole('tab', { name: t.observations[0].label, exact: false }).press('End')
     const download = page.waitForEvent('download'); await page.getByRole('link', { name: t.keepNote, exact: false }).click()
     expect((await download).suggestedFilename()).toBe(`piepe-field-note-001-${locale}.txt`)
-    await expect(page.getByRole('status')).toContainText(t.collected)
+    await expect(page.getByRole('dialog').getByRole('status')).toContainText(t.collected)
     await page.getByRole('button', { name: t.closeDiscovery }).click()
     await expect(page.getByRole('button', { name: t.closer, exact: true })).toBeFocused()
     const note = await request.get(`/field-note-${locale}.txt`); expect(note.status()).toBe(200); expect(await note.text()).toContain(t.observations[0].text)
     const wallpaper = page.waitForEvent('download'); await page.getByRole('link', { name: t.download5k }).click()
     expect((await wallpaper).suggestedFilename()).toBe('piepe-forest-desktop-5120x2880.jpg')
-    await expect(page.getByRole('status')).toContainText(t.saveHint)
+    await expect(page.locator('.download-hint[role=status]')).toContainText(t.saveHint)
     expect(videoRequests).toEqual([])
     for (const [file, width, height] of [['desktop-5120x2880', 5120, 2880], ['desktop-3840x2160', 3840, 2160], ['mobile-1440x3120', 1440, 3120]] as const) {
       const url = `/wallpapers/piepe-forest-${file}.jpg`

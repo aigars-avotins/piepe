@@ -1,3 +1,4 @@
+import { releaseVersion } from '../src/release'
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { messages, readingPath } from '../src/i18n'
@@ -19,7 +20,7 @@ for (const locale of ['lv', 'en'] as const) test(`2.5.8 ${locale}: every release
       expect(response.headers()['content-security-policy']).toBe(builtCsp)
       expect(await response.text()).toContain('<main id="reading"')
       await page.goto(path); await expect(page).toHaveTitle(meta.title)
-      await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.8')
+      await expect(page.locator('body')).toHaveAttribute('data-version', releaseVersion)
       await expect(page.locator('h1')).toHaveText(meta.heading); await expect(page.locator('.reading-lead')).toHaveText(meta.lead)
       await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://pie.pe' + path)
       const other = locale === 'lv' ? 'en' : 'lv'
@@ -41,7 +42,7 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
   const raw=await request.get(path);expect(raw.status()).toBe(200);expect(await raw.text()).toContain(t.factsTitle)
   await page.goto(path)
-  await expect(page.locator('.world')).toHaveAttribute('data-version','2.5.8')
+  await expect(page.locator('.world')).toHaveAttribute('data-version',releaseVersion)
   const local=await readFile('dist/index.html','utf8');const script=/src="(\/assets\/[^"]+\.js)"/.exec(local)![1]
   await expect(page.locator('head script[type="module"][src^="/assets/"]')).toHaveAttribute('src',script)
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:13000})
@@ -55,7 +56,7 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   await page.getByRole('tab',{name:new RegExp(t.observations[0].label)}).press('End')
   const download=page.waitForEvent('download');await page.getByRole('link',{name:t.keepNote,exact:false}).click()
   expect((await download).suggestedFilename()).toBe(`piepe-field-note-001-${locale}.txt`)
-  await expect(page.getByRole('status')).toContainText(t.collected)
+  await expect(page.getByRole('dialog').getByRole('status')).toContainText(t.collected)
   await page.getByRole('button',{name:t.closeDiscovery}).click();await expect(page.getByRole('dialog')).not.toBeVisible()
   await expect(page.getByRole('button',{name:t.closer,exact:true})).toBeFocused()
   for(const [id,clip] of [['understory','understory'],['return','breathing']]){

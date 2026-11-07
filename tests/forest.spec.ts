@@ -159,7 +159,7 @@ test('discovery is a complete three-step field note with a real downloadable art
   const download = page.waitForEvent('download')
   await page.getByRole('link', { name: 'Keep the field note', exact: false }).click()
   expect((await download).suggestedFilename()).toBe('piepe-field-note-001-en.txt')
-  await expect(page.getByRole('status')).toContainText('Field note collected')
+  await expect(page.getByRole('dialog').getByRole('status')).toContainText('Field note collected')
   await page.getByRole('button', { name: 'Close discovery' }).click()
   await expect(page.getByRole('button', { name: 'Look closer at the fungus', exact: true })).toBeFocused()
   await page.reload(); await expect(page.locator('.encounter-status')).toContainText('Collected')

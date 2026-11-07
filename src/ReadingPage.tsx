@@ -1,3 +1,4 @@
+import { releaseVersion, releaseMilestone } from './release'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { Fragment } from 'react'
 import { localePath, messages, readingPath } from './i18n'
@@ -37,11 +38,11 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(readingSchema(locale)).replace(/</g, '\\u003c') }} />
       {client&&<script type="module" src={client} data-reading-tools="" />}
     </head>
-    <body className="reading-page" data-version="2.5.8">
+    <body className="reading-page" data-version={releaseVersion} data-milestone={releaseMilestone}>
       <a className="skip-content" href="#reading">{messages[locale].skipContent}</a>
       <header className="reading-header">
         <a className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a>
-        <nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <a key={lang} lang={lang} hrefLang={lang} href={readingPath(lang)} aria-current={lang === locale ? 'page' : undefined}>{lang.toUpperCase()}</a>)}</nav>
+        <nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <a key={lang} lang={lang} hrefLang={lang} href={readingPath(lang)} aria-current={lang === locale ? 'page' : undefined}>{lang.toUpperCase()}</a>)}</nav><div className="atmosphere-slot"><AtmosphereSelector locale={locale}/></div>
       </header>
       <main id="reading" className="reading-main" tabIndex={-1}>
         <article>
@@ -52,7 +53,7 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
           <section className="reading-sources" aria-labelledby="sources"><h2 id="sources">{t.sourceHeading}</h2><p>{t.sourceNote}</p><ol>{readingSources.map(source => <li key={source.id} id={`source-${source.id}`} tabIndex={-1}><a href={source.url}>{source.name} — {source.title}</a></li>)}</ol></section>
         </article>
         <nav className="reading-next" aria-label={locale==='lv'?'Turpini lasīt':'Keep reading'}><a href={fieldNotesPath(locale)}>{forestNavigation[locale].notes}</a><a href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers}</a></nav>
-        <footer className="reading-return"><p>{t.returnThought}</p><a href={localePath(locale)}>{t.returnLabel}<span aria-hidden="true"> ↗</span></a><AtmosphereSelector locale={locale} /></footer>
+        <footer className="reading-return"><p>{t.returnThought}</p><a href={localePath(locale)}>{t.returnLabel}<span aria-hidden="true"> ↗</span></a></footer>
       </main>
     </body>
   </html>)

@@ -1,0 +1,1309 @@
+{
+  "method": "Local Chromium; fresh isolated contexts; actual full intro; unthrottled loopback; alternating before/after; 3 samples per width. CLS sum has no user input. Laboratory comparison, not field CWV or Lighthouse.",
+  "rows": [
+    {
+      "width": 390,
+      "round": 0,
+      "version": "before",
+      "lcp": 6536,
+      "cls": 0.0013554422189269368,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 20.099999994039536
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 24.299999997019768
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 26
+        },
+        {
+          "path": "/assets/index-CG2ez3Yr.css",
+          "bytes": 50444,
+          "duration": 19.30000000447035
+        },
+        {
+          "path": "/assets/index-Bcm9BmmX.js",
+          "bytes": 404427,
+          "duration": 26.100000001490116
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 26.399999998509884
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 35.899999998509884
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 27
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 27.19999999552965
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 58.099999994039536
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 58.100000001490116
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 12.100000001490116
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 11.800000004470348
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 60.899999998509884
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 5
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 7.199999995529652
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 6.100000001490116
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 6.200000002980232
+        }
+      ],
+      "dom": 26230
+    },
+    {
+      "width": 390,
+      "round": 0,
+      "version": "after",
+      "lcp": 6788,
+      "cls": 0.0013554422189269368,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 17.399999998509884
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 17.5
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 37.69999999552965
+        },
+        {
+          "path": "/assets/index-BaDD-Aw6.css",
+          "bytes": 68965,
+          "duration": 21.5
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 39.70000000298023
+        },
+        {
+          "path": "/assets/index-Ca4Xr3eO.js",
+          "bytes": 423904,
+          "duration": 37.70000000298023
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 40.70000000298023
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 33.100000001490116
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 34.79999999701977
+        },
+        {
+          "path": "/experience/bark-b384664d558b.webp",
+          "bytes": 38322,
+          "duration": 19.600000001490116
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 70.39999999850988
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 61.20000000298023
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 18.299999997019768
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 17.600000001490116
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 37.399999998509884
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 2.5
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 8.800000004470348
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 6.899999998509884
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 7.199999995529652
+        }
+      ],
+      "dom": 73499
+    },
+    {
+      "width": 390,
+      "round": 1,
+      "version": "after",
+      "lcp": 6712,
+      "cls": 0.0013554422189269368,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 15
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 18.5
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 20.5
+        },
+        {
+          "path": "/assets/index-BaDD-Aw6.css",
+          "bytes": 68965,
+          "duration": 17.899999998509884
+        },
+        {
+          "path": "/assets/index-Ca4Xr3eO.js",
+          "bytes": 423904,
+          "duration": 20.799999997019768
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 26.399999998509884
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 20.799999997019768
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 26.399999998509884
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 26.5
+        },
+        {
+          "path": "/experience/bark-b384664d558b.webp",
+          "bytes": 38322,
+          "duration": 16.899999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 45.399999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 38.80000000447035
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 7.700000002980232
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 7.200000002980232
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 45.399999998509884
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 5.600000001490116
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 6.699999995529652
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 4.700000002980232
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 4.399999998509884
+        }
+      ],
+      "dom": 73499
+    },
+    {
+      "width": 390,
+      "round": 1,
+      "version": "before",
+      "lcp": 6700,
+      "cls": 0.0013554422189269368,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 17.899999998509884
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 18
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 24.600000001490116
+        },
+        {
+          "path": "/assets/index-CG2ez3Yr.css",
+          "bytes": 50444,
+          "duration": 16.399999998509884
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 28
+        },
+        {
+          "path": "/assets/index-Bcm9BmmX.js",
+          "bytes": 404427,
+          "duration": 24.700000002980232
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 28.100000001490116
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 27.5
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 27.599999994039536
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 53.70000000298023
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 53.79999999701977
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 6.299999997019768
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 11.899999998509884
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 47.100000001490116
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 4
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 5.899999998509884
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 6.199999995529652
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 5.9000000059604645
+        }
+      ],
+      "dom": 26204
+    },
+    {
+      "width": 390,
+      "round": 2,
+      "version": "before",
+      "lcp": 6732,
+      "cls": 0.0013554422189269368,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 19.399999998509884
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 24.399999998509884
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 42.399999998509884
+        },
+        {
+          "path": "/assets/index-Bcm9BmmX.js",
+          "bytes": 404427,
+          "duration": 41.899999998509884
+        },
+        {
+          "path": "/assets/index-CG2ez3Yr.css",
+          "bytes": 50444,
+          "duration": 20.100000001490116
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 44.29999999701977
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 38.69999999552965
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 38.69999999552965
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 43.599999994039536
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 45.20000000298023
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 45.20000000298023
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 5.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 5.600000001490116
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 2.7999999970197678
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 42
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 4.200000002980232
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 7.100000001490116
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 5.700000002980232
+        }
+      ],
+      "dom": 26204
+    },
+    {
+      "width": 390,
+      "round": 2,
+      "version": "after",
+      "lcp": 6776,
+      "cls": 0.0013554422189269368,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 13.899999998509884
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 21.399999998509884
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 24.899999998509884
+        },
+        {
+          "path": "/assets/index-Ca4Xr3eO.js",
+          "bytes": 423904,
+          "duration": 24.899999998509884
+        },
+        {
+          "path": "/assets/index-BaDD-Aw6.css",
+          "bytes": 68965,
+          "duration": 20.30000000447035
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 25.200000002980232
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 25.200000002980232
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 24.200000002980232
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 24.69999999552965
+        },
+        {
+          "path": "/experience/bark-b384664d558b.webp",
+          "bytes": 38322,
+          "duration": 7.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 44.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 38.600000001490116
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 11.200000002980232
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 10.399999998509884
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 50.100000001490116
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 2.600000001490116
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 8.5
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 5.700000002980232
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 5.399999998509884
+        }
+      ],
+      "dom": 73499
+    },
+    {
+      "width": 1440,
+      "round": 0,
+      "version": "before",
+      "lcp": 6820,
+      "cls": 0.0002298621827846365,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 25.599999994039536
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 30
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 31.599999994039536
+        },
+        {
+          "path": "/assets/index-Bcm9BmmX.js",
+          "bytes": 404427,
+          "duration": 31.69999999552965
+        },
+        {
+          "path": "/assets/index-CG2ez3Yr.css",
+          "bytes": 50444,
+          "duration": 24.700000002980232
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 39.20000000298023
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 31.799999997019768
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 36.100000001490116
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 36.29999999701977
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 68.70000000298023
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 73.39999999850988
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 11.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 10.900000005960464
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 2.100000001490116
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 49.899999998509884
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 7.600000001490116
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 10.799999997019768
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 10.5
+        }
+      ],
+      "dom": 26180
+    },
+    {
+      "width": 1440,
+      "round": 0,
+      "version": "after",
+      "lcp": 6784,
+      "cls": 0.0002298621827846365,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 10.099999994039536
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 17.5
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 24.299999997019768
+        },
+        {
+          "path": "/assets/index-BaDD-Aw6.css",
+          "bytes": 68965,
+          "duration": 16.799999997019768
+        },
+        {
+          "path": "/assets/index-Ca4Xr3eO.js",
+          "bytes": 423904,
+          "duration": 24.600000001490116
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 25.5
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 28
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 24.80000000447035
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 25.100000001490116
+        },
+        {
+          "path": "/experience/bark-b384664d558b.webp",
+          "bytes": 38322,
+          "duration": 18.200000002980232
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 71
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 63.399999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 12
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 12
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 6.200000002980232
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 47.20000000298023
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 5.600000001490116
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 10.200000002980232
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 9.299999997019768
+        }
+      ],
+      "dom": 73449
+    },
+    {
+      "width": 1440,
+      "round": 1,
+      "version": "after",
+      "lcp": 6812,
+      "cls": 0.0002298621827846365,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 18.5
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 18.100000001490116
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 23.5
+        },
+        {
+          "path": "/assets/index-Ca4Xr3eO.js",
+          "bytes": 423904,
+          "duration": 23.5
+        },
+        {
+          "path": "/assets/index-BaDD-Aw6.css",
+          "bytes": 68965,
+          "duration": 16.5
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 23.80000000447035
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 27.100000001490116
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 26.399999998509884
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 26.700000002980232
+        },
+        {
+          "path": "/experience/bark-b384664d558b.webp",
+          "bytes": 38322,
+          "duration": 11.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 48.79999999701977
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 44.399999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 12.899999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 13.700000002980232
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 4.5
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 65.89999999850988
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 2.2999999970197678
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 7.600000001490116
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 7.300000004470348
+        }
+      ],
+      "dom": 73449
+    },
+    {
+      "width": 1440,
+      "round": 1,
+      "version": "before",
+      "lcp": 6824,
+      "cls": 0.0002298621827846365,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 19.600000001490116
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 19.700000002980232
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 27.80000000447035
+        },
+        {
+          "path": "/assets/index-Bcm9BmmX.js",
+          "bytes": 404427,
+          "duration": 28.600000001490116
+        },
+        {
+          "path": "/assets/index-CG2ez3Yr.css",
+          "bytes": 50444,
+          "duration": 18.600000001490116
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 29.19999999552965
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 30.69999999552965
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 28.30000000447035
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 28.399999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 34.900000005960464
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 35
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 25.200000002980232
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 24.799999997019768
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 6.399999998509884
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 65.70000000298023
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 4.800000004470348
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 7.700000002980232
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 7.5
+        }
+      ],
+      "dom": 26180
+    },
+    {
+      "width": 1440,
+      "round": 2,
+      "version": "before",
+      "lcp": 6796,
+      "cls": 0.0002298621827846365,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 18.600000001490116
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 18.5
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 19.100000001490116
+        },
+        {
+          "path": "/assets/index-Bcm9BmmX.js",
+          "bytes": 404427,
+          "duration": 18.899999998509884
+        },
+        {
+          "path": "/assets/index-CG2ez3Yr.css",
+          "bytes": 50444,
+          "duration": 17.200000002980232
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 22.100000001490116
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 24.600000001490116
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 23.299999997019768
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 24.099999994039536
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 41.5
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 41.399999998509884
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 7.100000001490116
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 7.300000004470348
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 2.5
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 44.100000001490116
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 9.199999995529652
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 11.399999998509884
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 11.399999998509884
+        }
+      ],
+      "dom": 26180
+    },
+    {
+      "width": 1440,
+      "round": 2,
+      "version": "after",
+      "lcp": 6848,
+      "cls": 0.0002298621827846365,
+      "resources": [
+        {
+          "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14108,
+          "duration": 19
+        },
+        {
+          "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8292,
+          "duration": 28.30000000447035
+        },
+        {
+          "path": "/media/forest-final.jpg",
+          "bytes": 396424,
+          "duration": 34.600000001490116
+        },
+        {
+          "path": "/assets/index-Ca4Xr3eO.js",
+          "bytes": 423904,
+          "duration": 36
+        },
+        {
+          "path": "/assets/index-BaDD-Aw6.css",
+          "bytes": 68965,
+          "duration": 25.899999998509884
+        },
+        {
+          "path": "/media/forest-breathing-poster.jpg",
+          "bytes": 463839,
+          "duration": 36.100000001490116
+        },
+        {
+          "path": "/media/forest-poster.jpg",
+          "bytes": 660060,
+          "duration": 37.399999998509884
+        },
+        {
+          "path": "/brand-mark.svg",
+          "bytes": 1758,
+          "duration": 33.5
+        },
+        {
+          "path": "/brand-wordmark.svg",
+          "bytes": 3427,
+          "duration": 33.5
+        },
+        {
+          "path": "/experience/bark-b384664d558b.webp",
+          "bytes": 38322,
+          "duration": 19.30000000447035
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 19888,
+          "duration": 53.20000000298023
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20284,
+          "duration": 47
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 22876,
+          "duration": 6.800000004470348
+        },
+        {
+          "path": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23660,
+          "duration": 5.9000000059604645
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 1825,
+          "duration": 3.6999999955296516
+        },
+        {
+          "path": "/media/forest-reveal.mp4",
+          "bytes": 9212166,
+          "duration": 50.600000001490116
+        },
+        {
+          "path": "/favicon.ico",
+          "bytes": 50745,
+          "duration": 7.5
+        },
+        {
+          "path": "/media/forest-understory.jpg",
+          "bytes": 444134,
+          "duration": 9.600000001490116
+        },
+        {
+          "path": "/media/forest-understory-final.jpg",
+          "bytes": 506846,
+          "duration": 9.799999997019768
+        }
+      ],
+      "dom": 73449
+    }
+  ],
+  "payload": [
+    {
+      "version": "before",
+      "file": "index-Bcm9BmmX.js",
+      "bytes": 404427,
+      "gzip": 137585
+    },
+    {
+      "version": "before",
+      "file": "index-CG2ez3Yr.css",
+      "bytes": 50444,
+      "gzip": 11105
+    },
+    {
+      "version": "before",
+      "file": "reading-tools-4dffc72cf6ac53e8.js",
+      "bytes": 3790,
+      "gzip": 1330
+    },
+    {
+      "version": "before",
+      "file": "/index.html",
+      "bytes": 26148,
+      "gzip": 6815
+    },
+    {
+      "version": "before",
+      "file": "/kas-ir-piepe/index.html",
+      "bytes": 53141,
+      "gzip": 11674
+    },
+    {
+      "version": "before",
+      "file": "/meza-piezimes/005-kritalas-un-laiks/index.html",
+      "bytes": 116694,
+      "gzip": 13574
+    },
+    {
+      "version": "after",
+      "file": "index-BaDD-Aw6.css",
+      "bytes": 68965,
+      "gzip": 14558
+    },
+    {
+      "version": "after",
+      "file": "index-Ca4Xr3eO.js",
+      "bytes": 423904,
+      "gzip": 144424
+    },
+    {
+      "version": "after",
+      "file": "reading-tools-98f0c8441955bc8e.js",
+      "bytes": 4546,
+      "gzip": 1505
+    },
+    {
+      "version": "after",
+      "file": "/index.html",
+      "bytes": 73549,
+      "gzip": 17641
+    },
+    {
+      "version": "after",
+      "file": "/kas-ir-piepe/index.html",
+      "bytes": 147441,
+      "gzip": 26913
+    },
+    {
+      "version": "after",
+      "file": "/meza-piezimes/005-kritalas-un-laiks/index.html",
+      "bytes": 79306,
+      "gzip": 16543
+    }
+  ]
+}

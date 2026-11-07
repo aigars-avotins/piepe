@@ -1,4 +1,4 @@
-import { createServer, transformWithEsbuild } from 'vite'
+import { createServer, build } from 'vite'
 import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom' })
@@ -23,7 +23,10 @@ try {
   const experienceStyle = `/assets/forest-experience-${createHash('sha256').update(experienceCss).digest('hex').slice(0,16)}.css`
   await writeFile(`dist${experienceStyle}`,experienceCss)
   // A standalone progressive module, not a second application or route entry.
-  const client = await transformWithEsbuild(await readFile('src/readingClient.ts','utf8'),'readingClient.ts',{target:'es2022',minify:true})
+  const result = await build({configFile:false, publicDir:false, logLevel:'warn', build:{write:false,emptyOutDir:false,target:'es2022',minify:true,lib:{entry:'src/readingClient.ts',formats:['es']}}})
+  const chunks=(Array.isArray(result)?result[0]:result).output.filter(item=>item.type==='chunk')
+  if(chunks.length!==1||chunks[0].imports.length)throw new Error('Reading tools must be a self-contained progressive module')
+  const client=chunks[0]
   const readingClient = `/assets/reading-tools-${createHash('sha256').update(client.code).digest('hex').slice(0,16)}.js`
   await writeFile(`dist${readingClient}`,client.code)
   const boot = atmosphereBootstrap + await readFile('public/boot.js', 'utf8')
