@@ -3,12 +3,27 @@ import type { Page } from '@playwright/test'
 import { localePath, readingPath } from '../src/i18n'
 import type { Locale } from '../src/i18n'
 import { readings, readingSources } from '../src/reading'
+import { readFile, readdir } from 'node:fs/promises'
+import { atmosphereBootstrap } from '../src/atmosphere'
+
+export async function readingToolsEntry() {
+  const files=(await readdir('dist/assets')).filter(name=>/^reading-tools-[a-f0-9]{16}\.js$/.test(name))
+  expect(files).toHaveLength(1)
+  return '/assets/'+files[0]
+}
+
+export async function checkReadingResources(page: Page, javaScriptEnabled: boolean) {
+  const entry=await readingToolsEntry()
+  const runtime=await page.evaluate(()=>performance.getEntriesByType('resource').map(e=>new URL(e.name).pathname).filter(path=>/\.(?:js|mp4|mp3|ogg)$/.test(path)))
+  expect(runtime.every(path=>path===entry)).toBe(true)
+  if(javaScriptEnabled){expect(runtime).toContain(entry);await expect(page.locator('[data-atmosphere-controls]')).toBeVisible()}
+}
 
 export async function checkReading(page: Page, locale: Locale, options: { cloudflareAnalytics?: boolean } = {}) {
   const t = readings[locale], url = 'https://pie.pe' + readingPath(locale)
   await expect(page.locator('html')).toHaveAttribute('lang', locale)
   await expect(page).toHaveTitle(t.title)
-  await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.6')
+  await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.8')
   await expect(page.locator('h1')).toHaveCount(1)
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(t.heading)
   await expect(page.locator('.reading-lead')).toContainText(t.lead)
@@ -40,20 +55,26 @@ export async function checkReading(page: Page, locale: Locale, options: { cloudf
   for (const lang of ['lv', 'en'] as const) await expect(page.locator(`.reading-languages a[lang="${lang}"]`)).toHaveAttribute('href', readingPath(lang))
 }
 
-/** Shared strict authored-document guard; production may contain the known CDN beacon. */
+/** Only our exact progressive module/bootstrap, plus the narrow optional CDN beacon. */
 export async function checkStaticMarkup(page: Page, options: { cloudflareAnalytics?: boolean } = {}) {
   await expect(page.locator('#root, .world, video, audio')).toHaveCount(0)
   const scripts = page.locator('script:not([type="application/ld+json"])')
-  if (!options.cloudflareAnalytics) await expect(scripts).toHaveCount(0)
+  const entry=await readingToolsEntry(),built=await readFile('dist'+readingPath('lv')+'index.html','utf8')
+  expect(built).toContain(entry)
+  // Filter rather than trust markers alone: wrong source/type/content still fails.
+  const authoredBootstrap=page.locator('script[data-atmosphere-bootstrap]'),authoredModule=page.locator('script[data-reading-tools]')
+  await expect(authoredBootstrap).toHaveCount(1);expect(await authoredBootstrap.textContent()).toBe(atmosphereBootstrap)
+  await expect(authoredBootstrap).not.toHaveAttribute('src');expect(await authoredBootstrap.getAttribute('type')).toBeNull()
+  await expect(authoredModule).toHaveCount(1);await expect(authoredModule).toHaveAttribute('type','module');await expect(authoredModule).toHaveAttribute('src',entry);expect(await authoredModule.textContent()).toBe('')
+  const markup=await scripts.evaluateAll(elements=>elements.filter(e=>!e.hasAttribute('data-atmosphere-bootstrap')&&!e.hasAttribute('data-reading-tools')).map(e=>{
+    const script=e as HTMLScriptElement,url=script.src?new URL(script.src):null
+    return {type:script.type,source:url?.protocol==='https:'?url.origin+url.pathname:null,hasInlineContent:!!script.textContent?.trim(),hasQueryOrHash:!!(url?.search||url?.hash)}
+  }))
+  if(!options.cloudflareAnalytics)expect(markup).toEqual([])
   else {
     // Cloudflare may inject its analytics module at the edge. It is absent from
     // our build and blocked by the unchanged CSP. Permit only that precise
     // external resource; never permit homepage hydration or arbitrary scripts.
-    const markup = await scripts.evaluateAll(elements => elements.map(e => {
-      const script = e as HTMLScriptElement, url = script.src ? new URL(script.src) : null
-      return { type: script.type, source: url?.protocol === 'https:' ? url.origin + url.pathname : null,
-        hasInlineContent: !!script.textContent?.trim(), hasQueryOrHash: !!(url?.search || url?.hash) }
-    }))
     expect(markup.length).toBeLessThanOrEqual(1)
     for (const script of markup) expect(script).toEqual({ type: 'module', source: expect.stringMatching(/^https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js\/v[a-f0-9]+$/), hasInlineContent: false, hasQueryOrHash: false })
   }

@@ -4,6 +4,7 @@ import type { CSSProperties, MouseEvent, RefObject } from 'react'
 import { messages, readingPath } from './i18n'
 import { fieldNotesPath, wallpapersPath, forestNavigation } from './forestPaths'
 import ControlText from './ControlText'
+import AtmosphereSelector from './AtmosphereSelector'
 import type { Locale } from './i18n'
 export type NoteState = 'unseen' | 'discovered' | 'collected'
 type Props = {
@@ -65,6 +66,6 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <a className="line-link" href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers} <span aria-hidden="true"><Arrow direction="diagonal" /></span></a>
       </section>
     </main>
-            <footer inert={inactive}><a className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><span className="footer-edition">{t.forest} — 2026</span><button className="text-button motion-toggle" aria-pressed={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
+            <footer inert={inactive}><a className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><span className="footer-edition">{t.forest} — 2026</span><button className="text-button motion-toggle" aria-pressed={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button><AtmosphereSelector locale={locale} /></footer>
 </>
 }

@@ -7,6 +7,9 @@ import type { ForestSource } from './forestKnowledge'
 import { fieldNotesPath, forestPath, forestPages, noteNumbers, notePath, wallpapersPath } from './forestPaths'
 import type { ForestPage } from './forestPaths'
 import Arrow from './Arrow'
+import AtmosphereSelector from './AtmosphereSelector'
+import { atmosphereBootstrap } from './atmosphere'
+import { renderTimeCapsule } from './ReadingExperiences'
 
 const origin = 'https://pie.pe'
 const wallpaperFiles = {
@@ -29,7 +32,10 @@ export function forestSchema(locale: Locale, page: ForestPage) {
     { '@type': 'ImageObject', contentUrl: origin + wallpaperFiles.desktop5k, thumbnailUrl: origin + '/wallpapers/previews/desktop.webp', width: 5120, height: 2880, encodingFormat: 'image/jpeg', caption: t.desktopCaption },
     { '@type': 'ImageObject', contentUrl: origin + wallpaperFiles.phone, thumbnailUrl: origin + '/wallpapers/previews/mobile.webp', width: 1440, height: 3120, encodingFormat: 'image/jpeg', caption: t.phoneCaption },
   ] }
-  return { ...base, about: { '@type': 'Thing', name: meta.heading } }
+  return { ...base, about: { '@type': 'Thing', name: meta.heading }, breadcrumb: { '@type': 'BreadcrumbList', '@id': url+'#breadcrumb', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.allNotes, item: origin+fieldNotesPath(locale) },
+    { '@type': 'ListItem', position: 2, name: `${t.noteLabel} ${page.number}`, item: url },
+  ] } }
 }
 
 const scientificNames = /\b(Inonotus obliquus|Fomitopsis betulina|Piptoporus betulinus|Laetiporus sulphureus|Fomes fomentarius|Fomitopsis pinicola|Ganoderma applanatum|Ganoderma lucidum|Ganoderma lingzhi)\b/g
@@ -56,15 +62,16 @@ function renderContent(locale: Locale, page: ForestPage) {
   const note = fieldNote(locale, page.number), sourceIds = [...new Set(note.sections.flatMap(section => section.sources || []))]
   const citations = (sources: ForestSource[] = []) => sources.length > 0 && <span className="reading-citations">{sources.map(id => <a key={id} href={`#source-${id}`} aria-label={`${t.sources}: ${forestSources[id].name}`}>[{sourceIds.indexOf(id) + 1}]</a>)}</span>
   return <>
-    <nav className="knowledge-trail" aria-label={t.allNotes}><a href={fieldNotesPath(locale)}>{t.allNotes}</a><span aria-hidden="true">/ {page.number}</span></nav>
+    <nav className="knowledge-trail" aria-label={t.allNotes}><a href={fieldNotesPath(locale)}>{t.allNotes}</a><span aria-current="page">/ {t.noteLabel} {page.number}</span></nav>
     <article>
       <header className="reading-intro"><p className="reading-label">{t.noteLabel} {page.number}</p><h1>{meta.heading}</h1><p className="knowledge-motif">{note.motif}</p><p className="reading-lead">{scientific(note.lead)}</p></header>
+      {page.number==='005'&&renderTimeCapsule(locale)}
       {note.sections.map((section, i) => <section className="reading-section knowledge-note-section" key={i} aria-labelledby={`observation-${i}`}>
         {section.label && <p className="reading-label">0{i + 1} / {section.label}</p>}<h2 id={`observation-${i}`}>{scientific(section.heading)}</h2>
         {section.paragraphs.map(p => <p key={p}>{scientific(p)}</p>)}{section.footnote && <p className="knowledge-footnote">{section.footnote}</p>}{citations(section.sources)}
       </section>)}
       <aside className="knowledge-care"><p className="reading-label">{t.observation}</p><p>{note.care}</p></aside>
-      {page.number === '001' ? <section className="reading-sources"><h2>{t.sources}</h2><p>{t.originalContext}</p><a className="knowledge-original" href={`/field-note-${locale}.txt`} download>{t.original} <Arrow /></a><p><a href={readingPath(locale)}>{t.guide}</a></p></section> : <section className="reading-sources" aria-labelledby="source-title"><h2 id="source-title">{t.sources}</h2><ol>{sourceIds.map(id => <li id={`source-${id}`} key={id}><a href={forestSources[id].url}>{forestSources[id].name}</a></li>)}</ol></section>}
+      {page.number === '001' ? <section className="reading-sources"><h2>{t.sources}</h2><p>{t.originalContext}</p><a className="knowledge-original" href={`/field-note-${locale}.txt`} download>{t.original} <Arrow /></a><p><a href={readingPath(locale)}>{t.guide}</a></p></section> : <section className="reading-sources" aria-labelledby="source-title"><h2 id="source-title">{t.sources}</h2><ol>{sourceIds.map(id => <li id={`source-${id}`} key={id} tabIndex={-1}><a href={forestSources[id].url}>{forestSources[id].name}</a></li>)}</ol></section>}
       <aside className="reading-art-note"><p>{t.cinemaDisclosure}</p></aside>
     </article>
     <nav className="knowledge-related" aria-labelledby="related-title"><h2 id="related-title">{t.related}</h2><ul>{note.related.map(number => <li key={number}><a href={notePath(locale, number)}><span>{number}</span>{fieldNote(locale, number).heading} <span aria-hidden="true"><Arrow /></span></a></li>)}</ul></nav>
@@ -72,13 +79,14 @@ function renderContent(locale: Locale, page: ForestPage) {
   </>
 }
 
-export function renderForestDocuments(locale: Locale, stylesheets: string[], fonts: string[]) {
-  return forestPages.map(page => ({ path: forestPath(locale, page), html: renderForestDocument(locale, page, stylesheets, fonts) }))
+export function renderForestDocuments(locale: Locale, stylesheets: string[], fonts: string[], client?: string, experienceStyle?: string) {
+  return forestPages.map(page => ({ path: forestPath(locale, page), html: renderForestDocument(locale, page, page.kind==='note'&&page.number==='005'&&experienceStyle?[...stylesheets,experienceStyle]:stylesheets, fonts,client) }))
 }
-export function renderForestDocument(locale: Locale, page: ForestPage, stylesheets: string[], fonts: string[]) {
+export function renderForestDocument(locale: Locale, page: ForestPage, stylesheets: string[], fonts: string[], client?: string) {
   const t = collectionCopy[locale], meta = forestMetadata(locale, page), url = origin + forestPath(locale, page)
   return '<!doctype html>\n' + renderToStaticMarkup(<html lang={locale} className="reading-document"><head>
     <meta charSet="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /><meta name="theme-color" content="#0B1712" />
+    <script data-atmosphere-bootstrap="" dangerouslySetInnerHTML={{ __html: atmosphereBootstrap }} />
     <title>{meta.title}</title><meta name="description" content={meta.description} /><link rel="canonical" href={url} />
     <link rel="alternate" hrefLang="lv" href={origin + forestPath('lv', page)} /><link rel="alternate" hrefLang="en" href={origin + forestPath('en', page)} /><link rel="alternate" hrefLang="x-default" href={origin + forestPath('lv', page)} />
     <meta property="og:type" content={page.kind === 'note' ? 'article' : 'website'} /><meta property="og:site_name" content="PIE.PE" /><meta property="og:title" content={meta.title} /><meta property="og:description" content={meta.description} /><meta property="og:url" content={url} />
@@ -88,9 +96,10 @@ export function renderForestDocument(locale: Locale, page: ForestPage, styleshee
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" /><link rel="icon" type="image/svg+xml" href="/favicon.svg" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><link rel="manifest" href="/site.webmanifest" />
     {stylesheets.map(href => <link key={href} rel="stylesheet" href={href} />)}{fonts.map(href => <link key={href} rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" href={href} />)}
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(forestSchema(locale, page)).replace(/</g, '\\u003c') }} />
-  </head><body className="reading-page knowledge-page" data-version="2.5.7" data-page={page.kind}>
+    {client&&<script type="module" src={client} data-reading-tools="" />}
+  </head><body className="reading-page knowledge-page" data-version="2.5.8" data-page={page.kind}>
     <a className="skip-content" href="#reading"><span data-nosnippet="">{messages[locale].skipContent}</span></a>
     <header className="reading-header"><a className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <a key={lang} lang={lang} hrefLang={lang} href={forestPath(lang, page)} aria-current={lang === locale ? 'page' : undefined}><span data-nosnippet="">{lang.toUpperCase()}</span></a>)}</nav></header>
-    <main id="reading" tabIndex={-1} className={`reading-main ${page.kind === 'note' ? '' : 'knowledge-wide'}`}>{renderContent(locale, page)}<footer className="reading-return"><a href={localePath(locale)}>{t.forest} <Arrow /></a></footer></main>
+    <main id="reading" tabIndex={-1} className={`reading-main ${page.kind === 'note' ? '' : 'knowledge-wide'}`}>{renderContent(locale, page)}<footer className="reading-return"><a href={localePath(locale)}>{t.forest} <Arrow /></a><AtmosphereSelector locale={locale} /></footer></main>
   </body></html>)
 }

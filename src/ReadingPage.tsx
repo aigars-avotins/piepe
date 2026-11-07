@@ -1,15 +1,20 @@
 import { renderToStaticMarkup } from 'react-dom/server'
+import { Fragment } from 'react'
 import { localePath, messages, readingPath } from './i18n'
 import type { Locale } from './i18n'
 import { structuredData } from './seo'
 import { readings, readingSources } from './reading'
+import { renderAtlas, renderXray } from './ReadingExperiences'
+import { fieldNotesPath, wallpapersPath, forestNavigation } from './forestPaths'
+import AtmosphereSelector from './AtmosphereSelector'
+import { atmosphereBootstrap } from './atmosphere'
 
 export function readingSchema(locale: Locale) {
   const t = readings[locale], url = 'https://pie.pe' + readingPath(locale)
   return { ...structuredData(locale), '@id': `${url}#webpage`, name: t.title, description: t.description, url, about: { '@type': 'Thing', name: t.topic } }
 }
 
-export function renderReadingDocument(locale: Locale, stylesheets: string[], fonts: string[]) {
+export function renderReadingDocument(locale: Locale, stylesheets: string[], fonts: string[], client?: string) {
   const t = readings[locale], url = 'https://pie.pe' + readingPath(locale)
   const citations = (ids: typeof readingSources[number]['id'][]) => <span className="reading-citations">{ids.map(id => {
     const index = readingSources.findIndex(source => source.id === id)
@@ -18,6 +23,7 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
   return '<!doctype html>\n' + renderToStaticMarkup(<html lang={locale} className="reading-document">
     <head>
       <meta charSet="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      <script data-atmosphere-bootstrap="" dangerouslySetInnerHTML={{ __html: atmosphereBootstrap }} />
       <meta name="theme-color" content="#0B1712" /><title>{t.title}</title><meta name="description" content={t.description} />
       <link rel="canonical" href={url} />
       <link rel="alternate" hrefLang="lv" href={'https://pie.pe' + readingPath('lv')} /><link rel="alternate" hrefLang="en" href={'https://pie.pe' + readingPath('en')} /><link rel="alternate" hrefLang="x-default" href={'https://pie.pe' + readingPath('lv')} />
@@ -29,8 +35,9 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
       {stylesheets.map(href => <link key={href} rel="stylesheet" href={href} />)}
       {fonts.map(href => <link key={href} rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" href={href} />)}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(readingSchema(locale)).replace(/</g, '\\u003c') }} />
+      {client&&<script type="module" src={client} data-reading-tools="" />}
     </head>
-    <body className="reading-page" data-version="2.5.6">
+    <body className="reading-page" data-version="2.5.8">
       <a className="skip-content" href="#reading">{messages[locale].skipContent}</a>
       <header className="reading-header">
         <a className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a>
@@ -39,12 +46,13 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
       <main id="reading" className="reading-main" tabIndex={-1}>
         <article>
           <header className="reading-intro"><p className="reading-label">{t.label}</p><h1>{t.heading}</h1><p className="reading-lead">{t.lead} {citations(['anbg', 'woodland'])}</p></header>
-          {t.sections.map(section => <section className="reading-section" key={section.id} aria-labelledby={section.id}><h2 id={section.id}>{section.heading}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{citations(section.sources)}</section>)}
+          {t.sections.map((section,index) => <Fragment key={section.id}><section className="reading-section" aria-labelledby={section.id}><h2 id={section.id}>{section.heading}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{citations(section.sources)}</section>{index===0&&renderXray(locale)}{index===2&&renderAtlas(locale)}</Fragment>)}
           <section className="reading-section" aria-labelledby="notice"><h2 id="notice">{t.noticeHeading}</h2><ul>{t.observations.map(observation => <li key={observation}>{observation}</li>)}</ul><p>{t.identification} {citations(['woodland', 'ucipm'])}</p></section>
           <aside className="reading-art-note"><p>{t.artNote}</p></aside>
-          <section className="reading-sources" aria-labelledby="sources"><h2 id="sources">{t.sourceHeading}</h2><p>{t.sourceNote}</p><ol>{readingSources.map(source => <li key={source.id} id={`source-${source.id}`}><a href={source.url}>{source.name} — {source.title}</a></li>)}</ol></section>
+          <section className="reading-sources" aria-labelledby="sources"><h2 id="sources">{t.sourceHeading}</h2><p>{t.sourceNote}</p><ol>{readingSources.map(source => <li key={source.id} id={`source-${source.id}`} tabIndex={-1}><a href={source.url}>{source.name} — {source.title}</a></li>)}</ol></section>
         </article>
-        <footer className="reading-return"><p>{t.returnThought}</p><a href={localePath(locale)}>{t.returnLabel}<span aria-hidden="true"> ↗</span></a></footer>
+        <nav className="reading-next" aria-label={locale==='lv'?'Turpini lasīt':'Keep reading'}><a href={fieldNotesPath(locale)}>{forestNavigation[locale].notes}</a><a href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers}</a></nav>
+        <footer className="reading-return"><p>{t.returnThought}</p><a href={localePath(locale)}>{t.returnLabel}<span aria-hidden="true"> ↗</span></a><AtmosphereSelector locale={locale} /></footer>
       </main>
     </body>
   </html>)

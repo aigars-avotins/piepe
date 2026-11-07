@@ -1,0 +1,30 @@
+{
+  "method": "WCAG relative-luminance calculation of selected new text tokens on original solid reading panel and .9-alpha perspective backing composited over pure white (worst bright film underlay). Does not certify every moving-image pixel or physical glare/VoiceOver.",
+  "results": [
+    {
+      "foreground": "Morning muted",
+      "readingPanelContrast": 10.32,
+      "perspectivePanelWorstWhiteUnderlayContrast": 7.88
+    },
+    {
+      "foreground": "Morning accent",
+      "readingPanelContrast": 13.11,
+      "perspectivePanelWorstWhiteUnderlayContrast": 10.01
+    },
+    {
+      "foreground": "Nightfall muted",
+      "readingPanelContrast": 11.12,
+      "perspectivePanelWorstWhiteUnderlayContrast": 8.49
+    },
+    {
+      "foreground": "Nightfall accent",
+      "readingPanelContrast": 13.11,
+      "perspectivePanelWorstWhiteUnderlayContrast": 10.02
+    },
+    {
+      "foreground": "Paper",
+      "readingPanelContrast": 14.93,
+      "perspectivePanelWorstWhiteUnderlayContrast": 11.41
+    }
+  ]
+}

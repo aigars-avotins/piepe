@@ -1,0 +1,1095 @@
+{
+  "run": "https://github.com/aigars-avotins/piepe/actions/runs/42361562618",
+  "source": "f3fd55ef912f01c2ab6ee0596da92186d3713850",
+  "runner": "standard macos-15-intel; native foreground verification in suites using nativeDiagnostics",
+  "stats": {
+    "startTime": "2026-11-07T09:57:28.856Z",
+    "duration": 482847.58400000003,
+    "expected": 89,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "name": "cinema.spec.ts > the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12491,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "forest.spec.ts > actual film plays once, reveals title, ends and becomes interactive",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 17684,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "forest.spec.ts > skip is immediate and fungus works with keyboard and Escape",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5063,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "forest.spec.ts > discovery is a complete three-step field note with a real downloadable artifact",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4268,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "polish.spec.ts > sound waits for permission, plays a real native loop, remains controllable in the note and remembers mute",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6504,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "polish.spec.ts > save-data never starts automatic ambience, and a missing recording has a usable retry",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4096,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v25.spec.ts > real sitemap and robots assets describe every crawlable canonical page",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1164,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v25.spec.ts > lv: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2157,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v25.spec.ts > lv: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2575,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v25.spec.ts > lv: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6446,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v25.spec.ts > en: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2296,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v25.spec.ts > en: one connected schema keeps stable site identity through locale and note-state changes",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2600,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v25.spec.ts > en: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5718,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v251.spec.ts > 2.5.1 cold 1512x982 > lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 22767,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v251.spec.ts > 2.5.1 cold 1512x982 > en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 23655,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v251.spec.ts > 2.5.1 cold 390x664 > lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13972,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v251.spec.ts > 2.5.1 cold 390x664 > en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 14812,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v252.spec.ts > 2.5.2 native journey 1512x982 > wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "status": "unexpected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 14279,
+          "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-clip=understory]')\nExpected: \u001b[32m\"\u001b[7mtru\u001b[27me\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mfals\u001b[27me\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-clip=understory]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-clip=understory]')\u001b[22m\n\u001b[2m    13 \u00d7 locator resolved to <div aria-hidden=\"true\" data-clip-reason=\"\" data-clip-cycles=\"0\" data-clip=\"understory\" data-loop-hold=\"false\" data-clip-ready=\"false\" data-still-ready=\"true\" data-frame-staged=\"false\" data-clip-state=\"preparing\" class=\"motion-clip clip-understory\">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"false\"\u001b[22m\n"
+        }
+      ]
+    },
+    {
+      "name": "v252.spec.ts > 2.5.2 native journey 390x664 > wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 20038,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v253.spec.ts > understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6723,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v253.spec.ts > breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7067,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v253.spec.ts > environmental films pause on a hidden-document event and resume actual frames on return",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8264,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v255.spec.ts > 2.5.5 lv: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3103,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v255.spec.ts > 2.5.5 lv: sharing metadata stays localized through note collection, locale change and browser history",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4772,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v255.spec.ts > 2.5.5 en: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2165,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v255.spec.ts > 2.5.5 en: sharing metadata stays localized through note collection, locale change and browser history",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4244,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 lv JS=false: real text-first HTML, stable article routing and responsive reading",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7608,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 lv JS=true: real text-first HTML, stable article routing and responsive reading",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7132,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 en JS=false: real text-first HTML, stable article routing and responsive reading",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5919,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 en JS=true: real text-first HTML, stable article routing and responsive reading",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6931,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 lv: homepage links to its real article and returns without losing session semantics",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6298,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 en: homepage links to its real article and returns without losing session semantics",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6358,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 static documents have matching CSP hashes and do not ship article prose in the cinema bundle",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 109,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v256.spec.ts > 2.5.6 edge analytics allowance still rejects application scripts and inline code",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2874,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-foni/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3579,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-foni/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5331,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2578,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3456,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3417,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3710,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/002-caga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2924,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/002-caga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2717,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/003-serpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3090,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/003-serpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2746,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3077,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2963,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3872,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2926,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2600,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4732,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/forest-wallpapers/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3262,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/forest-wallpapers/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5563,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2934,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3199,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2875,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4659,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/002-chaga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3206,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/002-chaga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2896,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3091,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3333,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3745,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3315,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/005-deadwood-and-time/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3582,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/005-deadwood-and-time/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3495,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/006-lacquered-bracket/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3525,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 /en/field-notes/006-lacquered-bracket/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3985,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 route graph, CSP hashes, honest species facts and all internal resources remain coherent",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1262,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 original factual prose, notes, core cinema and every media/download asset remain preserved",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 276,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 lv: selective supported snippet labels preserve primary content, links and mobile control text",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5172,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 en: selective supported snippet labels preserve primary content, links and mobile control text",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5245,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v257.spec.ts > 2.5.7 JS-free wallpaper and original-note links download the real existing files",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1969,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 lv: real static educational content and native atlas work without JavaScript",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2013,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 lv: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1730,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 lv: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4730,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 lv: atlas magnifies real SVG geometry, closes with Escape and restores summary focus",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3211,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 lv: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3281,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 en: real static educational content and native atlas work without JavaScript",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2432,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 en: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1918,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 en: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4784,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 en: atlas magnifies real SVG geometry, closes with Escape and restores summary focus",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3623,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 en: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3939,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 touch slider gestures and vertical page movement remain native",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3597,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 reduced: illustrations remain factual and controllable with no pulses or transition clocks",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2147,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 save-data: illustrations remain factual and controllable with no pulses or transition clocks",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2038,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 invalid and denied storage keep an operable atmosphere with original default colours",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3817,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 audio is gesture-gated, depth-reactive and shares one real source through the existing scene states",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 9548,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 unsupported low-pass processing falls back to the unchanged native recording",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4209,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 unavailable Web Audio retains real gesture-gated native recording playback and mute",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5098,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4780,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "name": "v258.spec.ts > 2.5.8 public route baseline remains real HTML on the independent CI network",
+      "status": "expected",
+      "project": "webkit-iphone",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4408,
+          "error": ""
+        }
+      ]
+    }
+  ]
+}

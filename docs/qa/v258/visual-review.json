@@ -1,0 +1,215 @@
+{
+  "layouts": [
+    {
+      "locale": "lv",
+      "width": 390,
+      "dpr": 1,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 24,
+        "y": 984.609375,
+        "width": 342,
+        "height": 1805.28125
+      },
+      "timeBox": {
+        "x": 24,
+        "y": 704.546875,
+        "width": 342,
+        "height": 2528.515625
+      },
+      "theme": "nightfall"
+    },
+    {
+      "locale": "lv",
+      "width": 540,
+      "dpr": 2,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 24,
+        "y": 790.546875,
+        "width": 492,
+        "height": 1621.09375
+      },
+      "timeBox": {
+        "x": 24,
+        "y": 638.046875,
+        "width": 492,
+        "height": 2413.609375
+      },
+      "theme": "nightfall"
+    },
+    {
+      "locale": "lv",
+      "width": 800,
+      "dpr": 1,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 94,
+        "y": 820.265625,
+        "width": 612,
+        "height": 1571.859375
+      },
+      "timeBox": {
+        "x": 94,
+        "y": 649.28125,
+        "width": 612,
+        "height": 1776.125
+      },
+      "theme": "nightfall"
+    },
+    {
+      "locale": "lv",
+      "width": 1440,
+      "dpr": 1,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 414,
+        "y": 949.6875,
+        "width": 612,
+        "height": 1591.296875
+      },
+      "timeBox": {
+        "x": 414,
+        "y": 745.9375,
+        "width": 612,
+        "height": 1858.1875
+      },
+      "theme": "nightfall"
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "dpr": 1,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 24,
+        "y": 1065.953125,
+        "width": 342,
+        "height": 1868.15625
+      },
+      "timeBox": {
+        "x": 24,
+        "y": 821.453125,
+        "width": 342,
+        "height": 2485.328125
+      },
+      "theme": "nightfall"
+    },
+    {
+      "locale": "en",
+      "width": 540,
+      "dpr": 2,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 24,
+        "y": 853.421875,
+        "width": 492,
+        "height": 1683.96875
+      },
+      "timeBox": {
+        "x": 24,
+        "y": 638.046875,
+        "width": 492,
+        "height": 2385.859375
+      },
+      "theme": "nightfall"
+    },
+    {
+      "locale": "en",
+      "width": 800,
+      "dpr": 1,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 94,
+        "y": 820.265625,
+        "width": 612,
+        "height": 1666.171875
+      },
+      "timeBox": {
+        "x": 94,
+        "y": 649.28125,
+        "width": 612,
+        "height": 1776.125
+      },
+      "theme": "nightfall"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "dpr": 1,
+      "errors": [],
+      "overflow": false,
+      "guideBox": {
+        "x": 414,
+        "y": 1037.046875,
+        "width": 612,
+        "height": 1685.609375
+      },
+      "timeBox": {
+        "x": 414,
+        "y": 784.4375,
+        "width": 612,
+        "height": 1795.5625
+      },
+      "theme": "nightfall"
+    }
+  ],
+  "staticHeroPixels": [
+    {
+      "width": 390,
+      "region": [
+        176,
+        180,
+        300,
+        320
+      ],
+      "morningBeforeAfterExact": true,
+      "morningNightExact": false,
+      "nightMaxChannelDifference": 1,
+      "nightMeanChannelDifference": [
+        0.03640552995391705,
+        0.06538018433179724,
+        0.05835253456221198
+      ],
+      "unobstructedReferenceRegion": [
+        136,
+        120,
+        176,
+        180
+      ],
+      "nightReferencePixelsExact": true
+    },
+    {
+      "width": 1440,
+      "region": [
+        648,
+        180,
+        1109,
+        320
+      ],
+      "morningBeforeAfterExact": true,
+      "morningNightExact": false,
+      "nightMaxChannelDifference": 1,
+      "nightMeanChannelDifference": [
+        0.003672141307716145,
+        0.0037341183762008056,
+        0.004059497985745274
+      ],
+      "unobstructedReferenceRegion": [
+        504,
+        120,
+        648,
+        180
+      ],
+      "nightReferencePixelsExact": true
+    }
+  ],
+  "method": "Actual viewport/fullpage browser PNGs; experience crops use recorded document coordinates. WebP compression only for review artifacts, no production asset modification. Original ROI has at most a one-level RGB raster difference after native scroll return; a separate unobstructed image reference region is exactly equal in Morning/Nightfall. This is not a claim that differently coloured UI pixels are identical."
+}

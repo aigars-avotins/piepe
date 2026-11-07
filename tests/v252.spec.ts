@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
+import { nativeDiagnostics } from './nativeDiagnostics'
+nativeDiagnostics()
 
 test.use({ video: 'on' })
 test.beforeEach(async ({ page }) => { await page.bringToFront() })

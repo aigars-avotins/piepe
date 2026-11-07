@@ -1,0 +1,764 @@
+{
+  "skipLinks": [
+    {
+      "path": "/kas-ir-piepe/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-foni/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/forest-wallpapers/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-piezimes/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/field-notes/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-piezimes/001/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/field-notes/001/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-piezimes/002-caga/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/field-notes/002-chaga/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket/",
+      "hash": "#reading",
+      "activeId": "reading",
+      "headings": 1,
+      "overflow": false
+    }
+  ],
+  "cards": [
+    {
+      "path": "/meza-piezimes/",
+      "accessibleTree": "- list:\n  - listitem:\n    - article:\n      - link \"001 Mazs vērības atlants Mazs pieturas punkts uzmanībai.\":\n        - /url: /meza-piezimes/001/\n        - text: \"001\"\n        - heading \"Mazs vērības atlants\" [level=2]\n        - paragraph: Mazs pieturas punkts uzmanībai.\n  - listitem:\n    - article:\n      - link \"002 Melnā spulgpiepe jeb čaga Ogles melnums uz balta stumbra.\":\n        - /url: /meza-piezimes/002-caga/\n        - text: \"002\"\n        - heading \"Melnā spulgpiepe jeb čaga\" [level=2]\n        - paragraph: Ogles melnums uz balta stumbra.\n  - listitem:\n    - article:\n      - link \"003 Parastā sērpiepe Pēkšņa krāsa krēslainā mežā.\":\n        - /url: /meza-piezimes/003-serpiepe/\n        - text: \"003\"\n        - heading \"Parastā sērpiepe\" [level=2]\n        - paragraph: Pēkšņa krāsa krēslainā mežā.\n  - listitem:\n    - article:\n      - link \"004 Trīs Latvijas meža piepes Gadu gredzeni ārpus koka.\":\n        - /url: /meza-piezimes/004-latvijas-piepes/\n        - text: \"004\"\n        - heading \"Trīs Latvijas meža piepes\" [level=2]\n        - paragraph: Gadu gredzeni ārpus koka.\n  - listitem:\n    - article:\n      - link \"005 Kritalas un laiks Kad koks nokrīt, sākas otrā dzīve.\":\n        - /url: /meza-piezimes/005-kritalas-un-laiks/\n        - text: \"005\"\n        - heading \"Kritalas un laiks\" [level=2]\n        - paragraph: Kad koks nokrīt, sākas otrā dzīve.\n  - listitem:\n    - article:\n      - link \"006 Lakas plakanpiepe Spīdīga virsma sūnu klusumā.\":\n        - /url: /meza-piezimes/006-lakas-plakanpiepe/\n        - text: \"006\"\n        - heading \"Lakas plakanpiepe\" [level=2]\n        - paragraph: Spīdīga virsma sūnu klusumā."
+    },
+    {
+      "path": "/en/field-notes/",
+      "accessibleTree": "- list:\n  - listitem:\n    - article:\n      - link \"001 A small atlas of attention A small place to pause and pay attention.\":\n        - /url: /en/field-notes/001/\n        - text: \"001\"\n        - heading \"A small atlas of attention\" [level=2]\n        - paragraph: A small place to pause and pay attention.\n  - listitem:\n    - article:\n      - link \"002 Chaga Charcoal darkness on pale bark.\":\n        - /url: /en/field-notes/002-chaga/\n        - text: \"002\"\n        - heading \"Chaga\" [level=2]\n        - paragraph: Charcoal darkness on pale bark.\n  - listitem:\n    - article:\n      - link \"003 Chicken of the woods Sudden colour in a dim wood.\":\n        - /url: /en/field-notes/003-chicken-of-the-woods/\n        - text: \"003\"\n        - heading \"Chicken of the woods\" [level=2]\n        - paragraph: Sudden colour in a dim wood.\n  - listitem:\n    - article:\n      - link \"004 Three Latvian bracket fungi Growth rings outside the tree.\":\n        - /url: /en/field-notes/004-common-bracket-fungi/\n        - text: \"004\"\n        - heading \"Three Latvian bracket fungi\" [level=2]\n        - paragraph: Growth rings outside the tree.\n  - listitem:\n    - article:\n      - link \"005 Deadwood and time When a tree falls, another life begins.\":\n        - /url: /en/field-notes/005-deadwood-and-time/\n        - text: \"005\"\n        - heading \"Deadwood and time\" [level=2]\n        - paragraph: When a tree falls, another life begins.\n  - listitem:\n    - article:\n      - link \"006 Lacquered bracket A glossy surface in the quiet moss.\":\n        - /url: /en/field-notes/006-lacquered-bracket/\n        - text: \"006\"\n        - heading \"Lacquered bracket\" [level=2]\n        - paragraph: A glossy surface in the quiet moss."
+    }
+  ],
+  "intro": [
+    {
+      "locale": "lv",
+      "returned": false,
+      "skip": true,
+      "replay": false,
+      "exit": ""
+    },
+    {
+      "locale": "lv",
+      "returned": true,
+      "skip": false,
+      "replay": true,
+      "exit": "preference-or-return"
+    },
+    {
+      "locale": "en",
+      "returned": false,
+      "skip": true,
+      "replay": false,
+      "exit": ""
+    },
+    {
+      "locale": "en",
+      "returned": true,
+      "skip": false,
+      "replay": true,
+      "exit": "preference-or-return"
+    }
+  ],
+  "audio": [
+    {
+      "state": "no gesture",
+      "requests": 0,
+      "contexts": [
+        {
+          "state": "suspended",
+          "sampleRate": 44100
+        }
+      ],
+      "controls": 2,
+      "liveRegions": [
+        {
+          "role": null,
+          "text": "Field note 001 · Waiting to be found"
+        }
+      ],
+      "accessible": "- button \"Mute forest sound\" [pressed]: Forest sound Forest sound starts with your first interaction."
+    }
+  ],
+  "dialog": [
+    {
+      "nativeModal": true,
+      "tabCycle": [
+        {
+          "inDialog": true,
+          "tag": "BUTTON"
+        },
+        {
+          "inDialog": true,
+          "tag": "ARTICLE"
+        },
+        {
+          "inDialog": true,
+          "tag": "BUTTON"
+        },
+        {
+          "inDialog": false,
+          "tag": "BODY"
+        },
+        {
+          "inDialog": true,
+          "tag": "BUTTON"
+        },
+        {
+          "inDialog": true,
+          "tag": "A"
+        },
+        {
+          "inDialog": true,
+          "tag": "A"
+        },
+        {
+          "inDialog": true,
+          "tag": "BUTTON"
+        },
+        {
+          "inDialog": true,
+          "tag": "BUTTON"
+        },
+        {
+          "inDialog": true,
+          "tag": "ARTICLE"
+        },
+        {
+          "inDialog": true,
+          "tag": "BUTTON"
+        },
+        {
+          "inDialog": false,
+          "tag": "BODY"
+        }
+      ],
+      "activeSoundControls": 1,
+      "restored": true
+    }
+  ],
+  "media": [
+    {
+      "scene": "understory",
+      "videos": [
+        {
+          "src": "http://127.0.0.1:4280/media/forest-reveal.mp4?v=2.3",
+          "paused": true,
+          "currentTime": 6.041667,
+          "readyState": 4,
+          "decoded": 145
+        },
+        {
+          "src": "http://127.0.0.1:4280/media/forest-understory.mp4?v=2.3",
+          "paused": false,
+          "currentTime": 0.35662,
+          "readyState": 4,
+          "decoded": 13
+        }
+      ]
+    },
+    {
+      "scene": "return",
+      "videos": [
+        {
+          "src": "http://127.0.0.1:4280/media/forest-breathing.mp4?v=2.3",
+          "paused": false,
+          "currentTime": 0.353171,
+          "readyState": 4,
+          "decoded": 12
+        }
+      ]
+    },
+    {
+      "scene": "forest",
+      "videos": []
+    }
+  ],
+  "layouts": [
+    {
+      "locale": "lv",
+      "slug": "guide",
+      "width": 390,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ],
+      "citation": {
+        "hash": "#source-anbg",
+        "focusTag": "BODY",
+        "focusId": "",
+        "targetVisible": true
+      }
+    },
+    {
+      "locale": "lv",
+      "slug": "deadwood",
+      "width": 390,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "slug": "guide",
+      "width": 540,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "slug": "deadwood",
+      "width": 540,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "slug": "guide",
+      "width": 800,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "slug": "deadwood",
+      "width": 800,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "slug": "guide",
+      "width": 1440,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "lv",
+      "slug": "deadwood",
+      "width": 1440,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "slug": "guide",
+      "width": 390,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ],
+      "citation": {
+        "hash": "#source-anbg",
+        "focusTag": "BODY",
+        "focusId": "",
+        "targetVisible": true
+      }
+    },
+    {
+      "locale": "en",
+      "slug": "deadwood",
+      "width": 390,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "slug": "guide",
+      "width": 540,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "slug": "deadwood",
+      "width": 540,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "slug": "guide",
+      "width": 800,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "slug": "deadwood",
+      "width": 800,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "slug": "guide",
+      "width": 1440,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "slug": "deadwood",
+      "width": 1440,
+      "overflow": false,
+      "fonts": [
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Cormorant Garamond",
+          "style": "normal",
+          "weight": "400"
+        },
+        {
+          "family": "Manrope",
+          "style": "normal",
+          "weight": "400"
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "name": "Nodes",
+      "value": 1232
+    },
+    {
+      "name": "LayoutDuration",
+      "value": 0
+    },
+    {
+      "name": "TaskDuration",
+      "value": 0.000027
+    },
+    {
+      "name": "JSHeapUsedSize",
+      "value": 6480820
+    }
+  ]
+}

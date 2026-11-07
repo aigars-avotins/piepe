@@ -1,0 +1,50 @@
+{
+  "method": "Real Playwright browser recordings, reviewed in chronological frame contact sheets (3\u20136fps for illustration changes,2fps for full repeated-film journey) and transition-focused frames. Recordings are compact review encodings only; protected production media are unchanged. Cinema comparison uses direct scene anchors for identical repeat-visit sampling; native-scroll recording separately shows actual wheel/keyboard, loop and history interactions.",
+  "findings": [
+    "Direct pointer/range reveals the same illustrative layer without a flash or touch-target collision.",
+    "Capsule SVG images dissolve, while exactly one selected caption is painted; inactive captions do not ghost during the dissolve.",
+    "Atlas native enlargement/close retains readable text and restores focus.",
+    "Both retained environmental films show distinct advancing frames on repeat visits in before/after recordings; returned forest has no retained duplicate layer.",
+    "The context cue is quiet and readable on desktop, hidden on phone.",
+    "Any unused black cells in contact sheets are sheet padding after the clip ends, not website frames."
+  ],
+  "files": [
+    {
+      "path": "interaction-lv-desktop.mp4",
+      "bytes": 269968,
+      "sha256": "35fde8773214bc508d945b9ffe494050b907a7a708597c24266f215ff0bd725c"
+    },
+    {
+      "path": "interaction-en-phone.mp4",
+      "bytes": 373418,
+      "sha256": "f1e009eb70a97d25acf456bfe09121a3421e419f5d05062636bd15c966a1f930"
+    },
+    {
+      "path": "cinema-before-desktop.mp4",
+      "bytes": 963601,
+      "sha256": "dea8e15d20859ffaedc42f33c4feef47d57771088c6ba9ee2bca265bc5f6e602"
+    },
+    {
+      "path": "cinema-after-desktop.mp4",
+      "bytes": 1043484,
+      "sha256": "a01892c5e9b39aecd5dc545fa3652e46d212d0cd6cef3d867d429b9bf0cacb9c"
+    },
+    {
+      "path": "cinema-after-phone.mp4",
+      "bytes": 760008,
+      "sha256": "0d84ab9883b11922842ae38f09fa986e3bf0209f2fdff69eb507a69420b54214"
+    },
+    {
+      "path": "native-scroll-chromium.mp4",
+      "bytes": 1070113,
+      "sha256": "b12d233eb0bd72fba32618b5e50361b8ca84ed4920f3b7ced38714db33314e18"
+    },
+    {
+      "path": "native-scroll-macos.mp4",
+      "bytes": 884699,
+      "sha256": "3c6cca1d7d88e6df697a7767e007507e73386c8d33a4826379bbcdaea0f0d1ad"
+    }
+  ],
+  "nativeRun": "https://github.com/aigars-avotins/piepe/actions/runs/42363146056",
+  "nativeRecordingSetup": "The untrimmed native recording starts with the newly opened blank browser during AppKit/setup before the scenario navigation; these initial blank frames are retained, not a flash between movie scenes. First server paint, hydration and delayed decoding are validated separately in the four cold-visit tests of the initial native run."
+}

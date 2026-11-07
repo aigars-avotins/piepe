@@ -1,0 +1,5358 @@
+{
+  "method": "Local Chromium, DPR1, 390/1440x900, cold contexts, same original media, browser video recording active in both comparisons. 2.5-second rAF and presented-video-callback samples through two real visits to each film. Diagnostic software-rendered lab cadence, not physical device FPS or GPU-memory certification.",
+  "rows": [
+    {
+      "width": 390,
+      "locale": "en",
+      "phase": "before",
+      "samples": [
+        {
+          "visit": 1,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.5,
+          "rafFps": 59.5880823835233,
+          "presentedFps": 23.99520095980804,
+          "frameTimes": [
+            {
+              "wall": 749.7999999970198,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 785.3999999985099,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 812.5999999940395,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 854.5999999940395,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 895,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 929.0999999940395,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 994.8999999985099,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 1012.0999999940395,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 1081.8999999985099,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 1112.8999999985099,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 1145.0999999940395,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 1194.6999999955297,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 1244.5999999940395,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 1278.5,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 1311.5,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 1361.3999999985099,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 1411.5,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 1444.6999999955297,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 1478.7999999970198,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 1514.0999999940395,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 1578.1999999955297,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 1611.3999999985099,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 1645,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 1694.5999999940395,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 1744.7999999970198,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 1778.1999999955297,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 1828.1999999955297,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 1861.1999999955297,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 1911.2999999970198,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 1944.5999999940395,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 1978.1999999955297,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 2028,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 2078,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 2111.1999999955297,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 2161.1999999955297,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 2177.89999999851,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 2244.6999999955297,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 2278,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 2328,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 2361.2999999970198,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 2411.2999999970198,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 2444.5999999940395,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 2494.5,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 2527.89999999851,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 2578,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 2611.1999999955297,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 2661.1999999955297,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 2677.7999999970198,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 2744.5999999940395,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 2777.89999999851,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 2827.89999999851,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 2861.1999999955297,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 2911.1999999955297,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 2944.5,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 2994.39999999851,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 3027.89999999851,
+              "media": 2.583333,
+              "presented": 63
+            },
+            {
+              "wall": 3078,
+              "media": 2.625,
+              "presented": 64
+            },
+            {
+              "wall": 3111.0999999940395,
+              "media": 2.666667,
+              "presented": 65
+            },
+            {
+              "wall": 3161.2999999970198,
+              "media": 2.708333,
+              "presented": 66
+            },
+            {
+              "wall": 3194.5,
+              "media": 2.75,
+              "presented": 67
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-understory.mp4?v=2.3",
+              "time": 2.767265
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        },
+        {
+          "visit": 1,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.1999999955297,
+          "rafFps": 59.995200384076554,
+          "presentedFps": 23.99808015363062,
+          "frameTimes": [
+            {
+              "wall": 3744.5,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 3777.89999999851,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 3812.2999999970198,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 3861.39999999851,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 3911.39999999851,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 3944.5999999940395,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 4001,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 4027.7999999970198,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 4078.2999999970198,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 4111.19999999553,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 4144.69999999553,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 4178.29999999702,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 4228.69999999553,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 4279.0999999940395,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 4311.5,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 4361.0999999940395,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 4411.19999999553,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 4444.39999999851,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 4494.5,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 4527.69999999553,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 4577.89999999851,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 4611.0999999940395,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 4661.0999999940395,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 4694.5,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 4744.5999999940395,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 4778,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 4827.89999999851,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 4861.19999999553,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 4911.19999999553,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 4944.39999999851,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 4994.5,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 5027.69999999553,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 5081.39999999851,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 5111.0999999940395,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 5161.0999999940395,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 5194.29999999702,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 5244.39999999851,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 5277.69999999553,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 5327.69999999553,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 5361.19999999553,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 5411.29999999702,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 5444.5,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 5494.5,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 5527.79999999702,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 5561.5,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 5594.79999999702,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 5644.79999999702,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 5678.0999999940395,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 5728.0999999940395,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 5777.79999999702,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 5827.79999999702,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 5861.0999999940395,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 5911.19999999553,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 5944.29999999702,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 5994.5,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 6027.79999999702,
+              "media": 2.583333,
+              "presented": 63
+            },
+            {
+              "wall": 6077.69999999553,
+              "media": 2.625,
+              "presented": 64
+            },
+            {
+              "wall": 6111.0999999940395,
+              "media": 2.666667,
+              "presented": 65
+            },
+            {
+              "wall": 6161,
+              "media": 2.708333,
+              "presented": 66
+            },
+            {
+              "wall": 6194.5,
+              "media": 2.75,
+              "presented": 67
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-breathing.mp4?v=2.3",
+              "time": 2.759407
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        },
+        {
+          "visit": 2,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.2000000029802,
+          "rafFps": 59.99520038389777,
+          "presentedFps": 23.59811215099979,
+          "frameTimes": [
+            {
+              "wall": 6561,
+              "media": 0.166667,
+              "presented": 5
+            },
+            {
+              "wall": 6613.29999999702,
+              "media": 0.208333,
+              "presented": 6
+            },
+            {
+              "wall": 6628.0999999940395,
+              "media": 0.25,
+              "presented": 7
+            },
+            {
+              "wall": 6697.5,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 6711.29999999702,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 6777.5999999940395,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 6811.0999999940395,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 6861.19999999553,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 6894.5,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 6944.5,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 6977.5999999940395,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 7027.79999999702,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 7061.0999999940395,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 7111.29999999702,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 7127.79999999702,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 7194.29999999702,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 7211,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 7277.69999999553,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 7311.0999999940395,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 7361,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 7394.5999999940395,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 7428.5,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 7461,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 7510.89999999851,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 7561,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 7611.0999999940395,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 7627.89999999851,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 7678.19999999553,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 7711.5999999940395,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 7761.39999999851,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 7810.89999999851,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 7844.5999999940395,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 7894.39999999851,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 7944.5999999940395,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 7961,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 8027.69999999553,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 8061,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 8111,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 8144.29999999702,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 8194.29999999702,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 8227.59999999404,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 8277.69999999553,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 8311,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 8361,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 8394.19999999553,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 8444.29999999702,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 8460.89999999851,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 8527.79999999702,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 8544.29999999702,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 8611,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 8644.29999999702,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 8694.29999999702,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 8727.5,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 8777.59999999404,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 8811,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 8861,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 8894.19999999553,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 8944.29999999702,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 8977.69999999553,
+              "media": 2.583333,
+              "presented": 63
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-understory.mp4?v=2.3",
+              "time": 2.635187
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        },
+        {
+          "visit": 2,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.39999999851,
+          "rafFps": 59.99040153579003,
+          "presentedFps": 23.996160614316015,
+          "frameTimes": [
+            {
+              "wall": 9328,
+              "media": 0.125,
+              "presented": 4
+            },
+            {
+              "wall": 9361.19999999553,
+              "media": 0.166667,
+              "presented": 5
+            },
+            {
+              "wall": 9411.69999999553,
+              "media": 0.208333,
+              "presented": 6
+            },
+            {
+              "wall": 9444.29999999702,
+              "media": 0.25,
+              "presented": 7
+            },
+            {
+              "wall": 9494.39999999851,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 9527.59999999404,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 9561.19999999553,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 9594.19999999553,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 9661,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 9694.29999999702,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 9744.39999999851,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 9761.39999999851,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 9827.59999999404,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 9860.89999999851,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 9911,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 9944.19999999553,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 9977.89999999851,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 10027.69999999553,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 10077.59999999404,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 10094.59999999404,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 10160.79999999702,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 10197,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 10227.89999999851,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 10277.69999999553,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 10329.5,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 10344.5,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 10411.09999999404,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 10444.29999999702,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 10494.29999999702,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 10527.5,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 10577.59999999404,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 10610.79999999702,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 10660.89999999851,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 10694.19999999553,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 10744.29999999702,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 10777.59999999404,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 10827.59999999404,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 10860.89999999851,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 10910.79999999702,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 10944.19999999553,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 10994.29999999702,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 11027.69999999553,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 11077.5,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 11110.79999999702,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 11160.79999999702,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 11194.19999999553,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 11244.39999999851,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 11277.5,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 11327.5,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 11360.89999999851,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 11410.79999999702,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 11444.19999999553,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 11494.19999999553,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 11527.59999999404,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 11577.59999999404,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 11610.89999999851,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 11660.79999999702,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 11694.19999999553,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 11744.19999999553,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 11777.5,
+              "media": 2.583333,
+              "presented": 63
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-breathing.mp4?v=2.3",
+              "time": 2.61432
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        }
+      ],
+      "errors": [],
+      "videosAfterReturn": 0
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "phase": "after",
+      "samples": [
+        {
+          "visit": 1,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.3000000044703,
+          "rafFps": 59.992800863789064,
+          "presentedFps": 23.997120345515626,
+          "frameTimes": [
+            {
+              "wall": 618.9000000059605,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 651.6000000014901,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 701.6000000014901,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 735,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 785,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 818.3000000044703,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 868.4000000059605,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 901.6000000014901,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 951.6000000014901,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 984.9000000059605,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 1035,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 1068.2000000029802,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 1118.4000000059605,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 1151.6000000014901,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 1201.6000000014901,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 1234.8000000044703,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 1286.3000000044703,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 1318.1000000014901,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 1368.9000000059605,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 1401.7000000029802,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 1451.6000000014901,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 1484.9000000059605,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 1534.9000000059605,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 1568.2000000029802,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 1618.2000000029802,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 1634.9000000059605,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 1702,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 1734.9000000059605,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 1784.8000000044703,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 1818.1000000014901,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 1868.2000000029802,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 1901.5,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 1951.5,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 1984.8000000044703,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 2034.8000000044703,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 2068.2000000029802,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 2118.2000000029802,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 2151.5,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 2201.60000000149,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 2234.9000000059605,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 2284.9000000059605,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 2318.2000000029802,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 2368.2000000029802,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 2401.60000000149,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 2451.5,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 2484.9000000059605,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 2534.8000000044703,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 2568.2000000029802,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 2618.10000000149,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 2651.5,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 2701.60000000149,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 2734.9000000059605,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 2784.9000000059605,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 2818.2000000029802,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 2868.2000000029802,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 2901.5,
+              "media": 2.583333,
+              "presented": 63
+            },
+            {
+              "wall": 2951.5,
+              "media": 2.625,
+              "presented": 64
+            },
+            {
+              "wall": 2984.8000000044703,
+              "media": 2.666667,
+              "presented": 65
+            },
+            {
+              "wall": 3034.9000000059605,
+              "media": 2.708333,
+              "presented": 66
+            },
+            {
+              "wall": 3068.2000000029802,
+              "media": 2.75,
+              "presented": 67
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-understory.mp4?v=2.3",
+              "time": 2.7481
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "understory",
+            "display": "none",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "visit": 1,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.2999999970198,
+          "rafFps": 59.992800863967844,
+          "presentedFps": 23.997120345587135,
+          "frameTimes": [
+            {
+              "wall": 3634.8000000044703,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 3668.3000000044703,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 3718.3000000044703,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 3751.5,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 3801.5,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 3834.7000000029802,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 3885.10000000149,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 3918.10000000149,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 3968.10000000149,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 4001.4000000059605,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 4051.4000000059605,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 4084.8000000044703,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 4134.80000000447,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 4168.10000000149,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 4218.4000000059605,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 4251.5,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 4301.60000000149,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 4318.5,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 4384.80000000447,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 4418.10000000149,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 4468.10000000149,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 4501.4000000059605,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 4551.5,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 4584.80000000447,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 4634.80000000447,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 4668,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 4718,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 4751.4000000059605,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 4801.4000000059605,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 4834.70000000298,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 4884.70000000298,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 4918.10000000149,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 4968.10000000149,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 5001.5,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 5034.70000000298,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 5085.20000000298,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 5118.4000000059605,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 5151.60000000149,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 5218.5,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 5251.5,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 5301.4000000059605,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 5318.30000000447,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 5384.70000000298,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 5418.20000000298,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 5468.20000000298,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 5501.5,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 5554.60000000149,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 5584.70000000298,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 5634.9000000059605,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 5668.10000000149,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 5718.10000000149,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 5751.4000000059605,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 5801.30000000447,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 5834.70000000298,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 5884.70000000298,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 5918.10000000149,
+              "media": 2.583333,
+              "presented": 63
+            },
+            {
+              "wall": 5968.10000000149,
+              "media": 2.625,
+              "presented": 64
+            },
+            {
+              "wall": 6001.60000000149,
+              "media": 2.666667,
+              "presented": 65
+            },
+            {
+              "wall": 6051.4000000059605,
+              "media": 2.708333,
+              "presented": 66
+            },
+            {
+              "wall": 6068.60000000149,
+              "media": 2.75,
+              "presented": 67
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-breathing.mp4?v=2.3",
+              "time": 2.767017
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "return",
+            "display": "none",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "visit": 2,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.2000000029802,
+          "rafFps": 59.99520038389777,
+          "presentedFps": 23.99808015355911,
+          "frameTimes": [
+            {
+              "wall": 6568.10000000149,
+              "media": 0.25,
+              "presented": 7
+            },
+            {
+              "wall": 6618.20000000298,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 6652.20000000298,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 6701.4000000059605,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 6734.70000000298,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 6784.9000000059605,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 6801.70000000298,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 6868.20000000298,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 6901.4000000059605,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 6951.4000000059605,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 6984.70000000298,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 7034.70000000298,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 7067.9000000059605,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 7118.10000000149,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 7134.70000000298,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 7201.4000000059605,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 7234.70000000298,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 7286.4000000059605,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 7318.10000000149,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 7368.30000000447,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 7401.30000000447,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 7434.70000000298,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 7484.60000000149,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 7534.80000000447,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 7568,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 7601.30000000447,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 7651.30000000447,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 7701.4000000059605,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 7734.60000000149,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 7784.60000000149,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 7817.9000000059605,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 7867.9000000059605,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 7901.30000000447,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 7951.30000000447,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 7984.70000000298,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 8018.10000000149,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 8068,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 8117.9000000059605,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 8151.30000000447,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 8184.60000000149,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 8234.70000000298,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 8284.70000000298,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 8318,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 8368,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 8401.20000000298,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 8434.60000000149,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 8468.60000000149,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 8534.5,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 8567.90000000596,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 8618.10000000149,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 8634.60000000149,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 8701.20000000298,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 8734.5,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 8784.5,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 8817.90000000596,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 8867.90000000596,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 8901.20000000298,
+              "media": 2.583333,
+              "presented": 63
+            },
+            {
+              "wall": 8951.40000000596,
+              "media": 2.625,
+              "presented": 64
+            },
+            {
+              "wall": 8985.30000000447,
+              "media": 2.666667,
+              "presented": 65
+            },
+            {
+              "wall": 9034.60000000149,
+              "media": 2.708333,
+              "presented": 66
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-understory.mp4?v=2.3",
+              "time": 2.73141
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "understory",
+            "display": "none",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "visit": 2,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.2000000029802,
+          "rafFps": 59.99520038389777,
+          "presentedFps": 23.59811215099979,
+          "frameTimes": [
+            {
+              "wall": 9368.10000000149,
+              "media": 0.166667,
+              "presented": 5
+            },
+            {
+              "wall": 9418.30000000447,
+              "media": 0.208333,
+              "presented": 6
+            },
+            {
+              "wall": 9468.20000000298,
+              "media": 0.25,
+              "presented": 7
+            },
+            {
+              "wall": 9522.30000000447,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 9551.20000000298,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 9601.20000000298,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 9618,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 9684.5,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 9718,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 9768.80000000447,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 9801.20000000298,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 9851.20000000298,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 9884.5,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 9934.5,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 9967.90000000596,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 10017.80000000447,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 10051.20000000298,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 10101.20000000298,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 10134.5,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 10184.5,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 10217.80000000447,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 10267.90000000596,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 10301.10000000149,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 10351.40000000596,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 10384.90000000596,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 10418.20000000298,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 10467.90000000596,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 10517.90000000596,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 10535,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 10601.20000000298,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 10618.30000000447,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 10684.60000000149,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 10701.30000000447,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 10767.80000000447,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 10801.20000000298,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 10851.20000000298,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 10884.60000000149,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 10934.40000000596,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 10967.80000000447,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 11017.90000000596,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 11051.20000000298,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 11101.20000000298,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 11134.40000000596,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 11184.5,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 11217.90000000596,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 11268,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 11301.20000000298,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 11351.20000000298,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 11384.5,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 11434.5,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 11467.90000000596,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 11517.80000000447,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 11551.10000000149,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 11601.30000000447,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 11634.40000000596,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 11668.10000000149,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 11717.90000000596,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 11768,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 11801.40000000596,
+              "media": 2.583333,
+              "presented": 63
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-breathing.mp4?v=2.3",
+              "time": 2.62507
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "return",
+            "display": "none",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "videosAfterReturn": 0
+    },
+    {
+      "width": 1440,
+      "locale": "lv",
+      "phase": "before",
+      "samples": [
+        {
+          "visit": 1,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.4000000059605,
+          "rafFps": 59.590465525373865,
+          "presentedFps": 23.5962246040071,
+          "frameTimes": [
+            {
+              "wall": 1010.8000000044703,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 1045,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 1098.1000000014901,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 1130.7000000029802,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 1183,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 1216.8000000044703,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 1261,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 1275,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 1343.7000000029802,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 1358.7000000029802,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 1408.2000000029802,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 1462.5,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 1491.3999999985099,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 1549.6000000014901,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 1574.8000000044703,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 1630.6000000014901,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 1679.7000000029802,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 1711.8000000044703,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 1760.7000000029802,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 1794.5,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 1843.8000000044703,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 1878.8000000044703,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 1908.6000000014901,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 1962.8000000044703,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 2011.3000000044703,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 2045.8999999985099,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 2098.3000000044703,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 2127.39999999851,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 2178.5,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 2213.7000000029802,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 2262.10000000149,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 2296.2000000029802,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 2344.8000000044703,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 2378,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 2430.3000000044703,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 2468.5,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 2493,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 2524.7000000029802,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 2574.60000000149,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 2629.89999999851,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 2678.89999999851,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 2714.7000000029802,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 2760.3000000044703,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 2809.3000000044703,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 2825.2000000029802,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 2859,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 2908.39999999851,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 2941.60000000149,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 2991.5,
+              "media": 2.583333,
+              "presented": 63
+            },
+            {
+              "wall": 3053.60000000149,
+              "media": 2.625,
+              "presented": 64
+            },
+            {
+              "wall": 3094.60000000149,
+              "media": 2.666667,
+              "presented": 65
+            },
+            {
+              "wall": 3129.8000000044703,
+              "media": 2.708333,
+              "presented": 66
+            },
+            {
+              "wall": 3179.10000000149,
+              "media": 2.75,
+              "presented": 67
+            },
+            {
+              "wall": 3219.3000000044703,
+              "media": 2.791667,
+              "presented": 68
+            },
+            {
+              "wall": 3261.3000000044703,
+              "media": 2.833333,
+              "presented": 69
+            },
+            {
+              "wall": 3295.60000000149,
+              "media": 2.875,
+              "presented": 70
+            },
+            {
+              "wall": 3344.3000000044703,
+              "media": 2.916667,
+              "presented": 71
+            },
+            {
+              "wall": 3380.60000000149,
+              "media": 2.958333,
+              "presented": 72
+            },
+            {
+              "wall": 3429,
+              "media": 3,
+              "presented": 73
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-understory.mp4?v=2.3",
+              "time": 3.063032
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        },
+        {
+          "visit": 1,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.1999999955297,
+          "rafFps": 59.59523238151605,
+          "presentedFps": 23.99808015363062,
+          "frameTimes": [
+            {
+              "wall": 4275.5,
+              "media": 0.5,
+              "presented": 12
+            },
+            {
+              "wall": 4310,
+              "media": 0.541667,
+              "presented": 13
+            },
+            {
+              "wall": 4341.30000000447,
+              "media": 0.583333,
+              "presented": 14
+            },
+            {
+              "wall": 4392.30000000447,
+              "media": 0.625,
+              "presented": 15
+            },
+            {
+              "wall": 4442.10000000149,
+              "media": 0.666667,
+              "presented": 16
+            },
+            {
+              "wall": 4458,
+              "media": 0.708333,
+              "presented": 17
+            },
+            {
+              "wall": 4528,
+              "media": 0.75,
+              "presented": 18
+            },
+            {
+              "wall": 4542.80000000447,
+              "media": 0.791667,
+              "presented": 19
+            },
+            {
+              "wall": 4594.80000000447,
+              "media": 0.833333,
+              "presented": 20
+            },
+            {
+              "wall": 4642.20000000298,
+              "media": 0.875,
+              "presented": 21
+            },
+            {
+              "wall": 4701.89999999851,
+              "media": 0.916667,
+              "presented": 22
+            },
+            {
+              "wall": 4728.5,
+              "media": 0.958333,
+              "presented": 23
+            },
+            {
+              "wall": 4777.5,
+              "media": 1,
+              "presented": 24
+            },
+            {
+              "wall": 4813,
+              "media": 1.041667,
+              "presented": 25
+            },
+            {
+              "wall": 4859.60000000149,
+              "media": 1.083333,
+              "presented": 26
+            },
+            {
+              "wall": 4874.60000000149,
+              "media": 1.125,
+              "presented": 27
+            },
+            {
+              "wall": 4924.80000000447,
+              "media": 1.166667,
+              "presented": 28
+            },
+            {
+              "wall": 4977.5,
+              "media": 1.208333,
+              "presented": 29
+            },
+            {
+              "wall": 5008,
+              "media": 1.25,
+              "presented": 30
+            },
+            {
+              "wall": 5062,
+              "media": 1.291667,
+              "presented": 31
+            },
+            {
+              "wall": 5109.70000000298,
+              "media": 1.333333,
+              "presented": 32
+            },
+            {
+              "wall": 5142.60000000149,
+              "media": 1.375,
+              "presented": 33
+            },
+            {
+              "wall": 5194.60000000149,
+              "media": 1.416667,
+              "presented": 34
+            },
+            {
+              "wall": 5229.30000000447,
+              "media": 1.458333,
+              "presented": 35
+            },
+            {
+              "wall": 5276.39999999851,
+              "media": 1.5,
+              "presented": 36
+            },
+            {
+              "wall": 5312.60000000149,
+              "media": 1.541667,
+              "presented": 37
+            },
+            {
+              "wall": 5360.39999999851,
+              "media": 1.583333,
+              "presented": 38
+            },
+            {
+              "wall": 5393.80000000447,
+              "media": 1.625,
+              "presented": 39
+            },
+            {
+              "wall": 5445.70000000298,
+              "media": 1.666667,
+              "presented": 40
+            },
+            {
+              "wall": 5479,
+              "media": 1.708333,
+              "presented": 41
+            },
+            {
+              "wall": 5526.5,
+              "media": 1.75,
+              "presented": 42
+            },
+            {
+              "wall": 5562.60000000149,
+              "media": 1.791667,
+              "presented": 43
+            },
+            {
+              "wall": 5611.10000000149,
+              "media": 1.833333,
+              "presented": 44
+            },
+            {
+              "wall": 5644.60000000149,
+              "media": 1.875,
+              "presented": 45
+            },
+            {
+              "wall": 5692.80000000447,
+              "media": 1.916667,
+              "presented": 46
+            },
+            {
+              "wall": 5727.39999999851,
+              "media": 1.958333,
+              "presented": 47
+            },
+            {
+              "wall": 5777.20000000298,
+              "media": 2,
+              "presented": 48
+            },
+            {
+              "wall": 5793,
+              "media": 2.041667,
+              "presented": 49
+            },
+            {
+              "wall": 5860.60000000149,
+              "media": 2.083333,
+              "presented": 50
+            },
+            {
+              "wall": 5892.80000000447,
+              "media": 2.125,
+              "presented": 51
+            },
+            {
+              "wall": 5924.60000000149,
+              "media": 2.166667,
+              "presented": 52
+            },
+            {
+              "wall": 5977.10000000149,
+              "media": 2.208333,
+              "presented": 53
+            },
+            {
+              "wall": 6026.5,
+              "media": 2.25,
+              "presented": 54
+            },
+            {
+              "wall": 6062.39999999851,
+              "media": 2.291667,
+              "presented": 55
+            },
+            {
+              "wall": 6110.30000000447,
+              "media": 2.333333,
+              "presented": 56
+            },
+            {
+              "wall": 6148.10000000149,
+              "media": 2.375,
+              "presented": 57
+            },
+            {
+              "wall": 6196.30000000447,
+              "media": 2.416667,
+              "presented": 58
+            },
+            {
+              "wall": 6232.80000000447,
+              "media": 2.458333,
+              "presented": 59
+            },
+            {
+              "wall": 6276.10000000149,
+              "media": 2.5,
+              "presented": 60
+            },
+            {
+              "wall": 6309.20000000298,
+              "media": 2.541667,
+              "presented": 61
+            },
+            {
+              "wall": 6358.80000000447,
+              "media": 2.583333,
+              "presented": 62
+            },
+            {
+              "wall": 6393.39999999851,
+              "media": 2.625,
+              "presented": 63
+            },
+            {
+              "wall": 6443.5,
+              "media": 2.666667,
+              "presented": 64
+            },
+            {
+              "wall": 6479.10000000149,
+              "media": 2.708333,
+              "presented": 65
+            },
+            {
+              "wall": 6508,
+              "media": 2.75,
+              "presented": 66
+            },
+            {
+              "wall": 6575.70000000298,
+              "media": 2.791667,
+              "presented": 67
+            },
+            {
+              "wall": 6614.10000000149,
+              "media": 2.833333,
+              "presented": 68
+            },
+            {
+              "wall": 6644.80000000447,
+              "media": 2.875,
+              "presented": 69
+            },
+            {
+              "wall": 6694.39999999851,
+              "media": 2.916667,
+              "presented": 70
+            },
+            {
+              "wall": 6730.89999999851,
+              "media": 2.958333,
+              "presented": 71
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-breathing.mp4?v=2.3",
+              "time": 3.000117
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        },
+        {
+          "visit": 2,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.5,
+          "rafFps": 60.3879224155169,
+          "presentedFps": 23.99520095980804,
+          "frameTimes": [
+            {
+              "wall": 7074.80000000447,
+              "media": 0.125,
+              "presented": 4
+            },
+            {
+              "wall": 7095.89999999851,
+              "media": 0.166667,
+              "presented": 5
+            },
+            {
+              "wall": 7142.10000000149,
+              "media": 0.208333,
+              "presented": 6
+            },
+            {
+              "wall": 7175.39999999851,
+              "media": 0.25,
+              "presented": 7
+            },
+            {
+              "wall": 7225.30000000447,
+              "media": 0.291667,
+              "presented": 8
+            },
+            {
+              "wall": 7258.60000000149,
+              "media": 0.333333,
+              "presented": 9
+            },
+            {
+              "wall": 7308.60000000149,
+              "media": 0.375,
+              "presented": 10
+            },
+            {
+              "wall": 7342.30000000447,
+              "media": 0.416667,
+              "presented": 11
+            },
+            {
+              "wall": 7392.10000000149,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 7426.20000000298,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 7493.5,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 7528.5,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 7578.20000000298,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 7609.5,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 7659.70000000298,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 7693.10000000149,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 7743.20000000298,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 7757.89999999851,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 7808.20000000298,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 7872.39999999851,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 7891.20000000298,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 7943.80000000447,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 7993.10000000149,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 8010.80000000447,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 8058.20000000298,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 8091.89999999851,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 8141.10000000149,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 8192,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 8242.10000000149,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 8276.70000000298,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 8326.20000000298,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 8359.30000000447,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 8409.10000000149,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 8424.70000000298,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 8495.80000000447,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 8529.30000000447,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 8583.5,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 8618.30000000447,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 8664.20000000298,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 8695.10000000149,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 8748.5,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 8776.10000000149,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 8826.60000000149,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 8841.70000000298,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 8916.5,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 8946.39999999851,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 8975.39999999851,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 9032.30000000447,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 9076.20000000298,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 9116.70000000298,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 9159.10000000149,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 9195.70000000298,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 9243.5,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 9277.39999999851,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 9308,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 9360.5,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 9408.70000000298,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 9442.89999999851,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 9475,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 9527.30000000447,
+              "media": 2.583333,
+              "presented": 63
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-understory.mp4?v=2.3",
+              "time": 2.612781
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        },
+        {
+          "visit": 2,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.1999999955297,
+          "rafFps": 59.995200384076554,
+          "presentedFps": 23.99808015363062,
+          "frameTimes": [
+            {
+              "wall": 10328,
+              "media": 0.5,
+              "presented": 11
+            },
+            {
+              "wall": 10362.70000000298,
+              "media": 0.541667,
+              "presented": 12
+            },
+            {
+              "wall": 10409.30000000447,
+              "media": 0.583333,
+              "presented": 13
+            },
+            {
+              "wall": 10443.80000000447,
+              "media": 0.625,
+              "presented": 14
+            },
+            {
+              "wall": 10474.70000000298,
+              "media": 0.666667,
+              "presented": 15
+            },
+            {
+              "wall": 10528.89999999851,
+              "media": 0.708333,
+              "presented": 16
+            },
+            {
+              "wall": 10558.20000000298,
+              "media": 0.75,
+              "presented": 17
+            },
+            {
+              "wall": 10591.39999999851,
+              "media": 0.791667,
+              "presented": 18
+            },
+            {
+              "wall": 10660.5,
+              "media": 0.833333,
+              "presented": 19
+            },
+            {
+              "wall": 10693.60000000149,
+              "media": 0.875,
+              "presented": 20
+            },
+            {
+              "wall": 10743.89999999851,
+              "media": 0.916667,
+              "presented": 21
+            },
+            {
+              "wall": 10758.20000000298,
+              "media": 0.958333,
+              "presented": 22
+            },
+            {
+              "wall": 10827.5,
+              "media": 1,
+              "presented": 23
+            },
+            {
+              "wall": 10862.20000000298,
+              "media": 1.041667,
+              "presented": 24
+            },
+            {
+              "wall": 10910.5,
+              "media": 1.083333,
+              "presented": 25
+            },
+            {
+              "wall": 10946.70000000298,
+              "media": 1.125,
+              "presented": 26
+            },
+            {
+              "wall": 10992.39999999851,
+              "media": 1.166667,
+              "presented": 27
+            },
+            {
+              "wall": 11026.5,
+              "media": 1.208333,
+              "presented": 28
+            },
+            {
+              "wall": 11075.39999999851,
+              "media": 1.25,
+              "presented": 29
+            },
+            {
+              "wall": 11111.39999999851,
+              "media": 1.291667,
+              "presented": 30
+            },
+            {
+              "wall": 11141.10000000149,
+              "media": 1.333333,
+              "presented": 31
+            },
+            {
+              "wall": 11194.70000000298,
+              "media": 1.375,
+              "presented": 32
+            },
+            {
+              "wall": 11224.80000000447,
+              "media": 1.416667,
+              "presented": 33
+            },
+            {
+              "wall": 11258.20000000298,
+              "media": 1.458333,
+              "presented": 34
+            },
+            {
+              "wall": 11326.70000000298,
+              "media": 1.5,
+              "presented": 35
+            },
+            {
+              "wall": 11366.5,
+              "media": 1.541667,
+              "presented": 36
+            },
+            {
+              "wall": 11391.39999999851,
+              "media": 1.583333,
+              "presented": 37
+            },
+            {
+              "wall": 11445,
+              "media": 1.625,
+              "presented": 38
+            },
+            {
+              "wall": 11474.89999999851,
+              "media": 1.666667,
+              "presented": 39
+            },
+            {
+              "wall": 11507.89999999851,
+              "media": 1.708333,
+              "presented": 40
+            },
+            {
+              "wall": 11575.30000000447,
+              "media": 1.75,
+              "presented": 41
+            },
+            {
+              "wall": 11611.70000000298,
+              "media": 1.791667,
+              "presented": 42
+            },
+            {
+              "wall": 11659.39999999851,
+              "media": 1.833333,
+              "presented": 43
+            },
+            {
+              "wall": 11704.70000000298,
+              "media": 1.875,
+              "presented": 44
+            },
+            {
+              "wall": 11742.70000000298,
+              "media": 1.916667,
+              "presented": 45
+            },
+            {
+              "wall": 11782.10000000149,
+              "media": 1.958333,
+              "presented": 46
+            },
+            {
+              "wall": 11825.20000000298,
+              "media": 2,
+              "presented": 47
+            },
+            {
+              "wall": 11841,
+              "media": 2.041667,
+              "presented": 48
+            },
+            {
+              "wall": 11909.80000000447,
+              "media": 2.083333,
+              "presented": 49
+            },
+            {
+              "wall": 11944.60000000149,
+              "media": 2.125,
+              "presented": 50
+            },
+            {
+              "wall": 11992.80000000447,
+              "media": 2.166667,
+              "presented": 51
+            },
+            {
+              "wall": 12027.10000000149,
+              "media": 2.208333,
+              "presented": 52
+            },
+            {
+              "wall": 12083.5,
+              "media": 2.25,
+              "presented": 53
+            },
+            {
+              "wall": 12112.39999999851,
+              "media": 2.291667,
+              "presented": 54
+            },
+            {
+              "wall": 12159.60000000149,
+              "media": 2.333333,
+              "presented": 55
+            },
+            {
+              "wall": 12195,
+              "media": 2.375,
+              "presented": 56
+            },
+            {
+              "wall": 12243.39999999851,
+              "media": 2.416667,
+              "presented": 57
+            },
+            {
+              "wall": 12259.60000000149,
+              "media": 2.458333,
+              "presented": 58
+            },
+            {
+              "wall": 12310.39999999851,
+              "media": 2.5,
+              "presented": 59
+            },
+            {
+              "wall": 12341.10000000149,
+              "media": 2.541667,
+              "presented": 60
+            },
+            {
+              "wall": 12410.10000000149,
+              "media": 2.583333,
+              "presented": 61
+            },
+            {
+              "wall": 12424.60000000149,
+              "media": 2.625,
+              "presented": 62
+            },
+            {
+              "wall": 12496.5,
+              "media": 2.666667,
+              "presented": 63
+            },
+            {
+              "wall": 12528.60000000149,
+              "media": 2.708333,
+              "presented": 64
+            },
+            {
+              "wall": 12575.80000000447,
+              "media": 2.75,
+              "presented": 65
+            },
+            {
+              "wall": 12591,
+              "media": 2.791667,
+              "presented": 66
+            },
+            {
+              "wall": 12640.89999999851,
+              "media": 2.833333,
+              "presented": 67
+            },
+            {
+              "wall": 12693.39999999851,
+              "media": 2.875,
+              "presented": 68
+            },
+            {
+              "wall": 12724.60000000149,
+              "media": 2.916667,
+              "presented": 69
+            },
+            {
+              "wall": 12758.10000000149,
+              "media": 2.958333,
+              "presented": 70
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4280/media/forest-breathing.mp4?v=2.3",
+              "time": 2.981671
+            }
+          ],
+          "filters": "none",
+          "cue": null
+        }
+      ],
+      "errors": [],
+      "videosAfterReturn": 0
+    },
+    {
+      "width": 1440,
+      "locale": "lv",
+      "phase": "after",
+      "samples": [
+        {
+          "visit": 1,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.2999999970198,
+          "rafFps": 59.992800863967844,
+          "presentedFps": 23.997120345587135,
+          "frameTimes": [
+            {
+              "wall": 1072.7999999970198,
+              "media": 0.583333,
+              "presented": 14
+            },
+            {
+              "wall": 1087,
+              "media": 0.625,
+              "presented": 15
+            },
+            {
+              "wall": 1137,
+              "media": 0.666667,
+              "presented": 16
+            },
+            {
+              "wall": 1190.7999999970198,
+              "media": 0.708333,
+              "presented": 17
+            },
+            {
+              "wall": 1240.0999999940395,
+              "media": 0.75,
+              "presented": 18
+            },
+            {
+              "wall": 1272.8999999985099,
+              "media": 0.791667,
+              "presented": 19
+            },
+            {
+              "wall": 1322.5,
+              "media": 0.833333,
+              "presented": 20
+            },
+            {
+              "wall": 1336.6999999955297,
+              "media": 0.875,
+              "presented": 21
+            },
+            {
+              "wall": 1386.7999999970198,
+              "media": 0.916667,
+              "presented": 22
+            },
+            {
+              "wall": 1442.3999999985099,
+              "media": 0.958333,
+              "presented": 23
+            },
+            {
+              "wall": 1489.6999999955297,
+              "media": 1,
+              "presented": 24
+            },
+            {
+              "wall": 1524.5,
+              "media": 1.041667,
+              "presented": 25
+            },
+            {
+              "wall": 1573,
+              "media": 1.083333,
+              "presented": 26
+            },
+            {
+              "wall": 1606.0999999940395,
+              "media": 1.125,
+              "presented": 27
+            },
+            {
+              "wall": 1655.5999999940395,
+              "media": 1.166667,
+              "presented": 28
+            },
+            {
+              "wall": 1669.8999999985099,
+              "media": 1.208333,
+              "presented": 29
+            },
+            {
+              "wall": 1740.1999999955297,
+              "media": 1.25,
+              "presented": 30
+            },
+            {
+              "wall": 1773.8999999985099,
+              "media": 1.291667,
+              "presented": 31
+            },
+            {
+              "wall": 1824.2999999970198,
+              "media": 1.333333,
+              "presented": 32
+            },
+            {
+              "wall": 1858.5,
+              "media": 1.375,
+              "presented": 33
+            },
+            {
+              "wall": 1906.5999999940395,
+              "media": 1.416667,
+              "presented": 34
+            },
+            {
+              "wall": 1943.0999999940395,
+              "media": 1.458333,
+              "presented": 35
+            },
+            {
+              "wall": 1970.1999999955297,
+              "media": 1.5,
+              "presented": 36
+            },
+            {
+              "wall": 2025.5,
+              "media": 1.541667,
+              "presented": 37
+            },
+            {
+              "wall": 2073.39999999851,
+              "media": 1.583333,
+              "presented": 38
+            },
+            {
+              "wall": 2106.89999999851,
+              "media": 1.625,
+              "presented": 39
+            },
+            {
+              "wall": 2136.89999999851,
+              "media": 1.666667,
+              "presented": 40
+            },
+            {
+              "wall": 2192.89999999851,
+              "media": 1.708333,
+              "presented": 41
+            },
+            {
+              "wall": 2240.39999999851,
+              "media": 1.75,
+              "presented": 42
+            },
+            {
+              "wall": 2277.39999999851,
+              "media": 1.791667,
+              "presented": 43
+            },
+            {
+              "wall": 2322.89999999851,
+              "media": 1.833333,
+              "presented": 44
+            },
+            {
+              "wall": 2356.5,
+              "media": 1.875,
+              "presented": 45
+            },
+            {
+              "wall": 2405.1999999955297,
+              "media": 1.916667,
+              "presented": 46
+            },
+            {
+              "wall": 2420.0999999940395,
+              "media": 1.958333,
+              "presented": 47
+            },
+            {
+              "wall": 2470.0999999940395,
+              "media": 2,
+              "presented": 48
+            },
+            {
+              "wall": 2522.6999999955297,
+              "media": 2.041667,
+              "presented": 49
+            },
+            {
+              "wall": 2573.2999999970198,
+              "media": 2.083333,
+              "presented": 50
+            },
+            {
+              "wall": 2608.6999999955297,
+              "media": 2.125,
+              "presented": 51
+            },
+            {
+              "wall": 2636.6999999955297,
+              "media": 2.166667,
+              "presented": 52
+            },
+            {
+              "wall": 2691.0999999940395,
+              "media": 2.208333,
+              "presented": 53
+            },
+            {
+              "wall": 2739.6999999955297,
+              "media": 2.25,
+              "presented": 54
+            },
+            {
+              "wall": 2774,
+              "media": 2.291667,
+              "presented": 55
+            },
+            {
+              "wall": 2822.5,
+              "media": 2.333333,
+              "presented": 56
+            },
+            {
+              "wall": 2856.89999999851,
+              "media": 2.375,
+              "presented": 57
+            },
+            {
+              "wall": 2906.39999999851,
+              "media": 2.416667,
+              "presented": 58
+            },
+            {
+              "wall": 2940.1999999955297,
+              "media": 2.458333,
+              "presented": 59
+            },
+            {
+              "wall": 2990.6999999955297,
+              "media": 2.5,
+              "presented": 60
+            },
+            {
+              "wall": 3024.6999999955297,
+              "media": 2.541667,
+              "presented": 61
+            },
+            {
+              "wall": 3073.5999999940395,
+              "media": 2.583333,
+              "presented": 62
+            },
+            {
+              "wall": 3108,
+              "media": 2.625,
+              "presented": 63
+            },
+            {
+              "wall": 3136.2999999970198,
+              "media": 2.666667,
+              "presented": 64
+            },
+            {
+              "wall": 3191,
+              "media": 2.708333,
+              "presented": 65
+            },
+            {
+              "wall": 3240.0999999940395,
+              "media": 2.75,
+              "presented": 66
+            },
+            {
+              "wall": 3274.1999999955297,
+              "media": 2.791667,
+              "presented": 67
+            },
+            {
+              "wall": 3323,
+              "media": 2.833333,
+              "presented": 68
+            },
+            {
+              "wall": 3358.0999999940395,
+              "media": 2.875,
+              "presented": 69
+            },
+            {
+              "wall": 3406.89999999851,
+              "media": 2.916667,
+              "presented": 70
+            },
+            {
+              "wall": 3439.1999999955297,
+              "media": 2.958333,
+              "presented": 71
+            },
+            {
+              "wall": 3490.2999999970198,
+              "media": 3,
+              "presented": 72
+            },
+            {
+              "wall": 3522.89999999851,
+              "media": 3.041667,
+              "presented": 73
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-understory.mp4?v=2.3",
+              "time": 3.074053
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "understory",
+            "display": "block",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 1260,
+              "y": 509.1796875,
+              "width": 155,
+              "height": 101.640625,
+              "top": 509.1796875,
+              "right": 1415,
+              "bottom": 610.8203125,
+              "left": 1260
+            }
+          }
+        },
+        {
+          "visit": 1,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.0999999940395,
+          "rafFps": 57.99768009293456,
+          "presentedFps": 23.59905603781475,
+          "frameTimes": [
+            {
+              "wall": 4694.39999999851,
+              "media": 0.333333,
+              "presented": 6
+            },
+            {
+              "wall": 4730.89999999851,
+              "media": 0.375,
+              "presented": 7
+            },
+            {
+              "wall": 4779.0999999940395,
+              "media": 0.416667,
+              "presented": 8
+            },
+            {
+              "wall": 4806.5999999940395,
+              "media": 0.458333,
+              "presented": 9
+            },
+            {
+              "wall": 4837.29999999702,
+              "media": 0.5,
+              "presented": 10
+            },
+            {
+              "wall": 4904.39999999851,
+              "media": 0.541667,
+              "presented": 11
+            },
+            {
+              "wall": 4938.39999999851,
+              "media": 0.583333,
+              "presented": 12
+            },
+            {
+              "wall": 4988.89999999851,
+              "media": 0.625,
+              "presented": 13
+            },
+            {
+              "wall": 5022.5999999940395,
+              "media": 0.666667,
+              "presented": 14
+            },
+            {
+              "wall": 5071.5999999940395,
+              "media": 0.708333,
+              "presented": 15
+            },
+            {
+              "wall": 5086.79999999702,
+              "media": 0.75,
+              "presented": 16
+            },
+            {
+              "wall": 5136.89999999851,
+              "media": 0.791667,
+              "presented": 17
+            },
+            {
+              "wall": 5187.79999999702,
+              "media": 0.833333,
+              "presented": 18
+            },
+            {
+              "wall": 5220.39999999851,
+              "media": 0.875,
+              "presented": 19
+            },
+            {
+              "wall": 5271.89999999851,
+              "media": 0.916667,
+              "presented": 20
+            },
+            {
+              "wall": 5321.5999999940395,
+              "media": 0.958333,
+              "presented": 21
+            },
+            {
+              "wall": 5355,
+              "media": 1,
+              "presented": 22
+            },
+            {
+              "wall": 5407.0999999940395,
+              "media": 1.041667,
+              "presented": 23
+            },
+            {
+              "wall": 5419.89999999851,
+              "media": 1.083333,
+              "presented": 24
+            },
+            {
+              "wall": 5488.0999999940395,
+              "media": 1.125,
+              "presented": 25
+            },
+            {
+              "wall": 5534.29999999702,
+              "media": 1.166667,
+              "presented": 26
+            },
+            {
+              "wall": 5571.29999999702,
+              "media": 1.208333,
+              "presented": 27
+            },
+            {
+              "wall": 5606,
+              "media": 1.25,
+              "presented": 28
+            },
+            {
+              "wall": 5654,
+              "media": 1.291667,
+              "presented": 29
+            },
+            {
+              "wall": 5693.89999999851,
+              "media": 1.333333,
+              "presented": 30
+            },
+            {
+              "wall": 5738.5,
+              "media": 1.375,
+              "presented": 31
+            },
+            {
+              "wall": 5784.39999999851,
+              "media": 1.416667,
+              "presented": 32
+            },
+            {
+              "wall": 5826.39999999851,
+              "media": 1.458333,
+              "presented": 33
+            },
+            {
+              "wall": 5855,
+              "media": 1.5,
+              "presented": 34
+            },
+            {
+              "wall": 5886.5999999940395,
+              "media": 1.541667,
+              "presented": 35
+            },
+            {
+              "wall": 5938.69999999553,
+              "media": 1.583333,
+              "presented": 36
+            },
+            {
+              "wall": 5969.69999999553,
+              "media": 1.625,
+              "presented": 37
+            },
+            {
+              "wall": 6003.0999999940395,
+              "media": 1.666667,
+              "presented": 38
+            },
+            {
+              "wall": 6070.79999999702,
+              "media": 1.708333,
+              "presented": 39
+            },
+            {
+              "wall": 6086.5,
+              "media": 1.75,
+              "presented": 40
+            },
+            {
+              "wall": 6154.39999999851,
+              "media": 1.791667,
+              "presented": 41
+            },
+            {
+              "wall": 6191.29999999702,
+              "media": 1.833333,
+              "presented": 42
+            },
+            {
+              "wall": 6219.89999999851,
+              "media": 1.875,
+              "presented": 43
+            },
+            {
+              "wall": 6272.29999999702,
+              "media": 1.916667,
+              "presented": 44
+            },
+            {
+              "wall": 6320.89999999851,
+              "media": 1.958333,
+              "presented": 45
+            },
+            {
+              "wall": 6353.69999999553,
+              "media": 2,
+              "presented": 46
+            },
+            {
+              "wall": 6404,
+              "media": 2.041667,
+              "presented": 47
+            },
+            {
+              "wall": 6439.19999999553,
+              "media": 2.083333,
+              "presented": 48
+            },
+            {
+              "wall": 6487.5999999940395,
+              "media": 2.125,
+              "presented": 49
+            },
+            {
+              "wall": 6503.0999999940395,
+              "media": 2.166667,
+              "presented": 50
+            },
+            {
+              "wall": 6570.69999999553,
+              "media": 2.208333,
+              "presented": 51
+            },
+            {
+              "wall": 6610.29999999702,
+              "media": 2.25,
+              "presented": 52
+            },
+            {
+              "wall": 6654.39999999851,
+              "media": 2.291667,
+              "presented": 53
+            },
+            {
+              "wall": 6687.39999999851,
+              "media": 2.333333,
+              "presented": 54
+            },
+            {
+              "wall": 6742.39999999851,
+              "media": 2.375,
+              "presented": 55
+            },
+            {
+              "wall": 6773.89999999851,
+              "media": 2.416667,
+              "presented": 56
+            },
+            {
+              "wall": 6821.79999999702,
+              "media": 2.458333,
+              "presented": 57
+            },
+            {
+              "wall": 6856.79999999702,
+              "media": 2.5,
+              "presented": 58
+            },
+            {
+              "wall": 6886.39999999851,
+              "media": 2.541667,
+              "presented": 59
+            },
+            {
+              "wall": 6942.19999999553,
+              "media": 2.583333,
+              "presented": 60
+            },
+            {
+              "wall": 7001.69999999553,
+              "media": 2.625,
+              "presented": 61
+            },
+            {
+              "wall": 7028.29999999702,
+              "media": 2.666667,
+              "presented": 62
+            },
+            {
+              "wall": 7053.5,
+              "media": 2.708333,
+              "presented": 63
+            },
+            {
+              "wall": 7086.69999999553,
+              "media": 2.75,
+              "presented": 64
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 2,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-breathing.mp4?v=2.3",
+              "time": 2.789864
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "return",
+            "display": "block",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 1260,
+              "y": 509.1796875,
+              "width": 155,
+              "height": 101.640625,
+              "top": 509.1796875,
+              "right": 1415,
+              "bottom": 610.8203125,
+              "left": 1260
+            }
+          }
+        },
+        {
+          "visit": 2,
+          "id": "understory",
+          "clip": "understory",
+          "elapsed": 2500.2000000029802,
+          "rafFps": 59.99520038389777,
+          "presentedFps": 23.59811215099979,
+          "frameTimes": [
+            {
+              "wall": 8320.19999999553,
+              "media": 0.458333,
+              "presented": 12
+            },
+            {
+              "wall": 8370.39999999851,
+              "media": 0.5,
+              "presented": 13
+            },
+            {
+              "wall": 8406.59999999404,
+              "media": 0.541667,
+              "presented": 14
+            },
+            {
+              "wall": 8472.09999999404,
+              "media": 0.583333,
+              "presented": 15
+            },
+            {
+              "wall": 8505,
+              "media": 0.625,
+              "presented": 16
+            },
+            {
+              "wall": 8536.19999999553,
+              "media": 0.666667,
+              "presented": 17
+            },
+            {
+              "wall": 8569.5,
+              "media": 0.708333,
+              "presented": 18
+            },
+            {
+              "wall": 8619.5,
+              "media": 0.75,
+              "presented": 19
+            },
+            {
+              "wall": 8671.09999999404,
+              "media": 0.791667,
+              "presented": 20
+            },
+            {
+              "wall": 8721.79999999702,
+              "media": 0.833333,
+              "presented": 21
+            },
+            {
+              "wall": 8755.29999999702,
+              "media": 0.875,
+              "presented": 22
+            },
+            {
+              "wall": 8805,
+              "media": 0.916667,
+              "presented": 23
+            },
+            {
+              "wall": 8838.69999999553,
+              "media": 0.958333,
+              "presented": 24
+            },
+            {
+              "wall": 8887.59999999404,
+              "media": 1,
+              "presented": 25
+            },
+            {
+              "wall": 8921.69999999553,
+              "media": 1.041667,
+              "presented": 26
+            },
+            {
+              "wall": 8952.89999999851,
+              "media": 1.083333,
+              "presented": 27
+            },
+            {
+              "wall": 8986.29999999702,
+              "media": 1.125,
+              "presented": 28
+            },
+            {
+              "wall": 9055.19999999553,
+              "media": 1.166667,
+              "presented": 29
+            },
+            {
+              "wall": 9092.69999999553,
+              "media": 1.208333,
+              "presented": 30
+            },
+            {
+              "wall": 9119.69999999553,
+              "media": 1.25,
+              "presented": 31
+            },
+            {
+              "wall": 9153.09999999404,
+              "media": 1.291667,
+              "presented": 32
+            },
+            {
+              "wall": 9221.19999999553,
+              "media": 1.333333,
+              "presented": 33
+            },
+            {
+              "wall": 9236.19999999553,
+              "media": 1.375,
+              "presented": 34
+            },
+            {
+              "wall": 9305.29999999702,
+              "media": 1.416667,
+              "presented": 35
+            },
+            {
+              "wall": 9339.89999999851,
+              "media": 1.458333,
+              "presented": 36
+            },
+            {
+              "wall": 9389.09999999404,
+              "media": 1.5,
+              "presented": 37
+            },
+            {
+              "wall": 9422.5,
+              "media": 1.541667,
+              "presented": 38
+            },
+            {
+              "wall": 9453.89999999851,
+              "media": 1.583333,
+              "presented": 39
+            },
+            {
+              "wall": 9504.79999999702,
+              "media": 1.625,
+              "presented": 40
+            },
+            {
+              "wall": 9554,
+              "media": 1.666667,
+              "presented": 41
+            },
+            {
+              "wall": 9592.39999999851,
+              "media": 1.708333,
+              "presented": 42
+            },
+            {
+              "wall": 9637.89999999851,
+              "media": 1.75,
+              "presented": 43
+            },
+            {
+              "wall": 9674.79999999702,
+              "media": 1.791667,
+              "presented": 44
+            },
+            {
+              "wall": 9722.19999999553,
+              "media": 1.833333,
+              "presented": 45
+            },
+            {
+              "wall": 9753.89999999851,
+              "media": 1.875,
+              "presented": 46
+            },
+            {
+              "wall": 9804,
+              "media": 1.916667,
+              "presented": 47
+            },
+            {
+              "wall": 9837.5,
+              "media": 1.958333,
+              "presented": 48
+            },
+            {
+              "wall": 9887.29999999702,
+              "media": 2,
+              "presented": 49
+            },
+            {
+              "wall": 9920.59999999404,
+              "media": 2.041667,
+              "presented": 50
+            },
+            {
+              "wall": 9972.79999999702,
+              "media": 2.083333,
+              "presented": 51
+            },
+            {
+              "wall": 10005.69999999553,
+              "media": 2.125,
+              "presented": 52
+            },
+            {
+              "wall": 10055.39999999851,
+              "media": 2.166667,
+              "presented": 53
+            },
+            {
+              "wall": 10091.39999999851,
+              "media": 2.208333,
+              "presented": 54
+            },
+            {
+              "wall": 10139.59999999404,
+              "media": 2.25,
+              "presented": 55
+            },
+            {
+              "wall": 10171.29999999702,
+              "media": 2.291667,
+              "presented": 56
+            },
+            {
+              "wall": 10224.09999999404,
+              "media": 2.333333,
+              "presented": 57
+            },
+            {
+              "wall": 10236.69999999553,
+              "media": 2.375,
+              "presented": 58
+            },
+            {
+              "wall": 10305.5,
+              "media": 2.416667,
+              "presented": 59
+            },
+            {
+              "wall": 10337.59999999404,
+              "media": 2.458333,
+              "presented": 60
+            },
+            {
+              "wall": 10388.39999999851,
+              "media": 2.5,
+              "presented": 61
+            },
+            {
+              "wall": 10424.69999999553,
+              "media": 2.541667,
+              "presented": 62
+            },
+            {
+              "wall": 10452.89999999851,
+              "media": 2.583333,
+              "presented": 63
+            },
+            {
+              "wall": 10486.19999999553,
+              "media": 2.625,
+              "presented": 64
+            },
+            {
+              "wall": 10536.19999999553,
+              "media": 2.666667,
+              "presented": 65
+            },
+            {
+              "wall": 10569.5,
+              "media": 2.708333,
+              "presented": 66
+            },
+            {
+              "wall": 10638.5,
+              "media": 2.75,
+              "presented": 67
+            },
+            {
+              "wall": 10673.69999999553,
+              "media": 2.791667,
+              "presented": 68
+            },
+            {
+              "wall": 10724.19999999553,
+              "media": 2.833333,
+              "presented": 69
+            },
+            {
+              "wall": 10756.19999999553,
+              "media": 2.875,
+              "presented": 70
+            }
+          ],
+          "totalVideoFrames": 60,
+          "droppedVideoFrames": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-understory.mp4?v=2.3",
+              "time": 2.937176
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "understory",
+            "display": "block",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 1260,
+              "y": 509.1796875,
+              "width": 155,
+              "height": 101.640625,
+              "top": 509.1796875,
+              "right": 1415,
+              "bottom": 610.8203125,
+              "left": 1260
+            }
+          }
+        },
+        {
+          "visit": 2,
+          "id": "return",
+          "clip": "breathing",
+          "elapsed": 2500.10000000149,
+          "rafFps": 56.79772809084251,
+          "presentedFps": 23.19907203710469,
+          "frameTimes": [
+            {
+              "wall": 11801.29999999702,
+              "media": 0.25,
+              "presented": 6
+            },
+            {
+              "wall": 11858.39999999851,
+              "media": 0.291667,
+              "presented": 7
+            },
+            {
+              "wall": 11914,
+              "media": 0.333333,
+              "presented": 8
+            },
+            {
+              "wall": 11974.69999999553,
+              "media": 0.416667,
+              "presented": 9
+            },
+            {
+              "wall": 11997.79999999702,
+              "media": 0.458333,
+              "presented": 10
+            },
+            {
+              "wall": 12047.29999999702,
+              "media": 0.5,
+              "presented": 11
+            },
+            {
+              "wall": 12069.89999999851,
+              "media": 0.541667,
+              "presented": 12
+            },
+            {
+              "wall": 12106.59999999404,
+              "media": 0.583333,
+              "presented": 13
+            },
+            {
+              "wall": 12153.39999999851,
+              "media": 0.625,
+              "presented": 14
+            },
+            {
+              "wall": 12203.5,
+              "media": 0.666667,
+              "presented": 15
+            },
+            {
+              "wall": 12254.79999999702,
+              "media": 0.708333,
+              "presented": 16
+            },
+            {
+              "wall": 12289.39999999851,
+              "media": 0.75,
+              "presented": 17
+            },
+            {
+              "wall": 12337.59999999404,
+              "media": 0.791667,
+              "presented": 18
+            },
+            {
+              "wall": 12372.89999999851,
+              "media": 0.833333,
+              "presented": 19
+            },
+            {
+              "wall": 12421.19999999553,
+              "media": 0.875,
+              "presented": 20
+            },
+            {
+              "wall": 12436.5,
+              "media": 0.916667,
+              "presented": 21
+            },
+            {
+              "wall": 12503.59999999404,
+              "media": 0.958333,
+              "presented": 22
+            },
+            {
+              "wall": 12519.39999999851,
+              "media": 1,
+              "presented": 23
+            },
+            {
+              "wall": 12594,
+              "media": 1.041667,
+              "presented": 24
+            },
+            {
+              "wall": 12622.59999999404,
+              "media": 1.083333,
+              "presented": 25
+            },
+            {
+              "wall": 12672.69999999553,
+              "media": 1.125,
+              "presented": 26
+            },
+            {
+              "wall": 12705.19999999553,
+              "media": 1.166667,
+              "presented": 27
+            },
+            {
+              "wall": 12755.69999999553,
+              "media": 1.208333,
+              "presented": 28
+            },
+            {
+              "wall": 12789.59999999404,
+              "media": 1.25,
+              "presented": 29
+            },
+            {
+              "wall": 12838.69999999553,
+              "media": 1.291667,
+              "presented": 30
+            },
+            {
+              "wall": 12872.59999999404,
+              "media": 1.333333,
+              "presented": 31
+            },
+            {
+              "wall": 12920.89999999851,
+              "media": 1.375,
+              "presented": 32
+            },
+            {
+              "wall": 12936,
+              "media": 1.416667,
+              "presented": 33
+            },
+            {
+              "wall": 13005.29999999702,
+              "media": 1.458333,
+              "presented": 34
+            },
+            {
+              "wall": 13019.39999999851,
+              "media": 1.5,
+              "presented": 35
+            },
+            {
+              "wall": 13089.29999999702,
+              "media": 1.541667,
+              "presented": 36
+            },
+            {
+              "wall": 13102.69999999553,
+              "media": 1.583333,
+              "presented": 37
+            },
+            {
+              "wall": 13173,
+              "media": 1.625,
+              "presented": 38
+            },
+            {
+              "wall": 13204.79999999702,
+              "media": 1.666667,
+              "presented": 39
+            },
+            {
+              "wall": 13254.89999999851,
+              "media": 1.708333,
+              "presented": 40
+            },
+            {
+              "wall": 13289.19999999553,
+              "media": 1.75,
+              "presented": 41
+            },
+            {
+              "wall": 13338.5,
+              "media": 1.791667,
+              "presented": 42
+            },
+            {
+              "wall": 13371.5,
+              "media": 1.833333,
+              "presented": 43
+            },
+            {
+              "wall": 13420.59999999404,
+              "media": 1.875,
+              "presented": 44
+            },
+            {
+              "wall": 13454.69999999553,
+              "media": 1.916667,
+              "presented": 45
+            },
+            {
+              "wall": 13485.89999999851,
+              "media": 1.958333,
+              "presented": 46
+            },
+            {
+              "wall": 13519.39999999851,
+              "media": 2,
+              "presented": 47
+            },
+            {
+              "wall": 13569.39999999851,
+              "media": 2.041667,
+              "presented": 48
+            },
+            {
+              "wall": 13603.39999999851,
+              "media": 2.083333,
+              "presented": 49
+            },
+            {
+              "wall": 13671.09999999404,
+              "media": 2.125,
+              "presented": 50
+            },
+            {
+              "wall": 13685.89999999851,
+              "media": 2.166667,
+              "presented": 51
+            },
+            {
+              "wall": 13735.89999999851,
+              "media": 2.208333,
+              "presented": 52
+            },
+            {
+              "wall": 13787.39999999851,
+              "media": 2.25,
+              "presented": 53
+            },
+            {
+              "wall": 13838.89999999851,
+              "media": 2.291667,
+              "presented": 54
+            },
+            {
+              "wall": 13871.59999999404,
+              "media": 2.333333,
+              "presented": 55
+            },
+            {
+              "wall": 13903,
+              "media": 2.375,
+              "presented": 56
+            },
+            {
+              "wall": 13954.09999999404,
+              "media": 2.416667,
+              "presented": 57
+            },
+            {
+              "wall": 14004.59999999404,
+              "media": 2.458333,
+              "presented": 58
+            },
+            {
+              "wall": 14039,
+              "media": 2.5,
+              "presented": 59
+            },
+            {
+              "wall": 14088.09999999404,
+              "media": 2.541667,
+              "presented": 60
+            },
+            {
+              "wall": 14124.39999999851,
+              "media": 2.583333,
+              "presented": 61
+            },
+            {
+              "wall": 14172.09999999404,
+              "media": 2.625,
+              "presented": 62
+            },
+            {
+              "wall": 14205.39999999851,
+              "media": 2.666667,
+              "presented": 63
+            }
+          ],
+          "totalVideoFrames": 61,
+          "droppedVideoFrames": 2,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 900
+          },
+          "videos": [
+            {
+              "playing": true,
+              "src": "http://127.0.0.1:4281/media/forest-breathing.mp4?v=2.3",
+              "time": 2.704301
+            }
+          ],
+          "filters": "none",
+          "cue": {
+            "scene": "return",
+            "display": "block",
+            "colour": "rgb(234, 232, 223)",
+            "background": "rgba(11, 23, 18, 0.9)",
+            "rect": {
+              "x": 1260,
+              "y": 509.1796875,
+              "width": 155,
+              "height": 101.640625,
+              "top": 509.1796875,
+              "right": 1415,
+              "bottom": 610.8203125,
+              "left": 1260
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "videosAfterReturn": 0
+    }
+  ]
+}

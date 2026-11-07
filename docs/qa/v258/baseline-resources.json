@@ -1,0 +1,200 @@
+{
+  "resources": 17,
+  "results": [
+    {
+      "path": "/apple-touch-icon.png",
+      "status": 200,
+      "bytes": 18302
+    },
+    {
+      "path": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+      "status": 200,
+      "bytes": 22876
+    },
+    {
+      "path": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+      "status": 200,
+      "bytes": 19888
+    },
+    {
+      "path": "/assets/forest-knowledge-567686ce4e952632.css",
+      "status": 200,
+      "bytes": 4323
+    },
+    {
+      "path": "/assets/index-DKObstbk.css",
+      "status": 200,
+      "bytes": 48637
+    },
+    {
+      "path": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+      "status": 200,
+      "bytes": 14108
+    },
+    {
+      "path": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+      "status": 200,
+      "bytes": 8292
+    },
+    {
+      "path": "/assets/reading-7f829a14b0f92c80.css",
+      "status": 200,
+      "bytes": 3183
+    },
+    {
+      "path": "/brand-mark.svg",
+      "status": 200,
+      "bytes": 1758
+    },
+    {
+      "path": "/brand-wordmark.svg",
+      "status": 200,
+      "bytes": 3427
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "bytes": 50745
+    },
+    {
+      "path": "/favicon.svg",
+      "status": 200,
+      "bytes": 1825
+    },
+    {
+      "path": "/media/forest-breathing-poster.jpg?v=2.3",
+      "status": 200,
+      "bytes": 463839
+    },
+    {
+      "path": "/media/forest-final.jpg?v=2.3",
+      "status": 200,
+      "bytes": 396424
+    },
+    {
+      "path": "/media/forest-poster.jpg?v=2.3",
+      "status": 200,
+      "bytes": 660060
+    },
+    {
+      "path": "/site.webmanifest",
+      "status": 200,
+      "bytes": 270
+    },
+    {
+      "path": "/wallpapers/previews/desktop.webp",
+      "status": 200,
+      "bytes": 33198
+    },
+    {
+      "path": "/en",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/kas-ir-piepe",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/what-is-a-bracket-fungus",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-foni",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/forest-wallpapers",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-piezimes",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/field-notes",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-piezimes/001",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/field-notes/001",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-piezimes/002-caga",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/field-notes/002-chaga",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-piezimes/003-serpiepe",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/field-notes/003-chicken-of-the-woods",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-piezimes/004-latvijas-piepes",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/field-notes/004-common-bracket-fungi",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-piezimes/005-kritalas-un-laiks",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/field-notes/005-deadwood-and-time",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/meza-piezimes/006-lakas-plakanpiepe",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "path": "/en/field-notes/006-lacquered-bracket",
+      "method": "HEAD",
+      "status": 307
+    },
+    {
+      "url": "http://pie.pe/",
+      "status": 301,
+      "location": "https://pie.pe/"
+    },
+    {
+      "url": "http://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "status": 301,
+      "location": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/"
+    },
+    {
+      "url": "https://pie.pe/meza-piezimes/002-caga?from=audit",
+      "status": 307,
+      "location": "/meza-piezimes/002-caga/?from=audit"
+    }
+  ]
+}

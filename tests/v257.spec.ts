@@ -5,6 +5,8 @@ import { forestMetadata } from '../src/ForestPage'
 import { fieldNote } from '../src/forestKnowledge'
 import { forestPages, forestPath, notePath, fieldNotesPath, wallpapersPath, forestNavigation } from '../src/forestPaths'
 import { messages, readingPath, localePath } from '../src/i18n'
+import { readings } from '../src/reading'
+import { checkStaticMarkup, checkReadingResources } from './readingChecks'
 
 const origin = 'https://pie.pe', digest = (bytes: Buffer | string) => createHash('sha256').update(bytes).digest('hex')
 
@@ -21,7 +23,7 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
       const page = await context.newPage(), errors: string[] = []; page.on('pageerror', e => errors.push(e.message))
       await page.goto(path)
       await expect(page.locator('html')).toHaveAttribute('lang', locale)
-      await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.7')
+      await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.8')
       await expect(page.locator('h1')).toHaveCount(1); await expect(page.locator('h1')).toHaveText(meta.heading)
       await expect(page.locator('.reading-lead')).toHaveText(meta.lead)
       await expect(page).toHaveTitle(meta.title)
@@ -40,7 +42,7 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
       const visit = (v: unknown) => { if (v && typeof v === 'object') for (const [key, item] of Object.entries(v)) { if (key === '@type') types.push(String(item)); else if (key === '@id') ids.push(String(item)); else { expect(key).not.toMatch(/^(?:datePublished|dateModified|author|review|aggregateRating)$/); visit(item) } } }
       visit(data); expect(types).not.toEqual(expect.arrayContaining(['FAQPage'])); expect(types).not.toEqual(expect.arrayContaining(['Person'])); expect(types).not.toEqual(expect.arrayContaining(['Organization']))
       expect(ids.length).toBe(new Set(ids).size)
-      await expect(page.locator('#root, .world, video, audio, script:not([type="application/ld+json"])')).toHaveCount(0)
+      await checkStaticMarkup(page)
       await expect(page.locator('main h1, main .reading-lead').locator('xpath=ancestor::*[@data-nosnippet]')).toHaveCount(0)
       for (const [width, height] of [[390, 844], [800, 900], [1440, 900]]) {
         await page.setViewportSize({ width, height }); await page.evaluate(() => document.fonts.ready)
@@ -72,7 +74,7 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
         for (const caption of captions) expect(caption).toMatch(/mākslīgā intelekta|AI-generated/i)
         expect(data.image.map((image: { caption: string }) => image.caption)).toEqual(captions)
       }
-      expect(await page.evaluate(() => performance.getEntriesByType('resource').map(e => new URL(e.name).pathname).filter(p => /\.(?:js|mp4|mp3|ogg)$/.test(p)))).toEqual([])
+      await checkReadingResources(page,javaScriptEnabled)
       const other = locale === 'lv' ? 'en' : 'lv'
       await page.locator(`.reading-languages a[lang="${other}"]`).click()
       await expect(page).toHaveURL(new RegExp(forestPath(other, document) + '$'))
@@ -86,7 +88,7 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
 test('2.5.7 route graph, CSP hashes, honest species facts and all internal resources remain coherent', async ({ request, page }) => {
   const policy = /script-src ([^;]+)/.exec(await readFile('dist/_headers', 'utf8'))![1]
   expect(policy).not.toMatch(/unsafe-inline|unsafe-eval/)
-  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(21)
+  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(22)
   const paths = ['/', '/en/', readingPath('lv'), readingPath('en'), ...forestPages.flatMap(p => [forestPath('lv', p), forestPath('en', p)])]
   expect(new Set(paths).size).toBe(20)
   const links = new Set<string>(), titles = new Set<string>()
@@ -114,10 +116,14 @@ test('2.5.7 route graph, CSP hashes, honest species facts and all internal resou
   for (const number of ['002', '003', '004', '005', '006'] as const) expect(bundle).not.toContain(fieldNote('lv', number).lead)
 })
 
-test('2.5.7 2.5.6 guides, original note text, core cinema and every media/download asset remain byte-identical', async () => {
+test('2.5.7 original factual prose, notes, core cinema and every media/download asset remain preserved', async () => {
   const baseline = JSON.parse(await readFile('docs/qa/v257/baseline-inventory.json', 'utf8'))
-  for (const [path, hash] of Object.entries({ ...baseline.preservedGuides, ...baseline.preservedAssets, ...baseline.preservedNotes })) expect(digest(await readFile('dist/' + path)), path).toBe(hash)
-  for (const [path, hash] of Object.entries(baseline.preservedSource)) expect(digest(await readFile(path)), path).toBe(hash)
+  expect(readings).toEqual(JSON.parse(await readFile('docs/qa/v258/reading-copy-baseline.json','utf8')))
+  for (const [path, hash] of Object.entries({ ...baseline.preservedAssets, ...baseline.preservedNotes })) expect(digest(await readFile('dist/' + path)), path).toBe(hash)
+  // 2.5.8 explicitly enhances these four sources; full prose and real audio-graph
+  // regressions replace obsolete byte-equality, all other immutable guards remain.
+  const approved=new Set(['src/reading.ts','src/ReadingPage.tsx','src/reading.css','src/useForestAudio.ts'])
+  for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(await readFile(path)), path).toBe(hash)
 })
 
 for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: selective supported snippet labels preserve primary content, links and mobile control text`, async ({ page, request }) => {

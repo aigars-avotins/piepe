@@ -1,0 +1,39 @@
+{
+  "coreChromium": {
+    "passed": 89,
+    "skipped": 1,
+    "failures": 0,
+    "receipt": "chromium-results.json"
+  },
+  "finalIllustrationDelta": {
+    "chromium": 4,
+    "linuxWebKit": 4,
+    "failures": 0,
+    "command": "npm test -- tests/v258.spec.ts --project=chrome-desktop --project=webkit-iphone --grep 'four deadwood stages|every route has exact|touch slider'",
+    "linuxRuntime": "Official Debian libgles2_1.7.0-1+b2_amd64.deb extracted to workspace; ctypes confirms dynamic loading. Only inaccurate system ldconfig host-registry guard skipped; actual browser and all app assertions run."
+  },
+  "focusedDesktopNativeInputChrome": {
+    "passed": 1,
+    "failed": 0,
+    "command": "npm test -- tests/v252.spec.ts --project=chrome-desktop --grep 'native journey 1512.*wheel/keyboard'"
+  },
+  "checks": {
+    "typecheck": "pass",
+    "lint": "pass",
+    "worker": {
+      "pass": 11,
+      "failed": 0
+    },
+    "build": "pass",
+    "localWranglerHttp": {
+      "pass": 127,
+      "failed": 0
+    }
+  },
+  "sourceSha256": {
+    "src/ConceptArt.tsx": "ed78e445dea883428c0add0c7f87acc0c8b10b8ce0221c207d265f12b108a458",
+    "src/readingExperiences.css": "8a0b8802a50ee80290b43a2b3bc59c31c57fdddb814356c22d85fe36b949e67e",
+    "tests/v258.spec.ts": "8a4c763dcff0a895dfaffe125377de081a79c1267852103b52f64cac74de9779",
+    "tests/v252.spec.ts": "24d11f186adf63bb5940dc95ccf3e661649183bffcd5c3aaa35f3b4196168a40"
+  }
+}
