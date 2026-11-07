@@ -1,3 +1,4 @@
+import { releaseVersion, releaseMilestone } from './release'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { localePath, messages, readingPath } from './i18n'
 import type { Locale } from './i18n'
@@ -97,9 +98,9 @@ export function renderForestDocument(locale: Locale, page: ForestPage, styleshee
     {stylesheets.map(href => <link key={href} rel="stylesheet" href={href} />)}{fonts.map(href => <link key={href} rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" href={href} />)}
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(forestSchema(locale, page)).replace(/</g, '\\u003c') }} />
     {client&&<script type="module" src={client} data-reading-tools="" />}
-  </head><body className="reading-page knowledge-page" data-version="2.5.8" data-page={page.kind}>
+  </head><body className="reading-page knowledge-page" data-version={releaseVersion} data-milestone={releaseMilestone} data-page={page.kind}>
     <a className="skip-content" href="#reading"><span data-nosnippet="">{messages[locale].skipContent}</span></a>
-    <header className="reading-header"><a className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <a key={lang} lang={lang} hrefLang={lang} href={forestPath(lang, page)} aria-current={lang === locale ? 'page' : undefined}><span data-nosnippet="">{lang.toUpperCase()}</span></a>)}</nav></header>
-    <main id="reading" tabIndex={-1} className={`reading-main ${page.kind === 'note' ? '' : 'knowledge-wide'}`}>{renderContent(locale, page)}<footer className="reading-return"><a href={localePath(locale)}>{t.forest} <Arrow /></a><AtmosphereSelector locale={locale} /></footer></main>
+    <header className="reading-header"><a className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <a key={lang} lang={lang} hrefLang={lang} href={forestPath(lang, page)} aria-current={lang === locale ? 'page' : undefined}><span data-nosnippet="">{lang.toUpperCase()}</span></a>)}</nav><div className="atmosphere-slot"><AtmosphereSelector locale={locale}/></div></header>
+    <main id="reading" tabIndex={-1} className={`reading-main ${page.kind === 'note' ? '' : 'knowledge-wide'}`}>{renderContent(locale, page)}<footer className="reading-return"><a href={localePath(locale)}>{t.forest} <Arrow /></a></footer></main>
   </body></html>)
 }

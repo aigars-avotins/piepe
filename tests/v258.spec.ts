@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto'
 import { messages, readingPath, localePath } from '../src/i18n'
 import { forestPages, forestPath, notePath, fieldNotesPath } from '../src/forestPaths'
 import { forestSchema } from '../src/ForestPage'
+import { readings } from '../src/reading'
 import { experienceCopy } from '../src/experienceCopy'
 import { checkStaticMarkup } from './readingChecks'
 import { nativeDiagnostics } from './nativeDiagnostics'
@@ -206,7 +207,7 @@ test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs 
   const fixture=JSON.parse(await readFile('docs/qa/v258/baseline-inventory.json','utf8'))
   for(const[path,hash]of Object.entries(fixture.publicAssets))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
   for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(fixture.sources[path])
-  const guide=await(await request.get(readingPath('lv'))).text(),home=await(await request.get('/')).text(),entry=/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],bundle=await readFile('dist'+entry,'utf8');expect(guide).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).not.toContain(experienceCopy.lv.xray.stories[0].text)
+  const guide=await(await request.get(readingPath('lv'))).text(),home=await(await request.get('/')).text(),entry=/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],bundle=await readFile('dist'+entry,'utf8');expect(guide).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).not.toContain(readings.lv.sections[1].paragraphs[0]) // Shared homepage X-Ray is intentional in 2.5.8.1; long-form guide still stays static.
 })
 
 test('2.5.8 public route baseline remains real HTML on the independent CI network',async({request},info)=>{

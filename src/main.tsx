@@ -15,3 +15,6 @@ const root = document.getElementById('root')!
 const app = <App initialLocale={document.documentElement.lang === 'en' ? 'en' : 'lv'} />
 if (root.hasChildNodes()) hydrateRoot(root, app)
 else createRoot(root).render(app)
+
+import './readingExperiences.css'
+import './homeExperiences.css'

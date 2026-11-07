@@ -1,0 +1,440 @@
+[
+  {
+    "locale": "lv",
+    "width": 390,
+    "hero": [
+      {
+        "class": "hero-copy",
+        "rect": {
+          "x": 24,
+          "y": 0,
+          "width": 263.625,
+          "height": 303.9375,
+          "top": 0,
+          "right": 287.625,
+          "bottom": 303.9375,
+          "left": 24
+        }
+      },
+      {
+        "class": "fungus-annotation",
+        "rect": {
+          "x": 290.015625,
+          "y": 548.59375,
+          "width": 44,
+          "height": 44,
+          "top": 548.59375,
+          "right": 334.015625,
+          "bottom": 592.59375,
+          "left": 290.015625
+        }
+      },
+      {
+        "class": "hero-foot title-enter",
+        "rect": {
+          "x": 24,
+          "y": 758,
+          "width": 342,
+          "height": 64,
+          "top": 758,
+          "right": 366,
+          "bottom": 822,
+          "left": 24
+        }
+      },
+      {
+        "class": "discovery-entry",
+        "rect": {
+          "x": 24,
+          "y": 758,
+          "width": 234.515625,
+          "height": 64,
+          "top": 758,
+          "right": 258.515625,
+          "bottom": 822,
+          "left": 24
+        }
+      },
+      {
+        "class": "sound-control",
+        "rect": {
+          "x": 20,
+          "y": 677,
+          "width": 214.5,
+          "height": 55,
+          "top": 677,
+          "right": 234.5,
+          "bottom": 732,
+          "left": 20
+        }
+      }
+    ],
+    "dragged": "30",
+    "errors": []
+  },
+  {
+    "locale": "lv",
+    "width": 800,
+    "hero": [
+      {
+        "class": "hero-copy",
+        "rect": {
+          "x": 52,
+          "y": 309.25,
+          "width": 332.15625,
+          "height": 281.484375,
+          "top": 309.25,
+          "right": 384.15625,
+          "bottom": 590.734375,
+          "left": 52
+        }
+      },
+      {
+        "class": "fungus-annotation",
+        "rect": {
+          "x": 752,
+          "y": 648,
+          "width": 44,
+          "height": 44,
+          "top": 648,
+          "right": 796,
+          "bottom": 692,
+          "left": 752
+        }
+      },
+      {
+        "class": "hero-foot title-enter",
+        "rect": {
+          "x": 52,
+          "y": 811,
+          "width": 696,
+          "height": 56,
+          "top": 811,
+          "right": 748,
+          "bottom": 867,
+          "left": 52
+        }
+      },
+      {
+        "class": "discovery-entry",
+        "rect": {
+          "x": 52,
+          "y": 811,
+          "width": 310.53125,
+          "height": 56,
+          "top": 811,
+          "right": 362.53125,
+          "bottom": 867,
+          "left": 52
+        }
+      },
+      {
+        "class": "sound-control",
+        "rect": {
+          "x": 20,
+          "y": 727,
+          "width": 214.5,
+          "height": 55,
+          "top": 727,
+          "right": 234.5,
+          "bottom": 782,
+          "left": 20
+        }
+      }
+    ],
+    "dragged": "75",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "hero": [
+      {
+        "class": "hero-copy",
+        "rect": {
+          "x": 24,
+          "y": 0,
+          "width": 285.59375,
+          "height": 303.9375,
+          "top": 0,
+          "right": 309.59375,
+          "bottom": 303.9375,
+          "left": 24
+        }
+      },
+      {
+        "class": "fungus-annotation",
+        "rect": {
+          "x": 290.015625,
+          "y": 548.59375,
+          "width": 44,
+          "height": 44,
+          "top": 548.59375,
+          "right": 334.015625,
+          "bottom": 592.59375,
+          "left": 290.015625
+        }
+      },
+      {
+        "class": "hero-foot title-enter",
+        "rect": {
+          "x": 24,
+          "y": 758,
+          "width": 342,
+          "height": 64,
+          "top": 758,
+          "right": 366,
+          "bottom": 822,
+          "left": 24
+        }
+      },
+      {
+        "class": "discovery-entry",
+        "rect": {
+          "x": 24,
+          "y": 758,
+          "width": 246.90625,
+          "height": 64,
+          "top": 758,
+          "right": 270.90625,
+          "bottom": 822,
+          "left": 24
+        }
+      },
+      {
+        "class": "sound-control",
+        "rect": {
+          "x": 20,
+          "y": 677,
+          "width": 203.1875,
+          "height": 55,
+          "top": 677,
+          "right": 223.1875,
+          "bottom": 732,
+          "left": 20
+        }
+      }
+    ],
+    "dragged": "30",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 800,
+    "hero": [
+      {
+        "class": "hero-copy",
+        "rect": {
+          "x": 52,
+          "y": 309.25,
+          "width": 385.59375,
+          "height": 281.484375,
+          "top": 309.25,
+          "right": 437.59375,
+          "bottom": 590.734375,
+          "left": 52
+        }
+      },
+      {
+        "class": "fungus-annotation",
+        "rect": {
+          "x": 752,
+          "y": 648,
+          "width": 44,
+          "height": 44,
+          "top": 648,
+          "right": 796,
+          "bottom": 692,
+          "left": 752
+        }
+      },
+      {
+        "class": "hero-foot title-enter",
+        "rect": {
+          "x": 52,
+          "y": 811,
+          "width": 696,
+          "height": 56,
+          "top": 811,
+          "right": 748,
+          "bottom": 867,
+          "left": 52
+        }
+      },
+      {
+        "class": "discovery-entry",
+        "rect": {
+          "x": 52,
+          "y": 811,
+          "width": 325.921875,
+          "height": 56,
+          "top": 811,
+          "right": 377.921875,
+          "bottom": 867,
+          "left": 52
+        }
+      },
+      {
+        "class": "sound-control",
+        "rect": {
+          "x": 20,
+          "y": 727,
+          "width": 203.1875,
+          "height": 55,
+          "top": 727,
+          "right": 223.1875,
+          "bottom": 782,
+          "left": 20
+        }
+      }
+    ],
+    "dragged": "75",
+    "errors": []
+  },
+  {
+    "locale": "lv",
+    "width": 1440,
+    "hero": [
+      {
+        "class": "hero-copy",
+        "rect": {
+          "x": 93.59375,
+          "y": 250.765625,
+          "width": 536.28125,
+          "height": 398.46875,
+          "top": 250.765625,
+          "right": 629.875,
+          "bottom": 649.234375,
+          "left": 93.59375
+        }
+      },
+      {
+        "class": "fungus-annotation",
+        "rect": {
+          "x": 1072,
+          "y": 648,
+          "width": 234.53125,
+          "height": 46,
+          "top": 648,
+          "right": 1306.53125,
+          "bottom": 694,
+          "left": 1072
+        }
+      },
+      {
+        "class": "hero-foot title-enter",
+        "rect": {
+          "x": 93.59375,
+          "y": 811,
+          "width": 1252.8125,
+          "height": 56,
+          "top": 811,
+          "right": 1346.40625,
+          "bottom": 867,
+          "left": 93.59375
+        }
+      },
+      {
+        "class": "discovery-entry",
+        "rect": {
+          "x": 93.59375,
+          "y": 811,
+          "width": 310.53125,
+          "height": 56,
+          "top": 811,
+          "right": 404.125,
+          "bottom": 867,
+          "left": 93.59375
+        }
+      },
+      {
+        "class": "sound-control",
+        "rect": {
+          "x": 20,
+          "y": 727,
+          "width": 214.5,
+          "height": 55,
+          "top": 727,
+          "right": 234.5,
+          "bottom": 782,
+          "left": 20
+        }
+      }
+    ],
+    "dragged": "68",
+    "errors": []
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "hero": [
+      {
+        "class": "hero-copy",
+        "rect": {
+          "x": 93.59375,
+          "y": 250.765625,
+          "width": 551.609375,
+          "height": 398.46875,
+          "top": 250.765625,
+          "right": 645.203125,
+          "bottom": 649.234375,
+          "left": 93.59375
+        }
+      },
+      {
+        "class": "fungus-annotation",
+        "rect": {
+          "x": 1072,
+          "y": 648,
+          "width": 182.90625,
+          "height": 46,
+          "top": 648,
+          "right": 1254.90625,
+          "bottom": 694,
+          "left": 1072
+        }
+      },
+      {
+        "class": "hero-foot title-enter",
+        "rect": {
+          "x": 93.59375,
+          "y": 811,
+          "width": 1252.8125,
+          "height": 56,
+          "top": 811,
+          "right": 1346.40625,
+          "bottom": 867,
+          "left": 93.59375
+        }
+      },
+      {
+        "class": "discovery-entry",
+        "rect": {
+          "x": 93.59375,
+          "y": 811,
+          "width": 325.921875,
+          "height": 56,
+          "top": 811,
+          "right": 419.515625,
+          "bottom": 867,
+          "left": 93.59375
+        }
+      },
+      {
+        "class": "sound-control",
+        "rect": {
+          "x": 20,
+          "y": 727,
+          "width": 203.1875,
+          "height": 55,
+          "top": 727,
+          "right": 223.1875,
+          "bottom": 782,
+          "left": 20
+        }
+      }
+    ],
+    "dragged": "68",
+    "errors": []
+  }
+]

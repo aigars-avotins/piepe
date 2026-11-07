@@ -1,3 +1,4 @@
+import { bindXray } from './experienceControls'
 // Progressive controls for static documents. No router, React, video or audio runtime.
 const themeRoot=document.documentElement
 function restoreStaticAtmosphere() {
@@ -19,35 +20,7 @@ const connection=(navigator as Navigator & { connection?: { saveData?: boolean; 
 const staticPreferences=()=>themeRoot.toggleAttribute('data-save-data',!!connection?.saveData||['2g','slow-2g'].includes(connection?.effectiveType||''))
 staticPreferences();connection?.addEventListener?.('change',staticPreferences)
 
-document.querySelectorAll<HTMLElement>('[data-xray]').forEach(section=>{
-  const range=section.querySelector<HTMLInputElement>('[data-xray-range]')!,output=section.querySelector<HTMLOutputElement>('[data-xray-output]')!
-  const update=()=>{
-    const value=Math.max(0,Math.min(100,Number(range.value)))
-    section.style.setProperty('--reveal',`${value}%`)
-    const text=`${value}% ${range.dataset.outputLabel}`;range.setAttribute('aria-valuetext',text);output.value=text
-  }
-  range.addEventListener('input',update);range.addEventListener('change',()=>{section.dataset.touched='true'})
-  const handle=section.querySelector<HTMLElement>('[data-xray-handle]')!,view=section.querySelector<HTMLElement>('.xray-view')!
-  let drag: { pointer: number; x: number; y: number; value: number; width: number; moved: boolean } | undefined
-  handle.addEventListener('pointerdown',event=>{
-    if(event.button!==0)return
-    drag={pointer:event.pointerId,x:event.clientX,y:event.clientY,value:Number(range.value),width:view.getBoundingClientRect().width,moved:false}
-    handle.setPointerCapture(event.pointerId);range.focus({preventScroll:true})
-  })
-  handle.addEventListener('pointermove',event=>{
-    if(!drag||drag.pointer!==event.pointerId)return
-    const dx=event.clientX-drag.x,dy=event.clientY-drag.y
-    if(!drag.moved&&(Math.abs(dx)<6||Math.abs(dx)<=Math.abs(dy)*1.2))return
-    drag.moved=true;range.value=String(Math.round(drag.value+dx/drag.width*100));update()
-  })
-  const stopDrag=()=>{if(drag?.moved)section.dataset.touched='true';drag=undefined}
-  handle.addEventListener('pointerup',stopDrag);handle.addEventListener('pointercancel',stopDrag);handle.addEventListener('lostpointercapture',stopDrag)
-  section.querySelectorAll<HTMLAnchorElement>('[data-xray-point]').forEach(point=>point.addEventListener('click',()=>{
-    const story=document.getElementById(`xray-${point.dataset.xrayPoint}`) as HTMLDetailsElement|null
-    if(story){story.open=true;story.querySelector('summary')?.focus({preventScroll:true})}
-  }))
-  update();section.dataset.enhanced='true';section.querySelector<HTMLElement>('[data-xray-controls]')!.hidden=false
-})
+document.querySelectorAll<HTMLElement>('[data-xray]').forEach(bindXray)
 
 document.querySelectorAll<HTMLDetailsElement>('[data-atlas-card]').forEach(card=>{
   const close=()=>{card.open=false;card.querySelector('summary')?.focus({preventScroll:true})}

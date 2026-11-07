@@ -1,3 +1,4 @@
+import { releaseVersion } from '../src/release'
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
@@ -23,7 +24,7 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
       const page = await context.newPage(), errors: string[] = []; page.on('pageerror', e => errors.push(e.message))
       await page.goto(path)
       await expect(page.locator('html')).toHaveAttribute('lang', locale)
-      await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.8')
+      await expect(page.locator('body')).toHaveAttribute('data-version', releaseVersion)
       await expect(page.locator('h1')).toHaveCount(1); await expect(page.locator('h1')).toHaveText(meta.heading)
       await expect(page.locator('.reading-lead')).toHaveText(meta.lead)
       await expect(page).toHaveTitle(meta.title)

@@ -1,0 +1,89 @@
+[
+  {
+    "name": "bark",
+    "source": "public/wallpapers/piepe-forest-desktop-5120x2880.jpg",
+    "sourceSha256": "f7ff27c5c4f088d9f7935fe970858b2097b6471b9ce072bfeddcf7f2cb3e5045",
+    "crop": [
+      2600,
+      80,
+      3300,
+      1180
+    ],
+    "rotationDegrees": 90,
+    "width": 1100,
+    "height": 700,
+    "bytes": 38322,
+    "url": "/experience/bark-b384664d558b.webp",
+    "sha256": "b384664d558bb6e38d0d869ceb420cd16d2a8b6d4d22169d8239c716c07e00e0",
+    "interpretation": "Approved existing AI forest artwork; downsampled or rotated crop only, not new generation, specimen photography or anatomical evidence."
+  },
+  {
+    "name": "habitat",
+    "source": "public/wallpapers/piepe-forest-desktop-5120x2880.jpg",
+    "sourceSha256": "f7ff27c5c4f088d9f7935fe970858b2097b6471b9ce072bfeddcf7f2cb3e5045",
+    "crop": [
+      0,
+      100,
+      2400,
+      1450
+    ],
+    "rotationDegrees": 0,
+    "width": 1600,
+    "height": 900,
+    "bytes": 62982,
+    "url": "/experience/habitat-7f403f9d0062.webp",
+    "sha256": "7f403f9d00624fb49214371af3f6bc576fe23fb4072789143c9e7f1ad982b0b1",
+    "interpretation": "Approved existing AI forest artwork; downsampled or rotated crop only, not new generation, specimen photography or anatomical evidence."
+  },
+  {
+    "name": "moss",
+    "source": "public/media/forest-understory-final.jpg",
+    "sourceSha256": "37a5b7f3a00555c1148a5814827ab11a34e2737f1527201509f22383c0c88e3c",
+    "crop": [
+      0,
+      650,
+      1500,
+      988
+    ],
+    "rotationDegrees": 0,
+    "width": 1200,
+    "height": 270,
+    "bytes": 40134,
+    "url": "/experience/moss-81ca0dac4feb.webp",
+    "sha256": "81ca0dac4febdb113a8550bf9bcb61557a0e678b1ee41ac88bb680ea7dd0c187",
+    "interpretation": "Approved existing AI forest artwork; downsampled or rotated crop only, not new generation, specimen photography or anatomical evidence."
+  },
+  {
+    "name": "surface",
+    "source": "public/media/forest-awakening-final.jpg",
+    "sourceSha256": "c33d477e66a0d2fa752f52f134507199510843f864b38ddf6620e9cc8b109923",
+    "crop": null,
+    "rotationDegrees": 0,
+    "width": 1600,
+    "height": 900,
+    "bytes": 91052,
+    "url": "/experience/surface-550a981804e4.webp",
+    "sha256": "550a981804e4abb273d78aecef10859ce6818818b900545b95209b6feded10f5",
+    "interpretation": "Approved existing AI forest artwork; downsampled or rotated crop only, not new generation, specimen photography or anatomical evidence."
+  },
+  {
+    "name": "atlas-preview",
+    "source": "Rendered SurfaceArt pores, gills, smooth/teeth overview",
+    "width": 560,
+    "height": 320,
+    "bytes": 20432,
+    "url": "/experience/atlas-preview-8eb7ab501796.webp",
+    "sha256": "8eb7ab5017960a0c8568d3477f57d63048182ca8a7207c0f90f73a9fe1f10a8b",
+    "interpretation": "Raster preview of this release\u2019s original coded illustration, rendered by Chromium and downsampled. Not a photograph or new AI generation."
+  },
+  {
+    "name": "time-preview",
+    "source": "Rendered DeadwoodArt stage 03, including original caption",
+    "width": 560,
+    "height": 320,
+    "bytes": 21360,
+    "url": "/experience/time-preview-536b180370d8.webp",
+    "sha256": "536b180370d824df33c0f50d23c2d26a2c86cd4bf0847e3ea8134b609d150c0b",
+    "interpretation": "Raster preview of this release\u2019s original coded illustration, rendered by Chromium and downsampled. Not a photograph or new AI generation."
+  }
+]

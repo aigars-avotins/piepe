@@ -1,3 +1,4 @@
+import { releaseVersion } from '../src/release'
 import { expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
 import { localePath, readingPath } from '../src/i18n'
@@ -23,7 +24,7 @@ export async function checkReading(page: Page, locale: Locale, options: { cloudf
   const t = readings[locale], url = 'https://pie.pe' + readingPath(locale)
   await expect(page.locator('html')).toHaveAttribute('lang', locale)
   await expect(page).toHaveTitle(t.title)
-  await expect(page.locator('body')).toHaveAttribute('data-version', '2.5.8')
+  await expect(page.locator('body')).toHaveAttribute('data-version', releaseVersion)
   await expect(page.locator('h1')).toHaveCount(1)
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(t.heading)
   await expect(page.locator('.reading-lead')).toContainText(t.lead)
