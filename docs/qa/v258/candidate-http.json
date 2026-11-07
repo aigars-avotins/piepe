@@ -1,6 +1,6 @@
 {
   "method": "Actual local Wrangler/Miniflare HTTP (existing piepe configuration), candidate 2.5.8; authored head metadata and every inline hash compared to dist; strict static tools module and prepaint bootstrap only. Production is unchanged.",
-  "verifiedAtUtc": "2026-11-07T09:41:47.075884+00:00",
+  "verifiedAtUtc": "2026-11-07T10:11:40.254514+00:00",
   "results": [
     {
       "path": "/",
@@ -694,7 +694,7 @@
       "status": 200,
       "contentType": "image/png",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"521ebfaab2feba0313cbf3d02b06681a\"",
+      "etag": "\"cf3d7e72af989fec5661f4641e72c254\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -703,7 +703,7 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"d159148073c5625fcc58f72b27d95973\"",
+      "etag": "\"f7b870f13b0c4b3583bea2bdb395442b\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -712,16 +712,16 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"19c1dd4f61ade1c9d44322c78c6e72f9\"",
+      "etag": "\"ba4cace4b68720ee17d529e8bfec4bbe\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
     {
-      "path": "/assets/forest-experience-41c31d2b7fbb0a7e.css",
+      "path": "/assets/forest-experience-8a0b8802a50ee802.css",
       "status": 200,
       "contentType": "text/css; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"66f2932cc160c2f8e879eedaf52bda58\"",
+      "etag": "\"28f3c468d2bcf1f480378255654483dc\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -730,7 +730,7 @@
       "status": 200,
       "contentType": "text/css; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"50a3c1a99165927f7e937a07861733f1\"",
+      "etag": "\"ccbc1a2c0d85051a2a948c97ba17203e\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -739,7 +739,7 @@
       "status": 200,
       "contentType": "text/javascript; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"6d33cb4f5ca00367695847fc7cabba58\"",
+      "etag": "\"72b75aa8ca2a53b012f8ae41444146fa\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -748,7 +748,7 @@
       "status": 200,
       "contentType": "text/css; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"cccfb249a3854e7d3f2c6013cd52117b\"",
+      "etag": "\"46135c8d09d91006e36c410a493e9406\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -757,7 +757,7 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"6608078efe62ca19fcf5a10a6fe5331d\"",
+      "etag": "\"f03e65c58517ef7d4b0e37df55d0bff7\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -766,7 +766,7 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"ed58d82f04ee8448a18e2ff5d76ff816\"",
+      "etag": "\"8b2984c54ec8cf9baeb8b93a0c675c0a\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -775,7 +775,7 @@
       "status": 200,
       "contentType": "text/css; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"edef34e79783628aa73c50e049eee898\"",
+      "etag": "\"44b1d2afa96d7c925bd70ce6070f441d\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -784,7 +784,7 @@
       "status": 200,
       "contentType": "text/javascript; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"d85ebdca2f59beb7412fd8ff9ecd7c5a\"",
+      "etag": "\"de98e24212513291a5fec065c6576ae9\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -793,7 +793,7 @@
       "status": 200,
       "contentType": "image/svg+xml",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"73f90e336e56c4378daa31b7f1a6fd70\"",
+      "etag": "\"1cc270ea6c21a8c94ff2a420e913d05e\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -802,7 +802,7 @@
       "status": 200,
       "contentType": "image/svg+xml",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"36290998dda191dcdb80d3224931b326\"",
+      "etag": "\"8783f849cf50838aadfb14335bf27fac\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -811,7 +811,7 @@
       "status": 200,
       "contentType": "image/vnd.microsoft.icon",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"a0a911c1c22081023de64e13e68c9b0d\"",
+      "etag": "\"5beb37840896bc1e30eca25562ec5dcd\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -820,7 +820,7 @@
       "status": 200,
       "contentType": "image/svg+xml",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"f3cc013d5d8cdc71fae7784019ae30e3\"",
+      "etag": "\"ed399b4c86930bb5509b5bd86844bfea\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -829,7 +829,7 @@
       "status": 200,
       "contentType": "image/jpeg",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"dc1871113d2a0059b21710fca0a28184\"",
+      "etag": "\"6a5b4fff78bae96c859fed257310b376\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -838,7 +838,7 @@
       "status": 200,
       "contentType": "image/jpeg",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"8670aa301e7f5a08962d7f789bc82e4a\"",
+      "etag": "\"d5428b559a767753fed86c3cf891aa31\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -847,7 +847,7 @@
       "status": 200,
       "contentType": "image/jpeg",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"b1a38a66a8c583855b1a6b65807d408f\"",
+      "etag": "\"374f7fe83ed9cee9f47320d8774717f0\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -856,7 +856,7 @@
       "status": 200,
       "contentType": "application/manifest+json",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"658c13713764322cc18773938d58c348\"",
+      "etag": "\"ef43d9e0091d515b686e115eb81d2935\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -865,7 +865,7 @@
       "status": 200,
       "contentType": "image/webp",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"04d32ed3915fca885f087bb3c0953627\"",
+      "etag": "\"096cce106189ab7454fde4f26957f0a5\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },

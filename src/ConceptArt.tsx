@@ -6,7 +6,7 @@ const woodRing=(radius:number,seed:number)=>Array.from({length:45},(_,i)=>{
 
 /** Original explanatory drawings. No specimen, taxon, age or optical scale is asserted. */
 export default function ConceptArt({ kind, id, stage = 0 }: Props) {
-  if (kind === 'mycelium') return <svg viewBox="0 0 1000 620" aria-hidden="true" className="mycelium-drawing">
+  if (kind === 'mycelium') return <svg viewBox="0 0 1000 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true" className="mycelium-drawing">
     <defs><linearGradient id={id+'-wood'} x2="1" y2=".6"><stop stopColor="#403225" /><stop offset=".5" stopColor="#282d20" /><stop offset="1" stopColor="#141f17" /></linearGradient></defs>
     <path fill={`url(#${id}-wood)`} d="M0 0H1000V620H0z" />
     <g fill="none" stroke="#9a7953" strokeWidth="1.3" opacity=".24">{Array.from({ length: 34 }, (_, i) => {

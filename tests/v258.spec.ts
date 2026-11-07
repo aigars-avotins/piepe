@@ -67,7 +67,10 @@ for(const locale of ['lv','en'] as const){
   test(`2.5.8 ${locale}: the four deadwood stages move through a stable illustration and retain every factual caption`,async({page})=>{
     await page.goto(notePath(locale,'005'));const capsule=page.locator('[data-time-capsule]'),view=page.locator('.time-visual'),first=(await view.boundingBox())!
     for(let i=0;i<4;i++){
-      await page.locator(`[data-time-choice="${i}"]`).click();await expect(page.locator(`[data-time-figure="${i}"]`)).toHaveCSS('opacity','1')
+      await page.locator(`[data-time-choice="${i}"]`).click()
+      // The SVGs may dissolve; two different captions must never share that dissolve.
+      expect(await page.locator('[data-time-figure][aria-hidden="true"] figcaption').evaluateAll(es=>es.every(e=>getComputedStyle(e).visibility==='hidden'))).toBe(true)
+      await expect(page.locator(`[data-time-figure="${i}"]`)).toHaveCSS('opacity','1')
       await expect(capsule).toHaveAttribute('data-stage',String(i));await expect(page.locator(`[data-time-choice="${i}"]`)).toHaveAttribute('aria-pressed','true')
       await expect(page.locator('[data-time-range]')).toHaveAttribute('aria-valuetext',t.time.stages[i].title)
       const next=(await view.boundingBox())!;expect(next.width).toBeCloseTo(first.width,1);expect(next.height).toBeCloseTo(first.height,1)
@@ -110,6 +113,9 @@ test('2.5.8 touch slider gestures and vertical page movement remain native',asyn
   const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true})
   try{
     const p=await context.newPage();await p.goto('/kas-ir-piepe/');const range=p.locator('[data-xray-range]');await range.scrollIntoViewIfNeeded();const box=(await range.boundingBox())!
+    // Check the painted SVG coordinates, not merely the outer element's CSS box:
+    // a contained drawing otherwise leaves bands on the taller phone canvas.
+    expect(await p.locator('.mycelium-drawing').evaluate((e:SVGSVGElement)=>{const r=e.getBoundingClientRect(),m=e.getScreenCTM()!,a=new DOMPoint(0,0).matrixTransform(m),b=new DOMPoint(1000,620).matrixTransform(m);return a.x<=r.left+1&&a.y<=r.top+1&&b.x>=r.right-1&&b.y>=r.bottom-1})).toBe(true)
     await p.touchscreen.tap(box.x+box.width*.8,box.y+box.height/2);expect(Number(await range.inputValue())).toBeGreaterThan(55)
     if(browserName==='chromium'){
       await p.locator('[data-xray-handle]').scrollIntoViewIfNeeded();const handle=(await p.locator('[data-xray-handle]').boundingBox())!,x=handle.x+handle.width/2,y=handle.y+handle.height/2,start=Number(await range.inputValue()),cdp=await context.newCDPSession(p)

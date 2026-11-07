@@ -889,5 +889,54 @@
       ]
     }
   ],
-  "fontDecision": "Preserve current font-display:swap and locale-specific preloads. LV actually requests both Latin and Latin Extended subsets for Manrope and Cormorant; no measured reason to remove coverage or alter metrics. FontFace entries from preloads have universal unicodeRange and do not alone identify chosen glyph subsets; resource URLs confirm coverage."
+  "fontDecision": "Preserve current font-display:swap and locale-specific preloads. LV actually requests both Latin and Latin Extended subsets for Manrope and Cormorant; no measured reason to remove coverage or alter metrics. FontFace entries from preloads have universal unicodeRange and do not alone identify chosen glyph subsets; resource URLs confirm coverage.",
+  "measuredCandidateRevision": "f3fd55ef912f01c2ab6ee0596da92186d3713850",
+  "postMeasurementChanges": "Only illustration caption visibility and mycelium SVG cover framing changed after the paired samples; cinematic application/media/font code is identical. Final payload sizes below are measured separately. No claim of a new field-CWV result.",
+  "finalPayloads": [
+    {
+      "path": "index.html",
+      "rawBytes": 26148,
+      "gzipBytes": 6781
+    },
+    {
+      "path": "kas-ir-piepe/index.html",
+      "rawBytes": 53141,
+      "gzipBytes": 11638
+    },
+    {
+      "path": "meza-piezimes/005-kritalas-un-laiks/index.html",
+      "rawBytes": 116694,
+      "gzipBytes": 13467
+    },
+    {
+      "path": "assets/forest-knowledge-567686ce4e952632.css",
+      "rawBytes": 4323,
+      "gzipBytes": 1215
+    },
+    {
+      "path": "assets/forest-experience-8a0b8802a50ee802.css",
+      "rawBytes": 8552,
+      "gzipBytes": 2418
+    },
+    {
+      "path": "assets/reading-tools-4dffc72cf6ac53e8.js",
+      "rawBytes": 3790,
+      "gzipBytes": 1324
+    },
+    {
+      "path": "assets/index-CG2ez3Yr.css",
+      "rawBytes": 50444,
+      "gzipBytes": 11057
+    },
+    {
+      "path": "assets/reading-0bf2a944e8d137f6.css",
+      "rawBytes": 3567,
+      "gzipBytes": 1145
+    },
+    {
+      "path": "assets/index-Bcm9BmmX.js",
+      "rawBytes": 404427,
+      "gzipBytes": 136545
+    }
+  ]
 }
