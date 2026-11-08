@@ -25,7 +25,7 @@ export class PortalCinema {
    slot.video.muted=true;slot.video.playsInline=true;slot.video.preload='auto'
    slot.video.addEventListener('ended',()=>{if(this.slots[this.active]===slot&&!this.busy){if(slot.clip===5)void this.end();else void this.playClip(slot.clip+1)}})
    slot.video.addEventListener('timeupdate',()=>{
-    if(this.slots[this.active]!==slot||this.busy||slot.clip>=3)return
+    if(this.slots[this.active]!==slot||this.busy||slot.clip===3||slot.clip===5)return
     if(slot.video.duration-slot.video.currentTime<2.5)void this.prepare(slot.clip+1).catch(()=>{/* Active film keeps its final frame; boundary exposes Retry. */})
    })
    slot.video.addEventListener('error',()=>{if(this.slots[this.active]===slot&&!this.busy)this.fail()})
