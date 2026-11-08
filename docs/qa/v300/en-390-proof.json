@@ -1,0 +1,261 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "recordingSize": {
+    "width": 390,
+    "height": 844
+  },
+  "sourceDimensions": "1920x1080",
+  "events": [
+    {
+      "state": "closed",
+      "time": 17.200000002980232,
+      "y": 0,
+      "wallTime": 39
+    },
+    {
+      "state": "portal-ready//",
+      "time": 798.2000000029802,
+      "y": 2867,
+      "wallTime": 819
+    },
+    {
+      "state": "portal-ready/0/",
+      "time": 1794.4000000059605,
+      "y": 2867,
+      "wallTime": 1813
+    },
+    {
+      "state": "entering/0/0",
+      "time": 2392.7000000029802,
+      "y": 2867,
+      "wallTime": 2412
+    },
+    {
+      "state": "deepening/0/1",
+      "time": 12605.90000000596,
+      "y": 2867,
+      "wallTime": 12627
+    },
+    {
+      "state": "arriving/0/0",
+      "time": 22888.90000000596,
+      "y": 2867,
+      "wallTime": 22908
+    },
+    {
+      "state": "living-world/0/1",
+      "time": 33038.09999999404,
+      "y": 2867,
+      "wallTime": 33058
+    },
+    {
+      "state": "living-world/1/1",
+      "time": 40989.29999999702,
+      "y": 2867,
+      "wallTime": 41008
+    },
+    {
+      "state": "living-world/2/1",
+      "time": 48953.20000000298,
+      "y": 2867,
+      "wallTime": 48973
+    },
+    {
+      "state": "returning/2/0",
+      "time": 52353.70000000298,
+      "y": 2867,
+      "wallTime": 52374
+    },
+    {
+      "state": "returning/2/1",
+      "time": 62504.5,
+      "y": 2867,
+      "wallTime": 62524
+    },
+    {
+      "state": "finished/2/1",
+      "time": 72528,
+      "y": 2867,
+      "wallTime": 72547
+    },
+    {
+      "state": "closed",
+      "time": 73907.40000000596,
+      "y": 2867,
+      "wallTime": 73936
+    },
+    {
+      "state": "portal-ready//",
+      "time": 74454,
+      "y": 2867,
+      "wallTime": 74472
+    },
+    {
+      "state": "closed",
+      "time": 75255.70000000298,
+      "y": 2867,
+      "wallTime": 75281
+    }
+  ],
+  "frames": [
+    {
+      "mediaTime": 0.333333,
+      "at": 12.5
+    },
+    {
+      "mediaTime": 0.375,
+      "at": 61.79999999701977
+    },
+    {
+      "mediaTime": 0.416667,
+      "at": 95.59999999403954
+    },
+    {
+      "mediaTime": 0.458333,
+      "at": 145.20000000298023
+    },
+    {
+      "mediaTime": 0.5,
+      "at": 195.3999999910593
+    },
+    {
+      "mediaTime": 0.541667,
+      "at": 212.20000000298023
+    },
+    {
+      "mediaTime": 0.583333,
+      "at": 278.59999999403954
+    },
+    {
+      "mediaTime": 0.625,
+      "at": 311.8999999910593
+    },
+    {
+      "mediaTime": 0.666667,
+      "at": 345.5
+    },
+    {
+      "mediaTime": 0.708333,
+      "at": 395.29999999701977
+    },
+    {
+      "mediaTime": 0.75,
+      "at": 445.20000000298023
+    },
+    {
+      "mediaTime": 0.791667,
+      "at": 479.70000000298023
+    },
+    {
+      "mediaTime": 0.833333,
+      "at": 528.5999999940395
+    },
+    {
+      "mediaTime": 0.875,
+      "at": 561.7999999970198
+    },
+    {
+      "mediaTime": 0.916667,
+      "at": 612
+    },
+    {
+      "mediaTime": 0.958333,
+      "at": 628.7999999970198
+    },
+    {
+      "mediaTime": 1,
+      "at": 678.8999999910593
+    },
+    {
+      "mediaTime": 1.041667,
+      "at": 728.5999999940395
+    },
+    {
+      "mediaTime": 1.083333,
+      "at": 778.5
+    },
+    {
+      "mediaTime": 1.125,
+      "at": 811.8999999910593
+    },
+    {
+      "mediaTime": 1.166667,
+      "at": 845.0999999940395
+    },
+    {
+      "mediaTime": 1.208333,
+      "at": 895.2000000029802
+    },
+    {
+      "mediaTime": 1.25,
+      "at": 945.2000000029802
+    },
+    {
+      "mediaTime": 1.291667,
+      "at": 979.2000000029802
+    },
+    {
+      "mediaTime": 1.333333,
+      "at": 1012.0999999940395
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "at": 820,
+      "url": "http://127.0.0.1:4291/media/01_Start.png"
+    },
+    {
+      "at": 1815,
+      "url": "http://127.0.0.1:4291/media/portal-02-first.webp"
+    },
+    {
+      "at": 1828,
+      "url": "http://127.0.0.1:4291/media/portal-02-faststart.mp4"
+    },
+    {
+      "at": 10106,
+      "url": "http://127.0.0.1:4291/media/portal-03-first.webp"
+    },
+    {
+      "at": 10106,
+      "url": "http://127.0.0.1:4291/media/portal-03-faststart.mp4"
+    },
+    {
+      "at": 20325,
+      "url": "http://127.0.0.1:4291/media/portal-04-first.webp"
+    },
+    {
+      "at": 20327,
+      "url": "http://127.0.0.1:4291/media/portal-04-faststart.mp4"
+    },
+    {
+      "at": 30606,
+      "url": "http://127.0.0.1:4291/media/portal-05-first.webp"
+    },
+    {
+      "at": 30608,
+      "url": "http://127.0.0.1:4291/media/portal-05-faststart.mp4"
+    },
+    {
+      "at": 51847,
+      "url": "http://127.0.0.1:4291/media/portal-06-first.webp"
+    },
+    {
+      "at": 51862,
+      "url": "http://127.0.0.1:4291/media/portal-06-faststart.mp4"
+    },
+    {
+      "at": 60076,
+      "url": "http://127.0.0.1:4291/media/portal-07-first.webp"
+    },
+    {
+      "at": 60076,
+      "url": "http://127.0.0.1:4291/media/portal-07-faststart.mp4"
+    }
+  ],
+  "scrollBefore": 2867
+}

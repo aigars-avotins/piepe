@@ -21,6 +21,8 @@ Two bounded slots hold the current scene and at most one paused, prepared next s
 
 05 uses actual native video looping, not a session-history still. Presented-frame callbacks measure repeat cycles. Gaze is a bounded CSS 2.5D presentation of 05 only (1.6% overscan, at most ±6/4px); it is not reconstructed 3D. Return recentres before the first outgoing handoff. Resizing recentres; reduced motion disables gaze.
 
+The doorway tracks `visualViewport.height` (with the normal window fallback) on resize, keeping its controls inside Safari's actually visible area rather than confusing layout and visual heights. The title waits for the original image's presentation; its separate legibility shade departs with the invitation, before movie playback.
+
 The existing App/GSAP camera remains mounted and unchanged underneath. Portal opening suspends the original environmental film decoders and inerts the main content; closing restores their existing behavior. No competing ScrollTrigger or animation library is added.
 
 ## Preferences, audio and accessibility

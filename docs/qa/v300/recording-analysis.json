@@ -1,0 +1,34 @@
+[
+  {
+    "recording": "lv-1512-full-journey.webm",
+    "checkedPortalWindowSeconds": [
+      3.952,
+      74.414
+    ],
+    "checkedFrames": 1762,
+    "minMeanY": 59.6436,
+    "nearBlackThreshold": 20,
+    "nearBlackFrames": 0,
+    "loopPresentedFrames": 25,
+    "loopMaxObservedCallbackGapMs": 70.6000000089407,
+    "loopMediaTimesAdvance": true,
+    "sourceResolution": "1920x1080",
+    "reviewRecordingIsCompressedNotMaster": true
+  },
+  {
+    "recording": "en-390-full-journey.webm",
+    "checkedPortalWindowSeconds": [
+      2.412,
+      72.547
+    ],
+    "checkedFrames": 1753,
+    "minMeanY": 59.3663,
+    "nearBlackThreshold": 20,
+    "nearBlackFrames": 0,
+    "loopPresentedFrames": 25,
+    "loopMaxObservedCallbackGapMs": 66.3999999910593,
+    "loopMediaTimesAdvance": true,
+    "sourceResolution": "1920x1080",
+    "reviewRecordingIsCompressedNotMaster": true
+  }
+]

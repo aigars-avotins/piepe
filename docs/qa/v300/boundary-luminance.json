@@ -1,0 +1,66 @@
+[
+  {
+    "boundary": "01-02",
+    "meanDecodedLuma8bit": [
+      71.254,
+      69.755
+    ],
+    "nativePair": "01-02-native.webp"
+  },
+  {
+    "boundary": "02-03",
+    "meanDecodedLuma8bit": [
+      77.614,
+      81.016
+    ],
+    "nativePair": "02-03-native.webp"
+  },
+  {
+    "boundary": "03-04",
+    "meanDecodedLuma8bit": [
+      98.378,
+      98.617
+    ],
+    "nativePair": "03-04-native.webp"
+  },
+  {
+    "boundary": "04-05",
+    "meanDecodedLuma8bit": [
+      119.36,
+      117.057
+    ],
+    "nativePair": "04-05-native.webp"
+  },
+  {
+    "boundary": "05-loop",
+    "meanDecodedLuma8bit": [
+      116.778,
+      117.057
+    ],
+    "nativePair": "05-loop-native.webp"
+  },
+  {
+    "boundary": "05-06",
+    "meanDecodedLuma8bit": [
+      116.778,
+      114.931
+    ],
+    "nativePair": "05-06-native.webp"
+  },
+  {
+    "boundary": "06-07",
+    "meanDecodedLuma8bit": [
+      79.448,
+      76.066
+    ],
+    "nativePair": "06-07-native.webp"
+  },
+  {
+    "boundary": "07-01",
+    "meanDecodedLuma8bit": [
+      71.181,
+      71.254
+    ],
+    "nativePair": "07-01-native.webp"
+  }
+]

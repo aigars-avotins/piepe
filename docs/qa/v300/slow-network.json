@@ -1,0 +1,11 @@
+{
+  "downloadBytesPerSecond": 187500,
+  "uploadBytesPerSecond": 62500,
+  "latencyMs": 400,
+  "cacheDisabled": true,
+  "explicitSourceQualityOptIn": true,
+  "phase": "error",
+  "elapsedMs": 20288,
+  "media": null,
+  "safeExit": true
+}
