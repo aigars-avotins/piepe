@@ -125,9 +125,12 @@ test('the decoded first frame retains local fungus edge anchors, not just a low 
   for(const anchor of result.anchors){expect(Math.hypot(anchor.dx,anchor.dy)).toBeLessThanOrEqual(2);expect(anchor.score).toBeGreaterThan(.8)}
 })
 
-for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>test(`awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
-  test.setTimeout(25000);await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
+for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>test(`intro then awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
+  test.setTimeout(35000);await page.setViewportSize({width,height})
   await page.goto('/en/')
+  // Follow the real first-visit intro before testing its subsequent camera move.
+  // The unchanged controller's bounded cold-decoder fallback is a separate path.
+  await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:16000})
   // Start the user action after the actual initial typography/forest paint.
   // This keeps the cold native window startup outside the film's own deadline.
   await page.evaluate(()=>document.fonts.ready)

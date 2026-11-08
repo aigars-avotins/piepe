@@ -28,11 +28,14 @@ export default function FungusPortal({opener:origin,locale,onLocaleChange,onClos
   exitAction.current=()=>{if(closing||exited)return;closing=true;if(history.state?.piepePortal===token)history.back();else close()}
   const player=new PortalCinema(el,setState,()=>exitAction.current());cinema.current=player
   const visibility=()=>{if(document.hidden)player.pause()}
-  const resize=()=>{view.current?.style.setProperty('--gaze-x','0px');view.current?.style.setProperty('--gaze-y','0px')}
-  document.addEventListener('visibilitychange',visibility);window.addEventListener('resize',resize)
+  // WebKit can retain the pre-resize CSS viewport while body scrolling is locked.
+  // Use the actual visible height, including toolbar/visual viewport resize events.
+  const resize=()=>{el.style.setProperty('--portal-height',`${window.visualViewport?.height??innerHeight}px`);view.current?.style.setProperty('--gaze-x','0px');view.current?.style.setProperty('--gaze-y','0px')}
+  resize()
+  document.addEventListener('visibilitychange',visibility);window.addEventListener('resize',resize);window.visualViewport?.addEventListener('resize',resize)
   el.showModal()
   return()=>{
-   player.destroy();cinema.current=null;window.removeEventListener('popstate',pop);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('resize',resize)
+   player.destroy();cinema.current=null;window.removeEventListener('popstate',pop);document.removeEventListener('visibilitychange',visibility);window.removeEventListener('resize',resize);window.visualViewport?.removeEventListener('resize',resize)
    el.close();requestAnimationFrame(()=>{window.scrollTo({left:scroll.x,top:scroll.y,behavior:'instant'});if(opener?.isConnected)opener.focus({preventScroll:true})})
   }
  },[origin])
