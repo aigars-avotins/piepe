@@ -57,7 +57,7 @@ export default function FungusPortal({opener:origin,locale,onLocaleChange,onClos
   const el=view.current!,r=el.getBoundingClientRect();el.style.setProperty('--gaze-x',`${((x-r.left)/r.width-.5)*Math.min(12,r.width*.012)}px`);el.style.setProperty('--gaze-y',`${((y-r.top)/r.height-.5)*Math.min(8,r.height*.012)}px`)
  }
  const scene=state.clip<0?0:state.clip+1
- return <dialog ref={dialog} className="fungus-portal" data-portal-phase={state.phase} data-portal-still-ready={imageReady} data-portal-still-presented={imagePresented} data-portal-static={state.static} data-portal-paused={state.paused} aria-labelledby="portal-title" aria-describedby="portal-art" onCancel={e=>{e.preventDefault();exitAction.current()}}>
+ return <dialog ref={dialog} className="fungus-portal" data-portal-phase={state.phase} data-portal-invitation={ready} data-portal-still-ready={imageReady} data-portal-still-presented={imagePresented} data-portal-static={state.static} data-portal-paused={state.paused} aria-labelledby="portal-title" aria-describedby="portal-art" onCancel={e=>{e.preventDefault();exitAction.current()}}>
   <div ref={view} className={`portal-view ${living&&!state.static&&!reduced?'portal-gaze':''}`} data-portal-view tabIndex={living&&!state.static?0:-1} role="region" aria-label={t.gaze} aria-describedby={living?'portal-gaze-help':undefined} onPointerMove={e=>{if(e.pointerType!=='touch'||e.buttons)gaze(e.clientX,e.clientY)}} onPointerLeave={resetGaze} onPointerUp={resetGaze} onKeyDown={e=>{
    if(!living||reduced)return
    const axis=e.key==='ArrowLeft'||e.key==='ArrowRight'?'--gaze-x':'--gaze-y'
