@@ -128,6 +128,11 @@ test('the decoded first frame retains local fungus edge anchors, not just a low 
 for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>test(`awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
   test.setTimeout(25000);await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
   await page.goto('/en/')
+  // Start the user action after the actual initial typography/forest paint.
+  // This keeps the cold native window startup outside the film's own deadline.
+  await page.evaluate(()=>document.fonts.ready)
+  await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
+  await expect(page.locator('.forest-still')).toHaveJSProperty('complete',true)
   await page.evaluate(()=>{
     const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
     const observer=new MutationObserver(()=>{
