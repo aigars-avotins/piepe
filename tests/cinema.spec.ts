@@ -12,9 +12,11 @@ test.afterEach(async({page},testInfo)=>{
   })),contentType:'application/json'})
 })
 
+// GitHub's observed AppKit display is 1920x1080 at 1x. Do not fabricate a
+// 3024x1964 backing surface there; local Chromium retains 2x Retina coverage.
 function inViewport(width:number,height:number,register:()=>void){
   test.describe(`${width}x${height} rendering`,()=>{
-    test.use({viewport:{width,height},deviceScaleFactor:width>=2000?1:width>=700?2:3,isMobile:width<700,hasTouch:width<700,...(width>=700?{userAgent:undefined}:{})})
+    test.use({viewport:{width,height},deviceScaleFactor:width>=2000?1:width>=700?(process.platform==='darwin'&&process.env.CI?1:2):3,isMobile:width<700,hasTouch:width<700,...(width>=700?{userAgent:undefined}:{})})
     register()
   })
 }
