@@ -1,3 +1,5 @@
+import {portalCopy} from '../src/portalCopy'
+import {openOriginalNote} from './originalNote'
 import { test, expect } from '@playwright/test'
 import { messages } from '../src/i18n'
 
@@ -29,7 +31,7 @@ for (const locale of ['lv', 'en'] as const) test(`${locale}: discovered and down
   await expect(status).toHaveText(t.discoveredShort)
   await page.reload(); await hydrated(page)
   await expect(status).toHaveText(t.discoveredShort)
-  await page.locator('#encounter .line-link').click()
+  await openOriginalNote(page)
   await dialog.getByRole('tab').first().focus(); await page.keyboard.press('End')
   const download = page.waitForEvent('download')
   await dialog.getByRole('link', { name: t.keepNote, exact: true }).click()
@@ -40,7 +42,7 @@ for (const locale of ['lv', 'en'] as const) test(`${locale}: discovered and down
   await expect(status).toHaveText(t.collectedShort)
   await page.reload(); await hydrated(page)
   await expect(status).toHaveText(t.collectedShort)
-  await page.locator('#encounter .line-link').click()
+  await openOriginalNote(page)
   await expect(status).toHaveText(t.collectedShort) // Opening must never downgrade a collection.
 })
 
@@ -52,14 +54,14 @@ test('storage denial keeps in-memory progress through close, locale and history'
     Storage.prototype.setItem = () => { throw new DOMException('Unavailable', 'SecurityError') }
   })
   await page.goto('/en/#encounter'); await hydrated(page)
-  await page.locator('.specimen-invitation').click()
+  await openOriginalNote(page)
   await expect(page.locator('.encounter-status')).toHaveText(messages.en.discoveredShort)
   await page.getByRole('dialog').getByRole('link', { name: 'LV', exact: true }).click()
   await page.getByRole('button', { name: messages.lv.closeDiscovery, exact: true }).click()
   await expect(page.locator('.encounter-status')).toHaveText(messages.lv.discoveredShort)
   await page.goBack()
   await expect(page.locator('.encounter-status')).toHaveText(messages.en.discoveredShort)
-  await page.locator('#encounter .line-link').click()
+  await openOriginalNote(page)
   await page.getByRole('dialog').getByRole('tab').first().focus(); await page.keyboard.press('End')
   // Collection records the explicit action, not whether the OS saved a file.
   await page.locator('.observation-actions a').evaluate(e => e.addEventListener('click', event => event.preventDefault()))
@@ -118,7 +120,7 @@ for (const mode of ['reduce', 'save-data']) test(`${mode}: static preferences al
     await expect(page.locator('video')).toHaveCount(0)
   }
   expect(movies).toEqual([])
-  await page.locator('#encounter .line-link').click()
+  await openOriginalNote(page)
   await expect(page.getByRole('dialog')).toBeVisible()
 })
 
@@ -128,13 +130,13 @@ test('live reduced-motion and data-saving toggles suspend and restore scenes wit
     Object.defineProperty(navigator, 'connection', { configurable: true, value: Object.assign(new EventTarget(), { saveData: false }) })
   })
   await page.goto('/en/'); await hydrated(page)
-  await page.locator('#encounter .line-link').click()
+  await openOriginalNote(page)
   await page.getByRole('button', { name: messages.en.closeDiscovery, exact: true }).click()
   await page.locator('#understory').scrollIntoViewIfNeeded(); await moving(page)
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await expect(page.locator('video')).toHaveCount(0)
   await expect(page.locator('.world')).toHaveClass(/static-preference/)
-  await page.locator('#encounter .line-link').click()
+  await openOriginalNote(page)
   await page.emulateMedia({ reducedMotion: 'no-preference' })
   await expect(page.getByRole('dialog')).toBeVisible()
   await expect(page.locator('.encounter-status')).toHaveText(messages.en.discoveredShort)
@@ -171,7 +173,7 @@ test('a paused failed scene offers Resume and can actually play again', async ({
   await expect(control).toHaveText(messages.en.pauseFilm)
 })
 
-for (const locale of ['lv', 'en'] as const) test(`${locale}: mobile note invitation, optional learning and social preview stay coherent`, async ({ page, request }) => {
+for (const locale of ['lv', 'en'] as const) test(`${locale}: mobile portal invitation, preserved optional learning and social preview stay coherent`, async ({ page, request }) => {
   const t = messages[locale], path = locale === 'lv' ? '/' : '/en/'
   await page.emulateMedia({ reducedMotion: 'reduce' })
   const html = await (await request.get(path)).text()
@@ -181,9 +183,9 @@ for (const locale of ['lv', 'en'] as const) test(`${locale}: mobile note invitat
   await expect(page.locator('meta[name="twitter:image:alt"]')).toHaveAttribute('content', t.wallpaperAltDesktop)
   for (const [width, height] of [[1512, 982], [390, 844], [390, 664], [320, 690], [844, 390]]) {
     await page.setViewportSize({ width, height })
-    const invitation = page.locator('.specimen-invitation')
+    const invitation = page.locator('[data-portal-entry]')
     await invitation.scrollIntoViewIfNeeded()
-    await expect(invitation).toHaveAccessibleName(`${t.openNote} — ${t.noteLabel}`)
+    await expect(invitation).toHaveAccessibleName(portalCopy[locale].entry)
     await expect(invitation.locator('span').last()).toBeVisible()
     const geometry = await invitation.evaluate(e => {
       const box = e.getBoundingClientRect(), label = e.lastElementChild!.getBoundingClientRect()

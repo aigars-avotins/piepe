@@ -19,3 +19,5 @@
 @media(min-width:700px) and (max-width:1100px){.hero-foot{flex-wrap:nowrap;gap:16px}.hero-foot .discovery-entry{flex:1;max-width:280px;min-width:0}.hero-foot .discovery-preview{flex-basis:48px;width:48px}.hero-foot .scroll-cue{gap:12px;font-size:12px}.hero-atmosphere{margin-left:0}}
 @media(min-width:700px) and (max-width:1100px){.hero-foot .discovery-entry small{display:none}}
 @media(max-width:359px){.world[data-scene=forest]{--sound-offset:calc(30svh + 10px)}}
+
+.encounter-copy .portal-entry{font-family:var(--serif);font-size:clamp(26px,3vw,36px);padding:10px 0;min-height:56px;color:var(--gold)}.encounter-copy .encounter-status{margin-top:16px}

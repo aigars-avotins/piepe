@@ -1,0 +1,124 @@
+export type PortalPhase='portal-ready'|'entering'|'deepening'|'arriving'|'living-world'|'returning'|'finished'|'error'
+export type PortalSnapshot={phase:PortalPhase;clip:number;loading:boolean;paused:boolean;static:boolean;cycles:number}
+export const portalClips=['02','03','04','05','06','07'] as const
+// Authored per-boundary holds: no global fade, speed change or artificial camera path.
+export const portalSeams=[420,180,220,90,200,90] as const
+const phaseFor=(index:number):PortalPhase=>index===0?'entering':index===1?'deepening':index===2?'arriving':index===3?'living-world':'returning'
+type Slot={group:HTMLElement;video:HTMLVideoElement;poster:HTMLImageElement;clip:number;abort?:AbortController;ready?:Promise<void>;frame:number}
+
+/** Two bounded source-quality buffers. One plays; the other prepares only on intent/near a boundary. */
+export class PortalCinema {
+ private slots:Slot[]
+ private active=-1
+ private epoch=0
+ private disposed=false
+ private busy=false
+ private next?:number
+ private finishAnimation?:Animation
+ private watchdog:ReturnType<typeof setInterval>
+ private progressTime=0
+ private progressAt=performance.now()
+ private state:PortalSnapshot={phase:'portal-ready',clip:-1,loading:false,paused:false,static:false,cycles:0}
+ constructor(private root:HTMLElement,private emit:(value:PortalSnapshot)=>void,private finish:()=>void){
+  this.slots=[...root.querySelectorAll<HTMLElement>('[data-portal-slot]')].map(group=>({group,video:group.querySelector('video')!,poster:group.querySelector('img')!,clip:-1,frame:0}))
+  for(const slot of this.slots){
+   slot.video.muted=true;slot.video.playsInline=true;slot.video.preload='auto'
+   slot.video.addEventListener('ended',()=>{if(this.slots[this.active]===slot&&!this.busy){if(slot.clip===5)void this.end();else void this.playClip(slot.clip+1)}})
+   slot.video.addEventListener('timeupdate',()=>{
+    if(this.slots[this.active]!==slot||this.busy||slot.clip===3||slot.clip===5)return
+    if(slot.video.duration-slot.video.currentTime<2.5)void this.prepare(slot.clip+1).catch(()=>{/* Active film keeps its final frame; boundary exposes Retry. */})
+   })
+   slot.video.addEventListener('error',()=>{if(this.slots[this.active]===slot&&!this.busy)this.fail()})
+  }
+  this.watchdog=setInterval(()=>{
+   const video=this.slots[this.active]?.video
+   if(!video||this.state.paused||this.state.loading||this.busy||this.disposed||document.hidden)return
+   if(video.currentTime!==this.progressTime){this.progressTime=video.currentTime;this.progressAt=performance.now()}
+   else if(!video.paused&&performance.now()-this.progressAt>8000)this.fail()
+  },500)
+ }
+ snapshot(){return this.state}
+ private update(values:Partial<PortalSnapshot>){if(this.disposed)return;this.state={...this.state,...values};this.root.dataset.portalPhase=this.state.phase;this.root.dataset.portalCycles=String(this.state.cycles);this.emit({...this.state})}
+ private release(slot:Slot){slot.abort?.abort();slot.video.cancelVideoFrameCallback?.(slot.frame);slot.video.pause();slot.video.removeAttribute('src');slot.video.load();slot.poster.removeAttribute('src');slot.clip=-1;slot.ready=undefined;slot.group.style.opacity='0'}
+ private prepare(index:number):Promise<void>{
+  const target=this.active===0?this.slots[1]:this.slots[0]
+  if(target.clip===index&&target.ready)return target.ready
+  this.release(target);target.clip=index;const abort=new AbortController();target.abort=abort
+  const {video,poster}=target;video.loop=index===3;video.playbackRate=1;target.group.dataset.portalClip=String(index);poster.style.opacity='1'
+  target.ready=new Promise<void>((resolve,reject)=>{
+   let decoded=false,image=false,settled=false
+   const done=()=>{if(!settled&&decoded&&image){settled=true;clearTimeout(timeout);resolve()}}
+   const bad=()=>{if(!settled){settled=true;clearTimeout(timeout);reject(Error('Portal media unavailable'))}}
+   const timeout=setTimeout(bad,20000)
+   abort.signal.addEventListener('abort',()=>{if(!settled){settled=true;clearTimeout(timeout);reject(new DOMException('Cancelled','AbortError'))}},{once:true})
+   video.addEventListener('loadeddata',()=>{if(video.readyState>=2&&video.videoWidth){video.pause();decoded=true;done()}},{signal:abort.signal})
+   video.addEventListener('error',bad,{signal:abort.signal});poster.addEventListener('error',bad,{signal:abort.signal})
+   poster.src=`/media/portal-${portalClips[index]}-first.webp`;poster.decode().then(()=>{image=true;done()},bad)
+   const presented:VideoFrameRequestCallback=()=>{
+    if(abort.signal.aborted)return
+    if(video.readyState>=2){poster.style.opacity='0';decoded=true;done()}
+    else target.frame=video.requestVideoFrameCallback(presented)
+   }
+   // A source assignment can discard frame subscriptions. Register on both sides.
+   if(video.requestVideoFrameCallback)target.frame=video.requestVideoFrameCallback(presented)
+   video.src=`/media/portal-${portalClips[index]}-faststart.mp4`;video.load()
+   if(video.requestVideoFrameCallback)target.frame=video.requestVideoFrameCallback(presented)
+   else video.addEventListener('playing',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{poster.style.opacity='0'})),{signal:abort.signal})
+  })
+  // A prefetched rejection is retained for the explicit boundary, without an unhandled promise.
+  void target.ready.catch(()=>{})
+  return target.ready
+ }
+ private fail(){this.slots[this.active]?.video.pause();this.busy=false;this.update({phase:'error',paused:true,loading:false})}
+ async playClip(index:number){
+  if(this.disposed||index<0||index>5)return
+  const epoch=++this.epoch;this.busy=true;this.next=index;this.update({loading:true})
+  if(index!==4)delete this.root.dataset.portalReturning
+  const current=this.slots[this.active]?.group
+  const gaze=index===4&&current?current.animate([{transform:getComputedStyle(current).transform},{transform:'none'}],{duration:280,fill:'forwards',easing:'ease-out'}):undefined
+  if(index===4)this.root.dataset.portalReturning='true'
+  try{
+   await Promise.all([this.prepare(index),gaze?.finished.catch(()=>{})]);gaze?.cancel();if(this.disposed||epoch!==this.epoch)return
+   const incoming=this.active===0?1:0,outgoing=this.active,slot=this.slots[incoming]
+   this.slots[outgoing]?.video.pause();slot.group.style.zIndex='2';slot.group.style.opacity='1'
+   const duration=matchMedia('(prefers-reduced-motion: reduce)').matches?0:portalSeams[index]
+   const blend=slot.group.animate([{opacity:0},{opacity:1}],{duration,easing:'ease-in-out'});this.finishAnimation=blend
+   await blend.finished.catch(()=>{});if(this.disposed||epoch!==this.epoch)return
+   this.active=incoming;if(outgoing>=0)this.release(this.slots[outgoing]);slot.group.style.zIndex='1';this.root.dataset.portalActive=String(incoming)
+   this.busy=false;this.next=undefined;this.progressAt=performance.now();this.progressTime=0
+   this.update({phase:phaseFor(index),clip:index,loading:false,static:false})
+   this.observeLoop(slot);if(!this.state.paused&&!document.hidden)await slot.video.play()
+  }catch(error){if(!this.disposed&&epoch===this.epoch&&!(error instanceof DOMException&&error.name==='AbortError')){this.update({clip:index});if(error instanceof DOMException&&error.name==='NotAllowedError')this.update({paused:true,loading:false});else this.fail()}}
+ }
+ private observeLoop(slot:Slot){
+  if(slot.clip!==3||!slot.video.requestVideoFrameCallback)return
+  let previous=0
+  const frame:VideoFrameRequestCallback=(_,metadata)=>{
+   if(this.disposed||slot.clip!==3||this.slots[this.active]!==slot)return
+   if(previous>5&&metadata.mediaTime<1)this.update({cycles:this.state.cycles+1})
+   previous=metadata.mediaTime;slot.frame=slot.video.requestVideoFrameCallback(frame)
+  }
+  slot.frame=slot.video.requestVideoFrameCallback(frame)
+ }
+ pause(){for(const slot of this.slots)slot.video.pause();this.update({paused:true})}
+ async resume(){
+  this.progressAt=performance.now();this.update({paused:false})
+  const slot=this.slots[this.active];if(!slot||this.state.static)return
+  try{await slot.video.play()}catch{this.update({paused:true})}
+ }
+ retry(){const index=this.next??Math.max(0,this.state.clip);this.release(this.slots[this.active===0?1:0]);this.update({paused:false});void this.playClip(index)}
+ async stay(){if(this.state.paused)await this.resume();this.root.querySelector<HTMLElement>('[data-portal-view]')?.focus({preventScroll:true})}
+ showStill(){
+  ++this.epoch;this.finishAnimation?.cancel();this.slots.forEach(slot=>this.release(slot));this.active=-1;this.busy=false;this.update({phase:'living-world',clip:3,static:true,loading:false,paused:false})
+ }
+ private async end(){
+  this.busy=true;this.update({phase:'finished',loading:false});const still=this.root.querySelector<HTMLImageElement>('[data-portal-original]')!
+  still.style.zIndex='3';still.style.opacity='1';const duration=matchMedia('(prefers-reduced-motion: reduce)').matches?0:520
+  this.finishAnimation=still.animate([{opacity:0},{opacity:1}],{duration,easing:'ease-in-out'})
+  await this.finishAnimation.finished.catch(()=>{});if(this.disposed)return
+  // Give the exact original still a quiet beat before leaving the doorway.
+  const closing=this.root.animate([{opacity:1},{opacity:0}],{duration:360,delay:450,easing:'ease-in'});this.finishAnimation=closing
+  await closing.finished.catch(()=>{});if(!this.disposed)this.finish()
+ }
+ destroy(){this.disposed=true;++this.epoch;clearInterval(this.watchdog);this.finishAnimation?.cancel();this.slots.forEach(slot=>this.release(slot))}
+}

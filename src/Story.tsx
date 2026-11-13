@@ -1,3 +1,4 @@
+import {portalCopy} from './portalCopy'
 import Arrow from './Arrow'
 import { useState } from 'react'
 import type { CSSProperties, MouseEvent, RefObject } from 'react'
@@ -11,11 +12,11 @@ export type NoteState = 'unseen' | 'discovered' | 'collected'
 type Props = {
   locale: Locale; plane?: CSSProperties; hotspot?: RefObject<HTMLButtonElement | null>;
   inactive?: boolean; intro?: boolean; imageFailed?: boolean; noteState?: NoteState; paused?: boolean;
-  onDiscovery?: (event: MouseEvent<HTMLButtonElement>) => void; onReturn?: () => void; onPause?: () => void;
+  onPortal?:(event:MouseEvent<HTMLButtonElement>)=>void; onDiscovery?: (event: MouseEvent<HTMLButtonElement>) => void; onReturn?: () => void; onPause?: () => void;
   cinemaErrors?: { understory: boolean; breathing: boolean }; onRetryCinema?: (name: 'understory' | 'breathing') => void;
   inspectEvents?: { onMouseEnter: () => void; onMouseLeave: () => void; onFocus: () => void; onBlur: () => void };
 }
-export default function Story({ locale, plane, hotspot, inactive = false, intro = false, imageFailed = false, noteState = 'unseen', paused = false, cinemaErrors, onRetryCinema, onDiscovery, onReturn, onPause, inspectEvents }: Props) {
+export default function Story({ locale, plane, hotspot, inactive = false, intro = false, imageFailed = false, noteState = 'unseen', paused = false, cinemaErrors, onRetryCinema, onPortal, onDiscovery, onReturn, onPause, inspectEvents }: Props) {
   const t = messages[locale]
   const [downloadHint, setDownloadHint] = useState(false)
   return <>    <main inert={inactive}>
@@ -39,8 +40,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
       </section>
       <section id="encounter" className="chapter encounter-chapter" data-scene="encounter" aria-labelledby="encounter-title">
         <div className="chapter-label"><span className="label">{t.encounterLabel}</span><span className="chapter-line" /></div>
-        <div className="encounter-copy"><p className="label warm-label">{t.small}</p><h2 id="encounter-title">{t.encounterTitle}<br /><em>{t.encounterEm}</em></h2><p className="chapter-body">{t.encounterBody}</p><button className="line-link" onClick={onDiscovery} {...inspectEvents}>{t.openNote} <span aria-hidden="true"><Arrow direction="diagonal" /></span></button><p className="encounter-status" aria-live="polite" aria-atomic="true" data-note-state={noteState}>{noteState === 'collected' ? t.collectedShort : noteState === 'discovered' ? t.discoveredShort : t.waiting}</p></div>
-        <button className="specimen-invitation" onClick={onDiscovery} {...inspectEvents} aria-label={`${t.openNote} — ${t.noteLabel}`} aria-haspopup="dialog"><span className="annotation-cross" aria-hidden="true">+</span><span>{t.openNote}</span></button>
+        <div className="encounter-copy"><p className="label warm-label">{t.small}</p><h2 id="encounter-title">{t.encounterTitle}<br /><em>{t.encounterEm}</em></h2><p className="chapter-body">{portalCopy[locale].lead}</p><button className="line-link portal-entry" data-portal-entry onClick={onPortal} aria-haspopup="dialog">{portalCopy[locale].entry} <span aria-hidden="true"><Arrow direction="diagonal" /></span></button><p className="encounter-status" aria-live="polite" aria-atomic="true" data-note-state={noteState}>{noteState === 'collected' ? t.collectedShort : noteState === 'discovered' ? t.discoveredShort : t.waiting}</p></div>
       </section>
       <section id="fungus-facts" className="fungus-facts" aria-labelledby="facts-title">
         <div className="facts-intro"><p className="label">pie.pe</p><h2 id="facts-title">{t.factsTitle}</h2><p>{t.factsIntro}</p></div>

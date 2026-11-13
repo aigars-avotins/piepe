@@ -1,0 +1,1218 @@
+[
+  {
+    "run": "first-chromium-results",
+    "stats": {
+      "startTime": "2026-11-07T20:13:20.576Z",
+      "duration": 157120.525,
+      "expected": 16,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 reduced: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 1245,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 1193,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 real failure, retry, advancing frames, pause, skip and hidden-document recovery",
+        "status": "passed",
+        "durationMs": 3519,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 slow in-flight decode can be exited immediately and cannot reopen the portal",
+        "status": "passed",
+        "durationMs": 1461,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 locale and native browser Back close the doorway without restarting films",
+        "status": "passed",
+        "durationMs": 1372,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 audited originals retain exact source bytes and source-quality poster dimensions",
+        "status": "passed",
+        "durationMs": 332,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 portal ambience starts only on its sound control and preserves mute on exit",
+        "status": "passed",
+        "durationMs": 1792,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 986,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1221,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1744,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1930,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1017,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1245,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1726,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1940,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 63633,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "failed",
+        "durationMs": 69067,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m2261\u001b[39m\nReceived: \u001b[31m2860\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m599\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate"
+      }
+    ]
+  },
+  {
+    "run": "mobile-recheck-results",
+    "stats": {
+      "startTime": "2026-11-07T20:16:26.556Z",
+      "duration": 65887.251,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 portal ambience starts only on its sound control and preserves mute on exit",
+        "status": "passed",
+        "durationMs": 1747,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 63289,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "run": "preservation-initial-results",
+    "stats": {
+      "startTime": "2026-11-07T20:18:17.148Z",
+      "duration": 314439.249,
+      "expected": 57,
+      "skipped": 0,
+      "unexpected": 14,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "polish.spec.ts",
+        "title": "lv: encounter portal, readable support copy and safe source links",
+        "status": "passed",
+        "durationMs": 1469,
+        "error": ""
+      },
+      {
+        "file": "polish.spec.ts",
+        "title": "en: encounter portal, readable support copy and safe source links",
+        "status": "passed",
+        "durationMs": 1455,
+        "error": ""
+      },
+      {
+        "file": "polish.spec.ts",
+        "title": "macro is prepared behind the existing bark before its scroll envelope, and waits for actual media",
+        "status": "passed",
+        "durationMs": 1569,
+        "error": ""
+      },
+      {
+        "file": "polish.spec.ts",
+        "title": "sound waits for permission, plays a real native loop, remains controllable in the note and remembers mute",
+        "status": "passed",
+        "durationMs": 2120,
+        "error": ""
+      },
+      {
+        "file": "polish.spec.ts",
+        "title": "save-data never starts automatic ambience, and a missing recording has a usable retry",
+        "status": "passed",
+        "durationMs": 1193,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "lv: discovered and downloaded notes retain distinct session progress",
+        "status": "passed",
+        "durationMs": 1773,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "en: discovered and downloaded notes retain distinct session progress",
+        "status": "passed",
+        "durationMs": 1767,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "storage denial keeps in-memory progress through close, locale and history",
+        "status": "passed",
+        "durationMs": 868,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "legacy 2.3 collection survives restoration and reopening",
+        "status": "passed",
+        "durationMs": 882,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "cancelled film preparation stays unseen; a readable fallback counts as discovered",
+        "status": "passed",
+        "durationMs": 1054,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "reduce: static preferences also prevent explicit replay",
+        "status": "passed",
+        "durationMs": 1127,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "save-data: static preferences also prevent explicit replay",
+        "status": "passed",
+        "durationMs": 1095,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "live reduced-motion and data-saving toggles suspend and restore scenes without losing the note",
+        "status": "passed",
+        "durationMs": 10199,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "a paused failed scene offers Resume and can actually play again",
+        "status": "passed",
+        "durationMs": 1743,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "lv: mobile portal invitation, preserved optional learning and social preview stay coherent",
+        "status": "passed",
+        "durationMs": 1063,
+        "error": ""
+      },
+      {
+        "file": "v24.spec.ts",
+        "title": "en: mobile portal invitation, preserved optional learning and social preview stay coherent",
+        "status": "passed",
+        "durationMs": 1210,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "2.5.4 static reduced lv: brighter fallbacks preserve preference and note access",
+        "status": "passed",
+        "durationMs": 864,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "2.5.4 static reduced en: brighter fallbacks preserve preference and note access",
+        "status": "passed",
+        "durationMs": 795,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "2.5.4 static save-data lv: brighter fallbacks preserve preference and note access",
+        "status": "passed",
+        "durationMs": 777,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "2.5.4 static save-data en: brighter fallbacks preserve preference and note access",
+        "status": "passed",
+        "durationMs": 751,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7291,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7440,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7534,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7412,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7839,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7896,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7911,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 7968,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 8551,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "failed",
+        "durationMs": 8393,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog')\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "before253: en actual moving frames, repeated visits and discovery",
+        "status": "passed",
+        "durationMs": 19105,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "failed",
+        "durationMs": 16723,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-clip=understory]').locator('video')\nExpected: \u001b[32m\"none\"\u001b[39m\nReceived: \u001b[31m\"brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('[data-clip=understory]').locator('video') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-clip=understory]').locator('video')\u001b[22m\n\u001b[2m    14 \u00d7 locator resolved to <video tabindex=\"-1\" playsinline=\"\" preload=\"auto\" src=\"/media/forest-understory.mp4?v=2.3\"></video>\u001b[22m\n\u001b[2m       - unexpected value \"brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)\"\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "candidate254: lv actual moving frames, repeated visits and discovery",
+        "status": "failed",
+        "durationMs": 17789,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-clip=understory]').locator('video')\nExpected: \u001b[32m\"none\"\u001b[39m\nReceived: \u001b[31m\"brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('[data-clip=understory]').locator('video') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-clip=understory]').locator('video')\u001b[22m\n\u001b[2m    14 \u00d7 locator resolved to <video tabindex=\"-1\" playsinline=\"\" preload=\"auto\" src=\"/media/forest-understory.mp4?v=2.3\"></video>\u001b[22m\n\u001b[2m       - unexpected value \"brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)\"\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "before253: lv actual moving frames, repeated visits and discovery",
+        "status": "passed",
+        "durationMs": 20147,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "before253: en actual moving frames, repeated visits and discovery",
+        "status": "passed",
+        "durationMs": 21602,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "failed",
+        "durationMs": 19290,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCSS\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-clip=understory]').locator('video')\nExpected: \u001b[32m\"none\"\u001b[39m\nReceived: \u001b[31m\"brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCSS\" locator('[data-clip=understory]').locator('video') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-clip=understory]').locator('video')\u001b[22m\n\u001b[2m    14 \u00d7 locator resolved to <video tabindex=\"-1\" playsinline=\"\" preload=\"auto\" src=\"/media/forest-understory.mp4?v=2.3\"></video>\u001b[22m\n\u001b[2m       - unexpected value \"brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)\"\u001b[22m\n"
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "caption and note controls stay onstage through representative touch viewport changes",
+        "status": "failed",
+        "durationMs": 1436,
+        "error": "Error: A scene caption must not be hidden by the audio control at its reading anchor\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m"
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "passed",
+        "durationMs": 8430,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "passed",
+        "durationMs": 2139,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv: delayed static code keeps controls visible and enables them only after binding, with header preference and stable layout",
+        "status": "passed",
+        "durationMs": 812,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "passed",
+        "durationMs": 8436,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "passed",
+        "durationMs": 2261,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en: delayed static code keeps controls visible and enables them only after binding, with header preference and stable layout",
+        "status": "passed",
+        "durationMs": 888,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 reduced: immediate home entry, usable reveal and static film alternative",
+        "status": "passed",
+        "durationMs": 826,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 save-data: immediate home entry, usable reveal and static film alternative",
+        "status": "passed",
+        "durationMs": 1036,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+        "status": "passed",
+        "durationMs": 198,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv 390: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history",
+        "status": "passed",
+        "durationMs": 5381,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv 800: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history",
+        "status": "passed",
+        "durationMs": 4630,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv 1440: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history",
+        "status": "passed",
+        "durationMs": 3393,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en 390: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history",
+        "status": "passed",
+        "durationMs": 4583,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en 800: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history",
+        "status": "passed",
+        "durationMs": 5093,
+        "error": ""
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en 1440: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history",
+        "status": "passed",
+        "durationMs": 4703,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and contain no rejected art or scale",
+        "status": "passed",
+        "durationMs": 349,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 lv: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+        "status": "passed",
+        "durationMs": 803,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 lv: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+        "status": "passed",
+        "durationMs": 853,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 lv: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+        "status": "passed",
+        "durationMs": 2182,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 en: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+        "status": "passed",
+        "durationMs": 806,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 en: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+        "status": "passed",
+        "durationMs": 766,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 en: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+        "status": "passed",
+        "durationMs": 2165,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 missing JPG tries WebP, then the labelled wallpaper fallback; no retry loop",
+        "status": "passed",
+        "durationMs": 632,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 WebP-only local assets decode without using the final fallback",
+        "status": "passed",
+        "durationMs": 545,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 original JPEG pixels are retained with correct extensions; original cinema and routing stay unchanged",
+        "status": "passed",
+        "durationMs": 34,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 lv: narrow-phone HUD never covers the fungus invitation or another control",
+        "status": "passed",
+        "durationMs": 566,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 en: narrow-phone HUD never covers the fungus invitation or another control",
+        "status": "passed",
+        "durationMs": 629,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 mood changes the entire reading palette and grades the visual plane once",
+        "status": "passed",
+        "durationMs": 1362,
+        "error": ""
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 mood optical grade interpolates across actual rendered frames",
+        "status": "passed",
+        "durationMs": 1451,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 reduced: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 1323,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 1273,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 portal ambience starts only on its sound control and preserves mute on exit",
+        "status": "passed",
+        "durationMs": 1780,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 start-image failure recovers without an invisible Begin or a stuck doorway",
+        "status": "passed",
+        "durationMs": 1258,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "passed",
+        "durationMs": 2865,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "run": "preservation-recheck-results",
+    "stats": {
+      "startTime": "2026-11-07T20:25:19.238Z",
+      "duration": 128731.07299999999,
+      "expected": 26,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "v252.spec.ts",
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 2939,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 2595,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 2040,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 2218,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 1050,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 1010,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 974,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 901,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 877,
+        "error": ""
+      },
+      {
+        "file": "v252.spec.ts",
+        "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+        "status": "passed",
+        "durationMs": 895,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 3621,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 3477,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 3550,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 3549,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 3966,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 4030,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 4207,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 4345,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "lv: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 4941,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "en: body and secondary copy remain readable across the journey and field note",
+        "status": "passed",
+        "durationMs": 4900,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "passed",
+        "durationMs": 19925,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "candidate254: lv actual moving frames, repeated visits and discovery",
+        "status": "passed",
+        "durationMs": 21303,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "candidate254: en actual moving frames, repeated visits and discovery",
+        "status": "passed",
+        "durationMs": 23725,
+        "error": ""
+      },
+      {
+        "file": "v254.spec.ts",
+        "title": "caption and note controls stay onstage through representative touch viewport changes",
+        "status": "passed",
+        "durationMs": 1791,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 start-image failure recovers without an invisible Begin or a stuck doorway",
+        "status": "passed",
+        "durationMs": 1206,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "passed",
+        "durationMs": 2752,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "run": "entry-actual-event-results",
+    "stats": {
+      "startTime": "2026-11-07T20:33:41.347Z",
+      "duration": 14974.401,
+      "expected": 9,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 activation freezes an unfinished native anchor scroll at its actual opening position",
+        "status": "passed",
+        "durationMs": 2109,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1070,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1299,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1774,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1889,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 908,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1299,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1771,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1904,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "run": "presentation-fix-results",
+    "stats": {
+      "startTime": "2026-11-08T00:23:34.806Z",
+      "duration": 179053.07200000001,
+      "expected": 15,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "cinema.spec.ts",
+        "title": "awakening final frame docks and returns continuously at 1512x982",
+        "status": "passed",
+        "durationMs": 12005,
+        "error": ""
+      },
+      {
+        "file": "cinema.spec.ts",
+        "title": "awakening final frame docks and returns continuously at 390x664",
+        "status": "passed",
+        "durationMs": 10212,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 start-image failure recovers without an invisible Begin or a stuck doorway",
+        "status": "passed",
+        "durationMs": 1945,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "passed",
+        "durationMs": 3603,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 activation freezes an unfinished native anchor scroll at its actual opening position",
+        "status": "passed",
+        "durationMs": 2661,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1694,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1946,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2299,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2477,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1605,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1940,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2354,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2540,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 65708,
+        "error": ""
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 64897,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "run": "final-portal-chromium",
+    "sha": "2c8bcb4f2e004d55de86cca53bc5ff8fda3af700",
+    "stats": {
+      "startTime": "2026-11-08T01:55:13.770Z",
+      "duration": 185405.00799999997,
+      "expected": 24,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 reduced: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 1249
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 2013
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 real failure, retry, advancing frames, pause, skip and hidden-document recovery",
+        "status": "passed",
+        "durationMs": 4282
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 slow in-flight decode can be exited immediately and cannot reopen the portal",
+        "status": "passed",
+        "durationMs": 2129
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 locale and native browser Back close the doorway without restarting films",
+        "status": "passed",
+        "durationMs": 2067
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 audited originals retain exact source bytes and source-quality poster dimensions",
+        "status": "passed",
+        "durationMs": 323
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 portal ambience starts only on its sound control and preserves mute on exit",
+        "status": "passed",
+        "durationMs": 2754
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 start-image failure recovers without an invisible Begin or a stuck doorway",
+        "status": "passed",
+        "durationMs": 2074
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "passed",
+        "durationMs": 3168
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 activation freezes an unfinished native anchor scroll at its actual opening position",
+        "status": "passed",
+        "durationMs": 2772
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 invitation shade leaves with its copy while the next film is still preparing",
+        "status": "passed",
+        "durationMs": 2938
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1758
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1977
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2309
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2521
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1547
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 1964
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2291
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 2590
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 65677
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 65279
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 quiet-world fullscreen follows the actual viewport while native body scrolling is locked",
+        "status": "passed",
+        "durationMs": 4108
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 desktop living world retains source quality and full bleed at a real desktop input/render profile",
+        "status": "passed",
+        "durationMs": 3111
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 desktop living world retains source quality and full bleed at a real desktop input/render profile",
+        "status": "passed",
+        "durationMs": 3415
+      }
+    ]
+  }
+]

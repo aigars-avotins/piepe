@@ -12,9 +12,11 @@ test.afterEach(async({page},testInfo)=>{
   })),contentType:'application/json'})
 })
 
+// GitHub's observed AppKit display is 1920x1080 at 1x. Do not fabricate a
+// 3024x1964 backing surface there; local Chromium retains 2x Retina coverage.
 function inViewport(width:number,height:number,register:()=>void){
   test.describe(`${width}x${height} rendering`,()=>{
-    test.use({viewport:{width,height},deviceScaleFactor:width>=2000?1:width>=700?2:3,isMobile:width<700,hasTouch:width<700,...(width>=700?{userAgent:undefined}:{})})
+    test.use({viewport:{width,height},deviceScaleFactor:width>=2000?1:width>=700?(process.platform==='darwin'&&process.env.CI?1:2):3,isMobile:width<700,hasTouch:width<700,...(width>=700?{userAgent:undefined}:{})})
     register()
   })
 }
@@ -125,9 +127,17 @@ test('the decoded first frame retains local fungus edge anchors, not just a low 
   for(const anchor of result.anchors){expect(Math.hypot(anchor.dx,anchor.dy)).toBeLessThanOrEqual(2);expect(anchor.score).toBeGreaterThan(.8)}
 })
 
-for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>test(`awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
-  test.setTimeout(25000);await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'))
+for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>test(`intro then awakening final frame docks and returns continuously at ${width}x${height}`,async({page},testInfo)=>{
+  test.setTimeout(35000);await page.setViewportSize({width,height})
   await page.goto('/en/')
+  // Follow the real first-visit intro before testing its subsequent camera move.
+  // The unchanged controller's bounded cold-decoder fallback is a separate path.
+  await expect(page.locator('.world')).toHaveAttribute('data-exit-reason','ended',{timeout:16000})
+  // Start the user action after the actual initial typography/forest paint.
+  // This keeps the cold native window startup outside the film's own deadline.
+  await page.evaluate(()=>document.fonts.ready)
+  await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
+  await expect(page.locator('.forest-still')).toHaveJSProperty('complete',true)
   await page.evaluate(()=>{
     const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
     const observer=new MutationObserver(()=>{

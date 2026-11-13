@@ -1,0 +1,3863 @@
+[
+  {
+    "runId": "42412101928",
+    "url": "https://github.com/aigars-avotins/piepe/actions/runs/42412101928",
+    "sha": "e903918",
+    "stats": {
+      "startTime": "2026-11-07T20:44:22.981Z",
+      "duration": 362402.011,
+      "expected": 32,
+      "skipped": 0,
+      "unexpected": 3,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "cinema.spec.ts",
+        "title": "environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts",
+        "status": "passed",
+        "durationMs": 8941,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "cinema.spec.ts",
+        "title": "awakening final frame docks and returns continuously at 1512x982",
+        "status": "failed",
+        "durationMs": 26099,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m10\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "photo-docking-frames": []
+      },
+      {
+        "file": "cinema.spec.ts",
+        "title": "awakening final frame docks and returns continuously at 390x664",
+        "status": "passed",
+        "durationMs": 16794,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "photo-docking-frames": [
+          {
+            "t": 31,
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 664,
+            "sx": 0.6148111979166667,
+            "sy": 0.6148111979166667,
+            "moving": false,
+            "camera": true
+          },
+          {
+            "t": 537,
+            "x": 0,
+            "y": 0,
+            "w": 390,
+            "h": 664,
+            "sx": 0.6148111979166667,
+            "sy": 0.6148111979166667,
+            "moving": false,
+            "camera": true
+          },
+          {
+            "t": 546,
+            "x": 0,
+            "y": 1.6054799556732178,
+            "w": 390,
+            "h": 653.8724975585938,
+            "sx": 0.605433972676595,
+            "sy": 0.6054339938693576,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 555,
+            "x": 0,
+            "y": 3.3554399013519287,
+            "w": 390,
+            "h": 642.8336181640625,
+            "sx": 0.5952129364013672,
+            "sy": 0.5952128657588253,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 585,
+            "x": 0,
+            "y": 7.904940128326416,
+            "w": 390,
+            "h": 614.135009765625,
+            "sx": 0.5686404546101888,
+            "sy": 0.5686404192889178,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 624,
+            "x": 0,
+            "y": 14.486940383911133,
+            "w": 390,
+            "h": 572.6153564453125,
+            "sx": 0.5301966349283854,
+            "sy": 0.5301966349283854,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 647,
+            "x": 0,
+            "y": 17.84429931640625,
+            "w": 390,
+            "h": 551.4368286132812,
+            "sx": 0.5105871200561524,
+            "sy": 0.5105871129918982,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 681,
+            "x": 0,
+            "y": 22.49843978881836,
+            "w": 390,
+            "h": 522.0782470703125,
+            "sx": 0.48340346018473307,
+            "sy": 0.4834035237630208,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 714,
+            "x": 0,
+            "y": 26.67527961730957,
+            "w": 390,
+            "h": 495.7303466796875,
+            "sx": 0.45900764465332033,
+            "sy": 0.45900760226779513,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 748,
+            "x": 0,
+            "y": 30.641759872436523,
+            "w": 390,
+            "h": 470.7095642089844,
+            "sx": 0.43584038416544596,
+            "sy": 0.43584040889033565,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 781,
+            "x": 0,
+            "y": 34.177860260009766,
+            "w": 390,
+            "h": 448.403564453125,
+            "sx": 0.4151869455973307,
+            "sy": 0.41518693146882235,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 813,
+            "x": 0,
+            "y": 37.4179801940918,
+            "w": 390,
+            "h": 427.96466064453125,
+            "sx": 0.3962622324625651,
+            "sy": 0.3962622183340567,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 848,
+            "x": 0,
+            "y": 40.4603385925293,
+            "w": 390,
+            "h": 408.7732238769531,
+            "sx": 0.378492546081543,
+            "sy": 0.3784925672743056,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 885,
+            "x": 0,
+            "y": 43.36991882324219,
+            "w": 390,
+            "h": 390.41937255859375,
+            "sx": 0.36149841944376626,
+            "sy": 0.3614984017831308,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 922,
+            "x": 0,
+            "y": 46.043521881103516,
+            "w": 390,
+            "h": 373.5541076660156,
+            "sx": 0.34588260650634767,
+            "sy": 0.34588261357060185,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 948,
+            "x": 0,
+            "y": 47.802181243896484,
+            "w": 390,
+            "h": 362.4603576660156,
+            "sx": 0.33561070760091144,
+            "sy": 0.33561070760091144,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1080,
+            "x": 0,
+            "y": 54.34823989868164,
+            "w": 390,
+            "h": 321.1673278808594,
+            "sx": 0.297376823425293,
+            "sy": 0.2973768163610388,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1113,
+            "x": 0,
+            "y": 55.49094009399414,
+            "w": 390,
+            "h": 313.9591064453125,
+            "sx": 0.2907025973002116,
+            "sy": 0.2907025937680845,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1146,
+            "x": 0,
+            "y": 56.46815872192383,
+            "w": 390,
+            "h": 307.7947082519531,
+            "sx": 0.28499488830566405,
+            "sy": 0.28499490243417247,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1181,
+            "x": 0,
+            "y": 57.338279724121094,
+            "w": 390,
+            "h": 302.3059387207031,
+            "sx": 0.27991275787353515,
+            "sy": 0.27991273668077254,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1214,
+            "x": 0,
+            "y": 58.01544189453125,
+            "w": 390,
+            "h": 298.03436279296875,
+            "sx": 0.2759576161702474,
+            "sy": 0.2759576302987558,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1248,
+            "x": 0,
+            "y": 58.56671905517578,
+            "w": 390,
+            "h": 294.5568542480469,
+            "sx": 0.27273775736490885,
+            "sy": 0.2727377432364005,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1289,
+            "x": 0,
+            "y": 59.0737190246582,
+            "w": 390,
+            "h": 291.358642578125,
+            "sx": 0.26977647145589195,
+            "sy": 0.2697764643916377,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1315,
+            "x": 0,
+            "y": 59.352359771728516,
+            "w": 390,
+            "h": 289.6009826660156,
+            "sx": 0.2681490262349447,
+            "sy": 0.2681490297670718,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1352,
+            "x": 0,
+            "y": 59.60765838623047,
+            "w": 390,
+            "h": 287.99053955078125,
+            "sx": 0.26665786107381184,
+            "sy": 0.26665787873444735,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1382,
+            "x": 0,
+            "y": 59.780879974365234,
+            "w": 390,
+            "h": 286.8978576660156,
+            "sx": 0.26564613978068036,
+            "sy": 0.26564613624855327,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1415,
+            "x": 0,
+            "y": 59.893680572509766,
+            "w": 390,
+            "h": 286.1863098144531,
+            "sx": 0.264987309773763,
+            "sy": 0.2649873239022714,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1447,
+            "x": 0,
+            "y": 59.95914077758789,
+            "w": 390,
+            "h": 285.77337646484375,
+            "sx": 0.26460496584574383,
+            "sy": 0.2646049782081887,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1481,
+            "x": 0,
+            "y": 59.99003982543945,
+            "w": 390,
+            "h": 285.57843017578125,
+            "sx": 0.2644244988759359,
+            "sy": 0.2644244723849826,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1516,
+            "x": 0,
+            "y": 59.99934005737305,
+            "w": 390,
+            "h": 285.5198059082031,
+            "sx": 0.2643701712290446,
+            "sy": 0.26437019065574363,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1556,
+            "x": 0,
+            "y": 60,
+            "w": 390,
+            "h": 285.515625,
+            "sx": 0.203125,
+            "sy": 0.26436631944444444,
+            "moving": false,
+            "camera": false
+          }
+        ]
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "passed",
+        "durationMs": 12585,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "passed",
+        "durationMs": 7293,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+        "status": "passed",
+        "durationMs": 12678,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2581.spec.ts",
+        "title": "2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript",
+        "status": "passed",
+        "durationMs": 6406,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and contain no rejected art or scale",
+        "status": "passed",
+        "durationMs": 1935,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 lv: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+        "status": "passed",
+        "durationMs": 3226,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 lv: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+        "status": "passed",
+        "durationMs": 3246,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 lv: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+        "status": "passed",
+        "durationMs": 3884,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 en: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+        "status": "passed",
+        "durationMs": 3064,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 en: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+        "status": "passed",
+        "durationMs": 3359,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 en: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+        "status": "passed",
+        "durationMs": 4102,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v2582.spec.ts",
+        "title": "2.5.8.2 mood optical grade interpolates across actual rendered frames",
+        "status": "passed",
+        "durationMs": 3080,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 reduced: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 3485,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 3522,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 real failure, retry, advancing frames, pause, skip and hidden-document recovery",
+        "status": "passed",
+        "durationMs": 8588,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 slow in-flight decode can be exited immediately and cannot reopen the portal",
+        "status": "passed",
+        "durationMs": 5282,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 locale and native browser Back close the doorway without restarting films",
+        "status": "passed",
+        "durationMs": 4236,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 audited originals retain exact source bytes and source-quality poster dimensions",
+        "status": "passed",
+        "durationMs": 2292,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 portal ambience starts only on its sound control and preserves mute on exit",
+        "status": "passed",
+        "durationMs": 6480,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 start-image failure recovers without an invisible Begin or a stuck doorway",
+        "status": "passed",
+        "durationMs": 3853,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "failed",
+        "durationMs": 6749,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m844\u001b[39m\nReceived:    \u001b[31m674.61572265625\u001b[39m",
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 activation freezes an unfinished native anchor scroll at its actual opening position",
+        "status": "passed",
+        "durationMs": 4992,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 3732,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4059,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 5455,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 5562,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 3083,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 3545,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4517,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4684,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 72166,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "native-sequence-proof": [
+          {
+            "phase": "entering",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.25791109500001685
+          },
+          {
+            "phase": "deepening",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.2752356190000308
+          },
+          {
+            "phase": "arriving",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.298452686999972
+          },
+          {
+            "phase": "living-world",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.32467284099997235
+          },
+          {
+            "loopFrames": [
+              0.25,
+              0.2916666666666667,
+              0.3333333333333333,
+              0.375,
+              0.4166666666666667
+            ]
+          },
+          {
+            "returnClip": 4,
+            "width": 1920,
+            "height": 1080,
+            "time": 0.41256129899997745,
+            "speed": 1
+          },
+          {
+            "returnClip": 5,
+            "width": 1920,
+            "height": 1080,
+            "time": 0.3788252610000927,
+            "speed": 1
+          }
+        ]
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "failed",
+        "durationMs": 72237,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m2261\u001b[39m\nReceived: \u001b[31m3245\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m984\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "runId": "42430307084",
+    "url": "https://github.com/aigars-avotins/piepe/actions/runs/42430307084",
+    "sha": "edf91db",
+    "stats": {
+      "startTime": "2026-11-08T00:37:08.107Z",
+      "duration": 80542.22899999999,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 74479,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "native-sequence-proof": [
+          {
+            "phase": "entering",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.42758556499987727
+          },
+          {
+            "phase": "deepening",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.2838356750000411
+          },
+          {
+            "phase": "arriving",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.343034052999938
+          },
+          {
+            "phase": "living-world",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.26735385599990974
+          },
+          {
+            "loopFrames": [
+              0.20833333333333334,
+              0.25,
+              0.2916666666666667,
+              0.3333333333333333,
+              0.375
+            ]
+          },
+          {
+            "returnClip": 4,
+            "width": 1920,
+            "height": 1080,
+            "time": 0.23890289599989822,
+            "speed": 1
+          },
+          {
+            "returnClip": 5,
+            "width": 1920,
+            "height": 1080,
+            "time": 0.4495405699999718,
+            "speed": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "runId": "42430794855",
+    "url": "https://github.com/aigars-avotins/piepe/actions/runs/42430794855",
+    "sha": "edf91db",
+    "stats": {
+      "startTime": "2026-11-08T00:43:06.653Z",
+      "duration": 195522.607,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "cinema.spec.ts",
+        "title": "awakening final frame docks and returns continuously at 1512x982",
+        "status": "failed",
+        "durationMs": 26072,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m10\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "photo-docking-frames": []
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 reduced: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 3750,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data: direct still world, no automatic movies, safe return and re-entry",
+        "status": "passed",
+        "durationMs": 4188,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 real failure, retry, advancing frames, pause, skip and hidden-document recovery",
+        "status": "passed",
+        "durationMs": 8113,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 slow in-flight decode can be exited immediately and cannot reopen the portal",
+        "status": "passed",
+        "durationMs": 5042,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 locale and native browser Back close the doorway without restarting films",
+        "status": "passed",
+        "durationMs": 5055,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 audited originals retain exact source bytes and source-quality poster dimensions",
+        "status": "passed",
+        "durationMs": 971,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 portal ambience starts only on its sound control and preserves mute on exit",
+        "status": "passed",
+        "durationMs": 5687,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 start-image failure recovers without an invisible Begin or a stuck doorway",
+        "status": "passed",
+        "durationMs": 4230,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "failed",
+        "durationMs": 11084,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 activation freezes an unfinished native anchor scroll at its actual opening position",
+        "status": "passed",
+        "durationMs": 3611,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4175,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4181,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4586,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4988,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 3638,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 3576,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 4193,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+        "status": "passed",
+        "durationMs": 5041,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+        "status": "passed",
+        "durationMs": 69301,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "native-sequence-proof": [
+          {
+            "phase": "entering",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.29809509099985365
+          },
+          {
+            "phase": "deepening",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.3165791649998772
+          },
+          {
+            "phase": "arriving",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.41307363700013117
+          },
+          {
+            "phase": "living-world",
+            "width": 1920,
+            "height": 1080,
+            "speed": 1,
+            "muted": true,
+            "time": 0.4504517479999318
+          },
+          {
+            "loopFrames": [
+              0.20833333333333334,
+              0.25,
+              0.2916666666666667,
+              0.3333333333333333,
+              0.375
+            ]
+          },
+          {
+            "returnClip": 4,
+            "width": 1920,
+            "height": 1080,
+            "time": 0.3905796620000293,
+            "speed": 1
+          },
+          {
+            "returnClip": 5,
+            "width": 1920,
+            "height": 1080,
+            "time": 0.5179365639999496,
+            "speed": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "runId": "42433899750",
+    "url": "https://github.com/aigars-avotins/piepe/actions/runs/42433899750",
+    "sha": "28a52eb",
+    "stats": {
+      "startTime": "2026-11-08T01:24:05.602Z",
+      "duration": 82305.157,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "cinema.spec.ts",
+        "title": "intro then awakening final frame docks and returns continuously at 1512x982",
+        "status": "failed",
+        "durationMs": 25510,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m3\u001b[39m\nReceived:   \u001b[31m4.568766276041667\u001b[39m",
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "photo-docking-frames": [
+          {
+            "t": 43,
+            "x": 0,
+            "y": 0,
+            "w": 1512,
+            "h": 982,
+            "sx": 0.9092529296875,
+            "sy": 0.9092529296875,
+            "moving": false,
+            "camera": true
+          },
+          {
+            "t": 321,
+            "x": 0,
+            "y": 0,
+            "w": 1512,
+            "h": 982,
+            "sx": 0.9092529296875,
+            "sy": 0.9092529296875,
+            "moving": false,
+            "camera": true
+          },
+          {
+            "t": 327,
+            "x": 0,
+            "y": 0,
+            "w": 1504.3271484375,
+            "h": 982,
+            "sx": 0.9092530568440755,
+            "sy": 0.9092530427155672,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 677,
+            "x": 0,
+            "y": 0,
+            "w": 1146.379150390625,
+            "h": 982,
+            "sx": 0.909257443745931,
+            "sy": 0.9092574508101852,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 680,
+            "x": 0,
+            "y": 0,
+            "w": 1132.6728515625,
+            "h": 982,
+            "sx": 0.9092576344807942,
+            "sy": 0.9092576203522859,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2323,
+            "x": 0,
+            "y": 0,
+            "w": 1112.8828125,
+            "h": 982,
+            "sx": 0.9092578252156576,
+            "sy": 0.9092578464084201,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2344,
+            "x": 0,
+            "y": 0,
+            "w": 1101.3572998046875,
+            "h": 982,
+            "sx": 0.9092580159505208,
+            "sy": 0.9092579594364872,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2364,
+            "x": 0,
+            "y": 0,
+            "w": 1091.1221923828125,
+            "h": 982,
+            "sx": 0.9092581431070964,
+            "sy": 0.9092581289785879,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2396,
+            "x": 0,
+            "y": 0,
+            "w": 1075.749755859375,
+            "h": 982,
+            "sx": 0.9092583338419596,
+            "sy": 0.9092582985206886,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2441,
+            "x": 0,
+            "y": 0,
+            "w": 1058.388916015625,
+            "h": 982,
+            "sx": 0.9092585245768229,
+            "sy": 0.9092585245768229,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2479,
+            "x": 0,
+            "y": 0,
+            "w": 1045.066162109375,
+            "h": 982,
+            "sx": 0.9092586517333985,
+            "sy": 0.9092586941189236,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2514,
+            "x": 0,
+            "y": 0,
+            "w": 1034.9163818359375,
+            "h": 982,
+            "sx": 0.909258778889974,
+            "sy": 0.9092588071469907,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2548,
+            "x": 0,
+            "y": 0,
+            "w": 1026.3387451171875,
+            "h": 982,
+            "sx": 0.9092589060465495,
+            "sy": 0.9092589201750578,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2582,
+            "x": 0,
+            "y": 0,
+            "w": 1019.3861083984375,
+            "h": 982,
+            "sx": 0.909259033203125,
+            "sy": 0.9092589766890914,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2616,
+            "x": 0,
+            "y": 0,
+            "w": 1013.8220825195312,
+            "h": 982,
+            "sx": 0.909259033203125,
+            "sy": 0.9092590897171585,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2650,
+            "x": 0,
+            "y": 0,
+            "w": 1009.191650390625,
+            "h": 982,
+            "sx": 0.9092591603597006,
+            "sy": 0.9092591462311921,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2684,
+            "x": 0,
+            "y": 0,
+            "w": 1005.5595703125,
+            "h": 982,
+            "sx": 0.9092591603597006,
+            "sy": 0.9092591462311921,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2718,
+            "x": 0,
+            "y": 0,
+            "w": 1002.8045654296875,
+            "h": 982,
+            "sx": 0.9092591603597006,
+            "sy": 0.9092592027452256,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2750,
+            "x": 0,
+            "y": 0,
+            "w": 1000.9044189453125,
+            "h": 982,
+            "sx": 0.9092591603597006,
+            "sy": 0.9092592027452256,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2785,
+            "x": 0,
+            "y": 0,
+            "w": 999.4413452148438,
+            "h": 982,
+            "sx": 0.9092592239379883,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2817,
+            "x": 0,
+            "y": 0,
+            "w": 998.6480712890625,
+            "h": 982,
+            "sx": 0.9092592239379883,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2850,
+            "x": 0,
+            "y": 0,
+            "w": 998.1694946289062,
+            "h": 982,
+            "sx": 0.909259287516276,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2884,
+            "x": 0,
+            "y": 0,
+            "w": 997.9561157226562,
+            "h": 982,
+            "sx": 0.909259287516276,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2917,
+            "x": 0,
+            "y": 0,
+            "w": 997.9072875976562,
+            "h": 982,
+            "sx": 0.909259287516276,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 2957,
+            "x": 0,
+            "y": 0,
+            "w": 997.90625,
+            "h": 982,
+            "sx": 0.5197428385416667,
+            "sy": 0.9092592592592592,
+            "moving": false,
+            "camera": false
+          }
+        ]
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "timedOut",
+        "durationMs": 37016,
+        "error": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m",
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 quiet-world fullscreen follows the actual viewport while native body scrolling is locked",
+        "status": "passed",
+        "durationMs": 9361,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "native-modal-viewport-proof": [
+          {
+            "width": 390,
+            "height": 844,
+            "windowHeight": 844,
+            "layoutHeight": 664,
+            "visualHeight": 844
+          },
+          {
+            "width": 844,
+            "height": 390,
+            "windowHeight": 390,
+            "layoutHeight": 390,
+            "visualHeight": 390
+          },
+          {
+            "width": 800,
+            "height": 900,
+            "windowHeight": 900,
+            "layoutHeight": 900,
+            "visualHeight": 900
+          },
+          {
+            "width": 1440,
+            "height": 900,
+            "windowHeight": 900,
+            "layoutHeight": 900,
+            "visualHeight": 900
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "runId": "42435441398",
+    "url": "https://github.com/aigars-avotins/piepe/actions/runs/42435441398",
+    "sha": "481ab99",
+    "stats": {
+      "startTime": "2026-11-08T01:45:25.013Z",
+      "duration": 54329.695,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "cinema.spec.ts",
+        "title": "intro then awakening final frame docks and returns continuously at 1512x982",
+        "status": "passed",
+        "durationMs": 24966,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "photo-docking-frames": [
+          {
+            "t": 35,
+            "x": 0,
+            "y": 0,
+            "w": 1512,
+            "h": 982,
+            "sx": 0.9092529296875,
+            "sy": 0.9092529296875,
+            "moving": false,
+            "camera": true
+          },
+          {
+            "t": 54,
+            "x": 0,
+            "y": 0,
+            "w": 1512,
+            "h": 982,
+            "sx": 0.9092529296875,
+            "sy": 0.9092529296875,
+            "moving": false,
+            "camera": true
+          },
+          {
+            "t": 60,
+            "x": 0,
+            "y": 0,
+            "w": 1502.8018798828125,
+            "h": 982,
+            "sx": 0.9092530568440755,
+            "sy": 0.9092530427155672,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 92,
+            "x": 0,
+            "y": 0,
+            "w": 1454.16650390625,
+            "h": 982,
+            "sx": 0.9092536290486654,
+            "sy": 0.9092536643699364,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 130,
+            "x": 0,
+            "y": 0,
+            "w": 1406.1085205078125,
+            "h": 982,
+            "sx": 0.9092542648315429,
+            "sy": 0.909254229510272,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 158,
+            "x": 0,
+            "y": 0,
+            "w": 1366.46875,
+            "h": 982,
+            "sx": 0.9092547098795573,
+            "sy": 0.9092547381365741,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 193,
+            "x": 0,
+            "y": 0,
+            "w": 1324.898681640625,
+            "h": 982,
+            "sx": 0.9092552185058593,
+            "sy": 0.9092552467628762,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 237,
+            "x": 0,
+            "y": 0,
+            "w": 1277.23291015625,
+            "h": 982,
+            "sx": 0.9092557907104493,
+            "sy": 0.9092558119032118,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 259,
+            "x": 0,
+            "y": 0,
+            "w": 1255.244140625,
+            "h": 982,
+            "sx": 0.909256108601888,
+            "sy": 0.9092560944733796,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 303,
+            "x": 0,
+            "y": 0,
+            "w": 1215.6583251953125,
+            "h": 982,
+            "sx": 0.9092566172281901,
+            "sy": 0.9092566030996817,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 326,
+            "x": 0,
+            "y": 0,
+            "w": 1196.258056640625,
+            "h": 982,
+            "sx": 0.9092568715413412,
+            "sy": 0.909256829155816,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 361,
+            "x": 0,
+            "y": 0,
+            "w": 1169.0032958984375,
+            "h": 982,
+            "sx": 0.90925718943278,
+            "sy": 0.9092571682400173,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 393,
+            "x": 0,
+            "y": 0,
+            "w": 1146.379150390625,
+            "h": 982,
+            "sx": 0.909257443745931,
+            "sy": 0.9092574508101852,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 425,
+            "x": 0,
+            "y": 0,
+            "w": 1125.2333984375,
+            "h": 982,
+            "sx": 0.9092576980590821,
+            "sy": 0.9092576768663194,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 458,
+            "x": 0,
+            "y": 0,
+            "w": 1106.197509765625,
+            "h": 982,
+            "sx": 0.9092579523722331,
+            "sy": 0.9092579029224537,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 492,
+            "x": 0,
+            "y": 0,
+            "w": 1088.673583984375,
+            "h": 982,
+            "sx": 0.9092581431070964,
+            "sy": 0.9092581289785879,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 525,
+            "x": 0,
+            "y": 0,
+            "w": 1073.579833984375,
+            "h": 982,
+            "sx": 0.9092583338419596,
+            "sy": 0.9092583550347222,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 561,
+            "x": 0,
+            "y": 0,
+            "w": 1059.5064697265625,
+            "h": 982,
+            "sx": 0.9092584609985351,
+            "sy": 0.9092585245768229,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 592,
+            "x": 0,
+            "y": 0,
+            "w": 1048.2730712890625,
+            "h": 982,
+            "sx": 0.9092586517333985,
+            "sy": 0.90925863760489,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 626,
+            "x": 0,
+            "y": 0,
+            "w": 1037.9305419921875,
+            "h": 982,
+            "sx": 0.909258778889974,
+            "sy": 0.9092587506329571,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 659,
+            "x": 0,
+            "y": 0,
+            "w": 1029.3497314453125,
+            "h": 982,
+            "sx": 0.9092588424682617,
+            "sy": 0.9092588636610243,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 692,
+            "x": 0,
+            "y": 0,
+            "w": 1022.09228515625,
+            "h": 982,
+            "sx": 0.9092589696248372,
+            "sy": 0.9092589766890914,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 725,
+            "x": 0,
+            "y": 0,
+            "w": 1016.047607421875,
+            "h": 982,
+            "sx": 0.909259033203125,
+            "sy": 0.909259033203125,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 759,
+            "x": 0,
+            "y": 0,
+            "w": 1010.9703979492188,
+            "h": 982,
+            "sx": 0.9092590967814128,
+            "sy": 0.9092590897171585,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 791,
+            "x": 0,
+            "y": 0,
+            "w": 1007.0468139648438,
+            "h": 982,
+            "sx": 0.9092591603597006,
+            "sy": 0.9092591462311921,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 825,
+            "x": 0,
+            "y": 0,
+            "w": 1003.999267578125,
+            "h": 982,
+            "sx": 0.9092591603597006,
+            "sy": 0.9092592027452256,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 859,
+            "x": 0,
+            "y": 0,
+            "w": 1001.65966796875,
+            "h": 982,
+            "sx": 0.9092592239379883,
+            "sy": 0.9092592027452256,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 892,
+            "x": 0,
+            "y": 0,
+            "w": 1000.011962890625,
+            "h": 982,
+            "sx": 0.9092592239379883,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 925,
+            "x": 0,
+            "y": 0,
+            "w": 998.9843139648438,
+            "h": 982,
+            "sx": 0.909259287516276,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 958,
+            "x": 0,
+            "y": 0,
+            "w": 998.3334350585938,
+            "h": 982,
+            "sx": 0.909259287516276,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 993,
+            "x": 0,
+            "y": 0,
+            "w": 998.0172729492188,
+            "h": 982,
+            "sx": 0.9092592239379883,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1029,
+            "x": 0,
+            "y": 0,
+            "w": 997.9134521484375,
+            "h": 982,
+            "sx": 0.9092592239379883,
+            "sy": 0.9092592592592592,
+            "moving": true,
+            "camera": true
+          },
+          {
+            "t": 1066,
+            "x": 0,
+            "y": 0,
+            "w": 997.90625,
+            "h": 982,
+            "sx": 0.5197428385416667,
+            "sy": 0.9092592592592592,
+            "moving": false,
+            "camera": false
+          }
+        ]
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+        "status": "passed",
+        "durationMs": 9651,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 desktop living world retains source quality and full bleed at a real desktop input/render profile",
+        "status": "passed",
+        "durationMs": 7712,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "desktop-source-quality-full-bleed": {
+          "width": 1920,
+          "height": 1080,
+          "rate": 1,
+          "muted": true,
+          "boxWidth": 812.7696533203125,
+          "boxHeight": 914.36572265625
+        }
+      },
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 desktop living world retains source quality and full bleed at a real desktop input/render profile",
+        "status": "passed",
+        "durationMs": 5772,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        },
+        "desktop-source-quality-full-bleed": {
+          "width": 1920,
+          "height": 1080,
+          "rate": 1,
+          "muted": true,
+          "boxWidth": 1463.0400390625,
+          "boxHeight": 914.39990234375
+        }
+      }
+    ]
+  },
+  {
+    "runId": "42436301757",
+    "url": "https://github.com/aigars-avotins/piepe/actions/runs/42436301757",
+    "sha": "2c8bcb4",
+    "stats": {
+      "startTime": "2026-11-08T01:57:19.492Z",
+      "duration": 14026.390000000001,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "tests": [
+      {
+        "file": "v300.spec.ts",
+        "title": "3.0 invitation shade leaves with its copy while the next film is still preparing",
+        "status": "passed",
+        "durationMs": 9033,
+        "native-window-activation": {
+          "requested": [
+            {
+              "name": "Playwright",
+              "activated": true
+            }
+          ],
+          "frontmost": "Playwright",
+          "displays": [
+            {
+              "frame": {
+                "origin": {
+                  "x": 0,
+                  "y": 0
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              "visible": {
+                "origin": {
+                  "x": 0,
+                  "y": 85
+                },
+                "size": {
+                  "width": 1920,
+                  "height": 970
+                }
+              },
+              "scale": 1
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

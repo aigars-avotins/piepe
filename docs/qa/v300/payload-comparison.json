@@ -1,0 +1,20 @@
+[
+  {
+    "candidate": "2.5.8.2",
+    "jsBytes": 423078,
+    "jsGzipBytes": 142800,
+    "cssBytes": 69781,
+    "cssGzipBytes": 14769,
+    "htmlBytes": 34478,
+    "newPortalMediaOnOrdinaryHomeVisit": 0
+  },
+  {
+    "candidate": "3.0",
+    "jsBytes": 440175,
+    "jsGzipBytes": 148144,
+    "cssBytes": 77561,
+    "cssGzipBytes": 16311,
+    "htmlBytes": 34286,
+    "newPortalMediaOnOrdinaryHomeVisit": 0
+  }
+]
