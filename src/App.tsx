@@ -1,3 +1,4 @@
+import SiteLink from './SiteLink'
 import FungusPortal from './FungusPortal'
 import type {PortalOrigin} from './FungusPortal'
 import { releaseVersion, releaseMilestone } from './release'
@@ -264,7 +265,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const inspectEvents = { onMouseEnter: () => setInspect(true), onMouseLeave: () => setInspect(false), onFocus: () => setInspect(true), onBlur: () => setInspect(false) }
 
   return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || dataSaving || paused || motionFailed ? 'motion-off' : ''} ${reduced || dataSaving || motionFailed ? 'static-preference' : ''} ${portalOpen || hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${noteState !== 'unseen' ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version={releaseVersion} data-milestone={releaseMilestone} data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
-    <a className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}><span data-nosnippet="">{t.skipContent}</span></a>
+    <SiteLink className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}><span data-nosnippet="">{t.skipContent}</span></SiteLink>
     <ForestScene ref={environment} plane={plane} inspect={inspect && (scene === 'forest' || scene === 'encounter')} still={intro ? '/media/forest-poster.jpg' : heldFrame}
       macro={cinemaMounted.understory && <MotionClip key={cinemaRetries.understory} name="understory" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.understory && !intro && !discovery && !portalOpen && awakening === 'idle'} onReady={() => cinemaResult('understory', false)} onFinish={() => cinemaResult('understory', true)} />}
       breathing={cinemaMounted.breathing && <MotionClip key={cinemaRetries.breathing} name="breathing" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.breathing && !intro && !discovery && !portalOpen && awakening === 'idle'} onReady={() => cinemaResult('breathing', false)} onFinish={() => cinemaResult('breathing', true)} />}>
@@ -276,11 +277,11 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     </div>}
     <img className="asset-monitor" src={mediaUrl('/media/forest-final.jpg')} alt="" aria-hidden="true" onError={() => { setImageFailed(true); finish('image-error') }} />
     <header className="site-header">
-      <a className="brand" href="#forest" onClick={returnToForest} aria-label={t.homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a>
+      <SiteLink className="brand" href="#forest" onClick={returnToForest} aria-label={t.homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></SiteLink>
       <span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} onChange={changeLocale} />
       {intro ? <button className="text-button skip-intro" onClick={() => setSkipRequested(true)}><ControlText>{t.skipIntro}</ControlText> <span aria-hidden="true"><Arrow direction="diagonal" /></span></button> : <button className="text-button replay-intro" onClick={replay} aria-label={t.replayLabel}><ControlText>{t.replay}</ControlText> <span aria-hidden="true">↺</span></button>}
     </header>
-    <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <a key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">0{index + 1}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></a>)}</nav>
+    <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <SiteLink key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">0{index + 1}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></SiteLink>)}</nav>
     <Story onPortal={event=>{if(!discovery&&awakening==='idle'){portalOpener.current={element:event.currentTarget,x:scrollX,y:scrollY};window.scrollTo({left:scrollX,top:scrollY,behavior:'instant'});setPortalOpen(true)}}} inactive={cinemaRunning||portalOpen} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} noteState={noteState} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
     {!discovery && <SoundControl audio={audio} locale={locale} />}
     {portalOpen&&<FungusPortal opener={portalOpener} locale={locale} onLocaleChange={changeLocale} onClose={value=>{setPortalOpen(false);setLocale(value);history.replaceState(history.state,'',localePath(value)+location.hash)}} audio={audio} reduced={reduced} saving={dataSaving}/>}

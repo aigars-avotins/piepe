@@ -1,0 +1,154 @@
+[
+  {
+    "version": "3.0",
+    "dpr": 1,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "network": "20Mbps /100ms latency, fresh cache",
+    "images": [
+      {
+        "src": "/images/interactive/xray-bark-surface.jpg",
+        "width": 2752,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 0.40000000037252903,
+        "transferDurationMs": 2696.89999999851
+      },
+      {
+        "src": "/images/interactive/xray-wood-mycelium.jpg",
+        "width": 2752,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 0.5,
+        "transferDurationMs": 2465
+      }
+    ],
+    "photoResponses": [
+      {
+        "url": "/images/interactive/xray-bark-surface.jpg",
+        "bytes": 3617990,
+        "status": 200
+      },
+      {
+        "url": "/images/interactive/xray-wood-mycelium.jpg",
+        "bytes": 3003508,
+        "status": 200
+      }
+    ],
+    "layoutShiftScore": 0
+  },
+  {
+    "version": "3.0",
+    "dpr": 3,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "network": "20Mbps /100ms latency, fresh cache",
+    "images": [
+      {
+        "src": "/images/interactive/xray-bark-surface.jpg",
+        "width": 2752,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 0.6000000014901161,
+        "transferDurationMs": 2669.5
+      },
+      {
+        "src": "/images/interactive/xray-wood-mycelium.jpg",
+        "width": 2752,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 0.5,
+        "transferDurationMs": 2431.5999999996275
+      }
+    ],
+    "photoResponses": [
+      {
+        "url": "/images/interactive/xray-bark-surface.jpg",
+        "bytes": 3617990,
+        "status": 200
+      },
+      {
+        "url": "/images/interactive/xray-wood-mycelium.jpg",
+        "bytes": 3003508,
+        "status": 200
+      }
+    ],
+    "layoutShiftScore": 0
+  },
+  {
+    "version": "3.1",
+    "dpr": 1,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "network": "20Mbps /100ms latency, fresh cache",
+    "images": [
+      {
+        "src": "/images/interactive/responsive/xray-bark-surface-480.webp",
+        "width": 349,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 0.7000000011175871,
+        "transferDurationMs": 163.7999999988824
+      },
+      {
+        "src": "/images/interactive/responsive/xray-wood-mycelium-480.webp",
+        "width": 349,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 0.6000000014901161,
+        "transferDurationMs": 165.30000000074506
+      }
+    ],
+    "photoResponses": [
+      {
+        "url": "/images/interactive/responsive/xray-bark-surface-480.webp",
+        "bytes": 79792,
+        "status": 200
+      },
+      {
+        "url": "/images/interactive/responsive/xray-wood-mycelium-480.webp",
+        "bytes": 79350,
+        "status": 200
+      }
+    ],
+    "layoutShiftScore": 0
+  },
+  {
+    "version": "3.1",
+    "dpr": 3,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "network": "20Mbps /100ms latency, fresh cache",
+    "images": [
+      {
+        "src": "/images/interactive/responsive/xray-bark-surface-1600.webp",
+        "width": 349,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 2.700000001117587,
+        "transferDurationMs": 565
+      },
+      {
+        "src": "/images/interactive/responsive/xray-wood-mycelium-1600.webp",
+        "width": 349,
+        "renderedWidth": 348,
+        "postLoadDecodeMs": 2.5,
+        "transferDurationMs": 535.5
+      }
+    ],
+    "photoResponses": [
+      {
+        "url": "/images/interactive/responsive/xray-bark-surface-1600.webp",
+        "bytes": 611962,
+        "status": 200
+      },
+      {
+        "url": "/images/interactive/responsive/xray-wood-mycelium-1600.webp",
+        "bytes": 532594,
+        "status": 200
+      }
+    ],
+    "layoutShiftScore": 0
+  }
+]

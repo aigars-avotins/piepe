@@ -1,0 +1,55 @@
+{
+  "locale": "lv",
+  "width": 1512,
+  "height": 982,
+  "engine": "webkit",
+  "origin": "http://127.0.0.1:4311",
+  "base": "af186265f3ca37fb69b6f3eb49b7b09d54cad70b",
+  "stage": "3.1 candidate",
+  "xrayBefore": {
+    "y": 1055,
+    "url": "http://127.0.0.1:4311/kas-ir-piepe/"
+  },
+  "xrayAfter": {
+    "y": 1055,
+    "url": "http://127.0.0.1:4311/kas-ir-piepe/",
+    "selectedPanels": 1
+  },
+  "atlasSurface": {
+    "tag": "BUTTON",
+    "target": null
+  },
+  "atlasAfterDrag": {
+    "url": "http://127.0.0.1:4311/kas-ir-piepe/",
+    "dialog": 0
+  },
+  "time": [
+    {
+      "value": 15,
+      "opacity": [
+        "1",
+        "0.449938",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "value": 50,
+      "opacity": [
+        "1",
+        "1",
+        "0.5",
+        "0"
+      ]
+    },
+    {
+      "value": 85,
+      "opacity": [
+        "1",
+        "1",
+        "1",
+        "0.55"
+      ]
+    }
+  ]
+}

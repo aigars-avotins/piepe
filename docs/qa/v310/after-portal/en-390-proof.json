@@ -1,0 +1,281 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "recordingSize": {
+    "width": 390,
+    "height": 844
+  },
+  "sourceDimensions": "1920x1080",
+  "events": [
+    {
+      "state": "closed",
+      "time": 20.299999999813735,
+      "y": 0,
+      "wallTime": 55
+    },
+    {
+      "state": "portal-ready//",
+      "time": 939.1000000005588,
+      "y": 2795,
+      "wallTime": 968
+    },
+    {
+      "state": "portal-ready/0/",
+      "time": 1916.4000000003725,
+      "y": 2795,
+      "wallTime": 1945
+    },
+    {
+      "state": "entering/0/0",
+      "time": 2509.9000000003725,
+      "y": 2795,
+      "wallTime": 2539
+    },
+    {
+      "state": "deepening/0/1",
+      "time": 12726.5,
+      "y": 2795,
+      "wallTime": 12757
+    },
+    {
+      "state": "arriving/0/0",
+      "time": 22994,
+      "y": 2795,
+      "wallTime": 23023
+    },
+    {
+      "state": "living-world/0/1",
+      "time": 33141.90000000037,
+      "y": 2795,
+      "wallTime": 33171
+    },
+    {
+      "state": "living-world/1/1",
+      "time": 41093.700000000186,
+      "y": 2795,
+      "wallTime": 41128
+    },
+    {
+      "state": "living-world/2/1",
+      "time": 49057.10000000056,
+      "y": 2795,
+      "wallTime": 49086
+    },
+    {
+      "state": "returning/2/0",
+      "time": 52579.200000000186,
+      "y": 2795,
+      "wallTime": 52611
+    },
+    {
+      "state": "returning/2/1",
+      "time": 62708.10000000056,
+      "y": 2795,
+      "wallTime": 62737
+    },
+    {
+      "state": "finished/2/1",
+      "time": 72732.79999999981,
+      "y": 2795,
+      "wallTime": 72763
+    },
+    {
+      "state": "closed",
+      "time": 74412.10000000056,
+      "y": 2795,
+      "wallTime": 74447
+    },
+    {
+      "state": "portal-ready//",
+      "time": 74825.40000000037,
+      "y": 2795,
+      "wallTime": 74853
+    },
+    {
+      "state": "portal-ready/0/",
+      "time": 75680.90000000037,
+      "y": 2795,
+      "wallTime": 75709
+    },
+    {
+      "state": "entering/0/0",
+      "time": 76306.70000000019,
+      "y": 2795,
+      "wallTime": 76335
+    },
+    {
+      "state": "closed",
+      "time": 76673.5,
+      "y": 2795,
+      "wallTime": 76710
+    }
+  ],
+  "frames": [
+    {
+      "mediaTime": 0.041667,
+      "at": 70.69999999925494
+    },
+    {
+      "mediaTime": 0.083333,
+      "at": 120.59999999962747
+    },
+    {
+      "mediaTime": 0.125,
+      "at": 153.8999999994412
+    },
+    {
+      "mediaTime": 0.166667,
+      "at": 204
+    },
+    {
+      "mediaTime": 0.208333,
+      "at": 237.29999999981374
+    },
+    {
+      "mediaTime": 0.25,
+      "at": 270.59999999962747
+    },
+    {
+      "mediaTime": 0.291667,
+      "at": 320.69999999925494
+    },
+    {
+      "mediaTime": 0.333333,
+      "at": 354.29999999981374
+    },
+    {
+      "mediaTime": 0.375,
+      "at": 387.59999999962747
+    },
+    {
+      "mediaTime": 0.416667,
+      "at": 437.5
+    },
+    {
+      "mediaTime": 0.458333,
+      "at": 487.19999999925494
+    },
+    {
+      "mediaTime": 0.5,
+      "at": 537.2999999998137
+    },
+    {
+      "mediaTime": 0.541667,
+      "at": 570.5999999996275
+    },
+    {
+      "mediaTime": 0.583333,
+      "at": 604.2999999998137
+    },
+    {
+      "mediaTime": 0.625,
+      "at": 653.8999999994412
+    },
+    {
+      "mediaTime": 0.666667,
+      "at": 687.5999999996275
+    },
+    {
+      "mediaTime": 0.708333,
+      "at": 737.2999999998137
+    },
+    {
+      "mediaTime": 0.75,
+      "at": 787.2999999998137
+    },
+    {
+      "mediaTime": 0.791667,
+      "at": 820.5
+    },
+    {
+      "mediaTime": 0.833333,
+      "at": 870.5999999996275
+    },
+    {
+      "mediaTime": 0.875,
+      "at": 904
+    },
+    {
+      "mediaTime": 0.916667,
+      "at": 937.5
+    },
+    {
+      "mediaTime": 0.958333,
+      "at": 970.7999999998137
+    },
+    {
+      "mediaTime": 1,
+      "at": 1037.2999999998137
+    },
+    {
+      "mediaTime": 1.041667,
+      "at": 1070.5
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "at": 970,
+      "url": "http://127.0.0.1:4311/media/01_Start.png"
+    },
+    {
+      "at": 1947,
+      "url": "http://127.0.0.1:4311/media/portal-02-first.webp"
+    },
+    {
+      "at": 1963,
+      "url": "http://127.0.0.1:4311/media/portal-02-faststart.mp4"
+    },
+    {
+      "at": 10242,
+      "url": "http://127.0.0.1:4311/media/portal-03-first.webp"
+    },
+    {
+      "at": 10242,
+      "url": "http://127.0.0.1:4311/media/portal-03-faststart.mp4"
+    },
+    {
+      "at": 20459,
+      "url": "http://127.0.0.1:4311/media/portal-04-first.webp"
+    },
+    {
+      "at": 20459,
+      "url": "http://127.0.0.1:4311/media/portal-04-faststart.mp4"
+    },
+    {
+      "at": 30724,
+      "url": "http://127.0.0.1:4311/media/portal-05-first.webp"
+    },
+    {
+      "at": 30724,
+      "url": "http://127.0.0.1:4311/media/portal-05-faststart.mp4"
+    },
+    {
+      "at": 52098,
+      "url": "http://127.0.0.1:4311/media/portal-06-first.webp"
+    },
+    {
+      "at": 52112,
+      "url": "http://127.0.0.1:4311/media/portal-06-faststart.mp4"
+    },
+    {
+      "at": 60302,
+      "url": "http://127.0.0.1:4311/media/portal-07-first.webp"
+    },
+    {
+      "at": 60303,
+      "url": "http://127.0.0.1:4311/media/portal-07-faststart.mp4"
+    },
+    {
+      "at": 75715,
+      "url": "http://127.0.0.1:4311/media/portal-02-first.webp"
+    },
+    {
+      "at": 75725,
+      "url": "http://127.0.0.1:4311/media/portal-02-faststart.mp4"
+    }
+  ],
+  "scrollBefore": 2795
+}

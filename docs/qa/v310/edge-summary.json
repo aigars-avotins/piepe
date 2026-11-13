@@ -1,0 +1,59 @@
+{
+  "domains": {
+    "success": true,
+    "domains": [
+      {
+        "hostname": "pie.pe",
+        "service": "piepe",
+        "environment": "production",
+        "enabled": true
+      }
+    ]
+  },
+  "routes": {
+    "success": true,
+    "routes": []
+  },
+  "dnsWWW": {
+    "status": 403,
+    "observable": false
+  },
+  "https": {
+    "success": true,
+    "setting": {
+      "id": "always_use_https",
+      "value": "on"
+    }
+  },
+  "pageRules": {
+    "status": 403,
+    "observable": false
+  },
+  "zoneRulesets": {
+    "status": 403,
+    "observable": false
+  },
+  "accountRulesets": {
+    "status": 403,
+    "observable": false
+  },
+  "bulkRedirectLists": {
+    "status": 403,
+    "observable": false
+  },
+  "deployments": {
+    "success": true,
+    "active": [
+      {
+        "id": "c6ebae0f-9637-462a-bff9-ac5b08d46177",
+        "created_on": "2026-11-13T19:43:43.877702Z",
+        "versions": [
+          {
+            "version_id": "cf0d5bca-04e4-4bce-94bf-36c3eb9ee0f5",
+            "percentage": 100
+          }
+        ]
+      }
+    ]
+  }
+}
