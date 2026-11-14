@@ -31,8 +31,8 @@
 
 /* One optional thread. Interpretation and actions share natural flow, even in quiet mode. */
 .thread-light{position:absolute;z-index:2;left:0;top:0;width:min(300px,70vmin);height:min(300px,70vmin);pointer-events:none;opacity:0;background:radial-gradient(ellipse closest-side,transparent 36%,#170c042b 51%,#f2d5a629 56%,transparent 67%);will-change:transform}
-.living-thread{position:relative;z-index:4;width:100%;margin:0 auto 24px;isolation:isolate;color:var(--paper);text-shadow:0 1px 3px #0a0c06,0 2px 14px #0a0c06}
-.living-thread::before{content:'';position:absolute;inset:-35px -60px;z-index:-1;background:radial-gradient(ellipse closest-side,#0a0c06eb 0 55%,transparent 100%);pointer-events:none}
+.living-thread{position:relative;width:100%;margin:0 auto 24px;color:var(--paper);text-shadow:0 1px 3px #0a0c06,0 2px 14px #0a0c06}
+.living-thread::before{content:'';position:absolute;inset:-70px -110px;z-index:-1;background:radial-gradient(ellipse closest-side,#0a0c06eb 0 70%,transparent 100%);pointer-events:none}
 .thread-navigation{display:flex;align-items:center;gap:8px}.thread-navigation button{min-width:44px;min-height:44px;border-bottom:1px solid transparent;color:var(--muted);font-size:13px}.thread-navigation button[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}.thread-navigation .thread-close{margin-left:auto;font-size:25px}
 .living-thread h3{font:400 32px/1.1 var(--serif);letter-spacing:-.025em;margin:8px 0 14px}.living-thread p{font:15px/1.7 'Manrope',sans-serif;max-width:42ch}
 .portal-thread-invitation{text-align:center}.portal-thread-invitation>button{min-height:44px;font:italic 23px/1.4 var(--serif);color:var(--paper);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:7px}.portal-thread-invitation>button>span{font-size:18px;color:var(--gold)}.portal-thread-invitation>p{font-size:12px;line-height:1.7;margin:0 0 6px}
