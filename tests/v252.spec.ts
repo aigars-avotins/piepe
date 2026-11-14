@@ -10,7 +10,7 @@ async function geometry(page: Page) {
   return page.evaluate(() => {
     const box = (selector: string) => document.querySelector(selector)!.getBoundingClientRect()
     const under = box('#understory'), content = box('#understory .cinema-content')
-    const headline = box('#encounter-title'), link = box('#encounter .encounter-copy .line-link')
+    const headline = box('#encounter-title'), link = box('#encounter .encounter-copy .portal-entry')
     const copy = box('#understory .bark-copy'), h = innerHeight
     // The readable plateau starts with Understory aligned to the viewport.
     // Count 48px of the next heading, and the whole note target plus 20px clearance.
@@ -77,12 +77,12 @@ async function advance(page: Page, browserName: string) {
   const from = await page.evaluate(() => scrollY)
   let inputs = 0
   for (; inputs < 10; inputs++) {
-    if (await page.locator('#encounter .encounter-copy .line-link').evaluate(e => e.getBoundingClientRect().bottom <= innerHeight - 20)) break
+    if (await page.locator('#encounter .encounter-copy .portal-entry').evaluate(e => e.getBoundingClientRect().bottom <= innerHeight - 20)) break
     await nativeStep(page, browserName)
   }
   expect(inputs).toBeGreaterThan(0); expect(inputs).toBeLessThan(9)
   expect(await page.evaluate(() => scrollY) - from).toBeLessThan(page.viewportSize()!.height * 2.6)
-  const note = page.locator('#encounter .encounter-copy .line-link')
+  const note = page.locator('#encounter .encounter-copy .portal-entry')
   await expect(note).toBeInViewport({ ratio: 1 })
   const target = await note.evaluate(e => {
     const r = e.getBoundingClientRect()
