@@ -1,0 +1,24 @@
+
+> piepe@3.1.1 test
+> playwright test tests/v2581.spec.ts tests/v254.spec.ts --project=chrome-desktop --grep intro reserves the invitation|homepage entry and explanations|2\.5\.4 readability (390x844|1440x900)
+
+
+Running 8 tests using 1 worker
+
+(node:36956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chrome-desktop] › tests/v254.spec.ts:34:47 › 2.5.4 readability 390x844 › lv: body and secondary copy remain readable across the journey and field note (4.6s)
+  ✓  2 [chrome-desktop] › tests/v254.spec.ts:34:47 › 2.5.4 readability 390x844 › en: body and secondary copy remain readable across the journey and field note (3.8s)
+  ✓  3 [chrome-desktop] › tests/v254.spec.ts:34:47 › 2.5.4 readability 1440x900 › lv: body and secondary copy remain readable across the journey and field note (5.0s)
+  ✓  4 [chrome-desktop] › tests/v254.spec.ts:34:47 › 2.5.4 readability 1440x900 › en: body and secondary copy remain readable across the journey and field note (5.0s)
+  ✓  5 [chrome-desktop] › tests/v2581.spec.ts:48:3 › 2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact (8.4s)
+  ✓  6 [chrome-desktop] › tests/v2581.spec.ts:55:3 › 2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript (3.0s)
+  ✓  7 [chrome-desktop] › tests/v2581.spec.ts:48:3 › 2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact (8.7s)
+  ✓  8 [chrome-desktop] › tests/v2581.spec.ts:55:3 › 2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript (3.1s)
+
+  8 passed (42.8s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

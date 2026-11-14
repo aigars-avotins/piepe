@@ -1,0 +1,25 @@
+
+> piepe@3.1.1 test
+> playwright test tests/cinema.spec.ts tests/photo-clock.spec.ts --project=chrome-desktop --grep held frame and first decoded awakening|intro then awakening final frame docks|late preparation preserves
+
+
+Running 7 tests using 1 worker
+
+(node:38752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chrome-desktop] › tests/cinema.spec.ts:61:93 › 1512x982 rendering › held frame and first decoded awakening stay in the same plane at 1512x982 (6.7s)
+  ✓  2 [chrome-desktop] › tests/cinema.spec.ts:61:93 › 2560x1080 rendering › held frame and first decoded awakening stay in the same plane at 2560x1080 (4.4s)
+  ✓  3 [chrome-desktop] › tests/cinema.spec.ts:61:93 › 390x664 rendering › held frame and first decoded awakening stay in the same plane at 390x664 (4.1s)
+Photo camera 1512x982: 49 moving frames; maximum projected width error 0.0002 CSS pixels
+  ✓  4 [chrome-desktop] › tests/cinema.spec.ts:135:80 › 1512x982 rendering › intro then awakening final frame docks and returns continuously at 1512x982 (18.6s)
+Photo camera 390x664: 60 moving frames; maximum projected width error 0.0001 CSS pixels
+  ✓  5 [chrome-desktop] › tests/cinema.spec.ts:135:80 › 390x664 rendering › intro then awakening final frame docks and returns continuously at 390x664 (16.4s)
+  ✓  6 [chrome-desktop] › tests/photo-clock.spec.ts:7:3 › photo clock 1512x982 › late preparation preserves the beginning of the camera trajectory (4.2s)
+  ✓  7 [chrome-desktop] › tests/photo-clock.spec.ts:7:3 › photo clock 390x664 › late preparation preserves the beginning of the camera trajectory (3.4s)
+
+  7 passed (59.4s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
