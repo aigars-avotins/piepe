@@ -1,0 +1,163 @@
+﻿2026-11-14T06:19:39.2059210Z ##[group]Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then
+2026-11-14T06:19:39.2060290Z [36;1mif [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then[0m
+2026-11-14T06:19:39.2061710Z [36;1m  caffeinate -dimsu npm test -- --project=webkit-iphone --grep "$PIEPE_DIAGNOSTIC_GREP"[0m
+2026-11-14T06:19:39.2062990Z [36;1melse[0m
+2026-11-14T06:19:39.2063790Z [36;1m  caffeinate -dimsu npm test -- --project=webkit-iphone[0m
+2026-11-14T06:19:39.2064680Z [36;1mfi[0m
+2026-11-14T06:19:39.2171130Z shell: /bin/bash -e {0}
+2026-11-14T06:19:39.2171970Z env:
+2026-11-14T06:19:39.2172540Z   CI: true
+2026-11-14T06:19:39.2175140Z   PIEPE_DIAGNOSTIC_GREP: 3\.1|3\.0 complete original-speed|intro then awakening final frame docks|late preparation preserves|3\.0 (reduced|save-data):|3\.0 save-data full-quality|3\.0 locale and native browser Back|3\.0 real failure, retry
+2026-11-14T06:19:39.2178010Z ##[endgroup]
+2026-11-14T06:19:39.6991130Z 
+2026-11-14T06:19:39.7020540Z > piepe@3.1.0 test
+2026-11-14T06:19:39.7029840Z > playwright test --project=webkit-iphone --grep 3\.1|3\.0 complete original-speed|intro then awakening final frame docks|late preparation preserves|3\.0 (reduced|save-data):|3\.0 save-data full-quality|3\.0 locale and native browser Back|3\.0 real failure, retry
+2026-11-14T06:19:39.7040030Z 
+2026-11-14T06:19:43.4302870Z 
+2026-11-14T06:19:43.4304470Z Running 54 tests using 1 worker
+2026-11-14T06:19:43.4306150Z 
+2026-11-14T06:20:10.6337420Z Photo camera 1512x982: 26 moving frames; maximum projected width error 0.0001 CSS pixels
+2026-11-14T06:20:13.6550860Z   ✓   1 [webkit-iphone] › tests/cinema.spec.ts:130:80 › 1512x982 rendering › intro then awakening final frame docks and returns continuously at 1512x982 (26.3s)
+2026-11-14T06:20:32.8029240Z Photo camera 390x664: 30 moving frames; maximum projected width error 0.0001 CSS pixels
+2026-11-14T06:20:36.9142870Z   ✓   2 [webkit-iphone] › tests/cinema.spec.ts:130:80 › 390x664 rendering › intro then awakening final frame docks and returns continuously at 390x664 (23.0s)
+2026-11-14T06:20:42.8865110Z   ✓   3 [webkit-iphone] › tests/photo-clock.spec.ts:7:3 › photo clock 1512x982 › late preparation preserves the beginning of the camera trajectory (5.9s)
+2026-11-14T06:20:48.2080670Z   ✓   4 [webkit-iphone] › tests/photo-clock.spec.ts:7:3 › photo clock 390x664 › late preparation preserves the beginning of the camera trajectory (5.3s)
+2026-11-14T06:20:50.2223830Z   ✓   5 [webkit-iphone] › tests/v2582.spec.ts:55:1 › 3.1 responsive then original JPEG tries alternate then labelled wallpaper fallback; no retry loop (1.9s)
+2026-11-14T06:20:52.1522610Z   ✓   6 [webkit-iphone] › tests/v2582.spec.ts:62:1 › 3.1 unavailable responsive and JPEG sources disclose an alternate preview without using the final wallpaper (2.0s)
+2026-11-14T06:20:58.0695160Z   ✓   7 [webkit-iphone] › tests/v300.spec.ts:24:52 › 3.0 reduced: direct still world, no automatic movies, safe return and re-entry (5.8s)
+2026-11-14T06:21:03.8436020Z   ✓   8 [webkit-iphone] › tests/v300.spec.ts:24:52 › 3.0 save-data: direct still world, no automatic movies, safe return and re-entry (5.7s)
+2026-11-14T06:21:14.9228850Z   ✓   9 [webkit-iphone] › tests/v300.spec.ts:30:1 › 3.0 real failure, retry, advancing frames, pause, skip and hidden-document recovery (11.0s)
+2026-11-14T06:21:20.2205060Z   ✓  10 [webkit-iphone] › tests/v300.spec.ts:42:1 › 3.0 locale and native browser Back close the doorway without restarting films (5.3s)
+2026-11-14T06:22:31.3192950Z   ✓  11 [webkit-iphone] › tests/v300.spec.ts:47:2 › lv complete 1512 › 3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability (1.2m)
+2026-11-14T06:23:40.1838440Z   ✓  12 [webkit-iphone] › tests/v300.spec.ts:47:2 › en complete 390 › 3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability (1.1m)
+2026-11-14T06:23:48.9590650Z   ✓  13 [webkit-iphone] › tests/v300.spec.ts:74:1 › 3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world (8.8s)
+2026-11-14T06:23:51.0443360Z   ✓  14 [webkit-iphone] › tests/v310-images.spec.ts:3:42 › 3.1 lv no-JS reading retains factual imagery, native explanations and original-photo links (2.0s)
+2026-11-14T06:23:53.0241900Z   ✓  15 [webkit-iphone] › tests/v310-images.spec.ts:3:42 › 3.1 en no-JS reading retains factual imagery, native explanations and original-photo links (2.0s)
+2026-11-14T06:23:54.9673040Z   ✓  16 [webkit-iphone] › tests/v310-images.spec.ts:10:1 › 3.1 a slow paired image gives a neutral placeholder, then reveals both real layers together (1.9s)
+2026-11-14T06:23:56.4963570Z   ✓  17 [webkit-iphone] › tests/v310-images.spec.ts:15:1 › 3.1 real first-layer image failure and full fallback failure remain accessible and retryable (1.5s)
+2026-11-14T06:23:58.1358940Z   ✓  18 [webkit-iphone] › tests/v310-images.spec.ts:20:1 › 3.1 the last Deadwood image can fail and recover without substituting a false mixed stage (1.6s)
+2026-11-14T06:23:59.3110960Z   ✓  19 [webkit-iphone] › tests/v310-images.spec.ts:25:1 › 3.1 inactive Deadwood sources wait for near-view intent and use responsive source-quality copies (1.2s)
+2026-11-14T06:24:00.2915550Z   ✓  20 [webkit-iphone] › tests/v310-images.spec.ts:29:42 › 3.1 lv compact header keeps visible labels in accessible names and phone-sized targets (956ms)
+2026-11-14T06:24:01.3172610Z   ✓  21 [webkit-iphone] › tests/v310-images.spec.ts:29:42 › 3.1 en compact header keeps visible labels in accessible names and phone-sized targets (993ms)
+2026-11-14T06:24:07.1080830Z   ✓  22 [webkit-iphone] › tests/v310-navigation.spec.ts:7:2 › 3.1 native navigation lv › homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll (5.7s)
+2026-11-14T06:24:08.9879940Z   ✓  23 [webkit-iphone] › tests/v310-navigation.spec.ts:23:2 › 3.1 native navigation lv › locale links, native fragments and same-origin downloads preserve their own native behavior (1.8s)
+2026-11-14T06:24:13.7643300Z   ✓  24 [webkit-iphone] › tests/v310-navigation.spec.ts:7:2 › 3.1 native navigation en › homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll (4.7s)
+2026-11-14T06:24:15.6882710Z   ✓  25 [webkit-iphone] › tests/v310-navigation.spec.ts:23:2 › 3.1 native navigation en › locale links, native fragments and same-origin downloads preserve their own native behavior (1.9s)
+2026-11-14T06:24:21.0990960Z   ✓  26 [webkit-iphone] › tests/v310-navigation.spec.ts:31:1 › 3.1 two actual external reference links create isolated new tabs with no referrer (5.4s)
+2026-11-14T06:24:25.5318990Z   ✓  27 [webkit-iphone] › tests/v310-navigation.spec.ts:42:1 › 3.1 a user-modified locale link does not mutate the current homepage (4.4s)
+2026-11-14T06:24:27.8405230Z   ✓  28 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 320x568 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.3s)
+2026-11-14T06:24:30.2711780Z   ✓  29 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 390x844 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.4s)
+2026-11-14T06:24:32.8046450Z   ✓  30 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 844x390 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.5s)
+2026-11-14T06:24:35.6464230Z   ✓  31 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 800x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.8s)
+2026-11-14T06:24:39.4640520Z   ✓  32 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 1440x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (3.8s)
+2026-11-14T06:24:43.3233340Z   ✓  33 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 1512x982 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (3.8s)
+2026-11-14T06:24:45.6836280Z   ✓  34 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 320x568 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.3s)
+2026-11-14T06:24:48.2152440Z   ✓  35 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 390x844 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.5s)
+2026-11-14T06:24:51.0783040Z   ✓  36 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 844x390 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.8s)
+2026-11-14T06:24:54.1571650Z   ✓  37 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 800x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (3.0s)
+2026-11-14T06:24:58.4589300Z   ✓  38 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 1440x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (4.2s)
+2026-11-14T06:25:03.3625360Z   ✓  39 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 1512x982 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (4.9s)
+2026-11-14T06:25:09.7301610Z   ✓  40 [webkit-iphone] › tests/v310-portal.spec.ts:17:2 › 3.1 clean cinema 320 › explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit (6.3s)
+2026-11-14T06:25:16.5651900Z   ✓  41 [webkit-iphone] › tests/v310-portal.spec.ts:17:2 › 3.1 clean cinema 844 › explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit (6.8s)
+2026-11-14T06:25:25.1190780Z   ✓  42 [webkit-iphone] › tests/v310-portal.spec.ts:17:2 › 3.1 clean cinema 1512 › explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit (8.5s)
+2026-11-14T06:25:41.1723600Z   ✘  43 [webkit-iphone] › tests/v310-slow.spec.ts:8:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry (15.2s)
+2026-11-14T06:25:58.3140960Z   ✘  44 [webkit-iphone] › tests/v310-slow.spec.ts:8:49 › 3.1 source-quality stall: native download beyond 20s or bounded stall with real retry (15.2s)
+2026-11-14T06:26:01.3040160Z   ✓  45 [webkit-iphone] › tests/v310.spec.ts:6:2 › 3.1 photography lv 1512 › selected X-Ray explanations never move the viewport or mutate its hash (2.0s)
+2026-11-14T06:26:02.9658120Z   ✓  46 [webkit-iphone] › tests/v310.spec.ts:15:2 › 3.1 photography lv 1512 › Atlas gestures are independent from the explicit original-resolution comparison dialog (1.6s)
+2026-11-14T06:26:07.0392490Z   ✓  47 [webkit-iphone] › tests/v310.spec.ts:21:2 › 3.1 photography lv 1512 › Deadwood retains its fractional image mix and exposes one meaningful current image description (4.0s)
+2026-11-14T06:26:08.3339340Z   ✓  48 [webkit-iphone] › tests/v310.spec.ts:6:2 › 3.1 photography en 390 › selected X-Ray explanations never move the viewport or mutate its hash (1.3s)
+2026-11-14T06:26:09.5673760Z   ✓  49 [webkit-iphone] › tests/v310.spec.ts:15:2 › 3.1 photography en 390 › Atlas gestures are independent from the explicit original-resolution comparison dialog (1.2s)
+2026-11-14T06:26:13.2337200Z   ✓  50 [webkit-iphone] › tests/v310.spec.ts:21:2 › 3.1 photography en 390 › Deadwood retains its fractional image mix and exposes one meaningful current image description (3.6s)
+2026-11-14T06:26:14.8805150Z   ✓  51 [webkit-iphone] › tests/v310.spec.ts:33:1 › 3.1 actual HTML anchor nodes on all twenty routes obey the real-origin navigation policy (1.6s)
+2026-11-14T06:26:17.6545980Z   ✓  52 [webkit-iphone] › tests/v310.spec.ts:44:42 › 3.1 lv real phone touch keeps Atlas gestures separate from navigation and explicit comparison (2.8s)
+2026-11-14T06:26:19.7922530Z   ✓  53 [webkit-iphone] › tests/v310.spec.ts:44:42 › 3.1 en real phone touch keeps Atlas gestures separate from navigation and explicit comparison (2.1s)
+2026-11-14T06:26:20.7324580Z   ✓  54 [webkit-iphone] › tests/v310.spec.ts:61:1 › 3.1 intentional X-Ray deep links select one explanation and native Back restores the previous fragment (918ms)
+2026-11-14T06:26:20.8474570Z 
+2026-11-14T06:26:20.8484160Z 
+2026-11-14T06:26:20.8497890Z   1) [webkit-iphone] › tests/v310-slow.spec.ts:8:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry 
+2026-11-14T06:26:20.8502010Z 
+2026-11-14T06:26:20.8503510Z     Error: expect(locator).toContainText(expected) failed
+2026-11-14T06:26:20.8504920Z 
+2026-11-14T06:26:20.8505340Z     Locator: locator('.fungus-portal').getByRole('status')
+2026-11-14T06:26:20.8510620Z     Expected substring: "original-quality film is still loading"
+2026-11-14T06:26:20.8514550Z     Received string:    "The film could not continue. Try again or leave for the forest."
+2026-11-14T06:26:20.8517030Z     Timeout: 11000ms
+2026-11-14T06:26:20.8520730Z 
+2026-11-14T06:26:20.8522230Z     Call log:
+2026-11-14T06:26:20.8523500Z       - Expect "toContainText" locator('.fungus-portal').getByRole('status') with timeout 11000ms
+2026-11-14T06:26:20.8525130Z       - waiting for locator('.fungus-portal').getByRole('status')
+2026-11-14T06:26:20.8527770Z         - locator resolved to <p role="status" aria-atomic="true" class="portal-scene ">Preparing the next view…</p>
+2026-11-14T06:26:20.8529790Z         - unexpected value "Preparing the next view…"
+2026-11-14T06:26:20.8532330Z         25 × locator resolved to <p role="status" aria-atomic="true" class="portal-scene ">The film could not continue. Try again or leave f…</p>
+2026-11-14T06:26:20.8534790Z            - unexpected value "The film could not continue. Try again or leave for the forest."
+2026-11-14T06:26:20.8535970Z 
+2026-11-14T06:26:20.8535990Z 
+2026-11-14T06:26:20.8536600Z       27 |  try{
+2026-11-14T06:26:20.8543160Z       28 |   await page.addInitScript(()=>{sessionStorage.setItem('piepe-entered','1');localStorage.setItem('piepe-forest-sound','off')});await page.goto(`http://127.0.0.1:${(server.address() as AddressInfo).port}/en/#encounter`);await page.locator('[data-portal-entry]').click();const portal=page.locator('.fungus-portal');await expect(portal).toHaveAttribute('data-portal-still-presented','true');const began=Date.now();await portal.getByRole('button',{name:'Begin journey',exact:true}).click()
+2026-11-14T06:26:20.8560900Z     > 29 |   await expect(portal.getByRole('status')).toContainText('original-quality film is still loading',{timeout:11000});await expect(portal.getByRole('button',{name:'Try again',exact:true})).toBeVisible();await expect(portal.getByRole('button',{name:'Exit',exact:true})).toBeVisible()
+2026-11-14T06:26:20.8566110Z          |                                            ^
+2026-11-14T06:26:20.8567080Z       30 |   if(mode==='progress'){
+2026-11-14T06:26:20.8571970Z       31 |    await page.waitForTimeout(Math.max(0,21000-(Date.now()-began)));await expect(portal).not.toHaveAttribute('data-portal-phase','error');expect(sent.at(-1)!.bytes).toBeGreaterThan(200000)
+2026-11-14T06:26:20.8579980Z       32 |    await expect(portal).toHaveAttribute('data-portal-phase','entering',{timeout:15000});expect(Date.now()-began).toBeGreaterThan(20000)
+2026-11-14T06:26:20.8584290Z         at /Users/runner/work/piepe/piepe/tests/v310-slow.spec.ts:29:44
+2026-11-14T06:26:20.8585230Z 
+2026-11-14T06:26:20.8586530Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8589300Z     test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-webkit-iphone/test-failed-1.png
+2026-11-14T06:26:20.8595270Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8595960Z 
+2026-11-14T06:26:20.8598030Z     Error Context: test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-webkit-iphone/error-context.md
+2026-11-14T06:26:20.8599240Z 
+2026-11-14T06:26:20.8600090Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8602840Z     test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-webkit-iphone/trace.zip
+2026-11-14T06:26:20.8605250Z     Usage:
+2026-11-14T06:26:20.8605750Z 
+2026-11-14T06:26:20.8606940Z         npx playwright show-trace test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-webkit-iphone/trace.zip
+2026-11-14T06:26:20.8608270Z 
+2026-11-14T06:26:20.8608990Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8609660Z 
+2026-11-14T06:26:20.8610970Z   2) [webkit-iphone] › tests/v310-slow.spec.ts:8:49 › 3.1 source-quality stall: native download beyond 20s or bounded stall with real retry 
+2026-11-14T06:26:20.8612240Z 
+2026-11-14T06:26:20.8612760Z     Error: expect(locator).toContainText(expected) failed
+2026-11-14T06:26:20.8613720Z 
+2026-11-14T06:26:20.8614230Z     Locator: locator('.fungus-portal').getByRole('status')
+2026-11-14T06:26:20.8615920Z     Expected substring: "original-quality film is still loading"
+2026-11-14T06:26:20.8617200Z     Received string:    "The film could not continue. Try again or leave for the forest."
+2026-11-14T06:26:20.8618360Z     Timeout: 11000ms
+2026-11-14T06:26:20.8618750Z 
+2026-11-14T06:26:20.8618910Z     Call log:
+2026-11-14T06:26:20.8619930Z       - Expect "toContainText" locator('.fungus-portal').getByRole('status') with timeout 11000ms
+2026-11-14T06:26:20.8621200Z       - waiting for locator('.fungus-portal').getByRole('status')
+2026-11-14T06:26:20.8627940Z         2 × locator resolved to <p role="status" aria-atomic="true" class="portal-scene ">Preparing the next view…</p>
+2026-11-14T06:26:20.8631010Z           - unexpected value "Preparing the next view…"
+2026-11-14T06:26:20.8634490Z         24 × locator resolved to <p role="status" aria-atomic="true" class="portal-scene ">The film could not continue. Try again or leave f…</p>
+2026-11-14T06:26:20.8648140Z            - unexpected value "The film could not continue. Try again or leave for the forest."
+2026-11-14T06:26:20.8649670Z 
+2026-11-14T06:26:20.8649710Z 
+2026-11-14T06:26:20.8650240Z       27 |  try{
+2026-11-14T06:26:20.8658490Z       28 |   await page.addInitScript(()=>{sessionStorage.setItem('piepe-entered','1');localStorage.setItem('piepe-forest-sound','off')});await page.goto(`http://127.0.0.1:${(server.address() as AddressInfo).port}/en/#encounter`);await page.locator('[data-portal-entry]').click();const portal=page.locator('.fungus-portal');await expect(portal).toHaveAttribute('data-portal-still-presented','true');const began=Date.now();await portal.getByRole('button',{name:'Begin journey',exact:true}).click()
+2026-11-14T06:26:20.8668580Z     > 29 |   await expect(portal.getByRole('status')).toContainText('original-quality film is still loading',{timeout:11000});await expect(portal.getByRole('button',{name:'Try again',exact:true})).toBeVisible();await expect(portal.getByRole('button',{name:'Exit',exact:true})).toBeVisible()
+2026-11-14T06:26:20.8672570Z          |                                            ^
+2026-11-14T06:26:20.8673540Z       30 |   if(mode==='progress'){
+2026-11-14T06:26:20.8676510Z       31 |    await page.waitForTimeout(Math.max(0,21000-(Date.now()-began)));await expect(portal).not.toHaveAttribute('data-portal-phase','error');expect(sent.at(-1)!.bytes).toBeGreaterThan(200000)
+2026-11-14T06:26:20.8679840Z       32 |    await expect(portal).toHaveAttribute('data-portal-phase','entering',{timeout:15000});expect(Date.now()-began).toBeGreaterThan(20000)
+2026-11-14T06:26:20.8682290Z         at /Users/runner/work/piepe/piepe/tests/v310-slow.spec.ts:29:44
+2026-11-14T06:26:20.8683060Z 
+2026-11-14T06:26:20.8684190Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8686720Z     test-results/v310-slow-3-1-source-quali-219e7-unded-stall-with-real-retry-webkit-iphone/test-failed-1.png
+2026-11-14T06:26:20.8690560Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8691640Z 
+2026-11-14T06:26:20.8692650Z     Error Context: test-results/v310-slow-3-1-source-quali-219e7-unded-stall-with-real-retry-webkit-iphone/error-context.md
+2026-11-14T06:26:20.8694580Z 
+2026-11-14T06:26:20.8695400Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8697020Z     test-results/v310-slow-3-1-source-quali-219e7-unded-stall-with-real-retry-webkit-iphone/trace.zip
+2026-11-14T06:26:20.8698000Z     Usage:
+2026-11-14T06:26:20.8698190Z 
+2026-11-14T06:26:20.8699520Z         npx playwright show-trace test-results/v310-slow-3-1-source-quali-219e7-unded-stall-with-real-retry-webkit-iphone/trace.zip
+2026-11-14T06:26:20.8700880Z 
+2026-11-14T06:26:20.8703660Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-11-14T06:26:20.8704720Z 
+2026-11-14T06:26:20.8704970Z   2 failed
+2026-11-14T06:26:20.8707410Z     [webkit-iphone] › tests/v310-slow.spec.ts:8:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry 
+2026-11-14T06:26:20.8710770Z     [webkit-iphone] › tests/v310-slow.spec.ts:8:49 › 3.1 source-quality stall: native download beyond 20s or bounded stall with real retry 
+2026-11-14T06:26:20.8737240Z   52 passed (6.7m)
+2026-11-14T06:26:21.4047650Z ##[error]Process completed with exit code 1.

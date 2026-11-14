@@ -18,5 +18,12 @@
     "versionId": "cf0d5bca-04e4-4bce-94bf-36c3eb9ee0f5",
     "deploymentId": "c6ebae0f-9637-462a-bff9-ac5b08d46177",
     "newReleasePublished": false
+  },
+  "historical": true,
+  "accountLockResolvedBy": "https://github.com/aigars-avotins/piepe/actions/runs/43539455974/attempts/2",
+  "nativeInitialRun": "https://github.com/aigars-avotins/piepe/actions/runs/43565372746",
+  "nativeInitialResult": {
+    "passed": 52,
+    "failedTransportFixture": 2
   }
 }
