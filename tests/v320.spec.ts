@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto'
 import {portalCopy} from '../src/portalCopy'
 import {threadCopy} from '../src/threadCopy'
 
-const sizes = [[320,568],[390,844],[430,932],[844,390],[800,900],[1440,900],[1512,982],[2048,1152]]
+const sizes = [[320,568],[756,491],[390,844],[430,932],[844,390],[800,900],[1440,900],[1512,982],[2048,1152]]
 for (const locale of ['lv','en'] as const) for (const [width,height] of sizes) test.describe(`3.2 ${locale} ${width}x${height}`, () => {
   test.use({viewport:{width,height},screen:{width,height},isMobile:width<700||width===844,hasTouch:width<700||width===844,deviceScaleFactor:1})
   test('primary action and quiet thread are reachable, factual, reversible and request no films', async ({page}, info) => {
