@@ -29,6 +29,7 @@ const chapters = ['forest', 'understory', 'encounter', 'return']
 export default function App({ initialLocale }: { initialLocale?: Locale }) {
   const [locale, setLocale] = useState<Locale>(() => initialLocale || localeFromPath(location.pathname))
   const localeScroll = useRef<number | null>(null)
+  const scrollEntry = useRef<string | null>(null)
   const t = messages[locale]
   const [awakening, setAwakening] = useState<'idle' | 'preparing' | 'playing' | 'docking'>('idle')
   const [heldFrame, setHeldFrame] = useState('/media/forest-final.jpg')
@@ -120,9 +121,35 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   // Keep the server-painted controls stable; start cinema after hydration's first paint.
   useEffect(() => { const frame = requestAnimationFrame(initialize); return () => cancelAnimationFrame(frame) }, [initialize])
   useEffect(() => {
-    if (!booted || exitReason !== 'anchor-navigation') return
+    // Identify entries while the document is active. History writes during pagehide
+    // can be rejected; session storage can still retain the exact departing position.
+    const identify = () => {
+      try {
+        const id = typeof history.state?.piepeScrollId === 'string' ? history.state.piepeScrollId : crypto.randomUUID()
+        if (history.state?.piepeScrollId !== id) history.replaceState({...history.state,piepeScrollId:id}, '', location.href)
+        scrollEntry.current = id
+      } catch { scrollEntry.current = null }
+    }
+    identify()
+    const remember = () => {
+      if (!scrollEntry.current) return
+      try { sessionStorage.setItem('piepe-scroll:'+scrollEntry.current, JSON.stringify({x:scrollX,y:scrollY})) } catch { /* Storage is optional. */ }
+    }
+    window.addEventListener('popstate', identify)
+    window.addEventListener('hashchange', identify)
+    window.addEventListener('pagehide', remember)
+    return () => {window.removeEventListener('pagehide', remember);window.removeEventListener('popstate', identify);window.removeEventListener('hashchange', identify)}
+  }, [locale])
+  useEffect(() => {
+    if (!booted || intro) return
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined
-    if (navigation && navigation.type !== 'navigate' && new URL(navigation.name).hash === location.hash) return
+    let position: {x:number;y:number} | undefined
+    try { position = JSON.parse(sessionStorage.getItem('piepe-scroll:'+history.state?.piepeScrollId) || 'null') } catch { /* Retain native restoration when storage is unavailable. */ }
+    const restoring = navigation?.type === 'back_forward' || navigation?.type === 'reload'
+    const saved = restoring && Number.isFinite(position?.x) && Number.isFinite(position?.y) ? position as {x:number;y:number} : undefined
+    if (exitReason !== 'anchor-navigation' && !saved) return
+    // Without an owned position, retain the browser's own restoration behavior.
+    if (!saved && restoring && new URL(navigation!.name).hash === location.hash) return
     const hash = location.hash
     let cancelled = false, frame = 0
     const interrupt = () => { cancelled = true }
@@ -132,7 +159,10 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     const ready = () => { void document.fonts.ready.then(() => {
       if (cancelled) return
       frame = requestAnimationFrame(() => { frame = requestAnimationFrame(() => {
-        if (!cancelled && location.hash === hash) document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'instant', block: 'start' })
+        if (!cancelled && location.hash === hash) {
+          if (saved) window.scrollTo({left:saved.x,top:saved.y,behavior:'instant'})
+          else document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'instant', block: 'start' })
+        }
       }) })
     }) }
     window.addEventListener('wheel', interrupt, { passive: true })
@@ -142,7 +172,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     window.addEventListener('hashchange', changeHash)
     if (document.readyState === 'complete') ready(); else window.addEventListener('load', ready, { once: true })
     return () => { cancelled = true; cancelAnimationFrame(frame); window.removeEventListener('load', ready); window.removeEventListener('wheel', interrupt); window.removeEventListener('touchstart', interrupt); window.removeEventListener('pointerdown', interrupt); window.removeEventListener('keydown', interrupt); window.removeEventListener('hashchange', changeHash) }
-  }, [booted, exitReason])
+  }, [booted, exitReason, intro])
   useEffect(() => {
     if (!intro && exitReason === 'skipped') hotspot.current?.focus({ preventScroll: true })
   }, [intro, exitReason])

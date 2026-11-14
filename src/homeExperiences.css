@@ -40,3 +40,5 @@
 @media(max-width:359px){.discovery-entry strong{font-size:26px}.discovery-entry{gap:10px}.discovery-preview{flex-basis:40px;width:40px}.discovery-entry small{font-size:10px}}
 /* Keep the entire first step reachable in a short landscape viewport. */
 @media(max-height:520px) and (min-width:700px){.hero{min-height:100svh}.hero-copy{padding-top:84px}.hero-copy>.label{display:none}.wordmark{font-size:112px}.hero-deck{font-size:15px}.discovery-entry strong{font-size:27px}.discovery-entry small{font-size:10px}.world[data-scene=forest]{--sound-offset:100px}}
+/* Reuse the existing compact threshold crop where a short tablet would cover its status. */
+@media(min-width:700px) and (min-height:701px) and (max-height:800px){.portal-entry-preview{aspect-ratio:3}.encounter-copy .portal-entry{max-width:280px}.encounter-copy{padding-top:48px}}

@@ -64,8 +64,9 @@ test('storage denial keeps in-memory progress through close, locale and history'
   await openOriginalNote(page)
   await page.getByRole('dialog').getByRole('tab').first().focus(); await page.keyboard.press('End')
   // Collection records the explicit action, not whether the OS saved a file.
-  await page.locator('.observation-actions a').evaluate(e => e.addEventListener('click', event => event.preventDefault()))
+  const download = page.waitForEvent('download')
   await page.getByRole('link', { name: messages.en.keepNote, exact: true }).click()
+  expect((await download).suggestedFilename()).toBe('piepe-field-note-001-en.txt')
   await expect(page.locator('.encounter-status')).toHaveText(messages.en.collectedShort)
   expect(errors).toEqual([])
 })

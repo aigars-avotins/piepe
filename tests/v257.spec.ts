@@ -3,7 +3,8 @@ import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
 import { forestMetadata } from '../src/ForestPage'
-import { fieldNote } from '../src/forestKnowledge'
+import { fieldNote, collectionCopy } from '../src/forestKnowledge'
+import {wallpaperDesigns,wallpaperAsset} from '../src/wallpapers'
 import { forestPages, forestPath, notePath, fieldNotesPath, wallpapersPath, forestNavigation } from '../src/forestPaths'
 import { messages, readingPath, localePath } from '../src/i18n'
 import { readings } from '../src/reading'
@@ -67,13 +68,15 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
           await img.scrollIntoViewIfNeeded(); await expect.poll(() => img.evaluate((e: HTMLImageElement) => e.complete && e.naturalWidth > 0)).toBe(true)
           const size = await img.evaluate((e: HTMLImageElement) => ({ width: e.naturalWidth, height: e.naturalHeight, declaredWidth: e.width, declaredHeight: e.height, alt: e.alt }))
           expect(size.width).toBe(Number(await img.getAttribute('width'))); expect(size.height).toBe(Number(await img.getAttribute('height')))
-          expect(size.alt).toMatch(/mākslīgā intelekta|AI-generated/)
+          const source=await img.getAttribute('src'),design=wallpaperDesigns.find(d=>source?.includes(d.id))
+          expect(size.alt).toBe(design?(source!.includes('mobile')?design.mobileAlt[locale]:design.desktopAlt[locale]):source!.includes('mobile')?collectionCopy[locale].phoneAlt:collectionCopy[locale].desktopAlt)
         }
-        await expect(page.locator('.knowledge-downloads a[download]')).toHaveCount(3)
-        expect(data.image.map((image: { width: number; height: number }) => [image.width, image.height])).toEqual([[5120, 2880], [1440, 3120]])
+        await expect(page.locator('.knowledge-downloads a[download]')).toHaveCount(7)
+        expect(data.image.map((image: { width: number; height: number }) => [image.width, image.height])).toEqual([[5120, 2880], [1440, 3120],...wallpaperDesigns.flatMap(d=>(['desktop','mobile']as const).map(device=>{const a=wallpaperAsset(d.id,device);return[a.width,a.height]}))])
         const captions = await page.locator('.knowledge-gallery>article>p').allTextContents()
         for (const caption of captions) expect(caption).toMatch(/mākslīgā intelekta|AI-generated/i)
-        expect(data.image.map((image: { caption: string }) => image.caption)).toEqual(captions)
+        expect(data.image.map((image: { caption: string }) => image.caption)).toEqual([...captions,...wallpaperDesigns.flatMap(d=>[d.desktopAlt[locale],d.mobileAlt[locale]])])
+        await expect(page.locator('.reading-art-note')).toContainText(collectionCopy[locale].artDisclosure)
       }
       await checkReadingResources(page,javaScriptEnabled)
       const other = locale === 'lv' ? 'en' : 'lv'
@@ -89,7 +92,8 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
 test('2.5.7 route graph, CSP hashes, honest species facts and all internal resources remain coherent', async ({ request, page }) => {
   const policy = /script-src ([^;]+)/.exec(await readFile('dist/_headers', 'utf8'))![1]
   expect(policy).not.toMatch(/unsafe-inline|unsafe-eval/)
-  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(22)
+  // Twenty JSON-LD documents plus the existing bootstrap; retired colour-mode code adds no hash.
+  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(21)
   const paths = ['/', '/en/', readingPath('lv'), readingPath('en'), ...forestPages.flatMap(p => [forestPath('lv', p), forestPath('en', p)])]
   expect(new Set(paths).size).toBe(20)
   const links = new Set<string>(), titles = new Set<string>()
@@ -124,7 +128,9 @@ test('2.5.7 original factual prose, notes, core cinema and every media/download 
   // 2.5.8 explicitly enhances these four sources; full prose and real audio-graph
   // regressions replace obsolete byte-equality, all other immutable guards remain.
   const approved=new Set(['src/reading.ts','src/ReadingPage.tsx','src/reading.css','src/useForestAudio.ts'])
-  for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)),path).toBe(hash)
+  const reviewed={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))}
+  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/ForestScene.tsx','src/style.css','src/useForestAudio.ts'])
+  for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(await readFile(path)),path).toBe(reviewed[path]??hash)
 })
 
 for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: selective supported snippet labels preserve primary content, links and mobile control text`, async ({ page, request }) => {
@@ -143,8 +149,8 @@ for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: selective sup
   await skip.click(); await expect(page.getByRole('button', { name: t.closer, exact: true })).toBeFocused()
   await expect(page.locator('.site-header').getByRole('link', { name: locale === 'lv' ? 'EN' : 'LV', exact: true })).toBeVisible()
   const notes = page.getByRole('link', { name: forestNavigation[locale].notes, exact: true }); await expect(notes).toHaveAttribute('href', fieldNotesPath(locale))
-  const notePopup=page.waitForEvent('popup');await notes.click();const notesPage=await notePopup;await expect(notesPage).toHaveURL(new RegExp(fieldNotesPath(locale)+'$'));await notesPage.close()
-  await page.goto(localePath(locale)); const gallery = page.getByRole('link', { name: forestNavigation[locale].wallpapers, exact: true }); await expect(gallery).toHaveAttribute('href', wallpapersPath(locale)); const galleryPopup=page.waitForEvent('popup');await gallery.click();const galleryPage=await galleryPopup;await expect(galleryPage.locator('.knowledge-gallery')).toBeVisible();await galleryPage.close()
+  expect(await notes.getAttribute('target')).toBeNull();await notes.click();await expect(page).toHaveURL(new RegExp(fieldNotesPath(locale)+'$'));expect(page.context().pages()).toHaveLength(1)
+  await page.goto(localePath(locale)); const gallery = page.getByRole('link', { name: forestNavigation[locale].wallpapers, exact: true }); await expect(gallery).toHaveAttribute('href', wallpapersPath(locale)); expect(await gallery.getAttribute('target')).toBeNull();await gallery.click();await expect(page.locator('.knowledge-gallery').first()).toBeVisible();expect(page.context().pages()).toHaveLength(1)
 })
 
 test('2.5.7 JS-free wallpaper and original-note links download the real existing files', async ({ browser }) => {

@@ -26,6 +26,7 @@ for(const locale of ['lv','en'] as const){
  test(`2.5.8.2 ${locale}: image-wide dragging clips the aligned photos and hotspots highlight the factual card`,async({page})=>{
   await page.goto(readingPath(locale));const view=page.locator('.xray-view'),range=page.locator('[data-xray-range]');await view.scrollIntoViewIfNeeded()
   await expect.poll(()=>view.locator('img').evaluateAll(images=>images.every(e=>(e as HTMLImageElement).complete&&(e as HTMLImageElement).naturalWidth>0&&/\/responsive\/xray-[\w-]+-(480|960|1600|2752)\.webp$/.test((e as HTMLImageElement).currentSrc)))).toBe(true)
+  await expect(range).toBeEnabled()
   const b=(await view.boundingBox())!;expect(b.width/b.height).toBeCloseTo(16/9,1)
   // Start far from the central divider: the whole image must be draggable.
   await page.mouse.move(b.x+b.width*.18,b.y+b.height*.66);await page.mouse.down();await page.mouse.move(b.x+b.width*.82,b.y+b.height*.66,{steps:9});await page.mouse.up();expect(Number(await range.inputValue())).toBeCloseTo(82,0)

@@ -3,6 +3,7 @@ import {readFile, readdir} from 'node:fs/promises'
 import {createHash} from 'node:crypto'
 import {portalCopy} from '../src/portalCopy'
 import {threadCopy} from '../src/threadCopy'
+import {messages, readingPath} from '../src/i18n'
 
 const sizes = [[320,568],[756,491],[390,844],[430,932],[844,390],[800,900],[1440,900],[1512,982],[2048,1152]]
 for (const locale of ['lv','en'] as const) for (const [width,height] of sizes) test.describe(`3.2 ${locale} ${width}x${height}`, () => {
@@ -99,4 +100,17 @@ test('3.2 native no-JS hero link still reaches Encounter, and SSR prioritizes th
   const html=await(await request.get('/')).text()
   expect(html).toMatch(/rel="preload"[^>]+href="\/media\/forest-poster.jpg\?v=2.3"/)
   expect(html).not.toMatch(/rel="preload"[^>]+href="\/media\/forest-(?:final|breathing-poster).jpg/)
+})
+
+for(const locale of ['lv','en']as const)test(`3.2 ${locale}: Back restores the actual reading position even when the old fragment names a different scene`,async({page})=>{
+  await page.addInitScript(()=>{sessionStorage.setItem('piepe-entered','1');localStorage.setItem('piepe-forest-sound','off')})
+  const path=locale==='lv'?'/':'/en/'
+  await page.goto(path+'#understory');await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
+  const link=page.locator('.facts-context').getByRole('link',{name:messages[locale].readGuide,exact:true})
+  await link.scrollIntoViewIfNeeded();await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))
+  const position=await page.evaluate(()=>scrollY)
+  await link.click();await expect(page).toHaveURL(new RegExp(readingPath(locale)+'$'));expect(page.context().pages()).toHaveLength(1)
+  await page.goBack();await expect(page).toHaveURL(new RegExp(path+'#understory$'));await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
+  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeCloseTo(position,0)
+  await expect(page.locator('video.forest-film')).toHaveCount(0)
 })

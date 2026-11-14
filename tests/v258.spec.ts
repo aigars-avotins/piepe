@@ -52,7 +52,7 @@ for(const locale of ['lv','en'] as const){
 
   test(`2.5.8 ${locale}: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer`,async({page})=>{
     await page.goto(readingPath(locale));const range=page.locator('[data-xray-range]'),photo=page.locator('.xray-cutaway')
-    await expect(page.locator('[data-xray-controls]')).toBeVisible();await range.focus();await range.press('Home');await expect(range).toHaveValue('0')
+    await expect(page.locator('[data-xray-controls]')).toBeVisible();await range.scrollIntoViewIfNeeded();await expect(range).toBeEnabled();await range.focus();await range.press('Home');await expect(range).toHaveValue('0')
     await range.press('ArrowRight');await expect(range).toHaveValue('1');await expect(range).toHaveAttribute('aria-valuetext',`1% ${t.xray.output}`)
     await range.press('End');await expect(range).toHaveValue('100');await expect(page.locator('[data-xray-output]')).toContainText('100%')
     await range.press('Home');for(let i=0;i<5;i++)await range.press('ArrowRight')
@@ -83,13 +83,13 @@ for(const locale of ['lv','en'] as const){
 
   test(`2.5.8 ${locale}: atlas opens full-resolution comparison, closes with Escape and restores link focus`,async({page})=>{
     await page.goto(readingPath(locale))
-    const link=page.locator('[data-atlas-open]').first();await link.focus();await link.press('Enter')
+    const link=page.locator('[data-atlas-open]').first();await link.scrollIntoViewIfNeeded();await expect(link).toBeEnabled();await link.focus();await link.press('Enter')
     const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3)
     await expect.poll(()=>dialog.locator('img').first().evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(2400)
     await page.keyboard.press('Escape');await expect(dialog).toBeHidden();await expect(link).toBeFocused()
     const other=page.locator('[data-atlas-open]').nth(2);await other.click();await expect(dialog.locator('figcaption').first()).toHaveText(t.atlas.cards[2].title)
     await dialog.locator('[data-atlas-close]').click();await expect(dialog).toBeHidden();await expect(other).toBeFocused()
-    await expect(page.locator('.experience-caution')).toHaveText(t.atlas.caution)
+    const provenance=page.locator('#atlas-method');await provenance.locator('summary').click();await expect(provenance).toHaveAttribute('open','');await expect(provenance).toContainText(t.atlas.caution)
   })
 
   test(`3.1.1 ${locale}: a retired Nightfall preference cannot change first paint or native document history`,async({page})=>{
