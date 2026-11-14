@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { execFileSync } from 'node:child_process'
+import type { Page, TestInfo } from '@playwright/test'
 
 const activateBrowser = `ObjC.import('AppKit');
 const apps = $.NSWorkspace.sharedWorkspace.runningApplications.js;
@@ -13,6 +14,19 @@ try {
   displays = $.NSScreen.screens.js.map(screen => ({ frame: screen.frame, visible: screen.visibleFrame, scale: Number(screen.backingScaleFactor) }));
 } catch (error) { displayError = String(error); }
 JSON.stringify({ requested, frontmost: $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js, displays, displayError });`
+
+/** Activate custom-context pages as well as the standard page fixture. */
+export async function activateNativePage(page: Page, info: TestInfo) {
+  await page.bringToFront()
+  if (process.platform !== 'darwin') return
+  // DOM focus alone does not activate an AppKit application on a CI desktop.
+  // Use the native workspace API, without System Events/Accessibility control.
+  const activation = execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', activateBrowser], { encoding: 'utf8' })
+  await info.attach('native-window-activation', { body: activation, contentType: 'application/json' })
+  const requested = JSON.parse(activation).requested as { name: string }[]
+  expect(requested.length, 'A native WebKit application must be running').toBeGreaterThan(0)
+  await expect.poll(() => execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', "ObjC.import('AppKit'); $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js"], { encoding: 'utf8' }).trim(), { timeout: 5000 }).toBe(requested[0].name)
+}
 
 /** Native-only evidence for compositor/input failures; no product instrumentation. */
 export function nativeDiagnostics() {
@@ -29,14 +43,7 @@ export function nativeDiagnostics() {
     page.on('response', response => { if (new URL(response.url()).pathname.endsWith('.mp4')) transfers.push({ event: 'response', id: id(response.request()), at: Date.now(), status: response.status(), range: response.headers()['content-range'], bytes: response.headers()['content-length'] }) })
     page.on('requestfinished', request => { if (new URL(request.url()).pathname.endsWith('.mp4')) transfers.push({ event: 'finished', id: id(request), at: Date.now() }) })
     page.on('requestfailed', request => { if (new URL(request.url()).pathname.endsWith('.mp4')) transfers.push({ event: 'failed', id: id(request), at: Date.now(), error: request.failure()?.errorText }) })
-    // DOM focus alone does not activate an AppKit application on a CI desktop.
-    // Use the native workspace API, without System Events/Accessibility control.
-    const activation = execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', activateBrowser], { encoding: 'utf8' })
-    await info.attach('native-window-activation', { body: activation, contentType: 'application/json' })
-    await page.bringToFront()
-    const requested = JSON.parse(activation).requested as { name: string }[]
-    expect(requested.length, 'A native WebKit application must be running').toBeGreaterThan(0)
-    await expect.poll(() => execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', "ObjC.import('AppKit'); $.NSWorkspace.sharedWorkspace.frontmostApplication.localizedName.js"], { encoding: 'utf8' }).trim(), { timeout: 5000 }).toBe(requested[0].name)
+    await activateNativePage(page, info)
     await page.addInitScript(() => {
       const events: unknown[] = [], photoPhases: unknown[] = [], state = { events, photoPhases, maxFrameGap: 0, frames: 0 }
       ;(window as unknown as { nativeEvidence: typeof state }).nativeEvidence = state

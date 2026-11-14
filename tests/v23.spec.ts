@@ -24,7 +24,16 @@ async function wheelTo(page: Page, id: string, fraction: number) {
       // keyboard scrolling; separate Chromium recordings use actual touch input.
       await page.keyboard.press(Math.abs(delta) > h * .75 ? delta > 0 ? 'PageDown' : 'PageUp' : delta > 0 ? 'ArrowDown' : 'ArrowUp', { delay: 80 })
     } else await page.mouse.wheel(0, Math.max(-h * .4, Math.min(h * .4, delta)))
-    await page.waitForTimeout(100)
+    // Wait for native keyboard momentum to finish before measuring arrival or
+    // issuing an opposite command. A 100ms sample can be hundreds of pixels
+    // ahead of its eventual resting position on foreground macOS WebKit.
+    let previous = await page.evaluate(() => scrollY), stable = 0
+    await expect.poll(async () => {
+      const current = await page.evaluate(() => scrollY)
+      stable = Math.abs(current - previous) < 1 ? stable + 1 : 0
+      previous = current
+      return stable
+    }, { intervals: [100], timeout: 2500 }).toBeGreaterThanOrEqual(2)
   }
   throw Error('Native wheel input did not reach the scene')
 }
@@ -78,11 +87,21 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
   // Native video-canvas readback can suppress the NEXT probe's frame callbacks.
   // Keep the same three distinct pixel samples, cadence and time assertions.
   const clip={x:Math.floor(sample.viewport.w*.64),y:Math.floor(sample.viewport.h*.43),width:128,height:72}
-  for(let i=0;i<3;i++){
-    const started=Date.now(),pixels=await page.screenshot({clip,scale:'css'})
+  const pixelsStarted=Date.now()
+  // A compositor capture can return the same last surface during a native loop
+  // handoff. Require three different *visible* frames within a bounded window;
+  // do not confuse exactly three screenshot calls with three presented frames.
+  while(distinctFrames(sample.frames)<3&&Date.now()-pixelsStarted<2500){
+    const started=Date.now()
+    await layer.locator('video').evaluate((video:HTMLVideoElement)=>new Promise<void>((resolve,reject)=>{
+      const timer=setTimeout(()=>{video.cancelVideoFrameCallback(request);reject(Error('No frame before composited sample'))},1000)
+      const request=video.requestVideoFrameCallback(()=>{clearTimeout(timer);requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))})
+    }))
+    const pixels=await page.screenshot({clip,scale:'css'})
     sample.frames.push({time:await layer.locator('video').evaluate((v:HTMLVideoElement)=>v.currentTime),hash:parseInt(createHash('sha256').update(pixels).digest('hex').slice(0,8),16),phase:'pixels',copyMs:Date.now()-started,copyMethod:'composited-browser-crop'})
-    if(i<2)await page.waitForTimeout(250)
+    if(distinctFrames(sample.frames)<3)await page.waitForTimeout(250)
   }
+  await test.info().attach(`visible-${name}-probe`,{body:JSON.stringify(sample),contentType:'application/json'})
   return sample
 }
 

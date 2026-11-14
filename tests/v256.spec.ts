@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto'
 import { localePath, readingPath, messages } from '../src/i18n'
 import { readings } from '../src/reading'
 import { checkReading, checkReadingResources } from './readingChecks'
+import { activateNativePage } from './nativeDiagnostics'
 
 for (const locale of ['lv', 'en'] as const) for (const javaScriptEnabled of [false, true]) test(`2.5.6 ${locale} JS=${javaScriptEnabled}: real text-first HTML, stable article routing and responsive reading`, async ({ browser, request }, info) => {
   const response = await request.get(readingPath(locale)), html = await response.text()
@@ -14,6 +15,7 @@ for (const locale of ['lv', 'en'] as const) for (const javaScriptEnabled of [fal
   const context = await browser.newContext({ javaScriptEnabled, viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' })
   try {
     const page = await context.newPage(), errors: string[] = []; page.on('pageerror', e => errors.push(e.message))
+    await activateNativePage(page, info)
     await page.goto(readingPath(locale)); await checkReading(page, locale)
     for (const [width, height] of [[390, 844], [800, 900], [1440, 900]]) {
       await page.setViewportSize({ width, height }); await page.evaluate(() => document.fonts.ready)
