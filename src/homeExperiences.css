@@ -30,3 +30,13 @@
 .portal-entry-preview{position:relative}.portal-entry-preview img{position:absolute;inset:0}
 .wallpaper-new-designs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin:56px 0 24px}.wallpaper-new-designs>a{min-width:0}.wallpaper-new-designs img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}.wallpaper-new-designs h3{margin:22px 0 8px;font-size:32px}.wallpaper-new-designs .line-link{font-size:14px;min-width:0;margin-top:0}.wallpaper-new-designs a:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
 @media(max-width:699px){.wallpaper-new-designs{grid-template-columns:1fr;gap:36px;margin-top:42px}}
+
+/* One clear first action; the photograph is the exact threshold, not a new asset. */
+.discovery-entry strong{display:block;font:400 clamp(26px,2.5vw,34px)/1.15 var(--serif);color:var(--paper);letter-spacing:-.02em;margin-bottom:4px}.discovery-entry-arrow{margin-left:12px}.discovery-preview{border-radius:0}.hero-foot .scroll-cue{font-size:11px;color:var(--muted)}
+/* A photographic diptych, with captions in natural flow and definite 7:4 windows. */
+.home-experiences{max-width:1560px}.exploration-gateways{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:start;gap:clamp(36px,6vw,112px)}.exploration-gateways>a{border:0;padding-top:0}.exploration-gateways>a:nth-child(2){margin-top:100px}.gateway-text{padding-top:26px}.gateway-text strong{font-size:clamp(30px,3.3vw,52px);line-height:1.09;letter-spacing:-.025em;max-width:21ch}.gateway-text small{font-size:12px;letter-spacing:.07em}.gateway-text>span{top:30px}
+.home-experiences .experience-heading h3{letter-spacing:-.025em}.home-experiences .xray-stories{gap:clamp(28px,4vw,64px)}
+@media(max-width:699px){.discovery-entry strong{font-size:28px}.discovery-entry small{font-size:11px}.hero-foot .scroll-cue{font-size:0}.exploration-gateways{grid-template-columns:1fr;gap:48px}.exploration-gateways>a:nth-child(2){margin-top:0}.gateway-text strong{font-size:36px}}
+@media(max-width:359px){.discovery-entry strong{font-size:26px}.discovery-entry{gap:10px}.discovery-preview{flex-basis:40px;width:40px}.discovery-entry small{font-size:10px}}
+/* Keep the entire first step reachable in a short landscape viewport. */
+@media(max-height:520px) and (min-width:700px){.hero{min-height:100svh}.hero-copy{padding-top:84px}.hero-copy>.label{display:none}.wordmark{font-size:112px}.hero-deck{font-size:15px}.discovery-entry strong{font-size:27px}.discovery-entry small{font-size:10px}.world[data-scene=forest]{--sound-offset:100px}}

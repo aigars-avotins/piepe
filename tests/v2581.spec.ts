@@ -14,7 +14,7 @@ for(const locale of ['lv','en'] as const){
     // A resized iPhone context remains a coarse-pointer, 3x device. Use actual
     // desktop input/render settings for desktop layouts, not a 4320px phone surface.
     test.use({viewport:{width,height:width===390?844:900},screen:{width,height:width===390?844:900},isMobile:width===390,hasTouch:width===390,deviceScaleFactor:width===390?3:1})
-    test(`2.5.8.1 ${locale} ${width}: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history`,async({page},info)=>{
+    test(`2.5.8.1 ${locale} ${width}: first viewport opens its named portal; preserved X-Ray reveal retains native history`,async({page},info)=>{
     const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
     await page.addInitScript(()=>{sessionStorage.setItem('piepe-entered','1');localStorage.setItem('piepe-forest-sound','off')})
     await page.goto(localePath(locale));await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
@@ -26,7 +26,7 @@ for(const locale of ['lv','en'] as const){
     const b=(await entry.boundingBox())!;expect(b.y).toBeGreaterThan(0);expect(b.y+b.height).toBeLessThanOrEqual(width===390?844:900)
     const overlaps=await entry.evaluate(e=>{const a=e.getBoundingClientRect();return [...document.querySelectorAll('.hero-copy,.fungus-annotation>span:last-child,.world>.sound-control,.scroll-cue')].some(n=>{const b=n.getBoundingClientRect();return a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top})});expect(overlaps).toBe(false)
     await info.attach(`${locale}-${width}-home`,{body:await page.screenshot({scale:'css'}),contentType:'image/png'})
-    await entry.click();await expect(page).toHaveURL(/#encounter$/);await expect(page.locator('[data-portal-entry]')).toBeVisible();await expect(page.locator('.fungus-portal')).toHaveCount(0);await page.goBack();await page.goto(localePath(locale)+'#forest-xray')
+    await entry.click();await expect(page.locator('.fungus-portal')).toBeVisible();await expect(page).not.toHaveURL(/#encounter$/);await page.goBack();await expect(page.locator('.fungus-portal')).toHaveCount(0);await expect(entry).toBeFocused();await page.goto(localePath(locale)+'#forest-xray')
     if(width>=700){const a=(await page.locator('.home-experiences').boundingBox())!,rail=(await page.locator('.journey-index').boundingBox())!;expect(a.x+a.width).toBeLessThan(rail.x-16)}
     const section=page.locator('#forest-xray'),range=section.locator('[data-xray-range]');await section.locator('.xray-view').scrollIntoViewIfNeeded();await expect(range).toBeEnabled();await expect(section.locator('[data-xray-controls]')).toBeVisible()
     await range.focus();await range.press('Home');await expect(range).toHaveValue('0');const hashes=[]
@@ -89,7 +89,9 @@ test('2.5.8.1 original source/media checksums, real preview assets and lightweig
   expect(createHash('sha256').update(headers.split('/wallpapers/piepe-forest-desktop-5120x2880.jpg')[0]).digest('hex')).toBe(fixture.protectedSources['public/_headers'])
   const visualSources=JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8'))
   expect(Object.keys(visualSources).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/style.css'])
-  for(const [path,hash]of Object.entries({...fixture.originalAssets,...fixture.protectedSources,...visualSources}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
+  const v320=JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))
+  expect(Object.keys(v320).sort()).toEqual(['src/ForestScene.tsx','src/useForestAudio.ts'])
+  for(const [path,hash]of Object.entries({...fixture.originalAssets,...fixture.protectedSources,...visualSources,...v320}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
 
   const home=await(await request.get('/')).text(),guide=await(await request.get(readingPath('lv'))).text(),entry=/src="(\/assets\/reading-tools-[^"]+\.js)"/.exec(guide)![1],js=await readFile('dist'+entry,'utf8')
   expect(js).not.toMatch(/react|gsap|ScrollTrigger|forest-reveal|AudioContext|import\s/);expect(Buffer.byteLength(js)).toBeLessThan(18000)
