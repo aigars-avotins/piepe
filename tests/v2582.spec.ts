@@ -12,7 +12,7 @@ test('2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and co
  for(const path of routes){
   const html=await readFile('dist'+(path==='/'?'/':path)+'index.html','utf8'),result=await page.evaluate(markup=>{
    const doc=new DOMParser().parseFromString(markup,'text/html'),links=[...doc.querySelectorAll<HTMLAnchorElement>('a[href]')]
-   const violations=links.filter(a=>{const exempt=a.getAttribute('href')!.startsWith('#')||!!a.closest('.reading-languages,.language-switch')||a.matches('header .brand');return exempt?(a.hasAttribute('target')||a.hasAttribute('rel')):a.target!=='_blank'||a.rel!=='noopener noreferrer'}).map(a=>a.outerHTML)
+   const violations=links.filter(a=>{const url=new URL(a.getAttribute('href')!,'https://pie.pe/'),external=['http:','https:'].includes(url.protocol)&&!['https://pie.pe','http://pie.pe'].includes(url.origin);return external?(a.target!=='_blank'||!['noopener','noreferrer'].every(token=>a.relList.contains(token))):a.hasAttribute('target')}).map(a=>a.outerHTML)
    return{links:links.length,violations,svgs:doc.querySelectorAll('#beneath-bark svg,#surface-atlas svg,#deadwood-time svg,#forest-xray svg').length,hidden:doc.querySelectorAll('[data-atmosphere-controls][hidden],[data-time-controls][hidden]').length,scale:doc.querySelectorAll('.journey-perspective,[data-scale-scene]').length,canonical:doc.querySelector('link[rel=canonical]')?.getAttribute('href'),schema:[...doc.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent!)),ids:[...doc.querySelectorAll('[id]')].map(e=>e.id)}
   },html)
   expect(result.violations,path).toEqual([]);expect(result.svgs,path).toBe(0);expect(result.hidden,path).toBe(0);expect(result.scale,path).toBe(0);expect(result.ids.length).toBe(new Set(result.ids).size);expect(result.canonical).toBe('https://pie.pe'+path);expect(result.schema).toHaveLength(1)
@@ -25,21 +25,21 @@ test('2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and co
 for(const locale of ['lv','en'] as const){
  test(`2.5.8.2 ${locale}: image-wide dragging clips the aligned photos and hotspots highlight the factual card`,async({page})=>{
   await page.goto(readingPath(locale));const view=page.locator('.xray-view'),range=page.locator('[data-xray-range]');await view.scrollIntoViewIfNeeded()
-  await expect.poll(()=>view.locator('img').evaluateAll(images=>images.every(e=>(e as HTMLImageElement).naturalWidth===2752))).toBe(true)
+  await expect.poll(()=>view.locator('img').evaluateAll(images=>images.every(e=>(e as HTMLImageElement).complete&&(e as HTMLImageElement).naturalWidth>0&&/\/responsive\/xray-[\w-]+-(480|960|1600|2752)\.webp$/.test((e as HTMLImageElement).currentSrc)))).toBe(true)
   const b=(await view.boundingBox())!;expect(b.width/b.height).toBeCloseTo(16/9,1)
   // Start far from the central divider: the whole image must be draggable.
   await page.mouse.move(b.x+b.width*.18,b.y+b.height*.66);await page.mouse.down();await page.mouse.move(b.x+b.width*.82,b.y+b.height*.66,{steps:9});await page.mouse.up();expect(Number(await range.inputValue())).toBeCloseTo(82,0)
   await range.focus();await range.press('Home');expect(await page.locator('.xray-cutaway').evaluate(e=>getComputedStyle(e).clipPath)).toContain('100%')
   await range.press('End');expect(await page.locator('.xray-cutaway').evaluate(e=>getComputedStyle(e).clipPath)).toMatch(/inset\(0px 0% 0px 0px\)/)
-  await page.locator('[data-xray-point=wood]').click();await expect(page.locator('#xray-wood')).toHaveAttribute('data-current','');expect(await page.locator('#xray-wood').evaluate(e=>e===document.activeElement||e.contains(document.activeElement))).toBe(true)
+  await page.locator('[data-xray-point=wood]').click();await expect(page.locator('#xray-wood')).toHaveAttribute('data-current','');await expect(page.locator('[data-xray-point=wood]')).toBeFocused();await expect(page.locator('[data-xray-point=wood]')).toHaveAttribute('aria-selected','true');await expect(page.getByRole('tabpanel')).toHaveCount(1)
  })
  test(`2.5.8.2 ${locale}: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus`,async({page})=>{
-  await page.goto(readingPath(locale));const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();const image=picture.locator('img[data-interactive-image]');await expect.poll(()=>image.evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(2400)
+  await page.goto(readingPath(locale));const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();const image=picture.locator('img[data-interactive-image]');await expect.poll(()=>image.evaluate((e:HTMLImageElement)=>e.complete&&e.naturalWidth>0&&/\/responsive\/atlas-pores-(480|960|1600|2400)\.webp$/.test(e.currentSrc))).toBe(true)
   const b=(await image.boundingBox())!,x=b.width*.65,y=b.height*.6;const mouseX=Math.round(b.x+x),mouseY=Math.round(b.y+y);await page.mouse.move(mouseX,mouseY)
   const lens=picture.locator('.atlas-loupe');await expect(lens).toBeVisible();await expect(lens).toHaveCSS('width','140px')
   const zoom=await lens.locator('img').evaluate((e:HTMLImageElement)=>({width:parseFloat(e.style.width),height:parseFloat(e.style.height),left:parseFloat(e.style.left),top:parseFloat(e.style.top),source:e.currentSrc}))
   expect(zoom.width).toBeCloseTo(b.width*2.5,1);expect(zoom.height).toBeCloseTo(b.height*2.5,1);expect(zoom.left).toBeCloseTo(70-(mouseX-b.x)*2.5,0);expect(zoom.top).toBeCloseTo(70-(mouseY-b.y)*2.5,0);expect(zoom.source).toContain('atlas-pores.jpg')
-  await picture.click();const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3);expect(await dialog.evaluate(e=>e.matches(':modal'))).toBe(true)
+  await picture.click();await expect(page.locator('[data-atlas-dialog]')).not.toBeVisible();await page.locator('[data-atlas-open]').first().click();const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3);expect(await dialog.evaluate(e=>e.matches(':modal'))).toBe(true)
   await page.keyboard.press('Escape');await expect(dialog).toBeHidden();await expect(page.locator('[data-atlas-open]').first()).toBeFocused()
  })
  test(`2.5.8.2 ${locale}: continuous timeline blends adjacent original images without a dark gap or duplicate captions`,async({page})=>{
@@ -52,18 +52,19 @@ for(const locale of ['lv','en'] as const){
  })
 }
 
-test('2.5.8.2 missing JPG tries WebP, then the labelled wallpaper fallback; no retry loop',async({page})=>{
+test('3.1 responsive then original JPEG tries alternate then labelled wallpaper fallback; no retry loop',async({page})=>{
  const counts:Record<string,number>={}
- await page.route('**/images/interactive/xray-*',route=>{const url=new URL(route.request().url());counts[url.pathname]=(counts[url.pathname]||0)+1;return route.fulfill({status:404,body:''})})
+ await page.route('**/images/interactive/**',route=>{const url=new URL(route.request().url());if(!url.pathname.includes('xray-'))return route.continue();counts[url.pathname]=(counts[url.pathname]||0)+1;return route.fulfill({status:404,body:''})})
  await page.goto('/kas-ir-piepe/#beneath-bark');const view=page.locator('.xray-view');await view.scrollIntoViewIfNeeded()
- await expect.poll(()=>view.locator('img').evaluateAll(es=>es.every(e=>(e as HTMLImageElement).naturalWidth===800&&e.getAttribute('src')==='/wallpapers/previews/desktop.webp'))).toBe(true)
- await expect(view.locator('.raster-fallback')).toBeVisible();expect(Object.keys(counts)).toHaveLength(4);expect(Object.values(counts)).toEqual([1,1,1,1])
+ await expect.poll(()=>view.locator('img').evaluateAll(es=>es.every(e=>(e as HTMLImageElement).complete&&(e as HTMLImageElement).naturalWidth>0&&e.getAttribute('src')==='/wallpapers/previews/desktop.webp'))).toBe(true)
+ await expect(view.locator('[data-image-status]')).toBeVisible();await expect(view.locator('.xray-images')).toHaveAttribute('aria-hidden','true');expect(Object.keys(counts)).toHaveLength(6);expect(Object.values(counts)).toEqual([1,1,1,1,1,1])
 })
-test('2.5.8.2 WebP-only local assets decode without using the final fallback',async({page})=>{
+test('3.1 unavailable responsive and JPEG sources disclose an alternate preview without using the final wallpaper',async({page})=>{
+ await page.route('**/images/interactive/responsive/atlas-pores-*.webp',route=>route.fulfill({status:404,body:''}))
  await page.route('**/images/interactive/atlas-pores.jpg',route=>route.fulfill({status:404,body:''}))
  // Exercise a genuine RIFF/WebP file, not a JPEG served with a WebP filename.
  await page.route('**/images/interactive/atlas-pores.webp',route=>route.fulfill({status:200,contentType:'image/webp',path:'public/wallpapers/previews/desktop.webp'}))
- await page.goto('/kas-ir-piepe/#surface-atlas');const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();await expect.poll(()=>picture.locator('img[data-interactive-image]').evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(800);await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('data-image-state','alternate');await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('src',/\.webp$/);await expect(picture.locator('.raster-fallback')).toBeHidden()
+ await page.goto('/kas-ir-piepe/#surface-atlas');const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();await expect.poll(()=>picture.locator('img[data-interactive-image]').evaluate(async(e:HTMLImageElement)=>{const bitmap=await createImageBitmap(await(await fetch(e.currentSrc)).blob());const width=bitmap.width;bitmap.close();return width})).toBe(800);await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('data-image-state','fallback');await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('src',/\.webp$/);await expect(picture.locator('[data-image-status]')).toBeVisible();await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('alt','')
 })
 test('2.5.8.2 original JPEG pixels are retained with correct extensions; original cinema and routing stay unchanged',async()=>{
  const manifest=JSON.parse(await readFile('docs/qa/v2582/assets.json','utf8'))

@@ -1,0 +1,33 @@
+
+> piepe@3.1.0 test:worker
+> node --test tests/worker.test.ts tests/link-policy.unit.ts tests/redirect-graph.unit.ts
+
+✔ native same-site navigation, images, download URLs and non-web schemes stay in the current tab (0.809012ms)
+✔ external websites are isolated by parsed origin, including deceptive hostname/userinfo/port forms (0.659408ms)
+✔ modified or already-handled link activations remain browser-owned (0.299919ms)
+✔ relative, absolute and HTTP entry redirects preserve the intended site origin (0.847099ms)
+✔ loops, missing locations, protocol downgrades and deceptive origins fail the redirect gate (0.374581ms)
+✔ full media and HEAD preserve headers and advertise ranges (21.244409ms)
+✔ initial, open-ended, suffix and clamped byte ranges return exact content (2.63047ms)
+✔ invalid bounds cannot produce a misleading successful response (1.580998ms)
+✔ If-Range mismatch and unsupported multipart requests receive full media (0.586618ms)
+✔ a matching If-Range receives partial content and missing assets remain 404 (0.550655ms)
+✔ tiny ranges consume bounded chunks and cancel the upstream body (0.784164ms)
+✔ asset subrequests are range-free and non-200 responses pass through (0.399629ms)
+✔ unknown-size streams fall back to a legal full response (0.553108ms)
+✔ Cloudflare-style missing Content-Length still supports suffix and invalid ranges for known media (23.170224ms)
+✔ build-time size metadata exactly matches the public media files (7.217611ms)
+✔ all four cinematic assets retain exact suffix and bounded range delivery without upstream length (76.295384ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 257.310996
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

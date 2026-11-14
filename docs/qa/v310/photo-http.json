@@ -1,0 +1,314 @@
+[
+  {
+    "path": "/images/interactive/responsive/atlas-gills-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 735830,
+    "sha256": "cc75787513d099c871ad622898b487789ea63ae1859a12aa370f6f6133a0cf5c",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-gills-2400.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1573072,
+    "sha256": "dbcf467068120532f629b68cad86197eb562517af734e6a987c3dcd133d62fd7",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-gills-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 97368,
+    "sha256": "ec07bc8b30641eb53a539cbb029bdbccde422f4ed3ffc46119843aee286c7350",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-gills-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 307704,
+    "sha256": "24188721c559619532681d16dc91fcc6be11ad9b0c2bb0431ee6d9316b24c06d",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-pores-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 672170,
+    "sha256": "9015775289a5cb2ecb14119ea21040bc1c80f1ada19b19d8e7b86f34a641bcc4",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-pores-2400.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1537880,
+    "sha256": "e93780696bb974791411d63262334c4a265e22f5da1de2e273aee819c0ea4717",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-pores-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 100834,
+    "sha256": "e4c0925905d4f98b4ded266e395b21aa8f11df385c1a66ff2f1814ec998caa30",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-pores-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 280284,
+    "sha256": "262d8f7bcb75cb71867217bc017951fa253b76dc685b69e75636644cd9a28e86",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-smooth-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 774534,
+    "sha256": "4c2cfbc337a939dad6e426cff2965fa6ae7576b6ad7e0f9fe0a0b35133cd9a97",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-smooth-2400.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1823776,
+    "sha256": "85cf4c3918b0b307d7c9e673c2f1e125c9a18d52a04f465ee71b9ca37be3ac2d",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-smooth-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 93104,
+    "sha256": "47d38a7f9b6a9adc7be9acb25dfed7af077766fa62f8ccfe46f2878dcc436d8a",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/atlas-smooth-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 287500,
+    "sha256": "2ffbebe47f902a36f2045a7d08a3e97ab479752452ceb7899595111c9af462f9",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-01-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 627298,
+    "sha256": "cef84c56407a8e21d036bfd0d4cec3fc2e935ea8fd71114c4e8287848ccdfbda",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-01-2752.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1622836,
+    "sha256": "bf1b916151d318dfd521ccaf52ed30219548790a9feb01493ee922cc4c2be3f2",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-01-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 68596,
+    "sha256": "c371b9cdf3c2073409be8fd919b1767c00350bd420281915cd4c46615d39b60f",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-01-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 247458,
+    "sha256": "d900dcc321842cd0d2191827bf810aefebbf1f48570b8bda88411a07b684d593",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-02-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 691854,
+    "sha256": "50f073072fe90e3c35a8479c09da27a9d22aa1f2290d34f787b2033ba1ab21f9",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-02-2752.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1933010,
+    "sha256": "b2af1a5d8474e6b70a29897fb78c36b4a61e850fcabda52912e8438aea9b0759",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-02-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 72952,
+    "sha256": "d518f07e303129c53e5fe038bc32e3fbe9f208f459d2b59b32dc685d169a596c",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-02-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 263912,
+    "sha256": "2b10477ca54f3cb3040117df7bcd81bda661bd88f612a6d834eb37a4e9fe4660",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-03-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 631050,
+    "sha256": "ed93106ff88497dbef063220b97827282d26d5b534ed72ad5486535f674b198a",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-03-2752.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1595896,
+    "sha256": "59bda9cb050df880af5f35b216b0f08b41b65c41c7f248bc56c1e380bd8a9909",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-03-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 69602,
+    "sha256": "5690c4cdc8e1cf1a3599b0d84858e126b0c5dcb16871904c77f555b305100f1c",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-03-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 250914,
+    "sha256": "bbcdaa592457e4999f05caf8fcf051e1714a36d2271402f98bd135966e6573ca",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-04-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 636230,
+    "sha256": "68a025ed77c881aaf06a84a17c13906ab5dc01f6de81ad9935cb40ab4bdd0b81",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-04-2752.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1600352,
+    "sha256": "fe5d9d087555777abe6a27e84f5f0b3cfc32cd516d36c6fa8620eb059351fbb4",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-04-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 69952,
+    "sha256": "d45a33f9cff0437e6fcc43738140d17d9fc755aab49f0453ad1c55124ea7a99c",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/deadwood-stage-04-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 252098,
+    "sha256": "74580abf611e859d7ea0a2a098486935551123134ec05b1fa1b27e79ad76ed83",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-bark-surface-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 611962,
+    "sha256": "c556e37b533dfabf1e32a4e7141d448ca66243c8e3a5b439ae61e0fc5c36040d",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-bark-surface-2752.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1804550,
+    "sha256": "61a576003e7a8b3f2eb5bc780d2345dcdcf35d2f4ec0be0ae415c6703051f5dc",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-bark-surface-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 79792,
+    "sha256": "6db901c252934695defbcdb9fc7ba39a6ad1e2b13d8cea52315c59ac8d700698",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-bark-surface-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 244786,
+    "sha256": "88c0a3267f50f3ff67188fccc281832b26f5d2ace1be972ebde7faf3e2f0190e",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-wood-mycelium-1600.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 532594,
+    "sha256": "253a4d948f7595d29dbc5056c2c881de15ff4eb2bfa61435ca4b589fc6820220",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-wood-mycelium-2752.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 1336692,
+    "sha256": "b62389283152cbbc978d705de380b878277ab166c404df802b2b0546d2642387",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-wood-mycelium-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 79350,
+    "sha256": "00d077ae31acb6dcc2e053252ffba564e629f97d59cc70c4ede9352dc73a44ed",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/interactive/responsive/xray-wood-mycelium-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 238238,
+    "sha256": "d123f6a43d8d57624b6faa1affee5a778999eea1a281e4c2f8be5bb26b2e91e5",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/portal/threshold-160.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 11148,
+    "sha256": "43767b683e3ba3814450fcc8f727b3cd8727b170659833b9b4be98fea55f161f",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/portal/threshold-480.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 88004,
+    "sha256": "4b1efefb717c1feea857214858bce2ea26eb1bdee2277dd641e836cf223ce9bb",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  },
+  {
+    "path": "/images/portal/threshold-960.webp",
+    "status": 200,
+    "contentType": "image/webp",
+    "bytes": 293890,
+    "sha256": "06c54815c448c0675dc01d95949a85e8c41761f29fbb6ad246a873de513221c5",
+    "cacheControl": "public, max-age=0, must-revalidate"
+  }
+]

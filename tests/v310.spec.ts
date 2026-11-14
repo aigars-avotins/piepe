@@ -40,3 +40,25 @@ test('3.1 actual HTML anchor nodes on all twenty routes obey the real-origin nav
   }
  }
 })
+
+for(const locale of ['lv','en'] as const)test(`3.1 ${locale} real phone touch keeps Atlas gestures separate from navigation and explicit comparison`,async({browser,browserName})=>{
+ const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:3,isMobile:true,hasTouch:true,recordVideo:{dir:test.info().outputPath('native-touch'),size:{width:390,height:844}}});let recording:import('@playwright/test').Video|null=null
+ try{
+  const page=await context.newPage();recording=page.video();await page.goto(locale==='lv'?'/kas-ir-piepe/':'/en/what-is-a-bracket-fungus/');const surface=page.locator('[data-atlas-surface]').first();await surface.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await expect(surface).toHaveAttribute('data-images-ready','');const b=(await surface.boundingBox())!,url=page.url();await page.touchscreen.tap(b.x+b.width*.4,b.y+b.height*.4);expect(page.url()).toBe(url);await expect(page.locator('[data-atlas-dialog]')).not.toBeVisible()
+  if(browserName==='chromium'){
+   await surface.evaluate(element=>{const samples:unknown[]=[];(window as unknown as {atlasTouchSamples:unknown[]}).atlasTouchSamples=samples;element.addEventListener('pointermove',event=>{const p=event as PointerEvent;samples.push({trusted:p.isTrusted,type:p.pointerType,x:p.clientX,y:p.clientY})})})
+   const cdp=await context.newCDPSession(page)
+   // A completed native gesture, with no residual fling. Raw CDP touchMove
+   // packets suppress the next tap even on an independent plain HTML button.
+   await cdp.send('Input.synthesizeScrollGesture',{x:b.x+b.width*.25,y:b.y+b.height*.5,xDistance:-b.width*.4,yDistance:0,speed:250,gestureSourceType:'touch',preventFling:true})
+   await cdp.detach();const samples=await page.evaluate(()=>(window as unknown as {atlasTouchSamples:{trusted:boolean;type:string}[]}).atlasTouchSamples);expect(samples.length).toBeGreaterThan(3);expect(samples.every(p=>p.trusted&&p.type==='touch')).toBe(true);await test.info().attach('native-touch-drag',{body:JSON.stringify(samples),contentType:'application/json'})
+   expect(page.url()).toBe(url);await expect(page.locator('[data-atlas-dialog]')).not.toBeVisible();expect(context.pages()).toHaveLength(1)
+  }
+  await page.locator('[data-atlas-open]').first().tap();await expect(page.locator('[data-atlas-dialog]')).toBeVisible();await expect.poll(()=>page.locator('[data-atlas-dialog] img').evaluateAll(imgs=>imgs.every(e=>(e as HTMLImageElement).naturalWidth===2400))).toBe(true);await page.locator('[data-atlas-close]').tap();await expect(page.locator('[data-atlas-open]').first()).toBeFocused();expect(page.url()).toBe(url);expect(context.pages()).toHaveLength(1)
+ }finally{await context.close();if(recording)await test.info().attach('native-phone-touch',{path:await recording.path(),contentType:'video/webm'})}
+})
+
+test('3.1 intentional X-Ray deep links select one explanation and native Back restores the previous fragment',async({page})=>{
+ await page.goto('/en/what-is-a-bracket-fungus/#xray-wood');await expect(page.locator('[data-xray-point=wood]')).toHaveAttribute('aria-selected','true');await expect(page.getByRole('tabpanel')).toHaveCount(1);await expect(page.locator('#xray-wood')).toBeVisible()
+ await page.evaluate(()=>{location.hash='xray-hyphae'});await expect(page.locator('[data-xray-point=hyphae]')).toHaveAttribute('aria-selected','true');await page.goBack();await expect(page).toHaveURL(/#xray-wood$/);await expect(page.locator('[data-xray-point=wood]')).toHaveAttribute('aria-selected','true')
+})

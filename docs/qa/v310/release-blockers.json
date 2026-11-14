@@ -1,0 +1,22 @@
+{
+  "automaticRun": "https://github.com/aigars-avotins/piepe/actions/runs/43520002461",
+  "sourceCommit": "0d9760513a0c53f51c1093138aba3872e9182e6e",
+  "lightweightJobStartedSteps": 0,
+  "annotation": "The job was not started because your account is locked due to a billing issue.",
+  "manualWorkflowsStarted": 0,
+  "featureBuild": {
+    "id": "7e636380-33d4-484a-9e6b-a31b3d651238",
+    "outcome": "fail",
+    "reason": "The name in your wrangler.jsonc file (piepe) must match the name of your Worker.",
+    "existingBranchBuildCommand": "npm run deploy",
+    "existingBranchDeployCommand": "npx wrangler preview",
+    "integrationChanged": false
+  },
+  "productionAtCheck": {
+    "version": "3.0.0",
+    "sourceCommit": "af186265f3ca37fb69b6f3eb49b7b09d54cad70b",
+    "versionId": "cf0d5bca-04e4-4bce-94bf-36c3eb9ee0f5",
+    "deploymentId": "c6ebae0f-9637-462a-bff9-ac5b08d46177",
+    "newReleasePublished": false
+  }
+}

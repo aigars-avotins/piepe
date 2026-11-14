@@ -1,0 +1,1051 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/piepe/node_modules/.bin/playwright",
+      "test",
+      "tests/v310.spec.ts",
+      "tests/v310-navigation.spec.ts",
+      "tests/v310-images.spec.ts",
+      "--project=webkit-iphone"
+    ],
+    "configFile": "/workspace/piepe/playwright.config.ts",
+    "rootDir": "/workspace/piepe/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome-desktop",
+        "name": "chrome-desktop",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      },
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-iphone",
+        "name": "webkit-iphone",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit-iphone",
+        "testDir": "/workspace/piepe/tests",
+        "snapshotDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 20000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4311",
+          "trace": {
+            "mode": "retain-on-failure",
+            "screenshots": false,
+            "snapshots": false
+          },
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "webkit",
+          "browserName": "webkit",
+          "headless": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit-iphone"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v310-images.spec.ts",
+      "file": "v310-images.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "3.1 lv no-JS reading retains factual imagery, native explanations and original-photo links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4764,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:36.220Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-89b639bc7afac6711b0c",
+          "file": "v310-images.spec.ts",
+          "line": 3,
+          "column": 42
+        },
+        {
+          "title": "3.1 en no-JS reading retains factual imagery, native explanations and original-photo links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4005,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:41.471Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-c80c1bf2394996f0330c",
+          "file": "v310-images.spec.ts",
+          "line": 3,
+          "column": 42
+        },
+        {
+          "title": "3.1 a slow paired image gives a neutral placeholder, then reveals both real layers together",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4060,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:45.504Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-1626e102f7bcb911177d",
+          "file": "v310-images.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "3.1 real first-layer image failure and full fallback failure remain accessible and retryable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3026,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:49.580Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-c8744b56a7a13324678d",
+          "file": "v310-images.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "3.1 the last Deadwood image can fail and recover without substituting a false mixed stage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3342,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:52.621Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-08cd4ec3c364b7b5845f",
+          "file": "v310-images.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "3.1 inactive Deadwood sources wait for near-view intent and use responsive source-quality copies",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2087,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:55.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-248739016a6432baa399",
+          "file": "v310-images.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "3.1 lv compact header keeps visible labels in accessible names and phone-sized targets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 570,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:58.078Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-8ae85d8be98adbb663ab",
+          "file": "v310-images.spec.ts",
+          "line": 29,
+          "column": 42
+        },
+        {
+          "title": "3.1 en compact header keeps visible labels in accessible names and phone-sized targets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:34:58.659Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d674c6cb010aeac1b5f4-f548f87112daa42dc6a1",
+          "file": "v310-images.spec.ts",
+          "line": 29,
+          "column": 42
+        }
+      ]
+    },
+    {
+      "title": "v310-navigation.spec.ts",
+      "file": "v310-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "3.1 two actual external reference links create isolated new tabs with no referrer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5662,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:35:20.419Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d283e090381903f577c4-5c10dc4e6efcd17f5de6",
+          "file": "v310-navigation.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "3.1 a user-modified locale link does not mutate the current homepage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Modified popup behavior is exercised in Chromium and native WebKit; Linux WebKit headless desktop may not expose OS modifier mappings.",
+                  "location": {
+                    "file": "/workspace/piepe/tests/v310-navigation.spec.ts",
+                    "line": 43,
+                    "column": 7
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 375,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:35:26.089Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Modified popup behavior is exercised in Chromium and native WebKit; Linux WebKit headless desktop may not expose OS modifier mappings.",
+                      "location": {
+                        "file": "/workspace/piepe/tests/v310-navigation.spec.ts",
+                        "line": 43,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "d283e090381903f577c4-da67d8e3dcacb51f98af",
+          "file": "v310-navigation.spec.ts",
+          "line": 42,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "3.1 native navigation lv",
+          "file": "v310-navigation.spec.ts",
+          "line": 6,
+          "column": 47,
+          "specs": [
+            {
+              "title": "homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 40000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7972,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:34:59.315Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d283e090381903f577c4-e631dea703c1d21dc5aa",
+              "file": "v310-navigation.spec.ts",
+              "line": 7,
+              "column": 2
+            },
+            {
+              "title": "locale links, native fragments and same-origin downloads preserve their own native behavior",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2518,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:07.300Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d283e090381903f577c4-d69ca4c3ce5f7b659ad6",
+              "file": "v310-navigation.spec.ts",
+              "line": 23,
+              "column": 2
+            }
+          ]
+        },
+        {
+          "title": "3.1 native navigation en",
+          "file": "v310-navigation.spec.ts",
+          "line": 6,
+          "column": 47,
+          "specs": [
+            {
+              "title": "homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 40000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8212,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:09.830Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d283e090381903f577c4-55cfe2497798aec17771",
+              "file": "v310-navigation.spec.ts",
+              "line": 7,
+              "column": 2
+            },
+            {
+              "title": "locale links, native fragments and same-origin downloads preserve their own native behavior",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2354,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:18.055Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d283e090381903f577c4-fcec913686c650b653bb",
+              "file": "v310-navigation.spec.ts",
+              "line": 23,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "v310.spec.ts",
+      "file": "v310.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "3.1 actual HTML anchor nodes on all twenty routes obey the real-origin navigation policy",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1017,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:35:48.974Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c867a4e44fc561fc5dd-ce93bcef5cf082225c02",
+          "file": "v310.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "3.1 lv real phone touch keeps Atlas gestures separate from navigation and explicit comparison",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4280,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:35:50.001Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c867a4e44fc561fc5dd-b95c7a44d758d1bb2866",
+          "file": "v310.spec.ts",
+          "line": 44,
+          "column": 42
+        },
+        {
+          "title": "3.1 en real phone touch keeps Atlas gestures separate from navigation and explicit comparison",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3619,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:35:54.287Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c867a4e44fc561fc5dd-228c41671d95789168aa",
+          "file": "v310.spec.ts",
+          "line": 44,
+          "column": 42
+        },
+        {
+          "title": "3.1 intentional X-Ray deep links select one explanation and native Back restores the previous fragment",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 544,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-13T22:35:57.917Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c867a4e44fc561fc5dd-6540bb5444f796ba239d",
+          "file": "v310.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "3.1 photography lv 1512",
+          "file": "v310.spec.ts",
+          "line": 3,
+          "column": 83,
+          "specs": [
+            {
+              "title": "selected X-Ray explanations never move the viewport or mutate its hash",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3255,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:26.488Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c867a4e44fc561fc5dd-91b22aa401ea0ddd30ee",
+              "file": "v310.spec.ts",
+              "line": 6,
+              "column": 2
+            },
+            {
+              "title": "Atlas gestures are independent from the explicit original-resolution comparison dialog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3893,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:29.751Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c867a4e44fc561fc5dd-de95d5f966781758ee36",
+              "file": "v310.spec.ts",
+              "line": 15,
+              "column": 2
+            },
+            {
+              "title": "Deadwood retains its fractional image mix and exposes one meaningful current image description",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4531,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:33.657Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c867a4e44fc561fc5dd-e43297cec186f5237477",
+              "file": "v310.spec.ts",
+              "line": 21,
+              "column": 2
+            }
+          ]
+        },
+        {
+          "title": "3.1 photography en 390",
+          "file": "v310.spec.ts",
+          "line": 3,
+          "column": 83,
+          "specs": [
+            {
+              "title": "selected X-Ray explanations never move the viewport or mutate its hash",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3455,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:38.202Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c867a4e44fc561fc5dd-addfaec8c3f2786462cf",
+              "file": "v310.spec.ts",
+              "line": 6,
+              "column": 2
+            },
+            {
+              "title": "Atlas gestures are independent from the explicit original-resolution comparison dialog",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3672,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:41.681Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c867a4e44fc561fc5dd-9d20eb7ca3bc52a21db8",
+              "file": "v310.spec.ts",
+              "line": 15,
+              "column": 2
+            },
+            {
+              "title": "Deadwood retains its fractional image mix and exposes one meaningful current image description",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 20000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-iphone",
+                  "projectName": "webkit-iphone",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3599,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-13T22:35:45.365Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c867a4e44fc561fc5dd-a9950eeb206cd5010f87",
+              "file": "v310.spec.ts",
+              "line": 21,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-13T22:34:35.478Z",
+    "duration": 83880.34999999999,
+    "expected": 23,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

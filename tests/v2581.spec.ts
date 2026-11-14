@@ -34,9 +34,10 @@ for(const locale of ['lv','en'] as const){
     // otherwise makes a 1440px layout capture a synthetic 4320px bitmap three times.
     for(const key of ['Home','ArrowRight','End']){await range.press(key);hashes.push(createHash('sha256').update(await section.locator('.xray-view').screenshot({scale:'css'})).digest('hex'))}
     expect(new Set(hashes).size).toBe(3);await expect(range).toHaveAttribute('aria-valuetext',`100% ${experienceCopy[locale].xray.output}`)
-    await section.locator('[data-xray-point="hyphae"]').click();await expect(page).toHaveURL(/#home-xray-hyphae$/);await expect(section.locator('#home-xray-hyphae')).toHaveAttribute('open','')
-    expect(await section.locator('#home-xray-hyphae').evaluate(e=>e.contains(document.activeElement))).toBe(true)
-    await page.goBack();await expect(page).toHaveURL(/#forest-xray$/);await page.goBack();await expect(page).toHaveURL(new RegExp(locale==='lv'?'/$':'/en/$'))
+    const selectedFrom=await page.evaluate(()=>({url:location.href,y:scrollY}));await section.locator('[data-xray-point="hyphae"]').click();expect(page.url()).toBe(selectedFrom.url);expect(await page.evaluate(()=>scrollY)).toBe(selectedFrom.y);await expect(section.locator('#home-xray-hyphae')).toBeVisible();await expect(section.getByRole('tabpanel')).toHaveCount(1)
+    await expect(section.locator('[data-xray-point="hyphae"]')).toBeFocused()
+    // Enhanced selection no longer adds an unwanted history entry.
+    await page.goBack();await expect(page).toHaveURL(new RegExp(locale==='lv'?'/$':'/en/$'))
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
     await expect(page.locator('.exploration-guide')).toHaveAttribute('href',readingPath(locale)+'#beneath-bark')
     await expect(page.locator('.exploration-gateways a').first()).toHaveAttribute('href',readingPath(locale)+'#surface-atlas');await expect(page.locator('.exploration-gateways a').last()).toHaveAttribute('href',notePath(locale,'005')+'#deadwood-time')
@@ -53,7 +54,7 @@ for(const locale of ['lv','en'] as const){
   })
   test(`2.5.8.1 ${locale}: homepage entry and explanations remain genuine HTML without JavaScript`,async({browser})=>{
     const c=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}})
-    try{const p=await c.newPage();await p.goto(localePath(locale));await expect(p.locator('.discovery-entry')).toBeVisible();await p.locator('.discovery-entry').click();await expect(p).toHaveURL(/#encounter$/);await p.goto(localePath(locale)+'#forest-xray');await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toBeVisible();await p.locator('#home-xray-wood summary').click();await expect(p.locator('#home-xray-wood')).toContainText(experienceCopy[locale].xray.stories[0].text);const popupPromise=p.waitForEvent('popup');await p.locator('.exploration-guide').click();const guide=await popupPromise;await expect(guide).toHaveURL(new RegExp(readingPath(locale)+'#beneath-bark$'));await expect(guide.locator('.world,video')).toHaveCount(0)}finally{await c.close()}
+    try{const p=await c.newPage();await p.goto(localePath(locale));await expect(p.locator('.discovery-entry')).toBeVisible();await p.locator('.discovery-entry').click();await expect(p).toHaveURL(/#encounter$/);await p.goto(localePath(locale)+'#forest-xray');await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toBeVisible();await p.locator('[data-xray-point=wood]').click();await expect(p).toHaveURL(/#home-xray-wood$/);await expect(p.locator('#home-xray-wood')).toContainText(experienceCopy[locale].xray.stories[0].text);await p.locator('.exploration-guide').click();await expect(p).toHaveURL(new RegExp(readingPath(locale)+'#beneath-bark$'));expect(c.pages()).toHaveLength(1);await expect(p.locator('.world,video')).toHaveCount(0)}finally{await c.close()}
   })
   test(`2.5.8.1 ${locale}: delayed static code keeps controls visible and enables them only after binding, with header preference and stable layout`,async({page})=>{
     let release!:()=>void;const gate=new Promise<void>(r=>{release=r})
@@ -62,7 +63,7 @@ for(const locale of ['lv','en'] as const){
     await expect(page.locator('[data-time-controls]')).toBeVisible();await expect(page.locator('[data-time-range]')).toBeDisabled();await expect(page.locator('[data-atmosphere-controls]')).toBeVisible();await expect(page.locator('[data-atmosphere-choice=morning]')).toBeDisabled();const y=await page.locator('h1').evaluate(e=>e.getBoundingClientRect().top)
     release();await expect(page.locator('[data-time-controls]')).toBeVisible();await expect(page.locator('.reading-header [data-atmosphere-controls]')).toBeVisible();expect(await page.locator('h1').evaluate(e=>e.getBoundingClientRect().top)).toBeCloseTo(y,0)
     await page.locator('[data-time-choice="3"]').click();await expect(page.locator('[data-time-capsule]')).toHaveAttribute('data-stage','3');const r=await page.locator('.time-visual').boundingBox();expect(r!.width/r!.height).toBeCloseTo(16/9,2)
-    const night=locale==='lv'?'Nakts krēsla':'Nightfall';await page.getByRole('button',{name:night,exact:true}).click();await page.goto(readingPath(locale));await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall');await expect(page.locator('.reading-header [data-atmosphere-controls]')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
+    const night=locale==='lv'?'Krēsla — Nakts krēsla':'Nightfall';await page.getByRole('button',{name:night,exact:true}).click();await page.goto(readingPath(locale));await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall');await expect(page.locator('.reading-header [data-atmosphere-controls]')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
   })
 }
 for(const mode of ['reduced','save-data'] as const)test(`2.5.8.1 ${mode}: immediate home entry, usable reveal and static film alternative`,async({page})=>{
@@ -71,13 +72,16 @@ for(const mode of ['reduced','save-data'] as const)test(`2.5.8.1 ${mode}: immedi
 })
 test('2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module',async({request})=>{
   const fixture=JSON.parse(await readFile('docs/qa/v2581/baseline-inventory.json','utf8'))
+  // 3.1 changes only Discovery's native download anchor to SiteLink; normalize
+  // that reviewed wrapper while still pinning every camera/film/security source.
+  // The independent progressive image/readiness tools now occupy 15.5KB (18KB cap).
   // 3.0 adds explicit portal-only audio activation; retain the historical fixture
   // and pin the reviewed audio change alongside functional opt-in/mute tests.
   const portalSources=JSON.parse(await readFile('docs/qa/v300/preserved-sources.json','utf8'))
   fixture.protectedSources['src/useForestAudio.ts']=portalSources['src/useForestAudio.ts']
-  for(const [path,hash]of Object.entries({...fixture.protectedSources,...fixture.originalAssets}))expect(createHash('sha256').update(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)).digest('hex'),path).toBe(hash)
+  for(const [path,hash]of Object.entries({...fixture.protectedSources,...fixture.originalAssets}))expect(createHash('sha256').update(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace("import SiteLink from './SiteLink'\n",'').replaceAll('<SiteLink','<a').replaceAll('</SiteLink>','</a>').replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)).digest('hex'),path).toBe(hash)
   const home=await(await request.get('/')).text(),guide=await(await request.get(readingPath('lv'))).text(),entry=/src="(\/assets\/reading-tools-[^"]+\.js)"/.exec(guide)![1],js=await readFile('dist'+entry,'utf8')
-  expect(js).not.toMatch(/react|gsap|ScrollTrigger|forest-reveal|AudioContext|import\s/);expect(Buffer.byteLength(js)).toBeLessThan(9000)
+  expect(js).not.toMatch(/react|gsap|ScrollTrigger|forest-reveal|AudioContext|import\s/);expect(Buffer.byteLength(js)).toBeLessThan(18000)
   const app=await readFile('dist'+/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],'utf8');expect(app).not.toContain(readings.lv.sections[1].paragraphs[0]);expect(app).toContain(experienceCopy.lv.xray.stories[0].text)
   // Rejected schematic-art derivatives were intentionally removed in 2.5.8.2.
   for(const name of ['atlas-pores','atlas-gills','atlas-smooth','deadwood-stage-01','deadwood-stage-02','deadwood-stage-03','deadwood-stage-04','xray-bark-surface','xray-wood-mycelium'])expect((await request.get('/images/interactive/'+name+'.jpg')).status()).toBe(200)
