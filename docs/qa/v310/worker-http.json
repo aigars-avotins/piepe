@@ -1,6 +1,6 @@
 {
-  "method": "Local Wrangler HTTP candidate 3.0; no production deployment; authored head metadata, assets and every inline hash compared to the fresh main build. Only the exact optional Cloudflare beacon exception is allowed in addition to authored scripts.",
-  "verifiedAtUtc": "2026-11-13T22:32:52.141828+00:00",
+  "method": "Local Wrangler HTTP candidate 3.1 (1e1dd701); no production deployment; authored head metadata, assets and every inline hash compared to the fresh candidate build. Only the exact optional Cloudflare beacon exception is allowed in addition to authored scripts.",
+  "verifiedAtUtc": "2026-11-14T07:43:08.358739+00:00",
   "results": [
     {
       "path": "/",
@@ -526,16 +526,16 @@
       "sourceBytesMatch": true
     },
     {
-      "path": "/assets/index-C7BokcnN.js",
+      "path": "/assets/index-DMxBzg8L.js",
       "status": 200,
       "sourceBytesMatch": true,
-      "sha256": "cc6824a00908779d85d25368f03c3006612dd23e9ded533a692ca80244f35c8b"
+      "sha256": "b7ff7fd6f5c050d00e69392fe2116e43a0eb33fd5e8ee8149943b905c3b8bc56"
     },
     {
-      "path": "/assets/index-B8yUwx4j.css",
+      "path": "/assets/index-MxVMY7ep.css",
       "status": 200,
       "sourceBytesMatch": true,
-      "sha256": "daa7940580864b8d123d23a8e2a69fe56fb9f1724a8d07aa535a342e6f9f439b"
+      "sha256": "da4e874fa63bbc2fb280ca0c08174dcbb66756128c3d28840888f87981130252"
     },
     {
       "path": "/media/forest-awakening.mp4",
@@ -694,7 +694,7 @@
       "status": 200,
       "contentType": "image/png",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"1fb8e2adef781f55ab9aeffa4ef47200\"",
+      "etag": "\"a885ccbe373c121fe6423f80cfebe3f7\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -703,7 +703,7 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"3cdbab63d1f8acf4eb4755fd1312e190\"",
+      "etag": "\"bc4b2cd6583be41ebb8a27f1320a78cd\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -712,16 +712,16 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"1ad73a4e9752afdb7cfb5aa946e32948\"",
+      "etag": "\"6afb7eed8f02a3a403f5dc273442d9ca\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
     {
-      "path": "/assets/forest-experience-2a5303e91f6c7133.css",
+      "path": "/assets/forest-experience-952c2059817545b0.css",
       "status": 200,
       "contentType": "text/css; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"20487d8b8bf1b2a05e63843575217537\"",
+      "etag": "\"6b4a26e3a10a1ad2744c51e65779c6a1\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -730,25 +730,25 @@
       "status": 200,
       "contentType": "text/css; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"8aeed9ae75c87f6991397ea9b4c03c96\"",
+      "etag": "\"91b5a1933d60e3a126c20d5cc6071955\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
     {
-      "path": "/assets/index-B8yUwx4j.css",
-      "status": 200,
-      "contentType": "text/css; charset=utf-8",
-      "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"d0d8c5e76efc031693bbee91dd2a4923\"",
-      "sourceBytesMatch": true,
-      "exactBuiltCsp": true
-    },
-    {
-      "path": "/assets/index-C7BokcnN.js",
+      "path": "/assets/index-DMxBzg8L.js",
       "status": 200,
       "contentType": "text/javascript; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"a053d176dbb8b6b281168bf46030a6e5\"",
+      "etag": "\"1e7cf4a3105b60800638a8071fb9d1db\"",
+      "sourceBytesMatch": true,
+      "exactBuiltCsp": true
+    },
+    {
+      "path": "/assets/index-MxVMY7ep.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "cacheControl": "public, max-age=31536000, immutable",
+      "etag": "\"21e48fa8d9ed6351e5b52d1b63a8b77c\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -757,7 +757,7 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"ddfeca9fa34733b01930aa903d7add1c\"",
+      "etag": "\"448fb18ace4efa729475f80d2d57bcb2\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -766,7 +766,7 @@
       "status": 200,
       "contentType": "font/woff2",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"eead9fda000031355eb8fca16d1e1354\"",
+      "etag": "\"044bb9751a0171218fe9f86cfa6dffea\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -775,7 +775,7 @@
       "status": 200,
       "contentType": "text/css; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"e2c1a7cd9d6a0859b01232006fc068af\"",
+      "etag": "\"9f6726ea5aca6cf85e73375095c77b27\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -784,7 +784,7 @@
       "status": 200,
       "contentType": "text/javascript; charset=utf-8",
       "cacheControl": "public, max-age=31536000, immutable",
-      "etag": "\"2e9134fc6d0f07c7021d8e4c79fca378\"",
+      "etag": "\"d93f34c55ae9af89b768b6ab367ebd9e\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -793,7 +793,7 @@
       "status": 200,
       "contentType": "image/svg+xml",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"906d72fe47b2557566869cc7dc529ed2\"",
+      "etag": "\"88d128984ad782f5fe68fde298cf8689\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -802,7 +802,7 @@
       "status": 200,
       "contentType": "image/svg+xml",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"7be80e4845a020f7ffa89778678342ba\"",
+      "etag": "\"0793da06bfe651703421b58da7bc16dc\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -811,7 +811,7 @@
       "status": 200,
       "contentType": "image/vnd.microsoft.icon",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"09cd65194ca16d1c42f30dfe5f6cc6da\"",
+      "etag": "\"f7c86b7ea4c4e365d757d1f4abe30376\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -820,7 +820,7 @@
       "status": 200,
       "contentType": "image/svg+xml",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"9c0fe56efba42d560998ed0d263d98bf\"",
+      "etag": "\"4fd473e20066db1decca2721bc855e09\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -829,7 +829,7 @@
       "status": 200,
       "contentType": "image/jpeg",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"2bc84e60a9b856a8d470c2a1b011a602\"",
+      "etag": "\"c92acccd98622c9f99f696fb2aceb9d3\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -838,7 +838,7 @@
       "status": 200,
       "contentType": "image/jpeg",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"2658298586c1658a2aaf5821298f99c0\"",
+      "etag": "\"126714defc04e697beb03c69ddd3593d\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -847,7 +847,7 @@
       "status": 200,
       "contentType": "image/jpeg",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"e0d9af7f2599d12f5aad51ca4c7184d7\"",
+      "etag": "\"b5fe955c2a93bcb7a11d460c83ae347a\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -856,7 +856,7 @@
       "status": 200,
       "contentType": "application/manifest+json",
       "cacheControl": "public, max-age=0, must-revalidate",
-      "etag": "\"30f1655c43bfeb1e41c62db229891b8e\"",
+      "etag": "\"961915c6c5cae518de6b9ee0fbe782b0\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },
@@ -865,7 +865,7 @@
       "status": 200,
       "contentType": "image/webp",
       "cacheControl": "public, max-age=86400, must-revalidate",
-      "etag": "\"364792d5f7a835c5fe5df822dc5cfb14\"",
+      "etag": "\"c5fd538b7367550871c86368e9b3adb2\"",
       "sourceBytesMatch": true,
       "exactBuiltCsp": true
     },

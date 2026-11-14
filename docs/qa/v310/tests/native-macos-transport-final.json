@@ -1,0 +1,360 @@
+{
+  "config": {
+    "argv": [
+      "/Users/runner/hostedtoolcache/node/24.19.0/x64/bin/node",
+      "/Users/runner/work/piepe/piepe/node_modules/.bin/playwright",
+      "test",
+      "--project=webkit-iphone",
+      "--grep",
+      "3.1 source-quality"
+    ],
+    "configFile": "/Users/runner/work/piepe/piepe/playwright.config.ts",
+    "rootDir": "/Users/runner/work/piepe/piepe/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/aigars-avotins/piepe/commit/1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+        "commitHash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+        "buildHref": "https://github.com/aigars-avotins/piepe/actions/runs/43571683635"
+      },
+      "gitCommit": {
+        "shortHash": "1e1dd70",
+        "hash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+        "subject": "Observe bounded real byte progress during silent Safari first-frame preparation",
+        "body": "Observe bounded real byte progress during silent Safari first-frame preparation\n",
+        "author": {
+          "name": "Aigars Avotiņš",
+          "email": "aigars.avotins@gmail.com",
+          "time": 1794641618000
+        },
+        "committer": {
+          "name": "Aigars Avotiņš",
+          "email": "aigars.avotins@gmail.com",
+          "time": 1794641618000
+        },
+        "branch": "codex/piepe-v310"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/runner/work/piepe/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/aigars-avotins/piepe/commit/1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "commitHash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "buildHref": "https://github.com/aigars-avotins/piepe/actions/runs/43571683635"
+          },
+          "gitCommit": {
+            "shortHash": "1e1dd70",
+            "hash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "subject": "Observe bounded real byte progress during silent Safari first-frame preparation",
+            "body": "Observe bounded real byte progress during silent Safari first-frame preparation\n",
+            "author": {
+              "name": "Aigars Avotiņš",
+              "email": "aigars.avotins@gmail.com",
+              "time": 1794641618000
+            },
+            "committer": {
+              "name": "Aigars Avotiņš",
+              "email": "aigars.avotins@gmail.com",
+              "time": 1794641618000
+            },
+            "branch": "codex/piepe-v310"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chrome-desktop",
+        "name": "chrome-desktop",
+        "testDir": "/Users/runner/work/piepe/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      },
+      {
+        "outputDir": "/Users/runner/work/piepe/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/aigars-avotins/piepe/commit/1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "commitHash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "buildHref": "https://github.com/aigars-avotins/piepe/actions/runs/43571683635"
+          },
+          "gitCommit": {
+            "shortHash": "1e1dd70",
+            "hash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "subject": "Observe bounded real byte progress during silent Safari first-frame preparation",
+            "body": "Observe bounded real byte progress during silent Safari first-frame preparation\n",
+            "author": {
+              "name": "Aigars Avotiņš",
+              "email": "aigars.avotins@gmail.com",
+              "time": 1794641618000
+            },
+            "committer": {
+              "name": "Aigars Avotiņš",
+              "email": "aigars.avotins@gmail.com",
+              "time": 1794641618000
+            },
+            "branch": "codex/piepe-v310"
+          },
+          "actualWorkers": 1
+        },
+        "id": "webkit-iphone",
+        "name": "webkit-iphone",
+        "testDir": "/Users/runner/work/piepe/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/runner/work/piepe/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/aigars-avotins/piepe/commit/1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "commitHash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "buildHref": "https://github.com/aigars-avotins/piepe/actions/runs/43571683635"
+          },
+          "gitCommit": {
+            "shortHash": "1e1dd70",
+            "hash": "1e1dd701e1c91bbda9468092a3e0f44a359c4e4e",
+            "subject": "Observe bounded real byte progress during silent Safari first-frame preparation",
+            "body": "Observe bounded real byte progress during silent Safari first-frame preparation\n",
+            "author": {
+              "name": "Aigars Avotiņš",
+              "email": "aigars.avotins@gmail.com",
+              "time": 1794641618000
+            },
+            "committer": {
+              "name": "Aigars Avotiņš",
+              "email": "aigars.avotins@gmail.com",
+              "time": 1794641618000
+            },
+            "branch": "codex/piepe-v310"
+          },
+          "actualWorkers": 1
+        },
+        "name": "webkit-iphone",
+        "testDir": "/Users/runner/work/piepe/piepe/tests",
+        "snapshotDir": "/Users/runner/work/piepe/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 20000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": {
+            "mode": "retain-on-failure",
+            "screenshots": false,
+            "snapshots": false
+          },
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "webkit",
+          "browserName": "webkit",
+          "headless": false
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit-iphone"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/preview-worker.mjs",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "v310-slow.spec.ts",
+      "file": "v310-slow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "3.1 source-quality progress: native download beyond 20s or bounded stall with real retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 65000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 50827,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T07:39:42.899Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-window-activation",
+                      "contentType": "application/json",
+                      "body": "eyJyZXF1ZXN0ZWQiOlt7Im5hbWUiOiJQbGF5d3JpZ2h0IiwiYWN0aXZhdGVkIjp0cnVlfV0sImZyb250bW9zdCI6IlBsYXl3cmlnaHQiLCJkaXNwbGF5cyI6W3siZnJhbWUiOnsib3JpZ2luIjp7IngiOjAsInkiOjB9LCJzaXplIjp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fSwidmlzaWJsZSI6eyJvcmlnaW4iOnsieCI6MCwieSI6ODV9LCJzaXplIjp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjk3MH19LCJzY2FsZSI6MX1dfQo="
+                    },
+                    {
+                      "name": "native-progress-network",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlIjogInByb2dyZXNzIiwKICAiZWxhcHNlZE1zIjogMzMyNjAsCiAgInJlcXVlc3RzIjogWwogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAyCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAyCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xMjIzMzYwMCIsCiAgICAgICJzdGF0dXMiOiAyMDYsCiAgICAgICJjb250ZW50UmFuZ2UiOiAiYnl0ZXMgMC0xMjIzMzYwMC8xMjIzMzYwMSIsCiAgICAgICJieXRlcyI6IDEyMjMzNjAxCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MTYzODQtNTQwNjcxIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAxNjM4NC01NDA2NzEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiA1MjQyODgKICAgIH0KICBdLAogICJzZW50IjogWwogICAgewogICAgICAiYXQiOiAxLAogICAgICAiYnl0ZXMiOiA4MzM1CiAgICB9LAogICAgewogICAgICAiYXQiOiA4MDcsCiAgICAgICJieXRlcyI6IDIxOTIwCiAgICB9LAogICAgewogICAgICAiYXQiOiAxMjE2LAogICAgICAiYnl0ZXMiOiAyODgwNQogICAgfSwKICAgIHsKICAgICAgImF0IjogMTUyNSwKICAgICAgImJ5dGVzIjogMzQwMDcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4NzYsCiAgICAgICJieXRlcyI6IDM5OTE1CiAgICB9LAogICAgewogICAgICAiYXQiOiAyMjI3LAogICAgICAiYnl0ZXMiOiA0NTgyNAogICAgfSwKICAgIHsKICAgICAgImF0IjogMjU3NywKICAgICAgImJ5dGVzIjogNTE3MTYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI5MzEsCiAgICAgICJieXRlcyI6IDU3Njc2CiAgICB9LAogICAgewogICAgICAiYXQiOiAzMjgzLAogICAgICAiYnl0ZXMiOiA2MzYwMQogICAgfSwKICAgIHsKICAgICAgImF0IjogMzYzNSwKICAgICAgImJ5dGVzIjogNjk1MjcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDM5ODcsCiAgICAgICJieXRlcyI6IDc1NDUzCiAgICB9LAogICAgewogICAgICAiYXQiOiA0MzM5LAogICAgICAiYnl0ZXMiOiA4MTM3OAogICAgfSwKICAgIHsKICAgICAgImF0IjogNDY4OCwKICAgICAgImJ5dGVzIjogODcyNTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDUwMzksCiAgICAgICJieXRlcyI6IDkzMTYyCiAgICB9LAogICAgewogICAgICAiYXQiOiA1MzkzLAogICAgICAiYnl0ZXMiOiA5OTEyMQogICAgfSwKICAgIHsKICAgICAgImF0IjogNTc0NCwKICAgICAgImJ5dGVzIjogMTA1MDMwCiAgICB9LAogICAgewogICAgICAiYXQiOiA2MDk1LAogICAgICAiYnl0ZXMiOiAxMTA5MzkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDY0NDcsCiAgICAgICJieXRlcyI6IDExNjg2NQogICAgfSwKICAgIHsKICAgICAgImF0IjogNjc5OCwKICAgICAgImJ5dGVzIjogMTIyNzczCiAgICB9LAogICAgewogICAgICAiYXQiOiA3MTQ4LAogICAgICAiYnl0ZXMiOiAxMjg2NjUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDc0OTksCiAgICAgICJieXRlcyI6IDEzNDU3NAogICAgfSwKICAgIHsKICAgICAgImF0IjogNzg0OSwKICAgICAgImJ5dGVzIjogMTQwNDY2CiAgICB9LAogICAgewogICAgICAiYXQiOiA4MjAwLAogICAgICAiYnl0ZXMiOiAxNDYzNzUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDg1NjIsCiAgICAgICJieXRlcyI6IDE1MjQ2OQogICAgfSwKICAgIHsKICAgICAgImF0IjogODkxMiwKICAgICAgImJ5dGVzIjogMTU4MzYxCiAgICB9LAogICAgewogICAgICAiYXQiOiA5MTkwLAogICAgICAiYnl0ZXMiOiAxNjM4NAogICAgfSwKICAgIHsKICAgICAgImF0IjogOTI2MywKICAgICAgImJ5dGVzIjogMTY0MjcwCiAgICB9LAogICAgewogICAgICAiYXQiOiA5NTQwLAogICAgICAiYnl0ZXMiOiAxNjg5MzMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDk2MTQsCiAgICAgICJieXRlcyI6IDE3MDE3OQogICAgfSwKICAgIHsKICAgICAgImF0IjogOTg5MSwKICAgICAgImJ5dGVzIjogMTc0ODQyCiAgICB9LAogICAgewogICAgICAiYXQiOiA5OTY0LAogICAgICAiYnl0ZXMiOiAxNzYwNzEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwMjQxLAogICAgICAiYnl0ZXMiOiAxODA3MzQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwMzE1LAogICAgICAiYnl0ZXMiOiAxODE5NzkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwNTk1LAogICAgICAiYnl0ZXMiOiAxODY2OTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwNzAyLAogICAgICAiYnl0ZXMiOiAxODg0OTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwOTQ2LAogICAgICAiYnl0ZXMiOiAxOTI2MDIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExMDUzLAogICAgICAiYnl0ZXMiOiAxOTQ0MDMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExMjk4LAogICAgICAiYnl0ZXMiOiAxOTg1MjcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExNDA0LAogICAgICAiYnl0ZXMiOiAyMDAzMTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExNjQ4LAogICAgICAiYnl0ZXMiOiAyMDQ0MTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExNzU0LAogICAgICAiYnl0ZXMiOiAyMDYyMDQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyMDAwLAogICAgICAiYnl0ZXMiOiAyMTAzNDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyMTA1LAogICAgICAiYnl0ZXMiOiAyMTIxMTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyMzUxLAogICAgICAiYnl0ZXMiOiAyMTYyNTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyNDU1LAogICAgICAiYnl0ZXMiOiAyMTgwMDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyNzAyLAogICAgICAiYnl0ZXMiOiAyMjIxNjMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyODA1LAogICAgICAiYnl0ZXMiOiAyMjM4OTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzMDU0LAogICAgICAiYnl0ZXMiOiAyMjgwODgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzMTU3LAogICAgICAiYnl0ZXMiOiAyMjk4MjIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzNDA1LAogICAgICAiYnl0ZXMiOiAyMzM5OTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzNTA3LAogICAgICAiYnl0ZXMiOiAyMzU3MTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzNzU2LAogICAgICAiYnl0ZXMiOiAyMzk5MDYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzODU4LAogICAgICAiYnl0ZXMiOiAyNDE2MjMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0MTEyLAogICAgICAiYnl0ZXMiOiAyNDU4OTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0MjA5LAogICAgICAiYnl0ZXMiOiAyNDc1MzIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0NDYyLAogICAgICAiYnl0ZXMiOiAyNTE3OTEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0NTYwLAogICAgICAiYnl0ZXMiOiAyNTM0NDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0ODE0LAogICAgICAiYnl0ZXMiOiAyNTc3MTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0OTExLAogICAgICAiYnl0ZXMiOiAyNTkzNDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1MTY0LAogICAgICAiYnl0ZXMiOiAyNjM2MDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1MjYyLAogICAgICAiYnl0ZXMiOiAyNjUyNTgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1NTE0LAogICAgICAiYnl0ZXMiOiAyNjk1MDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1NjEzLAogICAgICAiYnl0ZXMiOiAyNzExNjcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1ODY1LAogICAgICAiYnl0ZXMiOiAyNzU0MDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1OTYzLAogICAgICAiYnl0ZXMiOiAyNzcwNTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2MjE2LAogICAgICAiYnl0ZXMiOiAyODEzMTgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2MzE0LAogICAgICAiYnl0ZXMiOiAyODI5NjgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2NTY3LAogICAgICAiYnl0ZXMiOiAyODcyMjcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2NjY1LAogICAgICAiYnl0ZXMiOiAyODg4NzcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2OTE3LAogICAgICAiYnl0ZXMiOiAyOTMxMTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3MDE2LAogICAgICAiYnl0ZXMiOiAyOTQ3ODUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3MjY4LAogICAgICAiYnl0ZXMiOiAyOTkwMjgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3MzY3LAogICAgICAiYnl0ZXMiOiAzMDA2OTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3NjIwLAogICAgICAiYnl0ZXMiOiAzMDQ5NTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3NzE3LAogICAgICAiYnl0ZXMiOiAzMDY1ODYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3OTcxLAogICAgICAiYnl0ZXMiOiAzMTA4NjIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4MDY4LAogICAgICAiYnl0ZXMiOiAzMTI0OTUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4MzIyLAogICAgICAiYnl0ZXMiOiAzMTY3NzEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4NDE5LAogICAgICAiYnl0ZXMiOiAzMTg0MDQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4Njc0LAogICAgICAiYnl0ZXMiOiAzMjI2OTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4NzY5LAogICAgICAiYnl0ZXMiOiAzMjQyOTYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5MDI0LAogICAgICAiYnl0ZXMiOiAzMjg1ODkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5MTIwLAogICAgICAiYnl0ZXMiOiAzMzAyMDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5Mzc2LAogICAgICAiYnl0ZXMiOiAzMzQ1MTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5NDcwLAogICAgICAiYnl0ZXMiOiAzMzYwOTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5NzI2LAogICAgICAiYnl0ZXMiOiAzNDA0MDYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5ODIxLAogICAgICAiYnl0ZXMiOiAzNDIwMDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwMDc3LAogICAgICAiYnl0ZXMiOiAzNDYzMTUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwMTcyLAogICAgICAiYnl0ZXMiOiAzNDc5MTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwNDI5LAogICAgICAiYnl0ZXMiOiAzNTIyNDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwNTIyLAogICAgICAiYnl0ZXMiOiAzNTM4MDYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwNzk0LAogICAgICAiYnl0ZXMiOiAzNTgzODUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwODczLAogICAgICAiYnl0ZXMiOiAzNTk3MTUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMTQ1LAogICAgICAiYnl0ZXMiOiAzNjQyOTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMjI1LAogICAgICAiYnl0ZXMiOiAzNjU2NDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxNDk2LAogICAgICAiYnl0ZXMiOiAzNzAyMDMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxNTc1LAogICAgICAiYnl0ZXMiOiAzNzE1MzMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxODQ3LAogICAgICAiYnl0ZXMiOiAzNzYxMTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxOTI1LAogICAgICAiYnl0ZXMiOiAzNzc0MjUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyMTk4LAogICAgICAiYnl0ZXMiOiAzODIwMjAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyMjc3LAogICAgICAiYnl0ZXMiOiAzODMzNTAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyNTQ4LAogICAgICAiYnl0ZXMiOiAzODc5MTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyNjI2LAogICAgICAiYnl0ZXMiOiAzODkyMjUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyODk5LAogICAgICAiYnl0ZXMiOiAzOTM4MjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyOTg2LAogICAgICAiYnl0ZXMiOiAzOTUyODYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzMjUwLAogICAgICAiYnl0ZXMiOiAzOTk3MzAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzMzQxLAogICAgICAiYnl0ZXMiOiA0MDEyNjIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzNjAwLAogICAgICAiYnl0ZXMiOiA0MDU2MjIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzNjkzLAogICAgICAiYnl0ZXMiOiA0MDcxODgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzOTUzLAogICAgICAiYnl0ZXMiOiA0MTE1NjQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0MDQ0LAogICAgICAiYnl0ZXMiOiA0MTMwOTYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0MzA0LAogICAgICAiYnl0ZXMiOiA0MTc0NzMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0Mzk1LAogICAgICAiYnl0ZXMiOiA0MTkwMDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0NjU3LAogICAgICAiYnl0ZXMiOiA0MjM0MTYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0NzQ2LAogICAgICAiYnl0ZXMiOiA0MjQ5MTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1MDA4LAogICAgICAiYnl0ZXMiOiA0MjkzMjUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1MDk4LAogICAgICAiYnl0ZXMiOiA0MzA4NDAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1MzU4LAogICAgICAiYnl0ZXMiOiA0MzUyMTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1NDQ5LAogICAgICAiYnl0ZXMiOiA0MzY3NDgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1NzA4LAogICAgICAiYnl0ZXMiOiA0NDExMDgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1ODAwLAogICAgICAiYnl0ZXMiOiA0NDI2NTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2MDU4LAogICAgICAiYnl0ZXMiOiA0NDcwMDAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2MTUyLAogICAgICAiYnl0ZXMiOiA0NDg1ODMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2NDA4LAogICAgICAiYnl0ZXMiOiA0NTI4OTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2NTAyLAogICAgICAiYnl0ZXMiOiA0NTQ0NzUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2NzU4LAogICAgICAiYnl0ZXMiOiA0NTg3ODQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2ODUxLAogICAgICAiYnl0ZXMiOiA0NjAzNTAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3MTA5LAogICAgICAiYnl0ZXMiOiA0NjQ2OTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3MjAyLAogICAgICAiYnl0ZXMiOiA0NjYyNTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3NDY0LAogICAgICAiYnl0ZXMiOiA0NzA2NjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3NTUzLAogICAgICAiYnl0ZXMiOiA0NzIxNjgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3ODE1LAogICAgICAiYnl0ZXMiOiA0NzY1NzgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3OTEwLAogICAgICAiYnl0ZXMiOiA0NzgxNzcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI4MTY2LAogICAgICAiYnl0ZXMiOiA1NDA2NzIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI4MjYxLAogICAgICAiYnl0ZXMiOiAxMjIzMzYwMQogICAgfQogIF0sCiAgIm1lZGlhIjogewogICAgImZvY3VzIjogdHJ1ZSwKICAgICJ2aXNpYmlsaXR5IjogInZpc2libGUiLAogICAgInZpZGVvcyI6IFtdCiAgfQp9"
+                    },
+                    {
+                      "name": "native-media-requests",
+                      "contentType": "application/json",
+                      "body": "W3siZXZlbnQiOiJyZXF1ZXN0IiwiaWQiOjEsImF0IjoxNzk0NjQyMDA1ODM0LCJ1cmwiOiJodHRwOi8vMTI3LjAuMC4xOjQ5MjAyL21lZGlhL3BvcnRhbC0wMi1mYXN0c3RhcnQubXA0IiwicmFuZ2UiOiJieXRlcz0wLTEifSx7ImV2ZW50IjoicmVzcG9uc2UiLCJpZCI6MSwiYXQiOjE3OTQ2NDIwMDU4MzQsInN0YXR1cyI6MjA2LCJyYW5nZSI6ImJ5dGVzIDAtMS8xMjIzMzYwMSIsImJ5dGVzIjoiMiJ9LHsiZXZlbnQiOiJmaW5pc2hlZCIsImlkIjoxLCJhdCI6MTc5NDY0MjAwNTgzNX0seyJldmVudCI6InJlcXVlc3QiLCJpZCI6MiwiYXQiOjE3OTQ2NDIwMDU4NDUsInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMDIvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJyYW5nZSI6ImJ5dGVzPTAtMTIyMzM2MDAifSx7ImV2ZW50IjoicmVzcG9uc2UiLCJpZCI6MiwiYXQiOjE3OTQ2NDIwMDU5NDYsInN0YXR1cyI6MjA2LCJyYW5nZSI6ImJ5dGVzIDAtMTIyMzM2MDAvMTIyMzM2MDEiLCJieXRlcyI6IjEyMjMzNjAxIn0seyJldmVudCI6InJlcXVlc3QiLCJpZCI6MywiYXQiOjE3OTQ2NDIwMTUwOTksInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMDIvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJyYW5nZSI6ImJ5dGVzPTE2Mzg0LTU0MDY3MSJ9LHsiZXZlbnQiOiJyZXNwb25zZSIsImlkIjozLCJhdCI6MTc5NDY0MjAxNTEzMSwic3RhdHVzIjoyMDYsInJhbmdlIjoiYnl0ZXMgMTYzODQtNTQwNjcxLzEyMjMzNjAxIiwiYnl0ZXMiOiI1MjQyODgifSx7ImV2ZW50IjoiZmluaXNoZWQiLCJpZCI6MywiYXQiOjE3OTQ2NDIwMzQxMjR9LHsiZXZlbnQiOiJmaW5pc2hlZCIsImlkIjoyLCJhdCI6MTc5NDY0MjAzNDM0OH1d"
+                    },
+                    {
+                      "name": "native-input-and-compositor",
+                      "contentType": "application/json",
+                      "body": "eyJldmVudHMiOlt7ImV2ZW50IjoiY2xpY2siLCJhdCI6NjQxMiwic2Nyb2xsIjoxOTIyLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJJTUcubnVsbCJ9LHsiZXZlbnQiOiJmb2N1c2luIiwiYXQiOjY0NzYsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiRElWLnBvcnRhbC12aWV3ICJ9LHsiZXZlbnQiOiJmb2N1c2luIiwiYXQiOjc4NTQsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiQlVUVE9OLnBvcnRhbC1wcmltYXJ5In0seyJldmVudCI6ImZvY3VzaW4iLCJhdCI6MTAxMTMsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiRElBTE9HLmZ1bmd1cy1wb3J0YWwifSx7ImV2ZW50IjoiY2xpY2siLCJhdCI6MTAxMTYsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiQlVUVE9OLnBvcnRhbC1wcmltYXJ5In0seyJldmVudCI6ImZvY3VzaW4iLCJhdCI6MTAxMTcsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiQlVUVE9OLnBvcnRhbC1leGl0In0seyJldmVudCI6ImxvYWRzdGFydCIsImF0IjoxMDE4NSwic2Nyb2xsIjoxOTIyLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJWSURFTy5udWxsIiwibWVkaWEiOnsic3JjIjoiaHR0cDovLzEyNy4wLjAuMTo0OTIwMi9tZWRpYS9wb3J0YWwtMDItZmFzdHN0YXJ0Lm1wNCIsInRpbWUiOjAsInJlYWR5IjowLCJwYXVzZWQiOnRydWV9fSx7ImV2ZW50IjoibG9hZGVkbWV0YWRhdGEiLCJhdCI6MTE3NjcsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiVklERU8ubnVsbCIsIm1lZGlhIjp7InNyYyI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMDIvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJ0aW1lIjowLCJyZWFkeSI6MSwicGF1c2VkIjp0cnVlfX0seyJldmVudCI6InN0YWxsZWQiLCJhdCI6MTUwOTksInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiVklERU8ubnVsbCIsIm1lZGlhIjp7InNyYyI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMDIvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJ0aW1lIjowLCJyZWFkeSI6MSwicGF1c2VkIjp0cnVlfX0seyJldmVudCI6ImxvYWRlZGRhdGEiLCJhdCI6Mzk0NDAsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiVklERU8ubnVsbCIsIm1lZGlhIjp7InNyYyI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMDIvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJ0aW1lIjowLCJyZWFkeSI6NCwicGF1c2VkIjp0cnVlfX0seyJldmVudCI6InBsYXlpbmciLCJhdCI6Mzk5MTQsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiVklERU8ubnVsbCIsIm1lZGlhIjp7InNyYyI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMDIvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJ0aW1lIjowLCJyZWFkeSI6NCwicGF1c2VkIjpmYWxzZX19LHsiZXZlbnQiOiJrZXlkb3duIiwiYXQiOjQxMDI5LCJzY3JvbGwiOjE5MjIsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IkJVVFRPTi5wb3J0YWwtZXhpdCIsImtleSI6IkVzY2FwZSJ9LHsiZXZlbnQiOiJjYW5jZWwiLCJhdCI6NDEwMzAsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiRElBTE9HLmZ1bmd1cy1wb3J0YWwifSx7ImV2ZW50Ijoia2V5dXAiLCJhdCI6NDEwNTUsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiQk9EWS5udWxsIiwia2V5IjoiRXNjYXBlIn0seyJldmVudCI6ImZvY3VzaW4iLCJhdCI6NDExMzUsInNjcm9sbCI6MTkyMiwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiQlVUVE9OLnBvcnRhbC1lbnRyeSJ9XSwicGhvdG9QaGFzZXMiOltdLCJtYXhGcmFtZUdhcCI6MjIyNSwiZnJhbWVzIjo5MDQsImhyZWYiOiJodHRwOi8vMTI3LjAuMC4xOjQ5MjAyL2VuLyNlbmNvdW50ZXIiLCJzY3JvbGwiOjE5MjIsImZvY3VzIjp0cnVlLCJ2aXNpYmlsaXR5IjoidmlzaWJsZSIsInZpZXdwb3J0Ijp7IndpZHRoIjozOTAsImhlaWdodCI6NjY0fSwic2NyZWVuIjp7IndpZHRoIjozOTAsImhlaWdodCI6ODQ0fSwid29ybGQiOiJ3b3JsZCAgaXMtcmVhZHkgaGFzLXRpdGxlICAgICAgICAgIiwicGhvdG8iOnt9LCJ2aWRlb3MiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "975aa93bb5b7c4f5fcee-ae5727a2acaa1ca7eee5",
+          "file": "v310-slow.spec.ts",
+          "line": 11,
+          "column": 49
+        },
+        {
+          "title": "3.1 source-quality stall: native download beyond 20s or bounded stall with real retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 65000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-iphone",
+              "projectName": "webkit-iphone",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33940,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T07:40:38.662Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-window-activation",
+                      "contentType": "application/json",
+                      "body": "eyJyZXF1ZXN0ZWQiOlt7Im5hbWUiOiJQbGF5d3JpZ2h0IiwiYWN0aXZhdGVkIjp0cnVlfV0sImZyb250bW9zdCI6IlBsYXl3cmlnaHQiLCJkaXNwbGF5cyI6W3siZnJhbWUiOnsib3JpZ2luIjp7IngiOjAsInkiOjB9LCJzaXplIjp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjEwODB9fSwidmlzaWJsZSI6eyJvcmlnaW4iOnsieCI6MCwieSI6ODV9LCJzaXplIjp7IndpZHRoIjoxOTIwLCJoZWlnaHQiOjk3MH19LCJzY2FsZSI6MX1dfQo="
+                    },
+                    {
+                      "name": "native-stall-network",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlIjogInN0YWxsIiwKICAiZWxhcHNlZE1zIjogMjQ3NDYsCiAgInJlcXVlc3RzIjogWwogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAyCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAyCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xMjIzMzYwMCIsCiAgICAgICJzdGF0dXMiOiAyMDYsCiAgICAgICJjb250ZW50UmFuZ2UiOiAiYnl0ZXMgMC0xMjIzMzYwMC8xMjIzMzYwMSIsCiAgICAgICJieXRlcyI6IDEyMjMzNjAxCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MTYzODQtNTQwNjcxIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAxNjM4NC01NDA2NzEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiA1MjQyODgKICAgIH0sCiAgICB7CiAgICAgICJyYW5nZSI6ICJieXRlcz0wLTEiLAogICAgICAic3RhdHVzIjogMjA2LAogICAgICAiY29udGVudFJhbmdlIjogImJ5dGVzIDAtMS8xMjIzMzYwMSIsCiAgICAgICJieXRlcyI6IDIKICAgIH0sCiAgICB7CiAgICAgICJyYW5nZSI6ICJieXRlcz0wLTEyMjMzNjAwIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEyMjMzNjAwLzEyMjMzNjAxIiwKICAgICAgImJ5dGVzIjogMTIyMzM2MDEKICAgIH0KICBdLAogICJzZW50IjogWwogICAgewogICAgICAiYXQiOiAwLAogICAgICAiYnl0ZXMiOiA4MzM1CiAgICB9LAogICAgewogICAgICAiYXQiOiA4NzY5LAogICAgICAiYnl0ZXMiOiAxNjM4NAogICAgfQogIF0sCiAgIm1lZGlhIjogewogICAgImZvY3VzIjogdHJ1ZSwKICAgICJ2aXNpYmlsaXR5IjogInZpc2libGUiLAogICAgInZpZGVvcyI6IFtdCiAgfQp9"
+                    },
+                    {
+                      "name": "native-media-requests",
+                      "contentType": "application/json",
+                      "body": "W3siZXZlbnQiOiJyZXF1ZXN0IiwiaWQiOjEsImF0IjoxNzk0NjQyMDQ2ODM1LCJ1cmwiOiJodHRwOi8vMTI3LjAuMC4xOjQ5MjIxL21lZGlhL3BvcnRhbC0wMi1mYXN0c3RhcnQubXA0IiwicmFuZ2UiOiJieXRlcz0wLTEifSx7ImV2ZW50IjoicmVzcG9uc2UiLCJpZCI6MSwiYXQiOjE3OTQ2NDIwNDY4NTQsInN0YXR1cyI6MjA2LCJyYW5nZSI6ImJ5dGVzIDAtMS8xMjIzMzYwMSIsImJ5dGVzIjoiMiJ9LHsiZXZlbnQiOiJmaW5pc2hlZCIsImlkIjoxLCJhdCI6MTc5NDY0MjA0Njg1NX0seyJldmVudCI6InJlcXVlc3QiLCJpZCI6MiwiYXQiOjE3OTQ2NDIwNDY4NTUsInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMjEvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJyYW5nZSI6ImJ5dGVzPTAtMTIyMzM2MDAifSx7ImV2ZW50IjoicmVzcG9uc2UiLCJpZCI6MiwiYXQiOjE3OTQ2NDIwNDcxMDQsInN0YXR1cyI6MjA2LCJyYW5nZSI6ImJ5dGVzIDAtMTIyMzM2MDAvMTIyMzM2MDEiLCJieXRlcyI6IjEyMjMzNjAxIn0seyJldmVudCI6InJlcXVlc3QiLCJpZCI6MywiYXQiOjE3OTQ2NDIwNTU1NzEsInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMjEvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJyYW5nZSI6ImJ5dGVzPTE2Mzg0LTU0MDY3MSJ9LHsiZXZlbnQiOiJyZXNwb25zZSIsImlkIjozLCJhdCI6MTc5NDY0MjA1NTU5Nywic3RhdHVzIjoyMDYsInJhbmdlIjoiYnl0ZXMgMTYzODQtNTQwNjcxLzEyMjMzNjAxIiwiYnl0ZXMiOiI1MjQyODgifSx7ImV2ZW50IjoiZmFpbGVkIiwiaWQiOjMsImF0IjoxNzk0NjQyMDY3Njc3LCJlcnJvciI6ImNhbmNlbGxlZCJ9LHsiZXZlbnQiOiJmYWlsZWQiLCJpZCI6MiwiYXQiOjE3OTQ2NDIwNjgwNzAsImVycm9yIjoiY2FuY2VsbGVkIn0seyJldmVudCI6InJlcXVlc3QiLCJpZCI6NCwiYXQiOjE3OTQ2NDIwNjgwNzksInVybCI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMjEvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJyYW5nZSI6ImJ5dGVzPTAtMSJ9LHsiZXZlbnQiOiJyZXNwb25zZSIsImlkIjo0LCJhdCI6MTc5NDY0MjA2ODE3NCwic3RhdHVzIjoyMDYsInJhbmdlIjoiYnl0ZXMgMC0xLzEyMjMzNjAxIiwiYnl0ZXMiOiIyIn0seyJldmVudCI6ImZpbmlzaGVkIiwiaWQiOjQsImF0IjoxNzk0NjQyMDY4MTc0fSx7ImV2ZW50IjoicmVxdWVzdCIsImlkIjo1LCJhdCI6MTc5NDY0MjA2ODE3NCwidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo0OTIyMS9tZWRpYS9wb3J0YWwtMDItZmFzdHN0YXJ0Lm1wNCIsInJhbmdlIjoiYnl0ZXM9MC0xMjIzMzYwMCJ9LHsiZXZlbnQiOiJyZXNwb25zZSIsImlkIjo1LCJhdCI6MTc5NDY0MjA2ODE4Miwic3RhdHVzIjoyMDYsInJhbmdlIjoiYnl0ZXMgMC0xMjIzMzYwMC8xMjIzMzYwMSIsImJ5dGVzIjoiMTIyMzM2MDEifSx7ImV2ZW50IjoiZmluaXNoZWQiLCJpZCI6NSwiYXQiOjE3OTQ2NDIwNjg0Mjd9XQ=="
+                    },
+                    {
+                      "name": "native-input-and-compositor",
+                      "contentType": "application/json",
+                      "body": "eyJldmVudHMiOlt7ImV2ZW50IjoiY2xpY2siLCJhdCI6MzQyNywic2Nyb2xsIjoxOTIxLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJJTUcubnVsbCJ9LHsiZXZlbnQiOiJmb2N1c2luIiwiYXQiOjM0NjYsInNjcm9sbCI6MTkyMSwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiRElWLnBvcnRhbC12aWV3ICJ9LHsiZXZlbnQiOiJmb2N1c2luIiwiYXQiOjUwNDQsInNjcm9sbCI6MTkyMSwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiQlVUVE9OLnBvcnRhbC1wcmltYXJ5In0seyJldmVudCI6ImZvY3VzaW4iLCJhdCI6NTI2Nywic2Nyb2xsIjoxOTIxLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJESUFMT0cuZnVuZ3VzLXBvcnRhbCJ9LHsiZXZlbnQiOiJjbGljayIsImF0Ijo1MjY5LCJzY3JvbGwiOjE5MjEsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IkJVVFRPTi5wb3J0YWwtcHJpbWFyeSJ9LHsiZXZlbnQiOiJmb2N1c2luIiwiYXQiOjUyNzEsInNjcm9sbCI6MTkyMSwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiQlVUVE9OLnBvcnRhbC1leGl0In0seyJldmVudCI6ImxvYWRzdGFydCIsImF0Ijo1Mjk1LCJzY3JvbGwiOjE5MjEsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IlZJREVPLm51bGwiLCJtZWRpYSI6eyJzcmMiOiJodHRwOi8vMTI3LjAuMC4xOjQ5MjIxL21lZGlhL3BvcnRhbC0wMi1mYXN0c3RhcnQubXA0IiwidGltZSI6MCwicmVhZHkiOjAsInBhdXNlZCI6dHJ1ZX19LHsiZXZlbnQiOiJsb2FkZWRtZXRhZGF0YSIsImF0Ijo2NzEyLCJzY3JvbGwiOjE5MjEsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IlZJREVPLm51bGwiLCJtZWRpYSI6eyJzcmMiOiJodHRwOi8vMTI3LjAuMC4xOjQ5MjIxL21lZGlhL3BvcnRhbC0wMi1mYXN0c3RhcnQubXA0IiwidGltZSI6MCwicmVhZHkiOjEsInBhdXNlZCI6dHJ1ZX19LHsiZXZlbnQiOiJzdGFsbGVkIiwiYXQiOjEwMTg4LCJzY3JvbGwiOjE5MjEsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IlZJREVPLm51bGwiLCJtZWRpYSI6eyJzcmMiOiJodHRwOi8vMTI3LjAuMC4xOjQ5MjIxL21lZGlhL3BvcnRhbC0wMi1mYXN0c3RhcnQubXA0IiwidGltZSI6MCwicmVhZHkiOjEsInBhdXNlZCI6dHJ1ZX19LHsiZXZlbnQiOiJmb2N1c2luIiwiYXQiOjI3ODExLCJzY3JvbGwiOjE5MjEsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IkRJQUxPRy5mdW5ndXMtcG9ydGFsIn0seyJldmVudCI6ImNsaWNrIiwiYXQiOjI3ODEyLCJzY3JvbGwiOjE5MjEsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IkJVVFRPTi5udWxsIn0seyJldmVudCI6ImxvYWRzdGFydCIsImF0IjoyNzgzNiwic2Nyb2xsIjoxOTIxLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJWSURFTy5udWxsIiwibWVkaWEiOnsic3JjIjoiaHR0cDovLzEyNy4wLjAuMTo0OTIyMS9tZWRpYS9wb3J0YWwtMDItZmFzdHN0YXJ0Lm1wNCIsInRpbWUiOjAsInJlYWR5IjowLCJwYXVzZWQiOnRydWV9fSx7ImV2ZW50IjoibG9hZGVkbWV0YWRhdGEiLCJhdCI6MjgxODksInNjcm9sbCI6MTkyMSwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiVklERU8ubnVsbCIsIm1lZGlhIjp7InNyYyI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMjEvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJ0aW1lIjowLCJyZWFkeSI6MSwicGF1c2VkIjp0cnVlfX0seyJldmVudCI6ImxvYWRlZGRhdGEiLCJhdCI6Mjg2MzQsInNjcm9sbCI6MTkyMSwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiVklERU8ubnVsbCIsIm1lZGlhIjp7InNyYyI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMjEvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJ0aW1lIjowLCJyZWFkeSI6MiwicGF1c2VkIjp0cnVlfX0seyJldmVudCI6InBsYXlpbmciLCJhdCI6MjkxMDQsInNjcm9sbCI6MTkyMSwiaGFzaCI6IiNlbmNvdW50ZXIiLCJmb2N1cyI6dHJ1ZSwidGFyZ2V0IjoiVklERU8ubnVsbCIsIm1lZGlhIjp7InNyYyI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMjEvbWVkaWEvcG9ydGFsLTAyLWZhc3RzdGFydC5tcDQiLCJ0aW1lIjowLCJyZWFkeSI6NCwicGF1c2VkIjpmYWxzZX19LHsiZXZlbnQiOiJrZXlkb3duIiwiYXQiOjI5ODAyLCJzY3JvbGwiOjE5MjEsImhhc2giOiIjZW5jb3VudGVyIiwiZm9jdXMiOnRydWUsInRhcmdldCI6IkRJQUxPRy5mdW5ndXMtcG9ydGFsIiwia2V5IjoiRXNjYXBlIn0seyJldmVudCI6ImNhbmNlbCIsImF0IjoyOTgwNCwic2Nyb2xsIjoxOTIxLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJESUFMT0cuZnVuZ3VzLXBvcnRhbCJ9LHsiZXZlbnQiOiJrZXl1cCIsImF0IjoyOTgyNiwic2Nyb2xsIjoxOTIxLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJCT0RZLm51bGwiLCJrZXkiOiJFc2NhcGUifSx7ImV2ZW50IjoiZm9jdXNpbiIsImF0IjoyOTg0NCwic2Nyb2xsIjoxOTIxLCJoYXNoIjoiI2VuY291bnRlciIsImZvY3VzIjp0cnVlLCJ0YXJnZXQiOiJCVVRUT04ucG9ydGFsLWVudHJ5In1dLCJwaG90b1BoYXNlcyI6W10sIm1heEZyYW1lR2FwIjoxMzYwLCJmcmFtZXMiOjc0MywiaHJlZiI6Imh0dHA6Ly8xMjcuMC4wLjE6NDkyMjEvZW4vI2VuY291bnRlciIsInNjcm9sbCI6MTkyMSwiZm9jdXMiOnRydWUsInZpc2liaWxpdHkiOiJ2aXNpYmxlIiwidmlld3BvcnQiOnsid2lkdGgiOjM5MCwiaGVpZ2h0Ijo2NjR9LCJzY3JlZW4iOnsid2lkdGgiOjM5MCwiaGVpZ2h0Ijo4NDR9LCJ3b3JsZCI6IndvcmxkICBpcy1yZWFkeSBoYXMtdGl0bGUgICAgICAgICAiLCJwaG90byI6e30sInZpZGVvcyI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "975aa93bb5b7c4f5fcee-37429598f1a5fc5d5adb",
+          "file": "v310-slow.spec.ts",
+          "line": 11,
+          "column": 49
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T07:39:38.491Z",
+    "duration": 94644.158,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
