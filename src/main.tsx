@@ -9,7 +9,7 @@ import '@fontsource/manrope/latin-ext-400.css'
 import '@fontsource/manrope/latin-ext-500.css'
 import App from './App'
 import './style.css'
-import './atmosphere.css'
+import './theme.css'
 
 const root = document.getElementById('root')!
 const app = <App initialLocale={document.documentElement.lang === 'en' ? 'en' : 'lv'} />

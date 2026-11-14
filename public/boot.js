@@ -3,6 +3,8 @@
 (() => {
   const root = document.documentElement
   root.classList.add('js')
+  // A saved legacy mode must not return through a later Back/Forward visit.
+  try { localStorage.removeItem('piepe-atmosphere') } catch { /* Storage is optional. */ }
   document.addEventListener('click', event => {
     if (event.target instanceof Element && event.target.closest('.skip-intro')) root.dataset.skipIntro = '1'
   }, { capture: true })

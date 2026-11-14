@@ -1,0 +1,20 @@
+
+> piepe@3.1.1 test
+> playwright test tests/v311.spec.ts tests/v258.spec.ts --project=chrome-desktop --grep new wallpaper galleries|never requests new full-resolution|every route has exact authorized
+
+
+Running 4 tests using 1 worker
+
+(node:28802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chrome-desktop] › tests/v258.spec.ts:190:1 › 2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets (2.2s)
+  ✓  2 [chrome-desktop] › tests/v311.spec.ts:51:41 › 3.1.1 lv: new wallpaper galleries have accurate originals, live previews and native download delivery (1.5s)
+  ✓  3 [chrome-desktop] › tests/v311.spec.ts:51:41 › 3.1.1 en: new wallpaper galleries have accurate originals, live previews and native download delivery (1.3s)
+  ✓  4 [chrome-desktop] › tests/v311.spec.ts:60:1 › 3.1.1 the homepage never requests new full-resolution wallpaper downloads (1.0s)
+
+  4 passed (7.5s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

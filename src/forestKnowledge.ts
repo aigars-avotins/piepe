@@ -179,7 +179,7 @@ export const collectionCopy = {
   lv: {
     wallpapersTitle: 'Bezmaksas meža tapetes datoram un telefonam | PIE.PE', wallpapersHeading: 'Meža tapetes datoram un telefonam',
     wallpapersDescription: 'PIE.PE mākslinieciskais mežs ekrānam: bezmaksas 5K un 4K darbvirsmas tapetes un vertikāls telefona fons. Īsti JPG faili, skaidri izmēri.',
-    wallpapersLead: 'Mazliet meža gaismas ikdienas ekrānam. Divas PIE.PE meža ilustrācijas — plašākam skatam uz darbvirsmas un tuvākam skatienam telefonā.',
+    wallpapersLead: 'Meža gaisma, veca ozola miza un sūnu tuvplāns. Izvēlies kompozīciju darbvirsmai vai telefonam.',
     desktopCaption: 'Mākslīgā intelekta meža ilustrācija ar sūnām, stumbru un dzintarkrāsas piepēm. Tumšākā kreisā mala atstāj vietu darbvirsmas ikonām.',
     phoneCaption: 'Mākslīgā intelekta ilustrācija: vertikāls skats gar sūnainu stumbru un piepju kārtām. Galīgais fons veidots garam telefona ekrānam.',
     desktopAlt: 'PIE.PE mākslīgā intelekta meža ilustrācijas horizontāls priekšskatījums ar piepēm uz stumbra',
@@ -198,7 +198,7 @@ export const collectionCopy = {
   en: {
     wallpapersTitle: 'Free Forest Wallpapers for Desktop and Phone | PIE.PE', wallpapersHeading: 'Forest wallpapers for desktop and phone',
     wallpapersDescription: 'Carry the artistic PIE.PE forest onto your screen: free 5K and 4K desktop wallpapers and a vertical phone background. Real JPG downloads with clear dimensions.',
-    wallpapersLead: 'A little forest light for an everyday screen. Two PIE.PE forest illustrations: a wider view for your desktop and a closer look for your phone.',
+    wallpapersLead: 'Forest light, old oak bark and a close view of moss. Choose a composition for your desktop or phone.',
     desktopCaption: 'An AI-generated forest illustration with moss, a tree trunk and amber brackets. The darker left edge leaves room for desktop icons.',
     phoneCaption: 'An AI-generated vertical view along a mossy trunk and layered brackets, composed for a tall phone screen.',
     desktopAlt: 'Horizontal preview of an AI-generated PIE.PE forest illustration with bracket fungi on a trunk',

@@ -1,0 +1,319 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T12:29:44.156Z",
+    "duration": 75071.192,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 1512x982",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8697,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 345,
+              "bodySha256": "68cfb318f720dff93aa75225635395bb9ba92f551cd7bd2213abbde7148dcae7"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 6932,
+              "bodySha256": "cb240525b707c255fadb38873e75339c249b2d44dda968d89c1a53ed1b605512"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "a50721a37bb4d04902a835288b5f72b964306d8d05d2ae0e0168da6338731fba"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1566,
+              "bodySha256": "7e8a212f09ebd83fb81ef117553d6c7b095cfae90a8392094d8723b1a5a3bfe8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 135,
+      "title": "intro then awakening final frame docks and returns continuously at 1512x982",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 17824,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 4806,
+              "bodySha256": "1030ee9efc2dc12a365c73dbad8e5be3fcc598e585ffc1928b563b81942bf773"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1135,
+              "bodySha256": "59617a3038f0ac920396a734a16cc3552b6b3e283803779bef6a41da474b0e27"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3262,
+              "bodySha256": "02cdfbdc7f5c88b93bb35eb97d4afe47d55ca9c7da6891e3d00a31563cf24409"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 2560x1080",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7464,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 295,
+              "bodySha256": "7d660ecb472762df4e27e9c947907bc016eab4840c5e501688d0169a8095de0a"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 4696,
+              "bodySha256": "b594a3753cd14467d3e52fabd5c55e7463fb5597b49c461f3eee3771800f9804"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "e3b9cffe2997b78377c35c739ec90629a47ffe5f49068eeef0a916703845a740"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1568,
+              "bodySha256": "fe9f207580b307003d376c7fc45384a42a4801af41a85a2c0abbc8844f74e4c8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 390x664",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5847,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 350,
+              "bodySha256": "90eade696dfdd0a9a9a231425ae99b71fbafb731e5ffbc56a98e7f99d6c00db3"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 5243,
+              "bodySha256": "3bb97d16fb3fb4d3f4dfd1b5d7a8818b15577ed89799dd7c7b64e06e7a2b24e8"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "da37e90191daa84a6fd1805d24b09998829f15474c6fbeaa970af273f8f00214"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1576,
+              "bodySha256": "dc1074952722f923951f6eecb44ea7a1df94eb72fdae2fd392f7ab854a472763"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 135,
+      "title": "intro then awakening final frame docks and returns continuously at 390x664",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 21599,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 5314,
+              "bodySha256": "c537a504fcd1e7d09e687d7798dc734832529e0b7ba5a2a6bb7d41c970aaf315"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1459,
+              "bodySha256": "61fb7ffdf30377c3588943bf3a0b1bf7a7340b16def3fc92966515ca84a4624a"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3275,
+              "bodySha256": "4dd7ad28e04ebe53c80395bb32198d16c45a018d9f57cdc95978f0a1ad0d2be6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4781,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 3087,
+              "bodySha256": "b019f69cc5d625e989c642b993351c1d592bce48a2698f78d3e4e226ef2ca276"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1441,
+              "bodySha256": "f00126960db468482cbe68f94090695258312aa04c539a3951c9fb35a7dac7ff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4536,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 3072,
+              "bodySha256": "d7288b54dce5ff7855d00dd20a6b559d07a3f0e07f9e2e9c7b6b45192bbef505"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1450,
+              "bodySha256": "cb4e79783be92fabf95d144c72a69377953564c2581b37a3fc1a4c9c75d0b638"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

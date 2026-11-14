@@ -1,0 +1,197 @@
+{
+  "method": "Actual browser recording phase-aligned frame review: five samples per boundary, screenshots reviewed visually, not a substitute for native frame assertions.",
+  "results": [
+    {
+      "viewport": {
+        "width": 1512,
+        "height": 982
+      },
+      "errors": [],
+      "decodedLoopFrames": 25,
+      "strictlyAdvancingLoopMediaTime": true,
+      "sourceDimensions": "1920x1080",
+      "reviewedPhaseRows": [
+        {
+          "phase": "entering/0/0",
+          "wallTimeMs": 4729,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/lv-1512-boundary-0.webp"
+        },
+        {
+          "phase": "deepening/0/1",
+          "wallTimeMs": 15050,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/lv-1512-boundary-1.webp"
+        },
+        {
+          "phase": "arriving/0/0",
+          "wallTimeMs": 25527,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/lv-1512-boundary-2.webp"
+        },
+        {
+          "phase": "living-world/0/1",
+          "wallTimeMs": 35723,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/lv-1512-boundary-3.webp"
+        },
+        {
+          "phase": "returning/2/0",
+          "wallTimeMs": 57786,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/lv-1512-boundary-4.webp"
+        },
+        {
+          "phase": "returning/2/1",
+          "wallTimeMs": 68703,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/lv-1512-boundary-5.webp"
+        },
+        {
+          "phase": "finished/2/1",
+          "wallTimeMs": 79612,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/lv-1512-boundary-6.webp"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": [],
+      "decodedLoopFrames": 25,
+      "strictlyAdvancingLoopMediaTime": true,
+      "sourceDimensions": "1920x1080",
+      "reviewedPhaseRows": [
+        {
+          "phase": "entering/0/0",
+          "wallTimeMs": 3709,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/en-390-boundary-0.webp"
+        },
+        {
+          "phase": "deepening/0/1",
+          "wallTimeMs": 14052,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/en-390-boundary-1.webp"
+        },
+        {
+          "phase": "arriving/0/0",
+          "wallTimeMs": 25428,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/en-390-boundary-2.webp"
+        },
+        {
+          "phase": "living-world/0/1",
+          "wallTimeMs": 36113,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/en-390-boundary-3.webp"
+        },
+        {
+          "phase": "returning/2/0",
+          "wallTimeMs": 56276,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/en-390-boundary-4.webp"
+        },
+        {
+          "phase": "returning/2/1",
+          "wallTimeMs": 66458,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/en-390-boundary-5.webp"
+        },
+        {
+          "phase": "finished/2/1",
+          "wallTimeMs": 76505,
+          "offsetSeconds": [
+            0.2,
+            0.45,
+            0.7,
+            0.95,
+            1.2
+          ],
+          "image": "/workspace/piepe311-qa/candidate-frame-review/en-390-boundary-6.webp"
+        }
+      ]
+    }
+  ]
+}

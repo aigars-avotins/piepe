@@ -8,8 +8,6 @@ import { structuredData } from './seo'
 import { readings, readingSources } from './reading'
 import { renderAtlas, renderXray } from './ReadingExperiences'
 import { fieldNotesPath, wallpapersPath, forestNavigation } from './forestPaths'
-import AtmosphereSelector from './AtmosphereSelector'
-import { atmosphereBootstrap } from './atmosphere'
 
 export function readingSchema(locale: Locale) {
   const t = readings[locale], url = 'https://pie.pe' + readingPath(locale)
@@ -25,7 +23,7 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
   return '<!doctype html>\n' + renderToStaticMarkup(<html lang={locale} className="reading-document">
     <head>
       <meta charSet="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-      <script data-atmosphere-bootstrap="" dangerouslySetInnerHTML={{ __html: atmosphereBootstrap }} />
+
       <meta name="theme-color" content="#0B1712" /><title>{t.title}</title><meta name="description" content={t.description} />
       <link rel="canonical" href={url} />
       <link rel="alternate" hrefLang="lv" href={'https://pie.pe' + readingPath('lv')} /><link rel="alternate" hrefLang="en" href={'https://pie.pe' + readingPath('en')} /><link rel="alternate" hrefLang="x-default" href={'https://pie.pe' + readingPath('lv')} />
@@ -43,7 +41,7 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
       <SiteLink className="skip-content" href="#reading">{messages[locale].skipContent}</SiteLink>
       <header className="reading-header">
         <SiteLink className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></SiteLink>
-        <nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <SiteLink key={lang} lang={lang} hrefLang={lang} href={readingPath(lang)} aria-current={lang === locale ? 'page' : undefined}>{lang.toUpperCase()}</SiteLink>)}</nav><div className="atmosphere-slot"><AtmosphereSelector locale={locale} compact/></div>
+        <nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <SiteLink key={lang} lang={lang} hrefLang={lang} href={readingPath(lang)} aria-current={lang === locale ? 'page' : undefined}>{lang.toUpperCase()}</SiteLink>)}</nav>
       </header>
       <main id="reading" className="reading-main" tabIndex={-1}>
         <article>

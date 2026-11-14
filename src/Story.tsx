@@ -5,10 +5,10 @@ import { useState } from 'react'
 import type { CSSProperties, MouseEvent, RefObject } from 'react'
 import { messages, readingPath } from './i18n'
 import { fieldNotesPath, wallpapersPath, forestNavigation } from './forestPaths'
-import AtmosphereSelector from './AtmosphereSelector'
 import ControlText from './ControlText'
 import HomeExperiences, { DiscoveryEntry } from './HomeExperiences'
 import type { Locale } from './i18n'
+import { wallpaperDesigns, wallpaperAsset, wallpaperLabels } from './wallpapers'
 export type NoteState = 'unseen' | 'discovered' | 'collected'
 type Props = {
   locale: Locale; plane?: CSSProperties; hotspot?: RefObject<HTMLButtonElement | null>;
@@ -27,7 +27,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
           <button className="fungus-hit" disabled={intro} onClick={onDiscovery} aria-label={t.discover} aria-haspopup="dialog" {...inspectEvents} />
           <button ref={hotspot} className="fungus-annotation" disabled={intro} onClick={onDiscovery} aria-label={t.closer} aria-haspopup="dialog" {...inspectEvents}><span className="annotation-cross" aria-hidden="true">+</span><span>{t.lookCloser} <span aria-hidden="true"><Arrow direction="diagonal" /></span></span></button>
         </div>
-        <div className="hero-foot title-enter"><DiscoveryEntry locale={locale}/><p className="hero-word-meaning"><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><SiteLink className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></SiteLink><div className="hero-atmosphere"><AtmosphereSelector locale={locale}/></div><span className="edition">{t.edition}</span></div>
+        <div className="hero-foot title-enter"><DiscoveryEntry locale={locale}/><p className="hero-word-meaning"><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><SiteLink className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></SiteLink><span className="edition">{t.edition}</span></div>
         {imageFailed && <p className="media-note">{t.imageError} <button onClick={onDiscovery}>{t.openEncounter}</button>.</p>}
       </section>
       <section id="understory" className="chapter bark-chapter cinematic-chapter" data-scene="understory" aria-labelledby="bark-title">
@@ -65,6 +65,10 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
           <article><img src="/wallpapers/previews/mobile.webp?v=2.2" alt={t.wallpaperAltPhone} width="369" height="800" loading="lazy" /><h3>{t.phone}</h3><SiteLink className="line-link" href="/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2" download onClick={() => setDownloadHint(true)}>{t.downloadPhone}<span aria-hidden="true"><Arrow direction="down" /></span></SiteLink><span className="resolution-link">1440 × 3120</span></article>
         </div>
         {downloadHint && <p className="download-hint" role="status">{t.saveHint}</p>}
+        <div className="wallpaper-new-designs" aria-label={wallpaperLabels[locale].newDesigns}>{wallpaperDesigns.map(design=>{
+          const image=wallpaperAsset(design.id,'desktop')
+          return <SiteLink key={design.id} href={`${wallpapersPath(locale)}#${design.id}`}><img src={image.preview} width={image.previewWidth} height={image.previewHeight} alt={design.desktopAlt[locale]} loading="lazy" decoding="async"/><h3>{design.title[locale]}</h3><span className="line-link">{forestNavigation[locale].wallpapers}<span aria-hidden="true"><Arrow direction="diagonal"/></span></span></SiteLink>
+        })}</div>
         <SiteLink className="line-link" href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers} <span aria-hidden="true"><Arrow direction="diagonal" /></span></SiteLink>
       </section>
     </main>

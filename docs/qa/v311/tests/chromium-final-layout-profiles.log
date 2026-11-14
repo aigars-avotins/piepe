@@ -1,0 +1,24 @@
+
+> piepe@3.1.1 test
+> playwright test tests/v311.spec.ts --project=chrome-desktop --grep gallery captions
+
+
+Running 8 tests using 1 worker
+
+(node:32138) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout lv 2048 › 3.1.1 lv 2048: gallery captions remain inside their cards and divider rules stay between rows (5.5s)
+  ✓  2 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout lv 1512 › 3.1.1 lv 1512: gallery captions remain inside their cards and divider rules stay between rows (1.7s)
+  ✓  3 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout lv 390 › 3.1.1 lv 390: gallery captions remain inside their cards and divider rules stay between rows (1.1s)
+  ✓  4 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout lv 320 › 3.1.1 lv 320: gallery captions remain inside their cards and divider rules stay between rows (895ms)
+  ✓  5 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout en 2048 › 3.1.1 en 2048: gallery captions remain inside their cards and divider rules stay between rows (3.0s)
+  ✓  6 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout en 1512 › 3.1.1 en 1512: gallery captions remain inside their cards and divider rules stay between rows (1.8s)
+  ✓  7 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout en 390 › 3.1.1 en 390: gallery captions remain inside their cards and divider rules stay between rows (1.0s)
+  ✓  8 [chrome-desktop] › tests/v311.spec.ts:13:2 › 3.1.1 layout en 320 › 3.1.1 en 320: gallery captions remain inside their cards and divider rules stay between rows (925ms)
+
+  8 passed (17.7s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

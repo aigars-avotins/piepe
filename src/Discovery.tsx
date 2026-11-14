@@ -1,5 +1,6 @@
 import SiteLink from './SiteLink'
 import Arrow from './Arrow'
+import ControlText from './ControlText'
 import { useRef, useState } from 'react'
 import type { RefObject } from 'react'
 import { messages } from './i18n'
@@ -28,8 +29,8 @@ export default function Discovery({ audio, locale, onLocaleChange, origin, photo
   }
   return <dialog ref={dialog} className={`discovery-dialog observation-${note.id} ${moving ? 'photo-moving' : ''}`} onCancel={event => { event.preventDefault(); requestClose() }} aria-labelledby="discovery-title" aria-describedby="discovery-description">
     <SoundControl audio={audio} locale={locale} />
-    {moving && <button className="text-button skip-dock" onClick={settle}>{t.skipAwakening}</button>}
-    <div className="discovery-stage">
+    {moving && <button className="text-button skip-dock" onClick={settle}><ControlText>{t.skipAwakening}</ControlText></button>}
+    <div className="discovery-stage" data-nosnippet="">
       <LanguageSwitch locale={locale} onChange={onLocaleChange} />
       <div className="specimen-photo" aria-hidden="true"><img src={mediaUrl(photoSrc)} loading={open ? 'eager' : 'lazy'} onError={event => { if (!new URL(event.currentTarget.src).pathname.endsWith('/media/forest-final.jpg')) event.currentTarget.src = mediaUrl('/media/forest-final.jpg') }} alt="" width="1920" height="1080" /><span className="specimen-photo-shade" /><span className="photo-world-shade" /></div>
       <div className="discovery-edge" aria-hidden="true"><EdgeLight /></div>

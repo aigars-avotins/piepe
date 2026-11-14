@@ -1,0 +1,407 @@
+{
+  "checkedAtUtc": "2026-11-14T11:31:40.827388+00:00",
+  "ownerLastCrawledDate": "2026-10-29",
+  "ownerLiveTest": "Not supplied; account access unavailable",
+  "results": [
+    {
+      "agent": "Mozilla/5.0",
+      "method": "GET",
+      "requested": "https://pie.pe/en",
+      "steps": [
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0e85e29326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:38 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0e8d8fd05da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0",
+      "method": "HEAD",
+      "requested": "https://pie.pe/en",
+      "steps": [
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0e939fe05da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0e9d896195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0",
+      "method": "GET",
+      "requested": "https://pie.pe/en/",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0ea9d58d7eb-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 0
+    },
+    {
+      "agent": "Mozilla/5.0",
+      "method": "HEAD",
+      "requested": "https://pie.pe/en/",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0eb0983326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 0
+    },
+    {
+      "agent": "Mozilla/5.0",
+      "method": "GET",
+      "requested": "https://pie.pe/en?utm_source=v311-audit",
+      "steps": [
+        {
+          "url": "https://pie.pe/en?utm_source=v311-audit",
+          "status": 307,
+          "location": "/en/?utm_source=v311-audit",
+          "cfRay": "a5a5b0eb5a93195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/?utm_source=v311-audit",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0ebbb18195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/?utm_source=v311-audit",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0",
+      "method": "HEAD",
+      "requested": "https://pie.pe/en?utm_source=v311-audit",
+      "steps": [
+        {
+          "url": "https://pie.pe/en?utm_source=v311-audit",
+          "status": 307,
+          "location": "/en/?utm_source=v311-audit",
+          "cfRay": "a5a5b0ec1f17d7eb-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/?utm_source=v311-audit",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0ec5b05326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/?utm_source=v311-audit",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0",
+      "method": "GET",
+      "requested": "http://pie.pe/en",
+      "steps": [
+        {
+          "url": "http://pie.pe/en",
+          "status": 301,
+          "location": "https://pie.pe/en",
+          "cfRay": "a5a5b0ecaa8d4d09-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0ed0821d7eb-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0ed6be105da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 2
+    },
+    {
+      "agent": "Mozilla/5.0",
+      "method": "HEAD",
+      "requested": "http://pie.pe/en",
+      "steps": [
+        {
+          "url": "http://pie.pe/en",
+          "status": 301,
+          "location": "https://pie.pe/en",
+          "cfRay": "a5a5b0edaae24d09-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0ee1d5a05da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0ee7f1b195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 2
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "GET",
+      "requested": "https://pie.pe/en",
+      "steps": [
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0eedf6f05da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:39 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0ef2a52d7eb-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "HEAD",
+      "requested": "https://pie.pe/en",
+      "steps": [
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0ef9810326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0efd8ad195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "GET",
+      "requested": "https://pie.pe/en/",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0f06945326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 0
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "HEAD",
+      "requested": "https://pie.pe/en/",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0f0cb2c05da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 0
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "GET",
+      "requested": "https://pie.pe/en?utm_source=v311-audit",
+      "steps": [
+        {
+          "url": "https://pie.pe/en?utm_source=v311-audit",
+          "status": 307,
+          "location": "/en/?utm_source=v311-audit",
+          "cfRay": "a5a5b0f12a60195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/?utm_source=v311-audit",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0f18ab9326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/?utm_source=v311-audit",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "HEAD",
+      "requested": "https://pie.pe/en?utm_source=v311-audit",
+      "steps": [
+        {
+          "url": "https://pie.pe/en?utm_source=v311-audit",
+          "status": 307,
+          "location": "/en/?utm_source=v311-audit",
+          "cfRay": "a5a5b0f1ddd505da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/?utm_source=v311-audit",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0f22e6105da-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/?utm_source=v311-audit",
+      "hops": 1
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "GET",
+      "requested": "http://pie.pe/en",
+      "steps": [
+        {
+          "url": "http://pie.pe/en",
+          "status": 301,
+          "location": "https://pie.pe/en",
+          "cfRay": "a5a5b0f28e30bc35-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0f2dc82326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0f32d09195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 2
+    },
+    {
+      "agent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "method": "HEAD",
+      "requested": "http://pie.pe/en",
+      "steps": [
+        {
+          "url": "http://pie.pe/en",
+          "status": 301,
+          "location": "https://pie.pe/en",
+          "cfRay": "a5a5b0f34f4bbc35-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "location": "/en/",
+          "cfRay": "a5a5b0f39d93326e-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "location": null,
+          "cfRay": "a5a5b0f3ede3195d-GRU",
+          "date": "Sat, 14 Nov 2026 11:31:40 GMT",
+          "noindex": null
+        }
+      ],
+      "final": "https://pie.pe/en/",
+      "hops": 2
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "method": "Playwright JSON evidence summary. Attachment bodies omitted to avoid duplicating screenshot payloads; original run artifacts retained. Status, assertions and errors are unaltered.",
+  "stats": {
+    "startTime": "2026-11-14T11:58:38.796Z",
+    "duration": 39146.504,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7237,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4921,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3716,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3610,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5942,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5675,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3566,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3501,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

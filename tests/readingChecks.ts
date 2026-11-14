@@ -5,7 +5,6 @@ import { localePath, readingPath } from '../src/i18n'
 import type { Locale } from '../src/i18n'
 import { readings, readingSources } from '../src/reading'
 import { readFile, readdir } from 'node:fs/promises'
-import { atmosphereBootstrap } from '../src/atmosphere'
 
 export async function readingToolsEntry() {
   const files=(await readdir('dist/assets')).filter(name=>/^reading-tools-[a-f0-9]{16}\.js$/.test(name))
@@ -17,7 +16,8 @@ export async function checkReadingResources(page: Page, javaScriptEnabled: boole
   const entry=await readingToolsEntry()
   const runtime=await page.evaluate(()=>performance.getEntriesByType('resource').map(e=>new URL(e.name).pathname).filter(path=>/\.(?:js|mp4|mp3|ogg)$/.test(path)))
   expect(runtime.every(path=>path===entry)).toBe(true)
-  if(javaScriptEnabled){expect(runtime).toContain(entry);await expect(page.locator('[data-atmosphere-controls]')).toBeVisible()}
+  if(javaScriptEnabled)expect(runtime).toContain(entry)
+  await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0)
 }
 
 export async function checkReading(page: Page, locale: Locale, options: { cloudflareAnalytics?: boolean } = {}) {
@@ -56,18 +56,17 @@ export async function checkReading(page: Page, locale: Locale, options: { cloudf
   for (const lang of ['lv', 'en'] as const) await expect(page.locator(`.reading-languages a[lang="${lang}"]`)).toHaveAttribute('href', readingPath(lang))
 }
 
-/** Only our exact progressive module/bootstrap, plus the narrow optional CDN beacon. */
+/** Only our exact progressive module, plus the narrow optional CDN beacon. */
 export async function checkStaticMarkup(page: Page, options: { cloudflareAnalytics?: boolean } = {}) {
   await expect(page.locator('#root, .world, video, audio')).toHaveCount(0)
   const scripts = page.locator('script:not([type="application/ld+json"])')
   const entry=await readingToolsEntry(),built=await readFile('dist'+readingPath('lv')+'index.html','utf8')
   expect(built).toContain(entry)
   // Filter rather than trust markers alone: wrong source/type/content still fails.
-  const authoredBootstrap=page.locator('script[data-atmosphere-bootstrap]'),authoredModule=page.locator('script[data-reading-tools]')
-  await expect(authoredBootstrap).toHaveCount(1);expect(await authoredBootstrap.textContent()).toBe(atmosphereBootstrap)
-  await expect(authoredBootstrap).not.toHaveAttribute('src');expect(await authoredBootstrap.getAttribute('type')).toBeNull()
+  await expect(page.locator('script[data-atmosphere-bootstrap]')).toHaveCount(0)
+  const authoredModule=page.locator('script[data-reading-tools]')
   await expect(authoredModule).toHaveCount(1);await expect(authoredModule).toHaveAttribute('type','module');await expect(authoredModule).toHaveAttribute('src',entry);expect(await authoredModule.textContent()).toBe('')
-  const markup=await scripts.evaluateAll(elements=>elements.filter(e=>!e.hasAttribute('data-atmosphere-bootstrap')&&!e.hasAttribute('data-reading-tools')).map(e=>{
+  const markup=await scripts.evaluateAll(elements=>elements.filter(e=>!e.hasAttribute('data-reading-tools')).map(e=>{
     const script=e as HTMLScriptElement,url=script.src?new URL(script.src):null
     return {type:script.type,source:url?.protocol==='https:'?url.origin+url.pathname:null,hasInlineContent:!!script.textContent?.trim(),hasQueryOrHash:!!(url?.search||url?.hash)}
   }))

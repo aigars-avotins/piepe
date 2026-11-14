@@ -10,3 +10,25 @@
   Cache-Control: public, max-age=31536000, immutable
 /wallpapers/*
   Cache-Control: public, max-age=86400, must-revalidate
+/wallpapers/piepe-forest-desktop-5120x2880.jpg
+  Content-Disposition: attachment; filename="piepe-forest-desktop-5120x2880.jpg"; filename*=UTF-8''piepe-forest-desktop-5120x2880.jpg
+/wallpapers/piepe-forest-desktop-3840x2160.jpg
+  Content-Disposition: attachment; filename="piepe-forest-desktop-3840x2160.jpg"; filename*=UTF-8''piepe-forest-desktop-3840x2160.jpg
+/wallpapers/piepe-forest-mobile-1440x3120.jpg
+  Content-Disposition: attachment; filename="piepe-forest-mobile-1440x3120.jpg"; filename*=UTF-8''piepe-forest-mobile-1440x3120.jpg
+/wallpapers/piepe-ancient-forest-desktop-5120x2880.jpg
+  Content-Disposition: attachment; filename="piepe-ancient-forest-desktop-5120x2880.jpg"; filename*=UTF-8''piepe-ancient-forest-desktop-5120x2880.jpg
+/wallpapers/piepe-ancient-forest-mobile-1440x3120.jpg
+  Content-Disposition: attachment; filename="piepe-ancient-forest-mobile-1440x3120.jpg"; filename*=UTF-8''piepe-ancient-forest-mobile-1440x3120.jpg
+/wallpapers/piepe-hidden-forest-desktop-5120x2880.jpg
+  Content-Disposition: attachment; filename="piepe-hidden-forest-desktop-5120x2880.jpg"; filename*=UTF-8''piepe-hidden-forest-desktop-5120x2880.jpg
+/wallpapers/piepe-hidden-forest-mobile-1440x3120.jpg
+  Content-Disposition: attachment; filename="piepe-hidden-forest-mobile-1440x3120.jpg"; filename*=UTF-8''piepe-hidden-forest-mobile-1440x3120.jpg
+/wallpapers/originals/piepe-ancient-forest-desktop-original.png
+  Content-Disposition: attachment; filename="piepe-ancient-forest-desktop-original.png"; filename*=UTF-8''piepe-ancient-forest-desktop-original.png
+/wallpapers/originals/piepe-ancient-forest-mobile-original.png
+  Content-Disposition: attachment; filename="piepe-ancient-forest-mobile-original.png"; filename*=UTF-8''piepe-ancient-forest-mobile-original.png
+/wallpapers/originals/piepe-hidden-forest-desktop-original.png
+  Content-Disposition: attachment; filename="piepe-hidden-forest-desktop-original.png"; filename*=UTF-8''piepe-hidden-forest-desktop-original.png
+/wallpapers/originals/piepe-hidden-forest-mobile-original.png
+  Content-Disposition: attachment; filename="piepe-hidden-forest-mobile-original.png"; filename*=UTF-8''piepe-hidden-forest-mobile-original.png

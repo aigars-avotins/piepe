@@ -1,0 +1,8 @@
+{
+  "buildId": "91cd32b5-b492-42d0-bc09-bdd9c60b14cf",
+  "branch": "codex/piepe-v311",
+  "commit": "995a0d2e1485cb84fe929504dc3dfb927f3e1623",
+  "outcome": "fail",
+  "command": "npx wrangler preview",
+  "reason": "Existing feature-preview expected-Worker-name guard rejects configured name piepe. Main deploy configuration is preserved. This is not a failing required browser or product check."
+}

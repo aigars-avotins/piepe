@@ -63,6 +63,11 @@ for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) inViewport(width
   let release!:()=>void;const gate=new Promise<void>(resolve=>{release=resolve})
   await page.route('**/media/forest-awakening.mp4*',async route=>{await gate;await route.continue()})
   await page.goto('/en/')
+  // Finish native cold-window/font/intro typography preparation before starting
+  // the real, unchanged four-second media recovery clock with the user gesture.
+  await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
+  await page.evaluate(()=>document.fonts.ready)
+  await expect(page.locator('.fungus-annotation')).toHaveCSS('opacity','1')
   const plane=page.locator('.base-camera .media-plane'),shade=page.locator('.forest-shade')
   const before=await plane.boundingBox(),grading=await shade.evaluate(e=>getComputedStyle(e).backgroundImage)
   await page.evaluate(()=>{
@@ -72,14 +77,14 @@ for(const [width,height] of [[1512,982],[2560,1080],[390,664]]) inViewport(width
   })
   await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   await expect(page.locator('.world')).toHaveAttribute('data-awakening','preparing')
-  await expect(page.locator('dialog[open]')).toHaveCount(0)
   await expect(page.getByRole('button',{name:'Go straight to the field note'})).toBeVisible()
-  await expect(page.locator('.hero-copy')).toHaveCSS('opacity','1')
-  await expect(page.locator('video[src*="/media/forest-awakening.mp4"]')).toHaveCSS('opacity','0')
-  // Screenshot encoding must not consume the real four-second media recovery window.
-  // Separate browser recordings provide the visual evidence; keep this readiness gate bounded.
-  expect(await plane.boundingBox()).toEqual(before)
-  expect(await shade.evaluate(e=>getComputedStyle(e).backgroundImage)).toBe(grading)
+  // Read the same held-frame invariants in one protocol call. Serial remote
+  // assertions must not consume the four-second deadline while QA blocks bytes.
+  const held=await page.evaluate(()=>{
+    const rect=document.querySelector('.base-camera .media-plane')!.getBoundingClientRect()
+    return{dialogs:document.querySelectorAll('dialog[open]').length,hero:getComputedStyle(document.querySelector('.hero-copy')!).opacity,video:getComputedStyle(document.querySelector('video[src*="/media/forest-awakening.mp4"]')!).opacity,plane:{x:rect.x,y:rect.y,width:rect.width,height:rect.height},grading:getComputedStyle(document.querySelector('.forest-shade')!).backgroundImage}
+  })
+  expect(held).toEqual({dialogs:0,hero:'1',video:'0',plane:before,grading})
   release()
   await expect(page.locator('[data-clip="awakening"]')).toHaveAttribute('data-clip-ready','true')
   const timed = await page.evaluate(async () => {
@@ -139,17 +144,21 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
   await expect(page.locator('.forest-still')).toHaveJSProperty('complete',true)
   await page.evaluate(()=>{
-    const samples:{t:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
+    const samples:{t:number;observedAt:number;x:number;y:number;w:number;h:number;sx:number;sy:number;moving:boolean;camera:boolean}[]=[];(window as unknown as {dockFrames:typeof samples}).dockFrames=samples
     const observer=new MutationObserver(()=>{
       const photo=document.querySelector('.specimen-photo')
       if(!photo||!document.querySelector('dialog[open].photo-moving'))return
-      observer.disconnect();const start=performance.now();let ran=false
+      observer.disconnect();const start=Number(document.timeline.currentTime);let ran=false
       const frame=()=>{
         const r=photo.getBoundingClientRect(),camera=(photo as HTMLElement).dataset.cameraPhase
         const moving=(camera==='moving'||camera==='returning')&&Number((photo as HTMLElement).dataset.cameraProgress)>0;ran ||=moving
         // One geometry read samples the rendered source at one instant, including both transforms.
         const source=photo.querySelector('img')!.getBoundingClientRect()
-        samples.push({t:performance.now()-start,x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
+        // Geometry belongs to the rendered animation frame. A delayed timer's
+        // delivery time can be only 11ms after a previous-frame sample even
+        // though the compositor advanced a full frame. Retain wall-clock
+        // delivery separately; keep the same strict velocity/continuity bounds.
+        samples.push({t:Number(document.timeline.currentTime)-start,observedAt:performance.now(),x:r.x,y:r.y,w:r.width,h:r.height,sx:source.width/1920,sy:source.height/1080,moving,camera:!!camera})
         if((!ran||document.querySelector('dialog.photo-moving'))&&performance.now()-start<10000)requestAnimationFrame(()=>setTimeout(frame,0))
       };requestAnimationFrame(()=>setTimeout(frame,0))
     });observer.observe(document,{subtree:true,attributes:true,attributeFilter:['open','class']})

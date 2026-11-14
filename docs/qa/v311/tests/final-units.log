@@ -1,0 +1,34 @@
+
+> piepe@3.1.1 test:worker
+> node --test tests/worker.test.ts tests/link-policy.unit.ts tests/redirect-graph.unit.ts tests/wallpapers.unit.ts
+
+✔ native same-site navigation, images, download URLs and non-web schemes stay in the current tab (0.906727ms)
+✔ external websites are isolated by parsed origin, including deceptive hostname/userinfo/port forms (0.732847ms)
+✔ modified or already-handled link activations remain browser-owned (0.341571ms)
+✔ relative, absolute and HTTP entry redirects preserve the intended site origin (0.829953ms)
+✔ loops, missing locations, protocol downgrades and deceptive origins fail the redirect gate (0.991095ms)
+✔ four separately authored wallpaper originals and high-quality exports retain accurate dimensions and hashes (101.335544ms)
+✔ full media and HEAD preserve headers and advertise ranges (22.470733ms)
+✔ initial, open-ended, suffix and clamped byte ranges return exact content (2.795477ms)
+✔ invalid bounds cannot produce a misleading successful response (2.159124ms)
+✔ If-Range mismatch and unsupported multipart requests receive full media (0.845126ms)
+✔ a matching If-Range receives partial content and missing assets remain 404 (0.595301ms)
+✔ tiny ranges consume bounded chunks and cancel the upstream body (0.679267ms)
+✔ asset subrequests are range-free and non-200 responses pass through (0.401692ms)
+✔ unknown-size streams fall back to a legal full response (0.526128ms)
+✔ Cloudflare-style missing Content-Length still supports suffix and invalid ranges for known media (31.7767ms)
+✔ build-time size metadata exactly matches the public media files (17.792507ms)
+✔ all four cinematic assets retain exact suffix and bounded range delivery without upstream length (121.221807ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 475.320784
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

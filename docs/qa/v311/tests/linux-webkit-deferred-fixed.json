@@ -1,0 +1,46 @@
+{
+  "method": "Playwright JSON evidence summary. Attachment bodies omitted to avoid duplicating screenshot payloads; original run artifacts retained. Status, assertions and errors are unaltered.",
+  "stats": {
+    "startTime": "2026-11-14T11:57:06.555Z",
+    "duration": 5248.7660000000005,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 lv: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1906,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 en: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1909,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

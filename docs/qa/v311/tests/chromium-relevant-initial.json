@@ -1,0 +1,949 @@
+{
+  "method": "Playwright JSON evidence summary. Attachment bodies omitted to avoid duplicating screenshot payloads; original run artifacts retained. Status, assertions and errors are unaltered.",
+  "stats": {
+    "startTime": "2026-11-14T11:48:37.958Z",
+    "duration": 236380.157,
+    "expected": 40,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 1512x982",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5775,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 560,
+              "bodySha256": "db62883945281fe245532f4d6272e12d4e6078708f5a1c98c07103696a23047d"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 8076,
+              "bodySha256": "65bd4e639d18fb8a55f821a282ad6653fc8da49fba80d02d048b66bd1ff11354"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 130,
+      "title": "intro then awakening final frame docks and returns continuously at 1512x982",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19342,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 9160,
+              "bodySha256": "8e00a251e5a57783a2ab465cecb1eb3383f79a87faf378c926c84555976a7e4f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 233,
+      "title": "Escape during the photo move reverses the current camera instead of snapping to full frame",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 11286,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 2560x1080",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3518,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 496,
+              "bodySha256": "6f3ce7dc68a827c188724669fb844ed9fea2f78c701bc002ebb918ed47784350"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 4232,
+              "bodySha256": "312affa8d00c1fa5a99efd7c07a8c18e855e07a0263e5e932b49287b20c38519"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 390x664",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2959,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 564,
+              "bodySha256": "65eb8d72743b0f2fdd6d192c596f5eda95a62c8b2411791598b1f404e80ea2e8"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 13280,
+              "bodySha256": "43608da658e9a7d7a43d2709e9b77510a90b179d4f2031f092d41b067d59e555"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 130,
+      "title": "intro then awakening final frame docks and returns continuously at 390x664",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16739,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 12868,
+              "bodySha256": "792fa08ed6f9d1c7e977af19c567c3c6ee08f461332c09112f9f8d0f07da6587"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4129,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 7052,
+              "bodySha256": "09b7ea7edefdb32793f9598c375ab24e63ded479d7a796c9906ecc605a62ff88"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3425,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 8556,
+              "bodySha256": "39244f293e6c2cf9951c33eb0d4720c885e8035e9d5bdcfe0c1d331f086e6b79"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 lv: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1177,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 en: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 923,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 137,
+      "title": "3.1.1 invalid and denied storage retain the single approved appearance and native language links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1172,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 190,
+      "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 205,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v258.spec.ts",
+                "column": 44,
+                "line": 192
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m22\u001b[39m\nReceived length: \u001b[31m21\u001b[39m\nReceived array:  \u001b[31m[[\"sha256-\"], [\"sha256-\"], [\"sha256-\"], [\"sha256-\"], [\"sha256-\"], [\"sha256-\"], [\"sha256-\"], [\"sha256-\"], [\"sha256-\"], [\"sha256-\"], \u2026]\u001b[39m\n\n  190 | test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets',async({request,page})=>{\n  191 |   const policy=/Content-Security-Policy: (.+)/.exec(await readFile('dist/_headers','utf8'))![1],paths=['/','/en/',readingPath('lv'),readingPath('en'),...forestPages.flatMap(p=>[forestPath('lv',p),forestPath('en',p)])]\n> 192 |   expect([...policy.matchAll(/sha256-/g)]).toHaveLength(22);expect(policy).not.toMatch(/script-src[^;]*(?:unsafe-inline|unsafe-eval|https:|\\*)/)\n      |                                            ^\n  193 |   for(const path of paths){\n  194 |     const response=await request.get(path),html=await response.text();expect(response.status()).toBe(200)\n  195 |     const ids=await page.evaluate(markup=>[...new DOMParser().parseFromString(markup,'text/html').querySelectorAll('[id]')].map(element=>element.id),html)\n    at /workspace/piepe/tests/v258.spec.ts:192:44"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe/test-results/v258-2-5-8-every-route-has-bea48-and-immutable-cinema-assets-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe/test-results/v258-2-5-8-every-route-has-bea48-and-immutable-cinema-assets-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe/test-results/v258-2-5-8-every-route-has-bea48-and-immutable-cinema-assets-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 lv: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1056,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 en: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 935,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 73,
+      "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 24,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v2581.spec.ts",
+                "column": 193,
+                "line": 89
+              },
+              "message": "Error: public/_headers\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"d8a26bbb38080891af7565c64f3c4de643ccb24b5dc551ab5de7e8452f242f85\"\u001b[39m\nReceived: \u001b[31m\"f00832d78a64b121634a1b085f01422b96bc241b039a267699e904f89e172183\"\u001b[39m\n\n  87 |   const visualSources=JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8'))\n  88 |   expect(Object.keys(visualSources).sort()).toEqual(['public/_headers','src/Discovery.tsx','src/style.css'])\n> 89 |   for(const [path,hash]of Object.entries({...fixture.protectedSources,...visualSources,...fixture.originalAssets}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)\n     |                                                                                                                                                                                                 ^\n  90 |\n  91 |   const home=await(await request.get('/')).text(),guide=await(await request.get(readingPath('lv'))).text(),entry=/src=\"(\\/assets\\/reading-tools-[^\"]+\\.js)\"/.exec(guide)![1],js=await readFile('dist'+entry,'utf8')\n  92 |   expect(js).not.toMatch(/react|gsap|ScrollTrigger|forest-reveal|AudioContext|import\\s/);expect(Buffer.byteLength(js)).toBeLessThan(18000)\n    at /workspace/piepe/tests/v2581.spec.ts:89:193"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe/test-results/v2581-2-5-8-1-original-sou-2074d--independent-reading-module-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe/test-results/v2581-2-5-8-1-original-sou-2074d--independent-reading-module-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 10,
+      "title": "2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and contain no rejected art or scale",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 849,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "all-routes-link-and-art-audit",
+              "contentType": "application/json",
+              "bodyBytes": 3600,
+              "bodySha256": "04194014a737d399aaf6a7b8ca1dd2d66ecaf499816589dee1efabed2a42abe6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 69,
+      "title": "2.5.8.2 original JPEG pixels are retained with correct extensions; original cinema and routing stay unchanged",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 43,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 75,
+      "title": "2.5.8.2 lv: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 577,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v2582.spec.ts",
+                "column": 20,
+                "line": 82
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Array [\u001b[39m\n\u001b[31m+     \".world>.sound-control\",\u001b[39m\n\u001b[31m+     \".fungus-annotation>span:last-child\",\u001b[39m\n\u001b[31m+   ],\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  80 |   const selectors=['.hero-copy','.discovery-entry','.hero-foot .scroll-cue','.world>.sound-control','.fungus-annotation>span:last-child']\n  81 |   const overlaps=await page.evaluate(selectors=>{const boxes=selectors.map(s=>({s,r:document.querySelector(s)!.getBoundingClientRect()})),overlaps:string[][]=[];for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];if(a.r.left<b.r.right&&a.r.right>b.r.left&&a.r.top<b.r.bottom&&a.r.bottom>b.r.top)overlaps.push([a.s,b.s])}return overlaps},selectors)\n> 82 |   expect(overlaps).toEqual([]);expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320)\n     |                    ^\n  83 |   await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0)\n  84 |   expect(await page.locator('.world>main').evaluate(e=>Number(getComputedStyle(e).zIndex))).toBeGreaterThan(await page.locator('.world').evaluate(e=>Number(getComputedStyle(e,'::before').zIndex)))\n  85 |  }finally{await context.close()}\n    at /workspace/piepe/tests/v2582.spec.ts:82:20"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe/test-results/v2582-2-5-8-2-lv-narrow-ph-f1457-vitation-or-another-control-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe/test-results/v2582-2-5-8-2-lv-narrow-ph-f1457-vitation-or-another-control-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe/test-results/v2582-2-5-8-2-lv-narrow-ph-f1457-vitation-or-another-control-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 75,
+      "title": "2.5.8.2 en: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 785,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v2582.spec.ts",
+                "column": 20,
+                "line": 82
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Array [\u001b[39m\n\u001b[31m+     \".world>.sound-control\",\u001b[39m\n\u001b[31m+     \".fungus-annotation>span:last-child\",\u001b[39m\n\u001b[31m+   ],\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  80 |   const selectors=['.hero-copy','.discovery-entry','.hero-foot .scroll-cue','.world>.sound-control','.fungus-annotation>span:last-child']\n  81 |   const overlaps=await page.evaluate(selectors=>{const boxes=selectors.map(s=>({s,r:document.querySelector(s)!.getBoundingClientRect()})),overlaps:string[][]=[];for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];if(a.r.left<b.r.right&&a.r.right>b.r.left&&a.r.top<b.r.bottom&&a.r.bottom>b.r.top)overlaps.push([a.s,b.s])}return overlaps},selectors)\n> 82 |   expect(overlaps).toEqual([]);expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320)\n     |                    ^\n  83 |   await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0)\n  84 |   expect(await page.locator('.world>main').evaluate(e=>Number(getComputedStyle(e).zIndex))).toBeGreaterThan(await page.locator('.world').evaluate(e=>Number(getComputedStyle(e,'::before').zIndex)))\n  85 |  }finally{await context.close()}\n    at /workspace/piepe/tests/v2582.spec.ts:82:20"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe/test-results/v2582-2-5-8-2-en-narrow-ph-63ff9-vitation-or-another-control-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe/test-results/v2582-2-5-8-2-en-narrow-ph-63ff9-vitation-or-another-control-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe/test-results/v2582-2-5-8-2-en-narrow-ph-63ff9-vitation-or-another-control-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 88,
+      "title": "3.1.1 the fixed approved grade applies once to each photograph and respects reduced motion",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 698,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 94,
+      "title": "3.1.1 legacy storage events cannot recolour actual rendered frames",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 962,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 47,
+      "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 66855,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "entering",
+              "contentType": "image/png",
+              "bodyBytes": 3081076,
+              "bodySha256": "4e5d7fd31f6a84760a6f31f6a62e1bd27b54e684735c1df4777f9965268d295d"
+            },
+            {
+              "name": "deepening",
+              "contentType": "image/png",
+              "bodyBytes": 2024092,
+              "bodySha256": "eee4e054d80ae08ed96942647323ff186ecc3730fb37a2ff7c531e8ede6e884e"
+            },
+            {
+              "name": "arriving",
+              "contentType": "image/png",
+              "bodyBytes": 2615204,
+              "bodySha256": "958d027c0384fadbfac8a9fc81e2ca76acb92d9f2044da34e2422b4601c5e4a9"
+            },
+            {
+              "name": "living-world",
+              "contentType": "image/png",
+              "bodyBytes": 3007708,
+              "bodySha256": "85e2857a4a257cb98febed7cf11e2255231abd4ae9196a2bdb89583fd0c10d99"
+            },
+            {
+              "name": "native-sequence-proof",
+              "contentType": "application/json",
+              "bodyBytes": 1124,
+              "bodySha256": "229f4901500b14dabbda840b47a1db689b482cf359e8069911b3cb15a331ec3b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 47,
+      "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 65786,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "entering",
+              "contentType": "image/png",
+              "bodyBytes": 778596,
+              "bodySha256": "976a9ed7885c69d2528376c5f2a8d32a7a7c8b7e564985ed895592a383d59dd6"
+            },
+            {
+              "name": "deepening",
+              "contentType": "image/png",
+              "bodyBytes": 515112,
+              "bodySha256": "0908431702831a410d0c70cbfa2c6a1ad8d9d7fca634e1d51bab9af1ac0010c4"
+            },
+            {
+              "name": "arriving",
+              "contentType": "image/png",
+              "bodyBytes": 682004,
+              "bodySha256": "e9090a65ce9a2a135d0235f02489e1c1f1bce4e07817207a430b05cfdb4b1cf1"
+            },
+            {
+              "name": "living-world",
+              "contentType": "image/png",
+              "bodyBytes": 644648,
+              "bodySha256": "228aa5e531420ae4e9c6b13cd08a1c66b5bc2ec23de3e47cf850ec0926c29a0b"
+            },
+            {
+              "name": "native-sequence-proof",
+              "contentType": "application/json",
+              "bodyBytes": 1128,
+              "bodySha256": "0525006856a3e8ef60ca66d5629238d8d8738f3091ad6c77ba06bbb5c21bdf60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1736,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1321,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 781,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 668,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1896,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1381,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 746,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 690,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1253,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /en/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1306,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /kas-ir-piepe/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 823,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /en/what-is-a-bracket-fungus/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1017,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 31,
+      "title": "3.1.1 lv: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1028,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 31,
+      "title": "3.1.1 en: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 979,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 38,
+      "title": "3.1.1 lv: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1107,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 38,
+      "title": "3.1.1 en: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1157,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 45,
+      "title": "3.1.1 lv: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 578,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 45,
+      "title": "3.1.1 en: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 526,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 51,
+      "title": "3.1.1 lv: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1014,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 51,
+      "title": "3.1.1 en: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 979,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 60,
+      "title": "3.1.1 the homepage never requests new full-resolution wallpaper downloads",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 661,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

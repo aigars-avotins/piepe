@@ -16,7 +16,7 @@ export function bindXray(section: HTMLElement) {
   let drag:{pointer:number;x:number;y:number;left:number;width:number;touch:boolean;moved:boolean}|undefined
   const position=(x:number)=>{if(drag){range.value=String(Math.round((x-drag.left)/drag.width*100));update()}}
   view.addEventListener('pointerdown',event=>{
-    if(event.button!==0||(event.target as HTMLElement).closest('a,button'))return
+    if(range.disabled||event.button!==0||(event.target as HTMLElement).closest('a,button'))return
     const rect=view.getBoundingClientRect()
     drag={pointer:event.pointerId,x:event.clientX,y:event.clientY,left:rect.left,width:rect.width,touch:event.pointerType==='touch',moved:false}
     view.setPointerCapture(event.pointerId);range.focus({preventScroll:true})
@@ -28,12 +28,12 @@ export function bindXray(section: HTMLElement) {
     if(drag.touch&&!drag.moved&&(Math.abs(dx)<6||Math.abs(dx)<=Math.abs(dy)*1.2))return
     drag.moved=true;position(event.clientX)
   },options)
-  const stop=()=>{drag=undefined}
+  const stop=()=>{const pointer=drag?.pointer;drag=undefined;if(pointer!==undefined&&view.hasPointerCapture(pointer))view.releasePointerCapture(pointer)}
   view.addEventListener('pointerup',stop,options);view.addEventListener('pointercancel',stop,options);view.addEventListener('lostpointercapture',stop,options)
   const points=[...section.querySelectorAll<HTMLAnchorElement>('[data-xray-point]')]
   const stories=[...section.querySelectorAll<HTMLElement>('[data-xray-story]')]
   const select=(index:number,focus=false)=>{
-    points.forEach((point,i)=>{point.setAttribute('aria-selected',String(i===index));point.tabIndex=i===index?0:-1})
+    points.forEach((point,i)=>{point.setAttribute('aria-selected',String(i===index));point.tabIndex=i===index&&!range.disabled?0:-1})
     stories.forEach((story,i)=>{story.hidden=i!==index;story.toggleAttribute('data-current',i===index)})
     const status=section.querySelector<HTMLElement>('[data-xray-selection]')
     if(status)status.textContent=points[index].getAttribute('aria-label')
@@ -42,15 +42,22 @@ export function bindXray(section: HTMLElement) {
   section.querySelector('[data-xray-points]')!.setAttribute('role','tablist')
   points.forEach((point,index)=>{
     point.setAttribute('role','tab');stories[index].setAttribute('role','tabpanel');stories[index].setAttribute('aria-labelledby',point.id)
-    point.addEventListener('click',event=>{event.preventDefault();select(index,true)},options)
+    point.addEventListener('click',event=>{event.preventDefault();if(!range.disabled)select(index,true)},options)
     point.addEventListener('keydown',event=>{
+      if(range.disabled)return
       const next=event.key==='Home'?0:event.key==='End'?points.length-1:event.key==='ArrowRight'?(index+1)%points.length:event.key==='ArrowLeft'?(index+points.length-1)%points.length:-1
       if(next>=0){event.preventDefault();select(next,true)}
     },options)
   })
   const deepLink=()=>{const index=stories.findIndex(story=>'#'+story.id===location.hash);if(index>=0)select(index)}
   select(Math.max(0,stories.findIndex(story=>'#'+story.id===location.hash)));window.addEventListener('hashchange',deepLink,options)
-  update();window.addEventListener('pageshow',update,options);section.dataset.enhanced='true';range.disabled=false
+  const available=()=>{
+    const ready=view.hasAttribute('data-images-ready')&&!view.hasAttribute('data-image-error')
+    range.disabled=!ready;if(!ready)stop()
+    points.forEach(point=>{point.setAttribute('aria-disabled',String(!ready));point.tabIndex=ready&&point.getAttribute('aria-selected')==='true'?0:-1})
+  }
+  section.addEventListener('raster:ready',available,options);section.addEventListener('raster:state',available,options)
+  update();available();window.addEventListener('pageshow',update,options);section.dataset.enhanced='true'
   return()=>{abort.abort();stop();delete section.dataset.enhanced;range.disabled=true;section.querySelector('[data-xray-points]')!.removeAttribute('role');stories.forEach(story=>{story.hidden=false;story.removeAttribute('role');story.removeAttribute('aria-labelledby')});points.forEach(point=>{point.removeAttribute('role');point.removeAttribute('aria-selected');point.removeAttribute('tabindex')})}
 }
 
@@ -80,7 +87,7 @@ export function bindAtlas(section: HTMLElement) {
     const atPointer = (event: PointerEvent) => { const b = image.getBoundingClientRect(); show((event.clientX - b.left) / b.width, (event.clientY - b.top) / b.height) }
     picture.addEventListener('dragstart', event => event.preventDefault(), options)
     picture.addEventListener('pointerdown', event => {
-      if (event.button !== 0 || (event.target as Element).closest('a,button')) return
+      if (button.disabled || event.button !== 0 || (event.target as Element).closest('a,button')) return
       if (event.pointerType === 'touch' && !event.isPrimary) { hide(); return }
       if (event.pointerType === 'touch') picture.setPointerCapture(event.pointerId)
       picture.focus({ preventScroll: true }); atPointer(event)
@@ -90,12 +97,14 @@ export function bindAtlas(section: HTMLElement) {
     picture.addEventListener('pointerleave', hide, options); picture.addEventListener('pointercancel', hide, options)
     picture.addEventListener('focus', () => show(.5, .5), options); picture.addEventListener('blur', hide, options)
     picture.addEventListener('keydown', event => {
+      if(button.disabled)return
       const dx = event.key === 'ArrowRight' ? .05 : event.key === 'ArrowLeft' ? -.05 : 0
       const dy = event.key === 'ArrowDown' ? .05 : event.key === 'ArrowUp' ? -.05 : 0
       if (event.key === 'Home') { event.preventDefault(); show(.5, .5) }
       else if (dx || dy) { event.preventDefault(); show(x + dx, y + dy) }
     }, options)
     button.addEventListener('click', () => {
+      if(button.disabled)return
       hide(); opener = button; comparison.replaceChildren()
       for (const item of [card, ...cards.filter(other => other !== card)]) {
         const original = item.querySelector<HTMLImageElement>('img[data-interactive-image]')!, figure = document.createElement('figure'), photo = document.createElement('img'), caption = document.createElement('figcaption')
@@ -109,7 +118,13 @@ export function bindAtlas(section: HTMLElement) {
       }
       dialog.showModal()
     }, options)
-    picture.tabIndex = 0; button.hidden = false; button.disabled = false
+    const available=()=>{
+      const ready=picture.hasAttribute('data-images-ready')&&image.dataset.imageState==='ready'
+      picture.tabIndex=ready?0:-1;button.disabled=!ready
+      if(!ready)hide()
+    }
+    picture.addEventListener('raster:ready',available,options);picture.addEventListener('raster:state',available,options)
+    button.hidden = false;available()
   })
   dialog.querySelector('[data-atlas-close]')!.addEventListener('click', () => dialog.close(), options)
   dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close() } }, options)
