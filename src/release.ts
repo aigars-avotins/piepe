@@ -1,2 +1,2 @@
-export const releaseVersion='3.1.1'
-export const releaseMilestone='3.1'
+export const releaseVersion='3.2.0'
+export const releaseMilestone='3.2'

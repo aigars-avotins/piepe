@@ -275,7 +275,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     {awakening !== 'idle' && !discovery && <div className="awakening-controls" role="region" aria-label={t.awakening}>
       <button className="text-button skip-awakening" onClick={skipAwakening}><ControlText>{t.skipAwakening}</ControlText> <Arrow direction="right" /></button>
     </div>}
-    <img className="asset-monitor" src={mediaUrl('/media/forest-final.jpg')} alt="" aria-hidden="true" onError={() => { setImageFailed(true); finish('image-error') }} />
+    <img loading="lazy" fetchPriority="low" className="asset-monitor" src={mediaUrl('/media/forest-final.jpg')} alt="" aria-hidden="true" onError={() => { setImageFailed(true); finish('image-error') }} />
     <header className="site-header">
       <SiteLink className="brand" href="#forest" onClick={returnToForest} aria-label={t.homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></SiteLink>
       <span className="header-caption">{t.forest}</span><LanguageSwitch locale={locale} onChange={changeLocale} />
