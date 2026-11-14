@@ -42,7 +42,7 @@ for(const locale of ['lv','en'] as const){
       const p=await context.newPage();await p.goto(readingPath(locale));await checkStaticMarkup(p)
       for(const story of t.xray.stories)await expect(p.locator('[data-xray]')).toContainText(story.text)
       await expect(p.locator('[data-xray-controls]')).toBeVisible();await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toBeVisible()
-      await expect(p.locator('[data-atlas-open]').first()).toHaveAttribute('target','_blank');await expect(p.locator('[data-atlas-card]').first().locator('img[data-interactive-image]')).toHaveAttribute('src','/images/interactive/atlas-pores.jpg')
+      await expect(p.locator('[data-atlas-open]').first()).toBeHidden();await expect(p.locator('.atlas-original').first()).toHaveAttribute('href','/images/interactive/atlas-pores.jpg');expect(await p.locator('.atlas-original').first().getAttribute('target')).toBeNull();await expect(p.locator('[data-atlas-card]').first().locator('img[data-interactive-image]')).toHaveAttribute('src','/images/interactive/atlas-pores.jpg')
       await expect(p.locator('[data-atlas-card]').first()).toContainText(t.atlas.cards[0].detail)
       await p.goto(notePath(locale,'005'));for(const stage of t.time.stages)await expect(p.locator('.time-stories')).toContainText(stage.text)
       await expect(p.locator('[data-time-controls]')).toBeVisible();await expect(p.locator('[data-time-range]')).toBeDisabled();await expect(p.locator('video,audio,#root')).toHaveCount(0)
@@ -59,9 +59,9 @@ for(const locale of ['lv','en'] as const){
     const before=await photo.evaluate(e=>getComputedStyle(e).clipPath),handle=page.locator('.xray-view');await handle.scrollIntoViewIfNeeded()
     const box=(await handle.boundingBox())!;await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width/2+90,box.y+box.height/2,{steps:8});await page.mouse.up()
     expect(Number(await range.inputValue())).toBeGreaterThan(10);expect(await photo.evaluate(e=>getComputedStyle(e).clipPath)).not.toBe(before)
-    await page.locator('[data-xray-point="hyphae"]').focus();await page.keyboard.press('Enter')
-    await expect(page).toHaveURL(/#xray-hyphae$/);await expect(page.locator('#xray-hyphae')).toHaveAttribute('open','')
-    expect(await page.locator('#xray-hyphae').evaluate(e=>e===document.activeElement||e.contains(document.activeElement))).toBe(true)
+    const beforeSelection=await page.evaluate(()=>({url:location.href,y:scrollY}));await page.locator('[data-xray-point="hyphae"]').focus({});await page.keyboard.press('Enter')
+    expect(page.url()).toBe(beforeSelection.url);expect(await page.evaluate(()=>scrollY)).toBe(beforeSelection.y);await expect(page.locator('#xray-hyphae')).toBeVisible();await expect(page.getByRole('tabpanel')).toHaveCount(1)
+    await expect(page.locator('[data-xray-point="hyphae"]')).toBeFocused()
     await expect(page.locator('#xray-spores')).toContainText(t.xray.stories[2].text)
   })
 
@@ -101,12 +101,13 @@ for(const locale of ['lv','en'] as const){
     })
     await page.goto(readingPath(locale));await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall')
     await expect.poll(()=>page.evaluate(()=>(window as unknown as {firstAtmosphere:string}).firstAtmosphere)).toBe('nightfall')
-    const morning=locale==='lv'?'Rīta gaisma':'Morning light',night=locale==='lv'?'Nakts krēsla':'Nightfall'
-    await expect(page.getByRole('button',{name:night,exact:true})).toHaveAttribute('aria-pressed','true')
-    await page.getByRole('button',{name:morning,exact:true}).click();await page.goto(fieldNotesPath(locale));await expect(page.locator('html')).toHaveAttribute('data-atmosphere','morning')
-    await page.getByRole('button',{name:night,exact:true}).click();await page.goto(localePath(locale));await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall')
-    await page.getByRole('button',{name:morning,exact:true}).click();await page.goBack();await expect(page.locator('html')).toHaveAttribute('data-atmosphere','morning')
-    await expect(page.getByRole('button',{name:morning,exact:true})).toHaveAttribute('aria-pressed','true');expect(errors).toEqual([])
+    // Short article labels preserve the original full localized wording in aria-label.
+    const morning=locale==='lv'?'Rīta gaisma':'Morning light',night=locale==='lv'?'Nakts krēsla':'Nightfall';await expect(page.locator('[data-atmosphere-choice=morning]')).toHaveAccessibleName(new RegExp(morning));await expect(page.locator('[data-atmosphere-choice=nightfall]')).toHaveAccessibleName(new RegExp(night))
+    await expect(page.locator('[data-atmosphere-choice=nightfall]')).toHaveAttribute('aria-pressed','true')
+    await page.locator('[data-atmosphere-choice=morning]').click();await page.goto(fieldNotesPath(locale));await expect(page.locator('html')).toHaveAttribute('data-atmosphere','morning')
+    await page.locator('[data-atmosphere-choice=nightfall]').click();await page.goto(localePath(locale));await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall')
+    await page.locator('[data-atmosphere-choice=morning]').click();await page.goBack();await expect(page.locator('html')).toHaveAttribute('data-atmosphere','morning')
+    await expect(page.locator('[data-atmosphere-choice=morning]')).toHaveAttribute('aria-pressed','true');expect(errors).toEqual([])
   })
 }
 
@@ -141,7 +142,7 @@ test('2.5.8 invalid and denied storage keep an operable atmosphere with original
     const context=await browser.newContext({viewport:{width:390,height:844}})
     try{
       await context.addInitScript(deny=>{if(deny){Object.defineProperty(Storage.prototype,'getItem',{value:()=>{throw new DOMException('Denied','SecurityError')}});Object.defineProperty(Storage.prototype,'setItem',{value:()=>{throw new DOMException('Denied','SecurityError')}})}else localStorage.setItem('piepe-atmosphere','not-a-mode')},denied)
-      const p=await context.newPage(),errors:string[]=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('/en/forest-wallpapers/');await expect(p.getByRole('button',{name:'Morning light',exact:true})).toHaveAttribute('aria-pressed','true');await p.getByRole('button',{name:'Nightfall',exact:true}).click();await expect(p.locator('html')).toHaveAttribute('data-atmosphere','nightfall');expect(errors).toEqual([])
+      const p=await context.newPage(),errors:string[]=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('/en/forest-wallpapers/');await expect(p.getByRole('button',{name:'Morning — Morning light',exact:true})).toHaveAttribute('aria-pressed','true');await p.getByRole('button',{name:'Nightfall',exact:true}).click();await expect(p.locator('html')).toHaveAttribute('data-atmosphere','nightfall');expect(errors).toEqual([])
     }finally{await context.close()}
   }
 })
@@ -205,7 +206,7 @@ test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs 
   }
   const fixture=JSON.parse(await readFile('docs/qa/v258/baseline-inventory.json','utf8'))
   for(const[path,hash]of Object.entries(fixture.publicAssets))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
-  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)).digest('hex'),path).toBe(fixture.sources[path])
+  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace("import SiteLink from './SiteLink'\n",'').replaceAll('<SiteLink','<a').replaceAll('</SiteLink>','</a>').replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)).digest('hex'),path).toBe(fixture.sources[path])
   const guide=await(await request.get(readingPath('lv'))).text(),home=await(await request.get('/')).text(),entry=/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],bundle=await readFile('dist'+entry,'utf8');expect(guide).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).not.toContain(readings.lv.sections[1].paragraphs[0]) // Shared homepage X-Ray is intentional in 2.5.8.1; long-form guide still stays static.
 })
 

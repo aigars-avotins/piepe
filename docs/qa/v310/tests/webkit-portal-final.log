@@ -1,0 +1,82 @@
+
+> piepe@3.1.0 test
+> playwright test tests/v310-portal.spec.ts tests/v300.spec.ts --project=webkit-iphone --grep threshold|quiet|reduced|save-data|invitation shade|slow in-flight
+
+
+Running 18 tests using 1 worker
+
+(node:34430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   1 [webkit-iphone] › tests/v300.spec.ts:24:52 › 3.0 reduced: direct still world, no automatic movies, safe return and re-entry (7.0s)
+  ✓   2 [webkit-iphone] › tests/v300.spec.ts:24:52 › 3.0 save-data: direct still world, no automatic movies, safe return and re-entry (7.7s)
+  ✓   3 [webkit-iphone] › tests/v300.spec.ts:38:1 › 3.0 slow in-flight decode can be exited immediately and cannot reopen the portal (7.0s)
+  ✘   4 [webkit-iphone] › tests/v300.spec.ts:74:1 › 3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world (11.8s)
+(node:34961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   5 [webkit-iphone] › tests/v300.spec.ts:84:2 › 3.0 quiet phone resize › 3.0 quiet-world fullscreen follows the actual viewport while native body scrolling is locked (13.7s)
+  ✓   6 [webkit-iphone] › tests/v300.spec.ts:96:1 › 3.0 invitation shade leaves with its copy while the next film is still preparing (8.0s)
+  ✓   7 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 320x568 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (4.1s)
+  ✓   8 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 390x844 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (5.2s)
+  ✓   9 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 844x390 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (4.3s)
+  ✓  10 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 800x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (5.9s)
+  ✓  11 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 1440x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (6.7s)
+  ✓  12 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 1512x982 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (6.6s)
+  ✓  13 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 320x568 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (4.1s)
+  ✓  14 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 390x844 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (5.0s)
+  ✓  15 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 844x390 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (4.4s)
+  ✓  16 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 800x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (5.5s)
+  ✓  17 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 1440x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (6.0s)
+  ✓  18 [webkit-iphone] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 1512x982 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (8.8s)
+
+
+  1) [webkit-iphone] › tests/v300.spec.ts:74:1 › 3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.fungus-portal')
+    Expected: "entering"
+    Received: "error"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.fungus-portal') with timeout 5000ms
+      - waiting for locator('.fungus-portal')
+        3 × locator resolved to <dialog open="" class="fungus-portal" data-portal-cycles="0" data-portal-clean="false" data-portal-static="false" data-portal-paused="false" aria-describedby="portal-art" data-portal-invitation="false" data-portal-still-ready="true" aria-labelledby="portal-title" data-portal-phase="portal-ready" data-portal-still-presented="true">…</dialog>
+          - unexpected value "portal-ready"
+        11 × locator resolved to <dialog open="" class="fungus-portal" data-portal-cycles="0" data-portal-phase="error" data-portal-clean="false" data-portal-paused="true" data-portal-static="false" aria-describedby="portal-art" data-portal-invitation="false" data-portal-still-ready="true" aria-labelledby="portal-title" data-portal-still-presented="true">…</dialog>
+           - unexpected value "error"
+
+
+      73 | })
+      74 | test('3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world',async({page})=>{
+    > 75 |  await page.addInitScript(()=>Object.defineProperty(navigator,'connection',{value:{saveData:true},configurable:true}));const movies:string[]=[];page.on('request',r=>{if(/portal-.*\.mp4/.test(r.url()))movies.push(r.url())});await page.goto('/en/#encounter');await page.locator('[data-portal-entry]').click();const portal=page.locator('.fungus-portal');await portal.getByRole('button',{name:'Play the full-quality journey',exact:true}).click();await expect(portal).toHaveAttribute('data-portal-phase','entering');await portal.getByRole('button',{name:'Go straight to the living world',exact:true}).click();await expect(portal).toHaveAttribute('data-portal-static','false');await expect(portal).toHaveAttribute('data-portal-phase','living-world');const video=portal.locator('[data-portal-clip="3"] video');await expect.poll(()=>video.evaluate((v:HTMLVideoElement)=>v.currentTime)).toBeGreaterThan(.3)
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+      76 |  for(const [width,height]of [[390,844],[844,390]]){await page.setViewportSize({width,height});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));await expect.poll(()=>video.evaluate(e=>{const r=e.getBoundingClientRect();return r.width>=(visualViewport?.width??innerWidth)&&r.height>=(visualViewport?.height??innerHeight)})).toBe(true);const box=await video.evaluate(e=>{const r=e.getBoundingClientRect();return {width:r.width,height:r.height,fit:getComputedStyle(e).objectFit}});const visible=await page.evaluate(()=>({width:visualViewport?.width??innerWidth,height:visualViewport?.height??innerHeight}));expect(box.width).toBeGreaterThanOrEqual(visible.width);expect(box.height).toBeGreaterThanOrEqual(visible.height);for(const b of await portal.locator('button:visible').evaluateAll(es=>es.map(e=>e.getBoundingClientRect()).map(r=>({top:r.top,bottom:r.bottom})))){expect(b.top).toBeGreaterThanOrEqual(0);expect(b.bottom).toBeLessThanOrEqual(visible.height+1)}expect(box.fit).toBe('cover');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await expect(portal.getByRole('button',{name:'Exit',exact:true})).toBeInViewport({ratio:1})}
+      77 |  expect(movies.every(url=>/portal-(02|05)-faststart\.mp4/.test(url))).toBe(true);await page.keyboard.press('Escape');await expect(portal).toHaveCount(0)
+      78 | })
+        at /workspace/piepe/tests/v300.spec.ts:75:464
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v300-3-0-save-data-full-qu-062ab-e-a-moving-full-bleed-world-webkit-iphone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v300-3-0-save-data-full-qu-062ab-e-a-moving-full-bleed-world-webkit-iphone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v300-3-0-save-data-full-qu-062ab-e-a-moving-full-bleed-world-webkit-iphone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v300-3-0-save-data-full-qu-062ab-e-a-moving-full-bleed-world-webkit-iphone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [webkit-iphone] › tests/v300.spec.ts:74:1 › 3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world 
+  17 passed (2.1m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

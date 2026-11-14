@@ -1,0 +1,26 @@
+
+> piepe@3.1.0 test
+> playwright test tests/photo-clock.spec.ts tests/cinema.spec.ts tests/v251.spec.ts --project=chrome-desktop --grep late preparation|intro then awakening final frame|2.5.1 reverse 1512x982.*lv:|2.5.1 reverse 390x844.*en: --output=/workspace/piepe31-qa/original-cinema-results --reporter=list
+
+
+Running 6 tests using 1 worker
+
+(node:36121) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Photo camera 1512x982: 49 moving frames; maximum projected width error 0.0002 CSS pixels
+  ✓  1 [chrome-desktop] › tests/cinema.spec.ts:130:80 › 1512x982 rendering › intro then awakening final frame docks and returns continuously at 1512x982 (19.6s)
+Photo camera 390x664: 56 moving frames; maximum projected width error 0.0001 CSS pixels
+  ✓  2 [chrome-desktop] › tests/cinema.spec.ts:130:80 › 390x664 rendering › intro then awakening final frame docks and returns continuously at 390x664 (16.8s)
+  ✓  3 [chrome-desktop] › tests/photo-clock.spec.ts:7:3 › photo clock 1512x982 › late preparation preserves the beginning of the camera trajectory (4.2s)
+  ✓  4 [chrome-desktop] › tests/photo-clock.spec.ts:7:3 › photo clock 390x664 › late preparation preserves the beginning of the camera trajectory (3.4s)
+(node:36467) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [chrome-desktop] › tests/v251.spec.ts:112:38 › 2.5.1 reverse 1512x982 › lv: bottom to top stays a single forest after refresh and three native returns (26.2s)
+  ✓  6 [chrome-desktop] › tests/v251.spec.ts:112:38 › 2.5.1 reverse 390x844 › en: bottom to top stays a single forest after refresh and three native returns (21.9s)
+
+  6 passed (1.6m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

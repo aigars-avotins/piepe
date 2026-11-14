@@ -1,0 +1,57 @@
+{
+  "mode": "stall",
+  "elapsedMs": 24746,
+  "requests": [
+    {
+      "range": "bytes=0-1",
+      "status": 206,
+      "contentRange": "bytes 0-1/12233601",
+      "bytes": 2
+    },
+    {
+      "range": "bytes=0-1",
+      "status": 206,
+      "contentRange": "bytes 0-1/12233601",
+      "bytes": 2
+    },
+    {
+      "range": "bytes=0-12233600",
+      "status": 206,
+      "contentRange": "bytes 0-12233600/12233601",
+      "bytes": 12233601
+    },
+    {
+      "range": "bytes=16384-540671",
+      "status": 206,
+      "contentRange": "bytes 16384-540671/12233601",
+      "bytes": 524288
+    },
+    {
+      "range": "bytes=0-1",
+      "status": 206,
+      "contentRange": "bytes 0-1/12233601",
+      "bytes": 2
+    },
+    {
+      "range": "bytes=0-12233600",
+      "status": 206,
+      "contentRange": "bytes 0-12233600/12233601",
+      "bytes": 12233601
+    }
+  ],
+  "sent": [
+    {
+      "at": 0,
+      "bytes": 8335
+    },
+    {
+      "at": 8769,
+      "bytes": 16384
+    }
+  ],
+  "media": {
+    "focus": true,
+    "visibility": "visible",
+    "videos": []
+  }
+}

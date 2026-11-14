@@ -1,0 +1,741 @@
+Lightweight checks	Set up job	﻿2026-11-14T07:33:52.9294735Z Current runner version: '2.338.2'
+Lightweight checks	Set up job	2026-11-14T07:33:52.9321237Z ##[group]Runner Image Provisioner
+Lightweight checks	Set up job	2026-11-14T07:33:52.9322220Z Hosted Compute Agent
+Lightweight checks	Set up job	2026-11-14T07:33:52.9323026Z Version: 20261103.629
+Lightweight checks	Set up job	2026-11-14T07:33:52.9323682Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+Lightweight checks	Set up job	2026-11-14T07:33:52.9324449Z Build Date: 2026-11-03T17:26:59Z
+Lightweight checks	Set up job	2026-11-14T07:33:52.9325136Z Worker ID: {3f85eb1c-2ed9-4e82-bd9a-9b0790a9db57}
+Lightweight checks	Set up job	2026-11-14T07:33:52.9325859Z Region: us-east-1
+Lightweight checks	Set up job	2026-11-14T07:33:52.9326384Z Cloud: AWS
+Lightweight checks	Set up job	2026-11-14T07:33:52.9326884Z ##[endgroup]
+Lightweight checks	Set up job	2026-11-14T07:33:52.9328856Z ##[group]Operating System
+Lightweight checks	Set up job	2026-11-14T07:33:52.9329495Z Ubuntu
+Lightweight checks	Set up job	2026-11-14T07:33:52.9330038Z 24.04.5
+Lightweight checks	Set up job	2026-11-14T07:33:52.9330525Z LTS
+Lightweight checks	Set up job	2026-11-14T07:33:52.9331033Z ##[endgroup]
+Lightweight checks	Set up job	2026-11-14T07:33:52.9331610Z ##[group]Runner Image
+Lightweight checks	Set up job	2026-11-14T07:33:52.9332260Z Image: ubuntu-24.04
+Lightweight checks	Set up job	2026-11-14T07:33:52.9332808Z Version: 20261111.127.1
+Lightweight checks	Set up job	2026-11-14T07:33:52.9333895Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.127/images/ubuntu/Ubuntu2404-Readme.md
+Lightweight checks	Set up job	2026-11-14T07:33:52.9335669Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.127
+Lightweight checks	Set up job	2026-11-14T07:33:52.9336634Z ##[endgroup]
+Lightweight checks	Set up job	2026-11-14T07:33:52.9337761Z ##[group]GITHUB_TOKEN Permissions
+Lightweight checks	Set up job	2026-11-14T07:33:52.9340664Z Contents: read
+Lightweight checks	Set up job	2026-11-14T07:33:52.9341301Z Metadata: read
+Lightweight checks	Set up job	2026-11-14T07:33:52.9341851Z ##[endgroup]
+Lightweight checks	Set up job	2026-11-14T07:33:52.9344008Z Secret source: Actions
+Lightweight checks	Set up job	2026-11-14T07:33:52.9344931Z Cache mode: write
+Lightweight checks	Set up job	2026-11-14T07:33:52.9345799Z Prepare workflow directory
+Lightweight checks	Set up job	2026-11-14T07:33:52.9671266Z Prepare all required actions
+Lightweight checks	Set up job	2026-11-14T07:33:52.9724111Z Getting action download info
+Lightweight checks	Set up job	2026-11-14T07:33:53.1337655Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Lightweight checks	Set up job	2026-11-14T07:33:55.1893492Z Download action repository 'actions/setup-node@v7' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+Lightweight checks	Set up job	2026-11-14T07:33:55.5187376Z Complete job name: Lightweight checks
+Lightweight checks	Run actions/checkout@v7	﻿2026-11-14T07:33:55.5914289Z ##[group]Run actions/checkout@v7
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5915487Z with:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5916202Z   repository: aigars-avotins/piepe
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5922780Z   token: ***
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5923475Z   ssh-strict: true
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5924144Z   ssh-user: git
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5924859Z   persist-credentials: true
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5925627Z   clean: true
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5926381Z   sparse-checkout-cone-mode: true
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5927248Z   fetch-depth: 1
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5927912Z   fetch-tags: false
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5928799Z   show-progress: true
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5929510Z   lfs: false
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5930181Z   submodules: false
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5930917Z   set-safe-directory: true
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5931712Z   allow-unsafe-pr-checkout: false
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:55.5932732Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.2832842Z Syncing repository: aigars-avotins/piepe
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.2834235Z ##[group]Getting Git version info
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.2834875Z Working directory is '/home/runner/work/piepe/piepe'
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.2835923Z [command]/usr/bin/git version
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5548426Z git version 2.56.1
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5562870Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5571538Z Temporarily overriding HOME='/home/runner/work/_temp/d0dfd2c8-42ea-473c-a2f7-f688b023ec64' before making global git config changes
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5572569Z Adding repository directory to the temporary git global config as a safe directory
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5575718Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/piepe/piepe
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5933530Z Deleting the contents of '/home/runner/work/piepe/piepe'
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5936082Z ##[group]Determining repository object format
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5937184Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5937878Z ##[group]Initializing the repository
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.5941814Z [command]/usr/bin/git init /home/runner/work/piepe/piepe
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6761204Z hint: Using 'master' as the name for the initial branch. This default branch name
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6762538Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6763126Z hint: to use in all of your new repositories, which will suppress this warning,
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6763507Z hint: call:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6763775Z hint:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6764154Z hint: 	git config --global init.defaultBranch <name>
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6764494Z hint:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6764823Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6765294Z hint: 'development'. The just-created branch can be renamed via this command:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6765659Z hint:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6765944Z hint: 	git branch -m <name>
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6766273Z hint:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6766823Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6767544Z Initialized empty Git repository in /home/runner/work/piepe/piepe/.git/
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6777451Z [command]/usr/bin/git remote add origin https://github.com/aigars-avotins/piepe
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6821636Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6822142Z ##[group]Disabling automatic garbage collection
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6823971Z [command]/usr/bin/git config --local gc.auto 0
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6849514Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6850123Z ##[group]Setting up auth
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6850486Z Removing SSH command configuration
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6852890Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:33:59.6879718Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1052794Z Removing HTTP extra header
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1058506Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1093182Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1235960Z Removing includeIf entries pointing to credentials config files
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1240973Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1267443Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1430281Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1445347Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/piepe/piepe/.git.path /home/runner/work/_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1467316Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/piepe/piepe/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1489266Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1511464Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1532858Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1533419Z ##[group]Fetching the repository
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:00.1537725Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1e1dd701e1c91bbda9468092a3e0f44a359c4e4e:refs/remotes/origin/codex/piepe-v310
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2768272Z From https://github.com/aigars-avotins/piepe
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2768875Z  * [new ref]         1e1dd701e1c91bbda9468092a3e0f44a359c4e4e -> origin/codex/piepe-v310
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2795640Z [command]/usr/bin/git branch --list --remote origin/codex/piepe-v310
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2813701Z   origin/codex/piepe-v310
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2826977Z [command]/usr/bin/git rev-parse refs/remotes/origin/codex/piepe-v310
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2842481Z 1e1dd701e1c91bbda9468092a3e0f44a359c4e4e
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2844307Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2844953Z ##[group]Determining the checkout info
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2845566Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2849596Z [command]/usr/bin/git sparse-checkout disable
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2909632Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2932180Z ##[group]Checking out the ref
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:16.2934808Z [command]/usr/bin/git checkout --progress --force -B codex/piepe-v310 refs/remotes/origin/codex/piepe-v310
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.4151638Z Updating files:  78% (881/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.5157611Z Updating files:  79% (889/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.5319664Z Updating files:  80% (900/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.5323132Z Updating files:  81% (912/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.5690495Z Updating files:  82% (923/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.5742717Z Updating files:  83% (934/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.5800481Z Updating files:  84% (945/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.5992578Z Updating files:  85% (957/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.6647284Z Updating files:  86% (968/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.6851606Z Updating files:  87% (979/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7492071Z Updating files:  88% (990/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7562001Z Updating files:  89% (1002/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7563367Z Updating files:  90% (1013/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7908388Z Updating files:  91% (1024/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7908945Z Updating files:  92% (1035/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7913710Z Updating files:  93% (1047/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7917265Z Updating files:  94% (1058/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7921104Z Updating files:  95% (1069/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7929333Z Updating files:  96% (1080/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7933308Z Updating files:  97% (1092/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7940072Z Updating files:  98% (1103/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7944374Z Updating files:  99% (1114/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7944821Z Updating files: 100% (1125/1125)
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7945672Z Updating files: 100% (1125/1125), done.
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7987832Z Switched to a new branch 'codex/piepe-v310'
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.7996337Z branch 'codex/piepe-v310' set up to track 'origin/codex/piepe-v310'.
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.8069094Z ##[endgroup]
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.8115702Z [command]/usr/bin/git log -1 --format=%H
+Lightweight checks	Run actions/checkout@v7	2026-11-14T07:34:17.8137571Z 1e1dd701e1c91bbda9468092a3e0f44a359c4e4e
+Lightweight checks	Run actions/setup-node@v7	﻿2026-11-14T07:34:17.8347012Z ##[group]Run actions/setup-node@v7
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:17.8347281Z with:
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:17.8347502Z   node-version: 24
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:17.8347722Z   cache: npm
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:17.8347945Z   check-latest: false
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:17.8349847Z   token: ***
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:17.8350121Z   package-manager-cache: true
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:17.8350387Z ##[endgroup]
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:18.0319329Z Found in cache @ /opt/hostedtoolcache/node/24.22.2/x64
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:19.4344149Z ##[group]Environment details
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:21.9788850Z node: v24.22.2
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:21.9790335Z npm: 11.19.1
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:21.9790862Z yarn: 1.22.22
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:21.9791971Z ##[endgroup]
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:21.9801805Z [command]/opt/hostedtoolcache/node/24.22.2/x64/bin/npm config get cache
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:22.2323929Z /home/runner/.npm
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:22.3099938Z Cache hit for: node-cache-Linux-x64-npm-19f00f927d4c71e7f74768b74dd351db947aee59c1137c5296a7b225e8ee7c52
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:22.9971834Z Received 99520848 of 99520848 (100.0%), 160.9 MBs/sec
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:22.9973181Z Cache Size: ~95 MB (99520848 B)
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:23.0029282Z [command]/usr/bin/tar -xf /home/runner/work/_temp/524b0b19-7f5f-4037-aa06-82b458946f4d/cache.tzst -P -C /home/runner/work/piepe/piepe --use-compress-program unzstd
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:23.0894186Z Cache restored successfully
+Lightweight checks	Run actions/setup-node@v7	2026-11-14T07:34:23.0937514Z Cache restored from key: node-cache-Linux-x64-npm-19f00f927d4c71e7f74768b74dd351db947aee59c1137c5296a7b225e8ee7c52
+Lightweight checks	Run npm ci	﻿2026-11-14T07:34:23.1110520Z ##[group]Run npm ci
+Lightweight checks	Run npm ci	2026-11-14T07:34:23.1110971Z [36;1mnpm ci[0m
+Lightweight checks	Run npm ci	2026-11-14T07:34:23.3163198Z shell: /usr/bin/bash -e {0}
+Lightweight checks	Run npm ci	2026-11-14T07:34:23.3163595Z ##[endgroup]
+Lightweight checks	Run npm ci	2026-11-14T07:34:27.7162331Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.0462789Z 
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.0464350Z added 216 packages, and audited 217 packages in 5s
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.0464791Z 
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.0465050Z 56 packages are looking for funding
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.0465483Z   run `npm fund` for details
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1721268Z 
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1722582Z 7 moderate severity vulnerabilities
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1723064Z 
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1723464Z To address all issues (including breaking changes), run:
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1724093Z   npm audit fix --force
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1724384Z 
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1724675Z Run `npm audit` for details.
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1729644Z npm warn install-scripts 2 packages have install scripts not yet covered by allowScripts:
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1730573Z npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1731249Z npm warn install-scripts   workerd@1.20261023.1 (postinstall: node install.js)
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1731811Z npm warn install-scripts
+Lightweight checks	Run npm ci	2026-11-14T07:34:28.1732641Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+Lightweight checks	TypeScript	﻿2026-11-14T07:34:28.2095157Z ##[group]Run npm run typecheck
+Lightweight checks	TypeScript	2026-11-14T07:34:28.2095500Z [36;1mnpm run typecheck[0m
+Lightweight checks	TypeScript	2026-11-14T07:34:28.2123280Z shell: /usr/bin/bash -e {0}
+Lightweight checks	TypeScript	2026-11-14T07:34:28.2123642Z ##[endgroup]
+Lightweight checks	TypeScript	2026-11-14T07:34:28.2883981Z 
+Lightweight checks	TypeScript	2026-11-14T07:34:28.2884994Z > piepe@3.1.0 typecheck
+Lightweight checks	TypeScript	2026-11-14T07:34:28.2885574Z > tsc --noEmit
+Lightweight checks	TypeScript	2026-11-14T07:34:28.2885703Z 
+Lightweight checks	ESLint	﻿2026-11-14T07:34:30.3793897Z ##[group]Run npm run lint
+Lightweight checks	ESLint	2026-11-14T07:34:30.3794217Z [36;1mnpm run lint[0m
+Lightweight checks	ESLint	2026-11-14T07:34:30.3821346Z shell: /usr/bin/bash -e {0}
+Lightweight checks	ESLint	2026-11-14T07:34:30.3821679Z ##[endgroup]
+Lightweight checks	ESLint	2026-11-14T07:34:30.4537014Z 
+Lightweight checks	ESLint	2026-11-14T07:34:30.4537675Z > piepe@3.1.0 lint
+Lightweight checks	ESLint	2026-11-14T07:34:30.4538450Z > eslint .
+Lightweight checks	ESLint	2026-11-14T07:34:30.4538663Z 
+Lightweight checks	Worker unit tests	﻿2026-11-14T07:34:33.9721433Z ##[group]Run npm run test:worker
+Lightweight checks	Worker unit tests	2026-11-14T07:34:33.9721759Z [36;1mnpm run test:worker[0m
+Lightweight checks	Worker unit tests	2026-11-14T07:34:33.9748923Z shell: /usr/bin/bash -e {0}
+Lightweight checks	Worker unit tests	2026-11-14T07:34:33.9749292Z ##[endgroup]
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.0468527Z 
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.0469209Z > piepe@3.1.0 test:worker
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.0469821Z > node --test tests/worker.test.ts tests/link-policy.unit.ts tests/redirect-graph.unit.ts
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.0470160Z 
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.1652706Z ✔ native same-site navigation, images, download URLs and non-web schemes stay in the current tab (1.035718ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.1700129Z ✔ external websites are isolated by parsed origin, including deceptive hostname/userinfo/port forms (0.842669ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.1701470Z ✔ modified or already-handled link activations remain browser-owned (0.262575ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.1820969Z ✔ relative, absolute and HTTP entry redirects preserve the intended site origin (1.032738ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.1822335Z ✔ loops, missing locations, protocol downgrades and deceptive origins fail the redirect gate (0.376441ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2191072Z ✔ full media and HEAD preserve headers and advertise ranges (24.792149ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2194093Z ✔ initial, open-ended, suffix and clamped byte ranges return exact content (3.948448ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2195238Z ✔ invalid bounds cannot produce a misleading successful response (1.103156ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2196383Z ✔ If-Range mismatch and unsupported multipart requests receive full media (0.617295ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2205186Z ✔ a matching If-Range receives partial content and missing assets remain 404 (0.670269ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2207567Z ✔ tiny ranges consume bounded chunks and cancel the upstream body (0.866984ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2209392Z ✔ asset subrequests are range-free and non-200 responses pass through (0.582468ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2210278Z ✔ unknown-size streams fall back to a legal full response (0.538783ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2464555Z ✔ Cloudflare-style missing Content-Length still supports suffix and invalid ranges for known media (29.77415ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.2485319Z ✔ build-time size metadata exactly matches the public media files (2.065987ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3344999Z ✔ all four cinematic assets retain exact suffix and bounded range delivery without upstream length (85.817082ms)
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3473859Z ℹ tests 16
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3474284Z ℹ suites 0
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3474554Z ℹ pass 16
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3474767Z ℹ fail 0
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3475050Z ℹ cancelled 0
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3475321Z ℹ skipped 0
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3475555Z ℹ todo 0
+Lightweight checks	Worker unit tests	2026-11-14T07:34:34.3475811Z ℹ duration_ms 273.68108
+Lightweight checks	Production build	﻿2026-11-14T07:34:34.3594248Z ##[group]Run npm run build
+Lightweight checks	Production build	2026-11-14T07:34:34.3594570Z [36;1mnpm run build[0m
+Lightweight checks	Production build	2026-11-14T07:34:34.3620524Z shell: /usr/bin/bash -e {0}
+Lightweight checks	Production build	2026-11-14T07:34:34.3620836Z ##[endgroup]
+Lightweight checks	Production build	2026-11-14T07:34:34.4332998Z 
+Lightweight checks	Production build	2026-11-14T07:34:34.4333529Z > piepe@3.1.0 build
+Lightweight checks	Production build	2026-11-14T07:34:34.4334615Z > node scripts/verify-portal-media.mjs && node scripts/media-sizes.mjs && npm run typecheck && vite build && node scripts/prerender.mjs && node scripts/check-navigation.mjs
+Lightweight checks	Production build	2026-11-14T07:34:34.4335068Z 
+Lightweight checks	Production build	2026-11-14T07:34:34.6392269Z Verified 20 original/source-quality portal assets
+Lightweight checks	Production build	2026-11-14T07:34:34.7314592Z 
+Lightweight checks	Production build	2026-11-14T07:34:34.7315175Z > piepe@3.1.0 typecheck
+Lightweight checks	Production build	2026-11-14T07:34:34.7315684Z > tsc --noEmit
+Lightweight checks	Production build	2026-11-14T07:34:34.7315900Z 
+Lightweight checks	Production build	2026-11-14T07:34:36.8863264Z [36mvite v7.3.7 [32mbuilding client environment for production...[36m[39m
+Lightweight checks	Production build	2026-11-14T07:34:36.9360177Z transforming...
+Lightweight checks	Production build	2026-11-14T07:34:37.8577639Z [32m✓[39m 84 modules transformed.
+Lightweight checks	Production build	2026-11-14T07:34:38.1781751Z rendering chunks...
+Lightweight checks	Production build	2026-11-14T07:34:38.1863489Z computing gzip size...
+Lightweight checks	Production build	2026-11-14T07:34:38.1986677Z [2mdist/[22m[32mindex.html                                                     [39m[1m[2m  1.16 kB[22m[1m[22m[2m │ gzip:   0.63 kB[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1988072Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-500-normal-dm74KBQw.woff2             [39m[1m[2m  8.19 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1989508Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-400-normal-CMDvPJRp.woff2             [39m[1m[2m  8.29 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1990674Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-500-normal-EtoS1VaI.woff              [39m[1m[2m 11.25 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1991724Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-400-normal-C-X6QNXX.woff              [39m[1m[2m 11.32 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1992684Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-500-normal-BYYD-dBL.woff2                 [39m[1m[2m 14.04 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1993720Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-400-normal-PaqtzbVb.woff2                 [39m[1m[2m 14.11 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1994764Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-500-normal-DMZssgOp.woff                  [39m[1m[2m 18.24 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1995898Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-400-normal-8tf8FM3T.woff                  [39m[1m[2m 18.29 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1997083Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2  [39m[1m[2m 19.89 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.1998735Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2  [39m[1m[2m 20.28 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2000139Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-normal-B-1hWBU7.woff2      [39m[1m[2m 22.88 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2001345Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2      [39m[1m[2m 23.66 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2002605Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-normal-uvC0WHQr.woff   [39m[1m[2m 27.93 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2004144Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-italic-CQvLaSWn.woff   [39m[1m[2m 28.72 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2005419Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-normal-B7YtguxJ.woff       [39m[1m[2m 30.98 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2006592Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-italic-BLh7T8o8.woff       [39m[1m[2m 32.89 kB[22m[1m[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2007835Z [2mdist/[22m[2massets/[22m[35mindex-MxVMY7ep.css                                      [39m[1m[2m 84.77 kB[22m[1m[22m[2m │ gzip:  17.50 kB[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2009356Z [2mdist/[22m[2massets/[22m[36mindex-DMxBzg8L.js                                       [39m[1m[2m451.38 kB[22m[1m[22m[2m │ gzip: 152.61 kB[22m
+Lightweight checks	Production build	2026-11-14T07:34:38.2010207Z [32m✓ built in 1.29s[39m
+Lightweight checks	Production build	2026-11-14T07:34:38.9474839Z Prerendered 20 localized cinema, guide, wallpaper and field-note documents with CSP hashes
+Lightweight checks	Production build	2026-11-14T07:34:39.0493775Z Verified native navigation policy for 420 anchors across 20 prerendered routes
+Lightweight checks	Post Run actions/setup-node@v7	﻿2026-11-14T07:34:39.0659045Z Post job cleanup.
+Lightweight checks	Post Run actions/setup-node@v7	2026-11-14T07:34:39.1521110Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-19f00f927d4c71e7f74768b74dd351db947aee59c1137c5296a7b225e8ee7c52, not saving cache.
+Lightweight checks	Post Run actions/checkout@v7	﻿2026-11-14T07:34:39.1629993Z Post job cleanup.
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2239301Z [command]/usr/bin/git version
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2275500Z git version 2.56.1
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2300001Z Temporarily overriding HOME='/home/runner/work/_temp/484412f9-54d8-47a8-a5e9-338e9b948761' before making global git config changes
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2301177Z Adding repository directory to the temporary git global config as a safe directory
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2303076Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/piepe/piepe
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2325171Z Removing SSH command configuration
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2329572Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2352846Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2517835Z Removing HTTP extra header
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2521624Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2544928Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2703577Z Removing includeIf entries pointing to credentials config files
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2708537Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2733224Z includeif.gitdir:/home/runner/work/piepe/piepe/.git.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2733826Z includeif.gitdir:/home/runner/work/piepe/piepe/.git/worktrees/*.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2734339Z includeif.gitdir:/github/workspace/.git.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2734756Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2739991Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/piepe/piepe/.git.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2757394Z /home/runner/work/_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2765963Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/piepe/piepe/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-977af77f\-981f\-4f85\-beca\-86ce041ad8f6\.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2792056Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/piepe/piepe/.git/worktrees/*.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2809059Z /home/runner/work/_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2823671Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/piepe/piepe/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-977af77f\-981f\-4f85\-beca\-86ce041ad8f6\.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2849206Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2867173Z /github/runner_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2877117Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-977af77f\-981f\-4f85\-beca\-86ce041ad8f6\.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2902407Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2921519Z /github/runner_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2928025Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-977af77f\-981f\-4f85\-beca\-86ce041ad8f6\.config
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.2953902Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Lightweight checks	Post Run actions/checkout@v7	2026-11-14T07:34:39.3101774Z Removing credentials config '/home/runner/work/_temp/git-credentials-977af77f-981f-4f85-beca-86ce041ad8f6.config'
+Lightweight checks	Complete job	﻿2026-11-14T07:34:39.3208997Z Cleaning up orphan processes
+webkit	Set up job	﻿2026-11-14T07:34:44.8043160Z Current runner version: '2.338.2'
+webkit	Set up job	2026-11-14T07:34:44.8101740Z ##[group]Runner Image Provisioner
+webkit	Set up job	2026-11-14T07:34:44.8104270Z Hosted Compute Agent
+webkit	Set up job	2026-11-14T07:34:44.8106060Z Version: 20260819.586
+webkit	Set up job	2026-11-14T07:34:44.8107760Z Commit: 3cc4a88dfa507ef76119ad1bb3eccc6378bb2b76
+webkit	Set up job	2026-11-14T07:34:44.8109640Z Build Date: 2026-08-18T23:20:18Z
+webkit	Set up job	2026-11-14T07:34:44.8111400Z Worker ID: {1b658f13-4de3-4fe1-afe2-2d0d7346a218}
+webkit	Set up job	2026-11-14T07:34:44.8113320Z Azure Region: westus
+webkit	Set up job	2026-11-14T07:34:44.8114840Z ##[endgroup]
+webkit	Set up job	2026-11-14T07:34:44.8120360Z ##[group]Operating System
+webkit	Set up job	2026-11-14T07:34:44.8121970Z macOS
+webkit	Set up job	2026-11-14T07:34:44.8123070Z 15.7.9
+webkit	Set up job	2026-11-14T07:34:44.8124370Z 24G830
+webkit	Set up job	2026-11-14T07:34:44.8125590Z ##[endgroup]
+webkit	Set up job	2026-11-14T07:34:44.8126780Z ##[group]Runner Image
+webkit	Set up job	2026-11-14T07:34:44.8128120Z Image: macos-15
+webkit	Set up job	2026-11-14T07:34:44.8129460Z Version: 20260824.0482.1
+webkit	Set up job	2026-11-14T07:34:44.8132460Z Included Software: https://github.com/actions/runner-images/blob/macos-15/20260824.0482/images/macos/macos-15-Readme.md
+webkit	Set up job	2026-11-14T07:34:44.8137250Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15%2F20260824.0482
+webkit	Set up job	2026-11-14T07:34:44.8140740Z ##[endgroup]
+webkit	Set up job	2026-11-14T07:34:44.8143750Z ##[group]GITHUB_TOKEN Permissions
+webkit	Set up job	2026-11-14T07:34:44.8150560Z Contents: read
+webkit	Set up job	2026-11-14T07:34:44.8152120Z Metadata: read
+webkit	Set up job	2026-11-14T07:34:44.8153420Z ##[endgroup]
+webkit	Set up job	2026-11-14T07:34:44.8158940Z Secret source: Actions
+webkit	Set up job	2026-11-14T07:34:44.8161100Z Cache mode: write
+webkit	Set up job	2026-11-14T07:34:44.8162890Z Prepare workflow directory
+webkit	Set up job	2026-11-14T07:34:44.8946870Z Prepare all required actions
+webkit	Set up job	2026-11-14T07:34:44.9068130Z Getting action download info
+webkit	Set up job	2026-11-14T07:34:45.2986640Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+webkit	Set up job	2026-11-14T07:34:45.5732940Z Download action repository 'actions/setup-node@v7' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+webkit	Set up job	2026-11-14T07:34:46.2178480Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+webkit	Set up job	2026-11-14T07:34:46.9851170Z Complete job name: webkit
+webkit	Run actions/checkout@v7	﻿2026-11-14T07:34:47.1929200Z ##[group]Run actions/checkout@v7
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1931540Z with:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1932730Z   repository: aigars-avotins/piepe
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1945720Z   token: ***
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1946890Z   ssh-strict: true
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1948050Z   ssh-user: git
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1949240Z   persist-credentials: true
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1950590Z   clean: true
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1951770Z   sparse-checkout-cone-mode: true
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1953220Z   fetch-depth: 1
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1954430Z   fetch-tags: false
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1955660Z   show-progress: true
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1956930Z   lfs: false
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1958050Z   submodules: false
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1959350Z   set-safe-directory: true
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1960760Z   allow-unsafe-pr-checkout: false
+webkit	Run actions/checkout@v7	2026-11-14T07:34:47.1963420Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.0967330Z Syncing repository: aigars-avotins/piepe
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.1080970Z ##[group]Getting Git version info
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.1298910Z Working directory is '/Users/runner/work/piepe/piepe'
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.1543760Z [command]/usr/local/bin/git version
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.2203930Z git version 2.55.0
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.3019420Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.3152160Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/8636ef6f-da89-4dbb-a3dc-7085794f11db/.gitconfig'
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.3264580Z Temporarily overriding HOME='/Users/runner/work/_temp/8636ef6f-da89-4dbb-a3dc-7085794f11db' before making global git config changes
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.3457060Z Adding repository directory to the temporary git global config as a safe directory
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.3966200Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/piepe/piepe
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4340060Z Deleting the contents of '/Users/runner/work/piepe/piepe'
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4387490Z ##[group]Determining repository object format
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4456710Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4499810Z ##[group]Initializing the repository
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4548140Z [command]/usr/local/bin/git init /Users/runner/work/piepe/piepe
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4669260Z hint: Using 'master' as the name for the initial branch. This default branch name
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4752520Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4761250Z hint: to use in all of your new repositories, which will suppress this warning,
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4824340Z hint: call:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4864530Z hint:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4900460Z hint: 	git config --global init.defaultBranch <name>
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4933450Z hint:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4938680Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.4981730Z hint: 'development'. The just-created branch can be renamed via this command:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.5042470Z hint:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.5140840Z hint: 	git branch -m <name>
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.5209990Z hint:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.5280990Z hint: Disable this message with "git config set advice.defaultBranchName false"
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.5318660Z Initialized empty Git repository in /Users/runner/work/piepe/piepe/.git/
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.5788470Z [command]/usr/local/bin/git remote add origin https://github.com/aigars-avotins/piepe
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.6040470Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.6136710Z ##[group]Disabling automatic garbage collection
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.6264960Z [command]/usr/local/bin/git config --local gc.auto 0
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.6592210Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.6630510Z ##[group]Setting up auth
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.6773640Z Removing SSH command configuration
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.6820560Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+webkit	Run actions/checkout@v7	2026-11-14T07:34:48.7108110Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.0006140Z Removing HTTP extra header
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.0123890Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.0748820Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.2844730Z Removing includeIf entries pointing to credentials config files
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.2851460Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.3888700Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.6101190Z [command]/usr/local/bin/git config --file /Users/runner/work/_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.6522550Z [command]/usr/local/bin/git config --local includeIf.gitdir:/Users/runner/work/piepe/piepe/.git.path /Users/runner/work/_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.6868930Z [command]/usr/local/bin/git config --local includeIf.gitdir:/Users/runner/work/piepe/piepe/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.7038810Z [command]/usr/local/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.7376150Z [command]/usr/local/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.7674690Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.7722590Z ##[group]Fetching the repository
+webkit	Run actions/checkout@v7	2026-11-14T07:34:49.7798830Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1e1dd701e1c91bbda9468092a3e0f44a359c4e4e:refs/remotes/origin/codex/piepe-v310
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2160520Z From https://github.com/aigars-avotins/piepe
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2164220Z  * [new ref]         1e1dd701e1c91bbda9468092a3e0f44a359c4e4e -> origin/codex/piepe-v310
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2239360Z [command]/usr/local/bin/git branch --list --remote origin/codex/piepe-v310
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2427180Z   origin/codex/piepe-v310
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2443980Z [command]/usr/local/bin/git rev-parse refs/remotes/origin/codex/piepe-v310
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2602850Z 1e1dd701e1c91bbda9468092a3e0f44a359c4e4e
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2613370Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2615520Z ##[group]Determining the checkout info
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2618240Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2620110Z [command]/usr/local/bin/git sparse-checkout disable
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2835530Z [command]/usr/local/bin/git config --local --unset-all extensions.worktreeConfig
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.2995940Z ##[group]Checking out the ref
+webkit	Run actions/checkout@v7	2026-11-14T07:35:39.3005460Z [command]/usr/local/bin/git checkout --progress --force -B codex/piepe-v310 refs/remotes/origin/codex/piepe-v310
+webkit	Run actions/checkout@v7	2026-11-14T07:35:40.4299200Z Updating files:   9% (108/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:40.5295070Z Updating files:  10% (113/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:40.7446460Z Updating files:  11% (124/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:41.0677470Z Updating files:  12% (135/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:41.1855080Z Updating files:  13% (147/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:41.3164010Z Updating files:  14% (158/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:41.3881650Z Updating files:  15% (169/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:41.5442700Z Updating files:  15% (171/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:41.7599200Z Updating files:  16% (180/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:41.9469750Z Updating files:  17% (192/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.0158610Z Updating files:  18% (203/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.0237960Z Updating files:  19% (214/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.0301130Z Updating files:  20% (225/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.0681180Z Updating files:  21% (237/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.0895590Z Updating files:  22% (248/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.1301340Z Updating files:  23% (259/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.1541830Z Updating files:  24% (270/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.1730060Z Updating files:  25% (282/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2092580Z Updating files:  26% (293/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2117420Z Updating files:  27% (304/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2120200Z Updating files:  28% (315/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2123820Z Updating files:  29% (327/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2354500Z Updating files:  30% (338/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2357660Z Updating files:  31% (349/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2712320Z Updating files:  32% (360/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.2942520Z Updating files:  33% (372/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3039460Z Updating files:  34% (383/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3106820Z Updating files:  35% (394/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3237260Z Updating files:  36% (405/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3353830Z Updating files:  37% (417/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3361320Z Updating files:  38% (428/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3469710Z Updating files:  38% (429/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3548320Z Updating files:  39% (439/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3655600Z Updating files:  40% (450/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3765170Z Updating files:  41% (462/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3853660Z Updating files:  42% (473/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.3934090Z Updating files:  43% (484/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4045050Z Updating files:  44% (495/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4129590Z Updating files:  45% (507/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4213490Z Updating files:  46% (518/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4376380Z Updating files:  47% (529/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4520910Z Updating files:  48% (540/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4631780Z Updating files:  49% (552/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4804330Z Updating files:  50% (563/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.4862740Z Updating files:  51% (574/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.5850800Z Updating files:  52% (585/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:42.6069840Z Updating files:  53% (597/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:43.8661120Z Updating files:  54% (608/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:43.9024450Z Updating files:  55% (619/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:43.9675360Z Updating files:  56% (630/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.0059330Z Updating files:  57% (642/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.1298520Z Updating files:  58% (653/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.4342530Z Updating files:  59% (664/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.4465610Z Updating files:  60% (675/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.4614600Z Updating files:  61% (687/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.4746290Z Updating files:  62% (698/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.5093030Z Updating files:  63% (709/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.6073090Z Updating files:  64% (720/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:44.9583560Z Updating files:  65% (732/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.0029220Z Updating files:  66% (743/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.0168220Z Updating files:  67% (754/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.0313310Z Updating files:  68% (765/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.0585340Z Updating files:  69% (777/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.1008640Z Updating files:  70% (788/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.1166420Z Updating files:  71% (799/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.1397530Z Updating files:  72% (810/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.1497240Z Updating files:  73% (822/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.2023600Z Updating files:  74% (833/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.3040220Z Updating files:  75% (844/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:45.5407000Z Updating files:  76% (855/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:46.1100500Z Updating files:  76% (857/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:46.5712530Z Updating files:  77% (867/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:46.6059380Z Updating files:  77% (873/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:47.5950710Z Updating files:  78% (878/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:47.6961360Z Updating files:  78% (881/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:47.8107240Z Updating files:  79% (889/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:48.4967200Z Updating files:  80% (900/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:48.5508800Z Updating files:  80% (907/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:48.5654190Z Updating files:  81% (912/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:49.0573740Z Updating files:  82% (923/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:49.3833380Z Updating files:  83% (934/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:49.4159150Z Updating files:  83% (940/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:49.5596290Z Updating files:  84% (945/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:49.6597800Z Updating files:  85% (957/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:50.8774500Z Updating files:  86% (968/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:50.9589150Z Updating files:  86% (977/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:51.4922120Z Updating files:  87% (979/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:52.1604630Z Updating files:  87% (984/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:52.6037030Z Updating files:  88% (990/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:53.3638470Z Updating files:  88% (991/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:54.6735500Z Updating files:  88% (992/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:55.4129320Z Updating files:  88% (998/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:55.4909230Z Updating files:  89% (1002/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:55.5037070Z Updating files:  90% (1013/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0256320Z Updating files:  91% (1024/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0355890Z Updating files:  92% (1035/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0451260Z Updating files:  93% (1047/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0535640Z Updating files:  94% (1058/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0627330Z Updating files:  95% (1069/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0719770Z Updating files:  96% (1080/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0817220Z Updating files:  97% (1092/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.0931580Z Updating files:  98% (1103/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.1000380Z Updating files:  99% (1114/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.1067040Z Updating files: 100% (1125/1125)
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.1147230Z Updating files: 100% (1125/1125), done.
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.1233610Z Switched to a new branch 'codex/piepe-v310'
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.2030220Z branch 'codex/piepe-v310' set up to track 'origin/codex/piepe-v310'.
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.3546690Z ##[endgroup]
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.3982660Z [command]/usr/local/bin/git log -1 --format=%H
+webkit	Run actions/checkout@v7	2026-11-14T07:35:56.4067430Z 1e1dd701e1c91bbda9468092a3e0f44a359c4e4e
+webkit	Run actions/setup-node@v7	﻿2026-11-14T07:35:56.5859290Z ##[group]Run actions/setup-node@v7
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:56.5861340Z with:
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:56.5864210Z   node-version: 24
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:56.5866420Z   cache: npm
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:56.5867260Z   check-latest: false
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:56.5888130Z   token: ***
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:56.5891500Z   package-manager-cache: true
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:56.5894710Z ##[endgroup]
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:57.1901980Z Found in cache @ /Users/runner/hostedtoolcache/node/24.19.0/x64
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:57.5712420Z ##[group]Environment details
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:59.4507950Z node: v24.19.0
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:59.4546260Z npm: 11.17.0
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:59.4563790Z yarn: 1.22.22
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:59.4590910Z ##[endgroup]
+webkit	Run actions/setup-node@v7	2026-11-14T07:35:59.4645640Z [command]/Users/runner/hostedtoolcache/node/24.19.0/x64/bin/npm config get cache
+webkit	Run actions/setup-node@v7	2026-11-14T07:36:00.5478930Z /Users/runner/.npm
+webkit	Run actions/setup-node@v7	2026-11-14T07:36:00.9333930Z npm cache is not found
+webkit	Run npm ci	﻿2026-11-14T07:36:00.9795830Z ##[group]Run npm ci
+webkit	Run npm ci	2026-11-14T07:36:00.9796990Z [36;1mnpm ci[0m
+webkit	Run npm ci	2026-11-14T07:36:00.9983140Z shell: /bin/bash -e {0}
+webkit	Run npm ci	2026-11-14T07:36:00.9984110Z ##[endgroup]
+webkit	Run npm ci	2026-11-14T07:38:20.4129180Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+webkit	Run npm ci	2026-11-14T07:38:24.4552240Z 
+webkit	Run npm ci	2026-11-14T07:38:24.4564070Z added 216 packages, and audited 217 packages in 2m
+webkit	Run npm ci	2026-11-14T07:38:24.8468250Z 
+webkit	Run npm ci	2026-11-14T07:38:24.8470110Z 56 packages are looking for funding
+webkit	Run npm ci	2026-11-14T07:38:24.8483190Z   run `npm fund` for details
+webkit	Run npm ci	2026-11-14T07:38:24.8484110Z 
+webkit	Run npm ci	2026-11-14T07:38:24.8526630Z npm warn allow-scripts 3 packages have install scripts not yet covered by allowScripts:
+webkit	Run npm ci	2026-11-14T07:38:24.8529030Z 7 moderate severity vulnerabilities
+webkit	Run npm ci	2026-11-14T07:38:24.8554680Z npm warn allow-scripts   esbuild@0.28.2 (postinstall: node install.js)
+webkit	Run npm ci	2026-11-14T07:38:24.8557230Z 
+webkit	Run npm ci	2026-11-14T07:38:24.8560040Z npm warn allow-scripts   fsevents@2.3.3 (install: (install scripts present))
+webkit	Run npm ci	2026-11-14T07:38:24.8563580Z To address issues that do not require attention, run:
+webkit	Run npm ci	2026-11-14T07:38:24.8586230Z npm warn allow-scripts   workerd@1.20261023.1 (postinstall: node install.js)
+webkit	Run npm ci	2026-11-14T07:38:24.8588990Z   npm audit fix
+webkit	Run npm ci	2026-11-14T07:38:24.8631990Z npm warn allow-scripts
+webkit	Run npm ci	2026-11-14T07:38:24.8632910Z 
+webkit	Run npm ci	2026-11-14T07:38:24.8888760Z npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+webkit	Run npm ci	2026-11-14T07:38:24.8892220Z To address all issues (including breaking changes), run:
+webkit	Run npm ci	2026-11-14T07:38:24.9227330Z   npm audit fix --force
+webkit	Run npm ci	2026-11-14T07:38:24.9241080Z 
+webkit	Run npm ci	2026-11-14T07:38:24.9245050Z Run `npm audit` for details.
+webkit	Run npm run build	﻿2026-11-14T07:38:25.2995660Z ##[group]Run npm run build
+webkit	Run npm run build	2026-11-14T07:38:25.2998850Z [36;1mnpm run build[0m
+webkit	Run npm run build	2026-11-14T07:38:25.3178820Z shell: /bin/bash -e {0}
+webkit	Run npm run build	2026-11-14T07:38:25.3179590Z ##[endgroup]
+webkit	Run npm run build	2026-11-14T07:38:26.8522270Z 
+webkit	Run npm run build	2026-11-14T07:38:26.8523990Z > piepe@3.1.0 build
+webkit	Run npm run build	2026-11-14T07:38:26.8528970Z > node scripts/verify-portal-media.mjs && node scripts/media-sizes.mjs && npm run typecheck && vite build && node scripts/prerender.mjs && node scripts/check-navigation.mjs
+webkit	Run npm run build	2026-11-14T07:38:26.8533350Z 
+webkit	Run npm run build	2026-11-14T07:38:28.4103100Z Verified 20 original/source-quality portal assets
+webkit	Run npm run build	2026-11-14T07:38:29.1515900Z 
+webkit	Run npm run build	2026-11-14T07:38:29.1703520Z > piepe@3.1.0 typecheck
+webkit	Run npm run build	2026-11-14T07:38:29.1710810Z > tsc --noEmit
+webkit	Run npm run build	2026-11-14T07:38:29.1720460Z 
+webkit	Run npm run build	2026-11-14T07:38:37.6992030Z [36mvite v7.3.7 [32mbuilding client environment for production...[36m[39m
+webkit	Run npm run build	2026-11-14T07:38:37.8789990Z transforming...
+webkit	Run npm run build	2026-11-14T07:38:41.0304100Z [32m✓[39m 84 modules transformed.
+webkit	Run npm run build	2026-11-14T07:38:44.0030530Z rendering chunks...
+webkit	Run npm run build	2026-11-14T07:38:44.0295580Z computing gzip size...
+webkit	Run npm run build	2026-11-14T07:38:44.0555660Z [2mdist/[22m[32mindex.html                                                     [39m[1m[2m  1.16 kB[22m[1m[22m[2m │ gzip:   0.63 kB[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0559970Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-500-normal-dm74KBQw.woff2             [39m[1m[2m  8.19 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0564500Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-400-normal-CMDvPJRp.woff2             [39m[1m[2m  8.29 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0569060Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-500-normal-EtoS1VaI.woff              [39m[1m[2m 11.25 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0576430Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-ext-400-normal-C-X6QNXX.woff              [39m[1m[2m 11.32 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0583760Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-500-normal-BYYD-dBL.woff2                 [39m[1m[2m 14.04 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0588330Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-400-normal-PaqtzbVb.woff2                 [39m[1m[2m 14.11 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0593410Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-500-normal-DMZssgOp.woff                  [39m[1m[2m 18.24 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0598070Z [2mdist/[22m[2massets/[22m[32mmanrope-latin-400-normal-8tf8FM3T.woff                  [39m[1m[2m 18.29 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0602670Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2  [39m[1m[2m 19.89 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0609690Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2  [39m[1m[2m 20.28 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0616820Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-normal-B-1hWBU7.woff2      [39m[1m[2m 22.88 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0623750Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2      [39m[1m[2m 23.66 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0629470Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-normal-uvC0WHQr.woff   [39m[1m[2m 27.93 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0634630Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-ext-400-italic-CQvLaSWn.woff   [39m[1m[2m 28.72 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0639540Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-normal-B7YtguxJ.woff       [39m[1m[2m 30.98 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0645590Z [2mdist/[22m[2massets/[22m[32mcormorant-garamond-latin-400-italic-BLh7T8o8.woff       [39m[1m[2m 32.89 kB[22m[1m[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0650360Z [2mdist/[22m[2massets/[22m[35mindex-MxVMY7ep.css                                      [39m[1m[2m 84.77 kB[22m[1m[22m[2m │ gzip:  17.50 kB[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0655800Z [2mdist/[22m[2massets/[22m[36mindex-DMxBzg8L.js                                       [39m[1m[2m451.38 kB[22m[1m[22m[2m │ gzip: 152.61 kB[22m
+webkit	Run npm run build	2026-11-14T07:38:44.0660450Z [32m✓ built in 6.34s[39m
+webkit	Run npm run build	2026-11-14T07:38:46.8303120Z Prerendered 20 localized cinema, guide, wallpaper and field-note documents with CSP hashes
+webkit	Run npm run build	2026-11-14T07:38:47.2226160Z Verified native navigation policy for 420 anchors across 20 prerendered routes
+webkit	Run npx playwright install webkit	﻿2026-11-14T07:38:47.2473250Z ##[group]Run npx playwright install webkit
+webkit	Run npx playwright install webkit	2026-11-14T07:38:47.2475350Z [36;1mnpx playwright install webkit[0m
+webkit	Run npx playwright install webkit	2026-11-14T07:38:47.2615180Z shell: /bin/bash -e {0}
+webkit	Run npx playwright install webkit	2026-11-14T07:38:47.2617090Z ##[endgroup]
+webkit	Run npx playwright install webkit	2026-11-14T07:38:49.6006120Z Downloading WebKit 27.2 (playwright webkit v2370) from https://cdn.playwright.dev/dbazure/download/playwright/builds/webkit/2370/webkit-mac-15.zip
+webkit	Run npx playwright install webkit	2026-11-14T07:38:51.3413160Z |                                                                                |   0% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:51.6609350Z |■■■■■■■■                                                                        |  10% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:51.8635660Z |■■■■■■■■■■■■■■■■                                                                |  20% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:51.9486190Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:52.0908480Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:52.2246970Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:52.4638070Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:52.5846930Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:52.8557410Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:53.1828480Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:38:53.4105370Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 84.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:34.5289450Z WebKit 27.2 (playwright webkit v2370) downloaded to /Users/runner/Library/Caches/ms-playwright/webkit-2370
+webkit	Run npx playwright install webkit	2026-11-14T07:39:34.5614360Z Downloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-mac.zip
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.8987010Z |                                                                                |   0% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9196110Z |■■■■■■■■                                                                        |  10% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9283480Z |■■■■■■■■■■■■■■■■                                                                |  20% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9404420Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9657730Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9718110Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9723500Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9732670Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9738470Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9741880Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:35.9745250Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 1.5 MiB
+webkit	Run npx playwright install webkit	2026-11-14T07:39:36.1222870Z FFmpeg (playwright ffmpeg v1013) downloaded to /Users/runner/Library/Caches/ms-playwright/ffmpeg-1013
+webkit	Keep native render validation awake	﻿2026-11-14T07:39:36.2485530Z ##[group]Run defaults write NSGlobalDomain NSAppSleepDisabled -bool YES
+webkit	Keep native render validation awake	2026-11-14T07:39:36.2487370Z [36;1mdefaults write NSGlobalDomain NSAppSleepDisabled -bool YES[0m
+webkit	Keep native render validation awake	2026-11-14T07:39:36.2634240Z shell: /bin/bash -e {0}
+webkit	Keep native render validation awake	2026-11-14T07:39:36.2635100Z ##[endgroup]
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	﻿2026-11-14T07:39:36.4181810Z ##[group]Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4183310Z [36;1mif [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then[0m
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4184870Z [36;1m  caffeinate -dimsu npm test -- --project=webkit-iphone --grep "$PIEPE_DIAGNOSTIC_GREP"[0m
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4186310Z [36;1melse[0m
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4187950Z [36;1m  caffeinate -dimsu npm test -- --project=webkit-iphone[0m
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4190810Z [36;1mfi[0m
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4307030Z shell: /bin/bash -e {0}
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4307790Z env:
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4308560Z   CI: true
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4309990Z   PIEPE_DIAGNOSTIC_GREP: 3.1 source-quality
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.4311760Z ##[endgroup]
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.9369270Z 
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.9370930Z > piepe@3.1.0 test
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.9374540Z > playwright test --project=webkit-iphone --grep 3.1 source-quality
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:36.9376620Z 
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:41.9869860Z 
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:41.9871490Z Running 2 tests using 1 worker
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:39:41.9872290Z 
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:40:38.6796730Z   ✓  1 [webkit-iphone] › tests/v310-slow.spec.ts:11:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry (50.8s)
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:41:12.8372940Z   ✓  2 [webkit-iphone] › tests/v310-slow.spec.ts:11:49 › 3.1 source-quality stall: native download beyond 20s or bounded stall with real retry (33.9s)
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:41:13.1968040Z 
+webkit	Run if [ -n "$PIEPE_DIAGNOSTIC_GREP" ]; then	2026-11-14T07:41:13.1975980Z   2 passed (1.6m)
+webkit	Run actions/upload-artifact@v7	﻿2026-11-14T07:41:13.3604550Z ##[group]Run actions/upload-artifact@v7
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3606730Z with:
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3608800Z   name: forest-qa-webkit-macos
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3610380Z   path: test-results/
+webkit	Run actions/upload-artifact@v7	production-results/
+webkit	Run actions/upload-artifact@v7	
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3612370Z   retention-days: 14
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3613280Z   if-no-files-found: warn
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3614880Z   compression-level: 6
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3616750Z   overwrite: false
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3617790Z   include-hidden-files: false
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3618950Z   archive: true
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:13.3619610Z ##[endgroup]
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:14.6355510Z Multiple search paths detected. Calculating the least common ancestor of all paths
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:14.6488330Z The least common ancestor is /Users/runner/work/piepe/piepe. This will be the root directory of the artifact
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:14.6527500Z With the provided path, there will be 1 file uploaded
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:14.6796070Z Artifact name is valid!
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:14.7650760Z Root directory input is valid!
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.1059590Z Uploading artifact: forest-qa-webkit-macos.zip
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.1155320Z Beginning upload of artifact content to blob storage
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.2834710Z Uploaded bytes 6621
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.3838280Z Finished uploading artifact content to blob storage!
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.4357840Z SHA256 digest of uploaded artifact is 699b90300d3752192a1efbdf73bfed6537752b89c0f522bd58ba259abfd04dfc
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.4676140Z Finalizing artifact upload
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.7127150Z Artifact forest-qa-webkit-macos successfully finalized. Artifact ID 14105265600
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.7168410Z Artifact forest-qa-webkit-macos has been successfully uploaded! Final size is 6621 bytes. Artifact ID is 14105265600
+webkit	Run actions/upload-artifact@v7	2026-11-14T07:41:15.7208700Z Artifact download URL: https://github.com/aigars-avotins/piepe/actions/runs/43571683635/artifacts/14105265600
+webkit	Post Run actions/setup-node@v7	﻿2026-11-14T07:41:15.7560790Z Post job cleanup.
+webkit	Post Run actions/setup-node@v7	2026-11-14T07:41:17.3319780Z [command]/usr/local/bin/gtar --posix -cf cache.tzst --exclude cache.tzst -P -C /Users/runner/work/piepe/piepe --files-from manifest.txt --delay-directory-restore --use-compress-program zstdmt
+webkit	Post Run actions/setup-node@v7	2026-11-14T07:41:19.2269730Z Sent 37289984 of 97077889 (38.4%), 35.0 MBs/sec
+webkit	Post Run actions/setup-node@v7	2026-11-14T07:41:20.3176460Z Sent 78118912 of 97077889 (80.5%), 36.4 MBs/sec
+webkit	Post Run actions/setup-node@v7	2026-11-14T07:41:20.7619320Z Sent 97077889 of 97077889 (100.0%), 36.3 MBs/sec
+webkit	Post Run actions/setup-node@v7	2026-11-14T07:41:21.0428920Z Cache saved with the key: node-cache-macOS-x64-npm-19f00f927d4c71e7f74768b74dd351db947aee59c1137c5296a7b225e8ee7c52
+webkit	Post Run actions/checkout@v7	﻿2026-11-14T07:41:21.0831970Z Post job cleanup.
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4114560Z [command]/usr/local/bin/git version
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4321530Z git version 2.55.0
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4538360Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/74f16862-aeb2-4fc8-8e3f-2c1d8e370d1b/.gitconfig'
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4549110Z Temporarily overriding HOME='/Users/runner/work/_temp/74f16862-aeb2-4fc8-8e3f-2c1d8e370d1b' before making global git config changes
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4554500Z Adding repository directory to the temporary git global config as a safe directory
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4559490Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/piepe/piepe
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4756290Z Removing SSH command configuration
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4767090Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:21.4974410Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.0495780Z Removing HTTP extra header
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.1501060Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.3101960Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.3769320Z Removing includeIf entries pointing to credentials config files
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.3847940Z [command]/usr/local/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.3947480Z includeif.gitdir:/Users/runner/work/piepe/piepe/.git.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.4037570Z includeif.gitdir:/Users/runner/work/piepe/piepe/.git/worktrees/*.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.4382000Z includeif.gitdir:/github/workspace/.git.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.4562880Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.6166510Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/piepe/piepe/.git.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.6248720Z /Users/runner/work/_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.6545560Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/Users/runner/work/piepe/piepe/.git.path \/Users\/runner\/work\/_temp\/git\-credentials\-b6a815f8\-9066\-4e97\-aaca\-5411a5d8ccb1\.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.6818420Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/piepe/piepe/.git/worktrees/*.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.6867590Z /Users/runner/work/_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.6984200Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/Users/runner/work/piepe/piepe/.git/worktrees/*.path \/Users\/runner\/work\/_temp\/git\-credentials\-b6a815f8\-9066\-4e97\-aaca\-5411a5d8ccb1\.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.7191310Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.7557270Z /github/runner_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.7821330Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-b6a815f8\-9066\-4e97\-aaca\-5411a5d8ccb1\.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.8045400Z [command]/usr/local/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.8101760Z /github/runner_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.8199740Z [command]/usr/local/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-b6a815f8\-9066\-4e97\-aaca\-5411a5d8ccb1\.config
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.8430880Z [command]/usr/local/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+webkit	Post Run actions/checkout@v7	2026-11-14T07:41:22.8576150Z Removing credentials config '/Users/runner/work/_temp/git-credentials-b6a815f8-9066-4e97-aaca-5411a5d8ccb1.config'
+webkit	Complete job	﻿2026-11-14T07:41:22.8896950Z Cleaning up orphan processes

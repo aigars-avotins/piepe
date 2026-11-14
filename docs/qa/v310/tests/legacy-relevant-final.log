@@ -1,0 +1,29 @@
+
+> piepe@3.1.0 test
+> playwright test tests/v2581.spec.ts tests/v2582.spec.ts --project=chrome-desktop --grep foreshadows|genuine HTML|delayed static|responsive then|unavailable responsive|optical grade interpolates
+
+
+Running 13 tests using 1 worker
+
+(node:32284) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chrome-desktop] › tests/v2581.spec.ts:17:5 › lv homepage viewport 390 › 2.5.8.1 lv 390: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history (4.7s)
+  ✓   2 [chrome-desktop] › tests/v2581.spec.ts:17:5 › lv homepage viewport 800 › 2.5.8.1 lv 800: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history (5.1s)
+  ✓   3 [chrome-desktop] › tests/v2581.spec.ts:17:5 › lv homepage viewport 1440 › 2.5.8.1 lv 1440: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history (5.6s)
+  ✓   4 [chrome-desktop] › tests/v2581.spec.ts:55:3 › 2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript (3.0s)
+  ✓   5 [chrome-desktop] › tests/v2581.spec.ts:59:3 › 2.5.8.1 lv: delayed static code keeps controls visible and enables them only after binding, with header preference and stable layout (1.3s)
+  ✓   6 [chrome-desktop] › tests/v2581.spec.ts:17:5 › en homepage viewport 390 › 2.5.8.1 en 390: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history (4.7s)
+  ✓   7 [chrome-desktop] › tests/v2581.spec.ts:17:5 › en homepage viewport 800 › 2.5.8.1 en 800: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history (4.5s)
+  ✓   8 [chrome-desktop] › tests/v2581.spec.ts:17:5 › en homepage viewport 1440 › 2.5.8.1 en 1440: first viewport foreshadows Encounter; preserved X-Ray reveal retains native history (5.9s)
+  ✓   9 [chrome-desktop] › tests/v2581.spec.ts:55:3 › 2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript (2.9s)
+  ✓  10 [chrome-desktop] › tests/v2581.spec.ts:59:3 › 2.5.8.1 en: delayed static code keeps controls visible and enables them only after binding, with header preference and stable layout (938ms)
+  ✓  11 [chrome-desktop] › tests/v2582.spec.ts:55:1 › 3.1 responsive then original JPEG tries alternate then labelled wallpaper fallback; no retry loop (469ms)
+  ✓  12 [chrome-desktop] › tests/v2582.spec.ts:62:1 › 3.1 unavailable responsive and JPEG sources disclose an alternate preview without using the final wallpaper (614ms)
+  ✓  13 [chrome-desktop] › tests/v2582.spec.ts:99:1 › 2.5.8.2 mood optical grade interpolates across actual rendered frames (1.4s)
+
+  13 passed (42.2s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

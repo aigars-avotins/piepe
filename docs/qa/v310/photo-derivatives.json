@@ -1,0 +1,380 @@
+[
+  {
+    "path": "public/images/interactive/atlas-gills.jpg",
+    "bytes": 3537803,
+    "sha256": "8e959e22d5fba2da4ad8c36770746e7c43fbc4ce46542838b2f2c7e2d91fb310",
+    "width": 2400,
+    "height": 1792,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/atlas-gills-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 97368,
+        "sha256": "ec07bc8b30641eb53a539cbb029bdbccde422f4ed3ffc46119843aee286c7350",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-gills-960.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 307704,
+        "sha256": "24188721c559619532681d16dc91fcc6be11ad9b0c2bb0431ee6d9316b24c06d",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-gills-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 735830,
+        "sha256": "cc75787513d099c871ad622898b487789ea63ae1859a12aa370f6f6133a0cf5c",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-gills-2400.webp",
+        "width": 2400,
+        "height": 1792,
+        "bytes": 1573072,
+        "sha256": "dbcf467068120532f629b68cad86197eb562517af734e6a987c3dcd133d62fd7",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/atlas-pores.jpg",
+    "bytes": 3409337,
+    "sha256": "ce16bcb5647283e720e5c13d606e1e4fc015680b0faa639310938e39324d47a4",
+    "width": 2400,
+    "height": 1792,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/atlas-pores-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 100834,
+        "sha256": "e4c0925905d4f98b4ded266e395b21aa8f11df385c1a66ff2f1814ec998caa30",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-pores-960.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 280284,
+        "sha256": "262d8f7bcb75cb71867217bc017951fa253b76dc685b69e75636644cd9a28e86",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-pores-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 672170,
+        "sha256": "9015775289a5cb2ecb14119ea21040bc1c80f1ada19b19d8e7b86f34a641bcc4",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-pores-2400.webp",
+        "width": 2400,
+        "height": 1792,
+        "bytes": 1537880,
+        "sha256": "e93780696bb974791411d63262334c4a265e22f5da1de2e273aee819c0ea4717",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/atlas-smooth.jpg",
+    "bytes": 3632308,
+    "sha256": "ca40ab168d941449c56057a71650ba0e7e11f4fed242131829620d95fcc9e283",
+    "width": 2400,
+    "height": 1792,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/atlas-smooth-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 93104,
+        "sha256": "47d38a7f9b6a9adc7be9acb25dfed7af077766fa62f8ccfe46f2878dcc436d8a",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-smooth-960.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 287500,
+        "sha256": "2ffbebe47f902a36f2045a7d08a3e97ab479752452ceb7899595111c9af462f9",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-smooth-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 774534,
+        "sha256": "4c2cfbc337a939dad6e426cff2965fa6ae7576b6ad7e0f9fe0a0b35133cd9a97",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/atlas-smooth-2400.webp",
+        "width": 2400,
+        "height": 1792,
+        "bytes": 1823776,
+        "sha256": "85cf4c3918b0b307d7c9e673c2f1e125c9a18d52a04f465ee71b9ca37be3ac2d",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/deadwood-stage-01.jpg",
+    "bytes": 3283598,
+    "sha256": "7c2ecf223eae51e8cd805d9b7ad464d782e6e8765e0171e45267a0bc6f2c5c6f",
+    "width": 2752,
+    "height": 1536,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-01-480.webp",
+        "width": 480,
+        "height": 268,
+        "bytes": 68596,
+        "sha256": "c371b9cdf3c2073409be8fd919b1767c00350bd420281915cd4c46615d39b60f",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-01-960.webp",
+        "width": 960,
+        "height": 536,
+        "bytes": 247458,
+        "sha256": "d900dcc321842cd0d2191827bf810aefebbf1f48570b8bda88411a07b684d593",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-01-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 627298,
+        "sha256": "cef84c56407a8e21d036bfd0d4cec3fc2e935ea8fd71114c4e8287848ccdfbda",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-01-2752.webp",
+        "width": 2752,
+        "height": 1536,
+        "bytes": 1622836,
+        "sha256": "bf1b916151d318dfd521ccaf52ed30219548790a9feb01493ee922cc4c2be3f2",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/deadwood-stage-02.jpg",
+    "bytes": 3496556,
+    "sha256": "d62415d44ee1fc69936cd75f07271866689255d991fdf1daf8e0dd0118cf5deb",
+    "width": 2752,
+    "height": 1536,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-02-480.webp",
+        "width": 480,
+        "height": 268,
+        "bytes": 72952,
+        "sha256": "d518f07e303129c53e5fe038bc32e3fbe9f208f459d2b59b32dc685d169a596c",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-02-960.webp",
+        "width": 960,
+        "height": 536,
+        "bytes": 263912,
+        "sha256": "2b10477ca54f3cb3040117df7bcd81bda661bd88f612a6d834eb37a4e9fe4660",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-02-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 691854,
+        "sha256": "50f073072fe90e3c35a8479c09da27a9d22aa1f2290d34f787b2033ba1ab21f9",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-02-2752.webp",
+        "width": 2752,
+        "height": 1536,
+        "bytes": 1933010,
+        "sha256": "b2af1a5d8474e6b70a29897fb78c36b4a61e850fcabda52912e8438aea9b0759",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/deadwood-stage-03.jpg",
+    "bytes": 3263016,
+    "sha256": "00011a8ff1df1fac5e3b49533352d406963b723e37b8c7cf5e0dc978a0a4c55e",
+    "width": 2752,
+    "height": 1536,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-03-480.webp",
+        "width": 480,
+        "height": 268,
+        "bytes": 69602,
+        "sha256": "5690c4cdc8e1cf1a3599b0d84858e126b0c5dcb16871904c77f555b305100f1c",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-03-960.webp",
+        "width": 960,
+        "height": 536,
+        "bytes": 250914,
+        "sha256": "bbcdaa592457e4999f05caf8fcf051e1714a36d2271402f98bd135966e6573ca",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-03-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 631050,
+        "sha256": "ed93106ff88497dbef063220b97827282d26d5b534ed72ad5486535f674b198a",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-03-2752.webp",
+        "width": 2752,
+        "height": 1536,
+        "bytes": 1595896,
+        "sha256": "59bda9cb050df880af5f35b216b0f08b41b65c41c7f248bc56c1e380bd8a9909",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/deadwood-stage-04.jpg",
+    "bytes": 3283370,
+    "sha256": "e9c1e169883d4ed7c5bc178211699db4111e3c55481cf6c415ddf5ba43f27464",
+    "width": 2752,
+    "height": 1536,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-04-480.webp",
+        "width": 480,
+        "height": 268,
+        "bytes": 69952,
+        "sha256": "d45a33f9cff0437e6fcc43738140d17d9fc755aab49f0453ad1c55124ea7a99c",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-04-960.webp",
+        "width": 960,
+        "height": 536,
+        "bytes": 252098,
+        "sha256": "74580abf611e859d7ea0a2a098486935551123134ec05b1fa1b27e79ad76ed83",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-04-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 636230,
+        "sha256": "68a025ed77c881aaf06a84a17c13906ab5dc01f6de81ad9935cb40ab4bdd0b81",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/deadwood-stage-04-2752.webp",
+        "width": 2752,
+        "height": 1536,
+        "bytes": 1600352,
+        "sha256": "fe5d9d087555777abe6a27e84f5f0b3cfc32cd516d36c6fa8620eb059351fbb4",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/xray-bark-surface.jpg",
+    "bytes": 3617990,
+    "sha256": "824de9f07d05c0d8c183d55ec8faccd9c191ddadd0a18c471c9578508654ec1a",
+    "width": 2752,
+    "height": 1536,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/xray-bark-surface-480.webp",
+        "width": 480,
+        "height": 268,
+        "bytes": 79792,
+        "sha256": "6db901c252934695defbcdb9fc7ba39a6ad1e2b13d8cea52315c59ac8d700698",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/xray-bark-surface-960.webp",
+        "width": 960,
+        "height": 536,
+        "bytes": 244786,
+        "sha256": "88c0a3267f50f3ff67188fccc281832b26f5d2ace1be972ebde7faf3e2f0190e",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/xray-bark-surface-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 611962,
+        "sha256": "c556e37b533dfabf1e32a4e7141d448ca66243c8e3a5b439ae61e0fc5c36040d",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/xray-bark-surface-2752.webp",
+        "width": 2752,
+        "height": 1536,
+        "bytes": 1804550,
+        "sha256": "61a576003e7a8b3f2eb5bc780d2345dcdcf35d2f4ec0be0ae415c6703051f5dc",
+        "quality": 97
+      }
+    ]
+  },
+  {
+    "path": "public/images/interactive/xray-wood-mycelium.jpg",
+    "bytes": 3003508,
+    "sha256": "d63d0018baf770cbc2eef34eff64690a476f4714889c34bf4de0e19ac4bf59e0",
+    "width": 2752,
+    "height": 1536,
+    "format": "JPEG",
+    "derivatives": [
+      {
+        "path": "public/images/interactive/responsive/xray-wood-mycelium-480.webp",
+        "width": 480,
+        "height": 268,
+        "bytes": 79350,
+        "sha256": "00d077ae31acb6dcc2e053252ffba564e629f97d59cc70c4ede9352dc73a44ed",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/xray-wood-mycelium-960.webp",
+        "width": 960,
+        "height": 536,
+        "bytes": 238238,
+        "sha256": "d123f6a43d8d57624b6faa1affee5a778999eea1a281e4c2f8be5bb26b2e91e5",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/xray-wood-mycelium-1600.webp",
+        "width": 1600,
+        "height": 893,
+        "bytes": 532594,
+        "sha256": "253a4d948f7595d29dbc5056c2c881de15ff4eb2bfa61435ca4b589fc6820220",
+        "quality": 97
+      },
+      {
+        "path": "public/images/interactive/responsive/xray-wood-mycelium-2752.webp",
+        "width": 2752,
+        "height": 1536,
+        "bytes": 1336692,
+        "sha256": "b62389283152cbbc978d705de380b878277ab166c404df802b2b0546d2642387",
+        "quality": 97
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "duration": 250,
+  "phase": "done",
+  "times": [
+    {
+      "phase": "start",
+      "at": 1110.0999999996275,
+      "time": 7.5
+    },
+    {
+      "phase": "join",
+      "at": 3632.7000000001863
+    }
+  ],
+  "rates": [
+    1
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "events": [
+    {
+      "event": "loadstart",
+      "at": 563,
+      "scroll": 1430,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/forest-understory.mp4?v=2.3",
+        "time": 0,
+        "ready": 0,
+        "paused": true
+      }
+    },
+    {
+      "event": "waiting",
+      "at": 567,
+      "scroll": 1430,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/forest-understory.mp4?v=2.3",
+        "time": 0,
+        "ready": 0,
+        "paused": false
+      }
+    },
+    {
+      "event": "loadedmetadata",
+      "at": 737,
+      "scroll": 1430,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/forest-understory.mp4?v=2.3",
+        "time": 0,
+        "ready": 1,
+        "paused": false
+      }
+    },
+    {
+      "event": "loadeddata",
+      "at": 845,
+      "scroll": 1430,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/forest-understory.mp4?v=2.3",
+        "time": 0,
+        "ready": 2,
+        "paused": false
+      }
+    },
+    {
+      "event": "playing",
+      "at": 846,
+      "scroll": 1430,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/forest-understory.mp4?v=2.3",
+        "time": 0,
+        "ready": 4,
+        "paused": false
+      }
+    },
+    {
+      "event": "click",
+      "at": 1123,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "IMG.null"
+    },
+    {
+      "event": "focusin",
+      "at": 1150,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "DIV.portal-view "
+    },
+    {
+      "event": "focusin",
+      "at": 2066,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "BUTTON.portal-primary"
+    },
+    {
+      "event": "focusin",
+      "at": 2717,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "DIALOG.fungus-portal"
+    },
+    {
+      "event": "click",
+      "at": 2718,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "BUTTON.portal-primary"
+    },
+    {
+      "event": "focusin",
+      "at": 2719,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "BUTTON.portal-exit"
+    },
+    {
+      "event": "loadstart",
+      "at": 2727,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 0,
+        "paused": true
+      }
+    },
+    {
+      "event": "loadedmetadata",
+      "at": 4532,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 1,
+        "paused": true
+      }
+    },
+    {
+      "event": "stalled",
+      "at": 8028,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 1,
+        "paused": true
+      }
+    },
+    {
+      "event": "loadeddata",
+      "at": 33027,
+      "scroll": 2175,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49271/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 4,
+        "paused": true
+      }
+    }
+  ],
+  "photoPhases": [],
+  "maxFrameGap": 630,
+  "frames": 1349,
+  "href": "http://127.0.0.1:49271/en/#encounter",
+  "scroll": 2175,
+  "focus": true,
+  "visibility": "visible",
+  "viewport": {
+    "width": 390,
+    "height": 664
+  },
+  "screen": {
+    "width": 390,
+    "height": 844
+  },
+  "world": "world  is-ready has-title   atmosphere-paused      ",
+  "photo": {},
+  "videos": [
+    {
+      "src": "http://127.0.0.1:49271/media/portal-02-faststart.mp4",
+      "time": 0,
+      "ready": 4,
+      "network": 1,
+      "paused": true,
+      "error": null,
+      "buffered": [
+        [
+          0,
+          9.963
+        ]
+      ],
+      "frames": 0
+    },
+    {
+      "src": "",
+      "time": 0,
+      "ready": 0,
+      "network": 0,
+      "paused": true,
+      "error": null,
+      "buffered": [],
+      "frames": 0
+    }
+  ]
+}

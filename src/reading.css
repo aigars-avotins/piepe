@@ -16,3 +16,7 @@
 @media(max-width:699px){.reading-header{padding-left:24px;padding-right:24px;gap:16px}.reading-main{padding-top:46px}.reading-section{margin-top:40px}.reading-intro h1{font-size:48px}.reading-header .brand img{width:34px;height:34px}.reading-header .brand .brand-wordmark{width:64px;height:34px}}
 @media(prefers-reduced-motion:reduce){.reading-page{scroll-behavior:auto}}
 .reading-next{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}.reading-next a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}.reading-sources li:focus{outline:2px solid var(--gold);outline-offset:5px}.reading-sources li:target{background:#f2d7a209}
+
+/* Keep the article header's mood choice compact without hiding its accessible group name. */
+.reading-header{flex-wrap:wrap}.reading-header .atmosphere-slot{margin-left:auto}.reading-header .atmosphere-compact{gap:4px;padding:3px 6px}.reading-header .atmosphere-compact button{min-height:44px;min-width:44px;padding:5px 8px;font-size:12px}
+@media(max-width:399px){.reading-header{padding-left:20px;padding-right:20px;gap:10px 12px}.reading-header .atmosphere-slot{flex-basis:100%;display:flex;justify-content:flex-end}.reading-header .atmosphere-compact{margin:0}}

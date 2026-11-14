@@ -1,0 +1,33 @@
+
+> piepe@3.1.0 test
+> playwright test tests/v310-slow.spec.ts tests/v310-portal.spec.ts --project=chrome-desktop
+
+
+Running 17 tests using 1 worker
+
+(node:76498) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 320x568 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (1.7s)
+  ✓   2 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 390x844 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (1.7s)
+  ✓   3 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 844x390 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (1.7s)
+  ✓   4 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 800x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.0s)
+  ✓   5 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 1440x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.7s)
+  ✓   6 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold lv 1512x982 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (3.2s)
+  ✓   7 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 320x568 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (1.6s)
+  ✓   8 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 390x844 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (1.6s)
+  ✓   9 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 844x390 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (1.7s)
+  ✓  10 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 800x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.0s)
+  ✓  11 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 1440x900 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.6s)
+  ✓  12 [chrome-desktop] › tests/v310-portal.spec.ts:7:2 › 3.1 threshold en 1512x982 › one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport (2.9s)
+  ✓  13 [chrome-desktop] › tests/v310-portal.spec.ts:17:2 › 3.1 clean cinema 320 › explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit (3.9s)
+  ✓  14 [chrome-desktop] › tests/v310-portal.spec.ts:17:2 › 3.1 clean cinema 844 › explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit (3.9s)
+  ✓  15 [chrome-desktop] › tests/v310-portal.spec.ts:17:2 › 3.1 clean cinema 1512 › explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit (4.9s)
+  ✓  16 [chrome-desktop] › tests/v310-slow.spec.ts:11:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry (31.3s)
+  ✓  17 [chrome-desktop] › tests/v310-slow.spec.ts:11:49 › 3.1 source-quality stall: native download beyond 20s or bounded stall with real retry (23.6s)
+
+  17 passed (1.6m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

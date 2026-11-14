@@ -1,0 +1,58 @@
+{
+  "locale": "lv",
+  "width": 1512,
+  "height": 982,
+  "engine": "chromium",
+  "origin": "https://pie.pe",
+  "baseline": "af186265f3ca37fb69b6f3eb49b7b09d54cad70b",
+  "xrayBefore": {
+    "y": 1055,
+    "url": "https://pie.pe/kas-ir-piepe/"
+  },
+  "xrayAfter": {
+    "y": 2000,
+    "url": "https://pie.pe/kas-ir-piepe/#xray-wood",
+    "open": 3
+  },
+  "atlasSurface": {
+    "tag": "A",
+    "target": "_blank"
+  },
+  "atlasAfterDrag": {
+    "url": "https://pie.pe/kas-ir-piepe/#xray-wood",
+    "dialog": 0
+  },
+  "modifiedOriginal": {
+    "url": "https://pie.pe/images/interactive/atlas-pores.jpg",
+    "newTab": true
+  },
+  "time": [
+    {
+      "value": 15,
+      "opacity": [
+        "1",
+        "0.45",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "value": 50,
+      "opacity": [
+        "1",
+        "1",
+        "0.5",
+        "0"
+      ]
+    },
+    {
+      "value": 85,
+      "opacity": [
+        "1",
+        "1",
+        "1",
+        "0.55"
+      ]
+    }
+  ]
+}

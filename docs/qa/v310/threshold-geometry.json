@@ -1,0 +1,78 @@
+[
+  {
+    "name": "portal-original",
+    "keyframes": [
+      {
+        "transform": "translate(208.70519992029756px,380.80251943779905px) scale(0.18798175776415674)"
+      },
+      {
+        "transform": "none"
+      }
+    ],
+    "options": {
+      "duration": 680,
+      "delay": 0,
+      "easing": "cubic-bezier(.22,1,.36,1)",
+      "fill": "both"
+    },
+    "at": 894.1999999992549,
+    "rect": {
+      "x": -109.4375,
+      "y": 0,
+      "width": 1744.84375,
+      "height": 982,
+      "top": 0,
+      "right": 1635.40625,
+      "bottom": 982,
+      "left": -109.4375
+    },
+    "preview": {
+      "x": 99.265625,
+      "y": 395.53125,
+      "width": 328,
+      "height": 155.140625,
+      "top": 395.53125,
+      "right": 427.265625,
+      "bottom": 550.671875,
+      "left": 99.265625
+    }
+  },
+  {
+    "name": "portal-original-layer",
+    "keyframes": [
+      {
+        "clipPath": "inset(395.53125px 1084.734375px 431.328125px 99.265625px round 12px)"
+      },
+      {
+        "clipPath": "inset(0px round 0px)"
+      }
+    ],
+    "options": {
+      "duration": 680,
+      "delay": 0,
+      "easing": "cubic-bezier(.22,1,.36,1)",
+      "fill": "both"
+    },
+    "at": 894.5999999996275,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1512,
+      "height": 982,
+      "top": 0,
+      "right": 1512,
+      "bottom": 982,
+      "left": 0
+    },
+    "preview": {
+      "x": 99.265625,
+      "y": 395.53125,
+      "width": 328,
+      "height": 155.140625,
+      "top": 395.53125,
+      "right": 427.265625,
+      "bottom": 550.671875,
+      "left": 99.265625
+    }
+  }
+]

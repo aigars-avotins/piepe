@@ -1,0 +1,23 @@
+[
+  {
+    "path": "public/images/portal/threshold-160.webp",
+    "width": 160,
+    "height": 90,
+    "bytes": 11148,
+    "sha256": "43767b683e3ba3814450fcc8f727b3cd8727b170659833b9b4be98fea55f161f"
+  },
+  {
+    "path": "public/images/portal/threshold-480.webp",
+    "width": 480,
+    "height": 270,
+    "bytes": 88004,
+    "sha256": "4b1efefb717c1feea857214858bce2ea26eb1bdee2277dd641e836cf223ce9bb"
+  },
+  {
+    "path": "public/images/portal/threshold-960.webp",
+    "width": 960,
+    "height": 540,
+    "bytes": 293890,
+    "sha256": "06c54815c448c0675dc01d95949a85e8c41761f29fbb6ad246a873de513221c5"
+  }
+]

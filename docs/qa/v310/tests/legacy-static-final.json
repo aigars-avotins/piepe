@@ -1,0 +1,432 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/piepe/node_modules/.bin/playwright",
+      "test",
+      "tests/v258.spec.ts",
+      "--project=chrome-desktop",
+      "--grep",
+      "real static|X-Ray native|saved Nightfall|invalid and denied|every route"
+    ],
+    "configFile": "/workspace/piepe/playwright.config.ts",
+    "rootDir": "/workspace/piepe/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome-desktop",
+        "name": "chrome-desktop",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      },
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-iphone",
+        "name": "webkit-iphone",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chrome-desktop",
+        "testDir": "/workspace/piepe/tests",
+        "snapshotDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 20000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4312",
+          "trace": {
+            "mode": "retain-on-failure",
+            "screenshots": false,
+            "snapshots": false
+          },
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "executablePath": "/usr/bin/chromium"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chrome-desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v258.spec.ts",
+      "file": "v258.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "2.5.8 lv: real static educational content and native atlas work without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 854,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:23.948Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-fe8c927ed675aae74fb1",
+          "file": "v258.spec.ts",
+          "line": 39,
+          "column": 3
+        },
+        {
+          "title": "2.5.8 lv: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1052,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:25.139Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-1f507d2d43eecad085d5",
+          "file": "v258.spec.ts",
+          "line": 53,
+          "column": 3
+        },
+        {
+          "title": "2.5.8 lv: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:26.206Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-271357e35b3f0325ba0b",
+          "file": "v258.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "2.5.8 en: real static educational content and native atlas work without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 614,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:27.607Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-63a8f62047693b0cc0a8",
+          "file": "v258.spec.ts",
+          "line": 39,
+          "column": 3
+        },
+        {
+          "title": "2.5.8 en: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1014,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:28.238Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-d56c3d21a14b42945747",
+          "file": "v258.spec.ts",
+          "line": 53,
+          "column": 3
+        },
+        {
+          "title": "2.5.8 en: saved Nightfall is ready before paint, restores Morning, and follows native document history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1291,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:29.261Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-281727a9ac15e3be12c1",
+          "file": "v258.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "2.5.8 invalid and denied storage keep an operable atmosphere with original default colours",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 799,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:30.561Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-9ce1e0dc9f7a1bdfc50f",
+          "file": "v258.spec.ts",
+          "line": 140,
+          "column": 1
+        },
+        {
+          "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1718,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T01:13:31.372Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "75090a1b7dd50b0c04c2-ce29a9d8d1d94be9daea",
+          "file": "v258.spec.ts",
+          "line": 193,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T01:13:22.862Z",
+    "duration": 10321.909000000001,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

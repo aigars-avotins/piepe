@@ -1,3 +1,4 @@
+import SiteLink from './SiteLink'
 import {portalCopy} from './portalCopy'
 import { discoveryCopy } from './discoveryCopy'
 import { memo, useEffect, useRef } from 'react'
@@ -11,7 +12,7 @@ import Arrow from './Arrow'
 
 export function DiscoveryEntry({locale}:{locale:Locale}) {
   const t=portalCopy[locale]
-  return <a className="discovery-entry" href="#encounter"><span className="discovery-preview" aria-hidden="true"><img src="/media/forest-final.jpg?v=2.3" alt="" width="1920" height="1080" loading="lazy" decoding="async"/></span><span><strong>{t.teaser}</strong><small>{t.teaserHint}</small></span><span className="discovery-entry-arrow" aria-hidden="true"><Arrow direction="down"/></span></a>
+  return <SiteLink className="discovery-entry" href="#encounter" aria-label={`${t.teaser}. ${t.teaserHint}`}><span className="discovery-preview" aria-hidden="true"><img src="/images/portal/threshold-160.webp" srcSet="/images/portal/threshold-160.webp 160w, /images/portal/threshold-480.webp 480w" sizes="70px" alt="" width="1672" height="941" loading="lazy" decoding="async"/></span><span><strong>{t.teaser}</strong><small>{t.teaserHint}</small></span><span className="discovery-entry-arrow" aria-hidden="true"><Arrow direction="down"/></span></SiteLink>
 }
 const HomeExperiences=memo(function HomeExperiences({locale}:{locale:Locale}) {
   const root=useRef<HTMLDivElement>(null),t=discoveryCopy[locale]
@@ -19,8 +20,8 @@ const HomeExperiences=memo(function HomeExperiences({locale}:{locale:Locale}) {
   return <div ref={root} className="home-experiences" key={locale}>
     <div className="exploration-toolbar"><p className="reading-label">{t.label}</p></div>
     {renderXray(locale,{compact:true,prefix:'home-xray',anchor:'forest-xray'})}
-    <a className="line-link exploration-guide" href={readingPath(locale)+'#beneath-bark'} target="_blank" rel="noopener noreferrer">{t.guide}<span aria-hidden="true"><Arrow direction="diagonal"/></span></a>
-    <div className="exploration-gateways"><a href={readingPath(locale)+'#surface-atlas'} target="_blank" rel="noopener noreferrer"><RasterImage name="atlas-pores" alt="" width={2400} height={1792}/><span className="gateway-text"><small>02 / {t.atlas}</small><strong>{t.atlasAction}</strong><span aria-hidden="true"><Arrow direction="diagonal"/></span></span></a><a href={notePath(locale,'005')+'#deadwood-time'} target="_blank" rel="noopener noreferrer"><RasterImage name="deadwood-stage-03" alt=""/><span className="gateway-text"><small>03 / {t.time}</small><strong>{t.timeAction}</strong><span aria-hidden="true"><Arrow direction="diagonal"/></span></span></a></div>
+    <SiteLink className="line-link exploration-guide" href={readingPath(locale)+'#beneath-bark'}>{t.guide}<span aria-hidden="true"><Arrow direction="diagonal"/></span></SiteLink>
+    <div className="exploration-gateways"><SiteLink href={readingPath(locale)+'#surface-atlas'}><RasterImage name="atlas-pores" alt="" width={2400} height={1792}/><span className="gateway-text"><small>02 / {t.atlas}</small><strong>{t.atlasAction}</strong><span aria-hidden="true"><Arrow direction="diagonal"/></span></span></SiteLink><SiteLink href={notePath(locale,'005')+'#deadwood-time'}><RasterImage name="deadwood-stage-03" alt=""/><span className="gateway-text"><small>03 / {t.time}</small><strong>{t.timeAction}</strong><span aria-hidden="true"><Arrow direction="diagonal"/></span></span></SiteLink></div>
   </div>
 })
 export default HomeExperiences

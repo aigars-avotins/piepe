@@ -1,0 +1,20 @@
+{
+  "lv-1512": {
+    "requestToEnteringMs": 731,
+    "nativeFrameSamples": 25,
+    "advancing": true,
+    "sourceDimensions": "1920x1080",
+    "errors": [],
+    "loopCycles": 2,
+    "scrollBefore": 2918
+  },
+  "en-390": {
+    "requestToEnteringMs": 576,
+    "nativeFrameSamples": 25,
+    "advancing": true,
+    "sourceDimensions": "1920x1080",
+    "errors": [],
+    "loopCycles": 2,
+    "scrollBefore": 2795
+  }
+}

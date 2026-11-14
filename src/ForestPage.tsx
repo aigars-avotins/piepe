@@ -1,3 +1,4 @@
+import SiteLink from './SiteLink'
 import { releaseVersion, releaseMilestone } from './release'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { localePath, messages, readingPath } from './i18n'
@@ -45,25 +46,25 @@ function scientific(text: string) {
 }
 function renderContent(locale: Locale, page: ForestPage) {
   const t = collectionCopy[locale], meta = forestMetadata(locale, page)
-  const links = <nav className="knowledge-links" aria-label={t.related}>{page.kind !== 'index' && <a href={fieldNotesPath(locale)} target="_blank" rel="noopener noreferrer">{t.allNotes}</a>}<a href={readingPath(locale)} target="_blank" rel="noopener noreferrer">{t.guide}</a>{page.kind !== 'wallpapers' && <a href={wallpapersPath(locale)} target="_blank" rel="noopener noreferrer">{t.wallpapers}</a>}</nav>
+  const links = <nav className="knowledge-links" aria-label={t.related}>{page.kind !== 'index' && <SiteLink href={fieldNotesPath(locale)}>{t.allNotes}</SiteLink>}<SiteLink href={readingPath(locale)}>{t.guide}</SiteLink>{page.kind !== 'wallpapers' && <SiteLink href={wallpapersPath(locale)}>{t.wallpapers}</SiteLink>}</nav>
   if (page.kind === 'wallpapers') return <>
     <header className="knowledge-intro"><p className="reading-label">PIE.PE</p><h1>{meta.heading}</h1><p className="reading-lead">{meta.lead}</p></header>
     <div className="knowledge-gallery">
-      <article><img src="/wallpapers/previews/desktop.webp" alt={t.desktopAlt} width="800" height="450" fetchPriority="high" /><h2>{messages[locale].desktop}</h2><p>{t.desktopCaption}</p><div className="knowledge-downloads"><a href={wallpaperFiles.desktop5k} download target="_blank" rel="noopener noreferrer">{messages[locale].download5k} <span>5120 × 2880 · JPG</span></a><a href={wallpaperFiles.desktop4k} download target="_blank" rel="noopener noreferrer">{messages[locale].download4k} <span>3840 × 2160 · JPG</span></a></div></article>
-      <article><img className="knowledge-phone" src="/wallpapers/previews/mobile.webp" alt={t.phoneAlt} width="369" height="800" loading="lazy" decoding="async" /><h2>{messages[locale].phone}</h2><p>{t.phoneCaption}</p><div className="knowledge-downloads"><a href={wallpaperFiles.phone} download target="_blank" rel="noopener noreferrer">{messages[locale].downloadPhone} <span>1440 × 3120 · JPG</span></a></div></article>
+      <article><img src="/wallpapers/previews/desktop.webp" alt={t.desktopAlt} width="800" height="450" fetchPriority="high" /><h2>{messages[locale].desktop}</h2><p>{t.desktopCaption}</p><div className="knowledge-downloads"><SiteLink href={wallpaperFiles.desktop5k} download>{messages[locale].download5k} <span>5120 × 2880 · JPG</span></SiteLink><SiteLink href={wallpaperFiles.desktop4k} download>{messages[locale].download4k} <span>3840 × 2160 · JPG</span></SiteLink></div></article>
+      <article><img className="knowledge-phone" src="/wallpapers/previews/mobile.webp" alt={t.phoneAlt} width="369" height="800" loading="lazy" decoding="async" /><h2>{messages[locale].phone}</h2><p>{t.phoneCaption}</p><div className="knowledge-downloads"><SiteLink href={wallpaperFiles.phone} download>{messages[locale].downloadPhone} <span>1440 × 3120 · JPG</span></SiteLink></div></article>
     </div>
     <aside className="reading-art-note"><p>{t.artDisclosure}</p><p>{t.resolutionNote}</p></aside>
     <section className="reading-section"><h2>{t.saveHeading}</h2><p>{t.saveText}</p></section>{links}
   </>
   if (page.kind === 'index') return <>
     <header className="knowledge-intro"><p className="reading-label">PIE.PE</p><h1>{meta.heading}</h1><p className="reading-lead">{meta.lead}</p></header>
-    <ol className="knowledge-index">{noteNumbers.map(number => { const note = fieldNote(locale, number); return <li key={number}><article><a href={notePath(locale, number)} target="_blank" rel="noopener noreferrer"><span className="reading-label">{number}</span><h2>{note.heading}</h2><p>{note.motif}</p><span aria-hidden="true" className="knowledge-card-arrow"><Arrow /></span></a></article></li> })}</ol>
+    <ol className="knowledge-index">{noteNumbers.map(number => { const note = fieldNote(locale, number); return <li key={number}><article><SiteLink href={notePath(locale, number)}><span className="reading-label">{number}</span><h2>{note.heading}</h2><p>{note.motif}</p><span aria-hidden="true" className="knowledge-card-arrow"><Arrow /></span></SiteLink></article></li> })}</ol>
     {links}
   </>
   const note = fieldNote(locale, page.number), sourceIds = [...new Set(note.sections.flatMap(section => section.sources || []))]
-  const citations = (sources: ForestSource[] = []) => sources.length > 0 && <span className="reading-citations">{sources.map(id => <a key={id} href={`#source-${id}`} aria-label={`${t.sources}: ${forestSources[id].name}`}>[{sourceIds.indexOf(id) + 1}]</a>)}</span>
+  const citations = (sources: ForestSource[] = []) => sources.length > 0 && <span className="reading-citations">{sources.map(id => <SiteLink key={id} href={`#source-${id}`} aria-label={`${t.sources}: ${forestSources[id].name}`}>[{sourceIds.indexOf(id) + 1}]</SiteLink>)}</span>
   return <>
-    <nav className="knowledge-trail" aria-label={t.allNotes}><a href={fieldNotesPath(locale)} target="_blank" rel="noopener noreferrer">{t.allNotes}</a><span aria-current="page">/ {t.noteLabel} {page.number}</span></nav>
+    <nav className="knowledge-trail" aria-label={t.allNotes}><SiteLink href={fieldNotesPath(locale)}>{t.allNotes}</SiteLink><span aria-current="page">/ {t.noteLabel} {page.number}</span></nav>
     <article>
       <header className="reading-intro"><p className="reading-label">{t.noteLabel} {page.number}</p><h1>{meta.heading}</h1><p className="knowledge-motif">{note.motif}</p><p className="reading-lead">{scientific(note.lead)}</p></header>
       {page.number==='005'&&renderTimeCapsule(locale)}
@@ -72,10 +73,10 @@ function renderContent(locale: Locale, page: ForestPage) {
         {section.paragraphs.map(p => <p key={p}>{scientific(p)}</p>)}{section.footnote && <p className="knowledge-footnote">{section.footnote}</p>}{citations(section.sources)}
       </section>)}
       <aside className="knowledge-care"><p className="reading-label">{t.observation}</p><p>{note.care}</p></aside>
-      {page.number === '001' ? <section className="reading-sources"><h2>{t.sources}</h2><p>{t.originalContext}</p><a className="knowledge-original" href={`/field-note-${locale}.txt`} download target="_blank" rel="noopener noreferrer">{t.original} <Arrow /></a><p><a href={readingPath(locale)} target="_blank" rel="noopener noreferrer">{t.guide}</a></p></section> : <section className="reading-sources" aria-labelledby="source-title"><h2 id="source-title">{t.sources}</h2><ol>{sourceIds.map(id => <li id={`source-${id}`} key={id} tabIndex={-1}><a href={forestSources[id].url} target="_blank" rel="noopener noreferrer">{forestSources[id].name}</a></li>)}</ol></section>}
+      {page.number === '001' ? <section className="reading-sources"><h2>{t.sources}</h2><p>{t.originalContext}</p><SiteLink className="knowledge-original" href={`/field-note-${locale}.txt`} download>{t.original} <Arrow /></SiteLink><p><SiteLink href={readingPath(locale)}>{t.guide}</SiteLink></p></section> : <section className="reading-sources" aria-labelledby="source-title"><h2 id="source-title">{t.sources}</h2><ol>{sourceIds.map(id => <li id={`source-${id}`} key={id} tabIndex={-1}><SiteLink href={forestSources[id].url}>{forestSources[id].name}</SiteLink></li>)}</ol></section>}
       <aside className="reading-art-note"><p>{t.cinemaDisclosure}</p></aside>
     </article>
-    <nav className="knowledge-related" aria-labelledby="related-title"><h2 id="related-title">{t.related}</h2><ul>{note.related.map(number => <li key={number}><a href={notePath(locale, number)} target="_blank" rel="noopener noreferrer"><span>{number}</span>{fieldNote(locale, number).heading} <span aria-hidden="true"><Arrow /></span></a></li>)}</ul></nav>
+    <nav className="knowledge-related" aria-labelledby="related-title"><h2 id="related-title">{t.related}</h2><ul>{note.related.map(number => <li key={number}><SiteLink href={notePath(locale, number)}><span>{number}</span>{fieldNote(locale, number).heading} <span aria-hidden="true"><Arrow /></span></SiteLink></li>)}</ul></nav>
     {links}
   </>
 }
@@ -99,8 +100,8 @@ export function renderForestDocument(locale: Locale, page: ForestPage, styleshee
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(forestSchema(locale, page)).replace(/</g, '\\u003c') }} />
     {client&&<script type="module" src={client} data-reading-tools="" />}
   </head><body className="reading-page knowledge-page" data-version={releaseVersion} data-milestone={releaseMilestone} data-page={page.kind}>
-    <a className="skip-content" href="#reading"><span data-nosnippet="">{messages[locale].skipContent}</span></a>
-    <header className="reading-header"><a className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></a><nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <a key={lang} lang={lang} hrefLang={lang} href={forestPath(lang, page)} aria-current={lang === locale ? 'page' : undefined}><span data-nosnippet="">{lang.toUpperCase()}</span></a>)}</nav><div className="atmosphere-slot"><AtmosphereSelector locale={locale}/></div></header>
-    <main id="reading" tabIndex={-1} className={`reading-main ${page.kind === 'note' ? '' : 'knowledge-wide'}`}>{renderContent(locale, page)}<footer className="reading-return"><a href={localePath(locale)} target="_blank" rel="noopener noreferrer">{t.forest} <Arrow /></a></footer></main>
+    <SiteLink className="skip-content" href="#reading"><span data-nosnippet="">{messages[locale].skipContent}</span></SiteLink>
+    <header className="reading-header"><SiteLink className="brand" href={localePath(locale)} aria-label={messages[locale].homeLabel}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></SiteLink><nav className="reading-languages" aria-label={messages[locale].language}>{(['lv', 'en'] as const).map(lang => <SiteLink key={lang} lang={lang} hrefLang={lang} href={forestPath(lang, page)} aria-current={lang === locale ? 'page' : undefined}><span data-nosnippet="">{lang.toUpperCase()}</span></SiteLink>)}</nav><div className="atmosphere-slot"><AtmosphereSelector locale={locale} compact/></div></header>
+    <main id="reading" tabIndex={-1} className={`reading-main ${page.kind === 'note' ? '' : 'knowledge-wide'}`}>{renderContent(locale, page)}<footer className="reading-return"><SiteLink href={localePath(locale)}>{t.forest} <Arrow /></SiteLink></footer></main>
   </body></html>)
 }

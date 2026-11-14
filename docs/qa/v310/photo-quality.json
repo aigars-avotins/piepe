@@ -1,0 +1,149 @@
+{
+  "method": "Pillow RGB JPEG decode and Lanczos size-matched reference; FFmpeg yuv444p SSIM; native crops unscaled. No movie or original file changed.",
+  "results": [
+    {
+      "source": "public/images/interactive/atlas-gills.jpg",
+      "derivative": "public/images/interactive/responsive/atlas-gills-960.webp",
+      "width": 960,
+      "sourceBytes": 3537803,
+      "derivativeBytes": 307704,
+      "nativeSsimAgainstSourceAtSameSize": 0.983155
+    },
+    {
+      "source": "public/images/interactive/atlas-gills.jpg",
+      "derivative": "public/images/interactive/responsive/atlas-gills-2400.webp",
+      "width": 2400,
+      "sourceBytes": 3537803,
+      "derivativeBytes": 1573072,
+      "nativeSsimAgainstSourceAtSameSize": 0.99332
+    },
+    {
+      "source": "public/images/interactive/atlas-pores.jpg",
+      "derivative": "public/images/interactive/responsive/atlas-pores-960.webp",
+      "width": 960,
+      "sourceBytes": 3409337,
+      "derivativeBytes": 280284,
+      "nativeSsimAgainstSourceAtSameSize": 0.985813
+    },
+    {
+      "source": "public/images/interactive/atlas-pores.jpg",
+      "derivative": "public/images/interactive/responsive/atlas-pores-2400.webp",
+      "width": 2400,
+      "sourceBytes": 3409337,
+      "derivativeBytes": 1537880,
+      "nativeSsimAgainstSourceAtSameSize": 0.992804
+    },
+    {
+      "source": "public/images/interactive/atlas-smooth.jpg",
+      "derivative": "public/images/interactive/responsive/atlas-smooth-960.webp",
+      "width": 960,
+      "sourceBytes": 3632308,
+      "derivativeBytes": 287500,
+      "nativeSsimAgainstSourceAtSameSize": 0.98394
+    },
+    {
+      "source": "public/images/interactive/atlas-smooth.jpg",
+      "derivative": "public/images/interactive/responsive/atlas-smooth-2400.webp",
+      "width": 2400,
+      "sourceBytes": 3632308,
+      "derivativeBytes": 1823776,
+      "nativeSsimAgainstSourceAtSameSize": 0.993184
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-01.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-01-960.webp",
+      "width": 960,
+      "sourceBytes": 3283598,
+      "derivativeBytes": 247458,
+      "nativeSsimAgainstSourceAtSameSize": 0.989693
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-01.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-01-2752.webp",
+      "width": 2752,
+      "sourceBytes": 3283598,
+      "derivativeBytes": 1622836,
+      "nativeSsimAgainstSourceAtSameSize": 0.993106
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-02.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-02-960.webp",
+      "width": 960,
+      "sourceBytes": 3496556,
+      "derivativeBytes": 263912,
+      "nativeSsimAgainstSourceAtSameSize": 0.988187
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-02.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-02-2752.webp",
+      "width": 2752,
+      "sourceBytes": 3496556,
+      "derivativeBytes": 1933010,
+      "nativeSsimAgainstSourceAtSameSize": 0.993684
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-03.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-03-960.webp",
+      "width": 960,
+      "sourceBytes": 3263016,
+      "derivativeBytes": 250914,
+      "nativeSsimAgainstSourceAtSameSize": 0.989811
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-03.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-03-2752.webp",
+      "width": 2752,
+      "sourceBytes": 3263016,
+      "derivativeBytes": 1595896,
+      "nativeSsimAgainstSourceAtSameSize": 0.993127
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-04.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-04-960.webp",
+      "width": 960,
+      "sourceBytes": 3283370,
+      "derivativeBytes": 252098,
+      "nativeSsimAgainstSourceAtSameSize": 0.989672
+    },
+    {
+      "source": "public/images/interactive/deadwood-stage-04.jpg",
+      "derivative": "public/images/interactive/responsive/deadwood-stage-04-2752.webp",
+      "width": 2752,
+      "sourceBytes": 3283370,
+      "derivativeBytes": 1600352,
+      "nativeSsimAgainstSourceAtSameSize": 0.993075
+    },
+    {
+      "source": "public/images/interactive/xray-bark-surface.jpg",
+      "derivative": "public/images/interactive/responsive/xray-bark-surface-960.webp",
+      "width": 960,
+      "sourceBytes": 3617990,
+      "derivativeBytes": 244786,
+      "nativeSsimAgainstSourceAtSameSize": 0.986167
+    },
+    {
+      "source": "public/images/interactive/xray-bark-surface.jpg",
+      "derivative": "public/images/interactive/responsive/xray-bark-surface-2752.webp",
+      "width": 2752,
+      "sourceBytes": 3617990,
+      "derivativeBytes": 1804550,
+      "nativeSsimAgainstSourceAtSameSize": 0.993588
+    },
+    {
+      "source": "public/images/interactive/xray-wood-mycelium.jpg",
+      "derivative": "public/images/interactive/responsive/xray-wood-mycelium-960.webp",
+      "width": 960,
+      "sourceBytes": 3003508,
+      "derivativeBytes": 238238,
+      "nativeSsimAgainstSourceAtSameSize": 0.987031
+    },
+    {
+      "source": "public/images/interactive/xray-wood-mycelium.jpg",
+      "derivative": "public/images/interactive/responsive/xray-wood-mycelium-2752.webp",
+      "width": 2752,
+      "sourceBytes": 3003508,
+      "derivativeBytes": 1336692,
+      "nativeSsimAgainstSourceAtSameSize": 0.993348
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "events": [
+    {
+      "event": "click",
+      "at": 10746,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "IMG.null"
+    },
+    {
+      "event": "focusin",
+      "at": 10971,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "DIV.portal-view "
+    },
+    {
+      "event": "focusin",
+      "at": 14288,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "BUTTON.portal-primary"
+    },
+    {
+      "event": "focusin",
+      "at": 14983,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "DIALOG.fungus-portal"
+    },
+    {
+      "event": "click",
+      "at": 14986,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "BUTTON.portal-primary"
+    },
+    {
+      "event": "focusin",
+      "at": 14987,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "BUTTON.portal-exit"
+    },
+    {
+      "event": "loadstart",
+      "at": 15022,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49202/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 0,
+        "paused": true
+      }
+    },
+    {
+      "event": "loadedmetadata",
+      "at": 15621,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49202/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 1,
+        "paused": true
+      }
+    },
+    {
+      "event": "loadeddata",
+      "at": 16180,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49202/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 4,
+        "paused": true
+      }
+    },
+    {
+      "event": "playing",
+      "at": 16644,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49202/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 4,
+        "paused": false
+      }
+    },
+    {
+      "event": "stalled",
+      "at": 19903,
+      "scroll": 1921,
+      "hash": "#encounter",
+      "focus": true,
+      "target": "VIDEO.null",
+      "media": {
+        "src": "http://127.0.0.1:49202/media/portal-02-faststart.mp4",
+        "time": 0,
+        "ready": 4,
+        "paused": false
+      }
+    }
+  ],
+  "photoPhases": [],
+  "maxFrameGap": 3104,
+  "frames": 763,
+  "href": "http://127.0.0.1:49202/en/#encounter",
+  "scroll": 1921,
+  "focus": true,
+  "visibility": "visible",
+  "viewport": {
+    "width": 390,
+    "height": 664
+  },
+  "screen": {
+    "width": 390,
+    "height": 844
+  },
+  "world": "world  is-ready has-title   atmosphere-paused      ",
+  "photo": {},
+  "videos": [
+    {
+      "src": "http://127.0.0.1:49202/media/portal-02-faststart.mp4",
+      "time": 0,
+      "ready": 4,
+      "network": 2,
+      "paused": true,
+      "error": null,
+      "buffered": [],
+      "frames": 0
+    },
+    {
+      "src": "",
+      "time": 0,
+      "ready": 0,
+      "network": 0,
+      "paused": true,
+      "error": null,
+      "buffered": [],
+      "frames": 0
+    }
+  ]
+}
