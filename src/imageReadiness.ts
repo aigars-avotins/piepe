@@ -1,4 +1,4 @@
-const groupFor = (image: HTMLImageElement) => image.closest<HTMLElement>('.xray-view,.atlas-picture,.time-visual,.atlas-comparison figure')
+const groupFor = (image: HTMLImageElement) => image.closest<HTMLElement>('.xray-view,.atlas-picture,.time-visual,.atlas-comparison figure,.gateway-photo')
 
 export function revealDeferredImages(root: HTMLElement) {
   root.querySelectorAll<HTMLElement>('picture[data-deferred-image]').forEach(picture => {

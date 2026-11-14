@@ -1,0 +1,2848 @@
+{
+  "origin": "https://pie.pe",
+  "checkedAtUtc": "2026-11-14T08:31:05.339Z",
+  "canonicalRoutes": 20,
+  "www": "Not manufactured: public DNS A/CNAME NXDOMAIN in the before audit.",
+  "results": [
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a82fefee864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/",
+      "hreflang": {
+        "lv": "https://pie.pe/",
+        "en": "https://pie.pe/en/",
+        "x-default": "https://pie.pe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a830795cb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a8310ec41a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/",
+      "hreflang": {
+        "lv": "https://pie.pe/",
+        "en": "https://pie.pe/en/",
+        "x-default": "https://pie.pe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a831a998864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/kas-ir-piepe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/kas-ir-piepe/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a831eb59af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/kas-ir-piepe/",
+      "hreflang": {
+        "lv": "https://pie.pe/kas-ir-piepe/",
+        "en": "https://pie.pe/en/what-is-a-bracket-fungus/",
+        "x-default": "https://pie.pe/kas-ir-piepe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/kas-ir-piepe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/kas-ir-piepe/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a8324a79864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/what-is-a-bracket-fungus/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a832aab8b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "hreflang": {
+        "lv": "https://pie.pe/kas-ir-piepe/",
+        "en": "https://pie.pe/en/what-is-a-bracket-fungus/",
+        "x-default": "https://pie.pe/kas-ir-piepe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/what-is-a-bracket-fungus/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a832ff381a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-foni/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-foni/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-foni/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a8335bb4af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-foni/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-foni/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-foni/",
+        "en": "https://pie.pe/en/forest-wallpapers/",
+        "x-default": "https://pie.pe/meza-foni/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-foni/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-foni/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-foni/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a833db6c864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-foni/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/forest-wallpapers/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/forest-wallpapers/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/forest-wallpapers/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a8343b9eb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/forest-wallpapers/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/forest-wallpapers/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-foni/",
+        "en": "https://pie.pe/en/forest-wallpapers/",
+        "x-default": "https://pie.pe/meza-foni/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/forest-wallpapers/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/forest-wallpapers/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/forest-wallpapers/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a8349fbc1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/forest-wallpapers/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a834fc47864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-piezimes/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/",
+        "en": "https://pie.pe/en/field-notes/",
+        "x-default": "https://pie.pe/meza-piezimes/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a8354ff11a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a835cca4b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/field-notes/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/",
+        "en": "https://pie.pe/en/field-notes/",
+        "x-default": "https://pie.pe/meza-piezimes/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:56 GMT",
+          "cfRay": "a5a4a8360c64af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/001/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/001/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a8367d0fb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/001/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-piezimes/001/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/001/",
+        "en": "https://pie.pe/en/field-notes/001/",
+        "x-default": "https://pie.pe/meza-piezimes/001/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/001/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/001/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a836c8441a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/001/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/001/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/001/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83788791a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/001/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/field-notes/001/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/001/",
+        "en": "https://pie.pe/en/field-notes/001/",
+        "x-default": "https://pie.pe/meza-piezimes/001/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/001/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/001/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a837f8971a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/001/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/002-caga/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/002-caga/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/002-caga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a8385f00b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/002-caga/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-piezimes/002-caga/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/002-caga/",
+        "en": "https://pie.pe/en/field-notes/002-chaga/",
+        "x-default": "https://pie.pe/meza-piezimes/002-caga/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/002-caga/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/002-caga/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/002-caga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a838ad0faf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/002-caga/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/002-chaga/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/002-chaga/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/002-chaga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a8392f9db7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/002-chaga/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/field-notes/002-chaga/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/002-caga/",
+        "en": "https://pie.pe/en/field-notes/002-chaga/",
+        "x-default": "https://pie.pe/meza-piezimes/002-caga/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/002-chaga/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/002-chaga/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/002-chaga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a8397fd4b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/002-chaga/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/003-serpiepe/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/003-serpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a839e816b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/003-serpiepe/",
+        "en": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+        "x-default": "https://pie.pe/meza-piezimes/003-serpiepe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/003-serpiepe/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/003-serpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83a2d66af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/003-chicken-of-the-woods/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83a891e1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/003-serpiepe/",
+        "en": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+        "x-default": "https://pie.pe/meza-piezimes/003-serpiepe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/003-chicken-of-the-woods/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83ae8c7b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/004-latvijas-piepes/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83b28fdb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+        "en": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+        "x-default": "https://pie.pe/meza-piezimes/004-latvijas-piepes/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/004-latvijas-piepes/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83b798c864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/004-common-bracket-fungi/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83bbdc9af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+        "en": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+        "x-default": "https://pie.pe/meza-piezimes/004-latvijas-piepes/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/004-common-bracket-fungi/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:57 GMT",
+          "cfRay": "a5a4a83c29821a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/005-kritalas-un-laiks/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83c99feb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+        "en": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+        "x-default": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/005-kritalas-un-laiks/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83cea33b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/005-deadwood-and-time/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83d1e15af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+        "en": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+        "x-default": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/005-deadwood-and-time/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83d89db1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83dfe54af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+        "en": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+        "x-default": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83e4e6eaf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/006-lacquered-bracket/",
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83e9a231a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "finalStatus": 200,
+      "hops": 0,
+      "canonical": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "hreflang": {
+        "lv": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+        "en": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+        "x-default": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/"
+      }
+    },
+    {
+      "kind": "canonical",
+      "url": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "status": 200,
+      "maxHops": 0,
+      "path": "/en/field-notes/006-lacquered-bracket/",
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83eda2f1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/",
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83f3c00b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83f7d1a864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/",
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a83fcd5c864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a8403cd7b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/kas-ir-piepe",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/",
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a8409d16b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a840df27af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/kas-ir-piepe",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/",
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a8414da6b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a8418edc864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/what-is-a-bracket-fungus",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/what-is-a-bracket-fungus/",
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a841df0a864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a8421ae81a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/what-is-a-bracket-fungus",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/what-is-a-bracket-fungus/",
+          "date": "Sat, 14 Nov 2026 08:30:58 GMT",
+          "cfRay": "a5a4a8429ea5b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a842ded9b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-foni",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-foni",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-foni/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a8433b371a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-foni/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a843bfdbaf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-foni/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-foni",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-foni",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-foni/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a8440b771a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-foni/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a84458aa864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-foni/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/forest-wallpapers",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/forest-wallpapers",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/forest-wallpapers/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a844a82fb7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/forest-wallpapers/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a845091e864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/forest-wallpapers/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/forest-wallpapers",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/forest-wallpapers",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/forest-wallpapers/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a8456978864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/forest-wallpapers/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a845a9cb864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/forest-wallpapers/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a8460879af26-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a8466c141a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a846d8baaf26-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a847bb9f864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a8480b01b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a8485c3c864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/",
+          "date": "Sat, 14 Nov 2026 08:30:59 GMT",
+          "cfRay": "a5a4a848bcb41a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a8490942af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/001",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/001",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/001/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a8496d091a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a849cc2cb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/001/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/001",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/001",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/001/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84a1da0864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84a5d4b1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/001/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/001",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/001",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/001/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84aae38864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84ae9e1af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/001/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/001",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/001",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/001/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84b5d34b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/001/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84b9f19864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/001/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/002-caga",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/002-caga",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/002-caga/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84bedb91a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/002-caga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84c2a3eaf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/002-caga/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/002-caga",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/002-caga",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/002-caga/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84c8dd81a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/002-caga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84cdfff864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/002-caga/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/002-chaga",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/002-chaga",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/002-chaga/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84d383c864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/002-chaga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84d787e864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/002-chaga/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/002-chaga",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/002-chaga",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/002-chaga/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84ddf0cb7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/002-chaga/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84e0ad2af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/002-chaga/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/003-serpiepe",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/003-serpiepe",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/003-serpiepe/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84e594d864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/003-serpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84eaafeaf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/003-serpiepe",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/003-serpiepe",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/003-serpiepe/",
+          "date": "Sat, 14 Nov 2026 08:31:00 GMT",
+          "cfRay": "a5a4a84efe761a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/003-serpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a84f4a29864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/003-serpiepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/003-chicken-of-the-woods/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a84f8871b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a84fcea61a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/003-chicken-of-the-woods/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8501b2a864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8506ed81a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/004-latvijas-piepes/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a850e953b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a85149a4b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/004-latvijas-piepes/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8519c5a864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a851ec1eaf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/004-common-bracket-fungi/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8524a65b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8528d72864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/004-common-bracket-fungi/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a852dc5eaf26-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8531c72af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/005-kritalas-un-laiks/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a853afa61a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8541bb4b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/005-kritalas-un-laiks/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8546fd91a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a854bfcf864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/005-deadwood-and-time",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/005-deadwood-and-time",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/005-deadwood-and-time/",
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a85508061a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:01 GMT",
+          "cfRay": "a5a4a8555d26af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/005-deadwood-and-time",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/005-deadwood-and-time",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/005-deadwood-and-time/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a855b87d864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a855f84d1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/006-lakas-plakanpiepe/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a85658fd864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a856cd92af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/meza-piezimes/006-lakas-plakanpiepe/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a8573dd0b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a8578e01b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/006-lacquered-bracket",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/006-lacquered-bracket",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/006-lacquered-bracket/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a857de26b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a8582e54b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "slash",
+      "url": "https://pie.pe/en/field-notes/006-lacquered-bracket",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/006-lacquered-bracket",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/field-notes/006-lacquered-bracket/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a8587e95b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a858bec5b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a8590f07b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a85949351a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a8599f76b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a859ee6daf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/en/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a85a7e9caf26-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a85add34864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/en/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/",
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a85b2ed5af26-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:02 GMT",
+          "cfRay": "a5a4a85b7e1b864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/kas-ir-piepe/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85bce59864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85c1e9e864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/kas-ir-piepe/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85c69a8b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85ca9ceb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/en/what-is-a-bracket-fungus/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/what-is-a-bracket-fungus/",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85cea4c1a92-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85d2f9a864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "index-alias",
+      "url": "https://pie.pe/en/what-is-a-bracket-fungus/index.html",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/index.html",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/what-is-a-bracket-fungus/",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85d8fcd864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85dda9db7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "query",
+      "url": "https://pie.pe/?utm_source=v310-audit",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/?utm_source=v310-audit",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85e1840864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/?utm_source=v310-audit",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "query",
+      "url": "https://pie.pe/?utm_source=v310-audit",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/?utm_source=v310-audit",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85e78b5864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/?utm_source=v310-audit",
+      "finalStatus": 200,
+      "hops": 0
+    },
+    {
+      "kind": "query",
+      "url": "https://pie.pe/en?utm_source=v310-audit",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en?utm_source=v310-audit",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/?utm_source=v310-audit",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85ebb4eb7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/?utm_source=v310-audit",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85ef921864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/?utm_source=v310-audit",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "query",
+      "url": "https://pie.pe/en?utm_source=v310-audit",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en?utm_source=v310-audit",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/?utm_source=v310-audit",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85f481faf26-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/?utm_source=v310-audit",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85f9b481a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/?utm_source=v310-audit",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "query",
+      "url": "https://pie.pe/kas-ir-piepe?utm_source=v310-audit",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe?utm_source=v310-audit",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/?utm_source=v310-audit",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a85fec3cb7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/?utm_source=v310-audit",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a8602a3b864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/?utm_source=v310-audit",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "query",
+      "url": "https://pie.pe/kas-ir-piepe?utm_source=v310-audit",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas-ir-piepe?utm_source=v310-audit",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/?utm_source=v310-audit",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a8607872af26-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/?utm_source=v310-audit",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a860ecdbb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/?utm_source=v310-audit",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "encoded",
+      "url": "https://pie.pe/kas%2Dir%2Dpiepe/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas%2Dir%2Dpiepe/",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/",
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a8614b53864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:03 GMT",
+          "cfRay": "a5a4a861dbf01a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "encoded",
+      "url": "https://pie.pe/kas%2Dir%2Dpiepe/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/kas%2Dir%2Dpiepe/",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/kas-ir-piepe/",
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a86228ecaf26-GRU"
+        },
+        {
+          "url": "https://pie.pe/kas-ir-piepe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8628c4a864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/kas-ir-piepe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "encoded",
+      "url": "https://pie.pe/%65n/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/%65n/",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/",
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a862cc8c864b-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8630c7a1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "encoded",
+      "url": "https://pie.pe/%65n/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/%65n/",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/",
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8637f22b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a863cdc7864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "encoded",
+      "url": "https://pie.pe/en%2Fwhat-is-a-bracket-fungus/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en%2Fwhat-is-a-bracket-fungus/",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/what-is-a-bracket-fungus/",
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8640f7fb7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8644e75864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "encoded",
+      "url": "https://pie.pe/en%2Fwhat-is-a-bracket-fungus/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en%2Fwhat-is-a-bracket-fungus/",
+          "status": 307,
+          "statusLine": "HTTP/2 307 ",
+          "location": "/en/what-is-a-bracket-fungus/",
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a864afe9b7a9-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/what-is-a-bracket-fungus/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a864f820b7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/what-is-a-bracket-fungus/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/not-a-page/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/not-a-page/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a865485eb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/not-a-page/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/not-a-page/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/not-a-page/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8658f60864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/not-a-page/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/meza-piezimes/007/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/007/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a865cfad864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/007/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/meza-piezimes/007/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/meza-piezimes/007/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8663d8f1a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/meza-piezimes/007/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/en/field-notes/999/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/999/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a866995bb7a9-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/999/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/en/field-notes/999/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/field-notes/999/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a866da42af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/field-notes/999/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/en/forest-wallpapers/missing/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/forest-wallpapers/missing/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8673a5aaf26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/forest-wallpapers/missing/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "unknown",
+      "url": "https://pie.pe/en/forest-wallpapers/missing/",
+      "status": 404,
+      "maxHops": 0,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "https://pie.pe/en/forest-wallpapers/missing/",
+          "status": 404,
+          "statusLine": "HTTP/2 404 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a8678a73af26-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/forest-wallpapers/missing/",
+      "finalStatus": 404,
+      "hops": 0
+    },
+    {
+      "kind": "scheme",
+      "url": "http://pie.pe/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "http://pie.pe/",
+          "status": 301,
+          "statusLine": "HTTP/1.1 301 Moved Permanently",
+          "location": "https://pie.pe/",
+          "date": "Sat, 14 Nov 2026 08:31:04 GMT",
+          "cfRay": "a5a4a867dc12af5f-GRU"
+        },
+        {
+          "url": "https://pie.pe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:05 GMT",
+          "cfRay": "a5a4a8684a13864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "scheme",
+      "url": "http://pie.pe/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "http://pie.pe/",
+          "status": 301,
+          "statusLine": "HTTP/1.1 301 Moved Permanently",
+          "location": "https://pie.pe/",
+          "date": "Sat, 14 Nov 2026 08:31:05 GMT",
+          "cfRay": "a5a4a8688c5eaf5f-GRU"
+        },
+        {
+          "url": "https://pie.pe/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:05 GMT",
+          "cfRay": "a5a4a8690a7e864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "scheme",
+      "url": "http://pie.pe/en/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "GET",
+      "steps": [
+        {
+          "url": "http://pie.pe/en/",
+          "status": 301,
+          "statusLine": "HTTP/1.1 301 Moved Permanently",
+          "location": "https://pie.pe/en/",
+          "date": "Sat, 14 Nov 2026 08:31:05 GMT",
+          "cfRay": "a5a4a86969d37be8-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:05 GMT",
+          "cfRay": "a5a4a869be901a92-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    },
+    {
+      "kind": "scheme",
+      "url": "http://pie.pe/en/",
+      "status": 200,
+      "maxHops": 1,
+      "method": "HEAD",
+      "steps": [
+        {
+          "url": "http://pie.pe/en/",
+          "status": 301,
+          "statusLine": "HTTP/1.1 301 Moved Permanently",
+          "location": "https://pie.pe/en/",
+          "date": "Sat, 14 Nov 2026 08:31:05 GMT",
+          "cfRay": "a5a4a869fa367be8-GRU"
+        },
+        {
+          "url": "https://pie.pe/en/",
+          "status": 200,
+          "statusLine": "HTTP/2 200 ",
+          "location": null,
+          "date": "Sat, 14 Nov 2026 08:31:05 GMT",
+          "cfRay": "a5a4a86a4b96864b-GRU"
+        }
+      ],
+      "finalUrl": "https://pie.pe/en/",
+      "finalStatus": 200,
+      "hops": 1
+    }
+  ]
+}

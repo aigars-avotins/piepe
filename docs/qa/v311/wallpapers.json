@@ -1,0 +1,110 @@
+[
+  {
+    "design": "ancient-forest",
+    "device": "desktop",
+    "provenance": "New OpenAI image generation, separately authored desktop/mobile compositions, 2026-11-14",
+    "original": {
+      "url": "/wallpapers/originals/piepe-ancient-forest-desktop-original.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2824297,
+      "sha256": "926d54854f5375bee95a2052ce6198b44535cdbd29e275481046507ec8370db1"
+    },
+    "download": {
+      "url": "/wallpapers/piepe-ancient-forest-desktop-5120x2880.jpg",
+      "width": 5120,
+      "height": 2880,
+      "bytes": 5050860,
+      "sha256": "3258b3d594071e0db15a1a31b12ddcd2fe9385c965eb9f9192440c5d50ac38f0"
+    },
+    "preview": {
+      "url": "/wallpapers/previews/ancient-forest-desktop.webp",
+      "width": 800,
+      "height": 450,
+      "bytes": 141494,
+      "sha256": "3e9a2389f73dde38ee5efebf6b538590487e342e98a87bbae72e8a1403f9a9b4"
+    },
+    "export": "High-quality Lanczos enlargement, JPEG97, 4:4:4, sRGB. No invented native-5K or optical-detail claim. Original PNG bytes retained."
+  },
+  {
+    "design": "ancient-forest",
+    "device": "mobile",
+    "provenance": "New OpenAI image generation, separately authored desktop/mobile compositions, 2026-11-14",
+    "original": {
+      "url": "/wallpapers/originals/piepe-ancient-forest-mobile-original.png",
+      "width": 852,
+      "height": 1846,
+      "bytes": 2672423,
+      "sha256": "d8fac4c7290ba42e0af2c284138eb513b786ae38b49753062cdfc238d12bf3dd"
+    },
+    "download": {
+      "url": "/wallpapers/piepe-ancient-forest-mobile-1440x3120.jpg",
+      "width": 1440,
+      "height": 3120,
+      "bytes": 2021788,
+      "sha256": "a835e1acdcc390f7937308f7352ba8113271b6f7d46ac22efd6c6478ca80774b"
+    },
+    "preview": {
+      "url": "/wallpapers/previews/ancient-forest-mobile.webp",
+      "width": 369,
+      "height": 800,
+      "bytes": 110084,
+      "sha256": "6948a218549da4a55ca9bd275cf67e6318566d617b588704bd26b5c3502a659f"
+    },
+    "export": "High-quality Lanczos enlargement, JPEG97, 4:4:4, sRGB. No invented native-5K or optical-detail claim. Original PNG bytes retained."
+  },
+  {
+    "design": "hidden-forest",
+    "device": "desktop",
+    "provenance": "New OpenAI image generation, separately authored desktop/mobile compositions, 2026-11-14",
+    "original": {
+      "url": "/wallpapers/originals/piepe-hidden-forest-desktop-original.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2213845,
+      "sha256": "bf21a59901626229f1351ea2755f27527f3713cbd7194da850fad9031b13d87f"
+    },
+    "download": {
+      "url": "/wallpapers/piepe-hidden-forest-desktop-5120x2880.jpg",
+      "width": 5120,
+      "height": 2880,
+      "bytes": 4031548,
+      "sha256": "b6d6d81ad9d5dd63f39e7dc8f1816cba6a3bf53242e1645aa40fe94cca471996"
+    },
+    "preview": {
+      "url": "/wallpapers/previews/hidden-forest-desktop.webp",
+      "width": 800,
+      "height": 450,
+      "bytes": 93702,
+      "sha256": "17447739fc73953923f6f1c700e924eb9e95411bbb60b9a2d54e64829d26d250"
+    },
+    "export": "High-quality Lanczos enlargement, JPEG97, 4:4:4, sRGB. No invented native-5K or optical-detail claim. Original PNG bytes retained."
+  },
+  {
+    "design": "hidden-forest",
+    "device": "mobile",
+    "provenance": "New OpenAI image generation, separately authored desktop/mobile compositions, 2026-11-14",
+    "original": {
+      "url": "/wallpapers/originals/piepe-hidden-forest-mobile-original.png",
+      "width": 852,
+      "height": 1846,
+      "bytes": 2062110,
+      "sha256": "ff447ca21da8047ee6050185f080855445b24cba5787a034d721db80fac1df71"
+    },
+    "download": {
+      "url": "/wallpapers/piepe-hidden-forest-mobile-1440x3120.jpg",
+      "width": 1440,
+      "height": 3120,
+      "bytes": 1441610,
+      "sha256": "34dd1f6a5635328f114801cff1669dd5848f4f35deb22797fc74158f64e4afe0"
+    },
+    "preview": {
+      "url": "/wallpapers/previews/hidden-forest-mobile.webp",
+      "width": 369,
+      "height": 800,
+      "bytes": 64286,
+      "sha256": "27838d30538a7b1a1cfa310093b8adff30eb9a156cbb26936b2a4c38ac988cdc"
+    },
+    "export": "High-quality Lanczos enlargement, JPEG97, 4:4:4, sRGB. No invented native-5K or optical-detail claim. Original PNG bytes retained."
+  }
+]

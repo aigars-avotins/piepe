@@ -1,0 +1,9 @@
+/* One approved cinematic appearance. The retired colour-mode preference has no effect. */
+:root{--bg-primary:#172017;--bg-elevated:#222e21;--bg-card:rgba(36,48,34,.82);--text-primary:#f7f2e7;--text-secondary:#d8ceb8;--accent:#e5ad57;--optical-grade:brightness(1.08) saturate(1.14) sepia(.08) contrast(1) hue-rotate(0deg);--motion-easing:cubic-bezier(.22,1,.36,1);--color-forest:var(--bg-primary);--color-offwhite:var(--text-primary);--color-ivory:var(--accent);--paper:var(--text-primary);--muted:var(--text-secondary);--gold:var(--accent);--line:color-mix(in srgb,var(--text-secondary) 24%,transparent);background:var(--bg-primary);color:var(--text-primary)}
+/* Retain the existing warm stage light and native video compositing boundaries. */
+:is(.world,.reading-page,.discovery-stage)::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 50% 0%,rgba(235,180,90,.18),transparent 70%)}
+.environment .media-plane>img,.environment .forest-film,.environment .motion-clip>img,.environment .motion-clip>video,.environment .wide-environment>img,.specimen-photo>img,.raster-grade{filter:var(--optical-grade)}
+.reading-page{background:var(--bg-primary);color:var(--text-secondary)}.reading-header,.reading-main{position:relative;z-index:2}.reading-page .reading-header{background:linear-gradient(105deg,var(--bg-elevated),transparent)}
+.discovery-stage::before{z-index:0}.discovery-copy,.specimen-caption{z-index:1}
+.world>main,.world>footer{position:relative;z-index:2}
+@media(max-width:699px){footer{flex-wrap:wrap}}

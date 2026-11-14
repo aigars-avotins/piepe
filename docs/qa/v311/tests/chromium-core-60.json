@@ -1,0 +1,1103 @@
+{
+  "method": "Playwright JSON evidence summary. Attachment bodies omitted to avoid duplicating screenshot payloads; original run artifacts retained. Status, assertions and errors are unaltered.",
+  "stats": {
+    "startTime": "2026-11-14T11:42:35.347Z",
+    "duration": 92726.056,
+    "expected": 60,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v310-images.spec.ts",
+      "line": 3,
+      "title": "3.1 lv no-JS reading retains factual imagery, native explanations and original-photo links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1026,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 3,
+      "title": "3.1 en no-JS reading retains factual imagery, native explanations and original-photo links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 856,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 10,
+      "title": "3.1 a slow paired image gives a neutral placeholder, then reveals both real layers together",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1158,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 15,
+      "title": "3.1 real first-layer image failure and full fallback failure remain accessible and retryable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 819,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 20,
+      "title": "3.1 the last Deadwood image can fail and recover without substituting a false mixed stage",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 895,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 25,
+      "title": "3.1 inactive Deadwood sources wait for near-view intent and use responsive source-quality copies",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 506,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 29,
+      "title": "3.1.1 lv reading header retains accessible native language targets without the retired selector",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 392,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 29,
+      "title": "3.1.1 en reading header retains accessible native language targets without the retired selector",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 385,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 31,
+      "title": "3.1 two actual external reference links create isolated new tabs with no referrer",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1743,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 42,
+      "title": "3.1 a user-modified locale link does not mutate the current homepage",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1403,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 7,
+      "title": "homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2147,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 23,
+      "title": "locale links, native fragments and same-origin downloads preserve their own native behavior",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 941,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 7,
+      "title": "homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1860,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 23,
+      "title": "locale links, native fragments and same-origin downloads preserve their own native behavior",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 906,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1557,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 460664,
+              "bodySha256": "a8058ed0fa5994fb5a8e0560c47c0f0ad021699dc72a15712df83cf069b30dde"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1707,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 749448,
+              "bodySha256": "35510c4a868520d6b3f1fc6635d01e77b0a3e9715670b6df55f88474bdff3bb4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1780,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 834968,
+              "bodySha256": "41d708c76a1e7c202ed70a83a894d9c6ec4304d294201a77c6e867d006725d88"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2154,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 1579204,
+              "bodySha256": "c20f00590bc3198d8436de14e5054a00f2e076a9e8dfea23bc7c146fb8d42a2f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2603,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 2932692,
+              "bodySha256": "fe4653fd7df72c670ee7a12fd95148a039c1f43c5c377d206475c7dddac45a2b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2616,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 3285864,
+              "bodySha256": "8af4587925926978a06cc7177078e213e5cd310d2d689f7d3fa269dcff971710"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1564,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 469980,
+              "bodySha256": "1b7938a4f3b317ead1ae72435a54a6f12e163e043fd3158a10e1226ca05a5493"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1641,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 761128,
+              "bodySha256": "ce71916477a5f93f0f16515b643f38440ef5d1d98b01d648dba36a758f9ea9fe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1667,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 854736,
+              "bodySha256": "d2c3def92fdad8320751a36bbe28d168cf1650cca6c3bd0fa3f30ae66641c4b7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1980,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 1636844,
+              "bodySha256": "4afe6644b6aec894aa3b1712eaa3cc14b4ef611a1220043bef41a3d0cd613172"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2417,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 2802104,
+              "bodySha256": "c8bfb2ae6f209eaac733122b6d140ae7dd65b190b79d6c7c82a883b8f236ecf5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2626,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 3327780,
+              "bodySha256": "6e50899bf670979d8fd9cc47c1536f1fedcffec0250fb8e89ecb57f7c7ecffd8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 17,
+      "title": "explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4080,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "clean-cinema",
+              "contentType": "image/png",
+              "bodyBytes": 457916,
+              "bodySha256": "4da114b86185ed0d27a0c85bcaa08978657dfd69eac0dfdaaeb8874e0f275eee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 17,
+      "title": "explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3946,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "clean-cinema",
+              "contentType": "image/png",
+              "bodyBytes": 927800,
+              "bodySha256": "ad81862e84dabf032a0701f58f7c0bd1f37945d440c01a4249635aadbcb45365"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 17,
+      "title": "explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4809,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "clean-cinema",
+              "contentType": "image/png",
+              "bodyBytes": 3261120,
+              "bodySha256": "8575b237a1d30777f0e6aa228510a25914335ec1707a63f9dd341bb48722bb30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 33,
+      "title": "3.1 actual HTML anchor nodes on all twenty routes obey the real-origin navigation policy",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1138,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 44,
+      "title": "3.1 lv real phone touch keeps Atlas gestures separate from navigation and explicit comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2275,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-touch-drag",
+              "contentType": "application/json",
+              "bodyBytes": 2860,
+              "bodySha256": "8f02e44e5639fef3c69c4a560dc96e1da13794baaed2aed7b6d9edeb8aa6ddc0"
+            },
+            {
+              "name": "native-phone-touch",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v310-3-1-lv-real-phone-tou-2d3e1-ion-and-explicit-comparison-chrome-desktop/attachments/native-phone-touch-3c5f191108a3348b1f0483dbf7bcfaf1e0399e78.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 44,
+      "title": "3.1 en real phone touch keeps Atlas gestures separate from navigation and explicit comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2073,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-touch-drag",
+              "contentType": "application/json",
+              "bodyBytes": 3328,
+              "bodySha256": "0099e94f2b94b371ac7e1f9bae6a20c77f41298792ba0df771aa5135adfb7c16"
+            },
+            {
+              "name": "native-phone-touch",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v310-3-1-en-real-phone-tou-a188e-ion-and-explicit-comparison-chrome-desktop/attachments/native-phone-touch-6cda94f319eaeef922250a52dbcd2a3e51daa116.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 61,
+      "title": "3.1 intentional X-Ray deep links select one explanation and native Back restores the previous fragment",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 549,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 6,
+      "title": "selected X-Ray explanations never move the viewport or mutate its hash",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 822,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 15,
+      "title": "Atlas gestures are independent from the explicit original-resolution comparison dialog",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1020,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 21,
+      "title": "Deadwood retains its fractional image mix and exposes one meaningful current image description",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3437,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 6,
+      "title": "selected X-Ray explanations never move the viewport or mutate its hash",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 625,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 15,
+      "title": "Atlas gestures are independent from the explicit original-resolution comparison dialog",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 731,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 21,
+      "title": "Deadwood retains its fractional image mix and exposes one meaningful current image description",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3097,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1774,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1270,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 663,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 638,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2076,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2403,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 706,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 619,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 24,
+      "title": "3.1.1 /: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1347,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 24,
+      "title": "3.1.1 /en/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1298,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 24,
+      "title": "3.1.1 /kas-ir-piepe/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 913,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 24,
+      "title": "3.1.1 /en/what-is-a-bracket-fungus/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 836,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 30,
+      "title": "3.1.1 lv: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 975,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 30,
+      "title": "3.1.1 en: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 941,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 37,
+      "title": "3.1.1 lv: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1126,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 37,
+      "title": "3.1.1 en: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1094,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 44,
+      "title": "3.1.1 lv: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 565,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 44,
+      "title": "3.1.1 en: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 600,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 50,
+      "title": "3.1.1 lv: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 933,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 50,
+      "title": "3.1.1 en: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1001,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 59,
+      "title": "3.1.1 the homepage never requests new full-resolution wallpaper downloads",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 707,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

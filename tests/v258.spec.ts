@@ -41,7 +41,7 @@ for(const locale of ['lv','en'] as const){
     try{
       const p=await context.newPage();await p.goto(readingPath(locale));await checkStaticMarkup(p)
       for(const story of t.xray.stories)await expect(p.locator('[data-xray]')).toContainText(story.text)
-      await expect(p.locator('[data-xray-controls]')).toBeVisible();await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toBeVisible()
+      await expect(p.locator('[data-xray-controls]')).toBeVisible();await expect(p.locator('[data-xray-range]')).toBeDisabled();await expect(p.locator('[data-atmosphere-controls]')).toHaveCount(0)
       await expect(p.locator('[data-atlas-open]').first()).toBeHidden();await expect(p.locator('.atlas-original').first()).toHaveAttribute('href','/images/interactive/atlas-pores.jpg');expect(await p.locator('.atlas-original').first().getAttribute('target')).toBeNull();await expect(p.locator('[data-atlas-card]').first().locator('img[data-interactive-image]')).toHaveAttribute('src','/images/interactive/atlas-pores.jpg')
       await expect(p.locator('[data-atlas-card]').first()).toContainText(t.atlas.cards[0].detail)
       await p.goto(notePath(locale,'005'));for(const stage of t.time.stages)await expect(p.locator('.time-stories')).toContainText(stage.text)
@@ -92,22 +92,19 @@ for(const locale of ['lv','en'] as const){
     await expect(page.locator('.experience-caution')).toHaveText(t.atlas.caution)
   })
 
-  test(`2.5.8 ${locale}: saved Nightfall is ready before paint, restores Morning, and follows native document history`,async({page})=>{
+  test(`3.1.1 ${locale}: a retired Nightfall preference cannot change first paint or native document history`,async({page})=>{
     const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
     await page.addInitScript(()=>{
       if(!sessionStorage.getItem('theme-test-initialized')){localStorage.setItem('piepe-atmosphere','nightfall');localStorage.setItem('piepe-forest-sound','off');sessionStorage.setItem('theme-test-initialized','1')}
-      const firstStyledContent=()=>{if(document.querySelector('main')&&document.styleSheets.length)(window as unknown as {firstAtmosphere:string|undefined}).firstAtmosphere=document.documentElement.dataset.atmosphere;else requestAnimationFrame(firstStyledContent)}
+      const firstStyledContent=()=>{if(document.querySelector('main')&&document.styleSheets.length)(window as unknown as {firstAppearance:string}).firstAppearance=getComputedStyle(document.documentElement).getPropertyValue('--bg-primary');else requestAnimationFrame(firstStyledContent)}
       requestAnimationFrame(firstStyledContent)
     })
-    await page.goto(readingPath(locale));await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall')
-    await expect.poll(()=>page.evaluate(()=>(window as unknown as {firstAtmosphere:string}).firstAtmosphere)).toBe('nightfall')
-    // Short article labels preserve the original full localized wording in aria-label.
-    const morning=locale==='lv'?'Rīta gaisma':'Morning light',night=locale==='lv'?'Nakts krēsla':'Nightfall';await expect(page.locator('[data-atmosphere-choice=morning]')).toHaveAccessibleName(new RegExp(morning));await expect(page.locator('[data-atmosphere-choice=nightfall]')).toHaveAccessibleName(new RegExp(night))
-    await expect(page.locator('[data-atmosphere-choice=nightfall]')).toHaveAttribute('aria-pressed','true')
-    await page.locator('[data-atmosphere-choice=morning]').click();await page.goto(fieldNotesPath(locale));await expect(page.locator('html')).toHaveAttribute('data-atmosphere','morning')
-    await page.locator('[data-atmosphere-choice=nightfall]').click();await page.goto(localePath(locale));await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall')
-    await page.locator('[data-atmosphere-choice=morning]').click();await page.goBack();await expect(page.locator('html')).toHaveAttribute('data-atmosphere','morning')
-    await expect(page.locator('[data-atmosphere-choice=morning]')).toHaveAttribute('aria-pressed','true');expect(errors).toEqual([])
+    await page.goto(readingPath(locale));await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0)
+    await expect.poll(()=>page.evaluate(()=>(window as unknown as {firstAppearance:string}).firstAppearance)).toBe('#172017')
+    await expect(page.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)');await expect.poll(()=>page.evaluate(()=>localStorage.getItem('piepe-atmosphere'))).toBeNull()
+    await page.goto(fieldNotesPath(locale));await expect(page.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)')
+    await page.goto(localePath(locale));await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0)
+    await page.goBack();await expect(page).toHaveURL(new RegExp(fieldNotesPath(locale)+'$'));await expect(page.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)');expect(errors).toEqual([])
   })
 }
 
@@ -137,12 +134,12 @@ for(const mode of ['reduced','save-data'] as const)test(`2.5.8 ${mode}: illustra
   await expect(page.locator('video,audio')).toHaveCount(0)
 })
 
-test('2.5.8 invalid and denied storage keep an operable atmosphere with original default colours',async({browser})=>{
+test('3.1.1 invalid and denied storage retain the single approved appearance and native language links',async({browser})=>{
   for(const denied of [false,true]){
     const context=await browser.newContext({viewport:{width:390,height:844}})
     try{
-      await context.addInitScript(deny=>{if(deny){Object.defineProperty(Storage.prototype,'getItem',{value:()=>{throw new DOMException('Denied','SecurityError')}});Object.defineProperty(Storage.prototype,'setItem',{value:()=>{throw new DOMException('Denied','SecurityError')}})}else localStorage.setItem('piepe-atmosphere','not-a-mode')},denied)
-      const p=await context.newPage(),errors:string[]=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('/en/forest-wallpapers/');await expect(p.getByRole('button',{name:'Morning — Morning light',exact:true})).toHaveAttribute('aria-pressed','true');await p.getByRole('button',{name:'Nightfall',exact:true}).click();await expect(p.locator('html')).toHaveAttribute('data-atmosphere','nightfall');expect(errors).toEqual([])
+      await context.addInitScript(deny=>{if(deny){for(const method of ['getItem','setItem','removeItem'])Object.defineProperty(Storage.prototype,method,{value:()=>{throw new DOMException('Denied','SecurityError')}})}else localStorage.setItem('piepe-atmosphere','not-a-mode')},denied)
+      const p=await context.newPage(),errors:string[]=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('/en/forest-wallpapers/');await expect(p.locator('[data-atmosphere-controls]')).toHaveCount(0);await expect(p.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)');await p.locator('.reading-languages a[lang="lv"]').click();await expect(p).toHaveURL(/\/meza-foni\/$/);await expect(p.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)');expect(errors).toEqual([])
     }finally{await context.close()}
   }
 })
@@ -192,7 +189,8 @@ test('2.5.8 unavailable Web Audio retains real gesture-gated native recording pl
 
 test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets',async({request,page})=>{
   const policy=/Content-Security-Policy: (.+)/.exec(await readFile('dist/_headers','utf8'))![1],paths=['/','/en/',readingPath('lv'),readingPath('en'),...forestPages.flatMap(p=>[forestPath('lv',p),forestPath('en',p)])]
-  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(22);expect(policy).not.toMatch(/script-src[^;]*(?:unsafe-inline|unsafe-eval|https:|\*)/)
+  // The retired colour bootstrap is gone: one home bootstrap + 20 document JSON-LD hashes.
+  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(21);expect(policy).not.toMatch(/script-src[^;]*(?:unsafe-inline|unsafe-eval|https:|\*)/)
   for(const path of paths){
     const response=await request.get(path),html=await response.text();expect(response.status()).toBe(200)
     const ids=await page.evaluate(markup=>[...new DOMParser().parseFromString(markup,'text/html').querySelectorAll('[id]')].map(element=>element.id),html)
@@ -205,8 +203,13 @@ test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs 
     await expect(page.locator('.knowledge-trail')).toContainText(data.breadcrumb.itemListElement[0].name);await expect(page.locator('.knowledge-trail')).toContainText(data.breadcrumb.itemListElement[1].name)
   }
   const fixture=JSON.parse(await readFile('docs/qa/v258/baseline-inventory.json','utf8'))
-  for(const[path,hash]of Object.entries(fixture.publicAssets))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
-  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(path==='src/Discovery.tsx'?(await readFile(path,'utf8')).replace("import SiteLink from './SiteLink'\n",'').replaceAll('<SiteLink','<a').replaceAll('</SiteLink>','</a>').replace(' target="_blank" rel="noopener noreferrer"',''):await readFile(path)).digest('hex'),path).toBe(fixture.sources[path])
+  const reviewed:Record<string,string>=JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8'))
+  for(const[path,hash]of Object.entries({...fixture.publicAssets,...reviewed}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
+  // Only the Issue #34 reviewed caption/snippet/download/storage files change.
+  // The independent original header prefix and all camera/Worker/media pins remain enforced.
+  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/style.css'])
+  expect(createHash('sha256').update((await readFile('public/_headers','utf8')).split('/wallpapers/piepe-forest-desktop-5120x2880.jpg')[0]).digest('hex')).toBe(fixture.sources['public/_headers'])
+  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(reviewed[path]??fixture.sources[path])
   const guide=await(await request.get(readingPath('lv'))).text(),home=await(await request.get('/')).text(),entry=/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],bundle=await readFile('dist'+entry,'utf8');expect(guide).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).not.toContain(readings.lv.sections[1].paragraphs[0]) // Shared homepage X-Ray is intentional in 2.5.8.1; long-form guide still stays static.
 })
 

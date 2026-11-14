@@ -77,38 +77,28 @@ for(const locale of ['lv','en'] as const)test(`2.5.8.2 ${locale}: narrow-phone H
  try{
   const page=await context.newPage();await page.addInitScript(()=>{sessionStorage.setItem('piepe-entered','1');localStorage.setItem('piepe-forest-sound','off')})
   await page.goto(locale==='lv'?'/':'/en/');await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await page.evaluate(()=>document.fonts.ready)
-  const selectors=['.hero-copy','.discovery-entry','.hero-foot .scroll-cue','.hero-atmosphere','.world>.sound-control','.fungus-annotation>span:last-child']
+  const selectors=['.hero-copy','.discovery-entry','.hero-foot .scroll-cue','.world>.sound-control','.fungus-annotation>span:last-child']
   const overlaps=await page.evaluate(selectors=>{const boxes=selectors.map(s=>({s,r:document.querySelector(s)!.getBoundingClientRect()})),overlaps:string[][]=[];for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];if(a.r.left<b.r.right&&a.r.right>b.r.left&&a.r.top<b.r.bottom&&a.r.bottom>b.r.top)overlaps.push([a.s,b.s])}return overlaps},selectors)
   expect(overlaps).toEqual([]);expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320)
-  await page.locator('[data-atmosphere-choice=nightfall]').click();await expect(page.locator('html')).toHaveAttribute('data-atmosphere','nightfall')
-  expect(await page.locator('.world>main').evaluate(e=>Number(getComputedStyle(e).zIndex))).toBeGreaterThan(await page.locator('.world').evaluate(e=>Number(getComputedStyle(e,'::after').zIndex)))
+  await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0)
+  expect(await page.locator('.world>main').evaluate(e=>Number(getComputedStyle(e).zIndex))).toBeGreaterThan(await page.locator('.world').evaluate(e=>Number(getComputedStyle(e,'::before').zIndex)))
  }finally{await context.close()}
 })
 
-test('2.5.8.2 mood changes the entire reading palette and grades the visual plane once',async({page})=>{
- await page.goto('/kas-ir-piepe/');const grade=page.locator('.xray-images'),morning=await grade.evaluate(e=>getComputedStyle(e).filter)
- expect(morning).toBe('brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)')
- await page.locator('[data-atmosphere-choice=nightfall]').click()
- await expect(grade).toHaveCSS('filter','brightness(0.82) saturate(0.75) sepia(0) contrast(1.12) hue-rotate(-18deg)')
- await expect(page.locator('body')).toHaveCSS('background-color','rgb(5, 8, 13)');await expect(grade.locator('img').first()).toHaveCSS('filter','none')
- await page.emulateMedia({reducedMotion:'reduce'});await page.locator('[data-atmosphere-choice=morning]').click();await expect(grade).toHaveCSS('transition-duration','0s')
- await expect(page.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)')
+test('3.1.1 the fixed approved grade applies once to each photograph and respects reduced motion',async({page})=>{
+ await page.goto('/kas-ir-piepe/');const grade=page.locator('.xray-images')
+ await expect(grade).toHaveCSS('filter','brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)');await expect(grade.locator('img').first()).toHaveCSS('filter','none');await expect(page.locator('body')).toHaveCSS('background-color','rgb(23, 32, 23)');await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0)
+ await page.emulateMedia({reducedMotion:'reduce'});await expect(grade).toHaveCSS('transition-duration','0s')
 })
 
-
-test('2.5.8.2 mood optical grade interpolates across actual rendered frames',async({page})=>{
- await page.emulateMedia({reducedMotion:'no-preference'})
- await page.goto('/kas-ir-piepe/#beneath-bark');await page.locator('.xray-view').scrollIntoViewIfNeeded()
+test('3.1.1 legacy storage events cannot recolour actual rendered frames',async({page})=>{
+ await page.emulateMedia({reducedMotion:'no-preference'});await page.goto('/kas-ir-piepe/#beneath-bark');await page.locator('.xray-view').scrollIntoViewIfNeeded()
  const samples=await page.evaluate(async()=>{
   const element=document.querySelector('.xray-images')!,startFilter=getComputedStyle(element).filter,frames:{time:number;filter:string}[]=[]
-  document.querySelector<HTMLButtonElement>('[data-atmosphere-choice=nightfall]')!.click()
-  const start=performance.now();await new Promise<void>(resolve=>{const frame=()=>{const time=performance.now()-start;frames.push({time,filter:getComputedStyle(element).filter});if(time<750)requestAnimationFrame(frame);else resolve()};requestAnimationFrame(frame)})
+  localStorage.setItem('piepe-atmosphere','nightfall');window.dispatchEvent(new StorageEvent('storage',{key:'piepe-atmosphere',newValue:'nightfall'}))
+  const start=performance.now();await new Promise<void>(resolve=>{const frame=()=>{const time=performance.now()-start;frames.push({time,filter:getComputedStyle(element).filter});if(time<300)requestAnimationFrame(frame);else resolve()};requestAnimationFrame(frame)})
   return{startFilter,frames}
  })
- const end='brightness(0.82) saturate(0.75) sepia(0) contrast(1.12) hue-rotate(-18deg)'
- expect(samples.frames.at(-1)!.filter).toBe(end)
- const intermediate=samples.frames.filter(frame=>frame.time<600&&frame.filter!==samples.startFilter&&frame.filter!==end)
- expect(intermediate.length,'The visible optical grade must interpolate, not cut instantly').toBeGreaterThan(2)
- expect(new Set(intermediate.map(frame=>frame.filter)).size).toBeGreaterThan(2)
+ expect(samples.startFilter).toBe('brightness(1.08) saturate(1.14) sepia(0.08) contrast(1) hue-rotate(0deg)');expect(samples.frames.length).toBeGreaterThan(2);expect(samples.frames.every(frame=>frame.filter===samples.startFilter)).toBe(true)
  await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('.xray-images')).toHaveCSS('transition-duration','0s')
 })

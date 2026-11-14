@@ -1,0 +1,78 @@
+{
+  "method": "Playwright JSON evidence summary. Attachment bodies omitted to avoid duplicating screenshot payloads; original run artifacts retained. Status, assertions and errors are unaltered.",
+  "stats": {
+    "startTime": "2026-11-14T11:53:48.110Z",
+    "duration": 4149.133,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v258.spec.ts",
+      "line": 190,
+      "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1841,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 73,
+      "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 188,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 75,
+      "title": "2.5.8.2 lv: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 571,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 75,
+      "title": "2.5.8.2 en: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 605,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

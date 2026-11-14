@@ -1,0 +1,592 @@
+{
+  "method": "Playwright JSON evidence summary. Attachment bodies omitted to avoid duplicating screenshot payloads; original run artifacts retained. Status, assertions and errors are unaltered.",
+  "stats": {
+    "startTime": "2026-11-14T11:54:11.481Z",
+    "duration": 240916.938,
+    "expected": 29,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 lv: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2915,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 en: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2636,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 137,
+      "title": "3.1.1 invalid and denied storage retain the single approved appearance and native language links",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2786,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 190,
+      "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2500,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 lv: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "timedOut",
+          "duration": 25102,
+          "retry": 0,
+          "errors": [
+            {
+              "message": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+            },
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v2581.spec.ts",
+                "column": 77,
+                "line": 62
+              },
+              "message": "Error: page.evaluate: Test timeout of 20000ms exceeded.\n\n  60 |     let release!:()=>void;const gate=new Promise<void>(r=>{release=r})\n  61 |     await page.route('**/reading-tools-*.js',async route=>{await gate;await route.continue()})\n> 62 |     await page.goto(notePath(locale,'005'),{waitUntil:'commit'});await page.evaluate(()=>document.fonts.ready)\n     |                                                                             ^\n  63 |     await expect(page.locator('[data-time-controls]')).toBeVisible();await expect(page.locator('[data-time-range]')).toBeDisabled();await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0);const y=await page.locator('h1').evaluate(e=>e.getBoundingClientRect().top)\n  64 |     release();await expect(page.locator('[data-time-range]')).toBeEnabled();expect(await page.locator('h1').evaluate(e=>e.getBoundingClientRect().top)).toBeCloseTo(y,0)\n  65 |     await page.locator('[data-time-choice=\"3\"]').click();await expect(page.locator('[data-time-capsule]')).toHaveAttribute('data-stage','3');const r=await page.locator('.time-visual').boundingBox();expect(r!.width/r!.height).toBeCloseTo(16/9,2)\n    at /workspace/piepe/tests/v2581.spec.ts:62:77"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe311-qa/linux-webkit-results/v2581-3-1-1-lv-delayed-sta-5212a--obsolete-preference-header-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe311-qa/linux-webkit-results/v2581-3-1-1-lv-delayed-sta-5212a--obsolete-preference-header-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 en: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "timedOut",
+          "duration": 25275,
+          "retry": 0,
+          "errors": [
+            {
+              "message": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+            },
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v2581.spec.ts",
+                "column": 77,
+                "line": 62
+              },
+              "message": "Error: page.evaluate: Test timeout of 20000ms exceeded.\n\n  60 |     let release!:()=>void;const gate=new Promise<void>(r=>{release=r})\n  61 |     await page.route('**/reading-tools-*.js',async route=>{await gate;await route.continue()})\n> 62 |     await page.goto(notePath(locale,'005'),{waitUntil:'commit'});await page.evaluate(()=>document.fonts.ready)\n     |                                                                             ^\n  63 |     await expect(page.locator('[data-time-controls]')).toBeVisible();await expect(page.locator('[data-time-range]')).toBeDisabled();await expect(page.locator('[data-atmosphere-controls]')).toHaveCount(0);const y=await page.locator('h1').evaluate(e=>e.getBoundingClientRect().top)\n  64 |     release();await expect(page.locator('[data-time-range]')).toBeEnabled();expect(await page.locator('h1').evaluate(e=>e.getBoundingClientRect().top)).toBeCloseTo(y,0)\n  65 |     await page.locator('[data-time-choice=\"3\"]').click();await expect(page.locator('[data-time-capsule]')).toHaveAttribute('data-stage','3');const r=await page.locator('.time-visual').boundingBox();expect(r!.width/r!.height).toBeCloseTo(16/9,2)\n    at /workspace/piepe/tests/v2581.spec.ts:62:77"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe311-qa/linux-webkit-results/v2581-3-1-1-en-delayed-sta-aafa6--obsolete-preference-header-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe311-qa/linux-webkit-results/v2581-3-1-1-en-delayed-sta-aafa6--obsolete-preference-header-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 73,
+      "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 356,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 75,
+      "title": "2.5.8.2 lv: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4684,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 75,
+      "title": "2.5.8.2 en: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3725,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 88,
+      "title": "3.1.1 the fixed approved grade applies once to each photograph and respects reduced motion",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1261,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 94,
+      "title": "3.1.1 legacy storage events cannot recolour actual rendered frames",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3300,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 15293,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19182,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 11524,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 lv 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9519,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 17467,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 12722,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v311.spec.ts",
+                "column": 202,
+                "line": 12
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.world')\nExpected pattern: not \u001b[32m/prerendered/\u001b[39m\nReceived string: \u001b[31m\"world \u001b[7mprerendered\u001b[27m is-intro          \"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveClass\" locator('.world') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.world')\u001b[22m\n\u001b[2m    12 \u00d7 locator resolved to <div data-scene=\"forest\" data-exit-reason=\"\" data-version=\"3.1.1\" data-milestone=\"3.1\" data-awakening=\"idle\" data-intro-state=\"playing\" class=\"world prerendered is-intro          \">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"world prerendered is-intro          \"\u001b[22m\n\n\n  10 |\n  11 | for(const locale of ['lv','en'] as const)for(const[width,height]of[[2048,1200],[1512,982],[390,844],[320,568]])test(`3.1.1 ${locale} ${width}: gallery captions remain inside their cards and divider rules stay between rows`,async({page})=>{\n> 12 |  await page.setViewportSize({width,height});await page.addInitScript(()=>sessionStorage.setItem('piepe-entered','1'));await page.goto(locale==='lv'?'/':'/en/');await expect(page.locator('.world')).not.toHaveClass(/prerendered/);await page.evaluate(()=>document.fonts.ready)\n     |                                                                                                                                                                                                          ^\n  13 |  const cards=page.locator('.exploration-gateways>a');await cards.first().scrollIntoViewIfNeeded()\n  14 |  for(const card of await cards.all()){\n  15 |   const measure=await card.evaluate(e=>{const box=e.getBoundingClientRect(),text=e.querySelector('.gateway-text')!.getBoundingClientRect(),photo=e.querySelector('.gateway-photo')!.getBoundingClientRect();return{card:box.bottom,text:text.bottom,photoBottom:photo.bottom,textTop:text.top,ratio:photo.width/photo.height}})\n    at /workspace/piepe/tests/v311.spec.ts:12:202"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe311-qa/linux-webkit-results/v311-3-1-1-en-1512-gallery-9e539-der-rules-stay-between-rows-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe311-qa/linux-webkit-results/v311-3-1-1-en-1512-gallery-9e539-der-rules-stay-between-rows-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9044,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 11,
+      "title": "3.1.1 en 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7142,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6914,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /en/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7067,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /kas-ir-piepe/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4217,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 25,
+      "title": "3.1.1 /en/what-is-a-bracket-fungus/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4003,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 31,
+      "title": "3.1.1 lv: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4551,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 31,
+      "title": "3.1.1 en: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6531,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 38,
+      "title": "3.1.1 lv: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8593,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 38,
+      "title": "3.1.1 en: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6213,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 45,
+      "title": "3.1.1 lv: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 744,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 45,
+      "title": "3.1.1 en: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 571,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 51,
+      "title": "3.1.1 lv: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1936,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 51,
+      "title": "3.1.1 en: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2727,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 60,
+      "title": "3.1.1 the homepage never requests new full-resolution wallpaper downloads",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2917,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

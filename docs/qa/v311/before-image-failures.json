@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/",
+    "rangeEnabled": true,
+    "pointDisabled": null
+  },
+  {
+    "path": "/en/",
+    "rangeEnabled": true,
+    "pointDisabled": null
+  },
+  {
+    "path": "/kas-ir-piepe/",
+    "rangeEnabled": true,
+    "pointDisabled": null,
+    "atlasButtonsEnabled": [
+      true,
+      true,
+      true
+    ],
+    "atlasTabIndexes": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "path": "/en/what-is-a-bracket-fungus/",
+    "rangeEnabled": true,
+    "pointDisabled": null,
+    "atlasButtonsEnabled": [
+      true,
+      true,
+      true
+    ],
+    "atlasTabIndexes": [
+      0,
+      0,
+      0
+    ]
+  }
+]

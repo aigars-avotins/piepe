@@ -1,0 +1,778 @@
+[
+  {
+    "key": "lv-2048",
+    "locale": "lv",
+    "width": 2048,
+    "height": 1200,
+    "gatewayY": 7002,
+    "measure": {
+      "y": 7002,
+      "gateways": [
+        {
+          "card": {
+            "top": 7025.65625,
+            "bottom": 7523.46875,
+            "width": 600,
+            "height": 497.8125
+          },
+          "text": {
+            "top": 7523.46875,
+            "bottom": 7657.4375,
+            "width": 600,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 7046.65625,
+            "bottom": 7523.46875,
+            "width": 600,
+            "height": 476.8125
+          }
+        },
+        {
+          "card": {
+            "top": 7025.65625,
+            "bottom": 7523.46875,
+            "width": 600,
+            "height": 497.8125
+          },
+          "text": {
+            "top": 7523.46875,
+            "bottom": 7657.4375,
+            "width": 600,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 7046.65625,
+            "bottom": 7523.46875,
+            "width": 600,
+            "height": 476.8125
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 7593.46875,
+            "bottom": 7802.25,
+            "width": 554.65625,
+            "height": 208.78125
+          },
+          "heading": {
+            "top": 7659.859375,
+            "bottom": 7698.25,
+            "width": 554.65625,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 7593.46875,
+            "bottom": 7802.25,
+            "width": 554.671875,
+            "height": 208.78125
+          },
+          "heading": {
+            "top": 7659.859375,
+            "bottom": 7698.25,
+            "width": 554.671875,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 7593.46875,
+            "bottom": 7802.25,
+            "width": 554.671875,
+            "height": 208.78125
+          },
+          "heading": {
+            "top": 7659.859375,
+            "bottom": 7698.25,
+            "width": 554.671875,
+            "height": 38.390625
+          }
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "key": "en-2048",
+    "locale": "en",
+    "width": 2048,
+    "height": 1200,
+    "gatewayY": 7148,
+    "measure": {
+      "y": 7148,
+      "gateways": [
+        {
+          "card": {
+            "top": 7171.5625,
+            "bottom": 7669.375,
+            "width": 600,
+            "height": 497.8125
+          },
+          "text": {
+            "top": 7669.375,
+            "bottom": 7803.34375,
+            "width": 600,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 7192.5625,
+            "bottom": 7669.375,
+            "width": 600,
+            "height": 476.8125
+          }
+        },
+        {
+          "card": {
+            "top": 7171.5625,
+            "bottom": 7669.375,
+            "width": 600,
+            "height": 497.8125
+          },
+          "text": {
+            "top": 7669.375,
+            "bottom": 7803.34375,
+            "width": 600,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 7192.5625,
+            "bottom": 7669.375,
+            "width": 600,
+            "height": 476.8125
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 7739.375,
+            "bottom": 7948.15625,
+            "width": 554.65625,
+            "height": 208.78125
+          },
+          "heading": {
+            "top": 7805.765625,
+            "bottom": 7844.15625,
+            "width": 554.65625,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 7739.375,
+            "bottom": 7948.15625,
+            "width": 554.671875,
+            "height": 208.78125
+          },
+          "heading": {
+            "top": 7805.765625,
+            "bottom": 7844.15625,
+            "width": 554.671875,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 7739.375,
+            "bottom": 7948.15625,
+            "width": 554.671875,
+            "height": 208.78125
+          },
+          "heading": {
+            "top": 7805.765625,
+            "bottom": 7844.15625,
+            "width": 554.671875,
+            "height": 38.390625
+          }
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "key": "lv-1512",
+    "locale": "lv",
+    "width": 1512,
+    "height": 982,
+    "gatewayY": 6151,
+    "measure": {
+      "y": 6151,
+      "gateways": [
+        {
+          "card": {
+            "top": 6175.125,
+            "bottom": 6672.796875,
+            "width": 599.734375,
+            "height": 497.671875
+          },
+          "text": {
+            "top": 6672.796875,
+            "bottom": 6806.765625,
+            "width": 599.734375,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 6196.125,
+            "bottom": 6672.796875,
+            "width": 599.734375,
+            "height": 476.671875
+          }
+        },
+        {
+          "card": {
+            "top": 6175.125,
+            "bottom": 6672.796875,
+            "width": 599.734375,
+            "height": 497.671875
+          },
+          "text": {
+            "top": 6672.796875,
+            "bottom": 6806.765625,
+            "width": 599.734375,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 6196.125,
+            "bottom": 6672.796875,
+            "width": 599.734375,
+            "height": 476.671875
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 6742.796875,
+            "bottom": 6979.578125,
+            "width": 388.09375,
+            "height": 236.78125
+          },
+          "heading": {
+            "top": 6809.1875,
+            "bottom": 6847.578125,
+            "width": 388.09375,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 6742.796875,
+            "bottom": 6979.578125,
+            "width": 388.09375,
+            "height": 236.78125
+          },
+          "heading": {
+            "top": 6809.1875,
+            "bottom": 6847.578125,
+            "width": 388.09375,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 6742.796875,
+            "bottom": 6979.578125,
+            "width": 388.09375,
+            "height": 236.78125
+          },
+          "heading": {
+            "top": 6809.1875,
+            "bottom": 6847.578125,
+            "width": 388.09375,
+            "height": 38.390625
+          }
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "key": "en-1512",
+    "locale": "en",
+    "width": 1512,
+    "height": 982,
+    "gatewayY": 6297,
+    "measure": {
+      "y": 6297,
+      "gateways": [
+        {
+          "card": {
+            "top": 6321.03125,
+            "bottom": 6818.703125,
+            "width": 599.734375,
+            "height": 497.671875
+          },
+          "text": {
+            "top": 6818.703125,
+            "bottom": 6952.671875,
+            "width": 599.734375,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 6342.03125,
+            "bottom": 6818.703125,
+            "width": 599.734375,
+            "height": 476.671875
+          }
+        },
+        {
+          "card": {
+            "top": 6321.03125,
+            "bottom": 6818.703125,
+            "width": 599.734375,
+            "height": 497.671875
+          },
+          "text": {
+            "top": 6818.703125,
+            "bottom": 6952.671875,
+            "width": 599.734375,
+            "height": 133.96875
+          },
+          "picture": {
+            "top": 6342.03125,
+            "bottom": 6818.703125,
+            "width": 599.734375,
+            "height": 476.671875
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 6888.703125,
+            "bottom": 7125.484375,
+            "width": 388.09375,
+            "height": 236.78125
+          },
+          "heading": {
+            "top": 6955.09375,
+            "bottom": 6993.484375,
+            "width": 388.09375,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 6888.703125,
+            "bottom": 7125.484375,
+            "width": 388.09375,
+            "height": 236.78125
+          },
+          "heading": {
+            "top": 6955.09375,
+            "bottom": 6993.484375,
+            "width": 388.09375,
+            "height": 38.390625
+          }
+        },
+        {
+          "card": {
+            "top": 6888.703125,
+            "bottom": 7125.484375,
+            "width": 388.09375,
+            "height": 236.78125
+          },
+          "heading": {
+            "top": 6955.09375,
+            "bottom": 6993.484375,
+            "width": 388.09375,
+            "height": 38.390625
+          }
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "key": "lv-390",
+    "locale": "lv",
+    "width": 390,
+    "height": 844,
+    "gatewayY": 5475,
+    "measure": {
+      "y": 5475,
+      "gateways": [
+        {
+          "card": {
+            "top": 5499.421875,
+            "bottom": 5833.71875,
+            "width": 342,
+            "height": 334.296875
+          },
+          "text": {
+            "top": 5833.71875,
+            "bottom": 5951.59375,
+            "width": 342,
+            "height": 117.875
+          },
+          "picture": {
+            "top": 5520.421875,
+            "bottom": 5833.71875,
+            "width": 342,
+            "height": 313.296875
+          }
+        },
+        {
+          "card": {
+            "top": 5863.71875,
+            "bottom": 6198.015625,
+            "width": 342,
+            "height": 334.296875
+          },
+          "text": {
+            "top": 6198.015625,
+            "bottom": 6315.890625,
+            "width": 342,
+            "height": 117.875
+          },
+          "picture": {
+            "top": 5884.71875,
+            "bottom": 6198.015625,
+            "width": 342,
+            "height": 313.296875
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 6238.015625,
+            "bottom": 6427.203125,
+            "width": 342,
+            "height": 189.1875
+          },
+          "heading": {
+            "top": 6296.40625,
+            "bottom": 6331.203125,
+            "width": 342,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 6455.203125,
+            "bottom": 6672.390625,
+            "width": 342,
+            "height": 217.1875
+          },
+          "heading": {
+            "top": 6513.59375,
+            "bottom": 6548.390625,
+            "width": 342,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 6700.390625,
+            "bottom": 6917.578125,
+            "width": 342,
+            "height": 217.1875
+          },
+          "heading": {
+            "top": 6758.78125,
+            "bottom": 6793.578125,
+            "width": 342,
+            "height": 34.796875
+          }
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "key": "en-390",
+    "locale": "en",
+    "width": 390,
+    "height": 844,
+    "gatewayY": 5562,
+    "measure": {
+      "y": 5562,
+      "gateways": [
+        {
+          "card": {
+            "top": 5586.3125,
+            "bottom": 5920.609375,
+            "width": 342,
+            "height": 334.296875
+          },
+          "text": {
+            "top": 5920.609375,
+            "bottom": 6038.484375,
+            "width": 342,
+            "height": 117.875
+          },
+          "picture": {
+            "top": 5607.3125,
+            "bottom": 5920.609375,
+            "width": 342,
+            "height": 313.296875
+          }
+        },
+        {
+          "card": {
+            "top": 5950.609375,
+            "bottom": 6284.90625,
+            "width": 342,
+            "height": 334.296875
+          },
+          "text": {
+            "top": 6284.90625,
+            "bottom": 6402.78125,
+            "width": 342,
+            "height": 117.875
+          },
+          "picture": {
+            "top": 5971.609375,
+            "bottom": 6284.90625,
+            "width": 342,
+            "height": 313.296875
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 6324.90625,
+            "bottom": 6542.09375,
+            "width": 342,
+            "height": 217.1875
+          },
+          "heading": {
+            "top": 6383.296875,
+            "bottom": 6418.09375,
+            "width": 342,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 6570.09375,
+            "bottom": 6815.28125,
+            "width": 342,
+            "height": 245.1875
+          },
+          "heading": {
+            "top": 6628.484375,
+            "bottom": 6663.28125,
+            "width": 342,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 6843.28125,
+            "bottom": 7088.46875,
+            "width": 342,
+            "height": 245.1875
+          },
+          "heading": {
+            "top": 6901.671875,
+            "bottom": 6936.46875,
+            "width": 342,
+            "height": 34.796875
+          }
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "key": "lv-320",
+    "locale": "lv",
+    "width": 320,
+    "height": 568,
+    "gatewayY": 4484,
+    "measure": {
+      "y": 4484,
+      "gateways": [
+        {
+          "card": {
+            "top": 4507.5625,
+            "bottom": 4806.4375,
+            "width": 280,
+            "height": 298.875
+          },
+          "text": {
+            "top": 4806.4375,
+            "bottom": 4924.3125,
+            "width": 280,
+            "height": 117.875
+          },
+          "picture": {
+            "top": 4528.5625,
+            "bottom": 4806.4375,
+            "width": 280,
+            "height": 277.875
+          }
+        },
+        {
+          "card": {
+            "top": 4836.4375,
+            "bottom": 5135.3125,
+            "width": 280,
+            "height": 298.875
+          },
+          "text": {
+            "top": 5135.3125,
+            "bottom": 5253.1875,
+            "width": 280,
+            "height": 117.875
+          },
+          "picture": {
+            "top": 4857.4375,
+            "bottom": 5135.3125,
+            "width": 280,
+            "height": 277.875
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 5175.3125,
+            "bottom": 5392.5,
+            "width": 280,
+            "height": 217.1875
+          },
+          "heading": {
+            "top": 5233.703125,
+            "bottom": 5268.5,
+            "width": 280,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 5420.5,
+            "bottom": 5665.6875,
+            "width": 280,
+            "height": 245.1875
+          },
+          "heading": {
+            "top": 5478.890625,
+            "bottom": 5513.6875,
+            "width": 280,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 5693.6875,
+            "bottom": 5973.671875,
+            "width": 280,
+            "height": 279.984375
+          },
+          "heading": {
+            "top": 5752.078125,
+            "bottom": 5821.671875,
+            "width": 280,
+            "height": 69.59375
+          }
+        }
+      ]
+    },
+    "errors": []
+  },
+  {
+    "key": "en-320",
+    "locale": "en",
+    "width": 320,
+    "height": 568,
+    "gatewayY": 4516,
+    "measure": {
+      "y": 4516,
+      "gateways": [
+        {
+          "card": {
+            "top": 4539.5625,
+            "bottom": 4838.4375,
+            "width": 280,
+            "height": 298.875
+          },
+          "text": {
+            "top": 4838.4375,
+            "bottom": 4956.3125,
+            "width": 280,
+            "height": 117.875
+          },
+          "picture": {
+            "top": 4560.5625,
+            "bottom": 4838.4375,
+            "width": 280,
+            "height": 277.875
+          }
+        },
+        {
+          "card": {
+            "top": 4868.4375,
+            "bottom": 5200.65625,
+            "width": 280,
+            "height": 332.21875
+          },
+          "text": {
+            "top": 5200.65625,
+            "bottom": 5351.875,
+            "width": 280,
+            "height": 151.21875
+          },
+          "picture": {
+            "top": 4889.4375,
+            "bottom": 5200.65625,
+            "width": 280,
+            "height": 311.21875
+          }
+        }
+      ],
+      "observations": [
+        {
+          "card": {
+            "top": 5240.65625,
+            "bottom": 5457.84375,
+            "width": 280,
+            "height": 217.1875
+          },
+          "heading": {
+            "top": 5299.046875,
+            "bottom": 5333.84375,
+            "width": 280,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 5485.84375,
+            "bottom": 5731.03125,
+            "width": 280,
+            "height": 245.1875
+          },
+          "heading": {
+            "top": 5544.234375,
+            "bottom": 5579.03125,
+            "width": 280,
+            "height": 34.796875
+          }
+        },
+        {
+          "card": {
+            "top": 5759.03125,
+            "bottom": 6039.015625,
+            "width": 280,
+            "height": 279.984375
+          },
+          "heading": {
+            "top": 5817.421875,
+            "bottom": 5887.015625,
+            "width": 280,
+            "height": 69.59375
+          }
+        }
+      ]
+    },
+    "errors": []
+  }
+]

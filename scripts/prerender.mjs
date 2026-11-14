@@ -7,7 +7,6 @@ try {
   const { renderReadingDocument } = await server.ssrLoadModule('/src/ReadingPage.tsx')
   const { renderForestDocuments } = await server.ssrLoadModule('/src/ForestPage.tsx')
   const { readingPath } = await server.ssrLoadModule('/src/i18n.ts')
-  const { atmosphereBootstrap } = await server.ssrLoadModule('/src/atmosphere.ts')
   const template = await readFile('dist/index.html', 'utf8')
   if (!template.includes('<!-- locale:start -->')) throw new Error('Run a fresh Vite build before prerendering')
   const assets = await readdir('dist/assets')
@@ -29,8 +28,8 @@ try {
   const client=chunks[0]
   const readingClient = `/assets/reading-tools-${createHash('sha256').update(client.code).digest('hex').slice(0,16)}.js`
   await writeFile(`dist${readingClient}`,client.code)
-  const boot = atmosphereBootstrap + await readFile('public/boot.js', 'utf8')
-  const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`, `'sha256-${createHash('sha256').update(atmosphereBootstrap).digest('base64')}'`]
+  const boot = await readFile('public/boot.js', 'utf8')
+  const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`]
   for (const locale of ['lv', 'en']) {
     const criticalFonts = assets.filter(name => /^manrope-latin-400-normal-.*\.woff2$/.test(name) || (locale === 'lv' && /^manrope-latin-ext-400-normal-.*\.woff2$/.test(name)))
     const head = renderHead(locale) + criticalFonts.map(name => `<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/${name}"/>`).join('')
