@@ -1,0 +1,58 @@
+
+> piepe@3.1.0 test
+> playwright test tests/v310-slow.spec.ts --project=chrome-desktop --grep source-quality progress:
+
+
+Running 1 test using 1 worker
+
+(node:78334) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chrome-desktop] › tests/v310-slow.spec.ts:11:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry (28.2s)
+
+
+  1) [chrome-desktop] › tests/v310-slow.spec.ts:11:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry 
+
+    Error: expect(locator).not.toHaveAttribute(expected) failed
+
+    Locator:  locator('.fungus-portal')
+    Expected: not "error"
+    Received: "error"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "not toHaveAttribute" locator('.fungus-portal') with timeout 5000ms
+      - waiting for locator('.fungus-portal')
+        14 × locator resolved to <dialog open="" class="fungus-portal" data-portal-cycles="0" data-portal-active="0" data-portal-phase="error" data-portal-clean="false" data-portal-paused="true" data-portal-static="false" aria-describedby="portal-art" data-portal-invitation="false" data-portal-still-ready="true" aria-labelledby="portal-title" data-portal-still-presented="true">…</dialog>
+           - unexpected value "error"
+
+
+      57 |   await expect(portal.getByRole('status')).toContainText('original-quality film is still loading',{timeout:11000});await expect(portal.getByRole('button',{name:'Try again',exact:true})).toBeVisible();await expect(portal.getByRole('button',{name:'Exit',exact:true})).toBeVisible()
+      58 |   if(mode==='progress'){
+    > 59 |    await page.waitForTimeout(Math.max(0,21000-(Date.now()-began)));await expect(portal).not.toHaveAttribute('data-portal-phase','error');expect(sent.at(-1)!.bytes).toBeGreaterThan(200000);if(browserName==='chromium')await expect(portal.locator('[data-portal-clip="0"] video')).toHaveAttribute('data-early-readiness','true')
+         |                                                                                             ^
+      60 |    // Entering is narrative state; Safari may report it before real frames.
+      61 |    // Assert motion only after the fixture has delivered the complete first packet.
+      62 |    await expect.poll(()=>sent.some(chunk=>chunk.bytes>=479694),{timeout:15000}).toBe(true)
+        at /workspace/piepe/tests/v310-slow.spec.ts:59:93
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-chrome-desktop/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-chrome-desktop/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-chrome-desktop/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-chrome-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chrome-desktop] › tests/v310-slow.spec.ts:11:49 › 3.1 source-quality progress: native download beyond 20s or bounded stall with real retry 
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

@@ -1,0 +1,238 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/piepe/node_modules/.bin/playwright",
+      "test",
+      "tests/v310-slow.spec.ts",
+      "--project=chrome-desktop"
+    ],
+    "configFile": "/workspace/piepe/playwright.config.ts",
+    "rootDir": "/workspace/piepe/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome-desktop",
+        "name": "chrome-desktop",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      },
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-iphone",
+        "name": "webkit-iphone",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chrome-desktop",
+        "testDir": "/workspace/piepe/tests",
+        "snapshotDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 20000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4312",
+          "trace": {
+            "mode": "retain-on-failure",
+            "screenshots": false,
+            "snapshots": false
+          },
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "executablePath": "/usr/bin/chromium"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chrome-desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v310-slow.spec.ts",
+      "file": "v310-slow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "3.1 source-quality progress: native download beyond 20s or bounded stall with real retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 65000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31169,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T07:03:34.075Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-progress-network",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlIjogInByb2dyZXNzIiwKICAiZWxhcHNlZE1zIjogMjg5NjksCiAgInJlcXVlc3RzIjogWwogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAyCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0iLAogICAgICAic3RhdHVzIjogMjA2LAogICAgICAiY29udGVudFJhbmdlIjogImJ5dGVzIDAtMTIyMzM2MDAvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAxMjIzMzYwMQogICAgfQogIF0sCiAgInNlbnQiOiBbCiAgICB7CiAgICAgICJhdCI6IDAsCiAgICAgICJieXRlcyI6IDgzMzUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDM1MSwKICAgICAgImJ5dGVzIjogMTQyNDMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDcwMSwKICAgICAgImJ5dGVzIjogMjAxMzUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwNTEsCiAgICAgICJieXRlcyI6IDI2MDI3CiAgICB9LAogICAgewogICAgICAiYXQiOiAxNDAxLAogICAgICAiYnl0ZXMiOiAzMTkxOQogICAgfSwKICAgIHsKICAgICAgImF0IjogMTc1MiwKICAgICAgImJ5dGVzIjogMzc4MjgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMDIsCiAgICAgICJieXRlcyI6IDQzNzIwCiAgICB9LAogICAgewogICAgICAiYXQiOiAyNDUzLAogICAgICAiYnl0ZXMiOiA0OTYyOQogICAgfSwKICAgIHsKICAgICAgImF0IjogMjgwMywKICAgICAgImJ5dGVzIjogNTU1MjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDMxNTQsCiAgICAgICJieXRlcyI6IDYxNDMwCiAgICB9LAogICAgewogICAgICAiYXQiOiAzNTA0LAogICAgICAiYnl0ZXMiOiA2NzMyMgogICAgfSwKICAgIHsKICAgICAgImF0IjogMzg1NCwKICAgICAgImJ5dGVzIjogNzMyMTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDQyMDUsCiAgICAgICJieXRlcyI6IDc5MTIyCiAgICB9LAogICAgewogICAgICAiYXQiOiA0NTU2LAogICAgICAiYnl0ZXMiOiA4NTAzMQogICAgfSwKICAgIHsKICAgICAgImF0IjogNDkwNiwKICAgICAgImJ5dGVzIjogOTA5MjMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDUyNTYsCiAgICAgICJieXRlcyI6IDk2ODE1CiAgICB9LAogICAgewogICAgICAiYXQiOiA1NjA3LAogICAgICAiYnl0ZXMiOiAxMDI3MjQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDU5NTgsCiAgICAgICJieXRlcyI6IDEwODYzMwogICAgfSwKICAgIHsKICAgICAgImF0IjogNjMwOCwKICAgICAgImJ5dGVzIjogMTE0NTI1CiAgICB9LAogICAgewogICAgICAiYXQiOiA2NjU4LAogICAgICAiYnl0ZXMiOiAxMjA0MTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDcwMDgsCiAgICAgICJieXRlcyI6IDEyNjMwOQogICAgfSwKICAgIHsKICAgICAgImF0IjogNzM1NywKICAgICAgImJ5dGVzIjogMTMyMTg0CiAgICB9LAogICAgewogICAgICAiYXQiOiA3NzA4LAogICAgICAiYnl0ZXMiOiAxMzgwOTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDgwNTgsCiAgICAgICJieXRlcyI6IDE0Mzk4NQogICAgfSwKICAgIHsKICAgICAgImF0IjogODQxMCwKICAgICAgImJ5dGVzIjogMTQ5OTEwCiAgICB9LAogICAgewogICAgICAiYXQiOiA4NzYwLAogICAgICAiYnl0ZXMiOiAxNTU4MDIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDkxMTEsCiAgICAgICJieXRlcyI6IDE2MTcxMQogICAgfSwKICAgIHsKICAgICAgImF0IjogOTQ2MiwKICAgICAgImJ5dGVzIjogMTY3NjIwCiAgICB9LAogICAgewogICAgICAiYXQiOiA5ODEyLAogICAgICAiYnl0ZXMiOiAxNzM1MTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwMTYzLAogICAgICAiYnl0ZXMiOiAxNzk0MjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwNTE0LAogICAgICAiYnl0ZXMiOiAxODUzMjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwODY0LAogICAgICAiYnl0ZXMiOiAxOTEyMjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExMjE1LAogICAgICAiYnl0ZXMiOiAxOTcxMzAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExNTY1LAogICAgICAiYnl0ZXMiOiAyMDMwMjIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExOTE2LAogICAgICAiYnl0ZXMiOiAyMDg5MzEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyMjY3LAogICAgICAiYnl0ZXMiOiAyMTQ4NDAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyNjE4LAogICAgICAiYnl0ZXMiOiAyMjA3NDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyOTY4LAogICAgICAiYnl0ZXMiOiAyMjY2NDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzMzE5LAogICAgICAiYnl0ZXMiOiAyMzI1NDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzNjY5LAogICAgICAiYnl0ZXMiOiAyMzg0NDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0MDIwLAogICAgICAiYnl0ZXMiOiAyNDQzNTAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0MzcwLAogICAgICAiYnl0ZXMiOiAyNTAyNDIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0NzIxLAogICAgICAiYnl0ZXMiOiAyNTYxNTEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1MDczLAogICAgICAiYnl0ZXMiOiAyNjIwNzcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1NDIzLAogICAgICAiYnl0ZXMiOiAyNjc5NjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1NzczLAogICAgICAiYnl0ZXMiOiAyNzM4NjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2MTI0LAogICAgICAiYnl0ZXMiOiAyNzk3NjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2NDc4LAogICAgICAiYnl0ZXMiOiAyODU3MjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2ODI4LAogICAgICAiYnl0ZXMiOiAyOTE2MjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3MTc5LAogICAgICAiYnl0ZXMiOiAyOTc1MjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3NTI5LAogICAgICAiYnl0ZXMiOiAzMDM0MjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3ODc5LAogICAgICAiYnl0ZXMiOiAzMDkzMTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4MjI5LAogICAgICAiYnl0ZXMiOiAzMTUyMDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4NTgyLAogICAgICAiYnl0ZXMiOiAzMjExNDgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4OTMyLAogICAgICAiYnl0ZXMiOiAzMjcwNDAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5MjgyLAogICAgICAiYnl0ZXMiOiAzMzI5MzIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5NjMzLAogICAgICAiYnl0ZXMiOiAzMzg4NDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5OTgzLAogICAgICAiYnl0ZXMiOiAzNDQ3MzMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwMzMzLAogICAgICAiYnl0ZXMiOiAzNTA2MjUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwNjg2LAogICAgICAiYnl0ZXMiOiAzNTY1NjcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMDM2LAogICAgICAiYnl0ZXMiOiAzNjI0NTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMzg2LAogICAgICAiYnl0ZXMiOiAzNjgzNTEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxNzM1LAogICAgICAiYnl0ZXMiOiAzNzQyMjYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyMDg2LAogICAgICAiYnl0ZXMiOiAzODAxMzUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyNDM2LAogICAgICAiYnl0ZXMiOiAzODYwMjcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyNzg2LAogICAgICAiYnl0ZXMiOiAzOTE5MTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzMTM2LAogICAgICAiYnl0ZXMiOiAzOTc4MTEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzNDg2LAogICAgICAiYnl0ZXMiOiA0MDM3MDMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzODM3LAogICAgICAiYnl0ZXMiOiA0MDk2MTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0MTg4LAogICAgICAiYnl0ZXMiOiA0MTU1MjAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0NTM4LAogICAgICAiYnl0ZXMiOiA0MjE0MTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0ODg4LAogICAgICAiYnl0ZXMiOiA0MjczMDQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1MjM5LAogICAgICAiYnl0ZXMiOiA0MzMyMTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1NTg5LAogICAgICAiYnl0ZXMiOiA0MzkxMDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1OTQwLAogICAgICAiYnl0ZXMiOiA0NDUwMTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2MjkxLAogICAgICAiYnl0ZXMiOiA0NTA5MjMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2NjQxLAogICAgICAiYnl0ZXMiOiA0NTY4MTUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI2OTk0LAogICAgICAiYnl0ZXMiOiA0NjI3NTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3MzQ0LAogICAgICAiYnl0ZXMiOiA0Njg2NDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI3Njk0LAogICAgICAiYnl0ZXMiOiA0NzQ1NDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI4MDQ1LAogICAgICAiYnl0ZXMiOiAxMjIzMzYwMQogICAgfQogIF0sCiAgIm1lZGlhIjogewogICAgImZvY3VzIjogdHJ1ZSwKICAgICJ2aXNpYmlsaXR5IjogInZpc2libGUiLAogICAgInZpZGVvcyI6IFtdCiAgfQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "975aa93bb5b7c4f5fcee-2bc8912554bbf8bfdf71",
+          "file": "v310-slow.spec.ts",
+          "line": 11,
+          "column": 49
+        },
+        {
+          "title": "3.1 source-quality stall: native download beyond 20s or bounded stall with real retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 65000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24052,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T07:04:05.454Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-stall-network",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlIjogInN0YWxsIiwKICAiZWxhcHNlZE1zIjogMjIwNjgsCiAgInJlcXVlc3RzIjogWwogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAyCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0iLAogICAgICAic3RhdHVzIjogMjA2LAogICAgICAiY29udGVudFJhbmdlIjogImJ5dGVzIDAtMTIyMzM2MDAvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAxMjIzMzYwMQogICAgfSwKICAgIHsKICAgICAgInJhbmdlIjogImJ5dGVzPTAtIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEyMjMzNjAwLzEyMjMzNjAxIiwKICAgICAgImJ5dGVzIjogMTIyMzM2MDEKICAgIH0KICBdLAogICJzZW50IjogWwogICAgewogICAgICAiYXQiOiAwLAogICAgICAiYnl0ZXMiOiA4MzM1CiAgICB9CiAgXSwKICAibWVkaWEiOiB7CiAgICAiZm9jdXMiOiB0cnVlLAogICAgInZpc2liaWxpdHkiOiAidmlzaWJsZSIsCiAgICAidmlkZW9zIjogW10KICB9Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "975aa93bb5b7c4f5fcee-7ffe0be71cd3b13d943e",
+          "file": "v310-slow.spec.ts",
+          "line": 11,
+          "column": 49
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T07:03:33.640Z",
+    "duration": 55963.613,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

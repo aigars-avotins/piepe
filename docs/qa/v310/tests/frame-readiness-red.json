@@ -1,0 +1,239 @@
+{
+  "config": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/piepe/node_modules/.bin/playwright",
+      "test",
+      "tests/v310-slow.spec.ts",
+      "--project=chrome-desktop",
+      "--grep",
+      "source-quality progress:"
+    ],
+    "configFile": "/workspace/piepe/playwright.config.ts",
+    "rootDir": "/workspace/piepe/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome-desktop",
+        "name": "chrome-desktop",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      },
+      {
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-iphone",
+        "name": "webkit-iphone",
+        "testDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/workspace/piepe/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chrome-desktop",
+        "testDir": "/workspace/piepe/tests",
+        "snapshotDir": "/workspace/piepe/tests",
+        "testIgnore": [
+          "**/worker.test.ts",
+          "**/production.spec.ts"
+        ],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 20000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4312",
+          "trace": {
+            "mode": "retain-on-failure",
+            "screenshots": false,
+            "snapshots": false
+          },
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "executablePath": "/usr/bin/chromium"
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chrome-desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v310-slow.spec.ts",
+      "file": "v310-slow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "3.1 source-quality progress: native download beyond 20s or bounded stall with real retry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 65000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome-desktop",
+              "projectName": "chrome-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 28187,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.fungus-portal')\nExpected: not \u001b[32m\"error\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7merror\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveAttribute\" locator('.fungus-portal') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.fungus-portal')\u001b[22m\n\u001b[2m    14 × locator resolved to <dialog open=\"\" class=\"fungus-portal\" data-portal-cycles=\"0\" data-portal-active=\"0\" data-portal-phase=\"error\" data-portal-clean=\"false\" data-portal-paused=\"true\" data-portal-static=\"false\" aria-describedby=\"portal-art\" data-portal-invitation=\"false\" data-portal-still-ready=\"true\" aria-labelledby=\"portal-title\" data-portal-still-presented=\"true\">…</dialog>\u001b[22m\n\u001b[2m       - unexpected value \"error\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.fungus-portal')\nExpected: not \u001b[32m\"error\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7merror\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveAttribute\" locator('.fungus-portal') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.fungus-portal')\u001b[22m\n\u001b[2m    14 × locator resolved to <dialog open=\"\" class=\"fungus-portal\" data-portal-cycles=\"0\" data-portal-active=\"0\" data-portal-phase=\"error\" data-portal-clean=\"false\" data-portal-paused=\"true\" data-portal-static=\"false\" aria-describedby=\"portal-art\" data-portal-invitation=\"false\" data-portal-still-ready=\"true\" aria-labelledby=\"portal-title\" data-portal-still-presented=\"true\">…</dialog>\u001b[22m\n\u001b[2m       - unexpected value \"error\"\u001b[22m\n\n    at /workspace/piepe/tests/v310-slow.spec.ts:59:93",
+                    "location": {
+                      "file": "/workspace/piepe/tests/v310-slow.spec.ts",
+                      "column": 93,
+                      "line": 59
+                    },
+                    "snippet": "  57 |   await expect(portal.getByRole('status')).toContainText('original-quality film is still loading',{timeout:11000});await expect(portal.getByRole('button',{name:'Try again',exact:true})).toBeVisible();await expect(portal.getByRole('button',{name:'Exit',exact:true})).toBeVisible()\n  58 |   if(mode==='progress'){\n> 59 |    await page.waitForTimeout(Math.max(0,21000-(Date.now()-began)));await expect(portal).not.toHaveAttribute('data-portal-phase','error');expect(sent.at(-1)!.bytes).toBeGreaterThan(200000);if(browserName==='chromium')await expect(portal.locator('[data-portal-clip=\"0\"] video')).toHaveAttribute('data-early-readiness','true')\n     |                                                                                             ^\n  60 |    // Entering is narrative state; Safari may report it before real frames.\n  61 |    // Assert motion only after the fixture has delivered the complete first packet.\n  62 |    await expect.poll(()=>sent.some(chunk=>chunk.bytes>=479694),{timeout:15000}).toBe(true)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/piepe/tests/v310-slow.spec.ts",
+                        "column": 93,
+                        "line": 59
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.fungus-portal')\nExpected: not \u001b[32m\"error\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7merror\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveAttribute\" locator('.fungus-portal') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.fungus-portal')\u001b[22m\n\u001b[2m    14 × locator resolved to <dialog open=\"\" class=\"fungus-portal\" data-portal-cycles=\"0\" data-portal-active=\"0\" data-portal-phase=\"error\" data-portal-clean=\"false\" data-portal-paused=\"true\" data-portal-static=\"false\" aria-describedby=\"portal-art\" data-portal-invitation=\"false\" data-portal-still-ready=\"true\" aria-labelledby=\"portal-title\" data-portal-still-presented=\"true\">…</dialog>\u001b[22m\n\u001b[2m       - unexpected value \"error\"\u001b[22m\n\n\n  57 |   await expect(portal.getByRole('status')).toContainText('original-quality film is still loading',{timeout:11000});await expect(portal.getByRole('button',{name:'Try again',exact:true})).toBeVisible();await expect(portal.getByRole('button',{name:'Exit',exact:true})).toBeVisible()\n  58 |   if(mode==='progress'){\n> 59 |    await page.waitForTimeout(Math.max(0,21000-(Date.now()-began)));await expect(portal).not.toHaveAttribute('data-portal-phase','error');expect(sent.at(-1)!.bytes).toBeGreaterThan(200000);if(browserName==='chromium')await expect(portal.locator('[data-portal-clip=\"0\"] video')).toHaveAttribute('data-early-readiness','true')\n     |                                                                                             ^\n  60 |    // Entering is narrative state; Safari may report it before real frames.\n  61 |    // Assert motion only after the fixture has delivered the complete first packet.\n  62 |    await expect.poll(()=>sent.some(chunk=>chunk.bytes>=479694),{timeout:15000}).toBe(true)\n    at /workspace/piepe/tests/v310-slow.spec.ts:59:93"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T07:02:59.161Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-progress-network",
+                      "contentType": "application/json",
+                      "body": "ewogICJtb2RlIjogInByb2dyZXNzIiwKICAiZWxhcHNlZE1zIjogMjYwMTUsCiAgInJlcXVlc3RzIjogWwogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0xIiwKICAgICAgInN0YXR1cyI6IDIwNiwKICAgICAgImNvbnRlbnRSYW5nZSI6ICJieXRlcyAwLTEvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAyCiAgICB9LAogICAgewogICAgICAicmFuZ2UiOiAiYnl0ZXM9MC0iLAogICAgICAic3RhdHVzIjogMjA2LAogICAgICAiY29udGVudFJhbmdlIjogImJ5dGVzIDAtMTIyMzM2MDAvMTIyMzM2MDEiLAogICAgICAiYnl0ZXMiOiAxMjIzMzYwMQogICAgfQogIF0sCiAgInNlbnQiOiBbCiAgICB7CiAgICAgICJhdCI6IDEsCiAgICAgICJieXRlcyI6IDgzMzUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDM1MSwKICAgICAgImJ5dGVzIjogMTQyNDMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDcwMiwKICAgICAgImJ5dGVzIjogMjAxNTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwNTIsCiAgICAgICJieXRlcyI6IDI2MDQ0CiAgICB9LAogICAgewogICAgICAiYXQiOiAxNDAzLAogICAgICAiYnl0ZXMiOiAzMTk1MwogICAgfSwKICAgIHsKICAgICAgImF0IjogMTc1MywKICAgICAgImJ5dGVzIjogMzc4NDUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMDMsCiAgICAgICJieXRlcyI6IDQzNzM3CiAgICB9LAogICAgewogICAgICAiYXQiOiAyNDUzLAogICAgICAiYnl0ZXMiOiA0OTYyOQogICAgfSwKICAgIHsKICAgICAgImF0IjogMjgwMywKICAgICAgImJ5dGVzIjogNTU1MjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDMxNTMsCiAgICAgICJieXRlcyI6IDYxNDEzCiAgICB9LAogICAgewogICAgICAiYXQiOiAzNTAzLAogICAgICAiYnl0ZXMiOiA2NzMwNQogICAgfSwKICAgIHsKICAgICAgImF0IjogMzg1MywKICAgICAgImJ5dGVzIjogNzMxOTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDQyMDMsCiAgICAgICJieXRlcyI6IDc5MDg5CiAgICB9LAogICAgewogICAgICAiYXQiOiA0NTUzLAogICAgICAiYnl0ZXMiOiA4NDk4MQogICAgfSwKICAgIHsKICAgICAgImF0IjogNDkwNCwKICAgICAgImJ5dGVzIjogOTA4ODkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDUyNTQsCiAgICAgICJieXRlcyI6IDk2NzgxCiAgICB9LAogICAgewogICAgICAiYXQiOiA1NjA0LAogICAgICAiYnl0ZXMiOiAxMDI2NzMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDU5NTQsCiAgICAgICJieXRlcyI6IDEwODU2NQogICAgfSwKICAgIHsKICAgICAgImF0IjogNjMwNiwKICAgICAgImJ5dGVzIjogMTE0NDkxCiAgICB9LAogICAgewogICAgICAiYXQiOiA2NjU2LAogICAgICAiYnl0ZXMiOiAxMjAzODMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDcwMDYsCiAgICAgICJieXRlcyI6IDEyNjI3NQogICAgfSwKICAgIHsKICAgICAgImF0IjogNzM1NiwKICAgICAgImJ5dGVzIjogMTMyMTY3CiAgICB9LAogICAgewogICAgICAiYXQiOiA3NzA2LAogICAgICAiYnl0ZXMiOiAxMzgwNTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDgwNTYsCiAgICAgICJieXRlcyI6IDE0Mzk1MQogICAgfSwKICAgIHsKICAgICAgImF0IjogODQwNywKICAgICAgImJ5dGVzIjogMTQ5ODYwCiAgICB9LAogICAgewogICAgICAiYXQiOiA4NzU3LAogICAgICAiYnl0ZXMiOiAxNTU3NTIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDkxMDgsCiAgICAgICJieXRlcyI6IDE2MTY2MQogICAgfSwKICAgIHsKICAgICAgImF0IjogOTQ1OCwKICAgICAgImJ5dGVzIjogMTY3NTUyCiAgICB9LAogICAgewogICAgICAiYXQiOiA5ODEwLAogICAgICAiYnl0ZXMiOiAxNzM0NzgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwMTYwLAogICAgICAiYnl0ZXMiOiAxNzkzNzAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwNTExLAogICAgICAiYnl0ZXMiOiAxODUyNzkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEwODYxLAogICAgICAiYnl0ZXMiOiAxOTExNzEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExMjExLAogICAgICAiYnl0ZXMiOiAxOTcwNjMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExNTYyLAogICAgICAiYnl0ZXMiOiAyMDI5NzIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDExOTEyLAogICAgICAiYnl0ZXMiOiAyMDg4NjQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyMjYzLAogICAgICAiYnl0ZXMiOiAyMTQ3NzIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyNjE2LAogICAgICAiYnl0ZXMiOiAyMjA3MTUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEyOTY2LAogICAgICAiYnl0ZXMiOiAyMjY2MDcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzMzE3LAogICAgICAiYnl0ZXMiOiAyMzI1MTYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDEzNjY3LAogICAgICAiYnl0ZXMiOiAyMzg0MDgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0MDE4LAogICAgICAiYnl0ZXMiOiAyNDQzMTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0MzcwLAogICAgICAiYnl0ZXMiOiAyNTAyNDIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE0NzIwLAogICAgICAiYnl0ZXMiOiAyNTYxMzQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1MDcwLAogICAgICAiYnl0ZXMiOiAyNjIwMjYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1NDIxLAogICAgICAiYnl0ZXMiOiAyNjc5MzUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE1NzczLAogICAgICAiYnl0ZXMiOiAyNzM4NjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2MTIzLAogICAgICAiYnl0ZXMiOiAyNzk3NTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2NDc1LAogICAgICAiYnl0ZXMiOiAyODU2NzgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE2ODI2LAogICAgICAiYnl0ZXMiOiAyOTE1ODcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3MTc3LAogICAgICAiYnl0ZXMiOiAyOTc0OTYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3NTI3LAogICAgICAiYnl0ZXMiOiAzMDMzODgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE3ODc3LAogICAgICAiYnl0ZXMiOiAzMDkyODAKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4MjI4LAogICAgICAiYnl0ZXMiOiAzMTUxODkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4NTgwLAogICAgICAiYnl0ZXMiOiAzMjExMTQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE4OTMwLAogICAgICAiYnl0ZXMiOiAzMjcwMDYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5MjgyLAogICAgICAiYnl0ZXMiOiAzMzI5MzIKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5NjMyLAogICAgICAiYnl0ZXMiOiAzMzg4MjQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDE5OTgyLAogICAgICAiYnl0ZXMiOiAzNDQ3MTYKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwMzMzLAogICAgICAiYnl0ZXMiOiAzNTA2MjUKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIwNjg0LAogICAgICAiYnl0ZXMiOiAzNTY1MzMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMDMzLAogICAgICAiYnl0ZXMiOiAzNjI0MDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxMzg0LAogICAgICAiYnl0ZXMiOiAzNjgzMTcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIxNzM0LAogICAgICAiYnl0ZXMiOiAzNzQyMDkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyMDg0LAogICAgICAiYnl0ZXMiOiAzODAxMDEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyNDM2LAogICAgICAiYnl0ZXMiOiAzODYwMjcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIyNzg2LAogICAgICAiYnl0ZXMiOiAzOTE5MTkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzMTM3LAogICAgICAiYnl0ZXMiOiAzOTc4MjgKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzNDg4LAogICAgICAiYnl0ZXMiOiA0MDM3MzcKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDIzODM4LAogICAgICAiYnl0ZXMiOiA0MDk2MjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0MTg3LAogICAgICAiYnl0ZXMiOiA0MTU1MDQKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0NTM5LAogICAgICAiYnl0ZXMiOiA0MjE0MjkKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI0ODg5LAogICAgICAiYnl0ZXMiOiA0MjczMjEKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1MjM5LAogICAgICAiYnl0ZXMiOiA0MzMyMTMKICAgIH0sCiAgICB7CiAgICAgICJhdCI6IDI1NTg5LAogICAgICAiYnl0ZXMiOiA0MzkxMDUKICAgIH0KICBdLAogICJtZWRpYSI6IHsKICAgICJmb2N1cyI6IHRydWUsCiAgICAidmlzaWJpbGl0eSI6ICJ2aXNpYmxlIiwKICAgICJwaGFzZSI6ICJlcnJvciIsCiAgICAidmlkZW9zIjogWwogICAgICB7CiAgICAgICAgInNyYyI6ICJodHRwOi8vMTI3LjAuMC4xOjM2NDI1L21lZGlhL3BvcnRhbC0wMi1mYXN0c3RhcnQubXA0IiwKICAgICAgICAidGltZSI6IDAsCiAgICAgICAgInBhdXNlZCI6IHRydWUsCiAgICAgICAgIm11dGVkIjogdHJ1ZSwKICAgICAgICAicmVhZHkiOiA0LAogICAgICAgICJuZXR3b3JrIjogMiwKICAgICAgICAiZXJyb3IiOiBudWxsLAogICAgICAgICJidWZmZXJlZCI6IFtdCiAgICAgIH0KICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/piepe/test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-chrome-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/piepe/test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-chrome-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/piepe/test-results/v310-slow-3-1-source-quali-8a62c-unded-stall-with-real-retry-chrome-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/piepe/tests/v310-slow.spec.ts",
+                    "column": 93,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "975aa93bb5b7c4f5fcee-2bc8912554bbf8bfdf71",
+          "file": "v310-slow.spec.ts",
+          "line": 11,
+          "column": 49
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T07:02:58.582Z",
+    "duration": 29312.686,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
