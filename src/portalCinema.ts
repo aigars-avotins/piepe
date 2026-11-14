@@ -4,7 +4,7 @@ export const portalClips=['02','03','04','05','06','07'] as const
 // Authored per-boundary holds: no global fade, speed change or artificial camera path.
 export const portalSeams=[420,180,220,90,200,90] as const
 const phaseFor=(index:number):PortalPhase=>index===0?'entering':index===1?'deepening':index===2?'arriving':index===3?'living-world':'returning'
-type Slot={group:HTMLElement;video:HTMLVideoElement;poster:HTMLImageElement;clip:number;abort?:AbortController;ready?:Promise<void>;frame:number;networkProgress:number;presented:boolean}
+type Slot={group:HTMLElement;video:HTMLVideoElement;poster:HTMLImageElement;clip:number;abort?:AbortController;ready?:Promise<void>;frame:number;networkProgress:number;presented:boolean;probeStarted:boolean;probe?:AbortController}
 
 /** Two bounded source-quality buffers. One plays; the other prepares only on intent/near a boundary. */
 export class PortalCinema {
@@ -20,7 +20,7 @@ export class PortalCinema {
  private progressAt=performance.now()
  private state:PortalSnapshot={phase:'portal-ready',clip:-1,loading:false,paused:false,static:false,cycles:0}
  constructor(private root:HTMLElement,private emit:(value:PortalSnapshot)=>void,private finish:()=>void,private returnToWindow?:(image:HTMLImageElement,layer:HTMLElement)=>Promise<void>){
-  this.slots=[...root.querySelectorAll<HTMLElement>('[data-portal-slot]')].map(group=>({group,video:group.querySelector('video')!,poster:group.querySelector('img')!,clip:-1,frame:0,networkProgress:performance.now(),presented:false}))
+  this.slots=[...root.querySelectorAll<HTMLElement>('[data-portal-slot]')].map(group=>({group,video:group.querySelector('video')!,poster:group.querySelector('img')!,clip:-1,frame:0,networkProgress:performance.now(),presented:false,probeStarted:false}))
   for(const slot of this.slots){
    slot.video.muted=true;slot.video.playsInline=true;slot.video.preload='auto'
    slot.video.addEventListener('progress',()=>{slot.networkProgress=performance.now()})
@@ -36,12 +36,12 @@ export class PortalCinema {
    if(!video||this.state.paused||this.busy||this.disposed||document.hidden)return
    const now=performance.now(),stalled=now-this.progressAt
    // AVFoundation can announce loadeddata/HAVE_ENOUGH_DATA/playing before a
-   // compressed first sample is complete. Native progress events then describe
-   // buffered time, not incoming bytes. Keep startup within the existing visible
-   // preparation bound; only a presented frame starts the playback-stall clock.
+   // compressed first sample is complete. Native progress can also stay silent
+   // during that download. Observe real transport only on this slow first frame;
+   // only a presented frame starts the playback-stall clock.
    if(!slot.presented){
-    if(stalled>=120000)this.fail()
-    else if(stalled>8000&&!this.state.slow)this.update({slow:true})
+    if(stalled>=120000||now-slot.networkProgress>=20000)this.fail()
+    else if(stalled>8000){if(now-slot.networkProgress>8000)this.observeTransport(slot);if(!this.state.slow)this.update({slow:true})}
     return
    }
    if(video.currentTime!==this.progressTime){this.progressTime=video.currentTime;this.progressAt=now;if(this.state.slow)this.update({slow:false})}
@@ -53,26 +53,49 @@ export class PortalCinema {
  }
  snapshot(){return this.state}
  private update(values:Partial<PortalSnapshot>){if(this.disposed)return;this.state={...this.state,...values};this.root.dataset.portalPhase=this.state.phase;this.root.dataset.portalCycles=String(this.state.cycles);this.emit({...this.state})}
- private release(slot:Slot){slot.abort?.abort();slot.video.cancelVideoFrameCallback?.(slot.frame);slot.video.pause();slot.video.removeAttribute('src');slot.video.load();slot.poster.removeAttribute('src');slot.clip=-1;slot.ready=undefined;slot.presented=false;slot.group.style.opacity='0'}
+ private release(slot:Slot){slot.abort?.abort();slot.probe?.abort();slot.probe=undefined;slot.probeStarted=false;slot.video.cancelVideoFrameCallback?.(slot.frame);slot.video.pause();slot.video.removeAttribute('src');slot.video.load();slot.poster.removeAttribute('src');slot.clip=-1;slot.ready=undefined;slot.presented=false;slot.group.style.opacity='0'}
+ private observeTransport(slot:Slot){
+  if(slot.probeStarted||slot.presented||slot.abort?.signal.aborted||this.disposed)return
+  slot.probeStarted=true;const probe=new AbortController();slot.probe=probe
+  slot.abort?.signal.addEventListener('abort',()=>probe.abort(),{once:true,signal:probe.signal})
+  // A single, capped same-source range distinguishes incoming bytes from a real
+  // stall when Safari's media progress describes only complete buffered samples.
+  // Skip the small MP4 header so metadata alone cannot keep a stalled film alive.
+  // Never fetch the whole film again, substitute a source or lower its quality.
+  void (async()=>{
+   try{
+    const response=await fetch(slot.video.src,{headers:{Range:'bytes=16384-540671'},cache:'no-store',signal:probe.signal})
+    const range=/^bytes (\d+)-(\d+)\/(\d+)$/.exec(response.headers.get('Content-Range')??'')
+    if(response.status!==206||!range||Number(range[1])!==16384||Number(range[2])>540671){await response.body?.cancel();return}
+    const reader=response.body?.getReader();if(!reader)return
+    let received=0
+    while(!probe.signal.aborted){
+     const {done,value}=await reader.read();if(done)break
+     received+=value.byteLength;if(received>524288){await reader.cancel();break}
+     if(value.byteLength)slot.networkProgress=performance.now()
+    }
+   }catch{/* A failed observer is not progress; the unchanged stall bound applies. */}
+   finally{probe.abort();if(slot.probe===probe)slot.probe=undefined}
+  })()
+ }
  private prepare(index:number):Promise<void>{
   const target=this.active===0?this.slots[1]:this.slots[0]
   if(target.clip===index&&target.ready)return target.ready
-  this.release(target);target.clip=index;const abort=new AbortController();target.abort=abort
+  this.release(target);target.clip=index;target.networkProgress=performance.now();const abort=new AbortController();target.abort=abort
   const {video,poster}=target;video.loop=index===3;video.playbackRate=1;target.group.dataset.portalClip=String(index);poster.style.opacity='1'
   target.ready=new Promise<void>((resolve,reject)=>{
-   let decoded=false,image=false,presentedFrame=false,settled=false,lastProgress=performance.now(),lastTick=lastProgress,visibleWait=0
+   let decoded=false,image=false,presentedFrame=false,settled=false,lastTick=performance.now(),visibleWait=0
    const done=()=>{if(!settled&&decoded&&(image||presentedFrame)){settled=true;clearInterval(timeout);resolve()}}
-   const bad=()=>{if(!settled){settled=true;clearInterval(timeout);reject(Error('Portal media unavailable'))}}
+   const bad=()=>{if(!settled){settled=true;clearInterval(timeout);target.probe?.abort();reject(Error('Portal media unavailable'))}}
    // A progressing source-quality download may take longer than twenty seconds.
    // Stop on a real twenty-second stall, or a two-minute visible preparation bound.
    const timeout=setInterval(()=>{
-    const now=performance.now();if(!document.hidden)visibleWait+=now-lastTick;else lastProgress=now;lastTick=now
+    const now=performance.now();if(!document.hidden)visibleWait+=now-lastTick;else target.networkProgress=now;lastTick=now
     if(document.hidden)return
-    if(visibleWait>=120000||now-lastProgress>=20000)bad()
-    else if(visibleWait>=8000&&this.state.loading&&this.next===index&&!this.state.slow)this.update({slow:true})
+    if(visibleWait>=120000||now-target.networkProgress>=20000)bad()
+    else if(visibleWait>=8000&&this.state.loading&&this.next===index){if(now-target.networkProgress>8000)this.observeTransport(target);if(!this.state.slow)this.update({slow:true})}
    },500)
-   video.addEventListener('progress',()=>{lastProgress=performance.now()},{signal:abort.signal})
-   video.addEventListener('loadedmetadata',()=>{lastProgress=performance.now()},{signal:abort.signal})
+   video.addEventListener('loadedmetadata',()=>{target.networkProgress=performance.now()},{signal:abort.signal})
    abort.signal.addEventListener('abort',()=>{if(!settled){settled=true;clearInterval(timeout);reject(new DOMException('Cancelled','AbortError'))}},{once:true})
    video.addEventListener('loadeddata',()=>{if(video.readyState>=2&&video.videoWidth){decoded=true;done()}},{signal:abort.signal})
    video.addEventListener('error',bad,{signal:abort.signal});poster.addEventListener('error',bad,{signal:abort.signal})
@@ -80,7 +103,7 @@ export class PortalCinema {
    const presented:VideoFrameRequestCallback=()=>{
     if(abort.signal.aborted)return
     if(video.readyState>=2){
-     const first=!target.presented;target.presented=true;poster.style.opacity='0';decoded=true;presentedFrame=true;done()
+     const first=!target.presented;target.presented=true;target.probe?.abort();poster.style.opacity='0';decoded=true;presentedFrame=true;done()
      if(first&&this.slots[this.active]===target){this.progressTime=video.currentTime;this.progressAt=performance.now();this.update({loading:false,slow:false})}
     }
     else target.frame=video.requestVideoFrameCallback(presented)
@@ -89,13 +112,13 @@ export class PortalCinema {
    if(video.requestVideoFrameCallback)target.frame=video.requestVideoFrameCallback(presented)
    video.src=`/media/portal-${portalClips[index]}-faststart.mp4`;video.load()
    if(video.requestVideoFrameCallback)target.frame=video.requestVideoFrameCallback(presented)
-   else video.addEventListener('playing',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{target.presented=true;poster.style.opacity='0';if(this.slots[this.active]===target){this.progressAt=performance.now();this.update({loading:false,slow:false})}})),{signal:abort.signal})
+   else video.addEventListener('playing',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{target.presented=true;target.probe?.abort();poster.style.opacity='0';if(this.slots[this.active]===target){this.progressAt=performance.now();this.update({loading:false,slow:false})}})),{signal:abort.signal})
   })
   // A prefetched rejection is retained for the explicit boundary, without an unhandled promise.
   void target.ready.catch(()=>{})
   return target.ready
  }
- private fail(){this.slots[this.active]?.video.pause();this.busy=false;this.update({phase:'error',paused:true,loading:false,slow:false})}
+ private fail(){for(const slot of this.slots)slot.probe?.abort();this.slots[this.active]?.video.pause();this.busy=false;this.update({phase:'error',paused:true,loading:false,slow:false})}
  async playClip(index:number){
   if(this.disposed||index<0||index>5)return
   const epoch=++this.epoch;this.busy=true;this.next=index;this.update({loading:true,slow:false})
