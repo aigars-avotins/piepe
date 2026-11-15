@@ -1,0 +1,522 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T19:06:50.327Z",
+    "duration": 59878.096,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2595,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "b91479a01fa68e915e2ea6a7cee550195ab43c9e2d3048b100bbf90dc19cede2"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1666495,
+              "bodySha256": "8f43319d69b3dec89dcb0e00b8dfca3dc91f0bf2642f3ca6dc5effc8bc7ac4f8"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2915,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "d27f624660ee94e6a825c344f8696e6cfbc01586c917b3af72712653f1074041"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1680803,
+              "bodySha256": "4e8cc33a3453c5d56d036da29b1d8dc0ed7acc875595667c554d660f16cdfdf5"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2235,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 177,
+              "bodySha256": "56cad9f907fc1489ca9a021a95166052a21e743c424f765f5b1f15d35836bdda"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1424018,
+              "bodySha256": "573915ab112065cbc57c67ac3a4b43574b6a454f0d6d838adc56b13a18c182fd"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2498,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 177,
+              "bodySha256": "f4493d85aff4c46283942438686238afd55403749729264cf3fd83d0885140e9"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1461756,
+              "bodySha256": "445d9e661065f8aa75bd6b58a6664f469d9ad8e06a983b7d19cfbda14405bf8b"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1202,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 387601,
+              "bodySha256": "25187de08a87b41b807aee83b47ae4ae1911ec4fde2d16d1803769c80f309895"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1261,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 390871,
+              "bodySha256": "e8513bd870f35e6b7f3ffc1e43f785aba20b18118a5d87b87f9e3a4900165b51"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1164,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 310975,
+              "bodySha256": "97e37ddc96b8d49bbcb201b82e04841e29e7c574104888204511d2ed4f9c87f7"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1109,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 313423,
+              "bodySha256": "3574f1008345214d375e1daf016edafeac0e6954466a2f2b0a00e28beef361a7"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 946,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 265092,
+              "bodySha256": "60bd8bc1baa6c736a1b8acc2702fe0ae199eee0427f0e7ee8c3e83dd655cbc89"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1020,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 272406,
+              "bodySha256": "3cc6ef84e1e7727c0c6feec3d51500dc22948404742fcb52da036ad728dfde29"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16805,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 384,
+              "bodySha256": "830be09f77430f04ecaf62b89ae2191936464316543b3d2f4b45c54fe919a011"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2576,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 110,
+              "bodySha256": "43d9bf61c9f493adfc580c8da224aad0c0723eba97fe4e2c58a731ed7d19f99d"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2722,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 106,
+              "bodySha256": "c82b535d989283bf2b2b2bb7120bfb64101a45ee2024773fe10345dbb336fcfd"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 15614,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 418,
+              "bodySha256": "b56343350a9f33c5f026b31716aa20b7f3af3b96aaa2a477307b8b2b18fc5d0e"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-native-journey--ecbf4-ng-anchors-and-history-work-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2092,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 116,
+              "bodySha256": "0c8251a7deb7c3c2cafac55b1db7da3228ded639791b4eb0bdd08b03567f86c9"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-native-journey--23e19--a-genuinely-buffering-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2071,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 112,
+              "bodySha256": "371fa199c7caa27a374672a77dd853be54bf0b6b7215bf52542ca20b560781d6"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/understory-contract-final/v252-2-5-2-native-journey--2e6d5-aves-a-genuinely-error-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

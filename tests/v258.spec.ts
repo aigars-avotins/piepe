@@ -52,7 +52,7 @@ for(const locale of ['lv','en'] as const){
 
   test(`2.5.8 ${locale}: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer`,async({page})=>{
     await page.goto(readingPath(locale));const range=page.locator('[data-xray-range]'),photo=page.locator('.xray-cutaway')
-    await expect(page.locator('[data-xray-controls]')).toBeVisible();await range.focus();await range.press('Home');await expect(range).toHaveValue('0')
+    await expect(page.locator('[data-xray-controls]')).toBeVisible();await range.scrollIntoViewIfNeeded();await expect(range).toBeEnabled();await range.focus();await range.press('Home');await expect(range).toHaveValue('0')
     await range.press('ArrowRight');await expect(range).toHaveValue('1');await expect(range).toHaveAttribute('aria-valuetext',`1% ${t.xray.output}`)
     await range.press('End');await expect(range).toHaveValue('100');await expect(page.locator('[data-xray-output]')).toContainText('100%')
     await range.press('Home');for(let i=0;i<5;i++)await range.press('ArrowRight')
@@ -83,13 +83,13 @@ for(const locale of ['lv','en'] as const){
 
   test(`2.5.8 ${locale}: atlas opens full-resolution comparison, closes with Escape and restores link focus`,async({page})=>{
     await page.goto(readingPath(locale))
-    const link=page.locator('[data-atlas-open]').first();await link.focus();await link.press('Enter')
+    const link=page.locator('[data-atlas-open]').first();await link.scrollIntoViewIfNeeded();await expect(link).toBeEnabled();await link.focus();await link.press('Enter')
     const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3)
     await expect.poll(()=>dialog.locator('img').first().evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(2400)
     await page.keyboard.press('Escape');await expect(dialog).toBeHidden();await expect(link).toBeFocused()
     const other=page.locator('[data-atlas-open]').nth(2);await other.click();await expect(dialog.locator('figcaption').first()).toHaveText(t.atlas.cards[2].title)
     await dialog.locator('[data-atlas-close]').click();await expect(dialog).toBeHidden();await expect(other).toBeFocused()
-    await expect(page.locator('.experience-caution')).toHaveText(t.atlas.caution)
+    const provenance=page.locator('#atlas-method');await provenance.locator('summary').click();await expect(provenance).toHaveAttribute('open','');await expect(provenance).toContainText(t.atlas.caution)
   })
 
   test(`3.1.1 ${locale}: a retired Nightfall preference cannot change first paint or native document history`,async({page})=>{
@@ -205,11 +205,14 @@ test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs 
   const fixture=JSON.parse(await readFile('docs/qa/v258/baseline-inventory.json','utf8'))
   const reviewed:Record<string,string>=JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8'))
   for(const[path,hash]of Object.entries({...fixture.publicAssets,...reviewed}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
-  // Only the Issue #34 reviewed caption/snippet/download/storage files change.
+  const v320:Record<string,string>=JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))
+  expect(Object.keys(v320).sort()).toEqual(['src/ForestScene.tsx','src/useForestAudio.ts'])
+  // Issue #36 only lowers offscreen poster priority and excludes the new hero portal CTA from ambient sound activation.
+  // Original media, player, camera transforms and security pins remain protected.
   // The independent original header prefix and all camera/Worker/media pins remain enforced.
   expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/style.css'])
   expect(createHash('sha256').update((await readFile('public/_headers','utf8')).split('/wallpapers/piepe-forest-desktop-5120x2880.jpg')[0]).digest('hex')).toBe(fixture.sources['public/_headers'])
-  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(reviewed[path]??fixture.sources[path])
+  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(v320[path]??reviewed[path]??fixture.sources[path])
   const guide=await(await request.get(readingPath('lv'))).text(),home=await(await request.get('/')).text(),entry=/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],bundle=await readFile('dist'+entry,'utf8');expect(guide).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).not.toContain(readings.lv.sections[1].paragraphs[0]) // Shared homepage X-Ray is intentional in 2.5.8.1; long-form guide still stays static.
 })
 

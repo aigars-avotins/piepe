@@ -13,7 +13,7 @@ export type NoteState = 'unseen' | 'discovered' | 'collected'
 type Props = {
   locale: Locale; plane?: CSSProperties; hotspot?: RefObject<HTMLButtonElement | null>;
   inactive?: boolean; intro?: boolean; imageFailed?: boolean; noteState?: NoteState; paused?: boolean;
-  onPortal?:(event:MouseEvent<HTMLButtonElement>)=>void; onDiscovery?: (event: MouseEvent<HTMLButtonElement>) => void; onReturn?: () => void; onPause?: () => void;
+  onPortal?:(event:MouseEvent<HTMLElement>)=>void; onDiscovery?: (event: MouseEvent<HTMLButtonElement>) => void; onReturn?: () => void; onPause?: () => void;
   cinemaErrors?: { understory: boolean; breathing: boolean }; onRetryCinema?: (name: 'understory' | 'breathing') => void;
   inspectEvents?: { onMouseEnter: () => void; onMouseLeave: () => void; onFocus: () => void; onBlur: () => void };
 }
@@ -25,9 +25,9 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <div className="hero-copy"><p className="label title-enter">{t.heroLabel}</p><h1 id="hero-title" className="wordmark" aria-label="pie.pe"><span>pie</span><span className="wordmark-period">.</span><span>pe</span></h1><p className="hero-deck title-enter">{t.heroThought}</p></div>
         <div className="hero-hotspot-plane" style={plane}>
           <button className="fungus-hit" disabled={intro} onClick={onDiscovery} aria-label={t.discover} aria-haspopup="dialog" {...inspectEvents} />
-          <button ref={hotspot} className="fungus-annotation" disabled={intro} onClick={onDiscovery} aria-label={t.closer} aria-haspopup="dialog" {...inspectEvents}><span className="annotation-cross" aria-hidden="true">+</span><span>{t.lookCloser} <span aria-hidden="true"><Arrow direction="diagonal" /></span></span></button>
+          <button ref={hotspot} className="fungus-annotation" disabled={intro} onClick={onDiscovery} aria-label={t.closer} aria-haspopup="dialog" {...inspectEvents}><span className="annotation-cross" aria-hidden="true">+</span><span>{locale==='lv'?'Aplūkot tuvāk':'Look closer'} <span aria-hidden="true"><Arrow direction="diagonal" /></span></span></button>
         </div>
-        <div className="hero-foot title-enter"><DiscoveryEntry locale={locale}/><p className="hero-word-meaning"><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><SiteLink className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></SiteLink><span className="edition">{t.edition}</span></div>
+        <div className="hero-foot title-enter"><DiscoveryEntry locale={locale} onPortal={onPortal} inactive={intro}/><p className="hero-word-meaning"><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><SiteLink className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></SiteLink><span className="edition">{t.edition}</span></div>
         {imageFailed && <p className="media-note">{t.imageError} <button onClick={onDiscovery}>{t.openEncounter}</button>.</p>}
       </section>
       <section id="understory" className="chapter bark-chapter cinematic-chapter" data-scene="understory" aria-labelledby="bark-title">

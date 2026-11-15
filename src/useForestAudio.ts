@@ -89,7 +89,7 @@ export function useForestAudio(depth: AudioDepth = 'surface'): ForestAudio {
     }
     const interaction = (event: Event) => {
       if (!event.isTrusted) return
-      if (event.target instanceof Element && (event.target.closest('.sound-control')||event.target.closest('.fungus-portal,[data-portal-entry]'))) return
+      if (event.target instanceof Element && (event.target.closest('.sound-control')||event.target.closest('.fungus-portal,[data-portal-entry],[data-portal-hero-entry]'))) return
       activated=true
       if (desired && (recording?recording.paused:!context || context.state !== 'running' || !source)) void start()
     }

@@ -1,0 +1,394 @@
+[
+  {
+    "variant": "after",
+    "locale": "en",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "frames": [
+      {
+        "time": 0.041667,
+        "presented": 2,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.083333,
+        "presented": 3,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.125,
+        "presented": 4,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.166667,
+        "presented": 5,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.208333,
+        "presented": 6,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.25,
+        "presented": 7,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.291667,
+        "presented": 8,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.333333,
+        "presented": 9,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.375,
+        "presented": 10,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.416667,
+        "presented": 11,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.458333,
+        "presented": 12,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.5,
+        "presented": 13,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "errors": [],
+    "movies": [
+      "/media/forest-reveal.mp4"
+    ]
+  },
+  {
+    "variant": "after",
+    "locale": "lv",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "frames": [
+      {
+        "time": 0.208333,
+        "presented": 5,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.25,
+        "presented": 6,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.291667,
+        "presented": 7,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.333333,
+        "presented": 8,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.416667,
+        "presented": 9,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.458333,
+        "presented": 10,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.5,
+        "presented": 11,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.541667,
+        "presented": 12,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.583333,
+        "presented": 13,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.625,
+        "presented": 14,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.666667,
+        "presented": 15,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.708333,
+        "presented": 16,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "errors": [],
+    "movies": [
+      "/media/forest-reveal.mp4"
+    ]
+  },
+  {
+    "variant": "before",
+    "locale": "en",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "frames": [
+      {
+        "time": 0.041667,
+        "presented": 2,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.083333,
+        "presented": 3,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.125,
+        "presented": 4,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.166667,
+        "presented": 5,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.208333,
+        "presented": 6,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.25,
+        "presented": 7,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.291667,
+        "presented": 8,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.333333,
+        "presented": 9,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.375,
+        "presented": 10,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.416667,
+        "presented": 11,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.458333,
+        "presented": 12,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.5,
+        "presented": 13,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "errors": [],
+    "movies": [
+      "/media/forest-reveal.mp4"
+    ]
+  },
+  {
+    "variant": "before",
+    "locale": "lv",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "frames": [
+      {
+        "time": 0.041667,
+        "presented": 2,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.083333,
+        "presented": 3,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.125,
+        "presented": 4,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.166667,
+        "presented": 5,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.208333,
+        "presented": 6,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.25,
+        "presented": 7,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.291667,
+        "presented": 8,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.333333,
+        "presented": 9,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.375,
+        "presented": 10,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.416667,
+        "presented": 11,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.458333,
+        "presented": 12,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "time": 0.5,
+        "presented": 13,
+        "rate": 1,
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "errors": [],
+    "movies": [
+      "/media/forest-reveal.mp4"
+    ]
+  }
+]

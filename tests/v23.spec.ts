@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import {createHash} from 'node:crypto'
 import type { Page } from '@playwright/test'
 import { messages } from '../src/i18n'
 import { nativeDiagnostics } from './nativeDiagnostics'
@@ -7,7 +8,7 @@ nativeDiagnostics()
 test.beforeEach(async({page})=>{await page.bringToFront()})
 test.afterEach(async({page},testInfo)=>{
   if(testInfo.status===testInfo.expectedStatus||page.isClosed())return
-  await testInfo.attach('environmental-state-on-failure',{body:JSON.stringify(await page.evaluate(()=>({visibility:document.visibilityState,scroll:scrollY,clips:[...document.querySelectorAll<HTMLElement>('[data-clip]')].map(element=>({...element.dataset})),videos:[...document.querySelectorAll('video')].map(video=>({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,total:video.getVideoPlaybackQuality().totalVideoFrames}))}))),contentType:'application/json'})
+  await testInfo.attach('environmental-state-on-failure',{body:JSON.stringify(await page.evaluate(()=>({visibility:document.visibilityState,href:location.href,historyLength:history.length,scroll:scrollY,clips:[...document.querySelectorAll<HTMLElement>('[data-clip]')].map(element=>({...element.dataset})),videos:[...document.querySelectorAll('video')].map(video=>({src:video.currentSrc,time:video.currentTime,paused:video.paused,ended:video.ended,ready:video.readyState,total:video.getVideoPlaybackQuality().totalVideoFrames}))}))),contentType:'application/json'})
 })
 
 async function wheelTo(page: Page, id: string, fraction: number) {
@@ -23,12 +24,28 @@ async function wheelTo(page: Page, id: string, fraction: number) {
       // keyboard scrolling; separate Chromium recordings use actual touch input.
       await page.keyboard.press(Math.abs(delta) > h * .75 ? delta > 0 ? 'PageDown' : 'PageUp' : delta > 0 ? 'ArrowDown' : 'ArrowUp', { delay: 80 })
     } else await page.mouse.wheel(0, Math.max(-h * .4, Math.min(h * .4, delta)))
-    await page.waitForTimeout(100)
+    // Wait for native keyboard momentum to finish before measuring arrival or
+    // issuing an opposite command. A 100ms sample can be hundreds of pixels
+    // ahead of its eventual resting position on foreground macOS WebKit.
+    let previous = await page.evaluate(() => scrollY), stable = 0
+    await expect.poll(async () => {
+      const current = await page.evaluate(() => scrollY)
+      stable = Math.abs(current - previous) < 1 ? stable + 1 : 0
+      previous = current
+      return stable
+    }, { intervals: [100], timeout: 2500 }).toBeGreaterThanOrEqual(2)
   }
   throw Error('Native wheel input did not reach the scene')
 }
 
+async function rendered(page:Page){
+  await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
+  await page.evaluate(()=>document.fonts.ready)
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))
+}
+
 async function movingPicture(page: Page, name: 'understory' | 'breathing') {
+  await rendered(page)
   const layer = page.locator(`[data-clip="${name}"]`)
   await expect(layer).toHaveAttribute('data-clip-ready', 'true', { timeout: 10000 })
   await expect(layer).toHaveAttribute('data-loop-hold', 'false')
@@ -40,14 +57,10 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
     for (let element: Element | null = video; element; element = element.parentElement) opacity *= Number(getComputedStyle(element).opacity)
     return opacity
   })).toBeGreaterThan(.98)
-  return layer.locator('video').evaluate(async (video: HTMLVideoElement) => {
+  const sample = await layer.locator('video').evaluate(async (video: HTMLVideoElement) => {
     let opacity = 1
     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)
-    const r = video.getBoundingClientRect(), scale = Math.max(r.width / video.videoWidth, r.height / video.videoHeight)
-    const position = getComputedStyle(video).objectPosition.split(' ').map(parseFloat)
-    const sw = r.width / scale, sh = r.height / scale, sx = (video.videoWidth - sw) * position[0] / 100, sy = (video.videoHeight - sh) * position[1] / 100
-    const canvas = document.createElement('canvas'); canvas.width = 128; canvas.height = 72
-    const ctx = canvas.getContext('2d', { willReadFrequently: true })!
+    const r = video.getBoundingClientRect()
     const frames: { time: number; hash?: number; presented?: number; phase: 'cadence' | 'pixels'; copyMs?: number; copyMethod?: string }[] = []
     const diagnostic = (phase: string) => JSON.stringify({ phase, src: video.currentSrc, time: video.currentTime, paused: video.paused, ended: video.ended, ready: video.readyState, connected: video.isConnected, reason: video.parentElement?.dataset.clipReason, cycles: video.parentElement?.dataset.clipCycles, held: video.parentElement?.dataset.loopHold, totalFrames: video.getVideoPlaybackQuality().totalVideoFrames, frames })
     // Measure presentation without GPU readback first. Even createImageBitmap(video)
@@ -66,33 +79,30 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
       }
       request = video.requestVideoFrameCallback(frame)
     })
-    // Pixel inspection has its own clock: CPU readback can suppress subsequent
-    // native WebKit frame callbacks. Cadence above remains completely readback-free.
-    // These snapshots still copy actual decoded pixels, never a poster or test clock.
-    await new Promise<void>((resolve, reject) => {
-      let next = 0, settled = false, pixelsRead = 0
-      const timeout = setTimeout(() => { settled = true; clearTimeout(next); reject(Error('No distinct video pixel samples: ' + diagnostic('pixels'))) }, 2500)
-      const sample = () => {
-        if (settled) return
-        if (video.readyState < 2 || video.paused || video.ended || video.parentElement?.dataset.loopHold === 'true') { next = window.setTimeout(sample, 50); return }
-        try {
-          const snapshot: typeof frames[number] = { time: video.currentTime, phase: 'pixels', copyMethod: 'scaled-video-canvas' }
-          const started = performance.now()
-          ctx.drawImage(video, sx, sy, sw, sh, 0, 0, 128, 72)
-          const pixels = ctx.getImageData(0, 0, 128, 72).data; let hash = 2166136261
-          for (let i = 0; i < pixels.length; i++) if (i % 4 !== 3) hash = Math.imul(hash ^ pixels[i], 16777619)
-          snapshot.hash = hash >>> 0; snapshot.copyMs = performance.now() - started
-          frames.push(snapshot); pixelsRead++
-          if (pixelsRead >= 3) { settled = true; clearTimeout(timeout); resolve() }
-          else next = window.setTimeout(sample, 250)
-        } catch (error) { settled = true; clearTimeout(timeout); clearTimeout(next); reject(error) }
-      }
-      sample()
-    })
     opacity = 1
     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)
     return { frames, duration: video.duration, opacity, ready: video.readyState, paused: video.paused, rect: { x: r.x, y: r.y, w: r.width, h: r.height }, viewport: { w: innerWidth, h: innerHeight }, held: video.parentElement!.dataset.loopHold }
   })
+  // Read the composited browser image, not the AVFoundation video surface.
+  // Native video-canvas readback can suppress the NEXT probe's frame callbacks.
+  // Keep the same three distinct pixel samples, cadence and time assertions.
+  const clip={x:Math.floor(sample.viewport.w*.64),y:Math.floor(sample.viewport.h*.43),width:128,height:72}
+  const pixelsStarted=Date.now()
+  // A compositor capture can return the same last surface during a native loop
+  // handoff. Require three different *visible* frames within a bounded window;
+  // do not confuse exactly three screenshot calls with three presented frames.
+  while(distinctFrames(sample.frames)<3&&Date.now()-pixelsStarted<2500){
+    const started=Date.now()
+    // Do not register a second callback across a replay seek. Native WebKit
+    // can discard that registration at the resource/seek boundary. Cadence is
+    // already proved above; the three different composited pixels below prove
+    // visible movement independently, within the same bounded capture window.
+    const pixels=await page.screenshot({clip,scale:'css'})
+    sample.frames.push({time:await layer.locator('video').evaluate((v:HTMLVideoElement)=>v.currentTime),hash:parseInt(createHash('sha256').update(pixels).digest('hex').slice(0,8),16),phase:'pixels',copyMs:Date.now()-started,copyMethod:'composited-browser-crop'})
+    if(distinctFrames(sample.frames)<3)await page.waitForTimeout(250)
+  }
+  await test.info().attach(`visible-${name}-probe`,{body:JSON.stringify(sample),contentType:'application/json'})
+  return sample
 }
 
 const distinctFrames = (frames: { hash?: number }[]) => new Set(frames.flatMap(frame => frame.hash === undefined ? [] : [frame.hash])).size
@@ -164,7 +174,7 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`${width}
       const state = { maxPlaying: 0 }; (window as unknown as { cinemaQA: typeof state }).cinemaQA = state
       setInterval(() => { state.maxPlaying = Math.max(state.maxPlaying, [...document.querySelectorAll('video')].filter(v => !v.paused && !v.ended).length) }, 30)
     })
-    await page.goto(locale === 'lv' ? '/' : '/en/'); await page.evaluate(() => document.fonts.ready)
+    await page.goto(locale === 'lv' ? '/' : '/en/'); await rendered(page)
     const evidence: unknown[] = []
     for (const [name, id, exit] of [['understory', 'understory', 'encounter'], ['breathing', 'return', 'wallpapers']] as const) {
       await wheelTo(page, id, .3)

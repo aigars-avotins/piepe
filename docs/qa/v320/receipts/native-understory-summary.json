@@ -1,0 +1,810 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T19:16:38.033Z",
+    "duration": 121895.00600000001,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 18632,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 241,
+              "bodySha256": "5743c47e8eb8c7d53d4ac55dfcdf37345aa396e8b9ad665b411f36061525d5ec"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 190,
+              "bodySha256": "062db96fe796c0088195b6a286a6332912cace0e2d09474ad130b631f0b661ba"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 2279236,
+              "bodySha256": "906f5d51974251059743e82931ff3e40e752e69d9a1bfaea99aaea15f38e4b28"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "13a57b349560a55703c2e2987a38e0fed295f8f07e966180c279e789e1806331"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1369,
+              "bodySha256": "acd69187bfed42920c48e4c67e79877a13026b2bd34368fe32dfc446482b2b11"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8300,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 190,
+              "bodySha256": "7a350273d25e6ef3e5033ce0b5ac9a2d6b14310d9ab2d1b36db84e12bb590d05"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 2285772,
+              "bodySha256": "3efa5d701ecca8a49654e5f8fd6c5e202f8bdc8473ebddcf6a73c9ff9b020c83"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "6da4ff8888622a415452de7812d47b929f53de0e8b2850cb5ff2b78a4caa9019"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1369,
+              "bodySha256": "cde51812d0514757a49555b41d1b0dd8f2c7a94c446c02f00f42d4f4b217d6e5"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 10713,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "a5298afdb19c40402a798f0c7f078fa6ccae310747b7c3f027310e2b006f7fa4"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 2000636,
+              "bodySha256": "54610442c584b6d117fae7e7a5e345cd8faf3fb028f3fa086afe4dd1661712ce"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "4dc0db6e80c7d3345c79ffe38e3e2b3481364c7881813122f4bbf7fd08ab7f5c"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1369,
+              "bodySha256": "f8bc78bba886c3a6e87e67e29ddb00b1bb5be7f3cfb9fef4b34781357dfe1a9b"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7472,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "bcb135bd5103050646af2e298915a2283ce006ba3fc38fbdd4fae963c8edfa32"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1995700,
+              "bodySha256": "be0fcb77be6ee71e02155e14721fc6ae8708b6832ae47e4a0f83bed6c6242949"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "36ad9109a70da67fa6da5c2ef1da0b2f85b215fad3b88af6a409cb30f3a092b3"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1372,
+              "bodySha256": "1e8783ae253f34e163e230a1b59e5805a3cf9f1277905d9ee5c854014d3825da"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3128,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 521078,
+              "bodySha256": "46f0e705bae9b7f315d3fe3bc8dc3e1b6f1475a90dccfe6e59b2826ce341076a"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "0eeaca3f673456bdc9bd746c8f091813992a45ede0f4f8bcb256a881ef52ea5b"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "2027150c4638bc8a2141678168ccd5cd170a059c2a480a6fc94d9b7be4c07e15"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2865,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 511608,
+              "bodySha256": "d7ea2a08c41ec9a9c02aaca7d557e77222a3691a4710f8154e7b5cbe4434bc63"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "7dabab85c6ccf14c25043a432391f2453073fc4c3d7e29d2c987be9a22885073"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1364,
+              "bodySha256": "a47cf55bea4f3f9da4fede2836e607cdeee0d1d00054db1aaab68acd11b17492"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2662,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 407729,
+              "bodySha256": "33a5e00c613501296433f69a72bb10ae4681cf2123c7491ff13d654553a8be24"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "64fea92ffee1b3f49d4cfd2b2398cb2bf72bd066317190ac6d342832e291b3bc"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "405cc65defb542be157cf2996b4b0a2b896f0c1e3e6a5244b64e677f82c06477"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2477,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 410484,
+              "bodySha256": "67d174b37b7920b8b990d13725d866c0eae55f2c7edae3a110de82cfbea496ee"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "52e0cedcb20573ba64a9ad5af1bd895b1eb917550cd9aa84118a486054750902"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1364,
+              "bodySha256": "c49777a2daa671c3e25cb2c629bd506048e270c623e854ea2280458629890bfd"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2991,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 356867,
+              "bodySha256": "5e3d5d966897340439dba119d8352b40303037a337d822929ad887596e4bd4e4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "63bfb7a61fce3b29c2e54906806c9acf663374b0542997fbaaeaf821b0aa0b5f"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "d840be0faea9ebae3b888d53ffb2d476081478fe6ff4163c5a165d9b55db27db"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3207,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 357068,
+              "bodySha256": "46a66748f1340a2580067ecefb639420aeb93dbac4ffc9d1872dda76213508fa"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "77fdbda4c3981fcc67d4b733316b7b8642edc18c842cb81a6ca224e2748d57a4"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1364,
+              "bodySha256": "d4582e456a040f446ea8bcbc4cdc3aa6fcc308dbecf4e821a69a5d110535867c"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 23470,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 421,
+              "bodySha256": "959fb609957db200c1a0752db07e19032b171e6f0c1d77b56aa4bcd07e35d29d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2864,
+              "bodySha256": "30287b99589fcb5afc07516e3fc0137fa57ce5aa0f56c4c7ba228b44edd2bb86"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2500,
+              "bodySha256": "6f144ade4e62fb9c8ed8b30af509012ac0554e953a4871fc067e2e4fbb62f2a6"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4318,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 110,
+              "bodySha256": "ee1f344606dc9442b7f15a5442f98b0e79d555f1d0b33ccd349161a1b9c62e00"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 196,
+              "bodySha256": "0d995beca5b145440ef2b6da714194349c67aa4f748af2b05089993261615cf1"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 709,
+              "bodySha256": "008078abcd7e8d07de7a2da39d0b2f51e12c207b7c15cc4f84cea6c79d514976"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4393,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 106,
+              "bodySha256": "63f652da80bd9fc264fe74c438fe20c938fb8cfccb10c1cc9a37b990fe326992"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 424,
+              "bodySha256": "8ada7d2c6d21c7d77c087f2bd711e4172da4af7e1ab453324471f4c3cb5ce96d"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 913,
+              "bodySha256": "12c142d2953b0d0d2befdb161d844b91405b699dcf77092e11ddb730f22b611f"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14560,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 351,
+              "bodySha256": "75d6a9c6930c1f61bc8de87d7b17677312110277f5f0b408a43a842f24463794"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2864,
+              "bodySha256": "5ca0271d1c2cd8db3145dbdfcb9bf0241e7b22f53b64cfc87fd2f5e548674f09"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2501,
+              "bodySha256": "c798d4b30efbd632db43cf8a10fbfd1e1ae01d66524725f1bcea0001b921ef4f"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--ecbf4-ng-anchors-and-history-work-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2107,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 98,
+              "bodySha256": "b091cec12c0738bbb0b56e0f4979b37c089d3ae226b00580369d8df5c71e96d8"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 196,
+              "bodySha256": "f137bab467c457c0905f7363324c7f923ef375750526496df24e516f910b3835"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1392,
+              "bodySha256": "773308b60b8558bc23578d7a048e3d508289092a2e3ae0a86e0884e425ffff74"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--23e19--a-genuinely-buffering-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2290,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 94,
+              "bodySha256": "3e291e81c8eff3d632fe77a4181fa99e48e661eb067584432ebe5d29b7d1a9fc"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 424,
+              "bodySha256": "eda21a253a8aadaacde2de39aa0a89d38cb804aba994ba57b5a92239f44c9a16"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1598,
+              "bodySha256": "ee4d5805b9ecdcd92d284dc90ceafe9c6b4c83ef852445d57fcb3ec6998e9881"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--2e6d5-aves-a-genuinely-error-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "method": "Exact successful case lines from finalized GitHub Actions log, not synthesized Playwright output.",
+  "cases": [
+    {
+      "case": "scroll-recording.spec.ts :: silent fifteen-second before and after scroll captures",
+      "logLine": "chromium\tRun if [ -n \"$PIEPE_DIAGNOSTIC_GREP\" ]; then\t2026-11-15T07:05:16.8254468Z   \u2713  1 [chrome-desktop] \u203a tests/scroll-recording.spec.ts:3:1 \u203a silent fifteen-second before and after scroll captures (33.1s)",
+      "runUrl": "https://github.com/aigars-avotins/piepe/actions/runs/43688025525",
+      "sourceCommit": "8a0d57633a8762c0fe53e0d28afc85b790831210"
+    },
+    {
+      "case": "v258.spec.ts :: 2.5.8 public route baseline remains real HTML on the independent CI network",
+      "logLine": "chromium\tRun if [ -n \"$PIEPE_DIAGNOSTIC_GREP\" ]; then\t2026-11-15T07:05:20.8009958Z   \u2713  2 [chrome-desktop] \u203a tests/v258.spec.ts:219:1 \u203a 2.5.8 public route baseline remains real HTML on the independent CI network (3.9s)",
+      "runUrl": "https://github.com/aigars-avotins/piepe/actions/runs/43688025525",
+      "sourceCommit": "8a0d57633a8762c0fe53e0d28afc85b790831210"
+    }
+  ]
+}

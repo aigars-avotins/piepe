@@ -1,0 +1,2611 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T19:01:49.319Z",
+    "duration": 407725.915,
+    "expected": 92,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 lv JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "timedOut",
+          "duration": 25780,
+          "retry": 0,
+          "errors": [
+            {
+              "message": "\u001b[31mTest timeout of 20000ms exceeded.\u001b[39m"
+            },
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v256.spec.ts",
+                "column": 15,
+                "line": 37
+              },
+              "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/runner/Library/Caches/ms-playwright/webkit-2370/pw_run.sh --inspector-pipe --no-startup-window\n<launched> pid=7729\n[pid=7729] <gracefully close start>\n\n  35 |     await page.goBack(); await checkReading(page, locale)\n  36 |     expect(errors).toEqual([])\n> 37 |   } finally { await context.close() }\n     |               ^\n  38 | })\n  39 |\n  40 | for (const locale of ['lv', 'en'] as const) test(`2.5.6 ${locale}: homepage links to its real article and returns without losing session semantics`, async ({ page }) => {\n    at /Users/runner/work/piepe/piepe/tests/v256.spec.ts:37:15"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v256-2-5-6-lv-JS-false-rea-646ce-ting-and-responsive-reading-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v256-2-5-6-lv-JS-false-rea-646ce-ting-and-responsive-reading-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 lv JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14143,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 1055104,
+              "bodySha256": "a94af90248740516296312c4433d4681b32e940b48f63d2470fae761cc5a2f13"
+            },
+            {
+              "name": "lv-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1769210,
+              "bodySha256": "2d3832f275e9d7453d7a59e24ed8a07a28a7ea215ab738d1c5c23e3964c4dd0d"
+            },
+            {
+              "name": "lv-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 3356569,
+              "bodySha256": "596c47df51053f5732d553ae3af6c62c1656040bc4a9dc1cd2202f3b22e094d5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 en JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8356,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 en JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6814,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 1051446,
+              "bodySha256": "27dcdd31039f7ec125b9538873c8ca622b919a59f421628211c91df14a73841d"
+            },
+            {
+              "name": "en-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1075375,
+              "bodySha256": "41b7dabd02472e77775daccb1d5ee4bf4069bd03ec9572a2395d05e127d3d414"
+            },
+            {
+              "name": "en-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 3369807,
+              "bodySha256": "c344104e713ed0bec589e5daf2811745d9351f0b1abeee8ae1f5a2a9f64f5b90"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 40,
+      "title": "2.5.6 lv: homepage links to its real article and returns without losing session semantics",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5886,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 40,
+      "title": "2.5.6 en: homepage links to its real article and returns without losing session semantics",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6402,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 58,
+      "title": "2.5.6 static documents have matching CSP hashes and do not ship article prose in the cinema bundle",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 107,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 75,
+      "title": "2.5.6 edge analytics allowance still rejects application scripts and inline code",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2259,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-foni/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6906,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-foni/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9113,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-wallpapers-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-foni-JS-tr-6e8a7-iprocal-language-navigation-webkit-iphone/attachments/lv-wallpapers-390-b44cd13edd602a83abb84990a399862831c88218.png"
+            },
+            {
+              "name": "lv-wallpapers-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-foni-JS-tr-6e8a7-iprocal-language-navigation-webkit-iphone/attachments/lv-wallpapers-1440-d88cd2a808bcba8f801c42dc680078734fceb7f4.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3876,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4508,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-index-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-piezimes-J-70eb4-iprocal-language-navigation-webkit-iphone/attachments/lv-index-390-e300350ccf10e066c86fb73c26ced2da69c0f349.png"
+            },
+            {
+              "name": "lv-index-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-piezimes-J-70eb4-iprocal-language-navigation-webkit-iphone/attachments/lv-index-1440-a3b8e69a99136dfa1830e88043b0bcbdf58f1856.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3176,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5267,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-note-001-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-piezimes-0-8cd19-iprocal-language-navigation-webkit-iphone/attachments/lv-note-001-390-950bb7369a6e3f0866679942406eadf124012565.png"
+            },
+            {
+              "name": "lv-note-001-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-piezimes-0-8cd19-iprocal-language-navigation-webkit-iphone/attachments/lv-note-001-1440-99e8d56f2101d48ab311f653f5c24b771523550f.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/002-caga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4573,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/002-caga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3006,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/003-serpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5323,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/003-serpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4891,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6496,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5474,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7751,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5226,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3942,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4586,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-note-006-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-piezimes-0-33564-iprocal-language-navigation-webkit-iphone/attachments/lv-note-006-390-225fad6314be36e5433442be6b74cb24c1b70a76.png"
+            },
+            {
+              "name": "lv-note-006-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-meza-piezimes-0-33564-iprocal-language-navigation-webkit-iphone/attachments/lv-note-006-1440-ab4548dfdff77436c75d3f46848de9d3458fe9ad.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/forest-wallpapers/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5790,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/forest-wallpapers/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8539,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-wallpapers-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-forest-wallp-f7188-iprocal-language-navigation-webkit-iphone/attachments/en-wallpapers-390-c503b4c21aaea10225ffcf360efe42e3f0169090.png"
+            },
+            {
+              "name": "en-wallpapers-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-forest-wallp-f7188-iprocal-language-navigation-webkit-iphone/attachments/en-wallpapers-1440-5e1df56305e13961adc36363a6a534cb208bcfde.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3786,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4517,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-index-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-field-notes--859d9-iprocal-language-navigation-webkit-iphone/attachments/en-index-390-e1f47967a9602cf4f22b0397571874e4cba69168.png"
+            },
+            {
+              "name": "en-index-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-field-notes--859d9-iprocal-language-navigation-webkit-iphone/attachments/en-index-1440-fa0466e7842cf85096290fb9860a0a643b7565cb.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2576,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4385,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-note-001-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-field-notes--d9ec5-iprocal-language-navigation-webkit-iphone/attachments/en-note-001-390-5b093f2b8190b781db7a25dcc3a82e12abfec0f2.png"
+            },
+            {
+              "name": "en-note-001-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-field-notes--d9ec5-iprocal-language-navigation-webkit-iphone/attachments/en-note-001-1440-8cd4e90022a803942aaa2721341e0cf129731d74.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/002-chaga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3077,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/002-chaga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3615,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3547,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2967,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3179,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3637,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/005-deadwood-and-time/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3281,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/005-deadwood-and-time/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4278,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/006-lacquered-bracket/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3399,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/006-lacquered-bracket/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4223,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-note-006-390",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-field-notes--bfd53-iprocal-language-navigation-webkit-iphone/attachments/en-note-006-390-601cc11fc9e90e5ed3f8f64ef7f5266d9cd7728e.png"
+            },
+            {
+              "name": "en-note-006-1440",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v257-2-5-7-en-field-notes--bfd53-iprocal-language-navigation-webkit-iphone/attachments/en-note-006-1440-dddd5b76253a8c4ea973e3391e28610f7b619716.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 92,
+      "title": "2.5.7 route graph, CSP hashes, honest species facts and all internal resources remain coherent",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1090,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 124,
+      "title": "2.5.7 original factual prose, notes, core cinema and every media/download asset remain preserved",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 213,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 136,
+      "title": "2.5.7 lv: selective supported snippet labels preserve primary content, links and mobile control text",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6769,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 136,
+      "title": "2.5.7 en: selective supported snippet labels preserve primary content, links and mobile control text",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8044,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 156,
+      "title": "2.5.7 JS-free wallpaper and original-note links download the real existing files",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2815,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 39,
+      "title": "2.5.8 lv: real static educational content and native atlas work without JavaScript",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3331,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 53,
+      "title": "2.5.8 lv: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1631,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2841,
+              "bodySha256": "6f1b3b0e661445d1b18e5cd8cbd6240788cddcbb8943cad8b9ad4daed423eadf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 68,
+      "title": "2.5.8 lv: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4034,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1399,
+              "bodySha256": "12648cf818aaa65e8bdbb974e648c52a9f5dc4f2acde40b22624e3fabd9ae5a0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 84,
+      "title": "2.5.8 lv: atlas opens full-resolution comparison, closes with Escape and restores link focus",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2016,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1964,
+              "bodySha256": "9f1f15677b3eda4eced778e17ea4dfe65169e3984725303ee22ddb570a265e64"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 lv: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2051,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 471,
+              "bodySha256": "9f007947095c82a4b14bd7fd10e68b6452963e566c051cc12936d00a386552cc"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 237,
+              "bodySha256": "04c395255f44cc22f8da5b51b7eeebb861a5caab05d43131f6e9854fb24694f7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 39,
+      "title": "2.5.8 en: real static educational content and native atlas work without JavaScript",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1738,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 53,
+      "title": "2.5.8 en: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1631,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2856,
+              "bodySha256": "16aa7be51a0b3b76ab50332ce72b78dee64360d2a5e43c790070e89c90d71b09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 68,
+      "title": "2.5.8 en: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4095,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1413,
+              "bodySha256": "e97d4a401cb7517b8c554e846742cedb293acab11f33785555a3bea3a3ae86e6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 84,
+      "title": "2.5.8 en: atlas opens full-resolution comparison, closes with Escape and restores link focus",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1870,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1978,
+              "bodySha256": "ad5e36c357c19a4523e67438c84c726ea0038e94e038b8384f9f06217d7167f8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 en: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1430,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 274,
+              "bodySha256": "e2cf941e9c92ea010f0026f836438887fe747aece6ccbb8252743aa868ba02de"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 238,
+              "bodySha256": "d877966cdb8843ac2faf06d28f1eee2478f41d13e514b9a75a747a11e8677ae2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 111,
+      "title": "2.5.8 touch slider gestures and vertical page movement remain native",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1702,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 128,
+      "title": "2.5.8 reduced: illustrations remain factual and controllable with no pulses or transition clocks",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1364,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 445,
+              "bodySha256": "22cbfde479fd9d97cce6dbc93e7b5fc9e464b30040967f421893bf15e75fba91"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 128,
+      "title": "2.5.8 save-data: illustrations remain factual and controllable with no pulses or transition clocks",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1407,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 445,
+              "bodySha256": "28b71eff92fe4b2f7dc1f27a627e28b59601ddc486b096acfa10bbef94dfd47c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 137,
+      "title": "3.1.1 invalid and denied storage retain the single approved appearance and native language links",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2650,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 147,
+      "title": "2.5.8 audio is gesture-gated, depth-reactive and shares one real source through the existing scene states",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6143,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1143,
+              "bodySha256": "61d1b0b84c9cc939dd1a673f2695aef26e4c8285c3bcd09d56d72f10c60be7c4"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 838,
+              "bodySha256": "19dc0b51ea6c638f80ebf4f9991b31845fa1a7eb64b3e11286316952eced064f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 168,
+      "title": "2.5.8 unsupported low-pass processing falls back to the unchanged native recording",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2656,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 362,
+              "bodySha256": "906ec2243d6910852f0fd223cc7f3ad28b5770c1d85b30a87ac79bf26a7efcb2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 173,
+      "title": "2.5.8 unavailable Web Audio retains real gesture-gated native recording playback and mute",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4055,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 528,
+              "bodySha256": "fe4519f2effdb3688419683b428b2c3263d25ccf1f061893334ab4d1af0bbcf4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 190,
+      "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2931,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 261,
+              "bodySha256": "c82a9c5714ba8b47b943071f1cebeeb81aa4cd06a08854891e8a606c723b011c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 219,
+      "title": "2.5.8 public route baseline remains real HTML on the independent CI network",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4378,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "independent-production-baseline",
+              "contentType": "application/json",
+              "bodyBytes": 2858,
+              "bodySha256": "0d35ed647250fc57ad0ea76f38cb45608beacdc2ca1a76b6d36633eaef156867"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 48,
+      "title": "2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9979,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1129,
+              "bodySha256": "e44555c06711fa9a8b26e73dc0cfb8aacead1912f5c332704bce48b9dafe5a26"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2490,
+              "bodySha256": "aa298ac4308cbc164fafa563d494e53f6a3eee4c82a0a7990df39e200fa05134"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 55,
+      "title": "2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3407,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 lv: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1791,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 237,
+              "bodySha256": "7df5b08a0b9a29200e6b94a6033db150543d701d9ef03ad088596fe611c6f5c1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 48,
+      "title": "2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9764,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1129,
+              "bodySha256": "e709381a49fa56166d0b2057f1cf36e575d37132adb966ee8a3dad4795a5a62d"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2492,
+              "bodySha256": "7379fa6c5176d459c4fcf00e2b8400bd1a71deb7496d0f92748ec8d24a2c4230"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 55,
+      "title": "2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3064,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 en: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1715,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 252,
+              "bodySha256": "1c39707463bc67b75d100c382762988a75be349b0d5c64ab2f0fc20d0ae9a605"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 72,
+      "title": "2.5.8.1 reduced: immediate home entry, usable reveal and static film alternative",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2432,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1541,
+              "bodySha256": "38f7498d08e84cf777f3204e9d65b9188e086351659381f73d981f4f008cc3cb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 72,
+      "title": "2.5.8.1 save-data: immediate home entry, usable reveal and static film alternative",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3536,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1555,
+              "bodySha256": "d9c3e4b8ded20a74a634260c6d79f6c011d28ac2532aaa5b9fe592d595ddd0eb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 76,
+      "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1280,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 lv 390: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8109,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "lv-390-home",
+              "contentType": "image/png",
+              "bodyBytes": 550227,
+              "bodySha256": "a24afb5504ecfc987c7b45f4ea5343023996cfc3a9457dd2ef459e03e3fb1dc7"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2600,
+              "bodySha256": "a6ef7293197f14807ce26cb3e8cf3f18d9e6dcff683f569053386ef9558f62d6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 lv 800: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4437,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "lv-800-home",
+              "contentType": "image/png",
+              "bodyBytes": 1116476,
+              "bodySha256": "49e6ab3714684e90144556397924bf21f721db878ffc9a565f01eafbf819455d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "fa9a1a9a4645ac9978332c0355da20d1746810337f0950496ea2839eadf871c4"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3446,
+              "bodySha256": "4b888c9674c25ab019bca7a2057f78ee9f0e3bc14f194b80e32d1623a4518989"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 lv 1440: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6200,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "lv-1440-home",
+              "contentType": "image/png",
+              "bodyBytes": 1911283,
+              "bodySha256": "d0c93c79ab7c5f08539431da90964feb825604a912ddaf7f892376670309d21d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "280a7ca3ec13e1e300c2e13f35db7c10116d3dbe0d0266b8c72cce215f5cea79"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3021,
+              "bodySha256": "400964cec6a8ec63c1f67a95e3c0bb25f4c2d7c1b65bc115b3cd335f034eb568"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 en 390: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7669,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "en-390-home",
+              "contentType": "image/png",
+              "bodyBytes": 547781,
+              "bodySha256": "cdaafa9ed84cac106544abcb2750abe0b810f68b1bcb87963e64c0b21492aecc"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "8c1808da4438876e8b82a2de72507c81049e60334fc1bf4d7f1ba2cf15a8ee0e"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3648,
+              "bodySha256": "c1260edb4e17f8f177beff3f567ca4412028b82484bef660cdc417bffe57d55f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 en 800: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4372,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "en-800-home",
+              "contentType": "image/png",
+              "bodyBytes": 1107914,
+              "bodySha256": "57683e33aac58d84baae31f0b0157ae80c33ed30bd0215a9256b79cc1c2cf44f"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "2a6c48bed864dbb68d353613e51ab4d583128067ed38188ef435a846301f7cca"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3231,
+              "bodySha256": "d6d2408377c16956ab6cd4b2e3996a77c15ccd9cd3b75530b1ec9a428872b2be"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 en 1440: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5783,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "en-1440-home",
+              "contentType": "image/png",
+              "bodyBytes": 1908922,
+              "bodySha256": "be67856f75d865988ed027c0e58054fe5b1b387bbe1a44b91d252e0d39eb9a5d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2601,
+              "bodySha256": "d5b44ce0f56b4f4af4baf5feb2aae3c36af7dd822940c252b3e69653a0b8aa4e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 10,
+      "title": "2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and contain no rejected art or scale",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 994,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "all-routes-link-and-art-audit",
+              "contentType": "application/json",
+              "bodyBytes": 2698,
+              "bodySha256": "66bc85833dd621206fb89778f8aae9a256aee658f200b26a9c5c141299338b13"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 26,
+      "title": "2.5.8.2 lv: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1821,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1226,
+              "bodySha256": "dccfe9968d5e396f9913ee7b5a958b390becf9c543a62621eb9e300fbf54b234"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 37,
+      "title": "2.5.8.2 lv: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1930,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1191,
+              "bodySha256": "3fc04bbb58b585de027d5ef33058b774ebf3792aa0497eafcfba92035d25a7a8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 46,
+      "title": "2.5.8.2 lv: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2844,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 750,
+              "bodySha256": "35e448d8b30e8473daf60353430ce6b35fac3a4c9a56701e8dc2f65961d7d3a9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 26,
+      "title": "2.5.8.2 en: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1511,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1241,
+              "bodySha256": "5a23da0ab0b1cb0d329d824161aee2b04b1f35e5ccb291409c2c22ef558f77ad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 37,
+      "title": "2.5.8.2 en: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3508,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1217,
+              "bodySha256": "28bfa99ee354387d53f0db33f9498ad73914adb4927790cef8c66a749fb7dd21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 46,
+      "title": "2.5.8.2 en: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3265,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 751,
+              "bodySha256": "1275feed2cd1b6a6f98cee95006c101647086f837cd753a5ab7b8ad4e207a2ec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 56,
+      "title": "3.1 responsive then original JPEG tries alternate then labelled wallpaper fallback; no retry loop",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1136,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 773,
+              "bodySha256": "f75ab2835d9702df90e74a59ab775adcd5f819c9c62614ecffd495165378980e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 63,
+      "title": "3.1 unavailable responsive and JPEG sources disclose an alternate preview without using the final wallpaper",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1230,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 347,
+              "bodySha256": "f73f76e57c14db0cf22a18af31e764a38c573c1f99781099232fc1f2eccd6d05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 70,
+      "title": "2.5.8.2 original JPEG pixels are retained with correct extensions; original cinema and routing stay unchanged",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 810,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 76,
+      "title": "2.5.8.2 lv: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2355,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 76,
+      "title": "2.5.8.2 en: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2367,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 156,
+              "bodySha256": "fabea193b14b91e6b5cc0a11a09f5efc0dbbfaa9d204738e3654fcf97b40a801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 89,
+      "title": "3.1.1 the fixed approved grade applies once to each photograph and respects reduced motion",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1066,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 236,
+              "bodySha256": "7be85c73974d8a601a3ac28d4f1857ba0dc77bafff40768dfe08d11689080b2d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 95,
+      "title": "3.1.1 legacy storage events cannot recolour actual rendered frames",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1632,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 382,
+              "bodySha256": "9d70101963dbaf59a421adfe3b36d8f81a063cf62caf2d58ee9fe6cd386a727d"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

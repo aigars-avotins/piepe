@@ -1,0 +1,12 @@
+{
+  "method": "Decoded source luminance only, no derivative output",
+  "frames": 188,
+  "brightestByMeanY": {
+    "time": 0.625,
+    "meanY": 118.029
+  },
+  "range": [
+    116.747,
+    118.029
+  ]
+}

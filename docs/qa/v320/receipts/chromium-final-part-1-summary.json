@@ -1,0 +1,3699 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T18:46:10.882Z",
+    "duration": 915106.648,
+    "expected": 139,
+    "skipped": 0,
+    "unexpected": 13,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v23.spec.ts",
+      "line": 91,
+      "title": "native keyboard advance interrupts the fresh intro, and direct anchors do not start a competing film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14408,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 117,
+      "title": "expanded facts, locale changes, explicit pause and a failed environmental decode keep native navigation usable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16614,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 44793,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19772,
+              "bodySha256": "86c7ffd59a135ae26ea31ad2cc1275d27a66a8db0d1f35b59fc42d10a613597f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 45059,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19330,
+              "bodySha256": "400188f2804ce97e0400e88326e07c7f30a628017410227ff248f432cf2431bd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "lv: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19071,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 9978,
+              "bodySha256": "762209f4596c546dfa008f323ef93cbdc32d4a5f6d52ec4210a99a37721e97d0"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 10018,
+              "bodySha256": "2b6afacbd179d1b7a36556024074f41eb3fdaf881c271e28f81ff1980acd6adb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "en: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 18864,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 9980,
+              "bodySha256": "9ad9a6ee841955613933aa36fee182b301c4a9e8a46477a2b51bbfa2941d1da7"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 9948,
+              "bodySha256": "a9618bcdbb2a7c71c5189f509ceff988c987a406e3ffdd347e6ff5abb8cb1862"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 41409,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19770,
+              "bodySha256": "42472b26cdac98a6c8a623568c66be56937fa46ac9ca2fb90323907139dacc38"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 41668,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19836,
+              "bodySha256": "72f0b2e17c83a9bda8e47b244635a5737c4969db85527a76ad00c1114678d5de"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "lv: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16510,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 10041,
+              "bodySha256": "0cf90a579c3c13fbcc2559662479b917d180f5671d918fd2b650a860e61d3b10"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 9824,
+              "bodySha256": "28178ab9ab0a9b5e2c48be5d6348c2211af9b10e8a48493c4cb1ecefce679671"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "en: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16788,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 9962,
+              "bodySha256": "a7d0bfe4207eadd700970d3d7a2914a24449fc1e1fd974dcab49d6059a1987bc"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 10009,
+              "bodySha256": "84bfc8b4d623001ec6dfe2fe5ea1b6262f4a42a1ccd386a1e658f08250b75247"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 49,
+      "title": "storage denial keeps in-memory progress through close, locale and history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1103,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 44,
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 11085,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "server-first-opening",
+              "contentType": "image/png",
+              "bodyBytes": 1860319,
+              "bodySha256": "d49f51ab4ebdf4140059b09542cb24826013ba6669f35873520553a98e9afa89"
+            },
+            {
+              "name": "first-paint-to-hydration",
+              "contentType": "application/json",
+              "bodyBytes": 10861,
+              "bodySha256": "5311bb5649e70df5703bf971f9f62247f3a6d9bb419cbfd15fdfc3a3f106a081"
+            },
+            {
+              "name": "hydrated-opening-handoff",
+              "contentType": "image/png",
+              "bodyBytes": 1797905,
+              "bodySha256": "ba7a90cc784ffed66bdbc7444a462ba8dbf8317a6127c3f289b1a8353e477928"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-cold-1512x982-l-2c14a-delayed-decoding-and-Replay-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 44,
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 11267,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "server-first-opening",
+              "contentType": "image/png",
+              "bodyBytes": 1860651,
+              "bodySha256": "4acd216ecd0594e86ed8f1b08ac636deb1d0aa3f4c97570b31e77388d356d3e5"
+            },
+            {
+              "name": "first-paint-to-hydration",
+              "contentType": "application/json",
+              "bodyBytes": 11453,
+              "bodySha256": "6649e1165e7c0f6098e5777ce76df878895c47a388c165c3dbe2f439ebbc39fe"
+            },
+            {
+              "name": "hydrated-opening-handoff",
+              "contentType": "image/png",
+              "bodyBytes": 1815669,
+              "bodySha256": "dd16b3a6c02faeca408a5dedb9caab1279ecabd7116a7ffeeafda81b07cb93d6"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-cold-1512x982-e-bf819-delayed-decoding-and-Replay-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 44,
+      "title": "lv: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9049,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "server-first-opening",
+              "contentType": "image/png",
+              "bodyBytes": 361378,
+              "bodySha256": "12585df61aa417977c629a12b2970072d95323b51330eca9125714e8be165eba"
+            },
+            {
+              "name": "first-paint-to-hydration",
+              "contentType": "application/json",
+              "bodyBytes": 7886,
+              "bodySha256": "0ad9dded93ae7d3dd88637c3ac46ebff4842ddb6edecc30f95703611f9a90229"
+            },
+            {
+              "name": "hydrated-opening-handoff",
+              "contentType": "image/png",
+              "bodyBytes": 356514,
+              "bodySha256": "aaa15f86345aa831756633d8e395ea188bee10d7a1a98611ec017f051483cdf4"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-cold-390x664-lv-975de-delayed-decoding-and-Replay-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 44,
+      "title": "en: opening poster owns every paint through hydration, delayed decoding and Replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9144,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "server-first-opening",
+              "contentType": "image/png",
+              "bodyBytes": 360841,
+              "bodySha256": "478782aa6566f8894609c26b8abc121c0be395337e542d52dff2623ba14deceb"
+            },
+            {
+              "name": "first-paint-to-hydration",
+              "contentType": "application/json",
+              "bodyBytes": 8254,
+              "bodySha256": "89061f95f59d11e6c8c560c02fa0a00adcf23ada60edcddfe37f6bc082891152"
+            },
+            {
+              "name": "hydrated-opening-handoff",
+              "contentType": "image/png",
+              "bodyBytes": 356014,
+              "bodySha256": "82b07c5ad7159cdd216c467f0c8eeb8ed53553713050f6aeec60f963d53d3c59"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-cold-390x664-en-57a80-delayed-decoding-and-Replay-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 26263,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 1600163,
+              "bodySha256": "adef5822edd93fbb3bce1df95313634d0a4db84cde645996c8cf479494769f0d"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 424,
+              "bodySha256": "804906d09c1d2eac41311441ecaa1c486ddd2a317b360497c64688483c10799e"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 1626385,
+              "bodySha256": "1c8eb9dfb0cf7928466e1b565947c888157e407a89465f667b66e1b202eb61ee"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-1512x98-d9e77-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "en: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 25356,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 1598016,
+              "bodySha256": "a12b7a6f40fc1a81a796ac4e89487c86e006b7540a38fc22fd04fac7d325c56c"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 1624266,
+              "bodySha256": "f27172bc970bb4f909bfd4f081d4ce3261a53029f0435807729f2a8d32fe7f38"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-1512x98-2d58f-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 24889,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 1395937,
+              "bodySha256": "f9632b82cbd66d191b3783c90174064adb7c74d5eb5da7a6386f28d21725028c"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 1422927,
+              "bodySha256": "b785193758d92e46246ef37350e51a844d060964b9e8007302f1845c6a64cd43"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-1440x90-11fcc-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "en: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 24594,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 1392585,
+              "bodySha256": "c33ebff51cbb2024055748e8aa4f7873db984e1a06f4de3db331419174768d25"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 1420790,
+              "bodySha256": "19ebc32ad5001eb73e878d70178eed6b0623988295fe321283ef90de85f10f2a"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-1440x90-3a363-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 20171,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 424384,
+              "bodySha256": "1e3a0c526577e6d86817e3f84d3cb946de5976276214cd71f5eafc2bd858ea47"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 432645,
+              "bodySha256": "8f6e994e036f327bf83eca1a0818eed37fb097911cb30d923ec26957286d00d2"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-390x844-a3903-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "en: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19944,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 421902,
+              "bodySha256": "2c236116f33f5c05d6252b9eae1f049166583da6350899b65e210381443b33f1"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 429882,
+              "bodySha256": "b515eac2979433aec35f966932183d386e6b3ad3c6b3324fe322e65cd433ef10"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-390x844-839aa-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "lv: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 20037,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 342782,
+              "bodySha256": "fe0629d4b00b345f4c7456f24e04d8a0b3ed6815a07d9f3e3821b25e9422068c"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 354547,
+              "bodySha256": "6626a3f8acd711a10caaeb597210728df6cc718ea65c414ce31336c66bc5bfb6"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-390x664-1bb26-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v251.spec.ts",
+      "line": 112,
+      "title": "en: bottom to top stays a single forest after refresh and three native returns",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 20258,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "reference-hero",
+              "contentType": "image/png",
+              "bodyBytes": 337714,
+              "bodySha256": "6121adca86886f152c184ab7686af61d5d96e62f3fa20c50952cefb7e226823d"
+            },
+            {
+              "name": "single-forest-return-0",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-1",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "single-forest-return-2",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "aa8fe1074f0810dc92b35dc1c435a3e7e0495d1306bd8b5fc5c76f29ffae37d4"
+            },
+            {
+              "name": "after-three-returns",
+              "contentType": "image/png",
+              "bodyBytes": 349521,
+              "bodySha256": "25788d95e8ef1202e0d436c44f37f6355e9bf2f1afa6ab0b7cf07cbcea3f1637"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v251-2-5-1-reverse-390x664-8f9bc-sh-and-three-native-returns-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 1787,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 2055,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 1768,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 1649,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 1003,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 1076,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 1127,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 1125,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 974,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 959,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "eval at evaluate (:370:30), <anonymous>",
+                "column": 61,
+                "line": 2
+              },
+              "message": "Error: page.evaluate: TypeError: Cannot read properties of null (reading 'getBoundingClientRect')\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at box (eval at evaluate (:370:30), <anonymous>:2:61)\n    at eval (eval at evaluate (:370:30), <anonymous>:6:14)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at geometry (/workspace/piepe/tests/v252.spec.ts:10:15)\n    at /workspace/piepe/tests/v252.spec.ts:34:21"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "timedOut",
+          "duration": 65873,
+          "retry": 0,
+          "errors": [
+            {
+              "message": "\u001b[31mTest timeout of 65000ms exceeded.\u001b[39m"
+            },
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v252.spec.ts",
+                "column": 69,
+                "line": 80
+              },
+              "message": "Error: locator.evaluate: Test timeout of 65000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#encounter .encounter-copy .line-link')\u001b[22m\n\n\n  78 |   let inputs = 0\n  79 |   for (; inputs < 10; inputs++) {\n> 80 |     if (await page.locator('#encounter .encounter-copy .line-link').evaluate(e => e.getBoundingClientRect().bottom <= innerHeight - 20)) break\n     |                                                                     ^\n  81 |     await nativeStep(page, browserName)\n  82 |   }\n  83 |   expect(inputs).toBeGreaterThan(0); expect(inputs).toBeLessThan(9)\n    at advance (/workspace/piepe/tests/v252.spec.ts:80:69)\n    at /workspace/piepe/tests/v252.spec.ts:136:50"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "timedOut",
+          "duration": 26677,
+          "retry": 0,
+          "errors": [
+            {
+              "message": "\u001b[31mTest timeout of 25000ms exceeded.\u001b[39m"
+            },
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v252.spec.ts",
+                "column": 69,
+                "line": 80
+              },
+              "message": "Error: locator.evaluate: Test timeout of 25000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#encounter .encounter-copy .line-link')\u001b[22m\n\n\n  78 |   let inputs = 0\n  79 |   for (; inputs < 10; inputs++) {\n> 80 |     if (await page.locator('#encounter .encounter-copy .line-link').evaluate(e => e.getBoundingClientRect().bottom <= innerHeight - 20)) break\n     |                                                                     ^\n  81 |     await nativeStep(page, browserName)\n  82 |   }\n  83 |   expect(inputs).toBeGreaterThan(0); expect(inputs).toBeLessThan(9)\n    at advance (/workspace/piepe/tests/v252.spec.ts:80:69)\n    at /workspace/piepe/tests/v252.spec.ts:182:20"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "chrome-desktop",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "timedOut",
+          "duration": 27227,
+          "retry": 0,
+          "errors": [
+            {
+              "message": "\u001b[31mTest timeout of 25000ms exceeded.\u001b[39m"
+            },
+            {
+              "location": {
+                "file": "/workspace/piepe/tests/v252.spec.ts",
+                "column": 69,
+                "line": 80
+              },
+              "message": "Error: locator.evaluate: Test timeout of 25000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#encounter .encounter-copy .line-link')\u001b[22m\n\n\n  78 |   let inputs = 0\n  79 |   for (; inputs < 10; inputs++) {\n> 80 |     if (await page.locator('#encounter .encounter-copy .portal-entry').evaluate(e => e.getBoundingClientRect().bottom <= innerHeight - 20)) break\n     |                                                                     ^\n  81 |     await nativeStep(page, browserName)\n  82 |   }\n  83 |   expect(inputs).toBeGreaterThan(0); expect(inputs).toBeLessThan(9)\n    at advance (/workspace/piepe/tests/v252.spec.ts:80:69)\n    at /workspace/piepe/tests/v252.spec.ts:182:20"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-chrome-desktop/test-failed-1.png"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-chrome-desktop/video.webm"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-chrome-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-chrome-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 15959,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 417,
+              "bodySha256": "4aba25715c4f1ecfd6874e2a8525488635817a2f74d8e639c7089a2e4425cc10"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--ecbf4-ng-anchors-and-history-work-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2168,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 116,
+              "bodySha256": "0c8251a7deb7c3c2cafac55b1db7da3228ded639791b4eb0bdd08b03567f86c9"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--23e19--a-genuinely-buffering-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2252,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 112,
+              "bodySha256": "371fa199c7caa27a374672a77dd853be54bf0b6b7215bf52542ca20b560781d6"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v252-2-5-2-native-journey--2e6d5-aves-a-genuinely-error-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 149,
+      "title": "caption and note controls stay onstage through representative touch viewport changes",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1975,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "touch-resize-layout",
+              "contentType": "application/json",
+              "bodyBytes": 1012,
+              "bodySha256": "eccf4fa6b9e115c62ac3fe919c17b0dfd00966602f8368f72365a7a179f9187b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 40,
+      "title": "2.5.6 lv: homepage links to its real article and returns without losing session semantics",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2946,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 40,
+      "title": "2.5.6 en: homepage links to its real article and returns without losing session semantics",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2860,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-foni/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1251,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-foni/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2074,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-wallpapers-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v257-2-5-7-meza-foni-JS-tr-6e8a7-iprocal-language-navigation-chrome-desktop/attachments/lv-wallpapers-390-95ddebb69196d3ae04bcdea25bddd43b3197a1ca.png"
+            },
+            {
+              "name": "lv-wallpapers-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v257-2-5-7-meza-foni-JS-tr-6e8a7-iprocal-language-navigation-chrome-desktop/attachments/lv-wallpapers-1440-f2b3c64c023a8b047a8d35c6afc5f67531aa261f.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/forest-wallpapers/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1289,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/forest-wallpapers/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1884,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-wallpapers-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v257-2-5-7-en-forest-wallp-f7188-iprocal-language-navigation-chrome-desktop/attachments/en-wallpapers-390-a69d94875f577dbb3686107b4828d66e6bf47502.png"
+            },
+            {
+              "name": "en-wallpapers-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-completion/v257-2-5-7-en-forest-wallp-f7188-iprocal-language-navigation-chrome-desktop/attachments/en-wallpapers-1440-8f7f9aef4a964ffe29314b82c5a451d25c8b9167.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 92,
+      "title": "2.5.7 route graph, CSP hashes, honest species facts and all internal resources remain coherent",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 778,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 124,
+      "title": "2.5.7 original factual prose, notes, core cinema and every media/download asset remain preserved",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 64,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 136,
+      "title": "2.5.7 lv: selective supported snippet labels preserve primary content, links and mobile control text",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1170,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 136,
+      "title": "2.5.7 en: selective supported snippet labels preserve primary content, links and mobile control text",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1089,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 53,
+      "title": "2.5.8 lv: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 996,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 84,
+      "title": "2.5.8 lv: atlas opens full-resolution comparison, closes with Escape and restores link focus",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 933,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 53,
+      "title": "2.5.8 en: X-Ray native keyboard, actual pointer drag and hotspot focus reveal the same hidden layer",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1037,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 84,
+      "title": "2.5.8 en: atlas opens full-resolution comparison, closes with Escape and restores link focus",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 949,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 72,
+      "title": "2.5.8.1 reduced: immediate home entry, usable reveal and static film alternative",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 981,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 72,
+      "title": "2.5.8.1 save-data: immediate home entry, usable reveal and static film alternative",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3043,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 26,
+      "title": "2.5.8.2 lv: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 860,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 98,
+      "title": "3.0 invitation shade leaves with its copy while the next film is still preparing",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3751,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 94,
+      "title": "3.0 desktop living world retains source quality and full bleed at a real desktop input/render profile",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3126,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "desktop-source-quality-full-bleed",
+              "contentType": "application/json",
+              "bodyBytes": 107,
+              "bodySha256": "be304380ed7c842b8eeb68cda3e27e83ef8dc3baaebb801c1a4f8cc9d0af4c84"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 94,
+      "title": "3.0 desktop living world retains source quality and full bleed at a real desktop input/render profile",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3449,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "desktop-source-quality-full-bleed",
+              "contentType": "application/json",
+              "bodyBytes": 107,
+              "bodySha256": "ed74d2912cc45c5ce9795fca75091bd26ac7806434ae30b88ba4f622c465beec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 3,
+      "title": "3.1 lv no-JS reading retains factual imagery, native explanations and original-photo links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 713,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 3,
+      "title": "3.1 en no-JS reading retains factual imagery, native explanations and original-photo links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 744,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 10,
+      "title": "3.1 a slow paired image gives a neutral placeholder, then reveals both real layers together",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1516,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 15,
+      "title": "3.1 real first-layer image failure and full fallback failure remain accessible and retryable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 832,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 20,
+      "title": "3.1 the last Deadwood image can fail and recover without substituting a false mixed stage",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1057,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 25,
+      "title": "3.1 inactive Deadwood sources wait for near-view intent and use responsive source-quality copies",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 479,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 29,
+      "title": "3.1.1 lv reading header retains accessible native language targets without the retired selector",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 360,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-images.spec.ts",
+      "line": 29,
+      "title": "3.1.1 en reading header retains accessible native language targets without the retired selector",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 559,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 31,
+      "title": "3.1 two actual external reference links create isolated new tabs with no referrer",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1587,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 42,
+      "title": "3.1 a user-modified locale link does not mutate the current homepage",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1282,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 7,
+      "title": "homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1943,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 23,
+      "title": "locale links, native fragments and same-origin downloads preserve their own native behavior",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 937,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 7,
+      "title": "homepage, guide, collection, related notes, home and Back stay in one tab and preserve scroll",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1981,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-navigation.spec.ts",
+      "line": 23,
+      "title": "locale links, native fragments and same-origin downloads preserve their own native behavior",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 962,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1560,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 352009,
+              "bodySha256": "419f8fc5d49b6a4f319e51c9fc48fae9a1a9eff651ada5c28cddd857ff36a3d7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1668,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 588238,
+              "bodySha256": "7e68aa587bfcc40d51a87bd984ebba1132ceabce80396efb6d4425dc0c0aea07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1789,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 626225,
+              "bodySha256": "5fbc9f6455444b7b50ad69ee2079a16dae6ad73c3a39a5d8fe30381cc08ed14b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2014,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 1184401,
+              "bodySha256": "4d47af6d0424348deee19857e5b427062565d51f67d2e7963647d1f652b96867"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2526,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 2138969,
+              "bodySha256": "a058547c471f4ce7b996892f4c5481e2980d8e65fc710fc0a87e651b4e2106b2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3219,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 2116788,
+              "bodySha256": "9f29f63f6657301b9dccf51c9729a3f262f17e48efdbc9f8028da129a34ece28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1606,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 331452,
+              "bodySha256": "09b04ebf99354d4d81c9fb6b3e59d5f16b7f0663cc8e891b3ddac0b760413333"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1633,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 588993,
+              "bodySha256": "34f423bdf05c1e65ad37412025455de0023c43db79901b14ab1fda37ae35632e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1733,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 654413,
+              "bodySha256": "d873604fdcd4d094e1e751c4862e01a4f9d7742d356dc74fc8e5f6a822aae215"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2099,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 1205690,
+              "bodySha256": "f342eead326c2db8652e353a5905189a40376219e6bbc7bd120c76b3e83e8cc3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2552,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 2068467,
+              "bodySha256": "0919d4d73f8d967d7b4025ad9ddb0f2535a5242c2f877de5b69b4a06ad7be9f1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 7,
+      "title": "one source-accurate preview opens without distortion and retains all ready-state controls in the visible viewport",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2949,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "source-preview-ready",
+              "contentType": "image/png",
+              "bodyBytes": 2480906,
+              "bodySha256": "e9c4703b176c49cbca4fba10187af2a9b50b652d5aa9335e2837cec610c8f17a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 17,
+      "title": "explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4120,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "clean-cinema",
+              "contentType": "image/png",
+              "bodyBytes": 343818,
+              "bodySha256": "fc614fc27398a660688bb676bf4518062e58c645341a65cf1066f008313de925"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 17,
+      "title": "explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4045,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "clean-cinema",
+              "contentType": "image/png",
+              "bodyBytes": 697100,
+              "bodySha256": "d5fbb2c53017113ca44801889f5df9153f0aab6d6b7aeec74c0217ac39a1238d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-portal.spec.ts",
+      "line": 17,
+      "title": "explicit clean view preserves moving original-quality frames, discoverable recovery, Pause and Exit",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5475,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "clean-cinema",
+              "contentType": "image/png",
+              "bodyBytes": 2445838,
+              "bodySha256": "e9fcd73b41025cb935bd4d9b816c4d324894816a4da359379b25ed0f46d0d74a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-slow.spec.ts",
+      "line": 11,
+      "title": "3.1 source-quality progress: native download beyond 20s or bounded stall with real retry",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 31527,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-progress-network",
+              "contentType": "application/json",
+              "bodyBytes": 7861,
+              "bodySha256": "8e58fa20700fe7320ce54a1945fa8b379e8e28c0a0dd9381da12b5f0c28b098e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310-slow.spec.ts",
+      "line": 11,
+      "title": "3.1 source-quality stall: native download beyond 20s or bounded stall with real retry",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 23917,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-stall-network",
+              "contentType": "application/json",
+              "bodyBytes": 803,
+              "bodySha256": "ec51e32a01afc27b80822a2e6cbedc45f59fa2609ca02200d6df6f3159a78a4e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 33,
+      "title": "3.1 actual HTML anchor nodes on all twenty routes obey the real-origin navigation policy",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1051,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 44,
+      "title": "3.1 lv real phone touch keeps Atlas gestures separate from navigation and explicit comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2094,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-touch-drag",
+              "contentType": "application/json",
+              "bodyBytes": 2494,
+              "bodySha256": "7e63f5ed760cc6c8f491a250bdfea8fd714ee2d39c44645c7015a802ec5f3d1b"
+            },
+            {
+              "name": "native-phone-touch",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v310-3-1-lv-real-phone-tou-2d3e1-ion-and-explicit-comparison-chrome-desktop/attachments/native-phone-touch-d7e9dcd64860cbec6ba88d2fa6c2bb6aa159a494.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 44,
+      "title": "3.1 en real phone touch keeps Atlas gestures separate from navigation and explicit comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2053,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-touch-drag",
+              "contentType": "application/json",
+              "bodyBytes": 2485,
+              "bodySha256": "deddd5353e298412a644216e6c6c8e840030763cb2de0767ed99965045fa43e9"
+            },
+            {
+              "name": "native-phone-touch",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe32-qa/chromium-completion/v310-3-1-en-real-phone-tou-a188e-ion-and-explicit-comparison-chrome-desktop/attachments/native-phone-touch-f2fd7939f8741354444fed95b17e025b5db05a0f.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 61,
+      "title": "3.1 intentional X-Ray deep links select one explanation and native Back restores the previous fragment",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 600,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 6,
+      "title": "selected X-Ray explanations never move the viewport or mutate its hash",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 902,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 15,
+      "title": "Atlas gestures are independent from the explicit original-resolution comparison dialog",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 969,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 21,
+      "title": "Deadwood retains its fractional image mix and exposes one meaningful current image description",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3441,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 6,
+      "title": "selected X-Ray explanations never move the viewport or mutate its hash",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 606,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 15,
+      "title": "Atlas gestures are independent from the explicit original-resolution comparison dialog",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 739,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v310.spec.ts",
+      "line": 21,
+      "title": "Deadwood retains its fractional image mix and exposes one meaningful current image description",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3032,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 28,
+      "title": "3.1.1 /: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1254,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 28,
+      "title": "3.1.1 /en/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1150,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 28,
+      "title": "3.1.1 /kas-ir-piepe/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 989,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 28,
+      "title": "3.1.1 /en/what-is-a-bracket-fungus/: failed X-Ray images disable visual manipulation and Retry restores the real pair",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 839,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 34,
+      "title": "3.1.1 lv: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1038,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 34,
+      "title": "3.1.1 en: all three failed Atlas images keep original links and recover deliberate comparison",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 966,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 41,
+      "title": "3.1.1 lv: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1137,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 41,
+      "title": "3.1.1 en: numbered navigation matches real chapters and one sound control belongs to each active surface",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1141,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 48,
+      "title": "3.1.1 lv: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 563,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 48,
+      "title": "3.1.1 en: closed dialog is excluded from snippets while its canonical Field Note remains readable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 642,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 54,
+      "title": "3.1.1 lv: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 949,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 54,
+      "title": "3.1.1 en: new wallpaper galleries have accurate originals, live previews and native download delivery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1035,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 63,
+      "title": "3.1.1 the homepage never requests new full-resolution wallpaper downloads",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 679,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1775,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1374,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 711,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 lv 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 686,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 2048: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1784,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 1512: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1609,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 390: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 812,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v311.spec.ts",
+      "line": 13,
+      "title": "3.1.1 en 320: gallery captions remain inside their cards and divider rules stay between rows",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 656,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 79,
+      "title": "3.2 no production media changes, codecs or new film payloads; player and security remain byte-identical",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 451,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 87,
+      "title": "3.2 lv Save-Data exploration adds no media requests and retains every text beat",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2288,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 87,
+      "title": "3.2 en Save-Data exploration adds no media requests and retains every text beat",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2214,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 97,
+      "title": "3.2 native no-JS hero link still reaches Encounter, and SSR prioritizes the opening photograph",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1147,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 105,
+      "title": "3.2 lv: Back restores the actual reading position even when the old fragment names a different scene",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1551,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 105,
+      "title": "3.2 en: Back restores the actual reading position even when the old fragment names a different scene",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1239,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1224,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 274632,
+              "bodySha256": "ae91195336e8c39997dc5ae67b8b1d589e3ced7a654f9b4676ee7222349c276e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1348,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 613284,
+              "bodySha256": "66aaee4512f241953a92931a5dccee1d9eb3bc4fa6b1571fb5e8a5057878f3c6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1390,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 451437,
+              "bodySha256": "18c0430b1c64f1b71893b68b8f5d8f99a14877f7108d76f6b759c708fc3f10f3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1521,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 536440,
+              "bodySha256": "6014f75679099632caad3299055c128f7b12f58fa3534aaba64a204a91a364ee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1340,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 538266,
+              "bodySha256": "c77fa64a900d4b6cd06c1ba075a4bbb50c36b720308627047df05e5b6c954c51"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1782,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 1077543,
+              "bodySha256": "ea0b88e4501df3224af5d1565cd7d44ad42408670704fbe2bd41077a9dfebf09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2004,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 2037116,
+              "bodySha256": "5e4bf118177ca7fb49a0341f79dbc27c40ebd89c6354760deba68061d75a28c3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2244,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 2287886,
+              "bodySha256": "2b6f687388ea2fe6edcb1a6491f8738de6deef87393e386481c89e11a406f494"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2861,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 3367939,
+              "bodySha256": "c8e3274eb736a0ef7f66dd2527e8f447e14f2b7fc8c3c88f4e46f11e71ad818b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1196,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 273828,
+              "bodySha256": "fd6f35b26a21f282955df640fc6ffd15c7f20db1f1429f79772b5ddf6c6f31fe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1418,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 612280,
+              "bodySha256": "d6a65ab4502c2c95e8c261152e9317103e12d26b731290323fedad133e3af2c5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1331,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 450295,
+              "bodySha256": "e7f9f0e05ae12f7ab7228fc5ba034e1b60aab13771b547da45f29740206846e6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1404,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 542746,
+              "bodySha256": "3af400647974eec601ea29fb91675db9b25169f430500189545d5e5ae8359a2a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1343,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 537042,
+              "bodySha256": "2b07157c26e4c8561782e18326a21f59c528732bfe896c94244d2bd83d95f85c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1575,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 1083431,
+              "bodySha256": "862e7ef1e99781d187c3909b1b5357ab021b8838c44cb9e57b2cf1d2007f92d9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2134,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 2043547,
+              "bodySha256": "c2cce234768344484e4c09b136803ae79cea304a7e713b1cfc587295d5a55d09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2202,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 2298161,
+              "bodySha256": "a51c98db2a7efc0b593b73770ee5c93a60b872eabee9096def63c6355caa330b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 11,
+      "title": "primary action and quiet thread are reachable, factual, reversible and request no films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3215,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "quiet-thread",
+              "contentType": "image/png",
+              "bodyBytes": 3380122,
+              "bodySha256": "90d82e90dfb2b6784d189877b7da38e701ee189b86bb8235f6d2fb9f860fdc47"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 53,
+      "title": "one input-driven light preserves advancing 1080p frames, keyboard, touch, pause, clean cinema and exact return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4063,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "moving-thread",
+              "contentType": "image/png",
+              "bodyBytes": 424883,
+              "bodySha256": "79940d19c07124cf1ec9210909408f519c9f74ea7a822f399d44619f924df35c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 53,
+      "title": "one input-driven light preserves advancing 1080p frames, keyboard, touch, pause, clean cinema and exact return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3570,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "moving-thread",
+              "contentType": "image/png",
+              "bodyBytes": 518017,
+              "bodySha256": "1ec953f1f59417846133ec4d232761da988ed1291ec1c304bc3825543be707d7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 53,
+      "title": "one input-driven light preserves advancing 1080p frames, keyboard, touch, pause, clean cinema and exact return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4153,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "moving-thread",
+              "contentType": "image/png",
+              "bodyBytes": 2196785,
+              "bodySha256": "0807dc1b0ac42e6a06836defc4f40745ea39f99d457b5a0ad4104d8c8043cf97"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 53,
+      "title": "one input-driven light preserves advancing 1080p frames, keyboard, touch, pause, clean cinema and exact return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3614,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "moving-thread",
+              "contentType": "image/png",
+              "bodyBytes": 424321,
+              "bodySha256": "d01338ef3814dd4dcf9349057a7003ab49c6223b2e1ad86e20dc56cd5f9ad97b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 53,
+      "title": "one input-driven light preserves advancing 1080p frames, keyboard, touch, pause, clean cinema and exact return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3634,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "moving-thread",
+              "contentType": "image/png",
+              "bodyBytes": 517330,
+              "bodySha256": "bf4fa4c8580d957e30f937f18a6fc7e4e76b0c6ecbcce95b534ce7dc2fecc346"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 53,
+      "title": "one input-driven light preserves advancing 1080p frames, keyboard, touch, pause, clean cinema and exact return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4905,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "moving-thread",
+              "contentType": "image/png",
+              "bodyBytes": 2182824,
+              "bodySha256": "5da2986299f3e6cb0094120b1f4ec86e022a25631535cf22fc895b840f753287"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

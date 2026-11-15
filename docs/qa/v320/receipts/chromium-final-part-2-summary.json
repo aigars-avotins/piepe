@@ -1,0 +1,4432 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T19:11:46.751Z",
+    "duration": 806460.62,
+    "expected": 232,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "line": 24,
+      "title": "compact phone retains native scroll when translated facts change height",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1081,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 40,
+      "title": "server-painted controls and cover geometry survive delayed hydration without a layout jump",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 858,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 106,
+      "title": "the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1255,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "local-edge-registration",
+              "contentType": "application/json",
+              "bodyBytes": 201,
+              "bodySha256": "f11e2711423c23dc39872000930a74d493bbfed1fc73962d52e01eee844e837d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 186,
+      "title": "Escape while preparing cancels in place; repeat activation opens the accessible note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1237,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 194,
+      "title": "environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2588,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 216,
+      "title": "unavailable end-still uses the actual decoded frame for a continuous note handoff",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 10213,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 227,
+      "title": "locale change while decoding does not reopen a modal, move focus or restart playback",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1396,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 253,
+      "title": "a transient readiness drop at the presented-frame callback retries behind the held forest",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1339,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 272,
+      "title": "Escape before the photo clock starts cancels a pending decode without waiting or an unhandled rejection",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1080,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 284,
+      "title": "a playback-history change between activation and mounting recovers to the note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1054,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 295,
+      "title": "a compositor withholding transparent video frames still presents paused frame zero before playback",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1430,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 319,
+      "title": "source assignment discarding old frame subscriptions still prepares a real opening frame",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1305,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 1512x982",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6420,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 415,
+              "bodySha256": "b3720fbeb8eeec9e43c4ea568c8bea15a39771d10dd1f1bc9356d0a9d93305f4"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 6885,
+              "bodySha256": "ff1c5de94a7c21d63a884858fd016befd3c7ee7390981a3094be428a28905a1a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 135,
+      "title": "intro then awakening final frame docks and returns continuously at 1512x982",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 18691,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 8936,
+              "bodySha256": "748ae33ec5c0706b5fcb42b54aaeb61ad89e0af82d04baeeea0b39c280eaea79"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 242,
+      "title": "Escape during the photo move reverses the current camera instead of snapping to full frame",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 11221,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 2560x1080",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4416,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 371,
+              "bodySha256": "1f1bbcf7db0936a2a32b6f7f84c0fd1627734dd9e256a4eac173d1f588546cd1"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 3309,
+              "bodySha256": "a782058ca2363e0169bbc342df338a1b247a0bd2ec99149b91f2297995d4a770"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 390x664",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4226,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 424,
+              "bodySha256": "d4cf79977d0a296d084850c6995b6133314504d06eb142c59aecc112b32c2f0c"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 9436,
+              "bodySha256": "4d949ea7bc08d3037ca9c4cd442ad92e0438c193ca179695b89b696f7e9e810c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 135,
+      "title": "intro then awakening final frame docks and returns continuously at 390x664",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16809,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 11493,
+              "bodySha256": "b3f009bac93c97759c2334b07568272f697f7e1c3c728cf8f28e9b079d744174"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 8,
+      "title": "actual film plays once, reveals title, ends and becomes interactive",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 13278,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "film-events",
+              "contentType": "application/json",
+              "bodyBytes": 3228,
+              "bodySha256": "8d2482fb1b5a03b35657349ccdee38b16ec53237dd39b2d71f6a110d6b2db5f1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 49,
+      "title": "skip is immediate and fungus works with keyboard and Escape",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3332,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 65,
+      "title": "reduced motion avoids downloading film, remains readable and has no overflow",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1421,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 83,
+      "title": "blocked autoplay falls back immediately to the interactive still",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1271,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 90,
+      "title": "missing video recovers without trapping the visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5217,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 98,
+      "title": "pending playback and a mid-film stall both have bounded recovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5099,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 105,
+      "title": "an actual decoding stall recovers to the still",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4549,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 112,
+      "title": "missing still retains accessible text and controls",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1078,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 122,
+      "title": "data saving preference avoids video request",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 976,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 129,
+      "title": "cover geometry keeps hotspot aligned to the actual fungus across viewport changes",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1259,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 151,
+      "title": "discovery is a complete three-step field note with a real downloadable artifact",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1564,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 168,
+      "title": "returning visitors can explicitly replay the original introduction without scroll replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2064,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 181,
+      "title": "visible wordmark and discovery controls fit all specified portrait and landscape sizes",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1520,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 200,
+      "title": "scroll changes photographic camera, foreground and return lighting rather than only text",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5083,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 212,
+      "title": "animation setup failure leaves a readable interactive static journey",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1252,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 227,
+      "title": "mobile discovery keeps close available at the bottom and supports touch-sized controls",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1786,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 244,
+      "title": "pause and changing motion preference clean up the camera while retaining navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1818,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3897,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 4703,
+              "bodySha256": "15212d33569d66227b6b44217ffc10cf8b31e030591fbc6b82f896a54e32dc6c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3382,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 6256,
+              "bodySha256": "35c8e4569207fcb2ed749d219d308513a7cc00c6ecb7579703dec9e4f2ff7459"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 3,
+      "title": "lv: encounter portal, readable support copy and safe source links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1493,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 3,
+      "title": "en: encounter portal, readable support copy and safe source links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1353,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 27,
+      "title": "macro is prepared behind the existing bark before its scroll envelope, and waits for actual media",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1689,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 47,
+      "title": "sound waits for permission, plays a real native loop, remains controllable in the note and remembers mute",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2082,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 84,
+      "title": "save-data never starts automatic ambience, and a missing recording has a usable retry",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1359,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "scroll-recording.spec.ts",
+      "line": 3,
+      "title": "silent fifteen-second before and after scroll captures",
+      "project": "chrome-desktop",
+      "outcome": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 0,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 8,
+      "title": "lv: raw HTML, facts, metadata, reciprocal alternates and strict 404",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 917,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 27,
+      "title": "lv: localized field note and wallpaper files are real downloads",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1183,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 8,
+      "title": "en: raw HTML, facts, metadata, reciprocal alternates and strict 404",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1023,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 27,
+      "title": "en: localized field note and wallpaper files are real downloads",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1221,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 51,
+      "title": "language links preserve active intro, open discovery, observation, collection and scroll; back works",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1706,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 70,
+      "title": "awakening completes once; environmental films replay with matched ending frames and one decoder",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 23814,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 108,
+      "title": "awakening blocked recovers to the complete accessible note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1380,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 108,
+      "title": "awakening missing recovers to the complete accessible note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1196,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 108,
+      "title": "awakening stall recovers to the complete accessible note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4431,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 108,
+      "title": "awakening pending recovers to the complete accessible note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5557,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 152,
+      "title": "assets, sitemap, CSP and dictionary parity",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 137,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 162,
+      "title": "storage denial still permits localized interaction and explicit replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1813,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 172,
+      "title": "save-data bypasses all automatic films and never fetches full wallpapers on arrival",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1230,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 182,
+      "title": "missing awakening still recovers to the preserved forest photo",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1186,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4065,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2879,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3006,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4045,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3227,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3393,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2069,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1845,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1776,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1852,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1500,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1590,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1619,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1602,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1496,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2534,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1962,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2014,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2249,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1855,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1867,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 142,
+      "title": "scene video covers phones, MacBook and ultrawide without stretching or side borders",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2421,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: lv",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2753,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v21.spec.ts",
+      "line": 125,
+      "title": "both locales fit the required viewport matrix: en",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2743,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 16,
+      "title": "lv: discovered and downloaded notes retain distinct session progress",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1828,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 16,
+      "title": "en: discovered and downloaded notes retain distinct session progress",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2006,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 74,
+      "title": "legacy 2.3 collection survives restoration and reopening",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1267,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 83,
+      "title": "cancelled film preparation stays unseen; a readable fallback counts as discovered",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1299,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 100,
+      "title": "reduce: static preferences also prevent explicit replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1398,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 100,
+      "title": "save-data: static preferences also prevent explicit replay",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1130,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 128,
+      "title": "live reduced-motion and data-saving toggles suspend and restore scenes without losing the note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3337,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 164,
+      "title": "a paused failed scene offers Resume and can actually play again",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2172,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 177,
+      "title": "lv: mobile portal invitation, preserved optional learning and social preview stay coherent",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1247,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v24.spec.ts",
+      "line": 177,
+      "title": "en: mobile portal invitation, preserved optional learning and social preview stay coherent",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1173,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "line": 7,
+      "title": "real sitemap and robots assets describe every crawlable canonical page",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 431,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "line": 39,
+      "title": "lv: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 480,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "line": 65,
+      "title": "lv: one connected schema keeps stable site identity through locale and note-state changes",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1095,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "line": 98,
+      "title": "lv: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 968,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "line": 39,
+      "title": "en: useful educational copy is visible without JavaScript and agrees with the downloaded note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 492,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "line": 65,
+      "title": "en: one connected schema keeps stable site identity through locale and note-state changes",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1237,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v25.spec.ts",
+      "line": 98,
+      "title": "en: educational reading fits desktop and small phones without hiding copy or changing the hero",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 955,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "lv: server paint and hydrated playback respect the first visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1245,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "lv: server paint and hydrated playback respect the return visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 996,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "lv: server paint and hydrated playback respect the reduced visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1241,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "lv: server paint and hydrated playback respect the save-data visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1072,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "lv: server paint and hydrated playback respect the anchor visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1542,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "en: server paint and hydrated playback respect the first visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1413,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "en: server paint and hydrated playback respect the return visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1113,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "en: server paint and hydrated playback respect the reduced visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 960,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "en: server paint and hydrated playback respect the save-data visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1067,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 7,
+      "title": "en: server paint and hydrated playback respect the anchor visitor",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1519,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 90,
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2676,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "staged-and-presented-film",
+              "contentType": "application/json",
+              "bodyBytes": 565,
+              "bodySha256": "4f74072b38a0ae312ab44ec9d42cdf9495b9c47d201b14c5ff4dc8eb1cd55093"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 90,
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2695,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "staged-and-presented-film",
+              "contentType": "application/json",
+              "bodyBytes": 557,
+              "bodySha256": "1028efed9391b5b6e9d4016ace935b537b332cebcffe0ebd3ebad87bbefe42ee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 141,
+      "title": "environmental films pause on a hidden-document event and resume actual frames on return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2434,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visibility-pause-and-presented-resume",
+              "contentType": "application/json",
+              "bodyBytes": 160,
+              "bodySha256": "1a82c636a5bb1a7ca51bcec52fd34d9f08e16e1d8d9a70fc38abc0591fc72881"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 40,
+      "title": "lv: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2695,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "keyboard-fungus-focus",
+              "contentType": "image/png",
+              "bodyBytes": 1611054,
+              "bodySha256": "ed1c0e916a85be2b3d7fcf5f55b57ccb830838f3c510fbd85c2b0862d20a1d31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 40,
+      "title": "en: keyboard journey has a visible fungus marker, native modal focus and accessible scene controls",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2522,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "keyboard-fungus-focus",
+              "contentType": "image/png",
+              "bodyBytes": 1608331,
+              "bodySha256": "ac728d4e41daa0ae0826b6324ed4315d94c1b5e4792b25b24a528e4cacde3271"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 131,
+      "title": "2.5.4 static reduced lv: brighter fallbacks preserve preference and note access",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 792,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 131,
+      "title": "2.5.4 static reduced en: brighter fallbacks preserve preference and note access",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 967,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 131,
+      "title": "2.5.4 static save-data lv: brighter fallbacks preserve preference and note access",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 858,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 131,
+      "title": "2.5.4 static save-data en: brighter fallbacks preserve preference and note access",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 849,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "lv: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3793,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 255838,
+              "bodySha256": "544c0b7a98ec1aa0e97c9900cc87f38f5af23f7e31dee2e754fab340cc069aa2"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4251,
+              "bodySha256": "e0f41d88c66c61e8a10655fd90e0e91532a49c4f05969b7004550552594a2c40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "en: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3717,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 258125,
+              "bodySha256": "5aec43e0959367d858c2efb45e0cb7f7b4a179c094ca9707ba9bf98993c9cf60"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4233,
+              "bodySha256": "3298ceffb79c7853bfd63ee33f067d8e2e9403c6a611c000f6b340817827b1d5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "lv: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3589,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 299053,
+              "bodySha256": "1d5c993ad85a42aa70cfc183e57a67eb09cc6c834094f8b3c1538cfa3d2f903f"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4273,
+              "bodySha256": "9ac1ea04bae561fa054b3b35f750e8db5549a9f88af3ffe770f804882657538c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "en: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3792,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 302142,
+              "bodySha256": "d1b4bee634fb07c9e4847a1a6debf1e4776ad2350ce7a1350c200364ff3cfc95"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4259,
+              "bodySha256": "10497217ec5f15c02536c18cebaefe6017e91bd2b64ca9dea838cc43b7c90812"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "lv: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4161,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 720733,
+              "bodySha256": "c68dbc9edef397b55b7feb66270bcdf5cf7bf8b538cd7a7ade31e5e7d80c2419"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4334,
+              "bodySha256": "2f26a2bb91a2f8c7e8516f63fe946c669ab05ad606d8000d75fee2ed662d495d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "en: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4052,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 722285,
+              "bodySha256": "3ab21d8f84b97cf9054d725461b8f1eed8c3bbb87682e6f89405f698ec31d51a"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4322,
+              "bodySha256": "ecc142989a458cc1930910e28dea06b877fd373635fef61a94a4de90046255d4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "lv: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4170,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 808424,
+              "bodySha256": "bc5a4c81959b2b2878c8320820725a1c8a66e522fc91c596e7ee9fe41116a01c"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4655,
+              "bodySha256": "313c91c864aed39d0123a143b6bdb0dc1c5b7cf3db9c7152ab41fda3900d49cd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "en: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4558,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 814838,
+              "bodySha256": "a10f84265fe0eed39cad18563c9ff092669ff8a96aed16a42b21af49e5571331"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4664,
+              "bodySha256": "1735b43abaa5c0fa8c4d10dc020c72369a26296880457f947e5d9f7882c48af5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "lv: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5324,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 1244467,
+              "bodySha256": "91b249c0ca6d81e0f1181a08510fb746ca65c37454b440e30a8aede0df8d1b5e"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4615,
+              "bodySha256": "6d0165b542b6f9c9f26a88db8042d881c710207487471d38866b9c8acd45220e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 34,
+      "title": "en: body and secondary copy remain readable across the journey and field note",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5000,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "field-note-readable",
+              "contentType": "image/png",
+              "bodyBytes": 1248597,
+              "bodySha256": "95de9d90f884a076c9b95182a608d074b7e7a5ed26df3e18e78fac9dbaa37d33"
+            },
+            {
+              "name": "computed-readable-type",
+              "contentType": "application/json",
+              "bodyBytes": 4625,
+              "bodySha256": "9ce9feb53dc05e97aef607e5775b5f50542442d19cace2c604b5a10931ada5d0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 115,
+      "title": "before253: en actual moving frames, repeated visits and discovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19188,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 447,
+              "bodySha256": "f25dbd714da866c43ae546809298bef10535588925f8ee0c029e36aa93e51b9c"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 444,
+              "bodySha256": "cc28857f6884c6eaabec3ead2c6a6cb208ceb3a75b4a3b40c0a807d4f4503fb4"
+            },
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 462,
+              "bodySha256": "285197ec6f92bda3453256f3ab8f72e1537c715efae1e6ad23190a3f3e5b9dc3"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 453,
+              "bodySha256": "f5602d9cc9857c756505dc5846cb067fac5c5ebedf07fd0142d8fe37ecf1083f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 115,
+      "title": "candidate254: en actual moving frames, repeated visits and discovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19953,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 453,
+              "bodySha256": "b6af5d888a06a0161b4ec3aa0b535d3138db983aa451e2a85b7c757f897f6658"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 458,
+              "bodySha256": "74623bbf779bde018e37f2519379f5b440d7e517a727cfbfae4e2d4fe9a55d53"
+            },
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 458,
+              "bodySha256": "28c0d3618af9988de35b2ddf9e201caeee1e8d81079b6c6332d87fe4be30732a"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 462,
+              "bodySha256": "93b78d5055ad9e1aa03c3c267ec4bf22ba1a4c3bfe946d6a85bc0cd4750a006c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 115,
+      "title": "candidate254: lv actual moving frames, repeated visits and discovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 20739,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 456,
+              "bodySha256": "bb6b0815212064429d9ed8dcaae3bd8dbc0a63ed8f9c9713bb454b086c5f7f00"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 462,
+              "bodySha256": "f5aa4e841576e0dadb9ba7050d1d4fddf6df0df691ae9e10efd27f2bfc222025"
+            },
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 465,
+              "bodySha256": "bf1f8efee090c3b5ae71b85f748c10a942103983fbb18651d76ba2950d4c5ca0"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 456,
+              "bodySha256": "925605a3cb2bd0dc2b84fc1259f95e1a17c2ccfb233a3ba13e3f7fc5f00e9c38"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 115,
+      "title": "before253: lv actual moving frames, repeated visits and discovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 20379,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 458,
+              "bodySha256": "17a23eac028e55584a781b1f2972330c8150fde94eba82e60e324b0ffee45b85"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 463,
+              "bodySha256": "0da5fb91e66d5271a97231e01e10b4b9ea5b3b1b6552ebfa440b1aa8df20a7c4"
+            },
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 462,
+              "bodySha256": "9ec1c824ced1fcda7599cbff61cfcb911627e9186826499be0aaa2a642814be8"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 456,
+              "bodySha256": "40087be477492b07328cdde8c7e73ebb573067fb65efa745fe793633273b3ae8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 115,
+      "title": "before253: en actual moving frames, repeated visits and discovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 22190,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 446,
+              "bodySha256": "7a950d38b124b9c990f89119d33e991bc6d36a6a346c2da57ebebaf04c21341e"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 456,
+              "bodySha256": "89d3c601602a54455d695a445ff18a8fd4dc41bc0cca3d1438ae0f059fcab9a6"
+            },
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 449,
+              "bodySha256": "0dc01e5763053c0f3b816a2c78f323a251f2ef6195a290b1ee914b0b63e04843"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 456,
+              "bodySha256": "c7aaafbae53b4ef97a3a22ee7f38594737d5b122b15341adafbca67e0974f7d9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v254.spec.ts",
+      "line": 115,
+      "title": "candidate254: en actual moving frames, repeated visits and discovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 23875,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 462,
+              "bodySha256": "fb189d1ea8f96de67dd21a758d15ca597fb057b8b0381b712c956078474d8757"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 440,
+              "bodySha256": "3c5d7932e97fd5e55811392e5479e1b838af53d40d35c59cb78b62aa017ae510"
+            },
+            {
+              "name": "actual-moving-understory",
+              "contentType": "application/json",
+              "bodyBytes": 449,
+              "bodySha256": "b1df594391534dea45e9bb6a7492619e834932ecb9058ae2df450518fcd38684"
+            },
+            {
+              "name": "actual-moving-breathing",
+              "contentType": "application/json",
+              "bodyBytes": 433,
+              "bodySha256": "eb48db88bb02e6da557b3c4709bea31c4371016a29f473c7886b8855ab93c14d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "line": 37,
+      "title": "2.5.5 lv: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 816,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "line": 72,
+      "title": "2.5.5 lv: sharing metadata stays localized through note collection, locale change and browser history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1601,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "line": 37,
+      "title": "2.5.5 en: initial HTML exposes search intent, factual copy and crawlable images without hydration",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 965,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v255.spec.ts",
+      "line": 72,
+      "title": "2.5.5 en: sharing metadata stays localized through note collection, locale change and browser history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1637,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 lv JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1450,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 lv JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3244,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 844751,
+              "bodySha256": "1714ef00512d76321b24db0e533307f0526d8c3d75b874726eca9ff02e1fac2c"
+            },
+            {
+              "name": "lv-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1361229,
+              "bodySha256": "b512b538f4b96bc8824f96ea364d28a59c1c95e16ee4308bd8027cc07fb01f85"
+            },
+            {
+              "name": "lv-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 2472009,
+              "bodySha256": "cd413ef57f9c136aa103294a724102d34159380976aa8da94f1e6aebec3d28c1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 en JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1561,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 8,
+      "title": "2.5.6 en JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2769,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 835578,
+              "bodySha256": "63dfb5479388c8422c6d8f2897bf09f2330d148f3deade1a89d3a805e0709d7e"
+            },
+            {
+              "name": "en-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1355033,
+              "bodySha256": "195a8caa2a1c36bcc846991d9c7b7ad8f0e0899b077899d846c790d8a303d1cb"
+            },
+            {
+              "name": "en-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 2466298,
+              "bodySha256": "493296b7b9d6447a0212d42fadc9571c111ece6843d9c6747dbfa16b55e4d2f7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 58,
+      "title": "2.5.6 static documents have matching CSP hashes and do not ship article prose in the cinema bundle",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 72,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 75,
+      "title": "2.5.6 edge analytics allowance still rejects application scripts and inline code",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 842,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 892,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1101,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-index-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-meza-piezimes-J-70eb4-iprocal-language-navigation-chrome-desktop/attachments/lv-index-390-6b130989ef4507883e89855e72e4a706f79fcb40.png"
+            },
+            {
+              "name": "lv-index-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-meza-piezimes-J-70eb4-iprocal-language-navigation-chrome-desktop/attachments/lv-index-1440-ce297cc7bf77067b13e23204e41fdd77a5020dae.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 909,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1731,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-note-001-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-meza-piezimes-0-8cd19-iprocal-language-navigation-chrome-desktop/attachments/lv-note-001-390-ecbb1654b508a82b173910038ca41f2af6ca4e0a.png"
+            },
+            {
+              "name": "lv-note-001-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-meza-piezimes-0-8cd19-iprocal-language-navigation-chrome-desktop/attachments/lv-note-001-1440-c0c94fa8d915ff62e5d648c550326145c5b0f251.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/002-caga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 927,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/002-caga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 893,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/003-serpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 978,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/003-serpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 770,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 939,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/004-latvijas-piepes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 850,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 943,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/005-kritalas-un-laiks/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1201,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 907,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /meza-piezimes/006-lakas-plakanpiepe/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1285,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-note-006-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-meza-piezimes-0-33564-iprocal-language-navigation-chrome-desktop/attachments/lv-note-006-390-d4a3a4458c2d4f5f9c8e6bed6fb420540eb02ca5.png"
+            },
+            {
+              "name": "lv-note-006-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-meza-piezimes-0-33564-iprocal-language-navigation-chrome-desktop/attachments/lv-note-006-1440-e41252bebb7d1b83a5313b96f0a639f33f056064.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 788,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1129,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-index-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-en-field-notes--859d9-iprocal-language-navigation-chrome-desktop/attachments/en-index-390-498b54905c38493228d6f3b93de9199aa0859840.png"
+            },
+            {
+              "name": "en-index-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-en-field-notes--859d9-iprocal-language-navigation-chrome-desktop/attachments/en-index-1440-b6cc283454854a0a4c9aa5ebe78497341e9dc843.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/001/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 837,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/001/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1304,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-note-001-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-en-field-notes--d9ec5-iprocal-language-navigation-chrome-desktop/attachments/en-note-001-390-f801c892c0dcad7bdfc97b3671c8c63e44f4b5f4.png"
+            },
+            {
+              "name": "en-note-001-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-en-field-notes--d9ec5-iprocal-language-navigation-chrome-desktop/attachments/en-note-001-1440-5d0e6d3c57608b8f74ab5ec0b0ffe7fa24e3a8bc.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/002-chaga/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 912,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/002-chaga/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 929,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 880,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/003-chicken-of-the-woods/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 854,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 837,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/004-common-bracket-fungi/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 893,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/005-deadwood-and-time/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 986,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/005-deadwood-and-time/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1131,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/006-lacquered-bracket/ JS=false: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 780,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 17,
+      "title": "2.5.7 /en/field-notes/006-lacquered-bracket/ JS=true: static content, metadata, responsive layout and reciprocal language navigation",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1371,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-note-006-390",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-en-field-notes--bfd53-iprocal-language-navigation-chrome-desktop/attachments/en-note-006-390-0275ae7a3c42b23e55e173b28d7cbfa6d78e4eff.png"
+            },
+            {
+              "name": "en-note-006-1440",
+              "contentType": "image/png",
+              "path": "/workspace/piepe32-qa/chromium-final-part-2/v257-2-5-7-en-field-notes--bfd53-iprocal-language-navigation-chrome-desktop/attachments/en-note-006-1440-320c523d84266df62352c8bc68f6f843759a7ecd.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v257.spec.ts",
+      "line": 156,
+      "title": "2.5.7 JS-free wallpaper and original-note links download the real existing files",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1005,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 39,
+      "title": "2.5.8 lv: real static educational content and native atlas work without JavaScript",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 656,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 68,
+      "title": "2.5.8 lv: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3224,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 lv: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 942,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 39,
+      "title": "2.5.8 en: real static educational content and native atlas work without JavaScript",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 527,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 68,
+      "title": "2.5.8 en: the four deadwood stages move through a stable illustration and retain every factual caption",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3376,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 95,
+      "title": "3.1.1 en: a retired Nightfall preference cannot change first paint or native document history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1022,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 111,
+      "title": "2.5.8 touch slider gestures and vertical page movement remain native",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1021,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 128,
+      "title": "2.5.8 reduced: illustrations remain factual and controllable with no pulses or transition clocks",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 799,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 128,
+      "title": "2.5.8 save-data: illustrations remain factual and controllable with no pulses or transition clocks",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 790,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 137,
+      "title": "3.1.1 invalid and denied storage retain the single approved appearance and native language links",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 926,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 147,
+      "title": "2.5.8 audio is gesture-gated, depth-reactive and shares one real source through the existing scene states",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4632,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 168,
+      "title": "2.5.8 unsupported low-pass processing falls back to the unchanged native recording",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1350,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 173,
+      "title": "2.5.8 unavailable Web Audio retains real gesture-gated native recording playback and mute",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2117,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 190,
+      "title": "2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1716,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v258.spec.ts",
+      "line": 219,
+      "title": "2.5.8 public route baseline remains real HTML on the independent CI network",
+      "project": "chrome-desktop",
+      "outcome": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 3,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 48,
+      "title": "2.5.8.1 lv: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8594,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 55,
+      "title": "2.5.8.1 lv: homepage entry and explanations remain genuine HTML without JavaScript",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3034,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 lv: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1090,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 48,
+      "title": "2.5.8.1 en: intro reserves the invitation, skip retains original focus, replay and full film remain intact",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 8720,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 55,
+      "title": "2.5.8.1 en: homepage entry and explanations remain genuine HTML without JavaScript",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3031,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 59,
+      "title": "3.1.1 en: delayed static binding keeps native content stable without an obsolete preference header",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 859,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 76,
+      "title": "2.5.8.1 original source/media checksums, real preview assets and lightweight independent reading module",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 388,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 lv 390: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4640,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-390-home",
+              "contentType": "image/png",
+              "bodyBytes": 424248,
+              "bodySha256": "b3d0ba50e6006745090897a34224a127e533e4c8d72ad27b1e09e9f79d6b93cd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 lv 800: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4353,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-800-home",
+              "contentType": "image/png",
+              "bodyBytes": 836415,
+              "bodySha256": "2b4175d025ba6b821be9f4295d4cd60d4bddd390572f9f84602615890f55efbe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 lv 1440: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6022,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-1440-home",
+              "contentType": "image/png",
+              "bodyBytes": 1396004,
+              "bodySha256": "acbdd4683c0e1a1e780344fbb010c068332b5fffa2672c38f812321bb1c57e09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 en 390: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4859,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-390-home",
+              "contentType": "image/png",
+              "bodyBytes": 421770,
+              "bodySha256": "117c4c83f4a8448b6db71bbe3b326d16d0a2b6aa53a32f77316c4478f9a3f091"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 en 800: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4391,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-800-home",
+              "contentType": "image/png",
+              "bodyBytes": 828572,
+              "bodySha256": "f6c730b4119ac2597c975b45543f5028b2dd779533f1c154ec7422a45e88a607"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2581.spec.ts",
+      "line": 17,
+      "title": "2.5.8.1 en 1440: first viewport opens its named portal; preserved X-Ray reveal retains native history",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6415,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-1440-home",
+              "contentType": "image/png",
+              "bodyBytes": 1392811,
+              "bodySha256": "11806594575df92a1770ae935c5766127ad826aa79bc802812be6d658f88d61d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 10,
+      "title": "2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and contain no rejected art or scale",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 429,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "all-routes-link-and-art-audit",
+              "contentType": "application/json",
+              "bodyBytes": 2698,
+              "bodySha256": "66bc85833dd621206fb89778f8aae9a256aee658f200b26a9c5c141299338b13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 37,
+      "title": "2.5.8.2 lv: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 883,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 46,
+      "title": "2.5.8.2 lv: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2227,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 26,
+      "title": "2.5.8.2 en: image-wide dragging clips the aligned photos and hotspots highlight the factual card",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 989,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 37,
+      "title": "2.5.8.2 en: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 872,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 46,
+      "title": "2.5.8.2 en: continuous timeline blends adjacent original images without a dark gap or duplicate captions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2230,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 56,
+      "title": "3.1 responsive then original JPEG tries alternate then labelled wallpaper fallback; no retry loop",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 636,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 63,
+      "title": "3.1 unavailable responsive and JPEG sources disclose an alternate preview without using the final wallpaper",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 598,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 70,
+      "title": "2.5.8.2 original JPEG pixels are retained with correct extensions; original cinema and routing stay unchanged",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 36,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 76,
+      "title": "2.5.8.2 lv: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 537,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 76,
+      "title": "2.5.8.2 en: narrow-phone HUD never covers the fungus invitation or another control",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 511,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 89,
+      "title": "3.1.1 the fixed approved grade applies once to each photograph and respects reduced motion",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 601,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v2582.spec.ts",
+      "line": 95,
+      "title": "3.1.1 legacy storage events cannot recolour actual rendered frames",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 960,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 26,
+      "title": "3.0 reduced: direct still world, no automatic movies, safe return and re-entry",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1376,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 26,
+      "title": "3.0 save-data: direct still world, no automatic movies, safe return and re-entry",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2145,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 32,
+      "title": "3.0 real failure, retry, advancing frames, pause, skip and hidden-document recovery",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4945,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 40,
+      "title": "3.0 slow in-flight decode can be exited immediately and cannot reopen the portal",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2824,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 44,
+      "title": "3.0 locale and native browser Back close the doorway without restarting films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2708,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 61,
+      "title": "3.0 audited originals retain exact source bytes and source-quality poster dimensions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 316,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 66,
+      "title": "3.0 portal ambience starts only on its sound control and preserves mute on exit",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2818,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 73,
+      "title": "3.0 start-image failure recovers without an invisible Begin or a stuck doorway",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2182,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 76,
+      "title": "3.0 save-data full-quality opt-in and orientation changes preserve a moving full-bleed world",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3290,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 81,
+      "title": "3.0 activation freezes an unfinished native anchor scroll at its actual opening position",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2884,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2556,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-390-portal",
+              "contentType": "image/png",
+              "bodyBytes": 569687,
+              "bodySha256": "205fc37df8d5a84de09cee61eb2ef2d31730f6fe203539b4a69d5e60984977d0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3007,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-800-portal",
+              "contentType": "image/png",
+              "bodyBytes": 1203207,
+              "bodySha256": "96ec5aba99bc2cc5990eade7fac48050064e7c0930cc76b154250a86e55b8786"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3557,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-1440-portal",
+              "contentType": "image/png",
+              "bodyBytes": 2044182,
+              "bodySha256": "6aa70a0d692cc3800d2db48abb628f1a56a3c2b5dd56017d1234f23bf5bb8aab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3933,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-1512-portal",
+              "contentType": "image/png",
+              "bodyBytes": 2117858,
+              "bodySha256": "a9102133e779734b6b0f04f9a1e3c970b0d15889a0a25dbe153759a2fa31e19c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2604,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-390-portal",
+              "contentType": "image/png",
+              "bodyBytes": 563133,
+              "bodySha256": "da09d5f97d5ec9a5e83bfb60704e0307f1c901f8d03c75f3b42c1915fe72693d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2958,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-800-portal",
+              "contentType": "image/png",
+              "bodyBytes": 1205510,
+              "bodySha256": "8222a7eb1fe5511997286227dbb748ca49cfb5dbdf0731de11d3e237b98d34f3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3500,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-1440-portal",
+              "contentType": "image/png",
+              "bodyBytes": 2068140,
+              "bodySha256": "82406fa8489487c09ad10bff48c030baf784c5dde970f7047ee36c8d5c897268"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 10,
+      "title": "3.0 explicit portal, original still, pristine amber, Exit/focus/scroll and no eager films",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3843,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-1512-portal",
+              "contentType": "image/png",
+              "bodyBytes": 2421005,
+              "bodySha256": "d82ea1d8962802dc8da4a3265f4f3e6e80f0d830412ce867012c3c2aeb83973d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 49,
+      "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 67866,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "entering",
+              "contentType": "image/png",
+              "bodyBytes": 2307703,
+              "bodySha256": "e79948208cebd96ad12b1e8ce8278763979da7143c6c43cdab9b3f7f0a84ec57"
+            },
+            {
+              "name": "deepening",
+              "contentType": "image/png",
+              "bodyBytes": 1514812,
+              "bodySha256": "ab7ba3d54cb06f03dba9d4128d17c5939696d7b18063e403f991d2bd858b362e"
+            },
+            {
+              "name": "arriving",
+              "contentType": "image/png",
+              "bodyBytes": 1969904,
+              "bodySha256": "b7041ee1ae03f6833b272c7e03f7d80c843c6c1c57c51247f18b7d6cd6e1bf6a"
+            },
+            {
+              "name": "living-world",
+              "contentType": "image/png",
+              "bodyBytes": 2260027,
+              "bodySha256": "e085f2a313b2ad02c26b8cb56d1738c5df6b789051d8782cedb7d79364d8c106"
+            },
+            {
+              "name": "native-sequence-proof",
+              "contentType": "application/json",
+              "bodyBytes": 841,
+              "bodySha256": "4888aad0c63d96335d1b68632b8e2406ae0f0f14bd8ac0e3dae6a3797afa69bd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 49,
+      "title": "3.0 complete original-speed journey, moving living loop, gaze, authored return and repeatability",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 65599,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "entering",
+              "contentType": "image/png",
+              "bodyBytes": 582391,
+              "bodySha256": "9c30f381499b11a5c67ee0e9ea562f3c8a149b177c33b3dd82c0c0fdf2f17067"
+            },
+            {
+              "name": "deepening",
+              "contentType": "image/png",
+              "bodyBytes": 390354,
+              "bodySha256": "ea32d9471e5c59b42524f4fa4a6854cc02ffa4b73862176997b4cfc84d1b69a1"
+            },
+            {
+              "name": "arriving",
+              "contentType": "image/png",
+              "bodyBytes": 504920,
+              "bodySha256": "a352c5eb3c16b9aa5bb523e33ed2b86a3c21d2170f16618e6d4c0b9d8e104619"
+            },
+            {
+              "name": "living-world",
+              "contentType": "image/png",
+              "bodyBytes": 477014,
+              "bodySha256": "d341f7604eae24f6d6e726013c968ca8cc085ff63b1b912bc68c91024e472b10"
+            },
+            {
+              "name": "native-sequence-proof",
+              "contentType": "application/json",
+              "bodyBytes": 840,
+              "bodySha256": "161619c4edfdeeb71d32fc8df98f44fe83b93d28c9f2f028d34d070eec547f8a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v300.spec.ts",
+      "line": 86,
+      "title": "3.0 quiet-world fullscreen follows the actual viewport while native body scrolling is locked",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4724,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-modal-viewport-proof",
+              "contentType": "application/json",
+              "bodyBytes": 338,
+              "bodySha256": "4eb8f5ed2941d55f2d1d9ae3234af961687240c9c13f6e7cc75cb169bb28aa3d"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

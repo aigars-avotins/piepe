@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto'
 import { localePath, readingPath, messages } from '../src/i18n'
 import { readings } from '../src/reading'
 import { checkReading, checkReadingResources } from './readingChecks'
+import { activateNativePage } from './nativeDiagnostics'
 
 for (const locale of ['lv', 'en'] as const) for (const javaScriptEnabled of [false, true]) test(`2.5.6 ${locale} JS=${javaScriptEnabled}: real text-first HTML, stable article routing and responsive reading`, async ({ browser, request }, info) => {
   const response = await request.get(readingPath(locale)), html = await response.text()
@@ -14,6 +15,7 @@ for (const locale of ['lv', 'en'] as const) for (const javaScriptEnabled of [fal
   const context = await browser.newContext({ javaScriptEnabled, viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' })
   try {
     const page = await context.newPage(), errors: string[] = []; page.on('pageerror', e => errors.push(e.message))
+    await activateNativePage(page, info)
     await page.goto(readingPath(locale)); await checkReading(page, locale)
     for (const [width, height] of [[390, 844], [800, 900], [1440, 900]]) {
       await page.setViewportSize({ width, height }); await page.evaluate(() => document.fonts.ready)
@@ -42,8 +44,8 @@ for (const locale of ['lv', 'en'] as const) test(`2.5.6 ${locale}: homepage link
   await page.goto(localePath(locale))
   await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
   const link = page.getByRole('link', { name: messages[locale].readGuide, exact: true })
-  await expect(link).toHaveAttribute('href', readingPath(locale)); const opened=page.waitForEvent('popup');await link.click();const article=await opened;await checkReading(article,locale)
-  const returning=article.waitForEvent('popup');await article.locator('.reading-return>a').click();const returned=await returning;await returned.waitForLoadState();await article.close();await returned.close()
+  await expect(link).toHaveAttribute('href', readingPath(locale));expect(await link.getAttribute('target')).toBeNull();await link.click();await checkReading(page,locale);expect(page.context().pages()).toHaveLength(1)
+  await page.locator('.reading-return>a').click();await expect(page).toHaveURL(new RegExp(localePath(locale)+'$'));expect(page.context().pages()).toHaveLength(1)
   await expect(page).toHaveURL(new RegExp(localePath(locale) + '$'))
   await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
   await expect(page.locator('h1')).toHaveAccessibleName('pie.pe')

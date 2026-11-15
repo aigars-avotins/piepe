@@ -1,0 +1,854 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T19:30:13.030Z",
+    "duration": 391439.043,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v23.spec.ts",
+      "line": 110,
+      "title": "native keyboard advance interrupts the fresh intro, and direct anchors do not start a competing film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14636,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1362,
+              "bodySha256": "3c1864a8a9e9f9db9a5d79d92a80931db9d0507de78d5cd403957e9235c370d9"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1405,
+              "bodySha256": "3ecd10d3d18ba6597d72e76094f725f224412223ff57d550f8ba34b25ae964f5"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1411,
+              "bodySha256": "4c332467236affbd9889ae144fb5da1064458f1c897c5b4f3191b91daaed3da1"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1360,
+              "bodySha256": "27c0f79d11b23f6eeaad12dd0ed2c2f66f4d8e8f066e79ca295ea0bc99348c5f"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1360,
+              "bodySha256": "045e4eb7cd457fc5312cf96978074b8800e91c0b142472663f8722e16c3a172f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 136,
+      "title": "expanded facts, locale changes, explicit pause and a failed environmental decode keep native navigation usable",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 28925,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1315,
+              "bodySha256": "b8a567406a8044411412036df39ca1535afb695b03daa8b0a899e76acc670548"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "eb436d5f9f8d6e1c3a46807398881c71d6cce0626010fd37e8632789b7521bcb"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1360,
+              "bodySha256": "7dba4e3ff39d5f8ed4de6c7581af17f48148f69f79cf97324d301a0961fc2426"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 66232,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1356,
+              "bodySha256": "f6e4c5a3c7e9a6cc1acf576e44d1ef54a997a12c990d17c2497e24bdc73eb849"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1369,
+              "bodySha256": "8fba16abd054280926abd59b2dcf1e00239cba36e31f37b68380f1d83d5193df"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1279,
+              "bodySha256": "b0d296b05c008cb9ada64b64a24752519b7c08643618d1fb84920f71d3e1e933"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1377,
+              "bodySha256": "af1a4424cdffcf8e69c9b4f481bab7c4e7c6060870dd9265fb6ab4e42099e324"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "0df514a0141a18c46d83f8061b71ed002966b2a003c195051eb1eee3b3c15764"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1362,
+              "bodySha256": "e394a1c65b6a15849f51d6484fc5f971600dd789a148984fc8c9462995729295"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1406,
+              "bodySha256": "d982df944f8bdf6f921c88e8b3f3e4aa0602cb69c1040caebc4601e6dc804aad"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "6b5ea2ff7940dfdee0c68ff000110fef2e8460009781564d10f8d0060f5bb847"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1368,
+              "bodySha256": "b2de349ca88324e9d34044cc30a6fe8186e05d5db9fa94c68cd54a5ad8ffd65b"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1377,
+              "bodySha256": "cb2978cea2e747dc1095e69f2d5419b5a40271293e16618d83e45aebda0a87e1"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1379,
+              "bodySha256": "4ea0b2a8592204f7b640054b8651f1837114867d84b31e29099abe0e6a37d15d"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1261,
+              "bodySha256": "85c96855dcc0a4619c87d0c9a9869afe389d8f62bf5f5dac7eb83afd9884559f"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "318b5c1ec4d5ab378c7a0b720be0a9a45333a0cc417d861546debecc8f5f7c0e"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1359,
+              "bodySha256": "4415d05fdec6ff26da79fee3699d094013090674d98fc652e19c91bedaad2589"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "2347c74d6726f8d2619ba62a35978516b27d1eecb92742e0b973fff7447827a2"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1105,
+              "bodySha256": "675ef724fd8d043daeb84e4f7c063aebb6dbeb24e610841320510048f521d89d"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19528,
+              "bodySha256": "a1de00482efe03065a114efac230d9469e1e6c37a86643764f8a7234a1c7c438"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 67490,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "0a450a4bbb1d1a3c303b619fcd20e5cc842ce15239dbe7a6492e1b7b048fa3ee"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1427,
+              "bodySha256": "e17e0e6626b7f07afcc8e96c5766d989b80c93390d1321295b5d61ebc81f88f2"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1327,
+              "bodySha256": "b80fd6f879bc56e4696161b8f2dcf99188b4531791bd3019c4cbf5b5fb383d1c"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1277,
+              "bodySha256": "88813082c91a00e46e6a7cd55196810e7cefc6d1d53fb0999d5b1d004a2818cd"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1363,
+              "bodySha256": "3b0a57a3edbada4a52552c774c5ce48446fcba0c801f23ba7413106fe828dbc1"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1213,
+              "bodySha256": "62de4ec167961cef6f7563a8e7866b5cd81e3879c11d15d9965e39e71b4e081e"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1357,
+              "bodySha256": "5230173376c753aa9fb8fbf6548c0b141c99604b4420f29a33f7f603009b620a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "c86521d3a88f38b65258d4c34b5798a6b7690d62712c8a6d5e94d92fbec9275c"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1320,
+              "bodySha256": "675aaeb935d3e819ee58e0bd58bfb3146fdc4a1b9d2cbb2deae87954309d1d0f"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1379,
+              "bodySha256": "87a8445835ca038178be31935b986137aa23801323b95aa5f6baaf645df4fde2"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1427,
+              "bodySha256": "19518a893a331739fca683844df83028504d455e737b58484a9b10c75ec42fad"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1160,
+              "bodySha256": "f133a1df4c81de13f31a57daa8de4c83b5eb515061b9432d124c0ace1ae041ca"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "a66d68792d10b591c5a765eb2a6ad4a8a3955decd77b09ab033ffb5bb4dea4f0"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1406,
+              "bodySha256": "d6b9c804abf08dfa78044f2b5c8318058960095fb81e1eea491956e58e63689a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1312,
+              "bodySha256": "f31a3c8bb8e7cb444c35cd03a2bd330831c6b2577374404a6cad91b79d3f2d4d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 966,
+              "bodySha256": "24590386410ba0cbf7a2d1db102e8ba581c999f52f991ea13ccc90a5cd35cfa9"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19290,
+              "bodySha256": "b6313a7a517ab58a6406af0f33b3952191404c631b905f4ca1121596135634f0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 215,
+      "title": "lv: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 18789,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 9956,
+              "bodySha256": "1df6c201f00c13f3e83d3f49f7ca3f2bcaf19a6f584b47c158acbdf3ae1c7c6b"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 10116,
+              "bodySha256": "ad33a1cc21f6a30770de5135ae389d6c12df89a531a751c36f58e1698878aa7f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 215,
+      "title": "en: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19404,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 9941,
+              "bodySha256": "a04a98aa05d38faa4024b47c4ed79ad709cb102d5d8555fc5c026ae5d7da68a2"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 10018,
+              "bodySha256": "e6c7e39bc2de842e4c43741b4e1dfa407347f6f99feb47b6930b5873290cfb91"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 62781,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1406,
+              "bodySha256": "f9a6f32ac2fe13c67258219426a722fbdb76281af8b673f721cb520f26e59cde"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "a266754423b9e716a7fbc8fb7dfead236384839d9cbb31d2c64cf9977e3336d0"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1422,
+              "bodySha256": "b739c43a3e9c940d7f862e11921aa7c4828e6171fb3c8a11747928ed220acabf"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1275,
+              "bodySha256": "b8f4315f346dd0ef54f700737c758c8cb73465e7d8c773830c991fa62d01a38e"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1410,
+              "bodySha256": "31ebc80113eae647d54068c237cb6bf8980a790d0b5aa8e64936360efac2c047"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1404,
+              "bodySha256": "f58d6be575d2c31d086df135093c4d04c3eb73ba9add0883f3fb1c4c9352787d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "96adabb1912550cf6312056477461c9780b8e4d3e11417067420c72aaa915742"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1357,
+              "bodySha256": "f2b500bbab0fb25e40a0c690de8ecdbe79852c92a842fa375107b14964d86b0b"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1417,
+              "bodySha256": "fbbb8ed38f1d84786d0955554b9f2b7e655207910d3229a678ca30fff9deb29f"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1026,
+              "bodySha256": "ca46b985900264edb37ac397a8188a54050f326d8d311ac2ee77d03d1544131e"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1427,
+              "bodySha256": "88ea0435c900c2b3f611a3be920251b4cc69563ad36288e9b62cec81113b042c"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "54761d568064213724a43c891bc2f3a193755bf5bab8ef48b74b3e37d15ddd92"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1408,
+              "bodySha256": "c24fddbedba3ae39b5ba2da48ca2e6f7e7adea28c48a031319f925ba12e88049"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1356,
+              "bodySha256": "c48c465146c989cf1a5b42cf92e77c49390d5c1aead070aec9bf49403d8461c2"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1408,
+              "bodySha256": "415c8f941980e04691102b7499a15037b5337654a9f4d44f9c4435bfc4b91eca"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "7769b2a0df089abc2fe4665c7d7e1c0ae44d3122bb2f884ad9ce4da2f3efd123"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19590,
+              "bodySha256": "ba020367316e4b888b59e2bd1ba4fd4781b2c228488ce1f20fbeffdca2a3195e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 62786,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "d6bf63f3e541393aee1ee81b0356ec073af9132307967b5a236ad93091ce3142"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1360,
+              "bodySha256": "1b97c7f618bcab8f77833964ca11fd4e6f04545aba6c71fa8f976cbe19ce27fe"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1368,
+              "bodySha256": "bdc12bac6bc175c2f662532a64e0d030a323fd1ddc2209f1cb542850900f8e99"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1423,
+              "bodySha256": "eeb483492afa0c7f004f3cc7630889f31c469b76a2452eb3d263d05eea14564d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1313,
+              "bodySha256": "7fdcb737c16d28b8993770e578f47d1511a06f12cb34769b6cfae3e7633b9bed"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1410,
+              "bodySha256": "37670592dd1000434515f3e090cf5593073aa89bb417e5b0655bbe0c40325e9b"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "75c523017db70a655649180e2bb69a55ecfdbccba827b2c85027118cf7f81711"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1353,
+              "bodySha256": "b1b05c2684603c055c1cb5a82b2cfc87d209264c7c7994d14619e49e1172ee91"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1364,
+              "bodySha256": "5219026d1f805280b8b73c1cb4b1d26214524bc38845fe837d07e0ae92d55623"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1218,
+              "bodySha256": "eb22280e434aba91dbc41dd04464e10885bdd533aaf4d951c9b2c4db5e4e1fda"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1326,
+              "bodySha256": "6407021114a54df0445b51aa77a0d52897ea6668c786cd432121b0ae777a2029"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "ea973217cb2cee98f54b81b36e779c5be50e964ca340fd58f436e91e972931b8"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1403,
+              "bodySha256": "bc40f3f10da90fde4bb8ff54c1ced70c9fff929a4aca0e6fac6a497e189136b1"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1405,
+              "bodySha256": "5f7dd924a75979677ea0edeaec986eee6da769826ed1008f77525d7e74e663b9"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1408,
+              "bodySha256": "d707b41ad74ba79e1ce1ec5f44b93b6fcb904acce14a4be8b791fe37e33d980d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1406,
+              "bodySha256": "352f86f8490eb9cdba7a67a0ad00d227471432d07e2ab2ac2317e6df3bca8e0d"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19625,
+              "bodySha256": "07971d7f586de63c90cd5457609e111bd930642549e42e7161b9d90c4148d4f4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 215,
+      "title": "lv: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16891,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 9861,
+              "bodySha256": "36aa57924b422d04faf759ba0ef0134d95e12fcec85c786974f9ca5876a23afa"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 9888,
+              "bodySha256": "12aaf7a65401f6b30ca6fcf66a5053ee27c99eb0b522bf0d71493dec916f97bc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 215,
+      "title": "en: the photograph settles once and preserves observation/return transitions",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 17134,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 10198,
+              "bodySha256": "4dd94a28a6189e9d8ec109915448cab8be8fa5aeea6622afd5139b6b4656625a"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 10144,
+              "bodySha256": "f3854217fcdbd3ae1ef17852ac95a3550b4666d630a13b20c30a6eadc81b3896"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 lv JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1596,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 lv JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2996,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "lv-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 844751,
+              "bodySha256": "1714ef00512d76321b24db0e533307f0526d8c3d75b874726eca9ff02e1fac2c"
+            },
+            {
+              "name": "lv-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1361229,
+              "bodySha256": "b512b538f4b96bc8824f96ea364d28a59c1c95e16ee4308bd8027cc07fb01f85"
+            },
+            {
+              "name": "lv-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 2472009,
+              "bodySha256": "cd413ef57f9c136aa103294a724102d34159380976aa8da94f1e6aebec3d28c1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 en JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1343,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 en JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2729,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "en-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 835578,
+              "bodySha256": "63dfb5479388c8422c6d8f2897bf09f2330d148f3deade1a89d3a805e0709d7e"
+            },
+            {
+              "name": "en-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1355033,
+              "bodySha256": "195a8caa2a1c36bcc846991d9c7b7ad8f0e0899b077899d846c790d8a303d1cb"
+            },
+            {
+              "name": "en-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 2466298,
+              "bodySha256": "493296b7b9d6447a0212d42fadc9571c111ece6843d9c6747dbfa16b55e4d2f7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 42,
+      "title": "2.5.6 lv: homepage links to its real article and returns without losing session semantics",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2713,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 42,
+      "title": "2.5.6 en: homepage links to its real article and returns without losing session semantics",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2810,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 60,
+      "title": "2.5.6 static documents have matching CSP hashes and do not ship article prose in the cinema bundle",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 65,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 77,
+      "title": "2.5.6 edge analytics allowance still rejects application scripts and inline code",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 856,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

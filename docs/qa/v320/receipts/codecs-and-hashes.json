@@ -1,0 +1,522 @@
+{
+  "baseline": "8a210b23e423a94a29fc28f7101656e753c77ad2",
+  "unchangedAssets": 107,
+  "mp4s": [
+    {
+      "path": "public/media/02_Zoom_in.mp4",
+      "sha256": "82bb1fc5ad6641306b40dae34e96c7c66684337d937d92b61c0ee0f169059ebd",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "12288853"
+      }
+    },
+    {
+      "path": "public/media/03_Entering_fungus.mp4",
+      "sha256": "5fef0a228648d5c0b21007e78d0036cc019521f9d196bbd66015443b201cf304",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "8140310"
+      }
+    },
+    {
+      "path": "public/media/04_Inside_fungus.mp4",
+      "sha256": "468d28d33a57402d83cf412f02e84f5191cd8508d9e5915cc1cee8267e4e64ed",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "14210210"
+      }
+    },
+    {
+      "path": "public/media/05_Fungus_world.mp4",
+      "sha256": "32c74d65d6d4225343ef5066e9ec4d7de9b1f0d00e754bbfd7f9e3e5b05b6f6d",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "7.850000",
+        "size": "5931498"
+      }
+    },
+    {
+      "path": "public/media/06_Leaving_fungus.mp4",
+      "sha256": "1bf2c8253ee549f1d06c14010cc639dd929aa67bad0ecbb8275b1f84bcd881c0",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "11193121"
+      }
+    },
+    {
+      "path": "public/media/07_Zoom_out.mp4",
+      "sha256": "cf75c370a943e585441b454586ece04cd50a23171931c6cd1fde21fe2af5e94b",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "13238074"
+      }
+    },
+    {
+      "path": "public/media/forest-awakening.mp4",
+      "sha256": "dffdfd61d2dc31f4dfe5dfa490ee57db1a3055f35bc2bc1387e54d8820b68cf2",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "8237084"
+      }
+    },
+    {
+      "path": "public/media/forest-breathing.mp4",
+      "sha256": "a3bc82771398b754d22273fbdd8d1023f04de0778ecef5b8b90ff8bdb64316ef",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "7025165"
+      }
+    },
+    {
+      "path": "public/media/forest-reveal.mp4",
+      "sha256": "6f3e32573ccff903740ebe58455e8fe579f280946041609c028b08ac50db64f5",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "9212166"
+      }
+    },
+    {
+      "path": "public/media/forest-understory.mp4",
+      "sha256": "d4a83a5cff4eff09e9fb14d1b8d7df8d0985a280a1a79e6123f3a2fdb360453f",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1900,
+          "height": 988,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "5846195"
+      }
+    },
+    {
+      "path": "public/media/portal-02-faststart.mp4",
+      "sha256": "6da221ec9d275aa16992e62804f31bbea4b919dc53da6aeb0a6977eed3d3290f",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "12233601"
+      }
+    },
+    {
+      "path": "public/media/portal-03-faststart.mp4",
+      "sha256": "37591b0491c31bb99c169a521ff38a99a6b0a74040ee1ee4c3f3e39a1aab23cd",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "8125509"
+      }
+    },
+    {
+      "path": "public/media/portal-04-faststart.mp4",
+      "sha256": "e0470814966830a5c161e99b909061e73e1aac58c0ef00d31d2879ec65e0658e",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "14195409"
+      }
+    },
+    {
+      "path": "public/media/portal-05-faststart.mp4",
+      "sha256": "5160b1a78d2e5fd25fc437b60df8e1960d937587e2ca8a39598425ebd3616aa2",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "7.850000",
+        "size": "5916689"
+      }
+    },
+    {
+      "path": "public/media/portal-06-faststart.mp4",
+      "sha256": "e67a87b1fcea75c0d9712786afa87225a143c6d07a456a2a5fac38dac54306b5",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "11178320"
+      }
+    },
+    {
+      "path": "public/media/portal-07-faststart.mp4",
+      "sha256": "b9ac4c438d641aa7f88e991069afb03826afd1b8b2eed7e5c965547070414d69",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "profile": "High",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "9.963000",
+        "size": "13223273"
+      }
+    },
+    {
+      "path": "source/forest-awakening-original.mp4",
+      "sha256": "50266c1c077aa157977ce0f7cd36b441e2d55458e356c3d5fa6a87e4aa0e881a",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        },
+        {
+          "index": 1,
+          "codec_name": "h264",
+          "profile": "Main",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "9495118"
+      }
+    },
+    {
+      "path": "source/forest-breathing-original.mp4",
+      "sha256": "995f5d18b64078bda7ef77323fe8763b28360f6daf2466df432300db489c1a82",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        },
+        {
+          "index": 1,
+          "codec_name": "h264",
+          "profile": "Main",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "9247458"
+      }
+    },
+    {
+      "path": "source/forest-reveal-original.mp4",
+      "sha256": "8a1ed813de90e5a78cc9e9ff9818f25013f9f46e311ff8a3695d6613aa45c03d",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "hevc",
+          "profile": "Main 10",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "r_frame_rate": "24/1"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "6.050000",
+        "size": "19070653"
+      }
+    },
+    {
+      "path": "source/forest-understory-original.mp4",
+      "sha256": "3502e5eff08c7729b5c95b26f8c7ced679bf242b1f81bd7237f0672e85c9f2e4",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "aac",
+          "profile": "LC",
+          "r_frame_rate": "0/0"
+        },
+        {
+          "index": 1,
+          "codec_name": "h264",
+          "profile": "Main",
+          "width": 1996,
+          "height": 1036,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.041667",
+        "size": "7056234"
+      }
+    }
+  ]
+}

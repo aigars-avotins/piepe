@@ -1,0 +1,1971 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T19:01:32.388Z",
+    "duration": 621860.206,
+    "expected": 49,
+    "skipped": 1,
+    "unexpected": 3,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "cinema.spec.ts",
+      "line": 24,
+      "title": "compact phone retains native scroll when translated facts change height",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 15530,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 536,
+              "bodySha256": "084cce51eede22f22ec57e5f780d1eef1a6cd1434f5fb5a3a332fff93d8fb0b5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 40,
+      "title": "server-painted controls and cover geometry survive delayed hydration without a layout jump",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2741,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 808,
+              "bodySha256": "31fd5afb7fb7ae50644a05541e197ead74eff2c1e92a8a502ffc648a06915a08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 106,
+      "title": "the decoded first frame retains local fungus edge anchors, not just a low whole-frame RGB error",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3752,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "local-edge-registration",
+              "contentType": "application/json",
+              "bodyBytes": 201,
+              "bodySha256": "62b15d55fc79c1baa841b0bf4e7538d4a70489e8483476ebfd558d86f584cda0"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "d792346709b5b4e581f6bac507e7fd6a35801d731747e0464ef4995224408ec9"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1554,
+              "bodySha256": "00041f74513503aa0bf845b7dc14abbcfdb062f25fda5205476bacae819fb476"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 186,
+      "title": "Escape while preparing cancels in place; repeat activation opens the accessible note",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3537,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 195,
+              "bodySha256": "a66e0cd0bb74873b97c31df02f033d77a0b2dae90e34b44a21253cb8b99a70ec"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1387,
+              "bodySha256": "74927da0d6cd2e506ac0f7e66afbbe8b9e1fbf119a1a5494ce3a33ba1d850068"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 194,
+      "title": "environmental cuts follow reversible scroll envelopes, not intersection-driven full-frame mounts",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5742,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1717,
+              "bodySha256": "2b79ea613f85e8d583f34963ca2bc97bcba2bd1bb54b38e6b9d44bd3bffccb06"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3439,
+              "bodySha256": "f8ed0f9bd5112c9efff6717d5b5d8fc77385874d2413af7c7050e8b16b2cbe6f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 216,
+      "title": "unavailable end-still uses the actual decoded frame for a continuous note handoff",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 13519,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "76ae76b5a0a2f00a0b9dc069d4c892ceff586bcde1df86cc07b92ccfa5612e49"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2351,
+              "bodySha256": "82f7c878b1449f148c8b738f468e16933de4d0bb05f632414abe6aa0d9715c74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 227,
+      "title": "locale change while decoding does not reopen a modal, move focus or restart playback",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2788,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 130,
+              "bodySha256": "30c580c0d7d22483232adb7e876c174b0991d2311f83593f41ec96e54173c989"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1352,
+              "bodySha256": "994586207b17d891f4a9e9737b924f46f6740cfa870cb726d4d55f4bea942753"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 253,
+      "title": "a transient readiness drop at the presented-frame callback retries behind the held forest",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3869,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "1c0b233f7b978b774b590e22639f507cee60f3b8b1bc503112be2f594840e823"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1555,
+              "bodySha256": "8dea0c75d96fc3fb257b95eaf15d86d21ec6a254d1ba3233be454f67fd457280"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 272,
+      "title": "Escape before the photo clock starts cancels a pending decode without waiting or an unhandled rejection",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3593,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1221,
+              "bodySha256": "be1743788e5da8dad95a121cd8cdae907f816719fbd302f00351d97813703571"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 284,
+      "title": "a playback-history change between activation and mounting recovers to the note",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2408,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 708,
+              "bodySha256": "f08e3b864987df4b42c8a2d35d3b3cc01a7e2588c9d9d283995f02acc775cfb5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 295,
+      "title": "a compositor withholding transparent video frames still presents paused frame zero before playback",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3662,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "72269720678f23e1702b82bd5029b1106c164efe483b89f2e4f74de32d47f492"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1554,
+              "bodySha256": "a1d801fad121ec80dabff04e2a1ed8e6d52e08c2ed774d5a192476f90211d7c8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 319,
+      "title": "source assignment discarding old frame subscriptions still prepares a real opening frame",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4017,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "f93151c90cfbdf686fba881e3f0a245db0508c4f15ecd7a372f5f638e6197258"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1555,
+              "bodySha256": "9103091ab92e22eb9d0b889e06f146d840150a6562de346779c5f069a696cc12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 1512x982",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9281,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 343,
+              "bodySha256": "1f59fed2508ac5264ce27e21ad40c73edd874d07e6923d8275906522b5c48fa4"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 7689,
+              "bodySha256": "a074adfa26e5b8355f3d7447deb4e3ad44cb0df2c576908a8f231c785e491380"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 895,
+              "bodySha256": "f5efc8810f7ce13d4930b8ed31e399daf451cd96dd253dd2180aa8b432305bb3"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1567,
+              "bodySha256": "f6e6f8e21b5a45c876b3097b653b4216492c60ef5ffd60b35b126be3ce4d2412"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 135,
+      "title": "intro then awakening final frame docks and returns continuously at 1512x982",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 20206,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 4810,
+              "bodySha256": "8979d8a2fac3607bb59f508aa19d3e3a36e3807b53abd3467831e2feff2c71ab"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1135,
+              "bodySha256": "69f7ff9b53f1c2ca82bf7f0cd3711a1a7344df4c2c73f3a6221a2ed9bd4c4a6a"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3264,
+              "bodySha256": "8e0c7b00196ce3887a9b08a9fbfc1d3262b477b033d5bf8108a71813d88f1b51"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 242,
+      "title": "Escape during the photo move reverses the current camera instead of snapping to full frame",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 10345,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "36c76357e1a04f009525b3e18207b9ce5d078635acbd2fac01be2f45503f49ba"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2211,
+              "bodySha256": "4030193336061c09b24ed79ac3286ad210e3d9325562a5c112a6f8d0bc0f22a6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 2560x1080",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7780,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 294,
+              "bodySha256": "d8762e96d2d3128396e08300e07eb01cca8196dcaae366582b78f444df6031e7"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 3439,
+              "bodySha256": "0f9130ae841dfe90df05fe0522a49bb7d67b9c64ece2462394bbfabe9f377cad"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "7c11dce6ee9b685f144e855c584941943837c932c16af7a5fa5c808e1e30bdf1"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1568,
+              "bodySha256": "e27d39266bda67ef3d46e9e0a8d981b32f9d64e3f48afaec9bbb9abaa4d611c5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 61,
+      "title": "held frame and first decoded awakening stay in the same plane at 390x664",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9355,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "ready-plane-timestamps",
+              "contentType": "application/json",
+              "bodyBytes": 351,
+              "bodySha256": "193af28dda7bd46af8832499e405f93b58cbf0bb81b322ed23bd8c6a61ef8c2e"
+            },
+            {
+              "name": "held-plane-timeline",
+              "contentType": "application/json",
+              "bodyBytes": 5348,
+              "bodySha256": "371c559cabb02b6525b823de76fd961fffdcfb21c95077851db3d83b5208409c"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "fd264f4fba0a293d64b75c8a9e23a858f6b4ab000d6fb31856d07f68963ddd14"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1576,
+              "bodySha256": "eee36da2e7988357550457a8d387d6d89e7929505cd2ee208ccf85b94dae5e50"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "cinema.spec.ts",
+      "line": 135,
+      "title": "intro then awakening final frame docks and returns continuously at 390x664",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19881,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "photo-docking-frames",
+              "contentType": "application/json",
+              "bodyBytes": 5335,
+              "bodySha256": "f865556e184f43c325ae09a02cff3bed3f3cb9c95179b5e056d4e47cf909af87"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1135,
+              "bodySha256": "857251123e7850cdf2e14f62d724380eb2fe4ebb3a0161c82d1ab965ce405b26"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3272,
+              "bodySha256": "b713bcb1c15d4d23b51bd302bc5f4c86bd284fd4665aa30e15364745ef3443ad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 8,
+      "title": "actual film plays once, reveals title, ends and becomes interactive",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14754,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1135,
+              "bodySha256": "edb582ca739b1de2f6c5aa19a44e9d79c05c698875f4c1f04cbdf79e183b6473"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3495,
+              "bodySha256": "6b2065206579d14d2c1e77691d1e4c6c8cf816dc0da2b6f617292797f3adc3ca"
+            },
+            {
+              "name": "film-events",
+              "contentType": "application/json",
+              "bodyBytes": 2754,
+              "bodySha256": "a86183fe1154c649ff6dd780281ef8997ec278255d9aa83a3e26c78ce0510b71"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 49,
+      "title": "skip is immediate and fungus works with keyboard and Escape",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3203,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 565,
+              "bodySha256": "ae9f8264199dddd14021520687a7fdf37ae238ae0893c3bef349eb3b8836d541"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 283,
+              "bodySha256": "47f9508dea5423f21ac18de9ff9f45a2bca47513f786b15e4fc7696bc7a9bf24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 65,
+      "title": "reduced motion avoids downloading film, remains readable and has no overflow",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2870,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 974,
+              "bodySha256": "560580500f9a7a89b68946a4d75b5cf144f9e6bd0f55c170c825cfab0ca2a5d6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 83,
+      "title": "blocked autoplay falls back immediately to the interactive still",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2444,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 518,
+              "bodySha256": "68aac97aa9375dcbaf8e0e6bd366d91ba95f513183ad4352a16e4ef40a693da8"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 825,
+              "bodySha256": "b8583edab6c45b64e5f16d80df43a8c9794f048f67c01b764ec0ba1c5eafa570"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 90,
+      "title": "missing video recovers without trapping the visitor",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7145,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 416,
+              "bodySha256": "93c32bfc88b61cbc0a2ee26e812d627eb894fafda8a9948016ed970bca24ad2e"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1183,
+              "bodySha256": "0029cf297545e5fd8b73dcb16975f6c33714254fa2a1d70f9587882f96133b1e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 98,
+      "title": "pending playback and a mid-film stall both have bounded recovery",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6551,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 127,
+              "bodySha256": "e9ac343c41ef33e1b37b08c7bde696bfe4777295ad171bc335e264ab48c72efd"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1018,
+              "bodySha256": "fc7b20db668d48c7ab18018d1abff3f7edc61d2b31eafa0450ebe20f053ccb62"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 105,
+      "title": "an actual decoding stall recovers to the still",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6748,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 565,
+              "bodySha256": "184ef89c2067534e7bec6a71972b1ff2ae716c429bfb90a86eb14fba81b41e2e"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1447,
+              "bodySha256": "a7e20322f7dae03b009aa9dc9bcf664f3aabc8d62773fc8167ff6bc50eb2636b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 112,
+      "title": "missing still retains accessible text and controls",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2692,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1042,
+              "bodySha256": "aa29255201b2b1d4bd9626545989be42a2379db2963468a13cba1811caf70b9a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 122,
+      "title": "data saving preference avoids video request",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2510,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 321,
+              "bodySha256": "5029189a6978d27d8bc8285d0623942176486e12ee8fe050dd69ab9fb5d6e0d5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 129,
+      "title": "cover geometry keeps hotspot aligned to the actual fungus across viewport changes",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6434,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 315,
+              "bodySha256": "aeb6fcc3bc51e8dfabd1fd8863bcfedb5f44014f7353efada998d8f2e881c44a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 151,
+      "title": "discovery is a complete three-step field note with a real downloadable artifact",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2879,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 317,
+              "bodySha256": "08b38c3b7d1fe5cc783b959302a6423ffc62c97547c0d8e7eed590ff579bd22d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 168,
+      "title": "returning visitors can explicitly replay the original introduction without scroll replay",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4684,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1135,
+              "bodySha256": "742cafb731ae11a2dabc6063a4de77992e5a6722fe6b167a9ba0b6384d934bcb"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2931,
+              "bodySha256": "b59dcb17b9160ab847c2593487b19dff52bacc627a44cc82192e03873059b9ca"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 181,
+      "title": "visible wordmark and discovery controls fit all specified portrait and landscape sizes",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3276,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 311,
+              "bodySha256": "9ba4b49aaa4db30e0f80ee9f8d0b6b8a52e143f6c721b9000ab592d14aa9fcb3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 200,
+      "title": "scroll changes photographic camera, foreground and return lighting rather than only text",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6777,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1143,
+              "bodySha256": "ee3c0558b1b414080ed30e68308cd6cb0788ac0b5bdd3b8b91db39dd1675704c"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2454,
+              "bodySha256": "9e6300e69cea8ce5c2545fabf677d4ec6f59fcb77c974be778ae24a26b77ece3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 212,
+      "title": "animation setup failure leaves a readable interactive static journey",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2595,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1140,
+              "bodySha256": "7ad4c67116f3ccd2ff48e50cac279985ed4cebba603a306fff0eed26c995dbea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 227,
+      "title": "mobile discovery keeps close available at the bottom and supports touch-sized controls",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5939,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1163,
+              "bodySha256": "c04fdb41e4d519dbeca91c74f37c0816c8dd67b365a2712e4f60008260f1d894"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "forest.spec.ts",
+      "line": 244,
+      "title": "pause and changing motion preference clean up the camera while retaining navigation",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3870,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 477,
+              "bodySha256": "5345dba790e43ac899e577b820be408c1f61699735f7beeb8cfb0d5f796dc903"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 878,
+              "bodySha256": "72f73eef0bbb3200376ffa523d8ea4e00b5bde1e154ab6e1273df6f9bee1364f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5016,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 2979,
+              "bodySha256": "11e155ec6be58e4d560b18994c9219fb67eb94dea3e9590f40579611479df132"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1441,
+              "bodySha256": "cd4330ef922205fa3de0112cc749f1be3d5867aa01c2fb57ed54db227c4e5359"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "photo-clock.spec.ts",
+      "line": 7,
+      "title": "late preparation preserves the beginning of the camera trajectory",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4590,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "delayed-preparation-first-motion",
+              "contentType": "application/json",
+              "bodyBytes": 2760,
+              "bodySha256": "340584bba00486dff624825b05d4f6589ffc5c132bce7994e1c3a9f072233811"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2,
+              "bodySha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1451,
+              "bodySha256": "b412e76ba0e1affe7aa764cd205b9fdd68d9e20cd3826807295a860c2d589459"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 3,
+      "title": "lv: encounter portal, readable support copy and safe source links",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4977,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 3,
+      "title": "en: encounter portal, readable support copy and safe source links",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4633,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 27,
+      "title": "macro is prepared behind the existing bark before its scroll envelope, and waits for actual media",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3845,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 47,
+      "title": "sound waits for permission, plays a real native loop, remains controllable in the note and remembers mute",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4340,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "polish.spec.ts",
+      "line": 84,
+      "title": "save-data never starts automatic ambience, and a missing recording has a usable retry",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2113,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "scroll-recording.spec.ts",
+      "line": 3,
+      "title": "silent fifteen-second before and after scroll captures",
+      "project": "webkit-iphone",
+      "outcome": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 2,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 91,
+      "title": "native keyboard advance interrupts the fresh intro, and direct anchors do not start a competing film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 18673,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 3756,
+              "bodySha256": "b7fbbf8a35d3fc0680693079dac1b65042e0932da544445fb7b8c2a94b8c6db1"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1503,
+              "bodySha256": "78e47586417aa196bea2495e1553cc07df4bc84323f40da9625d5710bc40c57a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 117,
+      "title": "expanded facts, locale changes, explicit pause and a failed environmental decode keep native navigation usable",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 22600,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 3286,
+              "bodySha256": "37a3d4c31b63cb7a6f132820ebec8749108131d8a505c69f0373d87ca0940c53"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 19608,
+              "bodySha256": "208c05b2846c3e0706f4db4407695e579d7b6621d94a33417002484217f5d55a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 47505,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+                "column": 96,
+                "line": 173
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m2\u001b[39m\nReceived:   \u001b[31m2\u001b[39m\n\n  171 |         expect(result.paused).toBe(false); expect(result.ready).toBeGreaterThanOrEqual(2); expect(result.opacity).toBeGreaterThan(.98)\n  172 |         expect(result.rect.w).toBeGreaterThanOrEqual(result.viewport.w - 2); expect(result.rect.h).toBeGreaterThanOrEqual(result.viewport.h - 2)\n> 173 |         expect(result.frames.length).toBeGreaterThan(3); expect(distinctFrames(result.frames)).toBeGreaterThan(2)\n      |                                                                                                ^\n  174 |         expect(result.frames.slice(1).reduce((elapsed, frame, i) => elapsed + Math.max(0, frame.time - result.frames[i].time), 0)).toBeGreaterThan(.3)\n  175 |         const box = await page.locator(`#${id} .cinema-content`).boundingBox(); expect(Math.abs(box!.y)).toBeLessThan(2)\n  176 |       }\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:173:96"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/test-failed-1.png"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2862,
+              "bodySha256": "9bc997a0adab51f98e6befb879d0582d55f16fb05c60f6eded1b3238488007ad"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 6061,
+              "bodySha256": "7ef2aac79ff88d31b8c0a76be51b1fd5626f33c5f0f47e4e38107923a2e1b0e8"
+            },
+            {
+              "name": "environmental-state-on-failure",
+              "contentType": "application/json",
+              "bodyBytes": 565,
+              "bodySha256": "c541225f8576b7a7759bad1685480c3e037f06e7376a9f6994d68e166c391c31"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 87221,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19642,
+              "bodySha256": "640a9ff797d16eeacb3019ce3ee6df61c0805e0716c712b63a91760d30ce6011"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "7601313aed1165d1f699f31a66ca5a436ce6b1d3cad5ce192016c07e55aa663f"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2524,
+              "bodySha256": "1c1c81131fb2363515eaf52c5abd22df49181f5c321b752729de6993a9eceea5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "lv: the photograph settles once and preserves observation/return transitions",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 23885,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 1286,
+              "bodySha256": "d0d97c60233c82f512d7334c8f47fe7fc5ac2368cffa85f01eefc45f52b66f00"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 3293,
+              "bodySha256": "efffce1b7811c249ca30a6bb03d5a5e365f8ad529ab3e10c418a72b5cefe109e"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "0ac698a1276c24d2c188f959c6112e4aa06ce1e3085dcc4dcb4d86b476c410c3"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 5341,
+              "bodySha256": "22a316ff0fe7eb1cb2150821eab453222023081c1d52caf58ce19be09e7b0230"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "en: the photograph settles once and preserves observation/return transitions",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 22604,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 2747,
+              "bodySha256": "07fc0f0064e306e2bb8874185f49d03edc2f7291f0b5d73281791536a24a9ff5"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 4473,
+              "bodySha256": "67a2a7539f94943a194caf1820693ffda2a0ddd16b9579b6f29e034171fdeb9d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "2b84ecfc319082ad5e2ee73162a46f577083b8a269c91299eb3c5629c6034d4e"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 5343,
+              "bodySha256": "c94bad9818c27bcd3abc1f32faa2a853f767077103383049aca1aadfd52952e7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 36619,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+                "column": 7,
+                "line": 50
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0.98\u001b[39m\nReceived:   \u001b[31m0.5434\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  48 |     for (let element: Element | null = video; element; element = element.parentElement) opacity *= Number(getComputedStyle(element).opacity)\n  49 |     return opacity\n> 50 |   })).toBeGreaterThan(.98)\n     |       ^\n  51 |   const sample = await layer.locator('video').evaluate(async (video: HTMLVideoElement) => {\n  52 |     let opacity = 1\n  53 |     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:50:7)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:184:24"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-84339-e-revisits-loops-and-reload-webkit-iphone/test-failed-1.png"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2289,
+              "bodySha256": "86761897c57956c8ab9116066d411e8790e218270cd3ea3f31b1f0138009b332"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 19214,
+              "bodySha256": "c368c71dd2c123ad32c976169ce34ecefe637cfd019c1bc123a9974fda02d67b"
+            },
+            {
+              "name": "environmental-state-on-failure",
+              "contentType": "application/json",
+              "bodyBytes": 412,
+              "bodySha256": "c54993ac2a6d86e91b1273a79a71c247099ab3c77f47aca49eb19abfa9cb2d65"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-84339-e-revisits-loops-and-reload-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-84339-e-revisits-loops-and-reload-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 149,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 46598,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+                "column": 23,
+                "line": 41
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[data-clip=\"breathing\"]')\nExpected: \u001b[32m\"\u001b[7mtru\u001b[27me\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mfals\u001b[27me\"\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('[data-clip=\"breathing\"]') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-clip=\"breathing\"]')\u001b[22m\n\u001b[2m    18 \u00d7 locator resolved to <div aria-hidden=\"true\" data-clip-reason=\"\" data-clip-cycles=\"0\" data-clip=\"breathing\" data-loop-hold=\"false\" data-clip-ready=\"false\" data-still-ready=\"true\" data-frame-staged=\"false\" data-clip-state=\"preparing\" class=\"motion-clip clip-breathing\">\u2026</div>\u001b[22m\n\u001b[2m       - unexpected value \"false\"\u001b[22m\n\u001b[2m    6 \u00d7 locator resolved to <div aria-hidden=\"true\" data-clip-cycles=\"0\" data-clip=\"breathing\" data-loop-hold=\"false\" data-clip-state=\"error\" data-clip-ready=\"false\" data-still-ready=\"true\" data-frame-staged=\"false\" data-clip-reason=\"load-timeout\" class=\"motion-clip clip-breathing\">\u2026</div>\u001b[22m\n\u001b[2m      - unexpected value \"false\"\u001b[22m\n\n\n  39 |   await rendered(page)\n  40 |   const layer = page.locator(`[data-clip=\"${name}\"]`)\n> 41 |   await expect(layer).toHaveAttribute('data-clip-ready', 'true', { timeout: 10000 })\n     |                       ^\n  42 |   await expect(layer).toHaveAttribute('data-loop-hold', 'false')\n  43 |   // Decode readiness can precede the scroll entrance. Sample the actual visible\n  44 |   // scene after its existing camera scrub settles, rather than reading back a\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:41:23)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:170:24"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-dde9f-e-revisits-loops-and-reload-webkit-iphone/test-failed-1.png"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2289,
+              "bodySha256": "98e7f11818afa9bb8b867c33fc229c8e7161aa221e68db16db853e4d99997ae8"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 21716,
+              "bodySha256": "cdd5486dc56db22521a3fecf48265d456351ecbcec0351bd4c1c86ac4ba1329f"
+            },
+            {
+              "name": "environmental-state-on-failure",
+              "contentType": "application/json",
+              "bodyBytes": 556,
+              "bodySha256": "83a40b24b827a64ad1294b298836bc8b5007c16bf22219fe682d88acccba2d4f"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-dde9f-e-revisits-loops-and-reload-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-dde9f-e-revisits-loops-and-reload-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "lv: the photograph settles once and preserves observation/return transitions",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19389,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 4521,
+              "bodySha256": "34e307af10003e2eb0d3a25496a33510a52a6a778ffd41977b5dd0d499106956"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 4521,
+              "bodySha256": "68731d974d24443745250f4999c9cedc4725f4628e70b6d3f66f0485cf5cde6d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "0607ce0f225dcb499c0c67ddd63cc3015a6143de72738a12ddd42b8b4642d815"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 5358,
+              "bodySha256": "3ca6beb08f39709ab0bc437259b971b301ac2f8daff8fee5001ffa26d1895d91"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 196,
+      "title": "en: the photograph settles once and preserves observation/return transitions",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 18352,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "stable-final-crop-0",
+              "contentType": "application/json",
+              "bodyBytes": 3974,
+              "bodySha256": "7923a6b1d4ac5c2a8ba0af9f8e1e2be4b8b191d9f208353f8745e4a9f6826eb8"
+            },
+            {
+              "name": "stable-final-crop-1",
+              "contentType": "application/json",
+              "bodyBytes": 4521,
+              "bodySha256": "7d9354ca91922150b9cb63f05a5255766df3eeaace1953d7e01e75464e88fc6d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "f2b5d6c82eeb3bff9d575ae0745a293d82d0f080f8ebbe51e17d3a13df659037"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 5360,
+              "bodySha256": "33f9f887631ccc4c359631c1b9dfc40ecf961e82f30a6ee61deb44abd69d612a"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
