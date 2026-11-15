@@ -1,0 +1,5042 @@
+[
+  {
+    "path": "/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/",
+    "canonical": "https://pie.pe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#return",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/#beneath-bark",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/#surface-atlas",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/#deadwood-time",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#wallpapers",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/#ancient-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/#hidden-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/",
+    "canonical": "https://pie.pe/en/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#return",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/#beneath-bark",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/#surface-atlas",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/#deadwood-time",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#wallpapers",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/#ancient-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/#hidden-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/kas-ir-piepe/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/kas-ir-piepe/",
+    "canonical": "https://pie.pe/kas-ir-piepe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/atlas-pores.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-boletes.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-gills.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-of-fungi.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-smooth.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-stereoid-paint.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/what-is-fungus.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://ipm.ucanr.edu/home-and-landscape/wood-decay-fungi-in-landscape-trees/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/what-is-a-bracket-fungus/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/what-is-a-bracket-fungus/",
+    "canonical": "https://pie.pe/en/what-is-a-bracket-fungus/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/atlas-pores.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-boletes.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-gills.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-of-fungi.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-smooth.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-stereoid-paint.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/what-is-fungus.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://ipm.ucanr.edu/home-and-landscape/wood-decay-fungi-in-landscape-trees/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-foni/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-foni/",
+    "canonical": "https://pie.pe/meza-foni/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/forest-wallpapers/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/forest-wallpapers/",
+    "canonical": "https://pie.pe/en/forest-wallpapers/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/",
+    "canonical": "https://pie.pe/meza-piezimes/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/",
+    "canonical": "https://pie.pe/en/field-notes/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/001/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/001/",
+    "canonical": "https://pie.pe/meza-piezimes/001/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/field-note-lv.txt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/001/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/001/",
+    "canonical": "https://pie.pe/en/field-notes/001/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/field-note-en.txt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/002-caga/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/002-caga/",
+    "canonical": "https://pie.pe/meza-piezimes/002-caga/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chaga",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birchName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birch",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/inonotus-obliquus-frfr-pilat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.lvm.lv/jaunumi/2405-dekorativa-slimiba-caga",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/piptoporus-betulinus-bull-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.mushroomexpert.com/fomitopsis_betulina.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/002-chaga/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/002-chaga/",
+    "canonical": "https://pie.pe/en/field-notes/002-chaga/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chaga",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birchName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birch",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/inonotus-obliquus-frfr-pilat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.lvm.lv/jaunumi/2405-dekorativa-slimiba-caga",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/piptoporus-betulinus-bull-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.mushroomexpert.com/fomitopsis_betulina.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/003-serpiepe/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/003-serpiepe/",
+    "canonical": "https://pie.pe/meza-piezimes/003-serpiepe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/laetiporus-sulphureus-bull-fr-murrill/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/003-chicken-of-the-woods/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/003-chicken-of-the-woods/",
+    "canonical": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/laetiporus-sulphureus-bull-fr-murrill/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/004-latvijas-piepes/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/004-latvijas-piepes/",
+    "canonical": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-tinder",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-redBelt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artistName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomes-fomentarius-l-fr-fr/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomitopsis-pinicola-sw-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/ganoderma-applanatum-pers-pat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/ganoderma-applanatum.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/004-common-bracket-fungi/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/004-common-bracket-fungi/",
+    "canonical": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-tinder",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-redBelt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artistName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomes-fomentarius-l-fr-fr/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomitopsis-pinicola-sw-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/ganoderma-applanatum-pers-pat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/ganoderma-applanatum.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/005-kritalas-un-laiks/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/005-kritalas-un-laiks/",
+    "canonical": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-01.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-02.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-03.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-04.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-mycorrhiza",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.forestresearch.gov.uk/publications/managing-deadwood-in-forests-and-woodlands/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s10342-010-0400-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1038/s41598-017-14181-7",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycorrhiza.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/005-deadwood-and-time/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/005-deadwood-and-time/",
+    "canonical": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-01.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-02.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-03.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-04.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-mycorrhiza",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.forestresearch.gov.uk/publications/managing-deadwood-in-forests-and-woodlands/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s10342-010-0400-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1038/s41598-017-14181-7",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycorrhiza.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/006-lakas-plakanpiepe/",
+    "canonical": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-law",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-taxonomy",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://sarkanagramata.lu.lv/suga/lakas-plakanpiepe/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://likumi.lv/ta/id/12821-noteikumi-par-ipasi-aizsargajamo-sugu-un-ierobezoti-izmantojamo-ipasi-aizsargajamo-sugu-sarakstu",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s13225-012-0178-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/006-lacquered-bracket/",
+    "viewport": {
+      "width": 1512,
+      "height": 982
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/006-lacquered-bracket/",
+    "canonical": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-law",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-taxonomy",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://sarkanagramata.lu.lv/suga/lakas-plakanpiepe/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://likumi.lv/ta/id/12821-noteikumi-par-ipasi-aizsargajamo-sugu-un-ierobezoti-izmantojamo-ipasi-aizsargajamo-sugu-sarakstu",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s13225-012-0178-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/",
+    "canonical": "https://pie.pe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#return",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/#beneath-bark",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/#surface-atlas",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/#deadwood-time",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#wallpapers",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/#ancient-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/#hidden-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/",
+    "canonical": "https://pie.pe/en/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#return",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#understory",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#encounter",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#home-xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/#beneath-bark",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/#surface-atlas",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/#deadwood-time",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://archive.bio.ed.ac.uk/jdeacon/FungalBiology/bracket.htm",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#wallpapers",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg?v=2.2",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/#ancient-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/#hidden-forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#forest",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/kas-ir-piepe/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/kas-ir-piepe/",
+    "canonical": "https://pie.pe/kas-ir-piepe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/atlas-pores.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-boletes.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-gills.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-of-fungi.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-smooth.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-stereoid-paint.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/what-is-fungus.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://ipm.ucanr.edu/home-and-landscape/wood-decay-fungi-in-landscape-trees/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/what-is-a-bracket-fungus/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/what-is-a-bracket-fungus/",
+    "canonical": "https://pie.pe/en/what-is-a-bracket-fungus/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-wood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-hyphae",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#xray-spores",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycelium.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/dispersal.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/xray-bark-surface.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/xray-wood-mycelium.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/atlas-pores.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-boletes.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-gills.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-of-fungi.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/images/interactive/atlas-smooth.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/types-stereoid-paint.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-anbg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-woodland",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-ucipm",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/what-is-fungus.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.woodlandtrust.org.uk/blog/bracket-fungi-identification/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://ipm.ucanr.edu/home-and-landscape/wood-decay-fungi-in-landscape-trees/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-foni/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-foni/",
+    "canonical": "https://pie.pe/meza-foni/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/forest-wallpapers/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/forest-wallpapers/",
+    "canonical": "https://pie.pe/en/forest-wallpapers/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-desktop-3840x2160.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-ancient-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-ancient-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-desktop-5120x2880.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-desktop-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/piepe-hidden-forest-mobile-1440x3120.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/wallpapers/originals/piepe-hidden-forest-mobile-original.png",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/",
+    "canonical": "https://pie.pe/meza-piezimes/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/",
+    "canonical": "https://pie.pe/en/field-notes/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/001/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/001/",
+    "canonical": "https://pie.pe/meza-piezimes/001/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/field-note-lv.txt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/001/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/001/",
+    "canonical": "https://pie.pe/en/field-notes/001/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/001/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/field-note-en.txt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/002-caga/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/002-caga/",
+    "canonical": "https://pie.pe/meza-piezimes/002-caga/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chaga",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birchName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birch",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/inonotus-obliquus-frfr-pilat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.lvm.lv/jaunumi/2405-dekorativa-slimiba-caga",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/piptoporus-betulinus-bull-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.mushroomexpert.com/fomitopsis_betulina.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/002-chaga/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/002-chaga/",
+    "canonical": "https://pie.pe/en/field-notes/002-chaga/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chaga",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-chagaLife",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birchName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-birch",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/inonotus-obliquus-frfr-pilat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.lvm.lv/jaunumi/2405-dekorativa-slimiba-caga",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/piptoporus-betulinus-bull-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.mushroomexpert.com/fomitopsis_betulina.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/003-serpiepe/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/003-serpiepe/",
+    "canonical": "https://pie.pe/meza-piezimes/003-serpiepe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/laetiporus-sulphureus-bull-fr-murrill/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/003-chicken-of-the-woods/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/003-chicken-of-the-woods/",
+    "canonical": "https://pie.pe/en/field-notes/003-chicken-of-the-woods/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphur",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-sulphurGuide",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/laetiporus-sulphureus-bull-fr-murrill/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/004-latvijas-piepes/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/004-latvijas-piepes/",
+    "canonical": "https://pie.pe/meza-piezimes/004-latvijas-piepes/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-tinder",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-redBelt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artistName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomes-fomentarius-l-fr-fr/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomitopsis-pinicola-sw-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/ganoderma-applanatum-pers-pat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/ganoderma-applanatum.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/004-common-bracket-fungi/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/004-common-bracket-fungi/",
+    "canonical": "https://pie.pe/en/field-notes/004-common-bracket-fungi/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-tinder",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-redBelt",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artistName",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-artist",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomes-fomentarius-l-fr-fr/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/fomitopsis-pinicola-sw-fr-p-karst/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.latvijasdaba.lv/senes/ganoderma-applanatum-pers-pat/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.first-nature.com/fungi/ganoderma-applanatum.php",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/005-kritalas-un-laiks/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/005-kritalas-un-laiks/",
+    "canonical": "https://pie.pe/meza-piezimes/005-kritalas-un-laiks/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-01.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-02.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-03.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-04.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-mycorrhiza",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.forestresearch.gov.uk/publications/managing-deadwood-in-forests-and-woodlands/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s10342-010-0400-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1038/s41598-017-14181-7",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycorrhiza.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/002-caga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/003-serpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/005-deadwood-and-time/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/005-deadwood-and-time/",
+    "canonical": "https://pie.pe/en/field-notes/005-deadwood-and-time/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-01.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-02.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-03.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/images/interactive/deadwood-stage-04.jpg",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwoodHabitats",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-deadwood",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-decay",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-mycorrhiza",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://www.forestresearch.gov.uk/publications/managing-deadwood-in-forests-and-woodlands/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s10342-010-0400-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1038/s41598-017-14181-7",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://www.anbg.gov.au/fungi/mycorrhiza.html",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/002-chaga/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/003-chicken-of-the-woods/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/meza-piezimes/006-lakas-plakanpiepe/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "lv",
+    "url": "http://127.0.0.1:4312/meza-piezimes/006-lakas-plakanpiepe/",
+    "canonical": "https://pie.pe/meza-piezimes/006-lakas-plakanpiepe/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-law",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-taxonomy",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://sarkanagramata.lu.lv/suga/lakas-plakanpiepe/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://likumi.lv/ta/id/12821-noteikumi-par-ipasi-aizsargajamo-sugu-un-ierobezoti-izmantojamo-ipasi-aizsargajamo-sugu-sarakstu",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s13225-012-0178-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/meza-piezimes/004-latvijas-piepes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/005-kritalas-un-laiks/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/kas-ir-piepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-foni/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  },
+  {
+    "path": "/en/field-notes/006-lacquered-bracket/",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "version": "3.2.0",
+    "lang": "en",
+    "url": "http://127.0.0.1:4312/en/field-notes/006-lacquered-bracket/",
+    "canonical": "https://pie.pe/en/field-notes/006-lacquered-bracket/",
+    "h1": 1,
+    "overflow": false,
+    "links": [
+      {
+        "href": "#reading",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/meza-piezimes/006-lakas-plakanpiepe/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/006-lacquered-bracket/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-lucidum",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-law",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "#source-taxonomy",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "https://sarkanagramata.lu.lv/suga/lakas-plakanpiepe/",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://likumi.lv/ta/id/12821-noteikumi-par-ipasi-aizsargajamo-sugu-un-ierobezoti-izmantojamo-ipasi-aizsargajamo-sugu-sarakstu",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://doi.org/10.1007/s13225-012-0178-5",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "/en/field-notes/004-common-bracket-fungi/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/005-deadwood-and-time/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/field-notes/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/what-is-a-bracket-fungus/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/forest-wallpapers/",
+        "target": null,
+        "rel": null
+      },
+      {
+        "href": "/en/",
+        "target": null,
+        "rel": null
+      }
+    ],
+    "errors": []
+  }
+]

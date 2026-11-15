@@ -1,0 +1,565 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-14T19:33:59.418Z",
+    "duration": 260899.25600000002,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 25789,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+                "column": 96,
+                "line": 192
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m2\u001b[39m\nReceived:   \u001b[31m2\u001b[39m\n\n  190 |         expect(result.paused).toBe(false); expect(result.ready).toBeGreaterThanOrEqual(2); expect(result.opacity).toBeGreaterThan(.98)\n  191 |         expect(result.rect.w).toBeGreaterThanOrEqual(result.viewport.w - 2); expect(result.rect.h).toBeGreaterThanOrEqual(result.viewport.h - 2)\n> 192 |         expect(result.frames.length).toBeGreaterThan(3); expect(distinctFrames(result.frames)).toBeGreaterThan(2)\n      |                                                                                                ^\n  193 |         expect(result.frames.slice(1).reduce((elapsed, frame, i) => elapsed + Math.max(0, frame.time - result.frames[i].time), 0)).toBeGreaterThan(.3)\n  194 |         const box = await page.locator(`#${id} .cinema-content`).boundingBox(); expect(Math.abs(box!.y)).toBeLessThan(2)\n  195 |       }\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:192:96"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1381,
+              "bodySha256": "f9ae61e0b586c4070afeb0d6c3d79e993fe6b11c7536d0c5b2a5bbf1c78d7f2c"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 898,
+              "bodySha256": "3da832d79577319a9e7a3f3b128758b4a5eca16b6c8d51426a2c6a2749ae75a6"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1655,
+              "bodySha256": "9213a9e8d5b6aba4ac683adf4d2af0f21e31e1d0ab6c45d4b165e0b03c005bd3"
+            },
+            {
+              "name": "environmental-state-on-failure",
+              "contentType": "application/json",
+              "bodyBytes": 414,
+              "bodySha256": "380240a40886b7448869e4481387f808726b1f65aea0019e3c1ed6cf9ac095f3"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 13069,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+                "column": 47,
+                "line": 60
+              },
+              "message": "Error: locator.evaluate: Error: No advancing presented video frames: {\"phase\":\"cadence\",\"src\":\"http://127.0.0.1:4173/media/forest-understory.mp4?v=2.3\",\"time\":4.95300969700001,\"paused\":false,\"ended\":false,\"ready\":4,\"connected\":true,\"reason\":\"\",\"cycles\":\"0\",\"held\":\"false\",\"totalFrames\":145,\"frames\":[{\"time\":4,\"presented\":2,\"phase\":\"cadence\"}]}\n\n  58 |     return opacity\n  59 |   })).toBeGreaterThan(.98)\n> 60 |   const sample = await layer.locator('video').evaluate(async (video: HTMLVideoElement) => {\n     |                                               ^\n  61 |     let opacity = 1\n  62 |     for (let e: Element | null = video; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)\n  63 |     const r = video.getBoundingClientRect()\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:60:47)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:189:24"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-a588c-e-revisits-loops-and-reload-webkit-iphone/test-failed-1.png"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "488c452f781f4ab298a7df557747c8954fd9bc51b673b9e1234801d401e9bc72"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1461,
+              "bodySha256": "e5c7ee25ce35c35686c8c28811f0bfab428ff71f74962cc6a064892b459d2a34"
+            },
+            {
+              "name": "environmental-state-on-failure",
+              "contentType": "application/json",
+              "bodyBytes": 400,
+              "bodySha256": "0ec425875732f599627987ce7fe4bba7e7d30f8b43456665e478bff7b726e55f"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-a588c-e-revisits-loops-and-reload-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-a588c-e-revisits-loops-and-reload-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 92873,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1494,
+              "bodySha256": "9ca2102a146df41542f3e9106a3a7e83385408b666edd16eeebecf933d6f982d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1268,
+              "bodySha256": "e624f61017a2d4205e3abf9268f6483e57f278620b864bfa3ffd1b9c74197b13"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1421,
+              "bodySha256": "08076e252bad26976ab0ad410a06791ee63a44d474718f2138aa8b6552a9ee49"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1509,
+              "bodySha256": "956377240ab8fa874e645e7fe5422d42656ea41e75befd29e2739d63de530420"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1496,
+              "bodySha256": "39c4bce14ce97f0f604049d910308bc15c95716409ca4a56c68c7b6d619779dd"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1512,
+              "bodySha256": "3c984067d9f80272fbcb2bf8c3411cf1fcff748b43013e9939d3fbaef4f1334e"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1451,
+              "bodySha256": "0bc29ddb80c91aec8c22fdde96a87a56fc1e786b5177b584e5c8b4f13732789c"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1560,
+              "bodySha256": "5da2f9194a049d2b86eea3f8f3f0316ba01262cc2cdd96ee8ef474bd2cfdc5a5"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1370,
+              "bodySha256": "48a1630ff374095c1d6bbbf176b8643ca01a3f866a5d9e990a0842f4a6f0e47b"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1465,
+              "bodySha256": "bd646d32329ca0e74f265bdac69f9445d902a0c91504f3eae34039de159f2af6"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1500,
+              "bodySha256": "e5699e49b935b4c67faea2cdbc5b67740f10ca9e3dd8f212fc8c0d46699b8a75"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1542,
+              "bodySha256": "e2fb2dfcd08301536ed56be062464f8fa8f227f2ff791489f90e78649c82a260"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1437,
+              "bodySha256": "669780a481c55b6758748fca8bdc0d17bf8bcc023496aac2ac535b3fa25e6ede"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1434,
+              "bodySha256": "a6eff15fb2ed13bc4ce9b9daf4f0d7e386b9151ffc62aa8d339e837e5e523a89"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1500,
+              "bodySha256": "77bffd5f95cadda004327c86446c0c862b49c3a03d1dcf2da66cada4a0226214"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1439,
+              "bodySha256": "46421a6a9f5e9ac74d1676d2d164c166b41e69c6d229a66ad6471152b0c63b6e"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 20967,
+              "bodySha256": "689d75904e41bc9be9dd96aa3bbcb5ef4863dc8b12900fe651186afe2564ba03"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "aea22645b5ffbf676d8f5c2e467fc0bde9925daed9b3ae7a1af1a65a5ec69230"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2521,
+              "bodySha256": "b473a8b53eebc4ac9035b6264b9316020c2bf0de7ff04c2219ef1e717d0de185"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 93703,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+                "column": 34,
+                "line": 96
+              },
+              "message": "Error: locator.evaluate: Error: No frame before composited sample\n\n  94 |   while(distinctFrames(sample.frames)<3&&Date.now()-pixelsStarted<2500){\n  95 |     const started=Date.now()\n> 96 |     await layer.locator('video').evaluate((video:HTMLVideoElement)=>new Promise<void>((resolve,reject)=>{\n     |                                  ^\n  97 |       const timer=setTimeout(()=>{video.cancelVideoFrameCallback(request);reject(Error('No frame before composited sample'))},1000)\n  98 |       const request=video.requestVideoFrameCallback(()=>{clearTimeout(timer);requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))})\n  99 |     }))\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:96:34)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:211:22"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1551,
+              "bodySha256": "e329c0fe377e9ab94aeebf0cd787e700fcff110a40c4705cfd26b8e07806c542"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1550,
+              "bodySha256": "f7e310ed3ac3952cbd4422cb1c543b1144c765e945c6db8c783c22034087b35a"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1537,
+              "bodySha256": "0ea4c852cafff2c2dde196edb848a3ebc47f011396899c29e83cdb7946bd1a2c"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1526,
+              "bodySha256": "d1819401d235f84d7a8319779b102c452e3db16bd9b888a35dbca5dca54c4d9a"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1543,
+              "bodySha256": "8e3260484a74640fab70f2a013be799c566de4fef8a9024d6a04a65d0044a182"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1421,
+              "bodySha256": "a9072970ba7fe2ce3f2509b8c462118f04eae5e50330df255f26d83cddcdcaaf"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1449,
+              "bodySha256": "3da6eeb4e24803bbd9a0bb06c9ec17abbc7cee8c0ae74a0bc7b122b77f138a68"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1554,
+              "bodySha256": "115dbc4922091c35cdb28175306fb47dbd776469892aafa77058cef1a97bc47d"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1396,
+              "bodySha256": "555c2a4a1ab7c1e31553ee91b0cd82aa4f911db38e5505196ad06519777a016a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1548,
+              "bodySha256": "5fd0097b7df8ff26fd287a40f8ed5bea280d4493a07d44bd49f270ea06d69c5a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1434,
+              "bodySha256": "f1f0e8a962e8c7fa2d58d1d19d737100b02a8d32cbd5d7dae674d48ca0b79727"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1445,
+              "bodySha256": "00fffd63a400fa5adc978b51171c2fa81c69641a7981a71eaa54ea9df3160062"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1556,
+              "bodySha256": "0b71d57a9572b779a6bfc28363fe231494ff585c2826baf01dc25f850ce4fc9a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1494,
+              "bodySha256": "64906f63bfbad9ea832b00858b8f518b92f797e775ff9823be7a1f730b705c9c"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1562,
+              "bodySha256": "0266903d84beb4cae3ae07a2e4f4307b0f5f83cf3c37988ea1758e09866d1340"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-dde9f-e-revisits-loops-and-reload-webkit-iphone/test-failed-1.png"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "452ecad1d99502abe4d3bd3b8c6dd6bcef4a057294327b3b5933b728a7c29aa4"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2524,
+              "bodySha256": "dd8875efa90e4c1c562f012fdd5bc70566f036553b0c7ee189f01533d79a2641"
+            },
+            {
+              "name": "environmental-state-on-failure",
+              "contentType": "application/json",
+              "bodyBytes": 574,
+              "bodySha256": "a2f50feb62da00daa1f2053f11f6aa3386fad2d357750aaa6f2dcb3ae2724589"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-dde9f-e-revisits-loops-and-reload-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-390x664-repeatable-cin-dde9f-e-revisits-loops-and-reload-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 lv JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 6483,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 lv JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5207,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "lv-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 1055104,
+              "bodySha256": "a94af90248740516296312c4433d4681b32e940b48f63d2470fae761cc5a2f13"
+            },
+            {
+              "name": "lv-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1074483,
+              "bodySha256": "de56661d21d3d4dba5ddb27f89a4b6b5f6cd3e8397f28451e555c1834584ee7d"
+            },
+            {
+              "name": "lv-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 3356569,
+              "bodySha256": "596c47df51053f5732d553ae3af6c62c1656040bc4a9dc1cd2202f3b22e094d5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 en JS=false: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4781,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v256.spec.ts",
+      "line": 9,
+      "title": "2.5.6 en JS=true: real text-first HTML, stable article routing and responsive reading",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4871,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "en-reading-390",
+              "contentType": "image/png",
+              "bodyBytes": 1051446,
+              "bodySha256": "27dcdd31039f7ec125b9538873c8ca622b919a59f421628211c91df14a73841d"
+            },
+            {
+              "name": "en-reading-800",
+              "contentType": "image/png",
+              "bodyBytes": 1075375,
+              "bodySha256": "41b7dabd02472e77775daccb1d5ee4bf4069bd03ec9572a2395d05e127d3d414"
+            },
+            {
+              "name": "en-reading-1440",
+              "contentType": "image/png",
+              "bodyBytes": 3369807,
+              "bodySha256": "c344104e713ed0bec589e5daf2811745d9351f0b1abeee8ae1f5a2a9f64f5b90"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

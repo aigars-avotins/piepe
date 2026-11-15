@@ -1,0 +1,74 @@
+{
+  "baseline": {
+    "samples": [
+      {
+        "first-contentful-paint": 3634.001,
+        "largest-contentful-paint": 19222.197,
+        "total-blocking-time": 108.75299999999879,
+        "cumulative-layout-shift": 0.00134937799189727,
+        "speed-index": 12138,
+        "score": 0.58
+      },
+      {
+        "first-contentful-paint": 3730.414,
+        "largest-contentful-paint": 19276.748,
+        "total-blocking-time": 124.53500000000167,
+        "cumulative-layout-shift": 0.00134937799189727,
+        "speed-index": 12176,
+        "score": 0.57
+      },
+      {
+        "first-contentful-paint": 3482.355,
+        "largest-contentful-paint": 19571.937,
+        "total-blocking-time": 507.8739999961799,
+        "cumulative-layout-shift": 0.00134937799189727,
+        "speed-index": 12274,
+        "score": 0.46
+      }
+    ],
+    "median": {
+      "first-contentful-paint": 3634.001,
+      "largest-contentful-paint": 19276.748,
+      "total-blocking-time": 124.53500000000167,
+      "cumulative-layout-shift": 0.00134937799189727,
+      "speed-index": 12176,
+      "score": 0.57
+    }
+  },
+  "candidate": {
+    "samples": [
+      {
+        "first-contentful-paint": 3236.929,
+        "largest-contentful-paint": 18420.402,
+        "total-blocking-time": 216.08200000000215,
+        "cumulative-layout-shift": 0.00134937799189727,
+        "speed-index": 11410,
+        "score": 0.56
+      },
+      {
+        "first-contentful-paint": 3074.86,
+        "largest-contentful-paint": 18235.04,
+        "total-blocking-time": 107.34600000000137,
+        "cumulative-layout-shift": 0.00134937799189727,
+        "speed-index": 11242,
+        "score": 0.6
+      },
+      {
+        "first-contentful-paint": 3117.527,
+        "largest-contentful-paint": 18333.92,
+        "total-blocking-time": 267.3520000000026,
+        "cumulative-layout-shift": 0.00134937799189727,
+        "speed-index": 11282,
+        "score": 0.55
+      }
+    ],
+    "median": {
+      "first-contentful-paint": 3117.527,
+      "largest-contentful-paint": 18333.92,
+      "total-blocking-time": 216.08200000000215,
+      "cumulative-layout-shift": 0.00134937799189727,
+      "speed-index": 11282,
+      "score": 0.56
+    }
+  }
+}

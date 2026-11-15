@@ -1,0 +1,817 @@
+[
+  {
+    "variant": "baseline",
+    "network": "local normal + 1x CPU",
+    "initial": {
+      "lcp": 228,
+      "cls": 0,
+      "longTasks": [],
+      "events": [],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14408,
+          "duration": 18.799999997019768
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "bytes": 396724,
+          "duration": 50.5
+        },
+        {
+          "name": "/assets/index-CTtv8oDT.css",
+          "bytes": 83014,
+          "duration": 31.199999999254942
+        },
+        {
+          "name": "/assets/index-BwOYb_ck.js",
+          "bytes": 452551,
+          "duration": 50.600000001490116
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "bytes": 464139,
+          "duration": 51.599999997764826
+        },
+        {
+          "name": "/brand-mark.svg",
+          "bytes": 2058,
+          "duration": 31.600000001490116
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "bytes": 660360,
+          "duration": 52.100000001490116
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "bytes": 3727,
+          "duration": 50.100000001490116
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 20188,
+          "duration": 76.5
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8592,
+          "duration": 68.5
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20584,
+          "duration": 68.09999999776483
+        },
+        {
+          "name": "/images/portal/threshold-160.webp",
+          "bytes": 11448,
+          "duration": 5
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 23176,
+          "duration": 15.600000001490116
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23960,
+          "duration": 12.399999998509884
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 2125,
+          "duration": 3.600000001490116
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "bytes": 507146,
+          "duration": 16.300000000745058
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "bytes": 444434,
+          "duration": 14.300000000745058
+        },
+        {
+          "name": "/favicon.ico",
+          "bytes": 51045,
+          "duration": 15.099999997764826
+        }
+      ],
+      "heap": 5344140
+    },
+    "firstFrame": {
+      "latency": 141.89999999850988,
+      "mediaTime": 0,
+      "width": 1920,
+      "height": 1080,
+      "rate": 1
+    },
+    "samples": [
+      {
+        "state": "cinema",
+        "elapsed": 2214.8999999999996,
+        "frames": 133,
+        "maxGap": 16.800000000000182,
+        "over50": 0,
+        "heap": 7473772,
+        "taskSeconds": 0.09514800000000001,
+        "layoutSeconds": 0,
+        "scriptSeconds": 0.0061520000000000186,
+        "video": {
+          "currentTime": 2.666987,
+          "rate": 1,
+          "totalFrames": 68,
+          "droppedFrames": 0
+        }
+      }
+    ],
+    "final": {
+      "lcp": 228,
+      "cls": 0,
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 32
+        },
+        {
+          "name": "pointerup",
+          "duration": 32
+        },
+        {
+          "name": "click",
+          "duration": 32
+        },
+        {
+          "name": "pointerdown",
+          "duration": 64
+        },
+        {
+          "name": "pointerup",
+          "duration": 64
+        },
+        {
+          "name": "click",
+          "duration": 64
+        },
+        {
+          "name": "pointerdown",
+          "duration": 48
+        },
+        {
+          "name": "pointerup",
+          "duration": 48
+        },
+        {
+          "name": "click",
+          "duration": 48
+        }
+      ],
+      "heap": 7473772,
+      "resourceCount": 27,
+      "transferBytes": 34208336
+    }
+  },
+  {
+    "variant": "baseline",
+    "network": "Slow4G + 4x CPU",
+    "initial": {
+      "lcp": 3948,
+      "cls": 0.0034490411855122817,
+      "longTasks": [
+        115,
+        102,
+        88,
+        195,
+        139,
+        57
+      ],
+      "events": [],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14408,
+          "duration": 1058.199999999255
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "bytes": 396724,
+          "duration": 10704.5
+        },
+        {
+          "name": "/assets/index-BwOYb_ck.js",
+          "bytes": 452551,
+          "duration": 11594.39999999851
+        },
+        {
+          "name": "/assets/index-CTtv8oDT.css",
+          "bytes": 83014,
+          "duration": 2939.599999997765
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "bytes": 464139,
+          "duration": 11735.89999999851
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "bytes": 660360,
+          "duration": 13142.699999999255
+        },
+        {
+          "name": "/brand-mark.svg",
+          "bytes": 2058,
+          "duration": 1752.800000000745
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "bytes": 3727,
+          "duration": 2500
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 20188,
+          "duration": 2380.39999999851
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8592,
+          "duration": 3268.39999999851
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20584,
+          "duration": 4527.599999997765
+        },
+        {
+          "name": "/images/portal/threshold-160.webp",
+          "bytes": 11448,
+          "duration": 981.4000000022352
+        },
+        {
+          "name": "/images/portal/threshold-480.webp",
+          "bytes": 88304,
+          "duration": 3192.800000000745
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 23176,
+          "duration": 2279
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23960,
+          "duration": 1248
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "bytes": 507146,
+          "duration": 5861.199999999255
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "bytes": 444434,
+          "duration": 5527.599999997765
+        }
+      ],
+      "heap": 5704690
+    },
+    "firstFrame": {
+      "latency": 7937.199999999255,
+      "mediaTime": 0,
+      "width": 1920,
+      "height": 1080,
+      "rate": 1
+    },
+    "samples": [
+      {
+        "state": "cinema",
+        "elapsed": 2203.099999997765,
+        "frames": 133,
+        "maxGap": 16.80000000000291,
+        "over50": 0,
+        "heap": 6532571,
+        "taskSeconds": 0.19732700000000136,
+        "layoutSeconds": 0,
+        "scriptSeconds": 0.02292699999999992,
+        "video": {
+          "currentTime": 2.60075,
+          "rate": 1,
+          "totalFrames": 64,
+          "droppedFrames": 4
+        }
+      }
+    ],
+    "final": {
+      "lcp": 3948,
+      "cls": 0.023145456732928976,
+      "longTasks": [
+        115,
+        102,
+        88,
+        195,
+        139,
+        57,
+        60,
+        110,
+        58,
+        61,
+        54
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 40
+        },
+        {
+          "name": "pointerup",
+          "duration": 40
+        },
+        {
+          "name": "click",
+          "duration": 40
+        },
+        {
+          "name": "pointerdown",
+          "duration": 160
+        },
+        {
+          "name": "pointerup",
+          "duration": 160
+        },
+        {
+          "name": "click",
+          "duration": 160
+        },
+        {
+          "name": "pointerdown",
+          "duration": 40
+        },
+        {
+          "name": "pointerup",
+          "duration": 40
+        },
+        {
+          "name": "click",
+          "duration": 40
+        }
+      ],
+      "heap": 6532571,
+      "resourceCount": 28,
+      "transferBytes": 8279960
+    }
+  },
+  {
+    "variant": "candidate",
+    "network": "local normal + 1x CPU",
+    "initial": {
+      "lcp": 160,
+      "cls": 0,
+      "longTasks": [],
+      "events": [],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14408,
+          "duration": 13.800000000745058
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "bytes": 660360,
+          "duration": 19.599999997764826
+        },
+        {
+          "name": "/assets/index-CLofeRZh.js",
+          "bytes": 458051,
+          "duration": 21.900000002235174
+        },
+        {
+          "name": "/assets/index-Bz7FGSkB.css",
+          "bytes": 87296,
+          "duration": 15.5
+        },
+        {
+          "name": "/brand-mark.svg",
+          "bytes": 2058,
+          "duration": 20.599999997764826
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "bytes": 3727,
+          "duration": 21.299999997019768
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "bytes": 396724,
+          "duration": 8.399999998509884
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 20188,
+          "duration": 62.69999999925494
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8592,
+          "duration": 59.5
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20584,
+          "duration": 61.100000001490116
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "bytes": 464139,
+          "duration": 16.099999997764826
+        },
+        {
+          "name": "/images/portal/threshold-160.webp",
+          "bytes": 11448,
+          "duration": 11
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 23176,
+          "duration": 15.800000000745058
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23960,
+          "duration": 15.100000001490116
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "bytes": 507146,
+          "duration": 8.5
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "bytes": 444434,
+          "duration": 8.299999997019768
+        },
+        {
+          "name": "/favicon.svg",
+          "bytes": 2125,
+          "duration": 5.600000001490116
+        },
+        {
+          "name": "/favicon.ico",
+          "bytes": 51045,
+          "duration": 2.400000002235174
+        }
+      ],
+      "heap": 5387105
+    },
+    "firstFrame": {
+      "latency": 218.29999999701977,
+      "mediaTime": 0,
+      "width": 1920,
+      "height": 1080,
+      "rate": 1
+    },
+    "samples": [
+      {
+        "state": "cinema",
+        "elapsed": 2201.600000002235,
+        "frames": 133,
+        "maxGap": 16.800000000000182,
+        "over50": 0,
+        "heap": 7316869,
+        "taskSeconds": 0.09573799999999999,
+        "layoutSeconds": 0,
+        "scriptSeconds": 0.006057000000000007,
+        "video": {
+          "currentTime": 2.567858,
+          "rate": 1,
+          "totalFrames": 66,
+          "droppedFrames": 0
+        }
+      },
+      {
+        "state": "thread-idle",
+        "elapsed": 2202.7,
+        "frames": 133,
+        "maxGap": 16.800000000000182,
+        "over50": 0,
+        "heap": 7552717,
+        "taskSeconds": 0.09075900000000003,
+        "layoutSeconds": 0,
+        "scriptSeconds": 0.006662000000000001,
+        "video": {
+          "currentTime": 4.81819,
+          "rate": 1,
+          "totalFrames": 120,
+          "droppedFrames": 0
+        }
+      },
+      {
+        "state": "thread-input",
+        "elapsed": 2204.7000000000007,
+        "frames": 133,
+        "maxGap": 16.80000000000109,
+        "over50": 0,
+        "heap": 7867973,
+        "taskSeconds": 0.08364399999999994,
+        "layoutSeconds": 0.00045899999999999413,
+        "scriptSeconds": 0.016149999999999998,
+        "video": {
+          "currentTime": 7.0327,
+          "rate": 1,
+          "totalFrames": 173,
+          "droppedFrames": 0
+        }
+      }
+    ],
+    "final": {
+      "lcp": 160,
+      "cls": 0,
+      "longTasks": [
+        93,
+        125
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 32
+        },
+        {
+          "name": "pointerup",
+          "duration": 32
+        },
+        {
+          "name": "click",
+          "duration": 32
+        },
+        {
+          "name": "pointerdown",
+          "duration": 32
+        },
+        {
+          "name": "pointerup",
+          "duration": 32
+        },
+        {
+          "name": "click",
+          "duration": 32
+        },
+        {
+          "name": "pointerdown",
+          "duration": 64
+        },
+        {
+          "name": "pointerup",
+          "duration": 64
+        },
+        {
+          "name": "click",
+          "duration": 64
+        },
+        {
+          "name": "pointerdown",
+          "duration": 24
+        },
+        {
+          "name": "pointerup",
+          "duration": 24
+        },
+        {
+          "name": "click",
+          "duration": 24
+        }
+      ],
+      "heap": 7867973,
+      "resourceCount": 23,
+      "transferBytes": 28230149
+    }
+  },
+  {
+    "variant": "candidate",
+    "network": "Slow4G + 4x CPU",
+    "initial": {
+      "lcp": 3004,
+      "cls": 0.004257385141173655,
+      "longTasks": [
+        135,
+        120,
+        116,
+        54
+      ],
+      "events": [],
+      "resources": [
+        {
+          "name": "/assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+          "bytes": 14408,
+          "duration": 954.8000000007451
+        },
+        {
+          "name": "/media/forest-poster.jpg",
+          "bytes": 660360,
+          "duration": 14234.10000000149
+        },
+        {
+          "name": "/assets/index-CLofeRZh.js",
+          "bytes": 458051,
+          "duration": 10449.89999999851
+        },
+        {
+          "name": "/assets/index-Bz7FGSkB.css",
+          "bytes": 87296,
+          "duration": 2121.10000000149
+        },
+        {
+          "name": "/brand-mark.svg",
+          "bytes": 2058,
+          "duration": 689.0999999977648
+        },
+        {
+          "name": "/brand-wordmark.svg",
+          "bytes": 3727,
+          "duration": 832.8999999985099
+        },
+        {
+          "name": "/media/forest-final.jpg",
+          "bytes": 396724,
+          "duration": 9786.5
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-normal-Drx2k2n9.woff2",
+          "bytes": 20188,
+          "duration": 2364.89999999851
+        },
+        {
+          "name": "/assets/manrope-latin-ext-400-normal-CMDvPJRp.woff2",
+          "bytes": 8592,
+          "duration": 3242.89999999851
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-ext-400-italic-BdEzgT7i.woff2",
+          "bytes": 20584,
+          "duration": 4489
+        },
+        {
+          "name": "/media/forest-breathing-poster.jpg",
+          "bytes": 464139,
+          "duration": 11270.79999999702
+        },
+        {
+          "name": "/images/portal/threshold-160.webp",
+          "bytes": 11448,
+          "duration": 986.4000000022352
+        },
+        {
+          "name": "/images/portal/threshold-480.webp",
+          "bytes": 88304,
+          "duration": 3195.2000000029802
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-normal-B-1hWBU7.woff2",
+          "bytes": 23176,
+          "duration": 2261.900000002235
+        },
+        {
+          "name": "/assets/cormorant-garamond-latin-400-italic-Dc_OZ8oc.woff2",
+          "bytes": 23960,
+          "duration": 1245.0999999977648
+        },
+        {
+          "name": "/media/forest-understory-final.jpg",
+          "bytes": 507146,
+          "duration": 6916.099999997765
+        },
+        {
+          "name": "/media/forest-understory.jpg",
+          "bytes": 444434,
+          "duration": 6581.900000002235
+        }
+      ],
+      "heap": 5734964
+    },
+    "firstFrame": {
+      "latency": 7941.29999999702,
+      "mediaTime": 0,
+      "width": 1920,
+      "height": 1080,
+      "rate": 1
+    },
+    "samples": [
+      {
+        "state": "cinema",
+        "elapsed": 2205.600000000006,
+        "frames": 133,
+        "maxGap": 16.80000000000291,
+        "over50": 0,
+        "heap": 6255270,
+        "taskSeconds": 0.21744200000000014,
+        "layoutSeconds": 0,
+        "scriptSeconds": 0.02543200000000001,
+        "video": {
+          "currentTime": 2.586248,
+          "rate": 1,
+          "totalFrames": 61,
+          "droppedFrames": 0
+        }
+      },
+      {
+        "state": "thread-idle",
+        "elapsed": 2212.800000001487,
+        "frames": 133,
+        "maxGap": 16.80000000000291,
+        "over50": 0,
+        "heap": 5870333,
+        "taskSeconds": 0.16568899999999864,
+        "layoutSeconds": 0,
+        "scriptSeconds": 0.019177,
+        "video": {
+          "currentTime": 3.085635,
+          "rate": 1,
+          "totalFrames": 73,
+          "droppedFrames": 4
+        }
+      },
+      {
+        "state": "thread-input",
+        "elapsed": 2214.099999999249,
+        "frames": 133,
+        "maxGap": 16.80000000000291,
+        "over50": 0,
+        "heap": 6198992,
+        "taskSeconds": 0.30120199999999997,
+        "layoutSeconds": 0.0016300000000000203,
+        "scriptSeconds": 0.046618999999999966,
+        "video": {
+          "currentTime": 3.085635,
+          "rate": 1,
+          "totalFrames": 82,
+          "droppedFrames": 8
+        }
+      }
+    ],
+    "final": {
+      "lcp": 3004,
+      "cls": 0.026946704156357502,
+      "longTasks": [
+        135,
+        120,
+        116,
+        54,
+        94
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 128
+        },
+        {
+          "name": "pointerup",
+          "duration": 128
+        },
+        {
+          "name": "click",
+          "duration": 128
+        },
+        {
+          "name": "pointerdown",
+          "duration": 40
+        },
+        {
+          "name": "pointerup",
+          "duration": 40
+        },
+        {
+          "name": "click",
+          "duration": 40
+        },
+        {
+          "name": "pointerdown",
+          "duration": 48
+        },
+        {
+          "name": "pointerup",
+          "duration": 48
+        },
+        {
+          "name": "click",
+          "duration": 48
+        },
+        {
+          "name": "pointerdown",
+          "duration": 24
+        },
+        {
+          "name": "pointerup",
+          "duration": 24
+        },
+        {
+          "name": "click",
+          "duration": 24
+        }
+      ],
+      "heap": 6198992,
+      "resourceCount": 23,
+      "transferBytes": 8026741
+    }
+  }
+]

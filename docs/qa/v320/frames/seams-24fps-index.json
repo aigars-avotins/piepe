@@ -1,0 +1,82 @@
+[
+  {
+    "phase": "before",
+    "viewport": "lv-1512",
+    "boundary": "deepening/0/1",
+    "recordingStartSeconds": 15.378,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "before-lv-1512-1-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  },
+  {
+    "phase": "before",
+    "viewport": "lv-1512",
+    "boundary": "arriving/0/0",
+    "recordingStartSeconds": 25.707,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "before-lv-1512-2-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  },
+  {
+    "phase": "before",
+    "viewport": "en-390",
+    "boundary": "deepening/0/1",
+    "recordingStartSeconds": 12.417000000000002,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "before-en-390-1-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  },
+  {
+    "phase": "before",
+    "viewport": "en-390",
+    "boundary": "arriving/0/0",
+    "recordingStartSeconds": 22.681,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "before-en-390-2-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  },
+  {
+    "phase": "after",
+    "viewport": "lv-1512",
+    "boundary": "deepening/0/1",
+    "recordingStartSeconds": 13.671000000000001,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "after-lv-1512-1-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  },
+  {
+    "phase": "after",
+    "viewport": "lv-1512",
+    "boundary": "arriving/0/0",
+    "recordingStartSeconds": 23.945,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "after-lv-1512-2-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  },
+  {
+    "phase": "after",
+    "viewport": "en-390",
+    "boundary": "deepening/0/1",
+    "recordingStartSeconds": 12.479000000000001,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "after-en-390-1-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  },
+  {
+    "phase": "after",
+    "viewport": "en-390",
+    "boundary": "arriving/0/0",
+    "recordingStartSeconds": 22.76,
+    "sampleRate": 24,
+    "frames": 24,
+    "file": "after-en-390-2-24fps.webp",
+    "method": "Chronological browser-capture frames; fps filter samples existing frames without motion interpolation. QA-only."
+  }
+]

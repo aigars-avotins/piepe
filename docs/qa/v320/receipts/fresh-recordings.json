@@ -1,0 +1,26 @@
+[
+  {
+    "path": "fresh-after-lv-1512.webm",
+    "bytes": 2709384,
+    "sha256": "5e602cdbca442cc2091bb18c83689a3865480ec8e546d0d86c362b4b1a825d5d",
+    "purpose": "QA-only unmodified browser capture; original-speed fresh intro"
+  },
+  {
+    "path": "fresh-before-en-390.webm",
+    "bytes": 910957,
+    "sha256": "e5b373ef893432c3c83999b572e6e30a3bc6dc729de4f7b32bda0b2ad99a7371",
+    "purpose": "QA-only unmodified browser capture; original-speed fresh intro"
+  },
+  {
+    "path": "fresh-before-lv-1512.webm",
+    "bytes": 2714611,
+    "sha256": "51436c16a2ad76604ceec58863ac9afcc79032f87f92ab9e70bdcc260f3137d0",
+    "purpose": "QA-only unmodified browser capture; original-speed fresh intro"
+  },
+  {
+    "path": "fresh-after-en-390.webm",
+    "bytes": 928843,
+    "sha256": "f746461bec7f6d8f008f226931fd33e9bf02b6a6a9aa59bf17e45518dbbbe7e2",
+    "purpose": "QA-only unmodified browser capture; original-speed fresh intro"
+  }
+]

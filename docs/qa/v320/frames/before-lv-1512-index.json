@@ -1,0 +1,86 @@
+[
+  {
+    "phase": "entering/0/0",
+    "wallTimeMs": 5350,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/lv-1512-boundary-0.webp"
+  },
+  {
+    "phase": "deepening/0/1",
+    "wallTimeMs": 15578,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/lv-1512-boundary-1.webp"
+  },
+  {
+    "phase": "arriving/0/0",
+    "wallTimeMs": 25907,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/lv-1512-boundary-2.webp"
+  },
+  {
+    "phase": "living-world/0/1",
+    "wallTimeMs": 36089,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/lv-1512-boundary-3.webp"
+  },
+  {
+    "phase": "returning/2/0",
+    "wallTimeMs": 56500,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/lv-1512-boundary-4.webp"
+  },
+  {
+    "phase": "returning/2/1",
+    "wallTimeMs": 66683,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/lv-1512-boundary-5.webp"
+  },
+  {
+    "phase": "finished/2/1",
+    "wallTimeMs": 76706,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/lv-1512-boundary-6.webp"
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-15T07:00:54.806Z",
+    "duration": 80406.348,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 76019,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1500,
+              "bodySha256": "1103495e634cccf9eae04238268ddb69a067a81e61116634ae1406f1507ff918"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1448,
+              "bodySha256": "ec579c0ca8cd9aedd5b30878cb32824e444a3ee2d1a3669936000c9e7fd3f7e5"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1449,
+              "bodySha256": "fd2cd56905751f667ba5123bb734c16828457305ba7cb6010049ab77e3b4313c"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1503,
+              "bodySha256": "6aa42f55e60b7421ccbfcff13f94a9f2edc766437d44d995cc2509447d10c46f"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1440,
+              "bodySha256": "50c532762c1c3ce72e3fa078a5f3eba28603b8b6cffcead95fd3913c87fc4f10"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1502,
+              "bodySha256": "1530719aabc6cafc3a01689e5395c9d755ef3b1f36c386cc45f581be8dd2baf7"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1497,
+              "bodySha256": "958cce5bce73f2521b780a494fbc6e6433f72dfbdef502421ccfbee54e051a10"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1102,
+              "bodySha256": "7afd77cd94c96276237e32af59c2818284cb90a7426a7a4b6368893215e24d77"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1609,
+              "bodySha256": "43322599ea1d9fa71a998f6ecc9cf10fcbd4b7c70fc7d84b745869c8f155b1e6"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1509,
+              "bodySha256": "18c68fd932732e2e266c1e1c86943fb94c2dec6126d335cb1bca81b9d83152b8"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1477,
+              "bodySha256": "d723a3f320832c5de7f9aa2037935891dfedcb6d227a5ffd396c51369f5b6200"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1441,
+              "bodySha256": "fb53cc5c305278561e95aea8c41e782a0856e4c75e2e835e9a7430cbfc815762"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1392,
+              "bodySha256": "c28bc00f70020f70d4348fe9de25cb01f9a8b08edfa4659f0a450fc2fcbab4ed"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1497,
+              "bodySha256": "244b928822790c38061f8430d601d403c351093dc965b9b54901cc5ee9a12983"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1168,
+              "bodySha256": "c68173fb4646f618850f7d96853f66853f22a6dbc2199e6e7c4e03edfc3c4e2b"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1006,
+              "bodySha256": "5ba05b90c49020e0746ecdace0699eb079e9bd8a574f66cf11da4529aea9c80d"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 20875,
+              "bodySha256": "ae8f211fa94f7c5465b01b21341866e79e4510632247025ad2bc9aef1d5f0c5d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "d42e5d87c6a4aee522f57c2655c4714c6a4d34ff8aacd59196e9da4eb40044c4"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2523,
+              "bodySha256": "c4e7ea29ec63afd881fea62361759280ada70aec49583c8bd6a9cdb6f8e542fa"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

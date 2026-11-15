@@ -1,34 +1,41 @@
 # PIE.PE 3.2 — performance evidence
 
-This is laboratory evidence, not CrUX, field INP, battery-life or Google ranking certification. Preserve original film/image fidelity. No new production video, media compression, animation library, tracker or Cloudflare infrastructure change.
+These are laboratory comparisons with production 3.1.1 (`8a210b2`), not CrUX, field INP, battery-life or ranking certification. Original image/film fidelity and all production media bytes are unchanged. No new dependency, tracker or infrastructure was added.
 
-## Controlled fresh-first-visit Lighthouse
+## Fresh visits
 
-Lighthouse 13.6, local Chromium, frozen production 3.1.1 versus candidate, same Node static serving helper invoking the unchanged real media Worker and built CSP/headers. Fresh storage, normal desktop (provided network, CPU1) and actual DevTools Slow4G mobile (562.5ms request latency, 1474.56Kbps down/675Kbps up, CPU4). These helpers serve raw JS/CSS rather than Cloudflare's production compression; transfer/LCP numbers are not production predictions. One initial sample per profile; scores vary and do not establish causation.
+Lighthouse 13.6 / Chromium, same local serving helper invoking the unchanged real media Worker and built security headers. Fresh storage. Desktop: normal network, CPU1. Phone: actual DevTools Slow 4G, 562.5ms latency, 1474.56/675Kbps down/up, CPU4. Helpers serve raw JS/CSS rather than production compression. Desktop is one sample per version; mobile values below are medians of three alternating samples per version. [All mobile samples](qa/v320/receipts/mobile-lighthouse-samples.json).
 
-| Profile | 3.1.1 | 3.2 candidate |
+| Metric | Desktop 3.1.1 → 3.2 | Slow 4G phone 3.1.1 → 3.2 |
 |---|---:|---:|
-| Desktop FCP | 463ms | 381ms |
-| Desktop LCP | 8456ms | 8455ms |
-| Desktop TBT | 43ms | 30ms |
-| Desktop CLS | 0.00562 | see raw result |
-| Desktop performance score | 70 | 71 |
-| Slow4G mobile FCP | 3634ms | 3237ms |
-| Slow4G mobile LCP | 19222ms | 18420ms |
-| Slow4G mobile TBT | 109ms | 216ms |
-| Slow4G mobile CLS | 0.00135 | see raw result |
-| Slow4G mobile performance score | 58 | 56 |
+| FCP | 463 → 381ms | 3634 → 3118ms |
+| LCP | 8456 → 8455ms | 19277 → 18334ms |
+| TBT | 43 → 30ms | 125 → 216ms |
+| CLS | 0.00562 → 0.00562 | 0.00135 → 0.00135 |
+| Speed Index | — | 12176 → 11282ms |
+| Performance score | 70 → 71 | 57 → 56 |
 
-Accessibility, best practices and SEO are 100 in all four audits. These audits cover the homepage, not every modal/interaction. The slower mobile TBT/score is reported, not hidden; additional controlled evidence and interaction profiling are recorded in final QA before release.
+Accessibility, best practices and SEO scored 100 in these homepage audits; this is not certification of every interaction. Mobile TBT increased, and the score decreased by one point. TBT samples varied substantially: baseline 109/125/508ms, candidate 216/107/267ms. A brief parallel typecheck during the second baseline sample adds host noise; do not infer precise causation or perfect isolation. The later history restoration, Encounter spacing correction and environmental-only compositor promotion do not affect this fresh initial-page comparison; their functionality was tested separately.
 
-The long fresh-visit LCP is the deliberately late typography during the original opening film, not a broken image. The baseline mobile LCP element was the hero label, with about19.2s render delay on this slow profile. The original authored intro is preserved, not shortened or hidden to game the score. Good field LCP<2.5s/INP≤200ms/CLS≤0.1 remain goals, not achieved-field claims.
+Fresh-visit LCP is the deliberately late hero typography during the original opening film. Do not shorten or hide approved cinema to game the score. Good field LCP <2.5s / INP ≤200ms / CLS ≤0.1 remain goals, not achieved-field claims.
 
-## Evidence-based loading change
+## Measured changes and cost
 
-The baseline competed for THREE high-priority forest images: final396,424B, breathing poster463,839B and real opening poster660,060B. On Slow4G the future-layer images completed before the opening poster. Preload the actual opening image; make the invisible future layers lazy/low-priority. Bytes/quality remain identical. React no longer emits high-priority preloads for those invisible layers; this is covered by SSR regression tests. It is a priority change, not a claim to remove all future image requests.
+Baseline requested three forest images at high priority, allowing future layers to finish before the opening poster on Slow 4G. Candidate preloads the actual 660,060-byte opening image and gives invisible future layers lazy/low priority. Their sources and quality remain unchanged. This fixes priority competition, not every future image request.
 
-## Interaction, media and resource budget
+| Homepage entry payload | 3.1.1 raw / gzip | Final 3.2 raw / gzip |
+|---|---:|---:|
+| JavaScript | 452,251 / 152,021B | 458,829 / 153,955B |
+| CSS | 82,714 / 17,036B | 87,405 / 17,773B |
 
-Final normal/Slow4G returning-visit profiles, first presented native frame, rAF/frame stalls, main-thread CPU proxy, heap/request/byte counts and event-duration latency proxy are linked from [QA](V320-QA.md). Event Timing is a lab interaction proxy, not field INP. CDP task/script/layout duration and rAF gaps are CPU/render proxies, not measured GPU utilization or battery draw. Headless software rendering and one laboratory host cannot certify a physical iPhone's thermal behavior.
+Gzip uses the same local Python settings, not Cloudflare transfer receipts. Added cost is 1,934 compressed JS bytes and 737 compressed CSS bytes. Static reading documents still load their independent small reading-tools module, with no homepage React/GSAP/video runtime.
 
-The opt-in thread has one local composited light, no continuous idle rAF and no new media request. Original two-slot bounds remain one playing movie plus one staged source. All portal films stay request-free before intent. Quiet exploration requests no new resources. Static articles retain the independent small reading-tools bundle and no global React/GSAP/video runtime. Exact final JS/CSS/gzip deltas, original-speed source details and raw receipts are recorded with the release QA.
+## Returning visits and the optional thread
+
+[Raw interaction/resource/CPU/heap samples](qa/v320/receipts/interaction-profile.json) compare normal and Slow 4G returning visits, without the fresh intro. Returning LCP: 228 → 160ms normal; 3948 → 3004ms Slow 4G. First presented portal frame: 142 → 218ms normal; 7937 → 7941ms Slow 4G. The tiny normal-network increase is reported without claiming a statistically established regression or improvement.
+
+No portal movie is requested before intent; opening/exploring the thread requests no additional media. Existing bounds remain one playing film and one staged source. Thread lighting coalesces pointer input into one requested frame and has no idle animation loop. A normal 2.2s input sample contained 133 animation frames, maximum gap 16.8ms and none >50ms. Slow samples recorded 0/4/8 total dropped video frames; these are not described as zero-drop playback.
+
+CDP task duration during equal observation windows: cinema/thread idle/input 0.096/0.091/0.084s normal, 0.217/0.166/0.301s at CPU4. Initial heap changed 5.34 → 5.39MiB normal and 5.70 → 5.73MiB slow; a normal cinema/thread/after-input sample used about 7.3/7.6/7.9MiB. These are short samples, not a long-session leak proof. Event Timing maximum was 64ms for both normal profiles and 160 → 48ms slow: a lab latency proxy, not field INP. CPU task/rAF/heap observations do not measure GPU utilization, physical-device thermals or battery drain.
+
+No further video compression, re-encoding, fidelity reduction or speculative processing was used to improve scores. Physical iPhone and real-user performance remain explicit follow-up checks.

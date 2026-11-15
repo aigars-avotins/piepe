@@ -1,0 +1,1655 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-15T06:45:34.464Z",
+    "duration": 509840.32800000004,
+    "expected": 27,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "native-compositor-diagnostic.spec.ts",
+      "line": 6,
+      "title": "native compositor causal observation stock-1x",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 17327,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-compositor-observation",
+              "contentType": "application/json",
+              "bodyBytes": 6400,
+              "bodySha256": "aeed5ad6a83dcd6bc34149cf12519753d868694b4e3efdd3e84e2c6122b2a6af"
+            },
+            {
+              "name": "native-after-capture",
+              "contentType": "application/json",
+              "bodyBytes": 2762,
+              "bodySha256": "6b818a5742a8a7209eb650b3635fa6faa88eb1a215e18ed0bb080a1ae4f499ee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "native-compositor-diagnostic.spec.ts",
+      "line": 6,
+      "title": "native compositor causal observation stock-2x",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 19573,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-compositor-observation",
+              "contentType": "application/json",
+              "bodyBytes": 6283,
+              "bodySha256": "746e41b98e7c8e9308191390524ccf74843551d8e581cd0d0d393252ff52e588"
+            },
+            {
+              "name": "native-after-capture",
+              "contentType": "application/json",
+              "bodyBytes": 2395,
+              "bodySha256": "ec36b625ec13a519aa26fea5938d8438528961dfd68f2ee7fe22d27abb4b65de"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "native-compositor-diagnostic.spec.ts",
+      "line": 6,
+      "title": "native compositor causal observation promote-2x",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14873,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-compositor-observation",
+              "contentType": "application/json",
+              "bodyBytes": 6619,
+              "bodySha256": "0cfcbc1f99b04cdc676b3e41b1b37f865ad79520d28613997fdf7d1a85e42b76"
+            },
+            {
+              "name": "native-after-capture",
+              "contentType": "application/json",
+              "bodyBytes": 1814,
+              "bodySha256": "2e88b2f1e1c8fd4903f628a5850fbdc655a090c86f30223fa86deccaf6545013"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "native-compositor-diagnostic.spec.ts",
+      "line": 6,
+      "title": "native compositor causal observation isolate-2x",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14463,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-compositor-observation",
+              "contentType": "application/json",
+              "bodyBytes": 6570,
+              "bodySha256": "6deed49fa0784cc5a9727a041fb42c8267b41c94e83fe272ea296aca23381633"
+            },
+            {
+              "name": "native-after-capture",
+              "contentType": "application/json",
+              "bodyBytes": 2082,
+              "bodySha256": "be6e5dc4340c5feaa71097ed54a331f0828b2117429e21e5252461575d396fbc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "duration": 83698,
+          "retry": 0,
+          "errors": [
+            {
+              "location": {
+                "file": "/Users/runner/work/piepe/piepe/tests/v23.spec.ts",
+                "column": 34,
+                "line": 96
+              },
+              "message": "Error: locator.evaluate: Error: No frame before composited sample\n\n  94 |   while(distinctFrames(sample.frames)<3&&Date.now()-pixelsStarted<2500){\n  95 |     const started=Date.now()\n> 96 |     await layer.locator('video').evaluate((video:HTMLVideoElement)=>new Promise<void>((resolve,reject)=>{\n     |                                  ^\n  97 |       const timer=setTimeout(()=>{video.cancelVideoFrameCallback(request);reject(Error('No frame before composited sample'))},1000)\n  98 |       const request=video.requestVideoFrameCallback(()=>{clearTimeout(timer);requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))})\n  99 |     }))\n    at movingPicture (/Users/runner/work/piepe/piepe/tests/v23.spec.ts:96:34)\n    at /Users/runner/work/piepe/piepe/tests/v23.spec.ts:211:22"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1344,
+              "bodySha256": "64a82acf6e847205b0fe7106dd740909458d0691b31911a87e590175652f7299"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1378,
+              "bodySha256": "8d0cf04de04c925c839e8b5e4b47752c98e21c49fcdbfd21adfdaa4bcba006ff"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1565,
+              "bodySha256": "2c804fa2d124bedfdbe3650633721c4a6a8b92e1485f7a3e480c2e6fc61b4737"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1281,
+              "bodySha256": "9319f79c64a36a031cdbc60abdc05c59f9b4b37788604ac9df6b1ab90e54d86f"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1440,
+              "bodySha256": "337a0ac4427f935436b4dbc2e12e4ddc0f1327b6418c8f5ba0bc32512c95effb"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1394,
+              "bodySha256": "b2a62fd02c4e33d2699e98eb060e6f6fd67600545d518d2761b15f7b8d2b0c96"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1497,
+              "bodySha256": "1ace95647d652fd355d7492f2daf13e38963e59f6cbd574b1cf80d2f3c9882de"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 823,
+              "bodySha256": "2bfffe39d237f890a3907270e033c413f32e2064d251a3a02c34540791ebd162"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1224,
+              "bodySha256": "83ab3b00e299cad24152b4ff85f5337185d517b8f38868ab0997ce403baceb63"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1368,
+              "bodySha256": "d796ef6511e08d4e9382fe71a4d9d85846fcdf33bac84357f1db8a957fb1418a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1510,
+              "bodySha256": "dfcbd5bb6d528b33a8567e2991b0d493f89e6b66775d0fc9f4cd845f526feec6"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1515,
+              "bodySha256": "342b404e2b3d08ddd425871c29a2f3e8bb16e68092000df8bbc0223cc18d87ce"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1449,
+              "bodySha256": "b3704b95e8f8ab702d3cf1b0d2c18de0d0588a8a4be88fec3891c7714f39c46c"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1494,
+              "bodySha256": "970523d83a7fdca108379944956516078c21651fca1efcac6e3ce807bf1f6b7b"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 809,
+              "bodySha256": "03f26d7b1c0c79104fe7b595d1168ae3020e733908f5281f9bc9929af4429fb3"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/test-failed-1.png"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "0990efb28c899b64adb95cd54f3fb9e1a74caf4e21c570141e90e3e1c66ccc68"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2511,
+              "bodySha256": "b18f00d8e731bdf66c8536707cb503d317983445a7ed1ecfc276aade3f72ad86"
+            },
+            {
+              "name": "environmental-state-on-failure",
+              "contentType": "application/json",
+              "bodyBytes": 559,
+              "bodySha256": "7636da36549986f4bd6d728ed05b4464a5b36585c5c717eac05c47416212d391"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v23-1512x982-repeatable-ci-f81ee-e-revisits-loops-and-reload-webkit-iphone/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 80335,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1498,
+              "bodySha256": "86a8212c645121669ad8aed67432c3713d6b37aec69af571dd24ce22dfbcde8b"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1447,
+              "bodySha256": "e5958f72989a8b590e1fb1bbbdbcc7ac38ee753b2d7594d294edb863074e2476"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1507,
+              "bodySha256": "ee4cad7de0cde5a032c08d57ec9c5e0c1ac13f4009b6bacefdd0cf3a231f850a"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1494,
+              "bodySha256": "47a68148c305f5afedfc2b82c7562ee8e3d0cf5ab3dcbd75904a972291fbf9c6"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1434,
+              "bodySha256": "fdff2707cbda2c0485e624e0715210dcecc7743274ae12a62ac4b23dee619573"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1438,
+              "bodySha256": "4173d7aa09fc0ad344fc21c8dc04909bc52e706bf0ee6de641e5633d40d8152d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1450,
+              "bodySha256": "2a9d7f3c70c444899f40aea3ab46610a6ced6a34f65fb1c01baf5538e2b036a7"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1558,
+              "bodySha256": "fb50fc965a7ea3a6287c02ccf22478ea354f0fc569e37af10ce5661bb8e22d3e"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1209,
+              "bodySha256": "f6c9f41718a9eeb11eb27943abb47aed2e8c55831639a78d30b21fb6623d692d"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1504,
+              "bodySha256": "c18b8d52f47a982df0d867743cbb58462031a8b2ebc60609f0af4d5c538c4264"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1476,
+              "bodySha256": "e54d5ac71fe5a9098f832d4dcd5a726cc8e962deaf267914747422c2b933b3db"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1438,
+              "bodySha256": "40373d453c30b438a34b24bac709f6b8f56235f48e830564e9e5cf9c60dc5091"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1438,
+              "bodySha256": "5c4a3fce61c9aabe43afb72c6386e877ff9badc548748afa75df8c03e35797fc"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1511,
+              "bodySha256": "66212aca3d9ab8b96410866ff4943b74574d49a52a2c331348fe2ff4181a2340"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1222,
+              "bodySha256": "809d5e09ac11b1ded532d8b56f37f0ae07fb354d961cc0c4fc7f6794ea849a30"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1160,
+              "bodySha256": "6794229bc2a21109afa8719180a31a9e7ffc200298fb6e345e2c79e603ac9c32"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 20911,
+              "bodySha256": "167d4848619e6e43183a3526063040b05d76a8a6b3bccc496382456c8241a1a2"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "4647199545967cf72e4097d4c90842ecc419a28629391201c7a00319b8ff1744"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2524,
+              "bodySha256": "556acd41b5813bf1f6255c42c89a12288b286d038c37ab9ab9e1e59cce089401"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 88036,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1552,
+              "bodySha256": "5a3161c4924f1349cd77c205948993f1351698f5c834ece5d756c3e5cac97d9e"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1508,
+              "bodySha256": "36cc759a79c78a525b9ab4f9b2089833d4304a5e1423e626ce8500a5ff5fd019"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1553,
+              "bodySha256": "46228c1c9edbd6af09521fa2ef9e973e8191733effbae194887045104335fa7d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1502,
+              "bodySha256": "306fd307819d221619e36351c6cdc749ef14614d02e18bab13190d34fe39540e"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1449,
+              "bodySha256": "f34ba843eb434797950c40017de7a29d1f1fa33107e074726991497b78e2f13c"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1512,
+              "bodySha256": "f9a66ed203c85bbd88f4a712146c0f70e206de86e5d5ece9c6bf5f180f719500"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1557,
+              "bodySha256": "2cc67bcffa045b2396520bb09a0dd4972a3a19e753e6b49eaf4d123aa0ee20b2"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1510,
+              "bodySha256": "db851205104a44400f8975aa6d2ab22119a5c09c6c99f2d58d07e99200cfc6ea"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1549,
+              "bodySha256": "b3ace98a8078646ff2c924dae84601b68f9990ab49e972c268daea0ffada584a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1562,
+              "bodySha256": "b3c0cf2d87d92800b0856053d18ded7f4989bd4054850729eb08e69f451afdaf"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1513,
+              "bodySha256": "003d07773830092f3d00e5b28204a61c62152992d5893c194d333dc14477bedc"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1557,
+              "bodySha256": "16f65d487e381da2220d96cecbaa7abe945c66752b4a04ded5862b72204dd186"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1496,
+              "bodySha256": "4206c74fc860f43e9469e3958371b0d4893ab7178c12ece5e416a4e417f8050c"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1554,
+              "bodySha256": "d2d700275af0d8def35e3d109c2af20ca344a024c464dd21697bd6f5273c49c3"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1500,
+              "bodySha256": "aabbeee807d477a62ca3cc132ca15c0571f5faed66f261881c6a34271cd0a6a7"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1250,
+              "bodySha256": "bddb9c52214b392b848b1e326036ef81036fcadb29e2f80863e07538175ed2fb"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 21882,
+              "bodySha256": "09c4e944c2846d30dce9875d4e2c7b88396b8f8ce038e0f6c942e3967adcf22c"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "5ccbc7110ca5c15239a1bbf7b7ddf2321d105079c262b39a21870aeaba37137a"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2522,
+              "bodySha256": "df266c2bce6f8e16a3a0a89d62fd419b08121df81a01239882114740b0a67623"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 93359,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1545,
+              "bodySha256": "586971c42d232aea73fc7a539ec572546cf2fd49a8c5ac6ac3385d7b9ae2d7e5"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1478,
+              "bodySha256": "2a77a52b9f087cfbe7dc3116168df2d809628b234bc9973a912d045091c87a3c"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1507,
+              "bodySha256": "a699f4f205804b253594744db350d7fadd985825ce19142338711d049a1a02b8"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1540,
+              "bodySha256": "2eceaf9c1f75e4c8e992dd57aaf8d01db98383e4c0ee8eed5046a9c4d87dc1c9"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1485,
+              "bodySha256": "b6c2aa96302b657b9d7ae4944449b4f4d316e07e688b637a80a435a6b5aa9e5e"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1556,
+              "bodySha256": "8f2198fbe9e83a864cf263fc887a1060ebc59773f293d77b43b8772ffdf304b8"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1558,
+              "bodySha256": "63bd5ff42b68f15cec7e27a26675771ceda1d8b92c65406b4325416ff368d164"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1481,
+              "bodySha256": "6c2cdc48422da1b4bb406ef3438a5a0ff89198697b28a13df74e75321ced978d"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1452,
+              "bodySha256": "3dba3daba1cb7bd4187fed695c81c0bc06f8a1c293b8ba3fb7421a6e7848516a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1489,
+              "bodySha256": "822c27c36bedb0bf37896cb30b4da72a94adb7558284ab34d6c3e37852aacde2"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1563,
+              "bodySha256": "a9ccf45f65069c7f8bc5b4d077afc4ee76f66fdf2dbf21fb0f0aadf93cfd73d4"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1540,
+              "bodySha256": "7f1cc74422ef7d843ad7425846a6372a0bf22353483139cb01d14d72a18d8dc2"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1448,
+              "bodySha256": "a87ea4486809931e0366d6f410ff2adfed1c4100201751287ed7a615cec16833"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1555,
+              "bodySha256": "44d2c5932298a9d95ac2f7c4a9b8c80a5cb794fdb1692d3edc670665ac1ecac9"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1346,
+              "bodySha256": "1486d6b73195676b8dca20a2dec9fc9856779b5f83411df9230a1f21903826c0"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1497,
+              "bodySha256": "e93ae1698c6e89aac156445071443eac82e7793b0a62b7d57aa12e0a2d897d23"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 21705,
+              "bodySha256": "634a47d3c64b64d1e4bc77033fda8928138931baf7be076881535f33b73e3da8"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 5744,
+              "bodySha256": "5deb62b6f400585c793959a847970b833cb360d9dc992390fabbdedb369952c9"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2522,
+              "bodySha256": "142a1b04812833c80033806aad2676ac06d8e1b53b3604a94880c38ebc39f1af"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4380,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 190,
+              "bodySha256": "062db96fe796c0088195b6a286a6332912cace0e2d09474ad130b631f0b661ba"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 2255780,
+              "bodySha256": "eeb05e215b8b8aca347a6d542b3025cec0c471b3054b0dac628eb5e5f0cec726"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "93200cdcd24d0f5433b26e7a8026a723a800828c67e4a12c1b918538135bbe91"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1366,
+              "bodySha256": "aa72bd78599714a2f6b4ff5b8984fd9dc0a63f6d3d81956894009239d9e40456"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4072,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 190,
+              "bodySha256": "7a350273d25e6ef3e5033ce0b5ac9a2d6b14310d9ab2d1b36db84e12bb590d05"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 2278159,
+              "bodySha256": "19928c5ba7de3c8c940dd3c8d887a15e0e3020ae0cd2439b21a8a468de069e8d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "41dc947e4d09cc9df1b80726f82aef5d364b200c24b66f8e6ce050c8c77fdaeb"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1368,
+              "bodySha256": "b26c4a6f7594920ee1c3ca0383c3866f41dd7cb1e4ff47b09ac584716d2fd6d6"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3166,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "a5298afdb19c40402a798f0c7f078fa6ccae310747b7c3f027310e2b006f7fa4"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1991977,
+              "bodySha256": "909a1933e89320d7aaddcaeba886912fad3d742bba6a2fbf912e8433100b3d46"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "1cda374d6d40d68fabe0a8c4bb31e50ae056b91c78d4818308b57893b56f6aa5"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1363,
+              "bodySha256": "958ee70a58c5162b1e2c8c9f367619d9141fd2805a27a4bc8f89e1bec339dcb2"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3960,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "bcb135bd5103050646af2e298915a2283ce006ba3fc38fbdd4fae963c8edfa32"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 2002762,
+              "bodySha256": "9511aa2dc65714d4f0f9782b0bdf1353ec7c14cb7eabd04f84f062c923a420a9"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "eb381db65885683082391b3445ec670d6e21dd321ef661bde47f59648618f916"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1366,
+              "bodySha256": "b1cdf3d9d3902b9317b2db5ddf603a85dd4cbd38f84a649e0439265f5f4e22d0"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2887,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 519727,
+              "bodySha256": "872c603e31614905335cafea41c7823d9e913515a0cb2b20c6cb722d931e6c48"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "2c29a58378e97225c04e302e296ab619ebfbed91d50ebe38cf3600c6c6966768"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "b5600155c5904cbe2107d6541944be64ca3d02ba0a672b972b4e465a3a6d042a"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2306,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 511091,
+              "bodySha256": "b902dd4c1ae4a32e28798c23c567f78731059fce019d59de9b3cbb5c5e16d628"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "418219df7f54ebe0ffd706a9a74f7096bc0a8fa9bbbcf3a066f1661cd1316650"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1364,
+              "bodySha256": "7a81b1cbd0d04a3c5e7043381bf2208477adfafd5dd02c8e7d25d1b3a3de90e1"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2555,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 414356,
+              "bodySha256": "811aeea216c123f0a59d4c40e7d389bc68bea6de06767a597bb817efb199a2e0"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "97e748052ef1f80a46925ff523111c98b636339a0a711f6db1ab3ebd27a49431"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "5cc844c23ab8fb2b19de236fea19c7e04f377f3f5455e38a3d0f17835a596006"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2335,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 410484,
+              "bodySha256": "67d174b37b7920b8b990d13725d866c0eae55f2c7edae3a110de82cfbea496ee"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "8b47f4de3f368590ce868b3d4f006cfdb8a2dd7b7652cd212adc25c06aac21cf"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1364,
+              "bodySha256": "a183fa27469ce4b2f62c6dca611d00427913f451251168cf85eeab68bd2b7b78"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2161,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 347675,
+              "bodySha256": "ea6a4066c3debb45d7fdc6fb11c9d5629fd4e3b0de0c818b22a5fc776fae17ef"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "81d4b8c44968dc9f69543459d4cb55f699186ebc6f655ab36e7f6a76649eec9c"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "39f4cd06eb090603709bb4e98df8e8df53433c09216409dc887caddb65e5a88f"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2746,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 358332,
+              "bodySha256": "09519f4a9f08b1713e4e6dd0e33f2b2d9826af28cf11431d78fdd9d25ac98410"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "7d2ed97b5547d74705bcb42b6be5055e64c185211ddf598fa8efbb3aa1307dbd"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1364,
+              "bodySha256": "0036f3b33dbbe8802d22be5a579a50969f154d528df730441973ec85d1c8f34b"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 17134,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 407,
+              "bodySha256": "a701d84de2a4537f92a62fe8a6d0e0959cd6a038323a73c0d166bf435097cb33"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2864,
+              "bodySha256": "4656847c7860b9b1bbdf25a39c6f79ddeb34a472b3cc7947eda90ae2e38659cd"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2499,
+              "bodySha256": "9b4903e131b92d0757f7ec7eb5ffdd41f4ddaee4a50692a82d794c1a5c5aab7a"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3298,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 110,
+              "bodySha256": "ee1f344606dc9442b7f15a5442f98b0e79d555f1d0b33ccd349161a1b9c62e00"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 196,
+              "bodySha256": "1942d24f96c07133eb22b6ad16a2bc1d970d26bfef8939881b7e91046af82b64"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 709,
+              "bodySha256": "039a55aa1966d9ae4dfeb9541bfcb65bd8ac7574d4f13d39b4db9697f5d1b6f7"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3747,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 106,
+              "bodySha256": "63f652da80bd9fc264fe74c438fe20c938fb8cfccb10c1cc9a37b990fe326992"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 424,
+              "bodySha256": "7757af90db7b1c632e46e697fc98c894bbed8caacad269a18b8767e5e2915770"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 913,
+              "bodySha256": "89432e71f199f9c3d2852b5c25067768c08657264eaa7cd85ffeac73095a97a5"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 14787,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 346,
+              "bodySha256": "8a4edc86df6e98b0a9da8501d8062a96c732c5c48e6096433cf941ea479ef384"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 2864,
+              "bodySha256": "d83ec27316d092e2778718f0186f0924a67c42f4b624a852d6a6ae6030e9cc38"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 2500,
+              "bodySha256": "163df0d654e147c5513c5e66bba64eaa8f438a78d0ed200ac6cc2bae95ac339c"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--ecbf4-ng-anchors-and-history-work-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2665,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 98,
+              "bodySha256": "7b6791a6cf1c1269980d67303ad52180c5437aa0957cd22c43bc555a3fa117dd"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 196,
+              "bodySha256": "4a2bc7e8647f95f61cb4282801cc22d9b7538944b742400b0213645e1551c647"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1398,
+              "bodySha256": "b820fabb060f58d1df9afa2536d84923e61e0b72d2bc9ce49c1e2604a9859a17"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--23e19--a-genuinely-buffering-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2621,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 94,
+              "bodySha256": "ed9b65e72c094aad3393cd768fdcf1ab9e580bd178d1b1aae028678b5bc6a7c2"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 424,
+              "bodySha256": "2d400c2516d23af597072b6c158f3cb28cf8b3ede4577795c18d4c2280b45d1f"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1602,
+              "bodySha256": "f07dea41fc5409413092bb07353cd4b53483b376b582ca0edca69ab639c96ef4"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/Users/runner/work/piepe/piepe/test-results/v252-2-5-2-native-journey--2e6d5-aves-a-genuinely-error-film-webkit-iphone/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 90,
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4067,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "staged-and-presented-film",
+              "contentType": "application/json",
+              "bodyBytes": 626,
+              "bodySha256": "df2583cc07cfa3c4bfb898a04c65851279746faa1adb718eef5d90acdaf8b54d"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 573,
+              "bodySha256": "22ddbdfe3e9ba0ed8c552894901cb5f481bdbf5970e3ba5cf1052ed5d53f2ba9"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1463,
+              "bodySha256": "8d2007c7a65555b195533c2fbdc09e5ba48f378326cf45c62b6f8aaba8cd9289"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 90,
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4048,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "staged-and-presented-film",
+              "contentType": "application/json",
+              "bodyBytes": 624,
+              "bodySha256": "d9f5cdb4b02e04359603888ebfc2b585a3ffacd68ab0532acd6837a3ade6dfad"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 571,
+              "bodySha256": "7ee2cfdea729a8c618156dfc2fe124124b3ee528cc9ad2548cc233c89f91577e"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 1463,
+              "bodySha256": "20b04fa1460b1a2c170803a240fea9006e0165ab44e1ba17b7d11f85714014ba"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 141,
+      "title": "environmental films pause on a hidden-document event and resume actual frames on return",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 4332,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-window-activation",
+              "contentType": "application/json",
+              "bodyBytes": 245,
+              "bodySha256": "5996feb3ee37346e35cffa794af2bf2f0439a34b7466a2914417eb780ee417b4"
+            },
+            {
+              "name": "visibility-pause-and-presented-resume",
+              "contentType": "application/json",
+              "bodyBytes": 225,
+              "bodySha256": "58f8abd401138211d45d38185335d6fc2915c74b984cb3c55691547a48f63830"
+            },
+            {
+              "name": "native-media-requests",
+              "contentType": "application/json",
+              "bodyBytes": 1143,
+              "bodySha256": "85f0b8f2906620604f7e6f72f330443d19a5aabaef067fa0a2ce68de5a87aec6"
+            },
+            {
+              "name": "native-input-and-compositor",
+              "contentType": "application/json",
+              "bodyBytes": 3204,
+              "bodySha256": "f90df90ddd24c7c5d8d86978f0dbc758bc11e6355035e2a475162295c196ba57"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 79,
+      "title": "3.2 no production media changes, codecs or new film payloads; player and security remain byte-identical",
+      "project": "webkit-iphone",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1123,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

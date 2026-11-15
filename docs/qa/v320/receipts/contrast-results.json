@@ -1,0 +1,674 @@
+[
+  {
+    "scene": "lv-1512-0.625",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 358,
+    "minContrast": 16.144550699738204,
+    "medianContrast": 16.552790304576995,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-0.625",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 648,
+    "minContrast": 14.99049826374464,
+    "medianContrast": 16.739126947373244,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-0.625",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 10,
+    "minContrast": 10.881201984153401,
+    "medianContrast": 11.335740030193474,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-0.625",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 84,
+    "minContrast": 14.218306555774872,
+    "medianContrast": 15.587583877973787,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-0.625",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 12,
+    "minContrast": 6.484345798202464,
+    "medianContrast": 9.041390948038075,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-0.625",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.759553710758954,
+    "medianContrast": 11.39527730241732,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-0.625",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.87072411781821,
+    "medianContrast": 11.006058512071585,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-3",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 358,
+    "minContrast": 16.084311048784137,
+    "medianContrast": 16.552790304576995,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-3",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 648,
+    "minContrast": 15.027262199006726,
+    "medianContrast": 16.739126947373244,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-3",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 10,
+    "minContrast": 10.881201984153401,
+    "medianContrast": 11.346616610237133,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-3",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 84,
+    "minContrast": 14.363118361400026,
+    "medianContrast": 15.56908686618351,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-3",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.608106895647582,
+    "medianContrast": 10.221053539479112,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-3",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.669759922561044,
+    "medianContrast": 11.097876186414226,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-3",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.892707751914196,
+    "medianContrast": 11.02859348845558,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-6",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 358,
+    "minContrast": 16.216560954985898,
+    "medianContrast": 16.548057378078354,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-6",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 648,
+    "minContrast": 15.027262199006726,
+    "medianContrast": 16.739126947373244,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-6",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 10,
+    "minContrast": 10.78920108177615,
+    "medianContrast": 11.310139466189174,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-6",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 84,
+    "minContrast": 14.363118361400026,
+    "medianContrast": 15.556640144416228,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-6",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 12,
+    "minContrast": 8.18368580535829,
+    "medianContrast": 9.662899578620653,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-6",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 11.213439546414437,
+    "medianContrast": 11.448336828363399,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-1512-6",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.87072411781821,
+    "medianContrast": 11.006058512071585,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-0.625",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 437,
+    "minContrast": 15.814526496510009,
+    "medianContrast": 16.602253500899206,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-0.625",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 581,
+    "minContrast": 16.01785113735471,
+    "medianContrast": 16.74612098187568,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-0.625",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 0,
+    "minContrast": null,
+    "medianContrast": null,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-0.625",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 103,
+    "minContrast": 13.480514177189413,
+    "medianContrast": 14.891444845566307,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-0.625",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.544122684707121,
+    "medianContrast": 9.63834387016726,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-0.625",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 11.141170852980057,
+    "medianContrast": 11.187509136663284,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-0.625",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 11.316005717464344,
+    "medianContrast": 11.380239654590492,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-3",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 437,
+    "minContrast": 15.999535621932392,
+    "medianContrast": 16.609133601084626,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-3",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 581,
+    "minContrast": 16.01785113735471,
+    "medianContrast": 16.74612098187568,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-3",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 0,
+    "minContrast": null,
+    "medianContrast": null,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-3",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 103,
+    "minContrast": 13.211116719850567,
+    "medianContrast": 14.838860314143565,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-3",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.544122684707121,
+    "medianContrast": 9.66023576499914,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-3",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 11.141170852980057,
+    "medianContrast": 11.20902546549789,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-3",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 11.316005717464344,
+    "medianContrast": 11.380239654590492,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-6",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 437,
+    "minContrast": 15.911666856804011,
+    "medianContrast": 16.609133601084626,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-6",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 581,
+    "minContrast": 16.01785113735471,
+    "medianContrast": 16.74612098187568,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-6",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 0,
+    "minContrast": null,
+    "medianContrast": null,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-6",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 103,
+    "minContrast": 13.216649986880858,
+    "medianContrast": 14.8541505246233,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-6",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.544122684707121,
+    "medianContrast": 9.66023576499914,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-6",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 11.145531643368596,
+    "medianContrast": 11.20902546549789,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-390-6",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 11.316005717464344,
+    "medianContrast": 11.380239654590492,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-0.625",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 321,
+    "minContrast": 15.710179324347303,
+    "medianContrast": 16.479496812277933,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-0.625",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 432,
+    "minContrast": 16.121447080181184,
+    "medianContrast": 16.725543072131,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-0.625",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 0,
+    "minContrast": null,
+    "medianContrast": null,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-0.625",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 104,
+    "minContrast": 12.513897881385832,
+    "medianContrast": 14.415178196231745,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-0.625",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.66023576499914,
+    "medianContrast": 9.79611871787482,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-0.625",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.813210066582108,
+    "medianContrast": 11.141170852980057,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-0.625",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.751743640288478,
+    "medianContrast": 11.01946295800855,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-3",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 321,
+    "minContrast": 15.710179324347303,
+    "medianContrast": 16.479496812277933,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-3",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 432,
+    "minContrast": 16.121447080181184,
+    "medianContrast": 16.725543072131,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-3",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 0,
+    "minContrast": null,
+    "medianContrast": null,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-3",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 104,
+    "minContrast": 12.67607605350433,
+    "medianContrast": 14.311448246158513,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-3",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.66023576499914,
+    "medianContrast": 9.799904427540115,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-3",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.817675888469235,
+    "medianContrast": 11.141170852980057,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-3",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.751743640288478,
+    "medianContrast": 11.01946295800855,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-6",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 321,
+    "minContrast": 15.617625873812017,
+    "medianContrast": 16.479496812277933,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-6",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 432,
+    "minContrast": 16.121447080181184,
+    "medianContrast": 16.725543072131,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-6",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 0,
+    "minContrast": null,
+    "medianContrast": null,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-6",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 104,
+    "minContrast": 12.50715416646142,
+    "medianContrast": 14.352315065937832,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-6",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.66023576499914,
+    "medianContrast": 9.79611871787482,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-6",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.813210066582108,
+    "medianContrast": 11.141170852980057,
+    "below4_5": 0
+  },
+  {
+    "scene": "en-320-6",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.751743640288478,
+    "medianContrast": 10.925550144838217,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-0.625",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 224,
+    "minContrast": 15.64528135985725,
+    "medianContrast": 16.424353679203065,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-0.625",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 210,
+    "minContrast": 16.34956202414721,
+    "medianContrast": 16.781295787657932,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-0.625",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 4,
+    "minContrast": 11.330513157591604,
+    "medianContrast": 11.49509812783537,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-0.625",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 96,
+    "minContrast": 4.752265976026311,
+    "medianContrast": 10.757358638571297,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-0.625",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.90320945751381,
+    "medianContrast": 10.320172673753289,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-0.625",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 7,
+    "minContrast": 11.512101592360656,
+    "medianContrast": 11.572776596158032,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-0.625",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.699327954649553,
+    "medianContrast": 11.259931153004677,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-3",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 224,
+    "minContrast": 15.51621037857427,
+    "medianContrast": 16.43581217359354,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-3",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 210,
+    "minContrast": 16.334894671247365,
+    "medianContrast": 16.777784067265106,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-3",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 4,
+    "minContrast": 11.330513157591604,
+    "medianContrast": 11.505675437380976,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-3",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 95,
+    "minContrast": 4.87219296422024,
+    "medianContrast": 10.723072691339823,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-3",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.990530486268051,
+    "medianContrast": 10.320172673753289,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-3",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 7,
+    "minContrast": 11.494721475792382,
+    "medianContrast": 11.572776596158032,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-3",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.803546806581807,
+    "medianContrast": 11.229752377502765,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-6",
+    "selector": ".living-thread h3",
+    "sampledGlyphPixels": 224,
+    "minContrast": 15.64528135985725,
+    "medianContrast": 16.41762578143384,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-6",
+    "selector": ".living-thread p",
+    "sampledGlyphPixels": 210,
+    "minContrast": 16.34155492014402,
+    "medianContrast": 16.787935522022686,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-6",
+    "selector": ".portal-art",
+    "sampledGlyphPixels": 4,
+    "minContrast": 11.330513157591604,
+    "medianContrast": 11.542431660510971,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-6",
+    "selector": ".portal-primary",
+    "sampledGlyphPixels": 96,
+    "minContrast": 4.768208705058309,
+    "medianContrast": 10.771257813628106,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-6",
+    "selector": ".thread-navigation button:nth-child(1)",
+    "sampledGlyphPixels": 11,
+    "minContrast": 9.965584876161916,
+    "medianContrast": 10.311988091694234,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-6",
+    "selector": ".thread-navigation button:nth-child(2)",
+    "sampledGlyphPixels": 7,
+    "minContrast": 11.568075141427592,
+    "medianContrast": 11.589533988099566,
+    "below4_5": 0
+  },
+  {
+    "scene": "lv-844-6",
+    "selector": ".thread-navigation button:nth-child(3)",
+    "sampledGlyphPixels": 9,
+    "minContrast": 10.625588290060405,
+    "medianContrast": 11.344923315015631,
+    "below4_5": 0
+  }
+]

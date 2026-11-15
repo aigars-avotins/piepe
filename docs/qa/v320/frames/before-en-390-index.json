@@ -1,0 +1,86 @@
+[
+  {
+    "phase": "entering/0/0",
+    "wallTimeMs": 2397,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/en-390-boundary-0.webp"
+  },
+  {
+    "phase": "deepening/0/1",
+    "wallTimeMs": 12617,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/en-390-boundary-1.webp"
+  },
+  {
+    "phase": "arriving/0/0",
+    "wallTimeMs": 22881,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/en-390-boundary-2.webp"
+  },
+  {
+    "phase": "living-world/0/1",
+    "wallTimeMs": 33048,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/en-390-boundary-3.webp"
+  },
+  {
+    "phase": "returning/2/0",
+    "wallTimeMs": 52932,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/en-390-boundary-4.webp"
+  },
+  {
+    "phase": "returning/2/1",
+    "wallTimeMs": 63145,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/en-390-boundary-5.webp"
+  },
+  {
+    "phase": "finished/2/1",
+    "wallTimeMs": 73171,
+    "offsetSeconds": [
+      0.2,
+      0.45,
+      0.7,
+      0.95,
+      1.2
+    ],
+    "image": "/workspace/piepe32-qa/before-frame-review/en-390-boundary-6.webp"
+  }
+]

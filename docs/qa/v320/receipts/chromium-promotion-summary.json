@@ -1,0 +1,1083 @@
+{
+  "method": "Actual Playwright JSON evidence summary. Binary attachment bodies omitted to avoid duplicating screenshots; complete run artifacts retained. Results/errors unchanged.",
+  "stats": {
+    "startTime": "2026-11-15T06:43:05.139Z",
+    "duration": 323636.862,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "cases": [
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 65727,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1360,
+              "bodySha256": "8397f1681a7e78747a7becb85cad6764b83b141dbf6e6b3469c7647c4c6f42f2"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1413,
+              "bodySha256": "469849bd8087c40c5c201250f791bc0f9d22687b0de3162c2441e11915386f4d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1318,
+              "bodySha256": "ba11a1aea418af5f461b7adc599039211ee734b7a5704fc8140499b579423653"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1425,
+              "bodySha256": "09b643575aa2d13a5642a70ba077c4eb863220e7da21e4ae390e4a711b0f2c1b"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "fb0e33e25959770bb53d8c57c2a779c8f8879a295cd2da70f0f45ab6eef5c49f"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1361,
+              "bodySha256": "489c0adb8d4f65c6cf27916ac6675f7b7bd6226fba298ff4666721799e8ddb35"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1362,
+              "bodySha256": "12168792a774f11edf6b6158204d4e446fa0e9f5d418abae245f980114bc5a12"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "a679882e60a030ec7082d504d2601a798dc8e1432ffc25f1ddd5edb9077e4a82"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1321,
+              "bodySha256": "4097a667fb3919d7a2f642a9333f429b5f8f9b8d7e2bc16c7bb88abd1620ebd0"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1378,
+              "bodySha256": "9874463ba2e7cbc7400f8bff0a9df183029f3d4123a6fcc85f71104f41642bec"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1426,
+              "bodySha256": "750769da9ca6651709dd3a83124eb6c89a59d13a6775020c408d20e37b8e4cba"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1408,
+              "bodySha256": "7688733fc92188b16567646c85b8fbe3e74e5fa42666263a78588140989dd55b"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "e5bbbe9e528f1a88e7ccaeff57375fb58981cdaf1e90a3596ef9462d52e6af4a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "30f50fd7610558de396d615b9b870d365c122fb6e601a6d88cc33ca8a50a7ada"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "9364d7c1804d65c475d288083a205b752dd90022f3f8b2e59fe6bd4708c10dc4"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1357,
+              "bodySha256": "70e9f858ff75288ab3ab47f00c72c19cd1de9f41351970ea900aee4f3f965b0b"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19716,
+              "bodySha256": "8853e65d3974eb2d63a8b2418d8cfecf6ae9e0ef381e30ccfca3cee6f322f362"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 65963,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1360,
+              "bodySha256": "90ee4095a165b10564c055cd5ef3052b1f118b28ea4785ef483a645c6c8836ad"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1366,
+              "bodySha256": "7be02f94066121dc475e8a10b15e2445b07d14a3d2e37cd7323dc64990b49e10"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1216,
+              "bodySha256": "c3add5b5f41bc4fc2cb16fe887b64d7dfd3b5a04226e3f3297d2bd931aef9409"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1376,
+              "bodySha256": "958a8d770e8bcc7704278e34d0ecbe9105e8444a3781552415cf101f67e16600"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1410,
+              "bodySha256": "c9446524afcf817a1f0f17a16edcd5f671994b8655c7eddf6ade872d7ac6154d"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1363,
+              "bodySha256": "30d39f164742bb493878408dc71a956c1d7a323abd8465e56bf98657db10972b"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1311,
+              "bodySha256": "3c22b6a9a1630f2480de137bede3186e2adfc62b4b7bbbcfbe0bccdd3220d6e0"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "191b06951c37b5f6fa383b97ed0c3c4cc1e490377cabd120f51b41534402d336"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1414,
+              "bodySha256": "7c48c31df5a9f4ee9877ad81abf14c24591de038182da7c168d9b5bb3aa6a6fb"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1380,
+              "bodySha256": "4990940d83630637fb1a13459ccfd853ed3ce7ceaa5f5126bc35a0a4bc146c2b"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1375,
+              "bodySha256": "e3bec5fdf3b93226008aebb2c0e2245289e25698e0e68a9f3d9a93fb25e75f53"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1359,
+              "bodySha256": "0cf536968971b891ccffb3969ad72b9dcbee224a63f5a0b860aa4724854362d4"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1308,
+              "bodySha256": "69b8f69f4361f8f94a1d924a37edaed0afdbfb6f334b1c73ff715d8bf217179d"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1358,
+              "bodySha256": "a02bd4ecf9ea6454de3999cdabc2fe360b8023aaca874b3bd3145e17f2e90090"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1308,
+              "bodySha256": "4b74278ac8e362bc5e1ee917b79b1c5c5ef06f9c3102f0fde7c2f6944859f1e1"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1260,
+              "bodySha256": "d0375c66f9f4d904a7338429a5a65377c08a57b043f5a2ca8167b73051a72fbe"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19463,
+              "bodySha256": "0ae673f921dabacafcbcd3ce57a87fe73d119eee00d53bcce0802be3c97ab609"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "lv: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 60957,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1356,
+              "bodySha256": "3f253c0af6f9c1a460e2ff629dfcac8d476e91d6cb18cc0cdbedd2a729328437"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1359,
+              "bodySha256": "73afb67f4ff24e6a5a0161fc9508b5057b154350bdee85bea745338c04b5dc90"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1376,
+              "bodySha256": "8c2ff02f0454540c4e7fad087c5eceb46854f3840a0373e3dd93beb6e5933156"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1426,
+              "bodySha256": "c49c078512c2a6f84b9d99515c998e9193f27b4e4f6a0e732a7700fe06252189"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1405,
+              "bodySha256": "b9f2fb296447dba1fc6082560ed4bc823a78fe41fe06234bc375efc4906c50b9"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1359,
+              "bodySha256": "6d1f2fb6eb1b295004dd0604f9b7e27714b0b525b3ba970d84db672e558b69e3"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1405,
+              "bodySha256": "211e8eaf7b5337f505c8f4bd4c142f9f35d58fc76b0071dd55efef9f7447530d"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1401,
+              "bodySha256": "b614aa838e70703b9d8ad12bc9c15c7959efb97376311ca1d199ada59dd358c3"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1411,
+              "bodySha256": "15eb16aeaa3167978a6e6027ea48e027aa3993cf531593dd9eac571b2c9f4696"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1365,
+              "bodySha256": "3bb22b998e35f00acba2f235b034b784b7f4af135e4e51ecf91db8f18be3714a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1423,
+              "bodySha256": "456b23a67e70888fde536312617419e18845df581bbc1d40105b1936d4acc194"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1357,
+              "bodySha256": "fe7672c067c712747cb94285d5e70c133b65f0933d9a55289ec2d01c5c35b8e6"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1404,
+              "bodySha256": "06bfd1e3ce42f28b112f9d0bec16edfc896acc119399473919ff4f1a10da2028"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "1e5b0fa8ee78678b9d92763b96a180b8ce503b040a6ff2ed72eca2cc54d12838"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1406,
+              "bodySha256": "640011766c7664561621c06ada42b56ef9bdce0cfe80d093a33727b66b892ce0"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "9ceea54a8eeaa64f858fb62474ccc3baae35c5f11fe5cab07ca13c9af691e076"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 19962,
+              "bodySha256": "2a8b1e4e346117231cd68f2461a6a9cc88b8554cd26cc565a367ae4da91ed14c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v23.spec.ts",
+      "line": 168,
+      "title": "en: visible moving frames across broad plateaus, three revisits, loops and reload",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 61761,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1312,
+              "bodySha256": "5c1dfdfb7f74ca1575dfbe324ad9b494b684c7e992899416b8470c38c7f7ceff"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1408,
+              "bodySha256": "c9abec923907e5155a66a9e90dc3b4ab85aed37b3a08c86bda18e9e46f7a9c3a"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1426,
+              "bodySha256": "d69cf467b4ac1d02672a6359e9ed06d748c523f08a83e7a5c48188ef7d757968"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1424,
+              "bodySha256": "4d7e587f8ad7e08e4faf1762c10ae45aaec3ba659f7e17b9cd3a79dff51b5d92"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1402,
+              "bodySha256": "48ca5d753113a13d6c331bec43d2d11758f63d691a9ac0ab52c61cf9a8dadc97"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1355,
+              "bodySha256": "d92e671db5012156e5a7946d56785db82678141a00c1210e774bd3485c5bd7ec"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "aa04d0ed2ac02403e31019c7a3a6bf54ce0f8680cb1a7b02bef928d4fe90635c"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "08fd8c7bfb1899294756993d56f8dbf5118c019e10d6ffd9d5bbf65fbc64a38a"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1411,
+              "bodySha256": "7a59de2042346e09a1ba084cf3bb5c62d1e00e79a1c20c29e9aa2a14ff7cf9d8"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1373,
+              "bodySha256": "197c4f3d920803196a382abe03b87e15159385997a110a5c32dc993f70667cee"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1428,
+              "bodySha256": "39b30d0cdcf17967a6ff3b01829866a00ee7ef06e2198de206a7742c3d29ce10"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "7f79a7304d2851cad1f2168f8f2e5cc4c1d28db9729434bc8c6a216fc36a6f3f"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1404,
+              "bodySha256": "fe7387b42aa354044a6e49733673ad50c7c7d293a4359ab0ec19d0414a9e96dc"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "7e0601d1daf3aa21099b67e9090d389b03776b39c2a13fc04740b3ad571a7f6f"
+            },
+            {
+              "name": "visible-breathing-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1409,
+              "bodySha256": "df134b3cefd5ff7785c839ad83e93ea3cca561e800dd8c3e01ae4a2f620b3b04"
+            },
+            {
+              "name": "visible-understory-probe",
+              "contentType": "application/json",
+              "bodyBytes": 1407,
+              "bodySha256": "2943443d6d8d820cd01361d7c3402c11bfb3ba1b0f3b48ae11c0dd834d916347"
+            },
+            {
+              "name": "visible-film-frames-and-revisits",
+              "contentType": "application/json",
+              "bodyBytes": 20083,
+              "bodySha256": "d32f38df4983c36f88342d10a3b9ac897fe716cfaf6e98e2eda8461d240c5afe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2522,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "b91479a01fa68e915e2ea6a7cee550195ab43c9e2d3048b100bbf90dc19cede2"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1663971,
+              "bodySha256": "a4bbc872dc01b664b3e88b1b4fc2555a02460999c4cd94d651891111f9bf31d4"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-1512x9-2279f-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2871,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "d27f624660ee94e6a825c344f8696e6cfbc01586c917b3af72712653f1074041"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1680803,
+              "bodySha256": "4e8cc33a3453c5d56d036da29b1d8dc0ed7acc875595667c554d660f16cdfdf5"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-1512x9-f071b-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2307,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 177,
+              "bodySha256": "56cad9f907fc1489ca9a021a95166052a21e743c424f765f5b1f15d35836bdda"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1479531,
+              "bodySha256": "1ac7df669d0f2792d098b4b1dcf39a525a70bddcc2b11d71c7eee7443e6e40fc"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-1440x9-09af9-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2149,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 177,
+              "bodySha256": "f4493d85aff4c46283942438686238afd55403749729264cf3fd83d0885140e9"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 1429929,
+              "bodySha256": "08baeae574c5e83ca16e9d433180d7c2b112474b63f101c2517a963f5397c944"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-1440x9-cd5a4-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1199,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 386898,
+              "bodySha256": "79e0b4b401cd50c2ce80cae94d4fc002e8adbc76fd81ebaacc7fb4f802c4cc51"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-390x84-dd1c5-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1145,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 189,
+              "bodySha256": "8a685d4e6f3883b00975e3f1a2246cd9597d6d663d7992c6ba1f03d626f0f572"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 390873,
+              "bodySha256": "31ec58d4234396520ee27915e779c3e097d9594fb5536a358c953ae68abbda6e"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-390x84-c33db-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1094,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 310975,
+              "bodySha256": "97e37ddc96b8d49bbcb201b82e04841e29e7c574104888204511d2ed4f9c87f7"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-390x66-ea627-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1042,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 188,
+              "bodySha256": "4b0cc2611f5f777a4d99019e1dec1578f75d6fd2efba94f159291556dc13d5a5"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 314532,
+              "bodySha256": "c3626f3df9c17c214107e40e1f103b709b6a7de9f2f0b96755448ca100b45345"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-390x66-574ac-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "lv: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 934,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 265007,
+              "bodySha256": "b644c7f03b16cf9a3c29152ac61142bf19bf0837578f9676cba887a0dc2d06c5"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-320x69-8f32f-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 28,
+      "title": "en: short Understory budget preserves full bleed, copy and static overrides",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 985,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "understory-scroll-budget",
+              "contentType": "application/json",
+              "bodyBytes": 181,
+              "bodySha256": "f631ec7470b98a307743aadbf7d4dd705ea437c20ba315e40765b07bdd3bd986"
+            },
+            {
+              "name": "full-screen-understory",
+              "contentType": "image/png",
+              "bodyBytes": 273895,
+              "bodySha256": "8aa7765d7e89bf4c906d0e56c714aefba8802644978aba1c365c9d59e8d1e1a8"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-geometry-320x69-2ef0a-d-copy-and-static-overrides-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 16590,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 391,
+              "bodySha256": "a0f3a903137738d8cda349bca4e33f84a347d87a73ce6bd2ec6c9f4a9c4eb343"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-native-journey--7c420-ng-anchors-and-history-work-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2525,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 110,
+              "bodySha256": "43d9bf61c9f493adfc580c8da224aad0c0723eba97fe4e2c58a731ed7d19f99d"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-native-journey--14be0--a-genuinely-buffering-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2660,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 106,
+              "bodySha256": "c82b535d989283bf2b2b2bb7120bfb64101a45ee2024773fe10345dbb336fcfd"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-native-journey--d80da-aves-a-genuinely-error-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 115,
+      "title": "wheel/keyboard leaves immediately while playing, paused or looping; anchors and history work",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 15010,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "native-scroll-independent-of-movie-state",
+              "contentType": "application/json",
+              "bodyBytes": 417,
+              "bodySha256": "4aba25715c4f1ecfd6874e2a8525488635817a2f74d8e639c7089a2e4425cc10"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-native-journey--ecbf4-ng-anchors-and-history-work-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely buffering film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1979,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 116,
+              "bodySha256": "0c8251a7deb7c3c2cafac55b1db7da3228ded639791b4eb0bdd08b03567f86c9"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-native-journey--23e19--a-genuinely-buffering-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v252.spec.ts",
+      "line": 161,
+      "title": "native scrolling leaves a genuinely error film",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1956,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "unavailable-film-native-scroll",
+              "contentType": "application/json",
+              "bodyBytes": 112,
+              "bodySha256": "371fa199c7caa27a374672a77dd853be54bf0b6b7215bf52542ca20b560781d6"
+            },
+            {
+              "name": "video",
+              "contentType": "video/webm",
+              "path": "/workspace/piepe/test-results/v252-2-5-2-native-journey--2e6d5-aves-a-genuinely-error-film-chrome-desktop/video.webm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 90,
+      "title": "understory: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2713,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "staged-and-presented-film",
+              "contentType": "application/json",
+              "bodyBytes": 558,
+              "bodySha256": "3fa78be1ccd2a631f138a6ede2a47321691ed19beaa68703cd5f923ef57d64fa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 90,
+      "title": "breathing: decoded frame can reach a compositor that withholds transparent video callbacks",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2649,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "staged-and-presented-film",
+              "contentType": "application/json",
+              "bodyBytes": 568,
+              "bodySha256": "e4a6ed1fb10569a93369366314ede27bb12f50398d069fb9a3dbce5db6a23278"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v253.spec.ts",
+      "line": 141,
+      "title": "environmental films pause on a hidden-document event and resume actual frames on return",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2626,
+          "retry": 0,
+          "errors": [],
+          "attachments": [
+            {
+              "name": "visibility-pause-and-presented-resume",
+              "contentType": "application/json",
+              "bodyBytes": 158,
+              "bodySha256": "d54f4e1dbce0f436bf7818cdc4623ecd8cfe451313d446141f1fd263dcc329ab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "v320.spec.ts",
+      "line": 79,
+      "title": "3.2 no production media changes, codecs or new film payloads; player and security remain byte-identical",
+      "project": "chrome-desktop",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 992,
+          "retry": 0,
+          "errors": [],
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}
