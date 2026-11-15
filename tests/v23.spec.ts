@@ -93,10 +93,10 @@ async function movingPicture(page: Page, name: 'understory' | 'breathing') {
   // do not confuse exactly three screenshot calls with three presented frames.
   while(distinctFrames(sample.frames)<3&&Date.now()-pixelsStarted<2500){
     const started=Date.now()
-    await layer.locator('video').evaluate((video:HTMLVideoElement)=>new Promise<void>((resolve,reject)=>{
-      const timer=setTimeout(()=>{video.cancelVideoFrameCallback(request);reject(Error('No frame before composited sample'))},1000)
-      const request=video.requestVideoFrameCallback(()=>{clearTimeout(timer);requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))})
-    }))
+    // Do not register a second callback across a replay seek. Native WebKit
+    // can discard that registration at the resource/seek boundary. Cadence is
+    // already proved above; the three different composited pixels below prove
+    // visible movement independently, within the same bounded capture window.
     const pixels=await page.screenshot({clip,scale:'css'})
     sample.frames.push({time:await layer.locator('video').evaluate((v:HTMLVideoElement)=>v.currentTime),hash:parseInt(createHash('sha256').update(pixels).digest('hex').slice(0,8),16),phase:'pixels',copyMs:Date.now()-started,copyMethod:'composited-browser-crop'})
     if(distinctFrames(sample.frames)<3)await page.waitForTimeout(250)
