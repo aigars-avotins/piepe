@@ -115,9 +115,16 @@ export function bindAtlas(section: HTMLElement) {
       hide(); opener = button; comparison.replaceChildren()
       for (const item of [card, ...cards.filter(other => other !== card)]) {
         const original = item.querySelector<HTMLImageElement>('img[data-interactive-image]')!, figure = document.createElement('figure'), photo = document.createElement('img'), caption = document.createElement('figcaption')
-        // A dialog/loupe is deliberate intent: always use the retained full-resolution JPEG.
-        photo.src = original.dataset.originalSrc!; photo.alt = original.alt; photo.width = Number(original.getAttribute('width')); photo.height = Number(original.getAttribute('height'))
-        photo.loading = 'eager'; photo.decoding = 'async'; photo.className = 'raster-grade'
+        // Explicit zoom is deliberate intent: the chosen surface gets the retained full-resolution JPEG.
+        // The two comparison views sit below it at half width; they load a sized serving copy, lazily.
+        const chosen = item === card, full = Number(original.getAttribute('width')) || 2400
+        photo.alt = original.alt; photo.width = full; photo.height = Number(original.getAttribute('height'))
+        photo.loading = chosen ? 'eager' : 'lazy'; photo.decoding = 'async'; photo.className = 'raster-grade'
+        if (!chosen) {
+          photo.sizes = '(max-width:699px) calc(100vw - 40px), min(50vw, 720px)'
+          photo.srcset = [960, 1600, full].map(width => `${original.dataset.originalSrc!.replace(/([^/]+)\.jpg$/, `responsive/$1-${width}.webp`)} ${width}w`).join(', ')
+        }
+        photo.src = original.dataset.originalSrc!
         photo.dataset.interactiveImage = ''; photo.dataset.originalSrc = original.dataset.originalSrc; photo.dataset.alternateSrc = original.dataset.alternateSrc; photo.dataset.fallbackSrc = original.dataset.fallbackSrc
         caption.textContent = item.querySelector('h3')!.textContent
         const status = item.querySelector<HTMLElement>('[data-image-status]')!.cloneNode(true) as HTMLElement
