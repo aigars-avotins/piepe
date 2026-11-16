@@ -1,7 +1,8 @@
 import type { Locale } from './i18n'
 import { studySizes } from './imageSizes'
 
-// Responsive serving copies are separate. The owner JPEG remains the native fallback/original.
+// Responsive serving copies are separate. The owner JPEG remains the native fallback/original;
+// the 960px serving copy is the last real attempt before the labelled wallpaper substitute.
 export default function RasterImage({ name, alt = '', className = '', width = 2752, height = 1536, sizes = studySizes, deferred = false }: {
   name: string; alt?: string; className?: string; width?: number; height?: number; sizes?: string; deferred?: boolean
 }) {
@@ -10,7 +11,7 @@ export default function RasterImage({ name, alt = '', className = '', width = 27
   return <>
     <picture className="raster-picture" data-deferred-image={deferred || undefined}>
       <source type="image/webp" srcSet={deferred ? undefined : srcSet} data-srcset={srcSet} sizes={sizes} />
-      <img draggable={false} className={className} src={deferred ? undefined : original} data-original-src={original} data-interactive-image="" data-alternate-src={`/images/interactive/${name}.webp`} data-fallback-src="/wallpapers/previews/desktop.webp" alt={alt} width={width} height={height} loading="lazy" decoding="async" />
+      <img draggable={false} className={className} src={deferred ? undefined : original} data-original-src={original} data-interactive-image="" data-alternate-src={`/images/interactive/responsive/${name}-960.webp`} data-fallback-src="/wallpapers/previews/desktop.webp" alt={alt} width={width} height={height} loading="lazy" decoding="async" />
     </picture>
     {deferred && <noscript><img src={original} alt={alt} width={width} height={height} loading="lazy" decoding="async" /></noscript>}
   </>

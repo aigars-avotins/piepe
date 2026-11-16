@@ -60,12 +60,16 @@ test('3.1 responsive then original JPEG tries alternate then labelled wallpaper 
  await expect.poll(()=>view.locator('img').evaluateAll(es=>es.every(e=>(e as HTMLImageElement).complete&&(e as HTMLImageElement).naturalWidth>0&&e.getAttribute('src')==='/wallpapers/previews/desktop.webp'))).toBe(true)
  await expect(view.locator('[data-image-status]')).toBeVisible();await expect(view.locator('.xray-images')).toHaveAttribute('aria-hidden','true');expect(Object.keys(counts)).toHaveLength(6);expect(Object.values(counts)).toEqual([1,1,1,1,1,1])
 })
-test('3.1 unavailable responsive and JPEG sources disclose an alternate preview without using the final wallpaper',async({page})=>{
- await page.route('**/images/interactive/responsive/atlas-pores-*.webp',route=>route.fulfill({status:404,body:''}))
+test('3.3 a failed responsive candidate and JPEG fall back to the real 960px serving copy, not a missing file',async({page})=>{
+ const requested:string[]=[]
+ await page.route('**/images/interactive/responsive/atlas-pores-{480,1600,2400}.webp',route=>route.fulfill({status:404,body:''}))
  await page.route('**/images/interactive/atlas-pores.jpg',route=>route.fulfill({status:404,body:''}))
- // Exercise a genuine RIFF/WebP file, not a JPEG served with a WebP filename.
- await page.route('**/images/interactive/atlas-pores.webp',route=>route.fulfill({status:200,contentType:'image/webp',path:'public/wallpapers/previews/desktop.webp'}))
- await page.goto('/kas-ir-piepe/#surface-atlas');const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();await expect.poll(()=>picture.locator('img[data-interactive-image]').evaluate(async(e:HTMLImageElement)=>{const bitmap=await createImageBitmap(await(await fetch(e.currentSrc)).blob());const width=bitmap.width;bitmap.close();return width})).toBe(800);await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('data-image-state','fallback');await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('src',/\.webp$/);await expect(picture.locator('[data-image-status]')).toBeVisible();await expect(picture.locator('img[data-interactive-image]')).toHaveAttribute('alt','')
+ page.on('response',response=>{if(response.url().includes('atlas-pores'))requested.push(`${response.status()} ${new URL(response.url()).pathname}`)})
+ await page.goto('/kas-ir-piepe/#surface-atlas');const picture=page.locator('.atlas-picture').first(),image=picture.locator('img[data-interactive-image]');await picture.scrollIntoViewIfNeeded()
+ await expect(image).toHaveAttribute('data-image-state','ready');await expect(image).toHaveAttribute('src','/images/interactive/responsive/atlas-pores-960.webp')
+ expect(await image.evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(960);await expect(image).not.toHaveAttribute('alt','');await expect(picture.locator('[data-image-status]')).toBeHidden()
+ // The retired slot pointed at /images/interactive/atlas-pores.webp, which never existed.
+ expect(requested).toContain('200 /images/interactive/responsive/atlas-pores-960.webp');expect(requested.some(entry=>entry.endsWith('/images/interactive/atlas-pores.webp'))).toBe(false)
 })
 test('2.5.8.2 original JPEG pixels are retained with correct extensions; original cinema and routing stay unchanged',async()=>{
  const manifest=JSON.parse(await readFile('docs/qa/v2582/assets.json','utf8'))
