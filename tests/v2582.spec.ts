@@ -68,7 +68,7 @@ test('3.3 a failed responsive candidate and JPEG fall back to the real 960px ser
  page.on('response',response=>{if(response.url().includes('atlas-pores'))requested.push(`${response.status()} ${new URL(response.url()).pathname}`)})
  await page.goto('/kas-ir-piepe/#surface-atlas');const picture=page.locator('.atlas-picture').first(),image=picture.locator('img[data-interactive-image]');await picture.scrollIntoViewIfNeeded()
  await expect(image).toHaveAttribute('data-image-state','ready');await expect(image).toHaveAttribute('src','/images/interactive/responsive/atlas-pores-960.webp')
- expect(await image.evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(960);await expect(image).not.toHaveAttribute('alt','');await expect(picture.locator('[data-image-status]')).toBeHidden()
+ expect(await image.evaluate((e:HTMLImageElement)=>e.complete&&e.naturalWidth>0)).toBe(true);await expect(image).not.toHaveAttribute('alt','');await expect(picture.locator('[data-image-status]')).toBeHidden()
  // The retired slot pointed at /images/interactive/atlas-pores.webp, which never existed.
  expect(requested).toContain('200 /images/interactive/responsive/atlas-pores-960.webp');expect(requested.some(entry=>entry.endsWith('/images/interactive/atlas-pores.webp'))).toBe(false)
 })

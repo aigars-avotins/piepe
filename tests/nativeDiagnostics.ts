@@ -18,7 +18,8 @@ JSON.stringify({ requested, frontmost: $.NSWorkspace.sharedWorkspace.frontmostAp
 /** Activate custom-context pages as well as the standard page fixture. */
 export async function activateNativePage(page: Page, info: TestInfo) {
   await page.bringToFront()
-  if (process.platform !== 'darwin') return
+  // Native AppKit activation is for the WebKit project on macOS; local Chromium on a Mac has no such window.
+  if (process.platform !== 'darwin' || page.context().browser()?.browserType().name() !== 'webkit') return
   // DOM focus alone does not activate an AppKit application on a CI desktop.
   // Use the native workspace API, without System Events/Accessibility control.
   const activation = execFileSync('/usr/bin/osascript', ['-l', 'JavaScript', '-e', activateBrowser], { encoding: 'utf8' })

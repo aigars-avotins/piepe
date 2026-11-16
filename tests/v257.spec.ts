@@ -1,7 +1,6 @@
 import { releaseVersion } from '../src/release'
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
-import { createHash } from 'node:crypto'
 import { expectPreserved } from './preserved'
 import { forestMetadata } from '../src/ForestPage'
 import { fieldNote, collectionCopy } from '../src/forestKnowledge'
@@ -94,14 +93,14 @@ test('2.5.7 route graph, CSP hashes, honest species facts and all internal resou
   const policy = /script-src ([^;]+)/.exec(await readFile('dist/_headers', 'utf8'))![1]
   expect(policy).not.toMatch(/unsafe-inline|unsafe-eval/)
   // Twenty JSON-LD documents plus the existing bootstrap; retired colour-mode code adds no hash.
-  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(21)
+  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(1) // 3.3: the executable boot script only
   const paths = ['/', '/en/', readingPath('lv'), readingPath('en'), ...forestPages.flatMap(p => [forestPath('lv', p), forestPath('en', p)])]
   expect(new Set(paths).size).toBe(20)
   const links = new Set<string>(), titles = new Set<string>()
   for (const path of paths) {
     const response = await request.get(path), html = await response.text(); expect(response.status()).toBe(200)
     const data = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
-    expect(data).toHaveLength(1); expect(policy).toContain(`'sha256-${createHash('sha256').update(data[0][1]).digest('base64')}'`)
+    expect(data).toHaveLength(1); expect(() => JSON.parse(data[0][1])).not.toThrow()
     const title = /<title>([^<]+)<\/title>/.exec(html)![1]; expect(titles.has(title)).toBe(false); titles.add(title)
     const found = await page.evaluate(html => { const d = new DOMParser().parseFromString(html, 'text/html'); return [...d.querySelectorAll('a[href^="/"], img[src^="/"]')].map(e => e.getAttribute('href') || e.getAttribute('src')!) }, html)
     for (const link of found) links.add(link.split('#')[0])

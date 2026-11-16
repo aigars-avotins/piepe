@@ -100,8 +100,8 @@ test('3.2 native no-JS hero link still reaches Encounter, and SSR prioritizes th
   const context=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}})
   try{const page=await context.newPage();for(const path of ['/','/en/']){await page.goto(path);await page.locator('[data-portal-hero-entry]').click();await expect(page).toHaveURL(/#encounter$/);await expect(page.locator('#encounter')).toBeInViewport();expect(await page.locator('[data-portal-hero-entry]').getAttribute('target')).toBeNull()}}finally{await context.close()}
   const html=await(await request.get('/')).text()
-  expect(html).toMatch(/rel="preload"[^>]+href="\/media\/forest-poster.jpg\?v=2.3"/)
-  expect(html).not.toMatch(/rel="preload"[^>]+href="\/media\/forest-(?:final|breathing-poster).jpg/)
+  // 3.3: no unconditional preload in the HTML; the boot script preloads the one frame this visit paints.
+  expect(html).not.toMatch(/rel="preload"[^>]+href="\/media\//);expect(html).not.toMatch(/<img[^>]+src="\/media\/forest-(?:poster|breathing-poster)\.jpg/)
 })
 
 for(const locale of ['lv','en']as const)test(`3.2 ${locale}: Back restores the actual reading position even when the old fragment names a different scene`,async({page})=>{

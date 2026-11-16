@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
-import { createHash } from 'node:crypto'
 import { messages } from '../src/i18n'
 import { forestPages, forestPath } from '../src/forestPaths'
 
@@ -75,7 +74,8 @@ for (const locale of ['lv', 'en'] as const) {
     const visit = (value: unknown) => { if (value && typeof value === 'object') { for (const [key, item] of Object.entries(value)) { if (key === '@type') types.push(String(item)); else visit(item) } } }
     visit(initial); expect(types.sort()).toEqual(['WebPage', 'WebSite'])
     const csp = await readFile('dist/_headers', 'utf8')
-    expect(csp).toContain(`'sha256-${createHash('sha256').update(scripts[0][1]).digest('base64')}'`)
+    // 3.3: JSON-LD is a data block and carries no script-src hash; only the boot script is hashed.
+    expect([...csp.matchAll(/'sha256-/g)]).toHaveLength(1)
     await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto(path)
     await page.waitForFunction(() => !document.querySelector('.world')!.classList.contains('prerendered'))
     await expect(page.locator('.encounter-status')).toHaveText(t.waiting)

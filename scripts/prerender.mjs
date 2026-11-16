@@ -29,12 +29,12 @@ try {
   const readingClient = `/assets/reading-tools-${createHash('sha256').update(client.code).digest('hex').slice(0,16)}.js`
   await writeFile(`dist${readingClient}`,client.code)
   const boot = await readFile('public/boot.js', 'utf8')
+  // Only the executable boot script needs a script-src hash. JSON-LD is a data block: browsers never
+  // execute it, so CSP does not gate it and the policy no longer grows with every new document.
   const hashes = [`'sha256-${createHash('sha256').update(boot).digest('base64')}'`]
   for (const locale of ['lv', 'en']) {
     const criticalFonts = assets.filter(name => /^manrope-latin-400-normal-.*\.woff2$/.test(name) || (locale === 'lv' && /^manrope-latin-ext-400-normal-.*\.woff2$/.test(name)))
     const head = renderHead(locale) + criticalFonts.map(name => `<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/${name}"/>`).join('')
-    const data = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(head)[1]
-    hashes.push(`'sha256-${createHash('sha256').update(data).digest('base64')}'`)
     const html = template.replace('<script src="/boot.js"></script>', `<script>${boot}</script>`).replace(/<html lang="[^"]+"/, `<html lang="${locale}"`).replace(/<!-- locale:start -->[\s\S]*?<!-- locale:end -->/, head).replace('<div id="root"></div>', `<div id="root">${renderPage(locale)}</div>`)
     if (!html.includes(locale === 'lv' ? 'Kas ir piepe?' : 'What is a bracket fungus?')) throw new Error('Missing rendered content')
     await writeFile(`dist/field-note-${locale}.txt`, renderNote(locale))
@@ -44,13 +44,9 @@ try {
     // controls module is loaded; never boot.js, #root or the cinema application.
     const readingFonts = assets.filter(name => /^(?:manrope|cormorant-garamond)-latin-400-normal-.*\.woff2$/.test(name) || (locale === 'lv' && /^(?:manrope|cormorant-garamond)-latin-ext-400-normal-.*\.woff2$/.test(name)))
     const readingHtml = renderReadingDocument(locale, [...appStyles, readingStyle,experienceStyle], readingFonts.map(name => `/assets/${name}`),readingClient)
-    const readingData = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(readingHtml)[1]
-    hashes.push(`'sha256-${createHash('sha256').update(readingData).digest('base64')}'`)
     const readingDir = `dist${readingPath(locale)}`
     await mkdir(readingDir, { recursive: true }); await writeFile(`${readingDir}index.html`, readingHtml)
     for (const document of renderForestDocuments(locale, [...appStyles, readingStyle, forestStyle], readingFonts.map(name => `/assets/${name}`),readingClient,experienceStyle)) {
-      const data = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/.exec(document.html)[1]
-      hashes.push(`'sha256-${createHash('sha256').update(data).digest('base64')}'`)
       await mkdir(`dist${document.path}`, { recursive: true })
       await writeFile(`dist${document.path}index.html`, document.html)
     }

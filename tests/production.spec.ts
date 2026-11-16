@@ -1,4 +1,5 @@
 import { releaseVersion } from '../src/release'
+import { mediaVersion } from '../src/release'
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { messages, readingPath } from '../src/i18n'
@@ -99,8 +100,8 @@ for (const locale of ['lv','en'] as const) test(`${locale}: released application
   await page.getByRole('button',{name:now.replayLabel}).click();await expect(page.locator('video.forest-film')).toHaveCount(1)
   await page.getByRole('button',{name:now.skipIntro}).click();await expect(page.getByRole('button',{name:now.closer,exact:true})).toBeFocused()
   for(const clip of ['reveal','awakening','understory','breathing']){
-    const range=await request.get(`/media/forest-${clip}.mp4?v=2.3`,{headers:{Range:'bytes=0-63'}});expect(range.status()).toBe(206);expect((await range.body()).length).toBe(64)
-    expect((await request.get(`/media/forest-${clip}.mp4?v=2.3`,{headers:{Range:'bytes=999999999-'}})).status()).toBe(416)
+    const range=await request.get(`/media/forest-${clip}.mp4?v=${mediaVersion}`,{headers:{Range:'bytes=0-63'}});expect(range.status()).toBe(206);expect((await range.body()).length).toBe(64)
+    expect((await request.get(`/media/forest-${clip}.mp4?v=${mediaVersion}`,{headers:{Range:'bytes=999999999-'}})).status()).toBe(416)
   }
   expect((await request.get('/favicon.ico')).status()).toBe(200);expect((await request.get('/no-such-page')).status()).toBe(404)
   if(testInfo.project.name==='chrome-desktop'){await page.setViewportSize({width:390,height:664});await page.screenshot({path:testInfo.outputPath(`${locale}-production-mobile.png`),scale:'css'})}

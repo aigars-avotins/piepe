@@ -190,13 +190,13 @@ test('2.5.8 unavailable Web Audio retains real gesture-gated native recording pl
 
 test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets',async({request,page})=>{
   const policy=/Content-Security-Policy: (.+)/.exec(await readFile('dist/_headers','utf8'))![1],paths=['/','/en/',readingPath('lv'),readingPath('en'),...forestPages.flatMap(p=>[forestPath('lv',p),forestPath('en',p)])]
-  // The retired colour bootstrap is gone: one home bootstrap + 20 document JSON-LD hashes.
-  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(21);expect(policy).not.toMatch(/script-src[^;]*(?:unsafe-inline|unsafe-eval|https:|\*)/)
+  // 3.3: one hash, for the executable home bootstrap. JSON-LD data blocks are not gated by script-src.
+  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(1);expect(policy).not.toMatch(/script-src[^;]*(?:unsafe-inline|unsafe-eval|https:|\*)/)
   for(const path of paths){
     const response=await request.get(path),html=await response.text();expect(response.status()).toBe(200)
     const ids=await page.evaluate(markup=>[...new DOMParser().parseFromString(markup,'text/html').querySelectorAll('[id]')].map(element=>element.id),html)
     expect(ids.length,`${path}: DOM and SVG IDs must share a collision-free namespace`).toBe(new Set(ids).size)
-    for(const script of html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g))expect(policy).toContain(`'sha256-${createHash('sha256').update(script[1]).digest('base64')}'`)
+    for(const script of html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g))expect(policy).toContain(`'sha256-${createHash('sha256').update(script[1]).digest('base64')}'`)
   }
   for(const locale of ['lv','en'] as const)for(const number of ['001','002','003','004','005','006'] as const){
     const data=forestSchema(locale,{kind:'note',number}) as ReturnType<typeof forestSchema>&{breadcrumb:{'@type':string;itemListElement:{position:number;name:string;item:string}[]}}

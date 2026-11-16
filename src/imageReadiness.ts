@@ -44,7 +44,7 @@ export function bindImageFallback(root: HTMLElement | Document) {
       image.dataset.failedSrc = image.currentSrc
       image.dataset.imageAttempt = 'original'; image.src = image.dataset.originalSrc!
     } else if (attempt !== 'alternate' && attempt !== 'fallback' && alternate && alternate !== image.dataset.failedSrc) {
-      image.dataset.imageAttempt = 'alternate'; image.src = alternate
+      image.dataset.imageAttempt = 'alternate'; image.src = image.dataset.alternateSrc!
     } else if (attempt !== 'fallback') {
       image.dataset.imageAttempt = 'fallback'; image.dataset.imageState = 'fallback'; image.alt = ''; image.src = image.dataset.fallbackSrc!
     } else image.dataset.imageState = 'failed'

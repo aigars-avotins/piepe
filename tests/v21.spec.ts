@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { mediaVersion } from '../src/release'
 import { readFile } from 'node:fs/promises'
 import { messages } from '../src/i18n'
 import type { Locale } from '../src/i18n'
@@ -93,7 +94,7 @@ test('awakening completes once; environmental films replay with matched ending f
     await expect(layer).toHaveAttribute('data-clip-reason', 'ended')
     await expect(layer.locator('video')).toHaveCount(1)
     await expect(layer).toHaveAttribute('data-clip-state', 'playing')
-    await expect(layer.locator('.clip-end')).toHaveAttribute('src', `/media/forest-${clip}-final.jpg?v=2.3`)
+    await expect(layer.locator('.clip-end')).toHaveAttribute('src', `/media/forest-${clip}-final.jpg?v=${mediaVersion}`)
     expect(await layer.locator('.clip-end').evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth >= 1900)).toBe(true)
     const presented = await layer.locator('video').evaluate((v: HTMLVideoElement) => v.getVideoPlaybackQuality().totalVideoFrames)
     await expect.poll(() => layer.locator('video').evaluate((v: HTMLVideoElement) => v.getVideoPlaybackQuality().totalVideoFrames)).toBeGreaterThan(presented)
@@ -184,7 +185,7 @@ test('missing awakening still recovers to the preserved forest photo', async ({ 
   await page.route('**/media/forest-awakening-final.jpg*', route => route.abort())
   await page.goto('/en/'); await page.getByRole('button',{name:'Look closer at the fungus',exact:true}).click()
   const photo=page.locator('.specimen-photo img')
-  await expect(photo).toHaveAttribute('src','/media/forest-final.jpg?v=2.3')
+  await expect(photo).toHaveAttribute('src','/media/forest-final.jpg?v='+mediaVersion)
   expect(await photo.evaluate((i:HTMLImageElement)=>i.complete&&i.naturalWidth===1920)).toBe(true)
   await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
 })
