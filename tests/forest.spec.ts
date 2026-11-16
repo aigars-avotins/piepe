@@ -23,7 +23,7 @@ test('actual film plays once, reveals title, ends and becomes interactive', asyn
   expect(metadata).toMatchObject({ width: 1920, height: 1080, muted: true, inline: true, loop: false })
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'ended', { timeout: 11000 })
   await expect(film).toHaveCount(0)
-  await page.getByRole('button', { name: 'Discover the shelf fungus' }).click()
+  await page.locator('.fungus-hit').click()
   await expect(page.getByRole('dialog')).toBeVisible()
   await expect(page.getByRole('heading', { name: /A small shelf/ })).toBeVisible()
   await page.getByRole('button', { name: 'Close discovery' }).click()
@@ -69,7 +69,7 @@ test('reduced motion avoids downloading film, remains readable and has no overfl
   await page.goto('/en/')
   await expect(page.locator('video')).toHaveCount(0)
   await expect(page.getByRole('heading', { name: 'pie.pe', exact: true })).toBeVisible()
-  await page.getByRole('button', { name: 'Discover the shelf fungus' }).click()
+  await page.locator('.fungus-hit').click()
   await expect(page.getByRole('dialog')).toBeVisible()
   await page.getByRole('button', { name: 'Close discovery' }).click()
   for (const id of ['forest', 'understory', 'encounter', 'return']) {
@@ -84,7 +84,7 @@ test('blocked autoplay falls back immediately to the interactive still', async (
   await page.addInitScript(() => { HTMLMediaElement.prototype.play = () => Promise.reject(new DOMException('Blocked', 'NotAllowedError')) })
   await page.goto('/en/')
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'autoplay-blocked')
-  await expect(page.getByRole('button', { name: 'Discover the shelf fungus' })).toBeEnabled()
+  await expect(page.locator('.fungus-hit')).toBeEnabled()
 })
 
 test('missing video recovers without trapping the visitor', async ({ page }) => {
@@ -99,7 +99,7 @@ test('pending playback and a mid-film stall both have bounded recovery', async (
   await page.route('**/media/forest-reveal.mp4*', () => {})
   await page.goto('/en/', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('.world')).toHaveAttribute('data-exit-reason', 'load-timeout', { timeout: 6000 })
-  await expect(page.getByRole('button', { name: 'Discover the shelf fungus' })).toBeEnabled()
+  await expect(page.locator('.fungus-hit')).toBeEnabled()
 })
 
 test('an actual decoding stall recovers to the still', async ({ page }) => {
@@ -123,7 +123,7 @@ test('data saving preference avoids video request', async ({ page }) => {
   await page.addInitScript(() => Object.defineProperty(navigator, 'connection', { value: { saveData: true }, configurable: true }))
   await page.goto('/en/')
   await expect(page.locator('video')).toHaveCount(0)
-  await expect(page.getByRole('button', { name: 'Discover the shelf fungus' })).toBeEnabled()
+  await expect(page.locator('.fungus-hit')).toBeEnabled()
 })
 
 test('cover geometry keeps hotspot aligned to the actual fungus across viewport changes', async ({ page }) => {

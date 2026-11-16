@@ -151,7 +151,7 @@ for (const [width, height] of [[1512, 982], [1440, 900], [390, 844], [390, 664]]
     await page.goto((locale === 'lv' ? '/' : '/en/') + '#forest'); await singleForest(page)
     await page.setViewportSize({ width: height, height: width })
     await singleForest(page)
-    const hotspot = page.locator('.fungus-hit')
+    const hotspot = page.locator('.fungus-annotation')
     await hotspot.focus(); await expect(hotspot).toBeFocused()
     await expect(hotspot).toBeEnabled()
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
