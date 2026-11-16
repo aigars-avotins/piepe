@@ -128,8 +128,10 @@ test('2.5.7 original factual prose, notes, core cinema and every media/download 
   // 2.5.8 explicitly enhances these four sources; full prose and real audio-graph
   // regressions replace obsolete byte-equality, all other immutable guards remain.
   const approved=new Set(['src/reading.ts','src/ReadingPage.tsx','src/reading.css','src/useForestAudio.ts'])
-  const reviewed={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))}
-  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/ForestScene.tsx','src/style.css','src/useForestAudio.ts'])
+  const reviewed={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v330/reviewed-sources.json','utf8'))}
+  // 3.3 fixes the hidden-tab AbortError latch and <source> error handling, removes unused copy keys
+  // and adds view transitions; those four reviewed files are pinned in docs/qa/v330.
+  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/EnvironmentalFilm.tsx','src/ForestScene.tsx','src/IntroFilm.tsx','src/i18n.ts','src/style.css','src/useForestAudio.ts'])
   for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(await readFile(path)),path).toBe(reviewed[path]??hash)
 })
 

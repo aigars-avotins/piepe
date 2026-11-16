@@ -91,7 +91,7 @@ test('2.5.8.1 original source/media checksums, real preview assets and lightweig
   expect(Object.keys(visualSources).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/style.css'])
   const v320=JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))
   expect(Object.keys(v320).sort()).toEqual(['src/ForestScene.tsx','src/useForestAudio.ts'])
-  for(const [path,hash]of Object.entries({...fixture.originalAssets,...fixture.protectedSources,...visualSources,...v320}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
+  for(const [path,hash]of Object.entries({...fixture.originalAssets,...fixture.protectedSources,...visualSources,...v320,...JSON.parse(await readFile('docs/qa/v330/reviewed-sources.json','utf8'))}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
 
   const home=await(await request.get('/')).text(),guide=await(await request.get(readingPath('lv'))).text(),entry=/src="(\/assets\/reading-tools-[^"]+\.js)"/.exec(guide)![1],js=await readFile('dist'+entry,'utf8')
   expect(js).not.toMatch(/react|gsap|ScrollTrigger|forest-reveal|AudioContext|import\s/);expect(Buffer.byteLength(js)).toBeLessThan(18000)
