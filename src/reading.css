@@ -18,3 +18,5 @@
 .reading-next{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}.reading-next a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}.reading-sources li:focus{outline:2px solid var(--gold);outline-offset:5px}.reading-sources li:target{background:#f2d7a209}
 
 @media(max-width:399px){.reading-header{padding-left:20px;padding-right:20px;gap:10px 12px}}
+/* Document-to-document navigation dissolves as one authored cut where the browser supports it. */
+@media(prefers-reduced-motion:no-preference){@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.42s;animation-timing-function:cubic-bezier(.22,1,.36,1)}}

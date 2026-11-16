@@ -41,7 +41,8 @@ export default function EnvironmentalFilm({ name, enabled, active = true, onRead
     const play = () => {
       if (disposed || failed || document.hidden) return
       progressAt = performance.now()
-      film.play().catch(() => fail('autoplay-blocked'))
+      // Our own pause() on a hidden tab rejects a pending play() with AbortError; that is not a block.
+      film.play().catch((error: unknown) => { if ((error as { name?: string } | null)?.name !== 'AbortError') fail('autoplay-blocked') })
     }
     const ended = () => {
       if (disposed || failed) return

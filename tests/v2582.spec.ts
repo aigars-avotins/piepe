@@ -39,7 +39,7 @@ for(const locale of ['lv','en'] as const){
   const b=(await image.boundingBox())!,x=b.width*.65,y=b.height*.6;const mouseX=Math.round(b.x+x),mouseY=Math.round(b.y+y);await page.mouse.move(mouseX,mouseY)
   const lens=picture.locator('.atlas-loupe');await expect(lens).toBeVisible();await expect(lens).toHaveCSS('width','140px')
   const zoom=await lens.locator('img').evaluate((e:HTMLImageElement)=>({width:parseFloat(e.style.width),height:parseFloat(e.style.height),left:parseFloat(e.style.left),top:parseFloat(e.style.top),source:e.currentSrc}))
-  expect(zoom.width).toBeCloseTo(b.width*2.5,1);expect(zoom.height).toBeCloseTo(b.height*2.5,1);expect(zoom.left).toBeCloseTo(70-(mouseX-b.x)*2.5,0);expect(zoom.top).toBeCloseTo(70-(mouseY-b.y)*2.5,0);expect(zoom.source).toContain('atlas-pores.jpg')
+  expect(zoom.width).toBeCloseTo(b.width*2.5,1);expect(zoom.height).toBeCloseTo(b.height*2.5,1);expect(zoom.left).toBeCloseTo(70-(mouseX-b.x)*2.5,0);expect(zoom.top).toBeCloseTo(70-(mouseY-b.y)*2.5,0);expect(zoom.source).toMatch(/\/responsive\/atlas-pores-(960|1600|2400)\.webp$/)
   await picture.click();await expect(page.locator('[data-atlas-dialog]')).not.toBeVisible();await page.locator('[data-atlas-open]').first().click();const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3);expect(await dialog.evaluate(e=>e.matches(':modal'))).toBe(true)
   await page.keyboard.press('Escape');await expect(dialog).toBeHidden();await expect(page.locator('[data-atlas-open]').first()).toBeFocused()
  })

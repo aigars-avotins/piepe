@@ -25,7 +25,7 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <div className="hero-copy"><p className="label title-enter">{t.heroLabel}</p><h1 id="hero-title" className="wordmark" aria-label="pie.pe"><span>pie</span><span className="wordmark-period">.</span><span>pe</span></h1><p className="hero-deck title-enter">{t.heroThought}</p></div>
         <div className="hero-hotspot-plane" style={plane}>
           <button className="fungus-hit" disabled={intro} onClick={onDiscovery} aria-label={t.discover} aria-haspopup="dialog" {...inspectEvents} />
-          <button ref={hotspot} className="fungus-annotation" disabled={intro} onClick={onDiscovery} aria-label={t.closer} aria-haspopup="dialog" {...inspectEvents}><span className="annotation-cross" aria-hidden="true">+</span><span>{locale==='lv'?'Aplūkot tuvāk':'Look closer'} <span aria-hidden="true"><Arrow direction="diagonal" /></span></span></button>
+          <button ref={hotspot} className="fungus-annotation" disabled={intro} onClick={onDiscovery} aria-label={t.closer} aria-haspopup="dialog" {...inspectEvents}><span className="annotation-cross" aria-hidden="true">+</span><span>{t.lookCloser} <span aria-hidden="true"><Arrow direction="diagonal" /></span></span></button>
         </div>
         <div className="hero-foot title-enter"><DiscoveryEntry locale={locale} onPortal={onPortal} inactive={intro}/><p className="hero-word-meaning"><span lang="lv">piepe</span><span className="foot-rule" />{t.wordMeaning}</p><SiteLink className="scroll-cue" href="#understory">{t.follow} <span aria-hidden="true"><Arrow direction="down" /></span></SiteLink><span className="edition">{t.edition}</span></div>
         {imageFailed && <p className="media-note">{t.imageError} <button onClick={onDiscovery}>{t.openEncounter}</button>.</p>}
@@ -72,6 +72,6 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <SiteLink className="line-link" href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers} <span aria-hidden="true"><Arrow direction="diagonal" /></span></SiteLink>
       </section>
     </main>
-            <footer inert={inactive}><SiteLink className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></SiteLink><span className="footer-edition">{t.forest} — 2026<span className="footer-meaning">{t.wordMeaning}</span></span><button className="text-button motion-toggle" aria-pressed={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
+            <footer inert={inactive}><SiteLink className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></SiteLink><span className="footer-edition">{t.forest} — 2026<span className="footer-meaning">{t.wordMeaning}</span></span><button className="text-button motion-toggle" data-paused={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
 </>
 }

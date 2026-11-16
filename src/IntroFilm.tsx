@@ -31,6 +31,9 @@ export default function IntroFilm({ onFinish, onTypography, skipRequested }: Pro
     const hidden = () => { if (document.hidden) finish('backgrounded') }
     video.addEventListener('ended', ended)
     video.addEventListener('error', error)
+    // A failed <source> reports on the source element and does not bubble to the video.
+    const source = video.querySelector('source')
+    source?.addEventListener('error', error)
     video.addEventListener('timeupdate', progress)
     document.addEventListener('visibilitychange', hidden)
     // Some browsers leave play() pending forever on poor connections.
@@ -48,6 +51,7 @@ export default function IntroFilm({ onFinish, onTypography, skipRequested }: Pro
       video.pause()
       video.removeEventListener('ended', ended)
       video.removeEventListener('error', error)
+      source?.removeEventListener('error', error)
       video.removeEventListener('timeupdate', progress)
       document.removeEventListener('visibilitychange', hidden)
     }

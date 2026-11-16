@@ -28,5 +28,10 @@ http.createServer(async(req,res)=>{
  const headers=new Headers();for(const [key,value] of Object.entries(req.headers))if(value)headers.set(key,Array.isArray(value)?value.join(','):value)
  const request=new Request('http://127.0.0.1:4173'+req.url,{method:req.method,headers})
  const response=new URL(request.url).pathname.startsWith('/media/')?await worker.fetch(request,{ASSETS:assets}):await assets.fetch(request)
+ // Workers Static Assets "404-page": unknown documents receive the built 404.html with status 404.
+ if(response.status===404&&!response.body&&req.method==='GET'&&!new URL(request.url).pathname.startsWith('/media/')&&(req.headers.accept||'').includes('text/html')){
+  const page=await readFile(resolve(root,'404.html')).catch(()=>null)
+  if(page){res.writeHead(404,{...Object.fromEntries(response.headers),'Content-Type':'text/html','Content-Length':String(page.length)});res.end(page);return}
+ }
  res.writeHead(response.status,Object.fromEntries(response.headers));if(response.body)await pipeline(Readable.fromWeb(response.body),res).catch(()=>{});else res.end()
 }).listen(4173,'127.0.0.1',()=>console.log('Forest QA server with production media Worker ready'))

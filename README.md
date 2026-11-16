@@ -1,10 +1,15 @@
-# PIE.PE 2.3 — The living forest / Dzīvais mežs
+# PIE.PE 3.3 — The living forest / Dzīvais mežs
 
-An interactive forest encounter in Latvian at `/` and English at `/en/`. React, TypeScript, Vite and the original native-scroll GSAP camera; Cloudflare Workers Static Assets with bounded media streaming. The 2.0–2.2 production history remains in the versioned QA documents. The 2.3 architecture is in [V23-ARCHITECTURE](docs/V23-ARCHITECTURE.md), with media comparisons in [V23-MEDIA](docs/V23-MEDIA.md) and validation in [V23-QA](docs/V23-QA.md). **2.3 is published on the existing `piepe` Worker. The owner requested immediate publication after local/visual checks, followed by full GitHub Chromium/native macOS and live validation; the exact results are in the QA report.**
+A bilingual cinematic forest encounter about bracket fungi: Latvian at `/`, English at `/en/`, live at https://pie.pe.
 
-The original six-second introduction retains its once-per-tab, skip/replay and recovery behavior. The shaped fungus target plays a one-shot awakening in the original graded forest plane, then moves its held final frame into the native dialog, three keyboard-navigable observations and a localized downloadable field note. Native sticky cinema plateaus give Understory and Breathing a broad viewing interval. Both environmental films replay on every return and use a held-frame forward replay while the visitor stays. Native scrolling always remains available. Reduced motion, save-data, pause, visibility changes, failed playback and disabled storage have explicit fallbacks. Only one film plays at a time; source playback runs at normal speed, independent of scroll velocity.
+- **Cinema.** A six-second introduction, a clickable fungus with a field-note dialog, a six-film portal into an imagined mycelial world with an optional guided thread, and two scroll-reached environmental films. Native scrolling throughout; no scroll hijack, WebGL or particle engine.
+- **Reading.** Twenty prerendered documents (guide, six field notes, note index and wallpaper collection, in both languages) that work without JavaScript, with interactive photographs: x-ray view, surface atlas with loupe, and a deadwood timeline.
+- **Stack.** React 19, TypeScript, Vite, GSAP; static HTML prerendered at build time; Cloudflare Workers Static Assets, with a small Worker that adds byte-range streaming for `/media/*`; strict Content-Security-Policy with build-generated hashes.
+- **Fallbacks.** Reduced motion, Save-Data, paused motion, hidden tabs, failed playback and disabled storage all have explicit paths. Unknown addresses receive a designed bilingual `404.html`.
 
-Short educational observations explain fruiting bodies, fungal threads, pores/spores in many brackets, and wood decay without identifying a species from the artistic AI-generated imagery. Both languages have visible initial-HTML content, metadata, reciprocal alternates and a sitemap. The approved bracket-fungus mark, real ICO/touch icons, palette and two lazy wallpaper previews complete the identity. Download art is carefully enlarged from the approved sources, not claimed to be native 5K.
+Release history lives in the versioned documents under `docs/`. Start with [V320-AWWWARD-CANDIDATE](docs/V320-AWWWARD-CANDIDATE.md) for the creative stance, [V320-EXPERIENCE](docs/V320-EXPERIENCE.md) and [V320-PERFORMANCE](docs/V320-PERFORMANCE.md) for the current experience, and [V330-QA](docs/V330-QA.md) for what 3.3 changed. Architecture background: [V23-ARCHITECTURE](docs/V23-ARCHITECTURE.md), [V21-ARCHITECTURE](docs/V21-ARCHITECTURE.md), [V23-MEDIA](docs/V23-MEDIA.md).
+
+The cinematic imagery is AI-made artwork, not species-identification evidence; the scientific explanations are separate and sourced.
 
 ## Develop and verify
 

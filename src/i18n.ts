@@ -9,10 +9,10 @@ export const english = {
   wordMeaning: 'Latvian for bracket fungus', follow: 'Follow what is hidden', edition: 'Forest encounter · 001',
   imageError: 'The image could not load. The field note is still here.', openEncounter: 'Open the encounter',
   beneathLabel: '01 / Beneath the surface', beneathTitle: 'Even in stillness,', beneathEm: 'life goes on.',
-  beneathBody: 'A change of scale. A drop of water. A world that never stopped.', stay: 'Stay a little longer', depth: 'Beyond the familiar',
+  beneathBody: 'A change of scale. A drop of water. A world that never stopped.', depth: 'Beyond the familiar',
   continueJourney: 'Continue through the forest', pauseFilm: 'Pause film', resumeFilm: 'Resume film', retryFilm: 'Play film again',
   encounterLabel: '02 / The encounter', small: 'Small enough to overlook.', encounterTitle: 'What you see', encounterEm: 'is a beginning.',
-  encounterBody: 'A shelf in the bark. Three observations. Another way of seeing.', openNote: 'Open the field note',
+  
   waiting: 'Field note 001 · Waiting to be found', discoveredShort: 'Field note 001 · Discovered', collectedShort: 'Field note 001 · Collected',
   returnLabel: '03 / Back in the light', returnTitle: 'The forest stays.', returnEm: 'Your gaze changes.',
   returnThought: 'The light shifts. Life in the forest carries on.', endingWallpapers: 'Forest wallpapers', returnForest: 'Return to forest', pause: 'Pause atmosphere', resume: 'Resume atmosphere',
@@ -24,7 +24,7 @@ export const english = {
   ],
   nextBeneath: 'Look beneath', nextBeyond: 'Look beyond', keepNote: 'Keep the field note', anotherCopy: 'Keep another copy',
   collected: 'Field note collected. Your download has started.', skipAwakening: 'Go straight to the field note', awakening: 'What you see is only the beginning.',
-  mediaUnavailable: 'The film is resting. You can still explore the forest.',
+  
   forestSound: 'Forest sound', muteSound: 'Mute forest sound', enableSound: 'Enable forest sound', soundPlaying: 'Quiet forest ambience is playing.', soundWaiting: 'Forest sound starts with your first interaction.', soundMuted: 'Forest sound is off.', soundUnavailable: 'Forest sound could not load. You can try again.',
   factsTitle: 'What is a bracket fungus?', factsIntro: 'A shelf on a tree. A life mostly out of sight.', readGuide: 'Bracket fungi: a closer look',
   factsDefinition: 'A bracket fungus, also called a shelf fungus, may form a shelf on a trunk or fallen branch. This fruiting body is only part of the fungus: a network of fine threads, called mycelium, can spread through the wood.',
@@ -55,10 +55,10 @@ const latvian: Messages = {
   homeLabel: 'pie.pe — atgriezties mežā', heroLabel: 'Aicinājums paskatīties tuvāk', heroThought: 'Mežs glabā vairāk, nekā atklāj.',
   discover: 'Atklāt piepi uz koka', closer: 'Aplūkot piepi tuvāk', lookCloser: 'Aplūkot piepi tuvāk', wordMeaning: 'Maza forma. Plaša pasaule.',
   follow: 'Ieskaties dziļāk', edition: 'Satikšanās mežā · 001', imageError: 'Attēlu neizdevās ielādēt. Meža piezīme joprojām ir šeit.', openEncounter: 'Atvērt satikšanos',
-  beneathLabel: '01 / Zem virsmas', beneathTitle: 'Arī klusumā', beneathEm: 'viss turpinās.', beneathBody: 'Cits mērogs. Ūdens lāse. Pasaule, kas nav apstājusies.', stay: 'Uzkavējies vēl', depth: 'Aiz ierastā',
+  beneathLabel: '01 / Zem virsmas', beneathTitle: 'Arī klusumā', beneathEm: 'viss turpinās.', beneathBody: 'Cits mērogs. Ūdens lāse. Pasaule, kas nav apstājusies.', depth: 'Aiz ierastā',
   continueJourney: 'Turpināt ceļu', pauseFilm: 'Apturēt filmu', resumeFilm: 'Turpināt filmu', retryFilm: 'Atskaņot filmu vēlreiz',
   encounterLabel: '02 / Satikšanās', small: 'Viegli paiet garām.', encounterTitle: 'Redzamais ir', encounterEm: 'tikai sākums.',
-  encounterBody: 'Piepe uz mizas. Trīs vērojumi. Citāds skatiens.', openNote: 'Atvērt meža piezīmi',
+  
   waiting: 'Meža piezīme 001 · Vēl neatklāta', discoveredShort: 'Meža piezīme 001 · Atklāta', collectedShort: 'Meža piezīme 001 · Saglabāta',
   returnLabel: '03 / Atkal gaismā', returnTitle: 'Mežs paliek.', returnEm: 'Skatiens mainās.', returnThought: 'Gaisma mainās. Mežs turpina savu dzīvi.', endingWallpapers: 'Meža foni',
   returnForest: 'Atgriezties mežā', pause: 'Apturēt kustību', resume: 'Turpināt kustību', noteLabel: 'Meža piezīme 001', closeDiscovery: 'Aizvērt piepes stāstu',
@@ -70,7 +70,7 @@ const latvian: Messages = {
   ],
   nextBeneath: 'Ieskatīties dziļāk', nextBeyond: 'Paskatīties tālāk', keepNote: 'Saglabāt meža piezīmi', anotherCopy: 'Saglabāt vēl vienu kopiju',
   collected: 'Meža piezīmes lejupielāde sākta. Atceļā nesteidzies.', skipAwakening: 'Uzreiz atvērt meža piezīmi', awakening: 'Redzamais ir tikai sākums.',
-  mediaUnavailable: 'Filma šobrīd atpūšas. Mežu joprojām vari iepazīt.',
+  
   forestSound: 'Meža skaņas', muteSound: 'Izslēgt meža skaņas', enableSound: 'Ieslēgt meža skaņas', soundPlaying: 'Skan klusas meža skaņas.', soundWaiting: 'Meža skaņas sāksies pēc pirmā pieskāriena.', soundMuted: 'Meža skaņas ir izslēgtas.', soundUnavailable: 'Meža skaņas neizdevās ielādēt. Vari mēģināt vēlreiz.',
   factsTitle: 'Kas ir piepe?', factsIntro: 'Redzama pie koka. Lielākoties — skatienam slēpta.', readGuide: 'Par piepēm, porām un sēņotni',
   factsDefinition: 'Piepe ir redzamais sēnes augļķermenis, ko mežā bieži pamana uz koka stumbra vai kritalas. Tikmēr smalku pavedienu tīkls — sēņotne — var augt dziļāk koksnē un turpināties ārpus mūsu skatiena.',

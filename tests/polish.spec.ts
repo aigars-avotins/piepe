@@ -72,7 +72,7 @@ test('sound waits for permission, plays a real native loop, remains controllable
   await page.getByRole('button', { name: 'Go straight to the field note' }).click()
   const mute = page.getByRole('dialog').getByRole('button', { name: 'Mute forest sound' })
   await expect(mute).toBeVisible(); await mute.click()
-  await expect(page.getByRole('dialog').getByRole('button', { name: 'Enable forest sound' })).toHaveAttribute('aria-pressed', 'false')
+  await expect(page.getByRole('dialog').getByRole('button', { name: 'Enable forest sound' })).toHaveAttribute('data-enabled', 'false')
   await expect.poll(() => page.evaluate(() => (window as unknown as { audioQA: AudioContext }).audioQA.state)).toBe('suspended')
   expect(requests.length).toBe(1)
   requests.length = 0

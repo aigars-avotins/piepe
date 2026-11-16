@@ -56,7 +56,18 @@ try {
       await writeFile(`dist${document.path}index.html`, document.html)
     }
   }
+  // Workers Static Assets serves this document, with status 404, for every unknown address.
+  const { renderNotFoundDocument } = await server.ssrLoadModule('/src/NotFoundPage.tsx')
+  const notFoundCss = await readFile('src/notFound.css', 'utf8')
+  const notFoundStyle = `/assets/not-found-${createHash('sha256').update(notFoundCss).digest('hex').slice(0, 16)}.css`
+  await writeFile(`dist${notFoundStyle}`, notFoundCss)
+  const notFoundFonts = assets.filter(name => /^(?:manrope|cormorant-garamond)-latin(?:-ext)?-400-normal-.*\.woff2$/.test(name))
+  await writeFile('dist/404.html', renderNotFoundDocument([...appStyles, readingStyle, notFoundStyle], notFoundFonts.map(name => `/assets/${name}`)))
   const headers = await readFile('public/_headers', 'utf8')
-  await writeFile('dist/_headers', headers.replace("script-src 'self'", `script-src 'self' ${hashes.join(' ')}`))
+  const builtHeaders = headers.replace("script-src 'self'", `script-src 'self' ${hashes.join(' ')}`)
+  // Cloudflare ignores a _headers line above 2,000 characters; the policy grows with each new document.
+  const longest = Math.max(...builtHeaders.split('\n').map(line => line.length))
+  if (longest > 2000) throw new Error(`A _headers line is ${longest} characters; Cloudflare's limit is 2,000`)
+  await writeFile('dist/_headers', builtHeaders)
   console.log('Prerendered 20 localized cinema, guide, wallpaper and field-note documents with CSP hashes')
 } finally { await server.close() }

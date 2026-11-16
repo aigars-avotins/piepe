@@ -75,8 +75,15 @@ export function bindAtlas(section: HTMLElement) {
       if (!image.naturalWidth || image.dataset.imageState !== 'ready') return
       const b = image.getBoundingClientRect(), radius = Math.min(70, b.width / 3)
       x = Math.max(0, Math.min(1, px)); y = Math.max(0, Math.min(1, py))
-      const original = new URL(image.dataset.originalSrc!, location.href).href
-      if (magnified.src !== original) magnified.src = original
+      // The lens needs 2.5x the displayed width in device pixels: the smallest serving copy that
+      // covers it replaces an unconditional multi-megabyte original. The owner JPEG stays the fallback.
+      const original = new URL(image.dataset.originalSrc!, location.href).href, full = Number(image.getAttribute('width')) || 2400
+      const size = [960, 1600, full].find(width => width >= b.width * 2.5 * Math.min(devicePixelRatio || 1, 2)) ?? full
+      const wanted = new URL(image.dataset.originalSrc!.replace(/([^/]+)\.jpg$/, `responsive/$1-${size}.webp`), location.href).href
+      if (magnified.dataset.wanted !== wanted) {
+        magnified.dataset.wanted = wanted; magnified.onerror = () => { magnified.onerror = null; magnified.src = original }
+        magnified.src = wanted
+      }
       lens.style.width = lens.style.height = `${radius * 2}px`
       lens.style.left = `${Math.max(radius, Math.min(b.width - radius, x * b.width)) - radius}px`
       lens.style.top = `${Math.max(radius, Math.min(b.height - radius, y * b.height)) - radius}px`
