@@ -79,7 +79,9 @@ export function bindAtlas(section: HTMLElement) {
       // covers it replaces an unconditional multi-megabyte original. The owner JPEG stays the fallback.
       const original = new URL(image.dataset.originalSrc!, location.href).href, full = Number(image.getAttribute('width')) || 2400
       const size = [960, 1600, full].find(width => width >= b.width * 2.5 * Math.min(devicePixelRatio || 1, 2)) ?? full
-      const wanted = new URL(image.dataset.originalSrc!.replace(/([^/]+)\.jpg$/, `responsive/$1-${size}.webp`), location.href).href
+      // Stay in the format the browser already chose for the picture itself.
+      const format = /\.avif(?:$|\?)/.test(image.currentSrc) ? 'avif' : 'webp'
+      const wanted = new URL(image.dataset.originalSrc!.replace(/([^/]+)\.jpg$/, `responsive/$1-${size}.${format}`), location.href).href
       if (magnified.dataset.wanted !== wanted) {
         magnified.dataset.wanted = wanted; magnified.onerror = () => { magnified.onerror = null; magnified.src = original }
         magnified.src = wanted
@@ -122,7 +124,8 @@ export function bindAtlas(section: HTMLElement) {
         photo.loading = chosen ? 'eager' : 'lazy'; photo.decoding = 'async'; photo.className = 'raster-grade'
         if (!chosen) {
           photo.sizes = '(max-width:699px) calc(100vw - 40px), min(50vw, 720px)'
-          photo.srcset = [960, 1600, full].map(width => `${original.dataset.originalSrc!.replace(/([^/]+)\.jpg$/, `responsive/$1-${width}.webp`)} ${width}w`).join(', ')
+          const format = /\.avif(?:$|\?)/.test(original.currentSrc) ? 'avif' : 'webp'
+          photo.srcset = [960, 1600, full].map(width => `${original.dataset.originalSrc!.replace(/([^/]+)\.jpg$/, `responsive/$1-${width}.${format}`)} ${width}w`).join(', ')
         }
         photo.src = original.dataset.originalSrc!
         photo.dataset.interactiveImage = ''; photo.dataset.originalSrc = original.dataset.originalSrc; photo.dataset.alternateSrc = original.dataset.alternateSrc; photo.dataset.fallbackSrc = original.dataset.fallbackSrc

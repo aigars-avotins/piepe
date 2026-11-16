@@ -8,7 +8,7 @@ for(const locale of ['lv','en'] as const)test(`3.1 ${locale} no-JS reading retai
 })
 
 test('3.1 a slow paired image gives a neutral placeholder, then reveals both real layers together',async({page})=>{
- let release!:()=>void;const gate=new Promise<void>(resolve=>release=resolve);await page.route('**/responsive/xray-wood-mycelium-*.webp',async route=>{await gate;await route.continue()})
+ let release!:()=>void;const gate=new Promise<void>(resolve=>release=resolve);await page.route('**/responsive/xray-wood-mycelium-*.{avif,webp}',async route=>{await gate;await route.continue()})
  await page.goto('/en/what-is-a-bracket-fungus/');const view=page.locator('.xray-view');await view.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await expect(view).toHaveAttribute('aria-busy','true');await expect.poll(()=>page.locator('.xray-images').evaluate(e=>getComputedStyle(e).opacity)).toBe('0');await expect(view.locator('[data-image-status]')).not.toBeVisible();release();await expect(view).toHaveAttribute('data-images-ready','');await expect.poll(()=>page.locator('.xray-images').evaluate(e=>getComputedStyle(e).opacity)).toBe('1')
 })
 
@@ -23,7 +23,7 @@ test('3.1 the last Deadwood image can fail and recover without substituting a fa
 })
 
 test('3.1 inactive Deadwood sources wait for near-view intent and use responsive source-quality copies',async({page})=>{
- await page.setViewportSize({width:320,height:568});const later:string[]=[];page.on('request',r=>{if(/deadwood-stage-0[234]/.test(r.url())&&r.resourceType()==='image')later.push(r.url())});await page.goto('/en/field-notes/005-deadwood-and-time/');await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));expect(await page.locator('.time-visual').evaluate(e=>e.getBoundingClientRect().top)).toBeGreaterThan(808);expect(later).toEqual([]);await page.locator('.time-visual').evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await expect.poll(()=>later.length).toBeGreaterThanOrEqual(3);expect(later.every(url=>url.includes('/responsive/')&&url.endsWith('.webp'))).toBe(true)
+ await page.setViewportSize({width:320,height:568});const later:string[]=[];page.on('request',r=>{if(/deadwood-stage-0[234]/.test(r.url())&&r.resourceType()==='image')later.push(r.url())});await page.goto('/en/field-notes/005-deadwood-and-time/');await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));expect(await page.locator('.time-visual').evaluate(e=>e.getBoundingClientRect().top)).toBeGreaterThan(808);expect(later).toEqual([]);await page.locator('.time-visual').evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await expect.poll(()=>later.length).toBeGreaterThanOrEqual(3);expect(later.every(url=>url.includes('/responsive/')&&/\.(?:avif|webp)$/.test(url))).toBe(true)
 })
 
 for(const locale of ['lv','en'] as const)test(`3.1.1 ${locale} reading header retains accessible native language targets without the retired selector`,async({page})=>{

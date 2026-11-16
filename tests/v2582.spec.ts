@@ -25,7 +25,7 @@ test('2.5.8.2 all 20 prerendered documents obey the link law, retain SEO, and co
 for(const locale of ['lv','en'] as const){
  test(`2.5.8.2 ${locale}: image-wide dragging clips the aligned photos and hotspots highlight the factual card`,async({page})=>{
   await page.goto(readingPath(locale));const view=page.locator('.xray-view'),range=page.locator('[data-xray-range]');await view.scrollIntoViewIfNeeded()
-  await expect.poll(()=>view.locator('img').evaluateAll(images=>images.every(e=>(e as HTMLImageElement).complete&&(e as HTMLImageElement).naturalWidth>0&&/\/responsive\/xray-[\w-]+-(480|960|1600|2752)\.webp$/.test((e as HTMLImageElement).currentSrc)))).toBe(true)
+  await expect.poll(()=>view.locator('img').evaluateAll(images=>images.every(e=>(e as HTMLImageElement).complete&&(e as HTMLImageElement).naturalWidth>0&&/\/responsive\/xray-[\w-]+-(480|960|1600|2752)\.(?:avif|webp)$/.test((e as HTMLImageElement).currentSrc)))).toBe(true)
   await expect(range).toBeEnabled()
   const b=(await view.boundingBox())!;expect(b.width/b.height).toBeCloseTo(16/9,1)
   // Start far from the central divider: the whole image must be draggable.
@@ -35,11 +35,11 @@ for(const locale of ['lv','en'] as const){
   await page.locator('[data-xray-point=wood]').click();await expect(page.locator('#xray-wood')).toHaveAttribute('data-current','');await expect(page.locator('[data-xray-point=wood]')).toBeFocused();await expect(page.locator('[data-xray-point=wood]')).toHaveAttribute('aria-selected','true');await expect(page.getByRole('tabpanel')).toHaveCount(1)
  })
  test(`2.5.8.2 ${locale}: 140px loupe magnifies actual coordinates at 2.5x and comparison restores focus`,async({page})=>{
-  await page.goto(readingPath(locale));const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();const image=picture.locator('img[data-interactive-image]');await expect.poll(()=>image.evaluate((e:HTMLImageElement)=>e.complete&&e.naturalWidth>0&&/\/responsive\/atlas-pores-(480|960|1600|2400)\.webp$/.test(e.currentSrc))).toBe(true)
+  await page.goto(readingPath(locale));const picture=page.locator('.atlas-picture').first();await picture.scrollIntoViewIfNeeded();const image=picture.locator('img[data-interactive-image]');await expect.poll(()=>image.evaluate((e:HTMLImageElement)=>e.complete&&e.naturalWidth>0&&/\/responsive\/atlas-pores-(480|960|1600|2400)\.(?:avif|webp)$/.test(e.currentSrc))).toBe(true)
   const b=(await image.boundingBox())!,x=b.width*.65,y=b.height*.6;const mouseX=Math.round(b.x+x),mouseY=Math.round(b.y+y);await page.mouse.move(mouseX,mouseY)
   const lens=picture.locator('.atlas-loupe');await expect(lens).toBeVisible();await expect(lens).toHaveCSS('width','140px')
   const zoom=await lens.locator('img').evaluate((e:HTMLImageElement)=>({width:parseFloat(e.style.width),height:parseFloat(e.style.height),left:parseFloat(e.style.left),top:parseFloat(e.style.top),source:e.currentSrc}))
-  expect(zoom.width).toBeCloseTo(b.width*2.5,1);expect(zoom.height).toBeCloseTo(b.height*2.5,1);expect(zoom.left).toBeCloseTo(70-(mouseX-b.x)*2.5,0);expect(zoom.top).toBeCloseTo(70-(mouseY-b.y)*2.5,0);expect(zoom.source).toMatch(/\/responsive\/atlas-pores-(960|1600|2400)\.webp$/)
+  expect(zoom.width).toBeCloseTo(b.width*2.5,1);expect(zoom.height).toBeCloseTo(b.height*2.5,1);expect(zoom.left).toBeCloseTo(70-(mouseX-b.x)*2.5,0);expect(zoom.top).toBeCloseTo(70-(mouseY-b.y)*2.5,0);expect(zoom.source).toMatch(/\/responsive\/atlas-pores-(960|1600|2400)\.(?:avif|webp)$/)
   await picture.click();await expect(page.locator('[data-atlas-dialog]')).not.toBeVisible();await page.locator('[data-atlas-open]').first().click();const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3);expect(await dialog.evaluate(e=>e.matches(':modal'))).toBe(true)
   await page.keyboard.press('Escape');await expect(dialog).toBeHidden();await expect(page.locator('[data-atlas-open]').first()).toBeFocused()
  })
@@ -62,7 +62,8 @@ test('3.1 responsive then original JPEG tries alternate then labelled wallpaper 
 })
 test('3.3 a failed responsive candidate and JPEG fall back to the real 960px serving copy, not a missing file',async({page})=>{
  const requested:string[]=[]
- await page.route('**/images/interactive/responsive/atlas-pores-{480,1600,2400}.webp',route=>route.fulfill({status:404,body:''}))
+ await page.route('**/images/interactive/responsive/atlas-pores-{480,1600,2400}.{avif,webp}',route=>route.fulfill({status:404,body:''}))
+ await page.route('**/images/interactive/responsive/atlas-pores-960.avif',route=>route.fulfill({status:404,body:''}))
  await page.route('**/images/interactive/atlas-pores.jpg',route=>route.fulfill({status:404,body:''}))
  page.on('response',response=>{if(response.url().includes('atlas-pores'))requested.push(`${response.status()} ${new URL(response.url()).pathname}`)})
  await page.goto('/kas-ir-piepe/#surface-atlas');const picture=page.locator('.atlas-picture').first(),image=picture.locator('img[data-interactive-image]');await picture.scrollIntoViewIfNeeded()

@@ -3,8 +3,7 @@ const groupFor = (image: HTMLImageElement) => image.closest<HTMLElement>('.xray-
 export function revealDeferredImages(root: HTMLElement) {
   root.querySelectorAll<HTMLElement>('picture[data-deferred-image]').forEach(picture => {
     picture.removeAttribute('data-deferred-image')
-    const source = picture.querySelector<HTMLSourceElement>('source')!
-    source.srcset = source.dataset.srcset || ''
+    picture.querySelectorAll<HTMLSourceElement>('source').forEach(source => { source.srcset = source.dataset.srcset || '' })
     const image = picture.querySelector<HTMLImageElement>('img')!
     image.loading = 'eager' // Only after near-view or an explicit control interaction.
     image.src = image.dataset.originalSrc!
@@ -80,8 +79,7 @@ export function bindImageFallback(root: HTMLElement | Document) {
       if (!['fallback', 'failed'].includes(image.dataset.imageState || '')) return
       delete image.dataset.imageState; delete image.dataset.imageReady; delete image.dataset.imageAttempt; delete image.dataset.failedSrc
       if (image.dataset.originalAlt !== undefined) image.alt = image.dataset.originalAlt
-      const source = image.closest('picture')?.querySelector<HTMLSourceElement>('source')
-      if (source?.dataset.srcset) source.srcset = source.dataset.srcset
+      image.closest('picture')?.querySelectorAll<HTMLSourceElement>('source').forEach(source => { if (source.dataset.srcset) source.srcset = source.dataset.srcset })
       image.src = image.dataset.originalSrc!
       sync(image)
       image.dispatchEvent(new Event('raster:state', { bubbles: true }))
