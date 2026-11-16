@@ -38,7 +38,6 @@ try {
     const html = template.replace('<script src="/boot.js"></script>', `<script>${boot}</script>`).replace(/<html lang="[^"]+"/, `<html lang="${locale}"`).replace(/<!-- locale:start -->[\s\S]*?<!-- locale:end -->/, head).replace('<div id="root"></div>', `<div id="root">${renderPage(locale)}</div>`)
     if (!html.includes(locale === 'lv' ? 'Kas ir piepe?' : 'What is a bracket fungus?')) throw new Error('Missing rendered content')
     await writeFile(`dist/field-note-${locale}.txt`, renderNote(locale))
-    await writeFile(`public/field-note-${locale}.txt`, renderNote(locale))
     const dir = locale === 'en' ? 'dist/en' : 'dist'
     await mkdir(dir, { recursive: true }); await writeFile(`${dir}/index.html`, html)
     // Static educational text stays usable without JS. Only the small progressive

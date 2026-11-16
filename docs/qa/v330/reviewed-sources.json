@@ -1,6 +1,25 @@
 {
-  "src/EnvironmentalFilm.tsx": "9255f68ce7625bc83549601b8bd803ff142811b123500f2082acc046a9400102",
-  "src/IntroFilm.tsx": "a91ded3a50de84a865895e1c3357ce31c041f64ecc1c201c4916de426e15c2ac",
-  "src/i18n.ts": "f5d0a85600cde90db2469bfe1f5783bcd13e7cef91803c33c4361cd59ffa7ad0",
-  "src/style.css": "d473fc699ed390ae2f13448aab93ec73931266aefa1c41146a165f8cc2e74415"
+  "note": "PIE.PE 3.3 reviewed ledger. 'changed' pins the current hash of files this release intentionally edited (film and audio bytes are never listed). 'moved' relocates audited bytes unchanged. 'retired' lists unreferenced or duplicate files removed from the published site.",
+  "changed": {
+    "src/EnvironmentalFilm.tsx": "9255f68ce7625bc83549601b8bd803ff142811b123500f2082acc046a9400102",
+    "src/IntroFilm.tsx": "a91ded3a50de84a865895e1c3357ce31c041f64ecc1c201c4916de426e15c2ac",
+    "src/i18n.ts": "f5d0a85600cde90db2469bfe1f5783bcd13e7cef91803c33c4361cd59ffa7ad0",
+    "src/style.css": "d473fc699ed390ae2f13448aab93ec73931266aefa1c41146a165f8cc2e74415"
+  },
+  "moved": {
+    "public/media/02_Zoom_in.mp4": "source/portal/02_Zoom_in.mp4",
+    "public/media/03_Entering_fungus.mp4": "source/portal/03_Entering_fungus.mp4",
+    "public/media/04_Inside_fungus.mp4": "source/portal/04_Inside_fungus.mp4",
+    "public/media/05_Fungus_world.mp4": "source/portal/05_Fungus_world.mp4",
+    "public/media/06_Leaving_fungus.mp4": "source/portal/06_Leaving_fungus.mp4",
+    "public/media/07_Zoom_out.mp4": "source/portal/07_Zoom_out.mp4",
+    "public/media/forest-mobile.webp": "source/legacy/forest-mobile.webp",
+    "public/field-note-lv.txt": "tests/fixtures/field-note-lv.txt",
+    "public/field-note-en.txt": "tests/fixtures/field-note-en.txt"
+  },
+  "retired": [
+    "public/field-note.txt",
+    "public/media/portal-living-still.webp",
+    "dist/media/forest-mobile.webp"
+  ]
 }

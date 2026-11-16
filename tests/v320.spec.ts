@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 import {readFile, readdir} from 'node:fs/promises'
-import {createHash} from 'node:crypto'
+import {expectPreserved,reviewedLedger} from './preserved'
 import {portalCopy} from '../src/portalCopy'
 import {threadCopy} from '../src/threadCopy'
 import {messages, readingPath} from '../src/i18n'
@@ -78,10 +78,12 @@ for(const locale of ['lv','en']as const)for(const [width,height]of[[390,844],[84
 
 test('3.2 no production media changes, codecs or new film payloads; player and security remain byte-identical',async()=>{
   const baseline=JSON.parse(await readFile('docs/qa/v320/preserved-assets.json','utf8'))
-  for(const asset of baseline.assets)expect(createHash('sha256').update(await readFile(asset.path)).digest('hex'),asset.path).toBe(asset.sha256)
-  const videos=(await readdir('public/media')).filter(name=>name.endsWith('.mp4')).sort()
-  expect(videos).toEqual(baseline.assets.filter((a:{path:string})=>a.path.startsWith('public/media/')&&a.path.endsWith('.mp4')).map((a:{path:string})=>a.path.split('/').at(-1)).sort())
-  for(const [path,hash]of Object.entries(baseline.protectedSources))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
+  await expectPreserved(Object.fromEntries(baseline.assets.map((asset:{path:string;sha256:string})=>[asset.path,asset.sha256])))
+  // 3.3 moves the six unplayed masters to source/portal (same bytes); the published film set is otherwise identical.
+  const ledger=await reviewedLedger(),videos=(await readdir('public/media')).filter(name=>name.endsWith('.mp4')).sort()
+  expect(videos).toEqual(baseline.assets.filter((a:{path:string})=>a.path.startsWith('public/media/')&&a.path.endsWith('.mp4')&&!ledger.moved[a.path]).map((a:{path:string})=>a.path.split('/').at(-1)).sort())
+  expect((await readdir('source/portal')).sort()).toEqual(Object.values(ledger.moved).filter(path=>path.startsWith('source/portal/')).map(path=>path.split('/').at(-1)).sort())
+  await expectPreserved(baseline.protectedSources)
 })
 
 for(const locale of ['lv','en']as const)test(`3.2 ${locale} Save-Data exploration adds no media requests and retains every text beat`,async({page})=>{

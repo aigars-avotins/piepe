@@ -2,6 +2,7 @@ import { releaseVersion } from '../src/release'
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
+import { expectPreserved } from './preserved'
 import { forestMetadata } from '../src/ForestPage'
 import { fieldNote, collectionCopy } from '../src/forestKnowledge'
 import {wallpaperDesigns,wallpaperAsset} from '../src/wallpapers'
@@ -10,7 +11,7 @@ import { messages, readingPath, localePath } from '../src/i18n'
 import { readings } from '../src/reading'
 import { checkStaticMarkup, checkReadingResources } from './readingChecks'
 
-const origin = 'https://pie.pe', digest = (bytes: Buffer | string) => createHash('sha256').update(bytes).digest('hex')
+const origin = 'https://pie.pe'
 
 for (const locale of ['lv', 'en'] as const) for (const document of forestPages) for (const javaScriptEnabled of [false, true]) {
   const path = forestPath(locale, document)
@@ -124,15 +125,14 @@ test('2.5.7 route graph, CSP hashes, honest species facts and all internal resou
 test('2.5.7 original factual prose, notes, core cinema and every media/download asset remain preserved', async () => {
   const baseline = JSON.parse(await readFile('docs/qa/v257/baseline-inventory.json', 'utf8'))
   expect(readings).toEqual(JSON.parse(await readFile('docs/qa/v258/reading-copy-baseline.json','utf8')))
-  for (const [path, hash] of Object.entries({ ...baseline.preservedAssets, ...baseline.preservedNotes })) expect(digest(await readFile('dist/' + path)), path).toBe(hash)
+  await expectPreserved({ ...baseline.preservedAssets, ...baseline.preservedNotes }, 'dist/')
   // 2.5.8 explicitly enhances these four sources; full prose and real audio-graph
   // regressions replace obsolete byte-equality, all other immutable guards remain.
   const approved=new Set(['src/reading.ts','src/ReadingPage.tsx','src/reading.css','src/useForestAudio.ts'])
-  const reviewed={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v330/reviewed-sources.json','utf8'))}
-  // 3.3 fixes the hidden-tab AbortError latch and <source> error handling, removes unused copy keys
-  // and adds view transitions; those four reviewed files are pinned in docs/qa/v330.
-  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/EnvironmentalFilm.tsx','src/ForestScene.tsx','src/IntroFilm.tsx','src/i18n.ts','src/style.css','src/useForestAudio.ts'])
-  for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(await readFile(path)),path).toBe(reviewed[path]??hash)
+  const reviewed={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))}
+  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/ForestScene.tsx','src/style.css','src/useForestAudio.ts'])
+  // 3.3's intentional edits are named once, in the docs/qa/v330 ledger that expectPreserved applies.
+  await expectPreserved(Object.fromEntries(Object.entries(baseline.preservedSource as Record<string,string>).filter(([path])=>!approved.has(path)).map(([path,hash])=>[path,reviewed[path]??hash])))
 })
 
 for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: selective supported snippet labels preserve primary content, links and mobile control text`, async ({ page, request }) => {

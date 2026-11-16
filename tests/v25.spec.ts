@@ -58,7 +58,8 @@ for (const locale of ['lv', 'en'] as const) {
       expect(note).toContain(t.factsDefinition); expect(note).toContain(t.factsContext)
       for (const observation of t.observations) expect(note).toContain(observation.text)
       for (const fact of t.facts) expect(note).toContain(fact.text)
-      expect(note).toBe(await readFile(`public/field-note-${locale}.txt`, 'utf8'))
+      // The build writes the note only to dist; this reviewed snapshot guards its wording.
+      expect(note).toBe(await readFile(`tests/fixtures/field-note-${locale}.txt`, 'utf8'))
     } finally { await context.close() }
   })
 
