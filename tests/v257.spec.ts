@@ -29,7 +29,7 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
       await expect(page.locator('h1')).toHaveCount(1); await expect(page.locator('h1')).toHaveText(meta.heading)
       await expect(page.locator('.reading-lead')).toHaveText(meta.lead)
       await expect(page).toHaveTitle(meta.title)
-      for (const [selector, value] of Object.entries({ 'meta[name="description"]': meta.description, 'meta[property="og:title"]': meta.title, 'meta[property="og:description"]': meta.description, 'meta[property="og:url"]': origin + path, 'meta[name="twitter:title"]': meta.title, 'meta[name="twitter:description"]': meta.description, 'meta[property="og:image"]': origin + '/social-preview.jpg' })) {
+      for (const [selector, value] of Object.entries({ 'meta[name="description"]': meta.description, 'meta[property="og:title"]': meta.title, 'meta[property="og:description"]': meta.description, 'meta[property="og:url"]': origin + path, 'meta[name="twitter:title"]': meta.title, 'meta[name="twitter:description"]': meta.description, 'meta[property="og:image"]': `${origin}/og/${document.kind === 'note' ? 'note-' + document.number : document.kind === 'index' ? 'notes' : 'wallpapers'}-${locale}.jpg` })) {
         await expect(page.locator(selector)).toHaveCount(1); await expect(page.locator(selector)).toHaveAttribute('content', value)
       }
       await expect(page.locator('title')).toHaveCount(1)
@@ -41,8 +41,9 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
       const data = JSON.parse((await scripts.textContent())!)
       expect(data).toMatchObject({ '@type': document.kind === 'index' ? 'CollectionPage' : 'WebPage', '@id': origin + path + '#webpage', url: origin + path, inLanguage: locale, name: meta.title, description: meta.description, isPartOf: { '@type': 'WebSite', '@id': origin + '/#website' } })
       const types: string[] = [], ids: string[] = []
-      const visit = (v: unknown) => { if (v && typeof v === 'object') for (const [key, item] of Object.entries(v)) { if (key === '@type') types.push(String(item)); else if (key === '@id') ids.push(String(item)); else { expect(key).not.toMatch(/^(?:datePublished|dateModified|author|review|aggregateRating)$/); visit(item) } } }
-      visit(data); expect(types).not.toEqual(expect.arrayContaining(['FAQPage'])); expect(types).not.toEqual(expect.arrayContaining(['Person'])); expect(types).not.toEqual(expect.arrayContaining(['Organization']))
+      const visit = (v: unknown) => { if (v && typeof v === 'object') for (const [key, item] of Object.entries(v)) { if (key === '@type') types.push(String(item)); else if (key === '@id') { if ('@type' in (v as object)) ids.push(String(item)) } // a bare {'@id'} is a reference, not a second node
+ else { expect(key).not.toMatch(/^(?:review|aggregateRating)$/); visit(item) } } }
+      visit(data); expect(types).not.toEqual(expect.arrayContaining(['FAQPage'])); expect(types).not.toEqual(expect.arrayContaining(['Person'])) // 3.3: dates and the PIE.PE publisher are real; no person is named
       expect(ids.length).toBe(new Set(ids).size)
       await checkStaticMarkup(page)
       await expect(page.locator('main h1, main .reading-lead').locator('xpath=ancestor::*[@data-nosnippet]')).toHaveCount(0)

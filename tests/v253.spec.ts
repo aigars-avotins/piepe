@@ -16,12 +16,12 @@ for (const locale of ['lv', 'en'] as const) {
     page.once('close', () => hydrate())
     await page.route('**/assets/*.js', async route => { await gate; if (!page.isClosed()) await route.continue() })
     await page.goto((locale === 'lv' ? '/' : '/en/') + (mode === 'anchor' ? '#understory' : ''), { waitUntil: 'commit' })
-    const pose = mode === 'first' || mode === 'anchor' ? 'poster' : 'final'
+    // 3.3: an anchor visit never shows the film, so it paints (and fetches) the settled forest directly.
+    const pose = mode === 'first' ? 'poster' : 'final'
     await expect(page.locator('.environment')).toHaveCSS('position', 'fixed')
-    const source = await page.locator('.forest-still').evaluate(e => {
-      const image = e as HTMLImageElement, css = getComputedStyle(e).content
-      return css.startsWith('url(') ? css : image.currentSrc || image.src
-    })
+    // 3.3: before hydration the frame is painted by CSS on the same plane, so only the matching file is fetched.
+    const source = await page.locator('.base-camera>.media-plane').evaluate(e => getComputedStyle(e, '::before').backgroundImage)
+    expect(await page.locator('.forest-still').getAttribute('src')).toBeNull()
     expect(source).toContain(`forest-${pose}.jpg`)
     hydrate()
     await expect(page.locator('.world')).not.toHaveClass(/prerendered/)

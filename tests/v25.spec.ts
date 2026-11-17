@@ -30,7 +30,7 @@ test('real sitemap and robots assets describe every crawlable canonical page', a
     expect(await response.text()).toContain(`rel="canonical" href="${entry.url}"`)
   }
   expect(text.trim().split(/\r?\n/)).toEqual(['User-agent: *', 'Allow: /', 'Sitemap: https://pie.pe/sitemap.xml'])
-  expect(xml).not.toMatch(/<(?:lastmod|priority|changefreq)>/)
+  expect(xml).not.toMatch(/<(?:priority|changefreq)>/) // 3.3 adds real lastmod dates; the two ignored hints stay out
   expect((await request.get('/not-a-real-page')).status()).toBe(404)
 })
 
@@ -73,7 +73,9 @@ for (const locale of ['lv', 'en'] as const) {
     expect(site).toMatchObject({ '@type': 'WebSite', '@id': 'https://pie.pe/#website', name: 'PIE.PE', url: 'https://pie.pe/', inLanguage: ['lv', 'en'], description: messages.lv.description })
     const types: string[] = []
     const visit = (value: unknown) => { if (value && typeof value === 'object') { for (const [key, item] of Object.entries(value)) { if (key === '@type') types.push(String(item)); else visit(item) } } }
-    visit(initial); expect(types.sort()).toEqual(['WebPage', 'WebSite'])
+    visit(initial)
+    // 3.3: the same WebPage/WebSite identity, now with its publisher, social image and the ten films. Still no people, ratings or FAQ.
+    expect([...new Set(types)].sort()).toEqual(['ImageObject', 'VideoObject', 'WebPage', 'WebSite'])
     const csp = await readFile('dist/_headers', 'utf8')
     // 3.3: JSON-LD is a data block and carries no script-src hash; only the boot script is hashed.
     expect([...csp.matchAll(/'sha256-/g)]).toHaveLength(1)
