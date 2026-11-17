@@ -12,6 +12,9 @@ import LivingThread from './LivingThread'
 import {threadCopy} from './threadCopy'
 import {mediaUrl} from './mediaUrl'
 import {SiteMenu} from './SiteChrome'
+import SiteLink from './SiteLink'
+import {aboutPath} from './routes'
+import {siteCopy} from './siteCopy'
 import {localePath} from './i18n'
 import './fungusPortal.css'
 
@@ -107,6 +110,6 @@ export default function FungusPortal({opener:origin,locale,onLocaleChange,onClos
   {living&&!state.loading&&!state.slow&&<button className="portal-cinema-toggle" data-cinema-toggle type="button" disabled={state.paused} aria-expanded={!clean} aria-controls="portal-controls" onClick={()=>{setThreadChosen(false);setCleanChoice(!clean)}}>{clean?t.showControls:t.hideControls}</button>}
   {state.phase==='finished'&&<p className="portal-finished" role="status">{t.finished}</p>}
   <div className="portal-sound"><SoundControl audio={audio.status==='waiting'&&audio.enabled?{...audio,enabled:false,toggle:audio.activate??audio.toggle}:audio} locale={locale}/></div>
-  <p id="portal-art" className="portal-art">{t.art}</p>
+  <p id="portal-art" className="portal-art">{t.art} <SiteLink href={aboutPath(locale)+'#'+siteCopy[locale].about.films.id}>{siteCopy[locale].about.films.heading}</SiteLink></p>
  </dialog>
 }

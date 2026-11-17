@@ -1,11 +1,15 @@
 import SiteLink from './SiteLink'
 import { SiteMenu } from './SiteChrome'
 import { bindSiteMenu } from './siteMenu'
-import FungusPortal from './FungusPortal'
 import type {PortalOrigin} from './FungusPortal'
 import { releaseVersion, releaseMilestone } from './release'
 import Arrow from './Arrow'
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+
+// The six-film portal (player, thread, styles) loads on intent or once the opening has settled,
+// never as part of the first paint.
+const loadPortal = () => import('./FungusPortal')
+const FungusPortal = lazy(loadPortal)
 import { localeFromPath, localePath, messages } from './i18n'
 import type { Locale } from './i18n'
 import type { CSSProperties } from 'react'
@@ -184,7 +188,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   useEffect(() => {
     if (!booted || intro || layers) return
     let timer: ReturnType<typeof setTimeout> | undefined
-    const show = () => setLayers(true), idle = () => { timer = setTimeout(show, 1200) }
+    const show = () => { setLayers(true); void loadPortal() }, idle = () => { timer = setTimeout(show, 1200) }
     window.addEventListener('scroll', show, { once: true, passive: true })
     if (window.scrollY > 0) show(); else if (document.readyState === 'complete') idle(); else window.addEventListener('load', idle, { once: true })
     return () => { clearTimeout(timer); window.removeEventListener('scroll', show); window.removeEventListener('load', idle) }
@@ -327,9 +331,10 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     </header>
     <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <SiteLink key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">{String(index).padStart(2, '0')}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></SiteLink>)}</nav>
     <Story onPortal={event=>{if(!discovery&&awakening==='idle'){portalOpener.current={element:event.currentTarget,x:scrollX,y:scrollY};window.scrollTo({left:scrollX,top:scrollY,behavior:'instant'});setPortalOpen(true)}}} inactive={cinemaRunning||portalOpen} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} noteState={noteState} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
-    {!discovery && <SoundControl audio={audio} locale={locale} />}
-    {!discovery && !cinemaRunning && <SiteMenu className="site-menu-fixed" locale={locale} current="home" alternate={{ lv: localePath('lv') + (booted ? location.hash : ''), en: localePath('en') + (booted ? location.hash : '') }} onLocale={(value, event) => { event.preventDefault(); changeLocale(value) }} />}
-    {portalOpen&&<FungusPortal opener={portalOpener} locale={locale} onLocaleChange={changeLocale} onClose={value=>{setPortalOpen(false);setLocale(value);history.replaceState(history.state,'',localePath(value)+location.hash)}} audio={audio} reduced={reduced} saving={dataSaving}/>}
+    {/* The field note and the portal each carry their own sound control and menu: one of each per surface. */}
+    {!discovery && !portalOpen && <SoundControl audio={audio} locale={locale} />}
+    {!discovery && !portalOpen && !cinemaRunning && <SiteMenu className="site-menu-fixed" locale={locale} current="home" alternate={{ lv: localePath('lv') + (booted ? location.hash : ''), en: localePath('en') + (booted ? location.hash : '') }} onLocale={(value, event) => { event.preventDefault(); changeLocale(value) }} />}
+    {portalOpen&&<Suspense fallback={null}><FungusPortal opener={portalOpener} locale={locale} onLocaleChange={changeLocale} onClose={value=>{setPortalOpen(false);setLocale(value);history.replaceState(history.state,'',localePath(value)+location.hash)}} audio={audio} reduced={reduced} saving={dataSaving}/></Suspense>}
     <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={dockNote} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
   </div>
 }

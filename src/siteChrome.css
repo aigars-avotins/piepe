@@ -33,8 +33,11 @@
 @media(max-width:699px){
   .site-menu-portal>summary{padding:9px 13px}.site-menu-portal .site-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
   /* Past the hero, both fixed pills shrink to their icons so they never sit on the reading column. */
-  .world:not([data-scene=forest]) .sound-control{padding:9px 12px}.world:not([data-scene=forest]) .sound-control .sound-description{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .world:not([data-scene=forest])>.sound-control{padding:9px 12px}.world:not([data-scene=forest])>.sound-control .sound-description{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 }
+
+/* The films' text equivalent is one link away from the portal. */
+.portal-art a{pointer-events:auto;color:inherit;text-decoration:underline;text-underline-offset:3px}
 
 /* ---- The site footer ---- */
 .site-footer{display:block;position:relative;z-index:2;width:auto;border-top:1px solid var(--line);background:var(--color-forest,#0b1712);padding:clamp(60px,8vw,112px) var(--gutter) calc(96px + env(safe-area-inset-bottom));font-family:'Manrope',sans-serif;font-size:14px;line-height:1.7;color:var(--muted)}
@@ -70,6 +73,10 @@
 /* Pressed: every control answers the finger immediately. */
 :is(.text-button,.line-link,.cinema-pause,.language-switch a,.reading-languages a,.site-footer-nav a,.site-menu-panel a,.knowledge-downloads a,.atlas-open,.portal-entry):active{opacity:.72}
 summary:focus-visible,input[type=range]:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+
+/* A legacy static rule named the opening frame on a pseudo-element that is never generated (content:none);
+   Chrome still fetched 660 KB for reduced-motion and Save-Data visitors. The return chapter's own still is below. */
+.motion-off .return-chapter::before{background-image:none}
 
 /* ---- The one small light ---- */
 /* Reading pages: it follows a fine pointer (siteMenu.ts); elsewhere it stays out of the way. */
