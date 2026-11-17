@@ -1,4 +1,5 @@
 import SiteLink from './SiteLink'
+import { SiteFooter } from './SiteChrome'
 import {portalCopy} from './portalCopy'
 import Arrow from './Arrow'
 import { useState } from 'react'
@@ -73,6 +74,6 @@ export default function Story({ locale, plane, hotspot, inactive = false, intro 
         <SiteLink className="line-link" href={wallpapersPath(locale)}>{forestNavigation[locale].wallpapers} <span aria-hidden="true"><Arrow direction="diagonal" /></span></SiteLink>
       </section>
     </main>
-            <footer inert={inactive}><SiteLink className="brand" href="#forest" onClick={onReturn}><img src="/brand-mark.svg" alt="" width="40" height="40" /><img className="brand-wordmark" src="/brand-wordmark.svg" alt="pie.pe" width="64" height="34" /></SiteLink><span className="footer-edition">{t.forest} — 2026<span className="footer-meaning">{t.wordMeaning}</span></span><button className="text-button motion-toggle" data-paused={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></footer>
+    <div className="site-footer-shell" inert={inactive}><SiteFooter locale={locale} current="home" onHome={onReturn}><button className="text-button motion-toggle" data-paused={paused} onClick={onPause}><ControlText>{paused ? t.resume : t.pause}</ControlText> <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></SiteFooter></div>
 </>
 }

@@ -1,4 +1,5 @@
 import SiteLink from './SiteLink'
+import { siteCopy } from './siteCopy'
 import type { Locale } from './i18n'
 import RasterImage, { RasterStatus } from './RasterImage'
 import { atlasSizes } from './imageSizes'
@@ -45,7 +46,7 @@ export function renderAtlas(locale: Locale) {
       </article>
     })}</div>
     <p className="experience-illustration-note">{t.illustration} · {locale === 'lv' ? '2,5× digitāls palielinājums.' : '2.5× digital enlargement.'}</p>
-    <details className="experience-provenance" id="atlas-method"><summary>{t.methods}</summary><p>{atlas.caution} {locale === 'lv' ? 'Digitālā lupa palielina esošo attēlu; tā nerada jaunas optiskas detaļas vai izmērītu mērogu.' : 'The digital loupe enlarges the existing image; it does not add optical detail or a measured scale.'}</p></details>
+    <details className="experience-provenance" id="atlas-method"><summary>{t.methods}</summary><p>{atlas.caution} {siteCopy[locale].status.loupeNote}</p></details>
     <dialog id="atlas-lightbox" className="atlas-lightbox" aria-labelledby="atlas-lightbox-title" data-atlas-dialog><div className="atlas-lightbox-head"><h2 id="atlas-lightbox-title">{atlas.heading}</h2><button type="button" data-atlas-close autoFocus>{t.close} ×</button></div><div className="atlas-comparison" /><p className="experience-illustration-note">{t.illustration}</p></dialog>
   </section>
 }

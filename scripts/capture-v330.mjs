@@ -6,7 +6,8 @@ import { mkdir } from 'node:fs/promises'
 
 const out = process.argv[2] || 'test-results/v330', filter = process.argv[3] || ''
 const base = process.env.TEST_URL || 'http://127.0.0.1:4173'
-const viewports = [[390, 844], [768, 1024], [1440, 900], [2560, 1080]]
+const viewports = [[390, 844], [768, 1024], [1440, 900], [2560, 1080]].filter(([width]) => !process.env.WIDTHS || process.env.WIDTHS.split(',').includes(String(width)))
+const locales = (process.env.LOCALES || 'lv,en').split(',')
 const paths = {
   lv: { home: '/', guide: '/kas-ir-piepe/', notes: '/meza-piezimes/', note: '/meza-piezimes/003-serpiepe/', wallpapers: '/meza-foni/', colophon: '/par-pie-pe/' },
   en: { home: '/en/', guide: '/en/what-is-a-bracket-fungus/', notes: '/en/field-notes/', note: '/en/field-notes/003-chicken-of-the-woods/', wallpapers: '/en/forest-wallpapers/', colophon: '/en/about/' },
@@ -14,7 +15,7 @@ const paths = {
 await mkdir(out, { recursive: true })
 const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_HEADLESS_SHELL ? undefined : 'chrome' })
 const shot = async (page, name) => { if (!filter || name.includes(filter)) await page.screenshot({ path: `${out}/${name}.jpg`, type: 'jpeg', quality: 72, scale: 'css' }) }
-for (const [width, height] of viewports) for (const locale of ['lv', 'en']) {
+for (const [width, height] of viewports) for (const locale of locales) {
   const context = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 1, hasTouch: width < 800, isMobile: width < 500 })
   const page = await context.newPage(), tag = `${locale}-${width}`
   const visit = async (path, settle = 900) => { const response = await page.goto(base + path, { waitUntil: 'load' }); await page.evaluate(() => document.fonts.ready); await page.waitForTimeout(settle); return response }

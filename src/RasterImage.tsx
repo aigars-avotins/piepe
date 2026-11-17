@@ -1,5 +1,6 @@
 import type { Locale } from './i18n'
 import { studySizes } from './imageSizes'
+import { siteCopy } from './siteCopy'
 
 // Responsive serving copies are separate. The owner JPEG remains the native fallback/original;
 // the 960px serving copy is the last real attempt before the labelled wallpaper substitute.
@@ -19,7 +20,7 @@ export default function RasterImage({ name, alt = '', className = '', width = 27
 
 export function RasterStatus({ locale }: { locale: Locale }) {
   return <div className="raster-status" data-image-status hidden>
-    <p role="status" aria-live="polite">{locale === 'lv' ? 'Izpētes attēls nav pieejams. Oriģināla saite paliek pieejama.' : 'The study image is unavailable. Its original link remains available.'}</p>
-    <button type="button" data-image-retry>{locale === 'lv' ? 'Mēģināt vēlreiz' : 'Try again'}</button>
+    <p role="status" aria-live="polite">{siteCopy[locale].status.imageUnavailable}</p>
+    <button type="button" data-image-retry>{siteCopy[locale].status.retry}</button>
   </div>
 }

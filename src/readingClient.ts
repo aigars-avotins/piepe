@@ -1,4 +1,5 @@
 import { bindImageFallback, bindXray, bindAtlas, bindTimeCapsule } from './experienceControls'
+import { bindAttentionLight, bindSiteMenu } from './siteMenu'
 // Progressive controls for static documents. No router, React, video or audio runtime.
 const themeRoot=document.documentElement
 // Retire the old preference without restoring a selectable colour mode.
@@ -8,6 +9,8 @@ const staticPreferences=()=>themeRoot.toggleAttribute('data-save-data',!!connect
 staticPreferences();connection?.addEventListener?.('change',staticPreferences)
 
 bindImageFallback(document)
+bindSiteMenu(document)
+bindAttentionLight()
 document.querySelectorAll<HTMLElement>('[data-xray]').forEach(bindXray)
 document.querySelectorAll<HTMLElement>('[data-atlas]').forEach(bindAtlas)
 document.querySelectorAll<HTMLElement>('[data-time-capsule]').forEach(bindTimeCapsule)

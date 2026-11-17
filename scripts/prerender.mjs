@@ -7,6 +7,8 @@ try {
   const { renderReadingDocument } = await server.ssrLoadModule('/src/ReadingPage.tsx')
   const { renderForestDocuments } = await server.ssrLoadModule('/src/ForestPage.tsx')
   const { readingPath } = await server.ssrLoadModule('/src/i18n.ts')
+  const { renderAboutDocument } = await server.ssrLoadModule('/src/AboutPage.tsx')
+  const { aboutPath, renderSitemap, siteRoutes } = await server.ssrLoadModule('/src/routes.ts')
   const template = await readFile('dist/index.html', 'utf8')
   if (!template.includes('<!-- locale:start -->')) throw new Error('Run a fresh Vite build before prerendering')
   const assets = await readdir('dist/assets')
@@ -46,6 +48,8 @@ try {
     const readingHtml = renderReadingDocument(locale, [...appStyles, readingStyle,experienceStyle], readingFonts.map(name => `/assets/${name}`),readingClient)
     const readingDir = `dist${readingPath(locale)}`
     await mkdir(readingDir, { recursive: true }); await writeFile(`${readingDir}index.html`, readingHtml)
+    await mkdir(`dist${aboutPath(locale)}`, { recursive: true })
+    await writeFile(`dist${aboutPath(locale)}index.html`, renderAboutDocument(locale, [...appStyles, readingStyle, forestStyle], readingFonts.map(name => `/assets/${name}`), readingClient))
     for (const document of renderForestDocuments(locale, [...appStyles, readingStyle, forestStyle], readingFonts.map(name => `/assets/${name}`),readingClient,experienceStyle)) {
       await mkdir(`dist${document.path}`, { recursive: true })
       await writeFile(`dist${document.path}index.html`, document.html)
@@ -57,12 +61,16 @@ try {
   const notFoundStyle = `/assets/not-found-${createHash('sha256').update(notFoundCss).digest('hex').slice(0, 16)}.css`
   await writeFile(`dist${notFoundStyle}`, notFoundCss)
   const notFoundFonts = assets.filter(name => /^(?:manrope|cormorant-garamond)-latin(?:-ext)?-400-normal-.*\.woff2$/.test(name))
-  await writeFile('dist/404.html', renderNotFoundDocument([...appStyles, readingStyle, notFoundStyle], notFoundFonts.map(name => `/assets/${name}`)))
+  await writeFile('dist/404.html', renderNotFoundDocument([...appStyles, readingStyle, notFoundStyle], notFoundFonts.map(name => `/assets/${name}`), readingClient))
+  // The sitemap and every page's social image come from the same route table as the pages themselves.
+  await writeFile('dist/sitemap.xml', renderSitemap())
+  const { renderSocialImages } = await import('./social-images.mjs')
+  await renderSocialImages(server, siteRoutes)
   const headers = await readFile('public/_headers', 'utf8')
   const builtHeaders = headers.replace("script-src 'self'", `script-src 'self' ${hashes.join(' ')}`)
   // Cloudflare ignores a _headers line above 2,000 characters; the policy grows with each new document.
   const longest = Math.max(...builtHeaders.split('\n').map(line => line.length))
   if (longest > 2000) throw new Error(`A _headers line is ${longest} characters; Cloudflare's limit is 2,000`)
   await writeFile('dist/_headers', builtHeaders)
-  console.log('Prerendered 20 localized cinema, guide, wallpaper and field-note documents with CSP hashes')
+  console.log(`Prerendered ${siteRoutes.length * 2} localized documents, the 404 page, sitemap and social images`)
 } finally { await server.close() }

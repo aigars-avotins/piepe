@@ -31,7 +31,7 @@ for(const [locale,width,height] of [['lv',1512,982],['en',390,844]] as const)tes
 })
 
 test('3.1 actual HTML anchor nodes on all twenty routes obey the real-origin navigation policy',async({page,request})=>{
- const sitemap=await (await request.get('/sitemap.xml')).text();const paths=[...sitemap.matchAll(/<loc>https:\/\/pie\.pe([^<]+)<\/loc>/g)].map(match=>match[1]);expect(paths).toHaveLength(20);await page.goto('/kas-ir-piepe/')
+ const sitemap=await (await request.get('/sitemap.xml')).text();const paths=[...sitemap.matchAll(/<loc>https:\/\/pie\.pe([^<]+)<\/loc>/g)].map(match=>match[1]);expect(paths).toHaveLength(22);await page.goto('/kas-ir-piepe/')
  for(const path of paths){
   const response=await request.get(path);expect(response.status(),path).toBe(200);const html=await response.text();const links=await page.evaluate(markup=>[...new DOMParser().parseFromString(markup,'text/html').querySelectorAll('a')].map(a=>({href:a.getAttribute('href'),target:a.getAttribute('target'),rel:a.getAttribute('rel'),download:a.hasAttribute('download')})),html)
   expect(links.length).toBeGreaterThan(0)

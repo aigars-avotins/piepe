@@ -9,7 +9,8 @@ test('real sitemap and robots assets describe every crawlable canonical page', a
   expect(robots.status()).toBe(200); expect(robots.headers()['content-type']).toContain('text/plain')
   const xml = await sitemap.text(), text = await robots.text()
   expect(xml).toBe(await readFile('dist/sitemap.xml', 'utf8'))
-  expect(xml).toBe(await readFile('public/sitemap.xml', 'utf8'))
+  // 3.3: the sitemap is generated from src/routes.ts at build time and carries lastmod.
+  expect([...xml.matchAll(/<lastmod>\d{4}-\d\d-\d\d<\/lastmod>/g)]).toHaveLength(22)
   expect(text).toBe(await readFile('dist/robots.txt', 'utf8'))
   const parsed = await page.evaluate(source => {
     const doc = new DOMParser().parseFromString(source, 'application/xml')
@@ -19,7 +20,7 @@ test('real sitemap and robots assets describe every crawlable canonical page', a
     })) }
   }, xml)
   expect(parsed.errors).toBe(0)
-  const pairs = [['/', '/en/'], ['/kas-ir-piepe/', '/en/what-is-a-bracket-fungus/'], ...forestPages.map(page => [forestPath('lv', page), forestPath('en', page)])].map(pair => pair.map(path => 'https://pie.pe' + path))
+  const pairs = [['/', '/en/'], ['/kas-ir-piepe/', '/en/what-is-a-bracket-fungus/'], ...forestPages.map(page => [forestPath('lv', page), forestPath('en', page)]), ['/par-pie-pe/', '/en/about/']].map(pair => pair.map(path => 'https://pie.pe' + path))
   expect(parsed.entries.map(entry => entry.url)).toEqual(pairs.flat())
   for (const entry of parsed.entries) {
     const [lv, en] = pairs.find(pair => pair.includes(entry.url!))!

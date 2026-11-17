@@ -1,4 +1,6 @@
 import SiteLink from './SiteLink'
+import { SiteMenu } from './SiteChrome'
+import { bindSiteMenu } from './siteMenu'
 import FungusPortal from './FungusPortal'
 import type {PortalOrigin} from './FungusPortal'
 import { releaseVersion, releaseMilestone } from './release'
@@ -61,6 +63,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     localeScroll.current = null
   }, [locale])
   useEffect(() => { updateMetadata(locale) }, [locale])
+  useEffect(() => bindSiteMenu(document), [])
   useEffect(() => {
     const pop = () => setLocale(localeFromPath(location.pathname))
     window.addEventListener('popstate', pop)
@@ -325,6 +328,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <SiteLink key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">{String(index).padStart(2, '0')}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></SiteLink>)}</nav>
     <Story onPortal={event=>{if(!discovery&&awakening==='idle'){portalOpener.current={element:event.currentTarget,x:scrollX,y:scrollY};window.scrollTo({left:scrollX,top:scrollY,behavior:'instant'});setPortalOpen(true)}}} inactive={cinemaRunning||portalOpen} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} noteState={noteState} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
     {!discovery && <SoundControl audio={audio} locale={locale} />}
+    {!discovery && !cinemaRunning && <SiteMenu className="site-menu-fixed" locale={locale} current="home" alternate={{ lv: localePath('lv') + (booted ? location.hash : ''), en: localePath('en') + (booted ? location.hash : '') }} onLocale={(value, event) => { event.preventDefault(); changeLocale(value) }} />}
     {portalOpen&&<FungusPortal opener={portalOpener} locale={locale} onLocaleChange={changeLocale} onClose={value=>{setPortalOpen(false);setLocale(value);history.replaceState(history.state,'',localePath(value)+location.hash)}} audio={audio} reduced={reduced} saving={dataSaving}/>}
     <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={dockNote} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
   </div>

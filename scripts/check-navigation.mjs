@@ -3,7 +3,8 @@ import {linkPolicy} from '../src/linkPolicy.ts'
 
 const decode = value => value.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')
 const sitemap=await readFile('dist/sitemap.xml','utf8'),paths=[...sitemap.matchAll(/<loc>https:\/\/pie\.pe([^<]+)<\/loc>/g)].map(match=>match[1])
-if(paths.length!==20)throw Error('Expected all 20 original canonical documents')
+if(paths.length!==22)throw Error('Expected all 22 canonical documents')
+if(!/<lastmod>\d{4}-\d\d-\d\d<\/lastmod>/.test(sitemap))throw Error('Sitemap entries must carry lastmod')
 let anchors=0
 for(const path of paths){
  const html=await readFile('dist'+(path==='/'?'/index.html':path+'index.html'),'utf8')

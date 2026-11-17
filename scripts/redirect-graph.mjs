@@ -32,8 +32,8 @@ async function fetchRaw(url,method){
 }
 
 export async function auditRedirects(origin='https://pie.pe'){
- const paths=[...(await readFile('public/sitemap.xml','utf8')).matchAll(/<loc>https:\/\/pie\.pe([^<]+)<\/loc>/g)].map(m=>m[1])
- if(paths.length!==20)throw Error('Expected all twenty canonical routes')
+ const paths=[...(await readFile('dist/sitemap.xml','utf8')).matchAll(/<loc>https:\/\/pie\.pe([^<]+)<\/loc>/g)].map(m=>m[1])
+ if(paths.length!==22)throw Error('Expected all 22 canonical routes (run the build first: the sitemap is generated)')
  origin=new URL(origin).origin
  const origins=new Set([origin,...(origin==='https://pie.pe'?['http://pie.pe']:[])])
  const cases=paths.map(path=>({kind:'canonical',url:origin+path,status:200,maxHops:0,path}))
