@@ -21,7 +21,7 @@ export function renderReadingDocument(locale: Locale, stylesheets: string[], fon
   const t = readings[locale]
   const citations = (ids: typeof readingSources[number]['id'][]) => <span className="reading-citations">{ids.map(id => {
     const index = readingSources.findIndex(source => source.id === id)
-    return <SiteLink key={id} href={`#source-${id}`} aria-label={`${t.sourceHeading}: ${readingSources[index].name}`}>[{index + 1}]</SiteLink>
+    return <SiteLink key={id} href={`#source-${id}`} aria-label={`[${index + 1}] ${t.sourceHeading}: ${readingSources[index].name}`}>[{index + 1}]</SiteLink>
   })}</span>
   return '<!doctype html>\n' + renderToStaticMarkup(<html lang={locale} className="reading-document">
     <DocumentHead route="guide" locale={locale} title={t.title} description={t.description} type="article" imageAlt={t.imageAlt} schema={readingSchema(locale)} stylesheets={stylesheets} fonts={fonts} client={client} />

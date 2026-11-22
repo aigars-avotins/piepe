@@ -38,7 +38,7 @@ Beyond the cinema, interactive photographs and bilingual field notes continue th
 
 ## Shot list
 
-Capture from production after deploying 3.3, at 1600×1200 (the confirmed size), sound icon and menu pill visible, no browser chrome. `node scripts/capture-v330.mjs <dir>` produces review screenshots at the audit sizes and is a starting point, not the final export.
+Capture from production after this branch is merged and deployed, at 1600×1200 (the confirmed size), sound icon and menu pill visible, no browser chrome. `node scripts/capture-v330.mjs <dir>` produces review screenshots at the audit sizes and is a starting point, not the final export.
 
 | # | Shot | Language | Notes |
 |---|---|---|---|
@@ -80,13 +80,13 @@ Pairs are embedded in [V330-EXPERIENCE](V330-EXPERIENCE.md#before-and-after) and
 
 ## Owner checklist — what automation cannot verify
 
-Before deploying
+Before merging into `main` (a push to `main` deploys to production through Workers Builds)
 - [ ] Fill in `colophonPeople` in `src/siteCopy.ts` (name or studio, roles, a contact link or address). The About page shows no credits or contact until you do.
 - [ ] Read the Latvian About page and footer as a native speaker and adjust the wording to your own voice.
 - [ ] Confirm the wallpaper terms on the About page ("free to download and use on your own screens; ask first for anything else"). They are a conservative default, not something you told anyone.
 - [ ] Run **Actions → Forest QA → Run workflow** with `validation: release` on this branch (full Chromium on Linux and native macOS WebKit).
 
-After deploying
+After the merge has deployed
 - [ ] `validation: production` smoke workflow.
 - [ ] Open an unknown address: the designed 404 page appears with status 404.
 - [ ] Wrangler's uploaded-asset count has dropped (six masters and three stray files are no longer in `public/`), and `https://pie.pe/media/portal-02-faststart.mp4` still plays.

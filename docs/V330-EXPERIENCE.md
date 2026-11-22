@@ -1,6 +1,6 @@
 # PIE.PE 3.3 — what changed and why
 
-Scope: the [3.3 Awwwards readiness brief](V330-AWWWARDS-TASK.md). Baseline: production 3.2.0 (`0b10d28`). Not deployed; the owner deploys with `npm run deploy` after review. Test results and limits are in [V330-QA](V330-QA.md); the submission material is in [V330-AWWWARDS-SUBMISSION](V330-AWWWARDS-SUBMISSION.md).
+Scope: the [3.3 Awwwards readiness brief](V330-AWWWARDS-TASK.md). Baseline: 3.2.0 (`0b10d28`); the first part of 3.3 (`9b89b3b`, `93adcdd`) was merged into `main` and is live. This branch is not merged or deployed. Every push to `main` deploys to production through Cloudflare Workers Builds, so merging is the release step. Test results and limits are in [V330-QA](V330-QA.md); the submission material is in [V330-AWWWARDS-SUBMISSION](V330-AWWWARDS-SUBMISSION.md).
 
 The creative stance of [3.2](V320-AWWWARD-CANDIDATE.md) is unchanged: restraint, native scrolling, no scroll hijack, no WebGL or particle engine, no new framework, the film never pauses for a lesson, sound is never required. No film was regenerated, re-encoded or replaced; every published film and matched frame keeps its hash.
 

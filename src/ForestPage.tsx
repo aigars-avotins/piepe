@@ -81,7 +81,7 @@ function renderContent(locale: Locale, page: ForestPage) {
     {links}
   </>
   const note = fieldNote(locale, page.number), sourceIds = [...new Set(note.sections.flatMap(section => section.sources || []))]
-  const citations = (sources: ForestSource[] = []) => sources.length > 0 && <span className="reading-citations">{sources.map(id => <SiteLink key={id} href={`#source-${id}`} aria-label={`${t.sources}: ${forestSources[id].name}`}>[{sourceIds.indexOf(id) + 1}]</SiteLink>)}</span>
+  const citations = (sources: ForestSource[] = []) => sources.length > 0 && <span className="reading-citations">{sources.map(id => <SiteLink key={id} href={`#source-${id}`} aria-label={`[${sourceIds.indexOf(id) + 1}] ${t.sources}: ${forestSources[id].name}`}>[{sourceIds.indexOf(id) + 1}]</SiteLink>)}</span>
   return <>
     <nav className="knowledge-trail" aria-label={t.allNotes}><SiteLink href={fieldNotesPath(locale)}>{t.allNotes}</SiteLink><span aria-current="page">/ {t.noteLabel} {page.number}</span></nav>
     <article>
