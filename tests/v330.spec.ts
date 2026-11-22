@@ -170,7 +170,7 @@ test('3.3 no page raises a CSP violation or a console error, and the fixed contr
   page.on('console', message => { if (message.type() === 'error') problems.push(message.text()) }); page.on('pageerror', error => problems.push(String(error)))
   await page.addInitScript(() => { sessionStorage.setItem('piepe-entered', '1'); document.addEventListener('securitypolicyviolation', event => console.error('CSP ' + event.violatedDirective + ' ' + event.blockedURI)) })
   await page.setViewportSize({ width: 390, height: 844 })
-  for (const path of ['/', readingPath('en'), notePath('lv', '005'), wallpapersPath('en'), aboutPath('lv')]) {
+  for (const path of ['/', readingPath('en'), notePath('lv', '005'), wallpapersPath('en'), aboutPath('lv'), '/no-such-trail/']) {
     await page.goto(path); await page.evaluate(() => document.fonts.ready)
     const summary = page.locator('details[data-site-menu]>summary').first(), box = (await summary.boundingBox())!
     expect(box.width, path).toBeGreaterThanOrEqual(44); expect(box.height, path).toBeGreaterThanOrEqual(44); expect(box.x + box.width, path).toBeLessThanOrEqual(390)

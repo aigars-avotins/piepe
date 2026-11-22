@@ -40,6 +40,8 @@ for (const [width, height] of viewports) for (const locale of locales) {
       if (key === 'note' || key === 'guide') { await page.evaluate(() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' })); await page.waitForTimeout(500); await shot(page, `${tag}-${key}-end`) }
     }
     if (locale === 'lv') { await visit('/this-trail-does-not-exist/'); await shot(page, `${tag}-404`) }
+    const menu = page.locator('details[data-site-menu]>summary').first()
+    if (await menu.count()) { await menu.click(); await page.waitForTimeout(500); await shot(page, `${tag}-menu-open`) }
   } catch (error) { console.error(tag, String(error).split('\n')[0]) }
   await context.close()
 }

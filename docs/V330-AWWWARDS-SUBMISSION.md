@@ -72,7 +72,14 @@ Record at 1600×1200 if the form accepts video at that size; otherwise 1920×108
 
 Filled in from the final build; see [V330-QA](V330-QA.md) for method and limits.
 
-LIGHTHOUSE_TABLE
+| Page | Form | Performance | Accessibility | Best practices | SEO | LCP | CLS |
+|---|---|---|---|---|---|---:|---:|
+| Home | phone (simulated slow 4G) | 100 | 100 | 100 | 100 | 1.35 s | 0 |
+| Home | desktop | 100 | 100 | 100 | 100 | 0.32 s | 0 |
+| Field note 003 | phone (simulated slow 4G) | 99 | 100 | 100 | 100 | 1.65 s | 0.022 |
+| Field note 003 | desktop | 100 | 100 | 100 | 100 | 0.40 s | 0.047 |
+
+Medians of three local runs on the production build. Under real DevTools throttling the home page scores 63–66 with an LCP of about 12.5 s, because the largest element is the title revealed after the opening film. Do not quote the simulated home score without that context; re-measure on production after the merge.
 
 ## Before and after
 
