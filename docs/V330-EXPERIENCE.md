@@ -25,7 +25,7 @@ All real pages were captured at 390×844, 768×1024, 1440×900 and 2560×1080 in
 | 6 | About 65 MB of unplayed files were published | The six masters moved to `source/portal/`, `forest-mobile.webp` to `source/legacy/` (bytes unchanged, manifests updated); `field-note.txt`, the 1-byte `aaaa` and the duplicate still are gone. |
 | 7 | First paint fetched frames it did not show | No unconditional preload. The boot script preloads the one frame this visit paints; CSS paints it before React supplies the image; the two invisible plates wait until the opening is over. |
 | 8 | Stale, inconsistent cache-busters | One `mediaVersion` in `src/release.ts` feeds TypeScript, CSS and HTML; portal media goes through `mediaUrl`; the stray `?v=2.2` is gone. |
-| 9 | `404-page` configured, no page built | Designed bilingual `404.html`, now with the shared menu and the small light. |
+| 9 | `404-page` configured, no page built | Designed bilingual `404.html`, now with the shared menu and the small light. Its glow made the page scroll sideways on phones (live since the first 3.3 merge) and pushed the menu off-screen; fixed. |
 | 10 | CSP hashed every JSON-LD block | Only the executable boot script is hashed: the line is 290 characters instead of 1,369 and no longer grows. |
 | 11 | The build rewrote tracked field notes | The build writes `dist/` only; a test snapshot guards the wording. |
 | 12 | Toggles announced state twice | One mechanism: the label carries the state. |
@@ -50,7 +50,7 @@ Two further defects surfaced while fixing these: the test helpers assumed any Ma
 ### Usability (30%)
 
 - **Navigation from anywhere.** "Takas / Trails" is a native `<details>` menu fixed at the lower right on every page and in the portal's top bar: five destinations and both languages. It works without JavaScript; a small script adds Escape, outside-press and focus-out closing.
-- **The phone sound pill no longer covers text.** After the hero it shrinks to its icon.
+- **The phone sound pill takes a third of the room.** After the hero it shrinks to its icon (about 46 px instead of about 150 px). Like any fixed control it can still pass over scrolling text; it no longer hides whole lines of the chapter copy.
 - **First-visit clarity.** The hero keeps its three signals (the labelled invitation on the fungus, "Enter the fungus" with its six-film hint, the scroll cue); the invitation is now a single tab stop whose visible text matches its accessible name.
 - **A text equivalent for the films.** "The films in words" on the About page describes all ten films; the portal links to it.
 - **Lighter pages.** The portal (player, thread, styles) is a separate chunk loaded on intent or once the opening has settled; React and GSAP are stable vendor files. The entry script is 116 KB (38 KB gzipped) instead of 459 KB (155 KB) in one file. Study photographs gain AVIF copies four to five times smaller than the WebP ones.
@@ -86,14 +86,19 @@ The one idea — attention as a small, movable light — now recurs instead of b
 
 Pairs are in `docs/qa/v330/before/` and `docs/qa/v330/after/` with the same file names.
 
-| View | Before | After |
+| View | Before (3.2.0) | After (3.3) |
 |---|---|---|
+| Hero, 1440×900 | ![](qa/v330/before/lv-1440-home-1-hero.jpg) | ![](qa/v330/after/lv-1440-home-1-hero.jpg) |
+| Hero, 2560×1080 | ![](qa/v330/before/en-2560-home-1-hero.jpg) | ![](qa/v330/after/en-2560-home-1-hero.jpg) |
 | Home, end of page, 1440×900 | ![](qa/v330/before/lv-1440-home-7-footer.jpg) | ![](qa/v330/after/lv-1440-home-7-footer.jpg) |
 | Home, end of page, 390×844 | ![](qa/v330/before/lv-390-home-7-footer.jpg) | ![](qa/v330/after/lv-390-home-7-footer.jpg) |
 | Encounter on a phone (sound pill) | ![](qa/v330/before/lv-390-home-3-encounter.jpg) | ![](qa/v330/after/lv-390-home-3-encounter.jpg) |
-| Field note 003, end, 1440×900 | ![](qa/v330/before/lv-1440-note-end.jpg) | ![](qa/v330/after/lv-1440-note-end.jpg) |
-| Guide, 390×844 | ![](qa/v330/before/lv-390-guide-top.jpg) | ![](qa/v330/after/lv-390-guide-top.jpg) |
 | Portal threshold, 390×844 | ![](qa/v330/before/lv-390-home-8-portal.jpg) | ![](qa/v330/after/lv-390-home-8-portal.jpg) |
-| Hero, 1440×900 | ![](qa/v330/before/lv-1440-home-1-hero.jpg) | ![](qa/v330/after/lv-1440-home-1-hero.jpg) |
-| About page (new) | — | ![](qa/v330/after/lv-1440-colophon-top.jpg) |
-| Menu open (new) | — | ![](qa/v330/after/en-1440-menu-open.jpg) |
+| Field note 003, end, 1440×900 | ![](qa/v330/before/lv-1440-note-end.jpg) | ![](qa/v330/after/lv-1440-note-end.jpg) |
+| Field note 003, 768×1024 | ![](qa/v330/before/en-768-note-top.jpg) | ![](qa/v330/after/en-768-note-top.jpg) |
+| Guide, 390×844 | ![](qa/v330/before/lv-390-guide-top.jpg) | ![](qa/v330/after/lv-390-guide-top.jpg) |
+| About page (new) | — | ![](qa/v330/after/lv-1440-colophon-top.jpg) ![](qa/v330/after/en-390-colophon-top.jpg) |
+| Menu open (new) | — | ![](qa/v330/after/en-1440-menu-open.jpg) ![](qa/v330/after/lv-390-menu-open.jpg) |
+| 404 page, 390×844 (3.2 had none) | — | ![](qa/v330/after/lv-390-404.jpg) |
+
+All pairs were captured with `scripts/capture-v330.mjs` from local builds of 3.2.0 (`0b10d28`) and this branch, in Chrome, at CSS-pixel scale, then resized to at most 1200 px wide (about 0.8 MB in total).
