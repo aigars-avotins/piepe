@@ -167,7 +167,9 @@ test('3.3 unknown addresses get the designed 404 page; security headers and the 
 
 test('3.3 no page raises a CSP violation or a console error, and the fixed controls keep 44px targets on a phone', async ({ page }) => {
   const problems: string[] = []
-  page.on('console', message => { if (message.type() === 'error') problems.push(message.text()) }); page.on('pageerror', error => problems.push(String(error)))
+  // Failed requests are recorded by URL, so the deliberate 404 document is the only one allowed.
+  page.on('console', message => { if (message.type() === 'error' && !message.text().startsWith('Failed to load resource')) problems.push(message.text()) }); page.on('pageerror', error => problems.push(String(error)))
+  page.on('response', response => { if (response.status() >= 400 && !response.url().endsWith('/no-such-trail/')) problems.push(`${response.status()} ${response.url()}`) })
   await page.addInitScript(() => { sessionStorage.setItem('piepe-entered', '1'); document.addEventListener('securitypolicyviolation', event => console.error('CSP ' + event.violatedDirective + ' ' + event.blockedURI)) })
   await page.setViewportSize({ width: 390, height: 844 })
   for (const path of ['/', readingPath('en'), notePath('lv', '005'), wallpapersPath('en'), aboutPath('lv'), '/no-such-trail/']) {
