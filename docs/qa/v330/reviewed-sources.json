@@ -1,6 +1,35 @@
 {
-  "src/EnvironmentalFilm.tsx": "9255f68ce7625bc83549601b8bd803ff142811b123500f2082acc046a9400102",
-  "src/IntroFilm.tsx": "a91ded3a50de84a865895e1c3357ce31c041f64ecc1c201c4916de426e15c2ac",
-  "src/i18n.ts": "f5d0a85600cde90db2469bfe1f5783bcd13e7cef91803c33c4361cd59ffa7ad0",
-  "src/style.css": "d473fc699ed390ae2f13448aab93ec73931266aefa1c41146a165f8cc2e74415"
+  "note": "PIE.PE 3.3 reviewed ledger. 'changed' pins the current hash of files this release intentionally edited (film and audio bytes are never listed). 'moved' relocates audited bytes unchanged. 'retired' lists unreferenced or duplicate files removed from the published site.",
+  "changed": {
+    "public/_headers": "80eccc7698a0c1ca85e2b210e5abef87fe03dc9a3ea66b46c7d01e98e073ec8c",
+    "public/_headers#site": "b42c2ae7ae7a52d89ea2df35feec81fa7c3078361ff0e21684733fd3a32f5a35",
+    "public/boot.js": "b1c4fc539e08c93b2e07871852ba26c88c3ca89ab21280d2af5c76c1c03d886a",
+    "public/site.webmanifest": "f55bda473c9f222b25ed7709173dec2e2eb5336c9fa558e71dfe07f71d3a1477",
+    "src/App.tsx": "b9aac25cfadb05c3ecfb80c857399548e537f334fbf62990df524e03c6961cb1",
+    "src/EnvironmentalFilm.tsx": "9255f68ce7625bc83549601b8bd803ff142811b123500f2082acc046a9400102",
+    "src/ForestScene.tsx": "f7895ea9ce54d6c690b9735da3a28a3277a67bf26581a22c59247887281a5046",
+    "src/i18n.ts": "5a8029b820681068e7a0c8507316767da95d55709e9a655a8b68c098e978aa1a",
+    "src/IntroFilm.tsx": "a91ded3a50de84a865895e1c3357ce31c041f64ecc1c201c4916de426e15c2ac",
+    "src/portalCinema.ts": "30d1ed7ed243657d2f272d119f4596bcb88fd911010dbb9865ffff72636b5789",
+    "src/prerender.tsx": "0526f172031a1a11c49d62ed343fa890a42485caf5ac31726f418a0a86ecbc54",
+    "src/seo.ts": "b3ed34a069080660d275e572cde21cb29afee5b1821cc72cd72b0e584b9e107c",
+    "src/style.css": "9e282dbf11ef0c3cc6619a3e784c20adfd970719eb4ac8240a7dcc24bd151f39"
+  },
+  "moved": {
+    "public/media/02_Zoom_in.mp4": "source/portal/02_Zoom_in.mp4",
+    "public/media/03_Entering_fungus.mp4": "source/portal/03_Entering_fungus.mp4",
+    "public/media/04_Inside_fungus.mp4": "source/portal/04_Inside_fungus.mp4",
+    "public/media/05_Fungus_world.mp4": "source/portal/05_Fungus_world.mp4",
+    "public/media/06_Leaving_fungus.mp4": "source/portal/06_Leaving_fungus.mp4",
+    "public/media/07_Zoom_out.mp4": "source/portal/07_Zoom_out.mp4",
+    "public/media/forest-mobile.webp": "source/legacy/forest-mobile.webp",
+    "public/field-note-lv.txt": "tests/fixtures/field-note-lv.txt",
+    "public/field-note-en.txt": "tests/fixtures/field-note-en.txt"
+  },
+  "retired": [
+    "public/field-note.txt",
+    "public/media/portal-living-still.webp",
+    "dist/media/forest-mobile.webp",
+    "public/sitemap.xml"
+  ]
 }

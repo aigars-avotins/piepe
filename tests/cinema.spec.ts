@@ -1,4 +1,5 @@
 import {test,expect} from '@playwright/test'
+import { mediaVersion } from '../src/release'
 import { nativeDiagnostics } from './nativeDiagnostics'
 nativeDiagnostics()
 
@@ -109,7 +110,7 @@ test('the decoded first frame retains local fungus edge anchors, not just a low 
     new MutationObserver(()=>{const v=document.querySelector<HTMLVideoElement>('video[src*="/media/forest-awakening.mp4"]');if(!v||v.dataset.qaWatched)return;v.dataset.qaWatched='1';v.requestVideoFrameCallback((_,metadata)=>{
       const captured=document.createElement('canvas');captured.width=1920;captured.height=1080;captured.getContext('2d')!.drawImage(v,0,0)
       const firstTime=metadata.mediaTime
-      const ref=new Image();ref.src='/media/forest-final.jpg?v=2.3'
+      const ref=new Image();ref.src='/media/forest-final.jpg'
       const compare=()=>{
         const a=document.createElement('canvas'),b=document.createElement('canvas');a.width=b.width=1920;a.height=b.height=1080;const ac=a.getContext('2d')!,bc=b.getContext('2d')!;ac.drawImage(captured,0,0);bc.drawImage(ref,0,0)
         const anchors=[]
@@ -180,7 +181,7 @@ for(const [width,height] of [[1512,982],[390,664]])inViewport(width,height,()=>t
   for(let i=1;i<frames.length;i++){const dt=frames[i].t-frames[i-1].t;if(dt<1)continue;expect(Math.abs(frames[i].w-frames[i-1].w)/dt).toBeLessThan(3);expect(Math.abs(frames[i].h-frames[i-1].h)/dt).toBeLessThan(3)}
   await expect(page.getByRole('button',{name:'Close discovery'})).toBeFocused()
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible({timeout:2000});await expect(page.getByRole('button',{name:'Look closer at the fungus',exact:true})).toBeFocused()
-  expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg?v=2.3')
+  expect(await page.locator('.forest-still').getAttribute('src')).toBe('/media/forest-awakening-final.jpg?v='+mediaVersion)
 }))
 
 test('Escape while preparing cancels in place; repeat activation opens the accessible note',async({page})=>{

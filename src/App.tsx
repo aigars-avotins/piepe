@@ -1,9 +1,15 @@
 import SiteLink from './SiteLink'
-import FungusPortal from './FungusPortal'
+import { SiteMenu } from './SiteChrome'
+import { bindSiteMenu } from './siteMenu'
 import type {PortalOrigin} from './FungusPortal'
 import { releaseVersion, releaseMilestone } from './release'
 import Arrow from './Arrow'
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+
+// The six-film portal (player, thread, styles) loads on intent or once the opening has settled,
+// never as part of the first paint.
+const loadPortal = () => import('./FungusPortal')
+const FungusPortal = lazy(loadPortal)
 import { localeFromPath, localePath, messages } from './i18n'
 import type { Locale } from './i18n'
 import type { CSSProperties } from 'react'
@@ -61,6 +67,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     localeScroll.current = null
   }, [locale])
   useEffect(() => { updateMetadata(locale) }, [locale])
+  useEffect(() => bindSiteMenu(document), [])
   useEffect(() => {
     const pop = () => setLocale(localeFromPath(location.pathname))
     window.addEventListener('popstate', pop)
@@ -176,6 +183,16 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   useEffect(() => {
     if (!intro && exitReason === 'skipped') hotspot.current?.focus({ preventScroll: true })
   }, [intro, exitReason])
+  // The two later plates are invisible until the visitor travels; fetch them after the opening is done.
+  const [layers, setLayers] = useState(false)
+  useEffect(() => {
+    if (!booted || intro || layers) return
+    let timer: ReturnType<typeof setTimeout> | undefined
+    const show = () => { setLayers(true); void loadPortal() }, idle = () => { timer = setTimeout(show, 1200) }
+    window.addEventListener('scroll', show, { once: true, passive: true })
+    if (window.scrollY > 0) show(); else if (document.readyState === 'complete') idle(); else window.addEventListener('load', idle, { once: true })
+    return () => { clearTimeout(timer); window.removeEventListener('scroll', show); window.removeEventListener('load', idle) }
+  }, [booted, intro, layers])
   const revealTypography = useCallback(() => setTypography(true), [])
   useEffect(() => () => clearTimeout(unmountTimer.current), [])
   useEffect(() => {
@@ -240,7 +257,8 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
   }, [showNote, freezeFrame])
   const skipAwakening = () => showNote(false, freezeFrame())
   const openDiscovery = (event: React.MouseEvent<HTMLButtonElement>) => {
-    opener.current = event.currentTarget; setInspect(false)
+    // The photographic hit area is pointer-only; focus returns to its labelled invitation.
+    opener.current = event.currentTarget.matches('.fungus-hit') ? hotspot.current : event.currentTarget; setInspect(false)
     const realFungus = event.currentTarget.matches('.fungus-hit, .fungus-annotation')
     if (realFungus && !reduced && !dataSaving && !paused && !hasPlayedClip('awakening')) setAwakening('preparing')
     else showNote(realFungus && !reduced && !dataSaving && !paused, heldFrame)
@@ -296,7 +314,7 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
 
   return <div ref={root} className={`world ${!booted ? 'prerendered' : ''} ${intro ? 'is-intro' : 'is-ready'} ${typography ? 'has-title' : ''} ${reduced || dataSaving || paused || motionFailed ? 'motion-off' : ''} ${reduced || dataSaving || motionFailed ? 'static-preference' : ''} ${portalOpen || hidden || paused || discovery || awakening !== 'idle' || cinemaActive.understory || cinemaActive.breathing ? 'atmosphere-paused' : ''} ${dataSaving ? 'data-saving' : ''} ${noteState !== 'unseen' ? 'has-note' : ''} ${discovery ? 'discovery-open' : ''} ${heldFrame.endsWith('forest-awakening-final.jpg') ? 'has-awakened' : ''} ${awakening !== 'idle' ? 'has-awakening' : ''} ${awakening === 'playing' || awakening === 'docking' ? 'cinema-presented' : ''}`} data-version={releaseVersion} data-milestone={releaseMilestone} data-awakening={awakening} data-scene={scene} data-intro-state={intro ? 'playing' : 'complete'} data-exit-reason={exitReason}>
     <SiteLink className="skip-content" href="#understory" onClick={() => intro && finish('skip-to-content')}><span data-nosnippet="">{t.skipContent}</span></SiteLink>
-    <ForestScene ref={environment} plane={plane} inspect={inspect && (scene === 'forest' || scene === 'encounter')} still={intro ? '/media/forest-poster.jpg' : heldFrame}
+    <ForestScene ref={environment} plane={plane} inspect={inspect && (scene === 'forest' || scene === 'encounter')} still={!booted ? undefined : intro ? '/media/forest-poster.jpg' : heldFrame} layers={layers}
       macro={cinemaMounted.understory && <MotionClip key={cinemaRetries.understory} name="understory" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.understory && !intro && !discovery && !portalOpen && awakening === 'idle'} onReady={() => cinemaResult('understory', false)} onFinish={() => cinemaResult('understory', true)} />}
       breathing={cinemaMounted.breathing && <MotionClip key={cinemaRetries.breathing} name="breathing" enabled={!reduced && !dataSaving && !paused} active={cinemaActive.breathing && !intro && !discovery && !portalOpen && awakening === 'idle'} onReady={() => cinemaResult('breathing', false)} onFinish={() => cinemaResult('breathing', true)} />}>
       {awakening !== 'idle' && <div className="world-awakening"><MotionClip name="awakening" enabled={!reduced && !dataSaving && !paused} onReady={() => setAwakening('playing')} onFinish={completeAwakening} /></div>}
@@ -313,8 +331,10 @@ export default function App({ initialLocale }: { initialLocale?: Locale }) {
     </header>
     <nav inert={cinemaRunning} className="journey-index" aria-label={t.forest}>{chapters.map((chapter, index) => <SiteLink key={chapter} href={`#${chapter}`} aria-current={scene === chapter ? 'location' : undefined}><span data-nosnippet="">{String(index).padStart(2, '0')}</span><i /><span data-nosnippet="">{t.chapters[index]}</span></SiteLink>)}</nav>
     <Story onPortal={event=>{if(!discovery&&awakening==='idle'){portalOpener.current={element:event.currentTarget,x:scrollX,y:scrollY};window.scrollTo({left:scrollX,top:scrollY,behavior:'instant'});setPortalOpen(true)}}} inactive={cinemaRunning||portalOpen} locale={locale} plane={plane} hotspot={hotspot} intro={intro} imageFailed={imageFailed} noteState={noteState} paused={paused} cinemaErrors={cinemaErrors} onRetryCinema={retryCinema} onDiscovery={openDiscovery} onReturn={returnToForest} onPause={() => setPaused(value => !value)} inspectEvents={inspectEvents} />
-    {!discovery && <SoundControl audio={audio} locale={locale} />}
-    {portalOpen&&<FungusPortal opener={portalOpener} locale={locale} onLocaleChange={changeLocale} onClose={value=>{setPortalOpen(false);setLocale(value);history.replaceState(history.state,'',localePath(value)+location.hash)}} audio={audio} reduced={reduced} saving={dataSaving}/>}
+    {/* The field note and the portal each carry their own sound control and menu: one of each per surface. */}
+    {!discovery && !portalOpen && <SoundControl audio={audio} locale={locale} />}
+    {!discovery && !portalOpen && !cinemaRunning && <SiteMenu className="site-menu-fixed" locale={locale} current="home" alternate={{ lv: localePath('lv') + (booted ? location.hash : ''), en: localePath('en') + (booted ? location.hash : '') }} onLocale={(value, event) => { event.preventDefault(); changeLocale(value) }} />}
+    {portalOpen&&<Suspense fallback={null}><FungusPortal opener={portalOpener} locale={locale} onLocaleChange={changeLocale} onClose={value=>{setPortalOpen(false);setLocale(value);history.replaceState(history.state,'',localePath(value)+location.hash)}} audio={audio} reduced={reduced} saving={dataSaving}/></Suspense>}
     <Discovery audio={audio} locale={locale} onLocaleChange={changeLocale} origin={origin} photoSrc={heldFrame} onDocked={dockNote} open={discovery} dialog={dialog} onClose={closeDiscovery} onCollect={collect} collected={collected} />
   </div>
 }

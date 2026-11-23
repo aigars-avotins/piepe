@@ -8,7 +8,7 @@
     "height": 941
   },
   {
-    "path": "public/media/02_Zoom_in.mp4",
+    "path": "source/portal/02_Zoom_in.mp4",
     "bytes": 12288853,
     "sha256": "82bb1fc5ad6641306b40dae34e96c7c66684337d937d92b61c0ee0f169059ebd",
     "probe": {
@@ -132,7 +132,7 @@
         }
       ],
       "format": {
-        "filename": "public/media/02_Zoom_in.mp4",
+        "filename": "source/portal/02_Zoom_in.mp4",
         "nb_streams": 2,
         "nb_programs": 0,
         "nb_stream_groups": 0,
@@ -175,7 +175,7 @@
     ]
   },
   {
-    "path": "public/media/03_Entering_fungus.mp4",
+    "path": "source/portal/03_Entering_fungus.mp4",
     "bytes": 8140310,
     "sha256": "5fef0a228648d5c0b21007e78d0036cc019521f9d196bbd66015443b201cf304",
     "probe": {
@@ -299,7 +299,7 @@
         }
       ],
       "format": {
-        "filename": "public/media/03_Entering_fungus.mp4",
+        "filename": "source/portal/03_Entering_fungus.mp4",
         "nb_streams": 2,
         "nb_programs": 0,
         "nb_stream_groups": 0,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "path": "public/media/04_Inside_fungus.mp4",
+    "path": "source/portal/04_Inside_fungus.mp4",
     "bytes": 14210210,
     "sha256": "468d28d33a57402d83cf412f02e84f5191cd8508d9e5915cc1cee8267e4e64ed",
     "probe": {
@@ -466,7 +466,7 @@
         }
       ],
       "format": {
-        "filename": "public/media/04_Inside_fungus.mp4",
+        "filename": "source/portal/04_Inside_fungus.mp4",
         "nb_streams": 2,
         "nb_programs": 0,
         "nb_stream_groups": 0,
@@ -509,7 +509,7 @@
     ]
   },
   {
-    "path": "public/media/05_Fungus_world.mp4",
+    "path": "source/portal/05_Fungus_world.mp4",
     "bytes": 5931498,
     "sha256": "32c74d65d6d4225343ef5066e9ec4d7de9b1f0d00e754bbfd7f9e3e5b05b6f6d",
     "probe": {
@@ -633,7 +633,7 @@
         }
       ],
       "format": {
-        "filename": "public/media/05_Fungus_world.mp4",
+        "filename": "source/portal/05_Fungus_world.mp4",
         "nb_streams": 2,
         "nb_programs": 0,
         "nb_stream_groups": 0,
@@ -676,7 +676,7 @@
     ]
   },
   {
-    "path": "public/media/06_Leaving_fungus.mp4",
+    "path": "source/portal/06_Leaving_fungus.mp4",
     "bytes": 11193121,
     "sha256": "1bf2c8253ee549f1d06c14010cc639dd929aa67bad0ecbb8275b1f84bcd881c0",
     "probe": {
@@ -800,7 +800,7 @@
         }
       ],
       "format": {
-        "filename": "public/media/06_Leaving_fungus.mp4",
+        "filename": "source/portal/06_Leaving_fungus.mp4",
         "nb_streams": 2,
         "nb_programs": 0,
         "nb_stream_groups": 0,
@@ -843,7 +843,7 @@
     ]
   },
   {
-    "path": "public/media/07_Zoom_out.mp4",
+    "path": "source/portal/07_Zoom_out.mp4",
     "bytes": 13238074,
     "sha256": "cf75c370a943e585441b454586ece04cd50a23171931c6cd1fde21fe2af5e94b",
     "probe": {
@@ -967,7 +967,7 @@
         }
       ],
       "format": {
-        "filename": "public/media/07_Zoom_out.mp4",
+        "filename": "source/portal/07_Zoom_out.mp4",
         "nb_streams": 2,
         "nb_programs": 0,
         "nb_stream_groups": 0,

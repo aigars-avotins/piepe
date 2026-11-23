@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
-import { createHash } from 'node:crypto'
 import { messages } from '../src/i18n'
 import { forestPages, forestPath } from '../src/forestPaths'
 
@@ -10,7 +9,8 @@ test('real sitemap and robots assets describe every crawlable canonical page', a
   expect(robots.status()).toBe(200); expect(robots.headers()['content-type']).toContain('text/plain')
   const xml = await sitemap.text(), text = await robots.text()
   expect(xml).toBe(await readFile('dist/sitemap.xml', 'utf8'))
-  expect(xml).toBe(await readFile('public/sitemap.xml', 'utf8'))
+  // 3.3: the sitemap is generated from src/routes.ts at build time and carries lastmod.
+  expect([...xml.matchAll(/<lastmod>\d{4}-\d\d-\d\d<\/lastmod>/g)]).toHaveLength(22)
   expect(text).toBe(await readFile('dist/robots.txt', 'utf8'))
   const parsed = await page.evaluate(source => {
     const doc = new DOMParser().parseFromString(source, 'application/xml')
@@ -20,7 +20,7 @@ test('real sitemap and robots assets describe every crawlable canonical page', a
     })) }
   }, xml)
   expect(parsed.errors).toBe(0)
-  const pairs = [['/', '/en/'], ['/kas-ir-piepe/', '/en/what-is-a-bracket-fungus/'], ...forestPages.map(page => [forestPath('lv', page), forestPath('en', page)])].map(pair => pair.map(path => 'https://pie.pe' + path))
+  const pairs = [['/', '/en/'], ['/kas-ir-piepe/', '/en/what-is-a-bracket-fungus/'], ...forestPages.map(page => [forestPath('lv', page), forestPath('en', page)]), ['/par-pie-pe/', '/en/about/']].map(pair => pair.map(path => 'https://pie.pe' + path))
   expect(parsed.entries.map(entry => entry.url)).toEqual(pairs.flat())
   for (const entry of parsed.entries) {
     const [lv, en] = pairs.find(pair => pair.includes(entry.url!))!
@@ -30,7 +30,7 @@ test('real sitemap and robots assets describe every crawlable canonical page', a
     expect(await response.text()).toContain(`rel="canonical" href="${entry.url}"`)
   }
   expect(text.trim().split(/\r?\n/)).toEqual(['User-agent: *', 'Allow: /', 'Sitemap: https://pie.pe/sitemap.xml'])
-  expect(xml).not.toMatch(/<(?:lastmod|priority|changefreq)>/)
+  expect(xml).not.toMatch(/<(?:priority|changefreq)>/) // 3.3 adds real lastmod dates; the two ignored hints stay out
   expect((await request.get('/not-a-real-page')).status()).toBe(404)
 })
 
@@ -58,7 +58,8 @@ for (const locale of ['lv', 'en'] as const) {
       expect(note).toContain(t.factsDefinition); expect(note).toContain(t.factsContext)
       for (const observation of t.observations) expect(note).toContain(observation.text)
       for (const fact of t.facts) expect(note).toContain(fact.text)
-      expect(note).toBe(await readFile(`public/field-note-${locale}.txt`, 'utf8'))
+      // The build writes the note only to dist; this reviewed snapshot guards its wording.
+      expect(note).toBe(await readFile(`tests/fixtures/field-note-${locale}.txt`, 'utf8'))
     } finally { await context.close() }
   })
 
@@ -72,9 +73,12 @@ for (const locale of ['lv', 'en'] as const) {
     expect(site).toMatchObject({ '@type': 'WebSite', '@id': 'https://pie.pe/#website', name: 'PIE.PE', url: 'https://pie.pe/', inLanguage: ['lv', 'en'], description: messages.lv.description })
     const types: string[] = []
     const visit = (value: unknown) => { if (value && typeof value === 'object') { for (const [key, item] of Object.entries(value)) { if (key === '@type') types.push(String(item)); else visit(item) } } }
-    visit(initial); expect(types.sort()).toEqual(['WebPage', 'WebSite'])
+    visit(initial)
+    // 3.3: the same WebPage/WebSite identity, now with its publisher, social image and the ten films. Still no people, ratings or FAQ.
+    expect([...new Set(types)].sort()).toEqual(['ImageObject', 'VideoObject', 'WebPage', 'WebSite'])
     const csp = await readFile('dist/_headers', 'utf8')
-    expect(csp).toContain(`'sha256-${createHash('sha256').update(scripts[0][1]).digest('base64')}'`)
+    // 3.3: JSON-LD is a data block and carries no script-src hash; only the boot script is hashed.
+    expect([...csp.matchAll(/'sha256-/g)]).toHaveLength(1)
     await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto(path)
     await page.waitForFunction(() => !document.querySelector('.world')!.classList.contains('prerendered'))
     await expect(page.locator('.encounter-status')).toHaveText(t.waiting)

@@ -1,6 +1,7 @@
 /* The unknown-address page: the same reading shell, with the site's one small light. */
+/* The glow is wider than a phone; clip it so the page never scrolls sideways (which also pushed fixed controls off-screen). */
 .not-found{position:relative;display:grid;gap:clamp(56px,9vw,96px);max-width:calc(60ch + 48px)}
-.not-found-light{position:absolute;z-index:-1;left:50%;top:clamp(20px,6vw,70px);width:min(620px,120vw);aspect-ratio:1;translate:-50% -30%;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(229,173,87,.2),rgba(229,173,87,.06) 38%,transparent 68%);animation:not-found-breathe 9s ease-in-out infinite alternate}
+.not-found-light{position:absolute;z-index:-1;left:50%;top:clamp(20px,6vw,70px);width:min(620px,100vw);aspect-ratio:1;translate:-50% -30%;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(229,173,87,.2),rgba(229,173,87,.06) 38%,transparent 68%);animation:not-found-breathe 9s ease-in-out infinite alternate}
 @keyframes not-found-breathe{from{opacity:.55;scale:.94}to{opacity:1;scale:1.04}}
 .not-found section+section{padding-top:clamp(40px,7vw,64px);border-top:1px solid var(--line)}
 .not-found h1{font-family:var(--serif);font-size:clamp(44px,7vw,76px);font-weight:400;line-height:1.04;letter-spacing:-.035em;color:var(--paper);margin:20px 0 26px;text-wrap:balance}

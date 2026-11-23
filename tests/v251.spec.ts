@@ -50,8 +50,10 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`2.5.1 co
         const image = document.querySelector<HTMLImageElement>('.is-intro .forest-still')
         const video = document.querySelector<HTMLVideoElement>('.forest-film')
         if (image) {
-          const replacement = getComputedStyle(image).content
-          audit.push({ time: performance.now(), source: replacement.startsWith('url(') ? replacement : image.currentSrc || image.src, videoTime: video?.currentTime, ready: video?.readyState })
+          // 3.3: until hydration the <img> has no src and the same plane paints the frame from CSS,
+          // so the visit fetches only the frame it shows. Audit whichever of the two is painting.
+          const replacement = getComputedStyle(image).content, plane = image.parentElement ? getComputedStyle(image.parentElement, '::before').backgroundImage : ''
+          audit.push({ time: performance.now(), source: replacement.startsWith('url(') ? replacement : image.currentSrc || image.src || plane, videoTime: video?.currentTime, ready: video?.readyState })
         }
         requestAnimationFrame(paint)
       }
@@ -63,7 +65,9 @@ for (const [width, height] of [[1512, 982], [390, 664]]) test.describe(`2.5.1 co
     await page.route('**/assets/*.js', async route => { await hydration; if (!page.isClosed()) await route.continue() })
     await page.route('**/media/forest-reveal.mp4*', async route => { await decoding; if (!page.isClosed()) await route.continue() })
     await page.goto(locale === 'lv' ? '/' : '/en/', { waitUntil: 'commit' })
-    await page.locator('.forest-still').evaluate((image: HTMLImageElement) => image.decode())
+    // Wait until the painted opening frame (CSS before hydration) has decoded.
+    await page.locator('.base-camera>.media-plane').evaluate(async plane => { const url = /url\("?([^")]+)"?\)/.exec(getComputedStyle(plane, '::before').backgroundImage)![1], image = new Image(); image.src = url; await image.decode() })
+    expect(await page.locator('.forest-still').getAttribute('src')).toBeNull()
     await expect(page.locator('.world')).toHaveClass(/prerendered/)
     // WebKit's screenshot waits for document.fonts.ready, which waits for the
     // deliberately held module. Its first paint is retained in the browser video
@@ -151,7 +155,7 @@ for (const [width, height] of [[1512, 982], [1440, 900], [390, 844], [390, 664]]
     await page.goto((locale === 'lv' ? '/' : '/en/') + '#forest'); await singleForest(page)
     await page.setViewportSize({ width: height, height: width })
     await singleForest(page)
-    const hotspot = page.locator('.fungus-hit')
+    const hotspot = page.locator('.fungus-annotation')
     await hotspot.focus(); await expect(hotspot).toBeFocused()
     await expect(hotspot).toBeEnabled()
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)

@@ -1,0 +1,111 @@
+/* 3.3 shared chrome: one menu, one footer, one small light — identical on the cinema and the reading pages.
+   This layer is appended last; it never restyles the films, the camera or the chapter geometry. */
+
+/* ---- The site menu: a quiet pill that opens a short list of trails ---- */
+.site-menu{position:fixed;z-index:25;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));font-family:'Manrope',sans-serif;font-size:14px;line-height:1.4;color:var(--paper)}
+.world>.site-menu{bottom:calc(var(--sound-offset) + env(safe-area-inset-bottom))}
+.site-menu>summary{list-style:none;display:flex;align-items:center;gap:11px;min-height:44px;padding:9px 17px 9px 15px;border:1px solid var(--line);border-radius:24px;background:color-mix(in srgb,var(--color-forest,#0b1712) 90%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);cursor:pointer;touch-action:manipulation;user-select:none;-webkit-user-select:none;transition:border-color .35s ease,background-color .35s ease}
+.site-menu>summary::-webkit-details-marker{display:none}
+.site-menu>summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.site-menu>summary:active{background:#203327}
+.site-menu-light{flex:none;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px 2px rgba(229,173,87,.5);transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s ease}
+.site-menu[open]>summary{border-color:var(--gold)}
+.site-menu[open] .site-menu-light{transform:scale(1.4);box-shadow:0 0 20px 6px rgba(229,173,87,.62)}
+.site-menu-panel{position:absolute;right:0;bottom:calc(100% + 10px);width:min(310px,calc(100vw - 40px));max-height:calc(100svh - 140px);overflow:auto;padding:8px 22px 12px;border:1px solid var(--line);border-radius:18px;background:var(--color-forest,#0b1712);box-shadow:0 18px 50px rgba(2,8,5,.55)}
+.site-menu[open]>.site-menu-panel{animation:site-menu-rise .3s cubic-bezier(.22,1,.36,1)}
+@keyframes site-menu-rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.site-menu-panel ol{list-style:none;margin:0;padding:0}
+.site-menu-panel li+li{border-top:1px solid var(--line)}
+.site-menu-panel ol a{display:flex;align-items:baseline;gap:16px;min-height:50px;padding:13px 0 11px;font-family:var(--serif);font-size:24px;line-height:1.12;letter-spacing:-.01em;color:var(--paper);transition:color .3s ease}
+.site-menu-number{flex:none;width:20px;font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.08em;color:var(--muted);transition:color .3s ease,text-shadow .3s ease}
+.site-menu-panel a[aria-current=page]{color:var(--gold)}
+.site-menu-panel a[aria-current=page] .site-menu-number{color:var(--gold);text-shadow:0 0 10px rgba(229,173,87,.7)}
+.site-menu-languages{display:flex;align-items:center;gap:4px;margin:4px 0 0;padding-top:6px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.site-menu-languages>span{margin-right:auto}
+.site-menu-languages a{display:grid;place-items:center;min-width:44px;min-height:44px;font-size:14px;color:var(--muted)}
+.site-menu-languages a[aria-current]{color:var(--gold);text-decoration:underline;text-underline-offset:7px}
+/* Inside the portal the same menu sits in the top bar and opens downward. */
+.site-menu-portal{position:relative;right:auto;bottom:auto;z-index:auto}
+.site-menu-portal>summary{background:#17100acc;border-color:var(--line)}
+.site-menu-portal>.site-menu-panel{bottom:auto;top:calc(100% + 10px);background:#120d08;max-height:calc(var(--portal-height,100dvh) - 110px)}
+.site-menu-portal[open]>.site-menu-panel{animation-name:site-menu-fall}
+@keyframes site-menu-fall{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media(max-width:699px){
+  .site-menu-portal>summary{padding:9px 13px}.site-menu-portal .site-menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  /* Past the hero, both fixed pills shrink to their icons so they never sit on the reading column. */
+  .world:not([data-scene=forest])>.sound-control{padding:9px 12px}.world:not([data-scene=forest])>.sound-control .sound-description{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+}
+
+/* The films' text equivalent is one link away from the portal. */
+.portal-art a{pointer-events:auto;color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* ---- The site footer ---- */
+.site-footer{display:block;position:relative;z-index:2;width:auto;border-top:1px solid var(--line);background:var(--color-forest,#0b1712);padding:clamp(60px,8vw,112px) var(--gutter) calc(96px + env(safe-area-inset-bottom));font-family:'Manrope',sans-serif;font-size:14px;line-height:1.7;color:var(--muted)}
+.site-footer>*{max-width:1440px;margin-left:auto;margin-right:auto}
+.site-footer-thought{margin:0;font-family:var(--serif);font-size:clamp(42px,6.4vw,96px);line-height:1.02;letter-spacing:-.04em;color:var(--paper);text-wrap:balance}
+.site-footer-meaning{margin:18px 0 0;font-size:14px;color:var(--muted)}
+.site-footer-meaning>span{font-family:var(--serif);font-size:23px;font-style:italic;color:var(--gold)}
+.site-footer-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px clamp(24px,5vw,84px);margin-top:clamp(44px,6vw,84px);padding-top:30px;border-top:1px solid var(--line)}
+.site-footer-nav h2{margin:0 0 8px;font-family:'Manrope',sans-serif;font-size:12px;font-weight:500;line-height:1.6;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.site-footer-nav ul{list-style:none;margin:0;padding:0}
+.site-footer-nav li{margin:0;padding:0}
+.site-footer-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;font-family:var(--serif);font-size:25px;line-height:1.15;color:var(--paper);transition:color .3s ease}
+.site-footer-nav a[aria-current=page]{color:var(--gold)}
+.site-footer-art{max-width:36ch;margin:12px 0 0;font-size:13px;line-height:1.7;color:var(--muted)}
+.site-footer-base{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 24px;margin-top:clamp(40px,5vw,68px);padding-top:22px;border-top:1px solid var(--line);font-size:14px}
+.site-footer-base .brand{flex-shrink:0}
+.site-footer .footer-edition{display:inline;color:var(--muted)}
+@media(max-width:699px){.site-footer{padding-left:24px;padding-right:24px}.site-footer-nav{grid-template-columns:1fr 1fr;gap:30px 24px}.site-footer-nav>div:last-child{grid-column:1/-1}.site-footer-nav a{font-size:23px}}
+/* The light answers a link: a small glow arrives beside the words. */
+.site-footer-nav a::after,.site-menu-panel ol a::after{content:'';flex:none;width:6px;height:6px;margin-left:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px 2px rgba(229,173,87,.6);opacity:0;transform:scale(.3);transition:opacity .35s ease,transform .45s cubic-bezier(.22,1,.36,1)}
+.site-menu-panel ol a::after{align-self:center;margin-left:auto}
+.site-footer-nav a:focus-visible::after,.site-menu-panel ol a:focus-visible::after,.site-footer-nav a[aria-current=page]::after{opacity:1;transform:none}
+@media(hover:hover) and (pointer:fine){
+  .site-menu>summary:hover{border-color:var(--gold)}.site-menu>summary:hover .site-menu-light{transform:scale(1.4);box-shadow:0 0 20px 6px rgba(229,173,87,.62)}
+  .site-footer-nav a:hover,.site-menu-panel ol a:hover{color:var(--gold)}.site-menu-panel ol a:hover .site-menu-number{color:var(--gold)}
+  .site-footer-nav a:hover::after,.site-menu-panel ol a:hover::after{opacity:1;transform:none}
+  .line-link{transition:border-color .35s ease}.line-link:hover{border-color:var(--gold)}
+  .line-link .direction-arrow,.knowledge-card-arrow svg,.knowledge-related a svg,.reading-return a svg,.discovery-entry-arrow svg{transition:transform .45s cubic-bezier(.22,1,.36,1)}
+  .knowledge-index a:hover .knowledge-card-arrow svg,.knowledge-related a:hover svg,.reading-return a:hover svg,.discovery-entry:hover .discovery-entry-arrow svg{transform:translate(3px,-3px)}
+  .reading-main a{transition:color .3s ease,text-decoration-color .3s ease}.reading-main a:hover{text-decoration-color:var(--gold)}
+  .knowledge-index a h2{transition:color .3s ease}.language-switch a:hover,.reading-languages a:hover,.site-menu-languages a:hover{color:var(--paper)}
+}
+/* Pressed: every control answers the finger immediately. */
+:is(.text-button,.line-link,.cinema-pause,.language-switch a,.reading-languages a,.site-footer-nav a,.site-menu-panel a,.knowledge-downloads a,.atlas-open,.portal-entry):active{opacity:.72}
+summary:focus-visible,input[type=range]:focus-visible,[tabindex]:not([tabindex="-1"]):focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+
+/* A legacy static rule named the opening frame on a pseudo-element that is never generated (content:none);
+   Chrome still fetched 660 KB for reduced-motion and Save-Data visitors. The return chapter's own still is below. */
+.motion-off .return-chapter::before{background-image:none}
+
+/* ---- The one small light ---- */
+/* Reading pages: it follows a fine pointer (siteMenu.ts); elsewhere it stays out of the way. */
+.attention-light{position:fixed;z-index:1;left:-230px;top:-230px;width:460px;height:460px;border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(circle,rgba(229,173,87,.14),rgba(229,173,87,.05) 42%,transparent 70%);transition:opacity .7s ease;will-change:transform}
+.attention-light[data-active]{opacity:1}
+/* First light: before the opening frame has arrived there is a single warm point where the fungus
+   will be. The frame paints over it, so it never delays or covers content and needs no script. */
+.environment::before{content:'';position:absolute;z-index:0;left:60%;top:47%;width:min(46vmin,360px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(242,215,162,.5),rgba(229,173,87,.2) 22%,rgba(229,173,87,.05) 48%,transparent 70%);animation:first-light 2.6s ease-in-out infinite alternate}
+@keyframes first-light{from{opacity:.45;scale:.9}to{opacity:1;scale:1.06}}
+@media(max-width:699px){.environment::before{left:62%;top:44%}}
+
+/* ---- Reading typography: one rhythm for every static page ---- */
+.reading-page :is(h1,h2,h3),.site-menu-panel a{text-wrap:balance}
+.reading-page :is(p,li,dd,figcaption){text-wrap:pretty}
+.reading-page{font-kerning:normal;font-variant-ligatures:common-ligatures;hanging-punctuation:first}
+.reading-main{padding-bottom:clamp(64px,9vw,120px)}
+.about-films ol{list-style:none;margin:30px 0 26px;padding:0}
+.about-films li,.about-made dl>div{display:grid;grid-template-columns:minmax(0,9.5rem) minmax(0,1fr);gap:4px 28px;margin:0;padding:18px 0;border-top:1px solid var(--line)}
+.about-films li>.reading-label{grid-row:1/3;padding-top:7px;font-size:12px}
+.about-films h3{margin:0;font-family:var(--serif);font-size:27px;font-weight:400;line-height:1.2;color:var(--paper)}
+.about-films li>p{margin:0}
+.about-made dl{margin:0}.about-made dt{padding-top:5px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}.about-made dd{margin:0}
+.about-made dl>div:last-child,.about-films li:last-child{border-bottom:1px solid var(--line)}
+@media(max-width:699px){.about-films li,.about-made dl>div{grid-template-columns:1fr}.about-films li>.reading-label{grid-row:auto;padding-top:0}}
+
+/* ---- One authored cut between documents: the mark and the menu stay, the page dissolves ---- */
+@media(prefers-reduced-motion:no-preference){
+  .site-header>.brand,.reading-header>.brand{view-transition-name:site-brand}
+  body>.site-menu>summary,.world>.site-menu>summary{view-transition-name:site-menu}
+  ::view-transition-group(site-brand),::view-transition-group(site-menu){animation-duration:.42s;animation-timing-function:cubic-bezier(.22,1,.36,1)}
+}
+@media(prefers-reduced-motion:reduce){.environment::before{animation:none}.site-menu[open]>.site-menu-panel{animation:none}.attention-light{display:none}}

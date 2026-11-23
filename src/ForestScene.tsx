@@ -7,17 +7,20 @@ export function EdgeLight({ className = '', transformed = false }: { className?:
   return <svg className={`edge-light ${className}`} viewBox="0 0 1920 1080" fill="none" aria-hidden="true"><g transform={transformed ? 'matrix(1.474886 -.005 .005 1.474886 -534.575 -216.185)' : undefined}><path d={shelfEdges} /></g></svg>
 }
 
-export const ForestScene = forwardRef<HTMLDivElement, { plane: CSSProperties; children: ReactNode; inspect: boolean; still: string; macro: ReactNode; breathing: ReactNode }>(function ForestScene({ plane, children, inspect, still, macro, breathing }, ref) {
+export const ForestScene = forwardRef<HTMLDivElement, { plane: CSSProperties; children: ReactNode; inspect: boolean; still?: string; layers: boolean; macro: ReactNode; breathing: ReactNode }>(function ForestScene({ plane, children, inspect, still, layers, macro, breathing }, ref) {
+  // `still` is absent until the app has booted: CSS paints the one matching frame meanwhile, so the
+  // parser never fetches an opening frame the visit will not show. `layers` holds back the two
+  // later, initially invisible plates (loading="lazy" has no effect on fixed in-viewport images).
   return <div className={`environment ${inspect ? 'is-inspecting' : ''}`} ref={ref} aria-hidden="true">
-    <div className="wide-environment"><img src={mediaUrl('/media/forest-breathing-poster.jpg')} alt="" width="1920" height="1080" loading="lazy" fetchPriority="low" /><div className="dawn-light" />{breathing}</div>
+    <div className="wide-environment"><img src={layers ? mediaUrl('/media/forest-breathing-poster.jpg') : undefined} alt="" width="1920" height="1080" decoding="async" fetchPriority="low" /><div className="dawn-light" />{breathing}</div>
     <div className="base-camera">
       <div className="media-plane" style={plane}>
-        <img className="forest-still" src={mediaUrl(still)} alt="" width="1920" height="1080" fetchPriority="high" />
+        <img className="forest-still" src={still ? mediaUrl(still) : undefined} alt="" width="1920" height="1080" fetchPriority="high" />
         {children}
-        {!still.startsWith('data:') && <EdgeLight transformed={still.endsWith('forest-awakening-final.jpg')} />}
+        {!still?.startsWith('data:') && <EdgeLight transformed={!!still?.endsWith('forest-awakening-final.jpg')} />}
       </div>
     </div>
-    <div className="foreground-carrier"><div className="foreground-camera"><div className="media-plane" style={plane}><img src={mediaUrl('/media/forest-final.jpg')} alt="" width="1920" height="1080" loading="lazy" fetchPriority="low" /></div></div></div>
+    <div className="foreground-carrier"><div className="foreground-camera"><div className="media-plane" style={plane}><img src={layers ? mediaUrl('/media/forest-final.jpg') : undefined} alt="" width="1920" height="1080" decoding="async" fetchPriority="low" /></div></div></div>
 
     <div className="understory-cinema">{macro}</div>
     <div className="forest-shade" /><div className="cool-veil" /><div className="dark-veil" />

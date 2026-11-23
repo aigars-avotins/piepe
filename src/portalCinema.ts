@@ -1,3 +1,4 @@
+import {mediaUrl} from './mediaUrl'
 export type PortalPhase='portal-ready'|'entering'|'deepening'|'arriving'|'living-world'|'returning'|'finished'|'error'
 export type PortalSnapshot={phase:PortalPhase;clip:number;loading:boolean;paused:boolean;static:boolean;cycles:number;slow?:boolean}
 export const portalClips=['02','03','04','05','06','07'] as const
@@ -51,7 +52,6 @@ export class PortalCinema {
    }
   },500)
  }
- snapshot(){return this.state}
  private update(values:Partial<PortalSnapshot>){if(this.disposed)return;this.state={...this.state,...values};this.root.dataset.portalPhase=this.state.phase;this.root.dataset.portalCycles=String(this.state.cycles);this.emit({...this.state})}
  private release(slot:Slot){slot.abort?.abort();slot.probe?.abort();slot.probe=undefined;slot.probeStarted=false;slot.video.cancelVideoFrameCallback?.(slot.frame);slot.video.pause();slot.video.removeAttribute('src');slot.video.load();slot.poster.removeAttribute('src');slot.clip=-1;slot.ready=undefined;slot.presented=false;slot.group.style.opacity='0'}
  private observeTransport(slot:Slot){
@@ -99,7 +99,7 @@ export class PortalCinema {
    abort.signal.addEventListener('abort',()=>{if(!settled){settled=true;clearInterval(timeout);reject(new DOMException('Cancelled','AbortError'))}},{once:true})
    video.addEventListener('loadeddata',()=>{if(video.readyState>=2&&video.videoWidth){decoded=true;done()}},{signal:abort.signal})
    video.addEventListener('error',bad,{signal:abort.signal});poster.addEventListener('error',bad,{signal:abort.signal})
-   poster.src=`/media/portal-${portalClips[index]}-first.webp`;poster.decode().then(()=>{image=true;done()},bad)
+   poster.src=mediaUrl(`/media/portal-${portalClips[index]}-first.webp`);poster.decode().then(()=>{image=true;done()},bad)
    const presented:VideoFrameRequestCallback=()=>{
     if(abort.signal.aborted)return
     if(video.readyState>=2){
@@ -110,7 +110,7 @@ export class PortalCinema {
    }
    // A source assignment can discard frame subscriptions. Register on both sides.
    if(video.requestVideoFrameCallback)target.frame=video.requestVideoFrameCallback(presented)
-   video.src=`/media/portal-${portalClips[index]}-faststart.mp4`;video.load()
+   video.src=mediaUrl(`/media/portal-${portalClips[index]}-faststart.mp4`);video.load()
    if(video.requestVideoFrameCallback)target.frame=video.requestVideoFrameCallback(presented)
    else video.addEventListener('playing',()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{target.presented=true;target.probe?.abort();poster.style.opacity='0';if(this.slots[this.active]===target){this.progressAt=performance.now();this.update({loading:false,slow:false})}})),{signal:abort.signal})
   })

@@ -1,7 +1,7 @@
 import { releaseVersion } from '../src/release'
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
-import { createHash } from 'node:crypto'
+import { expectPreserved } from './preserved'
 import { forestMetadata } from '../src/ForestPage'
 import { fieldNote, collectionCopy } from '../src/forestKnowledge'
 import {wallpaperDesigns,wallpaperAsset} from '../src/wallpapers'
@@ -10,7 +10,7 @@ import { messages, readingPath, localePath } from '../src/i18n'
 import { readings } from '../src/reading'
 import { checkStaticMarkup, checkReadingResources } from './readingChecks'
 
-const origin = 'https://pie.pe', digest = (bytes: Buffer | string) => createHash('sha256').update(bytes).digest('hex')
+const origin = 'https://pie.pe'
 
 for (const locale of ['lv', 'en'] as const) for (const document of forestPages) for (const javaScriptEnabled of [false, true]) {
   const path = forestPath(locale, document)
@@ -29,7 +29,7 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
       await expect(page.locator('h1')).toHaveCount(1); await expect(page.locator('h1')).toHaveText(meta.heading)
       await expect(page.locator('.reading-lead')).toHaveText(meta.lead)
       await expect(page).toHaveTitle(meta.title)
-      for (const [selector, value] of Object.entries({ 'meta[name="description"]': meta.description, 'meta[property="og:title"]': meta.title, 'meta[property="og:description"]': meta.description, 'meta[property="og:url"]': origin + path, 'meta[name="twitter:title"]': meta.title, 'meta[name="twitter:description"]': meta.description, 'meta[property="og:image"]': origin + '/social-preview.jpg' })) {
+      for (const [selector, value] of Object.entries({ 'meta[name="description"]': meta.description, 'meta[property="og:title"]': meta.title, 'meta[property="og:description"]': meta.description, 'meta[property="og:url"]': origin + path, 'meta[name="twitter:title"]': meta.title, 'meta[name="twitter:description"]': meta.description, 'meta[property="og:image"]': `${origin}/og/${document.kind === 'note' ? 'note-' + document.number : document.kind === 'index' ? 'notes' : 'wallpapers'}-${locale}.jpg` })) {
         await expect(page.locator(selector)).toHaveCount(1); await expect(page.locator(selector)).toHaveAttribute('content', value)
       }
       await expect(page.locator('title')).toHaveCount(1)
@@ -41,8 +41,9 @@ for (const locale of ['lv', 'en'] as const) for (const document of forestPages) 
       const data = JSON.parse((await scripts.textContent())!)
       expect(data).toMatchObject({ '@type': document.kind === 'index' ? 'CollectionPage' : 'WebPage', '@id': origin + path + '#webpage', url: origin + path, inLanguage: locale, name: meta.title, description: meta.description, isPartOf: { '@type': 'WebSite', '@id': origin + '/#website' } })
       const types: string[] = [], ids: string[] = []
-      const visit = (v: unknown) => { if (v && typeof v === 'object') for (const [key, item] of Object.entries(v)) { if (key === '@type') types.push(String(item)); else if (key === '@id') ids.push(String(item)); else { expect(key).not.toMatch(/^(?:datePublished|dateModified|author|review|aggregateRating)$/); visit(item) } } }
-      visit(data); expect(types).not.toEqual(expect.arrayContaining(['FAQPage'])); expect(types).not.toEqual(expect.arrayContaining(['Person'])); expect(types).not.toEqual(expect.arrayContaining(['Organization']))
+      const visit = (v: unknown) => { if (v && typeof v === 'object') for (const [key, item] of Object.entries(v)) { if (key === '@type') types.push(String(item)); else if (key === '@id') { if ('@type' in (v as object)) ids.push(String(item)) } // a bare {'@id'} is a reference, not a second node
+ else { expect(key).not.toMatch(/^(?:review|aggregateRating)$/); visit(item) } } }
+      visit(data); expect(types).not.toEqual(expect.arrayContaining(['FAQPage'])); expect(types).not.toEqual(expect.arrayContaining(['Person'])) // 3.3: dates and the PIE.PE publisher are real; no person is named
       expect(ids.length).toBe(new Set(ids).size)
       await checkStaticMarkup(page)
       await expect(page.locator('main h1, main .reading-lead').locator('xpath=ancestor::*[@data-nosnippet]')).toHaveCount(0)
@@ -93,14 +94,14 @@ test('2.5.7 route graph, CSP hashes, honest species facts and all internal resou
   const policy = /script-src ([^;]+)/.exec(await readFile('dist/_headers', 'utf8'))![1]
   expect(policy).not.toMatch(/unsafe-inline|unsafe-eval/)
   // Twenty JSON-LD documents plus the existing bootstrap; retired colour-mode code adds no hash.
-  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(21)
+  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(1) // 3.3: the executable boot script only
   const paths = ['/', '/en/', readingPath('lv'), readingPath('en'), ...forestPages.flatMap(p => [forestPath('lv', p), forestPath('en', p)])]
   expect(new Set(paths).size).toBe(20)
   const links = new Set<string>(), titles = new Set<string>()
   for (const path of paths) {
     const response = await request.get(path), html = await response.text(); expect(response.status()).toBe(200)
     const data = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
-    expect(data).toHaveLength(1); expect(policy).toContain(`'sha256-${createHash('sha256').update(data[0][1]).digest('base64')}'`)
+    expect(data).toHaveLength(1); expect(() => JSON.parse(data[0][1])).not.toThrow()
     const title = /<title>([^<]+)<\/title>/.exec(html)![1]; expect(titles.has(title)).toBe(false); titles.add(title)
     const found = await page.evaluate(html => { const d = new DOMParser().parseFromString(html, 'text/html'); return [...d.querySelectorAll('a[href^="/"], img[src^="/"]')].map(e => e.getAttribute('href') || e.getAttribute('src')!) }, html)
     for (const link of found) links.add(link.split('#')[0])
@@ -124,15 +125,14 @@ test('2.5.7 route graph, CSP hashes, honest species facts and all internal resou
 test('2.5.7 original factual prose, notes, core cinema and every media/download asset remain preserved', async () => {
   const baseline = JSON.parse(await readFile('docs/qa/v257/baseline-inventory.json', 'utf8'))
   expect(readings).toEqual(JSON.parse(await readFile('docs/qa/v258/reading-copy-baseline.json','utf8')))
-  for (const [path, hash] of Object.entries({ ...baseline.preservedAssets, ...baseline.preservedNotes })) expect(digest(await readFile('dist/' + path)), path).toBe(hash)
+  await expectPreserved({ ...baseline.preservedAssets, ...baseline.preservedNotes }, 'dist/')
   // 2.5.8 explicitly enhances these four sources; full prose and real audio-graph
   // regressions replace obsolete byte-equality, all other immutable guards remain.
   const approved=new Set(['src/reading.ts','src/ReadingPage.tsx','src/reading.css','src/useForestAudio.ts'])
-  const reviewed={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v330/reviewed-sources.json','utf8'))}
-  // 3.3 fixes the hidden-tab AbortError latch and <source> error handling, removes unused copy keys
-  // and adds view transitions; those four reviewed files are pinned in docs/qa/v330.
-  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/EnvironmentalFilm.tsx','src/ForestScene.tsx','src/IntroFilm.tsx','src/i18n.ts','src/style.css','src/useForestAudio.ts'])
-  for (const [path, hash] of Object.entries(baseline.preservedSource)) if(!approved.has(path))expect(digest(await readFile(path)),path).toBe(reviewed[path]??hash)
+  const reviewed={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))}
+  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/ForestScene.tsx','src/style.css','src/useForestAudio.ts'])
+  // 3.3's intentional edits are named once, in the docs/qa/v330 ledger that expectPreserved applies.
+  await expectPreserved(Object.fromEntries(Object.entries(baseline.preservedSource as Record<string,string>).filter(([path])=>!approved.has(path)).map(([path,hash])=>[path,reviewed[path]??hash])))
 })
 
 for (const locale of ['lv', 'en'] as const) test(`2.5.7 ${locale}: selective supported snippet labels preserve primary content, links and mobile control text`, async ({ page, request }) => {

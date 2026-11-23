@@ -12,9 +12,9 @@ async function head(page: Page, locale: Locale) {
     'meta[property="og:title"]': t.title, 'meta[property="og:description"]': t.description,
     'meta[property="og:url"]': url, 'meta[property="og:locale"]': locale === 'lv' ? 'lv_LV' : 'en_GB',
     'meta[property="og:locale:alternate"]': locale === 'lv' ? 'en_GB' : 'lv_LV',
-    'meta[property="og:image"]': 'https://pie.pe/social-preview.jpg', 'meta[property="og:image:alt"]': t.wallpaperAltDesktop,
+    'meta[property="og:image"]': `https://pie.pe/og/home-${locale}.jpg`, 'meta[property="og:image:alt"]': t.wallpaperAltDesktop,
     'meta[name="twitter:title"]': t.title, 'meta[name="twitter:description"]': t.description,
-    'meta[name="twitter:image"]': 'https://pie.pe/social-preview.jpg', 'meta[name="twitter:image:alt"]': t.wallpaperAltDesktop,
+    'meta[name="twitter:image"]': `https://pie.pe/og/home-${locale}.jpg`, 'meta[name="twitter:image:alt"]': t.wallpaperAltDesktop,
   })) {
     await expect(page.locator(selector)).toHaveCount(1)
     await expect(page.locator(selector)).toHaveAttribute('content', content)

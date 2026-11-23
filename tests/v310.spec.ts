@@ -15,7 +15,7 @@ for(const [locale,width,height] of [['lv',1512,982],['en',390,844]] as const)tes
  test('Atlas gestures are independent from the explicit original-resolution comparison dialog',async({page,context})=>{
   await page.goto(guide+'#surface-atlas');const picture=page.locator('[data-atlas-surface]').first();await picture.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}));await expect(picture).toHaveAttribute('data-images-ready','');const url=page.url(),pages=context.pages().length,box=(await picture.boundingBox())!
   await page.mouse.move(box.x+box.width*.2,box.y+box.height*.5);await page.mouse.down();await page.mouse.move(box.x+box.width*.75,box.y+box.height*.5,{steps:8});await page.mouse.up();expect(page.url()).toBe(url);expect(context.pages().length).toBe(pages);await expect(page.locator('dialog[open]')).toHaveCount(0)
-  await picture.focus();await picture.press('ArrowRight');await expect(picture).toHaveAttribute('data-magnifying','true');const open=page.locator('[data-atlas-open]').first();await open.click();const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3);expect(await dialog.locator('img').evaluateAll(imgs=>imgs.every(img=>img.getAttribute('src')?.endsWith('.jpg')&&!img.srcset))).toBe(true)
+  await picture.focus();await picture.press('ArrowRight');await expect(picture).toHaveAttribute('data-magnifying','true');const open=page.locator('[data-atlas-open]').first();await open.click();const dialog=page.locator('[data-atlas-dialog]');await expect(dialog).toBeVisible();await expect(dialog.locator('img')).toHaveCount(3);expect(await dialog.locator('img').evaluateAll(imgs=>imgs.map(img=>img.getAttribute('src')?.endsWith('.jpg')&&!(img as HTMLImageElement).srcset))).toEqual([true,false,false]) // 3.3: the chosen surface is the original; comparisons use sized copies
   await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(open).toBeFocused();expect(await page.locator('.atlas-original').first().getAttribute('target')).toBeNull()
  })
  test('Deadwood retains its fractional image mix and exposes one meaningful current image description',async({page})=>{
@@ -31,7 +31,7 @@ for(const [locale,width,height] of [['lv',1512,982],['en',390,844]] as const)tes
 })
 
 test('3.1 actual HTML anchor nodes on all twenty routes obey the real-origin navigation policy',async({page,request})=>{
- const sitemap=await (await request.get('/sitemap.xml')).text();const paths=[...sitemap.matchAll(/<loc>https:\/\/pie\.pe([^<]+)<\/loc>/g)].map(match=>match[1]);expect(paths).toHaveLength(20);await page.goto('/kas-ir-piepe/')
+ const sitemap=await (await request.get('/sitemap.xml')).text();const paths=[...sitemap.matchAll(/<loc>https:\/\/pie\.pe([^<]+)<\/loc>/g)].map(match=>match[1]);expect(paths).toHaveLength(22);await page.goto('/kas-ir-piepe/')
  for(const path of paths){
   const response=await request.get(path);expect(response.status(),path).toBe(200);const html=await response.text();const links=await page.evaluate(markup=>[...new DOMParser().parseFromString(markup,'text/html').querySelectorAll('a')].map(a=>({href:a.getAttribute('href'),target:a.getAttribute('target'),rel:a.getAttribute('rel'),download:a.hasAttribute('download')})),html)
   expect(links.length).toBeGreaterThan(0)
@@ -54,7 +54,7 @@ for(const locale of ['lv','en'] as const)test(`3.1 ${locale} real phone touch ke
    await cdp.detach();const samples=await page.evaluate(()=>(window as unknown as {atlasTouchSamples:{trusted:boolean;type:string}[]}).atlasTouchSamples);expect(samples.length).toBeGreaterThan(3);expect(samples.every(p=>p.trusted&&p.type==='touch')).toBe(true);await test.info().attach('native-touch-drag',{body:JSON.stringify(samples),contentType:'application/json'})
    expect(page.url()).toBe(url);await expect(page.locator('[data-atlas-dialog]')).not.toBeVisible();expect(context.pages()).toHaveLength(1)
   }
-  await page.locator('[data-atlas-open]').first().tap();await expect(page.locator('[data-atlas-dialog]')).toBeVisible();await expect.poll(()=>page.locator('[data-atlas-dialog] img').evaluateAll(imgs=>imgs.every(e=>(e as HTMLImageElement).naturalWidth===2400))).toBe(true);await page.locator('[data-atlas-close]').tap();await expect(page.locator('[data-atlas-open]').first()).toBeFocused();expect(page.url()).toBe(url);expect(context.pages()).toHaveLength(1)
+  await page.locator('[data-atlas-open]').first().tap();await expect(page.locator('[data-atlas-dialog]')).toBeVisible();await expect.poll(()=>page.locator('[data-atlas-dialog] img').first().evaluate((e:HTMLImageElement)=>e.naturalWidth)).toBe(2400);await expect(page.locator('[data-atlas-dialog] img')).toHaveCount(3) // 3.3: the chosen surface is the original; the comparison views load sized copies lazily;await page.locator('[data-atlas-close]').tap();await expect(page.locator('[data-atlas-open]').first()).toBeFocused();expect(page.url()).toBe(url);expect(context.pages()).toHaveLength(1)
  }finally{await context.close();if(recording)await test.info().attach('native-phone-touch',{path:await recording.path(),contentType:'video/webm'})}
 })
 

@@ -13,6 +13,7 @@ for(const file of expected){
  const bytes=await readFile(file.path)
  if((file.bytes!==undefined&&bytes.length!==file.bytes)||createHash('sha256').update(bytes).digest('hex')!==file.sha256)throw Error(`Portal asset differs from reviewed inventory: ${file.path}`)
 }
-const still=await readFile('public/media/portal-living-still.webp')
-if(!still.equals(await readFile('public/media/portal-05-first.webp')))throw Error('Quiet world must retain the reviewed native first frame')
-console.log(`Verified ${expected.length+1} original/source-quality portal assets`)
+// The six masters live in source/portal: audited, never published. Only the stream-copied
+// faststart derivatives and their native first frames are served. The quiet world uses sized
+// copies of portal-05-first.webp (scripts/image-derivatives.mjs) with that frame as its fallback.
+console.log(`Verified ${expected.length} original/source-quality portal assets`)

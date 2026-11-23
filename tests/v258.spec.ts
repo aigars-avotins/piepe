@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test'
 import type { Page } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
+import { expectPreserved, expectHeaderPrefix } from './preserved'
 import { messages, readingPath, localePath } from '../src/i18n'
 import { forestPages, forestPath, notePath, fieldNotesPath } from '../src/forestPaths'
 import { forestSchema } from '../src/ForestPage'
@@ -189,13 +190,13 @@ test('2.5.8 unavailable Web Audio retains real gesture-gated native recording pl
 
 test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs and immutable cinema assets',async({request,page})=>{
   const policy=/Content-Security-Policy: (.+)/.exec(await readFile('dist/_headers','utf8'))![1],paths=['/','/en/',readingPath('lv'),readingPath('en'),...forestPages.flatMap(p=>[forestPath('lv',p),forestPath('en',p)])]
-  // The retired colour bootstrap is gone: one home bootstrap + 20 document JSON-LD hashes.
-  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(21);expect(policy).not.toMatch(/script-src[^;]*(?:unsafe-inline|unsafe-eval|https:|\*)/)
+  // 3.3: one hash, for the executable home bootstrap. JSON-LD data blocks are not gated by script-src.
+  expect([...policy.matchAll(/sha256-/g)]).toHaveLength(1);expect(policy).not.toMatch(/script-src[^;]*(?:unsafe-inline|unsafe-eval|https:|\*)/)
   for(const path of paths){
     const response=await request.get(path),html=await response.text();expect(response.status()).toBe(200)
     const ids=await page.evaluate(markup=>[...new DOMParser().parseFromString(markup,'text/html').querySelectorAll('[id]')].map(element=>element.id),html)
     expect(ids.length,`${path}: DOM and SVG IDs must share a collision-free namespace`).toBe(new Set(ids).size)
-    for(const script of html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/g))expect(policy).toContain(`'sha256-${createHash('sha256').update(script[1]).digest('base64')}'`)
+    for(const script of html.matchAll(/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g))expect(policy).toContain(`'sha256-${createHash('sha256').update(script[1]).digest('base64')}'`)
   }
   for(const locale of ['lv','en'] as const)for(const number of ['001','002','003','004','005','006'] as const){
     const data=forestSchema(locale,{kind:'note',number}) as ReturnType<typeof forestSchema>&{breadcrumb:{'@type':string;itemListElement:{position:number;name:string;item:string}[]}}
@@ -203,19 +204,15 @@ test('2.5.8 every route has exact authorized inline hashes, genuine breadcrumbs 
     await expect(page.locator('.knowledge-trail')).toContainText(data.breadcrumb.itemListElement[0].name);await expect(page.locator('.knowledge-trail')).toContainText(data.breadcrumb.itemListElement[1].name)
   }
   const fixture=JSON.parse(await readFile('docs/qa/v258/baseline-inventory.json','utf8'))
-  const v330:Record<string,string>=JSON.parse(await readFile('docs/qa/v330/reviewed-sources.json','utf8'))
-  // 3.3 fixes the hidden-tab AbortError latch and <source> error handling, removes unused copy keys
-  // and adds view transitions; those four reviewed files are pinned in docs/qa/v330.
-  const reviewed:Record<string,string>={...JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8')),...v330}
-  for(const[path,hash]of Object.entries({...fixture.publicAssets,...reviewed}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
+  const reviewed:Record<string,string>=JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8'))
+  await expectPreserved({...fixture.publicAssets,...reviewed})
   const v320:Record<string,string>=JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))
   expect(Object.keys(v320).sort()).toEqual(['src/ForestScene.tsx','src/useForestAudio.ts'])
   // Issue #36 only lowers offscreen poster priority and excludes the new hero portal CTA from ambient sound activation.
-  // Original media, player, camera transforms and security pins remain protected.
-  // The independent original header prefix and all camera/Worker/media pins remain enforced.
-  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/i18n.ts','src/style.css'])
-  expect(createHash('sha256').update((await readFile('public/_headers','utf8')).split('/wallpapers/piepe-forest-desktop-5120x2880.jpg')[0]).digest('hex')).toBe(fixture.sources['public/_headers'])
-  for(const path of ['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'])expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(v320[path]??reviewed[path]??fixture.sources[path])
+  // 3.3's intentional edits are named once, in the docs/qa/v330 ledger that expectPreserved applies.
+  expect(Object.keys(reviewed).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/style.css'])
+  await expectHeaderPrefix(fixture.sources['public/_headers'])
+  await expectPreserved(Object.fromEntries(['src/useForestMotion.ts','src/MotionClip.tsx','src/EnvironmentalFilm.tsx','src/IntroFilm.tsx','src/ForestScene.tsx','src/Discovery.tsx','src/usePhotoHandoff.ts','src/style.css','src/worker.ts','wrangler.jsonc','public/_headers'].map(path=>[path,v320[path]??reviewed[path]??fixture.sources[path]])))
   const guide=await(await request.get(readingPath('lv'))).text(),home=await(await request.get('/')).text(),entry=/src="(\/assets\/[^"]+\.js)"/.exec(home)![1],bundle=await readFile('dist'+entry,'utf8');expect(guide).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).toContain(experienceCopy.lv.xray.stories[0].text);expect(bundle).not.toContain(readings.lv.sections[1].paragraphs[0]) // Shared homepage X-Ray is intentional in 2.5.8.1; long-form guide still stays static.
 })
 

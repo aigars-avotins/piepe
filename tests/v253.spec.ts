@@ -16,12 +16,12 @@ for (const locale of ['lv', 'en'] as const) {
     page.once('close', () => hydrate())
     await page.route('**/assets/*.js', async route => { await gate; if (!page.isClosed()) await route.continue() })
     await page.goto((locale === 'lv' ? '/' : '/en/') + (mode === 'anchor' ? '#understory' : ''), { waitUntil: 'commit' })
-    const pose = mode === 'first' || mode === 'anchor' ? 'poster' : 'final'
+    // 3.3: an anchor visit never shows the film, so it paints (and fetches) the settled forest directly.
+    const pose = mode === 'first' ? 'poster' : 'final'
     await expect(page.locator('.environment')).toHaveCSS('position', 'fixed')
-    const source = await page.locator('.forest-still').evaluate(e => {
-      const image = e as HTMLImageElement, css = getComputedStyle(e).content
-      return css.startsWith('url(') ? css : image.currentSrc || image.src
-    })
+    // 3.3: before hydration the frame is painted by CSS on the same plane, so only the matching file is fetched.
+    const source = await page.locator('.base-camera>.media-plane').evaluate(e => getComputedStyle(e, '::before').backgroundImage)
+    expect(await page.locator('.forest-still').getAttribute('src')).toBeNull()
     expect(source).toContain(`forest-${pose}.jpg`)
     hydrate()
     await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
@@ -46,12 +46,13 @@ for (const locale of ['lv', 'en'] as const) {
     await expect(page.locator('.world')).not.toHaveClass(/prerendered/)
     await page.keyboard.press(tab)
     await expect(page.locator('.skip-content')).toBeFocused()
-    // Reach the irregular hit target through normal keyboard order.
+    // 3.3: one tab stop. The pointer-only photographic hit area is skipped; the labelled invitation takes focus.
     let steps = 0
-    while (!await page.locator('.fungus-hit').evaluate(e => e === document.activeElement) && steps++ < 18) await page.keyboard.press(tab)
-    await expect(page.locator('.fungus-hit')).toBeFocused()
+    while (!await page.locator('.fungus-annotation').evaluate(e => e === document.activeElement) && steps++ < 18) await page.keyboard.press(tab)
+    await expect(page.locator('.fungus-annotation')).toBeFocused()
+    await expect(page.locator('.fungus-hit')).toHaveAttribute('tabindex', '-1'); await expect(page.locator('.fungus-hit')).toHaveAttribute('aria-hidden', 'true')
     const marker = page.locator('.fungus-annotation .annotation-cross')
-    expect(await page.locator('.fungus-hit').evaluate(e => e.matches(':focus-visible'))).toBe(true)
+    expect(await page.locator('.fungus-annotation').evaluate(e => e.matches(':focus-visible'))).toBe(true)
     await expect(marker).toHaveCSS('outline-style', 'solid')
     expect(await marker.evaluate(e => parseFloat(getComputedStyle(e).outlineWidth))).toBeGreaterThanOrEqual(2)
     await info.attach('keyboard-fungus-focus', { body: await page.screenshot({ scale: 'css' }), contentType: 'image/png' })
@@ -73,7 +74,7 @@ for (const locale of ['lv', 'en'] as const) {
     await page.getByRole('link', { name: t.keepNote, exact: false }).press('Enter')
     expect((await download).suggestedFilename()).toBe(`piepe-field-note-001-${locale}.txt`)
     await page.keyboard.press('Escape'); await expect(dialog).not.toBeVisible()
-    await expect(page.locator('.fungus-hit')).toBeFocused()
+    await expect(page.locator('.fungus-annotation')).toBeFocused()
     await page.emulateMedia({ reducedMotion: 'no-preference' })
     await expect(page.locator('.world')).not.toHaveClass(/static-preference/)
     for (const selector of ['.site-header a[lang=en]', '.sound-control', '#understory .cinema-pause', '#return .cinema-pause', '#return .line-link', '.wallpaper-choices a[download]']) {

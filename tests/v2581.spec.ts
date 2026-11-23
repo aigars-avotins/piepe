@@ -1,6 +1,7 @@
 import {portalCopy} from '../src/portalCopy'
 import {test,expect} from '@playwright/test'
 import {createHash} from 'node:crypto'
+import {expectPreserved,expectHeaderPrefix} from './preserved'
 import {readFile} from 'node:fs/promises'
 import {messages,readingPath,localePath} from '../src/i18n'
 import {notePath} from '../src/forestPaths'
@@ -85,13 +86,13 @@ test('2.5.8.1 original source/media checksums, real preview assets and lightweig
   // 3.1.1 intentionally changes caption styles, download headers and snippet-only
   // markup. Pin those reviewed files and storage retirement separately; all camera/audio/media/Worker
   // and routing fixtures remain byte-for-byte protected by the original ledger.
-  const headers=await readFile('public/_headers','utf8')
-  expect(createHash('sha256').update(headers.split('/wallpapers/piepe-forest-desktop-5120x2880.jpg')[0]).digest('hex')).toBe(fixture.protectedSources['public/_headers'])
+  await expectHeaderPrefix(fixture.protectedSources['public/_headers'])
   const visualSources=JSON.parse(await readFile('docs/qa/v311/reviewed-sources.json','utf8'))
   expect(Object.keys(visualSources).sort()).toEqual(['public/_headers','public/boot.js','src/Discovery.tsx','src/style.css'])
   const v320=JSON.parse(await readFile('docs/qa/v320/reviewed-sources.json','utf8'))
   expect(Object.keys(v320).sort()).toEqual(['src/ForestScene.tsx','src/useForestAudio.ts'])
-  for(const [path,hash]of Object.entries({...fixture.originalAssets,...fixture.protectedSources,...visualSources,...v320,...JSON.parse(await readFile('docs/qa/v330/reviewed-sources.json','utf8'))}))expect(createHash('sha256').update(await readFile(path)).digest('hex'),path).toBe(hash)
+  // 3.3's intentional edits are named once, in the docs/qa/v330 ledger that expectPreserved applies.
+  await expectPreserved({...fixture.originalAssets,...fixture.protectedSources,...visualSources,...v320})
 
   const home=await(await request.get('/')).text(),guide=await(await request.get(readingPath('lv'))).text(),entry=/src="(\/assets\/reading-tools-[^"]+\.js)"/.exec(guide)![1],js=await readFile('dist'+entry,'utf8')
   expect(js).not.toMatch(/react|gsap|ScrollTrigger|forest-reveal|AudioContext|import\s/);expect(Buffer.byteLength(js)).toBeLessThan(18000)

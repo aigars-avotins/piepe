@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
-import { createHash } from 'node:crypto'
 import { localePath, readingPath, messages } from '../src/i18n'
 import { readings } from '../src/reading'
 import { checkReading, checkReadingResources } from './readingChecks'
@@ -66,7 +65,8 @@ test('2.5.6 static documents have matching CSP hashes and do not ship article pr
     expect(response.status()).toBe(200)
     const scripts = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
     expect(scripts).toHaveLength(1)
-    expect(scriptPolicy).toContain(`'sha256-${createHash('sha256').update(scripts[0][1]).digest('base64')}'`)
+    // 3.3: JSON-LD is a data block and carries no script-src hash; it must still be valid JSON.
+    expect(() => JSON.parse(scripts[0][1])).not.toThrow(); expect([...scriptPolicy.matchAll(/'sha256-/g)]).toHaveLength(1)
   }
   const home = await (await request.get('/')).text(), entry = /src="(\/assets\/[^"]+\.js)"/.exec(home)![1]
   const bundle = await readFile('dist' + entry, 'utf8')

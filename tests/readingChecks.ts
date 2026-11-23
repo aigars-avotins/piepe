@@ -50,7 +50,7 @@ export async function checkReading(page: Page, locale: Locale, options: { cloudf
   await expect(script).toHaveCount(1)
   const data = JSON.parse((await script.textContent())!)
   expect(data).toMatchObject({ '@context': 'https://schema.org', '@type': 'WebPage', '@id': url + '#webpage', url, name: t.title, description: t.description, inLanguage: locale, about: { '@type': 'Thing', name: t.topic }, isPartOf: { '@type': 'WebSite', '@id': 'https://pie.pe/#website', url: 'https://pie.pe/', name: 'PIE.PE' } })
-  expect(JSON.stringify(data)).not.toMatch(/FAQPage|Organization|Person|AggregateRating|VideoObject|datePublished|reviewedBy/)
+  expect(JSON.stringify(data)).not.toMatch(/FAQPage|"Person"|AggregateRating|VideoObject|reviewedBy/) // 3.3 adds real dates and the PIE.PE publisher; still no people, ratings or FAQ
   await checkStaticMarkup(page, options)
   await expect(page.locator('.reading-return>a')).toHaveAttribute('href', localePath(locale))
   for (const lang of ['lv', 'en'] as const) await expect(page.locator(`.reading-languages a[lang="${lang}"]`)).toHaveAttribute('href', readingPath(lang))

@@ -10,13 +10,22 @@ import Arrow from './Arrow'
 import SoundControl from './SoundControl'
 import LivingThread from './LivingThread'
 import {threadCopy} from './threadCopy'
+import {mediaUrl} from './mediaUrl'
+import {SiteMenu} from './SiteChrome'
+import SiteLink from './SiteLink'
+import {aboutPath} from './routes'
+import {siteCopy} from './siteCopy'
+import {localePath} from './i18n'
 import './fungusPortal.css'
+
+// Both stills cover the dialog like the films: the wider of the viewport and its 16:9 height.
+const portalSizes='max(100vw, 178vh)'
 
 export type PortalOrigin={element:HTMLElement;x:number;y:number}
 type Props={opener:RefObject<PortalOrigin|null>;locale:Locale;onLocaleChange:(value:Locale)=>void;onClose:(value:Locale)=>void;audio:ForestAudio;reduced:boolean;saving:boolean}
 const initial:PortalSnapshot={phase:'portal-ready',clip:-1,loading:false,paused:false,static:false,cycles:0}
 export default function FungusPortal({opener:origin,locale,onLocaleChange,onClose,audio,reduced,saving}:Props){
- const [state,setState]=useState(initial),[opted,setOpted]=useState(false),[imageReady,setImageReady]=useState(false),[imagePresented,setImagePresented]=useState(false),[imageError,setImageError]=useState(false),[imageAttempt,setImageAttempt]=useState(0),[cleanChoice,setCleanChoice]=useState(false),[threadChosen,setThreadChosen]=useState(false)
+ const [state,setState]=useState(initial),[opted,setOpted]=useState(false),[imageReady,setImageReady]=useState(false),[imagePresented,setImagePresented]=useState(false),[imageError,setImageError]=useState(false),[imageAttempt,setImageAttempt]=useState(0),[plainStill,setPlainStill]=useState(false),[cleanChoice,setCleanChoice]=useState(false),[threadChosen,setThreadChosen]=useState(false)
  const dialog=useRef<HTMLDialogElement>(null),view=useRef<HTMLDivElement>(null),cinema=useRef<PortalCinema|null>(null),exitButton=useRef<HTMLButtonElement>(null)
  const followButton=useRef<HTMLButtonElement>(null)
  const chosenLocale=useRef(locale)
@@ -78,13 +87,14 @@ export default function FungusPortal({opener:origin,locale,onLocaleChange,onClos
    if(e.key==='Home'){e.preventDefault();resetGaze()}
    else if(e.key.startsWith('Arrow')){e.preventDefault();view.current?.style.setProperty(axis,e.key==='ArrowLeft'||e.key==='ArrowUp'?'-2px':'2px')}
   }}>
-   <div className="portal-original-layer" data-portal-still-layer><img key={imageAttempt} onLoad={event=>{void event.currentTarget.decode().then(()=>{setImageReady(true);setImageError(false)}).catch(()=>setImageError(true))}} onError={()=>setImageError(true)} className="portal-original" data-portal-original src="/media/01_Start.png" width="1672" height="941" alt="" decoding="async" fetchPriority="high"/></div>
+   {/* Sized AVIF/WebP serving copies; a failed copy retries once with the audited PNG original. */}
+   <div className="portal-original-layer" data-portal-still-layer><picture key={`${imageAttempt}-${plainStill}`}>{!plainStill&&(['avif','webp'] as const).map(format=><source key={format} type={`image/${format}`} srcSet={`/images/portal/threshold-960.${format} 960w, /images/portal/threshold-1672.${format} 1672w`} sizes={portalSizes}/>)}<img onLoad={event=>{void event.currentTarget.decode().then(()=>{setImageReady(true);setImageError(false)}).catch(()=>setImageError(true))}} onError={()=>{if(plainStill)setImageError(true);else setPlainStill(true)}} className="portal-original" data-portal-original src={mediaUrl('/media/01_Start.png')} width="1672" height="941" alt="" decoding="async" fetchPriority="high"/></picture></div>
    {[0,1].map(slot=><div key={slot} className="portal-slot" data-portal-slot={slot} aria-hidden="true"><video muted playsInline preload="none" tabIndex={-1}/><img className="portal-frame" alt=""/></div>)}
-   {state.static&&<img className="portal-static-world" src="/media/portal-living-still.webp" alt="" width="1920" height="1080"/>}
+   {state.static&&<picture>{(['avif','webp'] as const).map(format=><source key={format} type={`image/${format}`} srcSet={`/images/portal/living-960.${format} 960w, /images/portal/living-1920.${format} 1920w`} sizes={portalSizes}/>)}<img className="portal-static-world" src={mediaUrl('/media/portal-05-first.webp')} alt="" width="1920" height="1080" decoding="async"/></picture>}
   </div>
-  <header className="portal-topbar"><span className="portal-brand">pie.pe <span> / {String(scene+1).padStart(2,'0')}</span></span><nav className="portal-languages" aria-label={locale==='lv'?'Valoda':'Language'}>{(['lv','en'] as const).map(value=><button key={value} type="button" lang={value} aria-pressed={locale===value} onClick={()=>{chosenLocale.current=value;onLocaleChange(value)}}>{value.toUpperCase()}</button>)}</nav>{living&&!state.static&&<button type="button" className="portal-motion" onClick={()=>state.paused?void cinema.current?.resume():cinema.current?.pause()}>{state.paused?t.resume:t.pause}</button>}<button ref={exitButton} type="button" className="portal-exit" onClick={()=>exitAction.current()}>{t.exit}<span aria-hidden="true"> ×</span></button></header>
+  <header className="portal-topbar"><span className="portal-brand">pie.pe <span> / {String(scene+1).padStart(2,'0')}</span></span><nav className="portal-languages" aria-label={locale==='lv'?'Valoda':'Language'}>{(['lv','en'] as const).map(value=><button key={value} type="button" lang={value} aria-pressed={locale===value} onClick={()=>{chosenLocale.current=value;onLocaleChange(value)}}>{value.toUpperCase()}</button>)}</nav><SiteMenu className="site-menu-portal" locale={locale} current="none" alternate={{lv:localePath('lv'),en:localePath('en')}} onLocale={(value,event)=>{event.preventDefault();chosenLocale.current=value;onLocaleChange(value)}}/>{living&&!state.static&&<button type="button" className="portal-motion" onClick={()=>state.paused?void cinema.current?.resume():cinema.current?.pause()}>{state.paused?t.resume:t.pause}</button>}<button ref={exitButton} type="button" className="portal-exit" onClick={()=>exitAction.current()}>{t.exit}<span aria-hidden="true"> ×</span></button></header>
   <h2 id="portal-title" className={ready&&imagePresented?'portal-title':'sr-only'}>{t.title}</h2>
-  {ready&&(imagePresented||imageError)&&<div className="portal-invitation"><p>{imageError?t.error:imageReady?t.intro:t.loading}</p>{imageError&&<button className="portal-secondary" onClick={()=>{setImageError(false);setImageAttempt(n=>n+1)}}>{t.retry}</button>}<button disabled={!imagePresented} className="portal-primary" type="button" onClick={()=>begin()} autoFocus>{quiet?t.still:t.begin}<span aria-hidden="true"><Arrow direction="diagonal"/></span></button>{quiet&&<><p className="portal-data-note">{t.data}</p><button className="portal-secondary" disabled={!imagePresented} type="button" onClick={()=>begin(true)}>{t.optIn}</button></>}</div>}
+  {ready&&(imagePresented||imageError)&&<div className="portal-invitation"><p>{imageError?t.error:imageReady?t.intro:t.loading}</p>{imageError&&<button className="portal-secondary" onClick={()=>{setImageError(false);setPlainStill(false);setImageAttempt(n=>n+1)}}>{t.retry}</button>}<button disabled={!imagePresented} className="portal-primary" type="button" onClick={()=>begin()} autoFocus>{quiet?t.still:t.begin}<span aria-hidden="true"><Arrow direction="diagonal"/></span></button>{quiet&&<><p className="portal-data-note">{t.data}</p><button className="portal-secondary" disabled={!imagePresented} type="button" onClick={()=>begin(true)}>{t.optIn}</button></>}</div>}
   {ready&&!imagePresented&&!imageError&&<p className="portal-first-loading" role="status">{t.loading}</p>}
   {!ready&&state.phase!=='finished'&&<div id="portal-controls" inert={clean} aria-hidden={clean} className={`portal-controls ${living?'portal-controls-living':''}`}>
    <p className={`portal-scene ${living&&!state.loading&&!state.paused&&!state.slow?'sr-only':''}`} role="status" aria-atomic="true">{error?t.error:state.slow?t.loadingSlow:state.loading?t.loading:state.paused?t.hidden:t.scenes[scene]}</p>
@@ -100,6 +110,6 @@ export default function FungusPortal({opener:origin,locale,onLocaleChange,onClos
   {living&&!state.loading&&!state.slow&&<button className="portal-cinema-toggle" data-cinema-toggle type="button" disabled={state.paused} aria-expanded={!clean} aria-controls="portal-controls" onClick={()=>{setThreadChosen(false);setCleanChoice(!clean)}}>{clean?t.showControls:t.hideControls}</button>}
   {state.phase==='finished'&&<p className="portal-finished" role="status">{t.finished}</p>}
   <div className="portal-sound"><SoundControl audio={audio.status==='waiting'&&audio.enabled?{...audio,enabled:false,toggle:audio.activate??audio.toggle}:audio} locale={locale}/></div>
-  <p id="portal-art" className="portal-art">{t.art}</p>
+  <p id="portal-art" className="portal-art">{t.art} <SiteLink href={aboutPath(locale)+'#'+siteCopy[locale].about.films.id}>{siteCopy[locale].about.films.heading}</SiteLink></p>
  </dialog>
 }
